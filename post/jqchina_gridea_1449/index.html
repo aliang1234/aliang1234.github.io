@@ -1,0 +1,340 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    灵活的jQuery垂直手风琴插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            灵活的jQuery垂直手风琴插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412041428.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041428.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204666.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款十分灵活的jQuery垂直手风琴插件。之所以说该手风琴插件灵活，是因为可以通过参数设置，使它可以有多种显示形式：手风琴项同时显示多个或一次只显示一个。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用jQuery和css3 transitions制作垂直手风琴插件。</p>
+<h3>HTML</h3>
+<p>html结构使用一个class为<code>st-accordion</code>的div作为wrapper，在里面放置一个无序列表。每一个无序列表项是一个手风琴项。span <code>st-arrow</code>是手风琴右边的小箭头。</p>
+<pre class="brush:html">
+&lt;div id="st-accordion" class="st-accordion"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="#"&gt;
+Item Title
+&lt;span class="st-arrow"&gt;Open or Close&lt;/span&gt;
+&lt;/a&gt;
+&lt;div class="st-content"&gt;
+&lt;p&gt;Some content&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt; ... &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>下面是该手风琴插件的可用参数：</p>
+<pre class="brush:js">
+$.Accordion.defaults= {
+// index of opened item. -1 means all are closed by default.
+open: -1,
+// if set to true, only one item can be opened. 
+// Once one item is opened, any other that is 
+// opened will be closed first
+oneOpenedItem : false,
+// speed of the open / close item animation
+speed : 600,
+// easing of the open / close item animation
+easing: 'easeInOutExpo',
+// speed of the scroll to action animation
+scrollSpeed : 900,
+// easing of the scroll to action animation
+scrollEasing: 'easeInOutExpo'
+};
+</pre>
+<p>通过init函数来初始化该手风琴插件：</p>
+<pre class="brush:js">
+\_init : function( options ) {
+this.options = $.extend( true, {}, $.Accordion.defaults, options );
+// validate options
+this.\_validate();
+// current is the index of the opened item
+this.current= this.options.open;
+// hide the contents so we can fade it in afterwards
+this.$items.find('div.st-content').hide();
+// save original height and top of each item
+this.\_saveDimValues();
+// if we want a default opened item...
+if( this.current != -1 )
+this.\_toggleItem( this.$items.eq( this.current ) );
+// initialize the events
+this.\_initEvents(); 
+},
+</pre>
+<p><code>\_saveDimValues</code>函数保存了手风琴项原来的高度，通过它我们可以知道在打开一个手风琴项时需要滚动多少高度。</p>
+<p>如果我们设置一个手风琴项以默认方式打开，那么<code>\_toggleItem</code>函数将被调用。</p>
+<p>接下来是初始化所有的事件：</p>
+<p><code>\_toggleItem</code>函数负责协调手风琴项被点击时的事件。如果有一个手风琴项已经被打开（该项拥有class为<code>st-open</code>），我们将设置current为-1，将高度设置为原始高度。如果点击的手风琴项是关闭的，那么设置current为当前项，然后使它的高度移动到适合内容的高度。通过<code>\_scroll</code>函数将页面滚动到当前手风琴项的位置。</p>
+<pre class="brush:js">
+\_toggleItem : function( $item ) {
+<p>var $content = $item.find('div.st-content');</p>
+<p>( $item.hasClass( 'st-open' ) )</p>
+<p>? ( this.current = -1, $content.stop(true, true).fadeOut( this.options.speed ), $item.removeClass( 'st-open' ).stop().animate({<br>
+height: $item.data( 'originalHeight' )<br>
+}, this.options.speed, this.options.easing ) )</p>
+<p>: ( this.current = $item.index(), $content.stop(true, true).fadeIn( this.options.speed ), $item.addClass( 'st-open' ).stop().animate({<br>
+height: $item.data( 'originalHeight' ) + $content.outerHeight( true )<br>
+}, this.options.speed, this.options.easing ), this._scroll( this ) )</p>
+<p>},<br>
+</pre></p>
+<p>在<code>\_initEvents</code>函数中初始化了两个事件：点击一个手风琴项和窗口的resize。当点击一个手风琴项时，<code>\_toggleItem</code>函数被调用，如果我们设置<code>oneOpenedItem</code>为true，那么其它被打开的手风琴项先关闭在打开当前的手风琴项。</p>
+<pre class="brush:js">
+\_initEvents : function() {
+var instance= this;
+// open / close item
+this.$items.find('a:first').bind('click.accordion', function( event ) {
+var $item = $(this).parent();
+// close any opened item if oneOpenedItem is true
+if( instance.options.oneOpenedItem &amp;&amp; instance.\_isOpened() &amp;&amp; instance.current!== $item.index() ) {
+<p>instance._toggleItem( instance.$items.eq( instance.current ) );<br>
+}<br>
+// open / close item<br>
+instance._toggleItem( <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 23: …
+return false;
+}̲);
+'>item );
+return false;
+});
+</span>(window).bind('smartresize.accordion', function( event ) {<br>
+// reset original item values<br>
+instance._saveDimValues();<br>
+// reset the content's height of any item that is currently opened<br>
+instance.$el.find('li.st-open').each( function() {<br>
+var $this = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(this);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>this.css( 'height', $this.data( 'originalHeight' ) + $this.find('div.st-content').outerHeight( true ) );<br>
+});<br>
+// scroll to current<br>
+if( instance._isOpened() )<br>
+instance._scroll();<br>
+});<br>
+},<br>
+</pre></p>
+<p>CSS代码请参考下载文件。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041428.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204666.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_145">
+                                <h3 class="post-title">
+                                    bootstrap4 input数值微调插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    类似PPT演示稿效果的JavaScript幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            类似PPT演示稿效果的JavaScript幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1605/201605201803.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1605/201605201803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201605203497.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>bespoke-fx是一款类似PPT演示稿效果的JavaScript幻灯片插件。该幻灯片可以使用键盘的左右方向键来前后切换，它内置了23种CSS3动画过渡效果，非常实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>bespoke-fx是一款类似PPT演示稿效果的JavaScript<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片插件</a>。该幻灯片可以使用键盘的左右方向键来前后切换，它内置了23种CSS3动画过渡效果，非常实用。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过 npm 或 bower 来安装在该插件。</p>
+<pre class="brush:html">
+$ bower install bespoke-fx
+$ npm install bespoke-fx 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该插件基于<a href="https://github.com/markdalgleish/bespoke.js" target="\_blank">bespoke.js</a>插件，使用时先要引入bespoke.js文件，再引入bespoke-fx.js文件。另外还需要引入main.css和animations.css样式文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="path/to/main.css"&gt;
+&lt;link rel="stylesheet" href="path/to/animations.css"&gt;
+&lt;script src="js/bespoke.js"&gt;&lt;/script&gt;
+&lt;script src="js/bespoke-fx.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片插件的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;article&gt;
+&lt;section&gt;Slide 1&lt;/section&gt;
+&lt;section&gt;Slide 2&lt;/section&gt;
+&lt;section&gt;Slide 3&lt;/section&gt;
+&lt;/article&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>可以使用下面的方法来初始化该幻灯片插件。</p>
+<pre class="brush:js">
+bespoke.horizontal.from('article', {
+fx: true
+});
+</pre>
+<p>或者传入配置参数：</p>
+<pre class="brush:js">
+bespoke.vertical.from('article', {
+fx: {
+direction: "vertical",
+transition: "cube",
+reverse: true
+}
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>bespoke-fx幻灯片插件的配置参数如下：</p>
+<ul>
+<li>
+<code>direction</code>：动画的方向，可以是：horizontal 或 vertical。</li>
+<li>
+<code>transition</code>：指定过渡动画的类型，参考下面的多行过渡类型描述。</li>
+<li>
+<code>reverse</code>：设置为true强迫执行反向动画。</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 过渡动画</h5>
+<p>可用的CSS3动画过渡动画如下：</p>
+<ul>
+<li>move</li>
+<li>move-fade</li>
+<li>move-both-fade</li>
+<li>move-different-easing</li>
+<li>scale-down-out-move-in</li>
+<li>move-out-scale-up</li>
+<li>scale-up-up</li>
+<li>scale-down-up</li>
+<li>glue</li>
+<li>flip</li>
+<li>fall</li>
+<li>newspaper</li>
+<li>push</li>
+<li>pull</li>
+<li>fold</li>
+<li>unfold</li>
+<li>room</li>
+<li>cube</li>
+<li>carousel</li>
+<li>sides</li>
+<li>slide</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 设置单独幻灯片的参数</h5>
+<p>你可以通过<code>data-bespoke-transition</code>、<code>data-bespoke-direction</code>和<code>data-bespoke-reverse</code>来为某个幻灯片slide设置单独的参数。例如：</p>
+<pre class="brush:html">
+&lt;section data-bespoke-fx-transition="cube" 
+data-bespoke-fx-direction="vertical" 
+data-bespoke-fx-reverse="true"&gt;Slide&lt;/section&gt;
+</pre>
+<p>bespoke-fx幻灯片插件的github地址为：<a href="https://github.com/ebow/bespoke-fx" target="\_blank">https://github.com/ebow/bespoke-fx</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1605/201605201803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201605203497.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_724">
+                                <h3 class="post-title">
+                                    简单实用的App样式单页全屏滚动布局jQuery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

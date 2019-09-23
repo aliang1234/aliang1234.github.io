@@ -1,0 +1,656 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    移动优先的jQuery响应式图片画廊插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            移动优先的jQuery响应式图片画廊插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1507/201507021735.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507021735.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507022149.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jgallery是一款移动优先的jQuery响应式图片画廊插件。该图片画廊插件提供大量的参数和动画效果，可以灵活的组合这些参数制作出不同的图片画廊效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jgallery是一款移动优先的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>响应式图片画廊插件。该图片画廊插件提供大量的参数和动画效果，可以灵活的组合这些参数制作出不同的图片画廊效果。它的特点有：</p>
+<ul>
+<li>移动优先，支持移动触摸事件。</li>
+<li>灵活，易于配置。</li>
+<li>支持67种动画过渡效果。</li>
+<li>可自由缩放尺寸。</li>
+<li>支持CSS3和缩略图格式。</li>
+<li>兼容所有现代浏览器（IE8及以下浏览器不支持）</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过nmp来安装该图片画廊插件。</p>
+<pre class="brush:html">
+npm install jgallery
+</pre>
+<p>在页面中引入需要的插件依赖文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" media="all" href="css/jgallery.min.css?v=1.5.3" /&gt;
+&lt;script type="text/javascript" src="js/jquery-2.0.3.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jgallery.min.js?v=1.5.3"&gt;&lt;/script&gt;
+</pre>
+<p>如果需要支持移动触摸事件，需要引入touchswipe.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/touchswipe.min.js"&gt;&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该图片画廊的最基本HTML结构如下，在一个<code>&lt;div&gt;</code>元素中放置你需要的图片。</p>
+<pre class="brush:html">
+&lt;div id="gallery"&gt;
+&lt;a href="images/large/1.jpg"&gt;&lt;img src="images/thumbs/1.jpg" alt="Photo 1" /&gt;&lt;/a&gt;
+&lt;a href="images/large/2.jpg"&gt;&lt;img src="images/thumbs/2.jpg" alt="Photo 2" /&gt;&lt;/a&gt;
+&lt;a href="images/large/3.jpg"&gt;&lt;img src="images/thumbs/3.jpg" alt="Photo 3" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在DOM元素加载完毕之后，可以通过下面的方法来初始化该图片画廊插件。</p>
+<pre class="brush:js">
+$( function() {
+$( '#gallery' ).jGallery();
+} );
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive" style="width:100\%;max-width:100\%;">
+<table class="table table-striped">
+<thead>
+<tr>
+<td width="20\%">参数</td>
+<td width="10\%">类型</td>
+<td width="15\%">默认值</td>
+<td width="55\%">描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autostart</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时图片画廊在页面加载之后就自动播放</td>
+</tr>
+<tr>
+<td>autostartAtImage</td>
+<td>Number</td>
+<td>1</td>
+<td>在页面加载之后自动播放模式下从第几张图片开始播放</td>
+</tr>
+<tr>
+<td>autostartAtAlbum</td>
+<td>Number</td>
+<td>1</td>
+<td>在页面加载之后自动播放模式下从第几个专辑（相册）开始播放</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>String</td>
+<td>'#fff'</td>
+<td>图片画廊容器的背景颜色</td>
+</tr>
+<tr>
+<td>browserHistory</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，激活的图片会被保存到浏览器历史中</td>
+</tr>
+<tr>
+<td>canChangeMode</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以修改显示模式</td>
+</tr>
+<tr>
+<td>canClose</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以关闭图片画廊</td>
+</tr>
+<tr>
+<td>canMinimalizeThumbnails</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以最小化图片画廊</td>
+</tr>
+<tr>
+<td>canZoom</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以放大缩小(Zoom)图片画廊</td>
+</tr>
+<tr>
+<td>disabledOnIE8AndOlder</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，在IE8及以下浏览器不能使用该图片画廊插件</td>
+</tr>
+<tr>
+<td>draggableZoom</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以拖动激活的图片</td>
+</tr>
+<tr>
+<td>draggableZoomHide<br>NavigationOnMobile</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，拖动导航在窗口宽度小于等于<code>maxMobileWidth</code>参数是隐藏(默认值为767px)</td>
+</tr>
+<tr>
+<td>height</td>
+<td>String</td>
+<td>'600px'</td>
+<td>图片画廊容器的高度</td>
+</tr>
+<tr>
+<td>hideThumbnailsOnInit</td>
+<td>Boolean</td>
+<td>false</td>
+<td>设置为<code>true</code>时，缩略图在初始化时被隐藏</td>
+</tr>
+<tr>
+<td>maxMobileWidth</td>
+<td>Number</td>
+<td>767</td>
+<td>图片画廊在移动手机中的最大宽度</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>String</td>
+<td>'standard'</td>
+<td>显示模式，可选值有：'full-screen'，'standard'，'slider' </td>
+</tr>
+<tr>
+<td>preloadAll</td>
+<td>Boolean</td>
+<td>false</td>
+<td>设置为<code>true</code>时，会预加载所有的图片</td>
+</tr>
+<tr>
+<td>slideshow</td>
+<td>Boolean</td>
+<td>false</td>
+<td>设置为<code>true</code>时，slideshow会在页面加载之后立刻运行</td>
+</tr>
+<tr>
+<td>slideshowCanRandom</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，可以随机切换slideshow的图片</td>
+</tr>
+<tr>
+<td>slideshowInterval</td>
+<td>String</td>
+<td>'8s'</td>
+<td>slideshow切换图片的时间间隔</td>
+</tr>
+<tr>
+<td>slideshowRandom</td>
+<td>Boolean</td>
+<td>false</td>
+<td>设置为<code>true</code>时，slideshow中的图片会随机播放</td>
+</tr>
+<tr>
+<td>swipeEvents</td>
+<td>Boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>时，你可以使用swipe事件来切换前一张或后一张图片</td>
+</tr>
+<tr>
+<td>textColor</td>
+<td>String</td>
+<td>'#000'</td>
+<td>图片画廊文字和图标的颜色</td>
+</tr>
+<tr>
+<td>thumbnails</td>
+<td>Boolean</td>
+<td>true</td>
+<td>是否显示缩略图</td>
+</tr>
+<tr>
+<td>thumbHeight</td>
+<td>Number</td>
+<td>75</td>
+<td>缩略图的高度</td>
+</tr>
+<tr>
+<td>thumbHeightOnFullScreen</td>
+<td>Number</td>
+<td>100</td>
+<td>全屏显示时的缩略图高度</td>
+</tr>
+<tr>
+<td>thumbnailsFullScreen</td>
+<td>Boolean</td>
+<td>true</td>
+<td>在全屏模式中是否显示缩略图</td>
+</tr>
+<tr>
+<td>thumbnailsHideOnMobile</td>
+<td>Boolean</td>
+<td>true</td>
+<td>如果设置为<code>true</code>，缩略图会在窗口宽度小于等于<code>maxMobileWidth</code>参数时隐藏（默认值为767px）</td>
+</tr>
+<tr>
+<td>thumbnailsPosition</td>
+<td>String</td>
+<td>'bottom'</td>
+<td>缩略图的显示位置，可选值有：'top'，'bottom'，'left'，'right'</td>
+</tr>
+<tr>
+<td>thumbType</td>
+<td>String</td>
+<td>'image'</td>
+<td>缩略图的类型，可选值有：'image'，'square'，'number' </td>
+</tr>
+<tr>
+<td>thumbWidth</td>
+<td>Number</td>
+<td>75</td>
+<td>缩略图的宽度</td>
+</tr>
+<tr>
+<td>thumbWidthOnFullScreen</td>
+<td>Number</td>
+<td>100</td>
+<td>全屏模式中缩略图的宽度</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Boolean</td>
+<td>true</td>
+<td>如果设置为<code>true</code>，图片的alt属性会被显示</td>
+</tr>
+<tr>
+<td>titleExpanded</td>
+<td>Boolean</td>
+<td>flase</td>
+<td>如果设置为<code>true</code>，在缩放图片区域下方会显示图片alt属性的文字</td>
+</tr>
+<tr>
+<td>tooltipClose</td>
+<td>String</td>
+<td>'Close'</td>
+<td>图片画廊关闭按钮的tooltip显示的文字</td>
+</tr>
+<tr>
+<td>tooltipFullScreen</td>
+<td>String</td>
+<td>'Full screen'</td>
+<td>切换模式图标上tooltip显示的文字</td>
+</tr>
+<tr>
+<td>tooltipRandom</td>
+<td>String</td>
+<td>'Random'</td>
+<td>随机图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>tooltips</td>
+<td>String</td>
+<td>'See all photos'</td>
+<td>“查看所有图片”图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>tooltipSeeOtherAlbums</td>
+<td>String</td>
+<td>'See other albums'</td>
+<td>“其它相册”图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>tooltipSlideshow</td>
+<td>String</td>
+<td>'Slideshow'</td>
+<td>播放/暂停Slideshow图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>tooltipToggleThumbnails</td>
+<td>String</td>
+<td>'Toggle thumbnails'</td>
+<td>“切换缩略图”图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>tooltipZoom</td>
+<td>String</td>
+<td>'Zoom'</td>
+<td>缩放图片图标上tooltip显示的文字内容</td>
+</tr>
+<tr>
+<td>transition</td>
+<td>String</td>
+<td>'moveToLeft\_<br>moveFromRight'</td>
+<td>激活图片的过渡动画效果，可选值有：<code>'moveToLeft\_moveFromRight' 'moveToRight\_moveFromLeft' 'moveToTop\_moveFromBottom' 'moveToBottom\_moveFromTop' 'fade\_moveFromRight' 'fade\_moveFromLeft' 'fade\_moveFromBottom' 'fade\_moveFromTop' 'moveToLeftFade\_moveFromRightFade' 'moveToRightFade\_moveFromLeftFade' 'moveToTopFade\_moveFromBottomFade' 'moveToBottomFade\_moveFromTopFade' 'moveToLeftEasing\_moveFromRight' 'moveToRightEasing\_moveFromLeft' 'moveToTopEasing\_moveFromBottom' 'moveToBottomEasing\_moveFromTop' 'scaleDown\_moveFromRight' 'scaleDown\_moveFromLeft' 'scaleDown\_moveFromBottom' 'scaleDown\_moveFromTop' 'scaleDown\_scaleUpDown' 'scaleDownUp\_scaleUp' 'moveToLeft\_scaleUp' 'moveToRight\_scaleUp' 'moveToTop\_scaleUp' 'moveToBottom\_scaleUp' 'scaleDownCenter\_scaleUpCenter' 'rotateRightSideFirst\_moveFromRight' 'rotateLeftSideFirst\_moveFromLeft' 'rotateTopSideFirst\_moveFromTop' 'rotateBottomSideFirst\_moveFromBottom' 'flipOutRight\_flipInLeft' 'flipOutLeft\_flipInRight' 'flipOutTop\_flipInBottom' 'flipOutBottom\_flipInTop' 'rotateFall\_scaleUp' 'rotateOutNewspaper\_rotateInNewspaper' 'rotatePushLeft\_moveFromRight' 'rotatePushRight\_moveFromLeft' 'rotatePushTop\_moveFromBottom' 'rotatePushBottom\_moveFromTop' 'rotatePushLeft\_rotatePullRight' 'rotatePushRight\_rotatePullLeft' 'rotatePushTop\_rotatePullBottom' 'rotatePushBottom\_page' 'rotateFoldLeft\_moveFromRightFade' 'rotateFoldRight\_moveFromLeftFade' 'rotateFoldTop\_moveFromBottomFade' 'rotateFoldBottom\_moveFromTopFade' 'moveToRightFade\_rotateUnfoldLeft' 'moveToLeftFade\_rotateUnfoldRight' 'moveToBottomFade\_rotateUnfoldTop' 'moveToTopFade\_rotateUnfoldBottom' 'rotateRoomLeftOut\_rotateRoomLeftIn' 'rotateRoomRightOut\_rotateRoomRightIn' 'rotateRoomTopOut\_rotateRoomTopIn' 'rotateRoomBottomOut\_rotateRoomBottomIn' 'rotateCubeLeftOut\_rotateCubeLeftIn' 'rotateCubeRightOut\_rotateCubeRightIn' 'rotateCubeTopOut\_rotateCubeTopIn' 'rotateCubeBottomOut\_rotateCubeBottomIn' 'rotateCarouselLeftOut\_rotateCarouselLeftIn' 'rotateCarouselRightOut\_rotateCarouselRightIn' 'rotateCarouselTopOut\_rotateCarouselTopIn' 'rotateCarouselBottomOut\_rotateCarouselBottomIn' 'rotateSidesOut\_rotateSidesInDelay' 'rotateSlideOut\_rotateSlideIn' 'random' </code>
+</td>
+</tr>
+<tr>
+<td>transitionBackward</td>
+<td>String</td>
+<td>'auto'</td>
+<td>当用户选择前一张图片时的过渡动画效果。可选值有与<code>transition</code>参数相同</td>
+</tr>
+<tr>
+<td>transitionCols</td>
+<td>Number</td>
+<td>1</td>
+<td>将图像分为列的列数</td>
+</tr>
+<tr>
+<td>transitionDuration</td>
+<td>String</td>
+<td>'0.7s'</td>
+<td>动画过渡的持续时间</td>
+</tr>
+<tr>
+<td>transitionRows</td>
+<td>Number</td>
+<td>1</td>
+<td>将图像分为行的行数</td>
+</tr>
+<tr>
+<td>transitionTimingFunction</td>
+<td>String</td>
+<td>'cubic-bezier(0,1,1,1)'</td>
+<td>显示图片的Timig函数，可选值有：<code>'linear' 'ease' 'ease-in' 'ease-out' 'ease-in-out' 'cubic-bezier(0.5,-0.5,0.5,1.5)' 'cubic-bezier(0,1,1,1)'</code>
+</td>
+</tr>
+<tr>
+<td>transitionWaveDirection</td>
+<td>String</td>
+<td>'forward'</td>
+<td>动画的方向（只有在<code>transitionCols</code>&gt;1或<code>transitionRows</code>&gt;1）.可选值<code>'forward' 'backward' </code>
+</td>
+</tr>
+<tr>
+<td>width</td>
+<td>String</td>
+<td>'100\%'</td>
+<td>图片画廊容器的宽度</td>
+</tr>
+<tr>
+<td>zoomSize</td>
+<td>String</td>
+<td>'fit'</td>
+<td>缩放图片的尺寸，可选值有：<code>fit'，'original'，'fill' </code>
+</td>
+</tr>
+<tr>
+<td>afterLoadPhoto</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>加载图片之后的回调函数</td>
+</tr>
+<tr>
+<td>beforeLoadPhoto</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>加载图片之前的回调函数</td>
+</tr>
+<tr>
+<td>closeGallery</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>隐藏图片画廊时的回调函数</td>
+</tr>
+<tr>
+<td>initGallery</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>图片画廊初始化之前的回调函数</td>
+</tr>
+<tr>
+<td>showGallery</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>图片画廊显示之后的回调函数</td>
+</tr>
+<tr>
+<td>showPhoto</td>
+<td>Function</td>
+<td>function() {}</td>
+<td>图片画廊显示图片之前的回调函数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<ul>
+<li>
+<code>getOptions</code>：返回当前对象参数。<code>$( '#gallery' ).jGallery().getOptions();</code>。</li>
+<li>
+<code>getDefaults</code>：返回默认参数。<code>$( '#gallery' ).jGallery().getDefaults();</code>。</li>
+<li>
+<code>restoreDefaults</code>：存储默认参数。<code>$( '#gallery' ).jGallery().restoreDefaults();</code>。</li>
+<li>
+<code>getTransitions</code>：返回动画过渡效果列表。<code>$( '#gallery' ).jGallery().getTransitions();</code>
+</li>
+<li>
+<code>destroy</code>：销毁图片画廊。<code>$( '#gallery' ).jGallery().destroy();</code>。</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507021735.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507022149.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1121">
+                                <h3 class="post-title">
+                                    jQuery和CSS3超绚丽的3D星空动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

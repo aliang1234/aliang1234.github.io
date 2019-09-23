@@ -1,0 +1,2253 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1290">
+                        jQuery简单实用的Tooltip提示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1290" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201504011821.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单且非常实用的jQuery Tooltip工具提示插件。该Tooltip插件没有CSS，意味着你可以自定义你自己的Tooltip样式。你可以在Tooltip中显示任何内容：文本、DOM元素、图片等等。
+内容：
+
+
+简要教程
+
+
+这是一款简单且非常实用的jQuery Tooltip工具提示插件。该Tooltips插件没有CSS，意味着你可以自定义你自己的Tooltip样式。你可以在Tooltip中显示任何内容：文本、DOM元素、图片等等。它的特点有：
+
+源文件非常小。
+没有依赖CSS文件，你可以自己定制。
+可以Tooltip任何你需要的东西。
+
+
+ 安装
+可以通过bower来安装这个Tooltip插件：
+
+$ bower install tinytip
+
+
+ 使用方法
+
+&amp;lt;!-- first include jQuery library --&amp;gt;
+&amp;lt;script src=&#34;./jQuery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- Then tinytip plugin --&amp;gt;
+&amp;lt;script src=&#34;./tinytip.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+$(&#39;.block.link&#39;).tinytip({
+//position [top|bottom|left|right]
+position : &#39;bottom&#39;,
+//tooltip position fix [+-][yx]
+fix : {
+top : -10,
+left: +20
+},
+//animation effect start position [+,-][top,left]
+//example +10 =&amp;gt; animate up 10 pixels
+animation : {
+top : +10,
+left: -5,
+},
+//animation speed in milliseconds
+speed : 100,
+//tooltip text, or can be a jQuery object of
+//selected element
+tooltip : &amp;quot;Hi There&amp;quot; || $(&#39;.some-selector&#39;),
+//when to show tooltip event (default: mouseenter)
+on : &#39;click&#39;,
+//when to hide tooltip event (default: mouseleave)
+off: &#39;click&#39;
+//prevent tooltip close when hover over it
+preventClose : true,
+//callback function fired once the tooltip completely loaded
+//passes tooltip element jQuery object (e)
+onLoad : function(e){
+e.text(&#39;lool&#39;);
+},
+//add custom class to this tooltip
+addClass : &#39;unique&#39;
+});
+
+
+ 配置参数
+
+
+position：类型：string。tooltip元素放置在何处，选项有：[top|bottom|left|right]。
+
+fix：类型：object。将tooltip位置固定。
+
+top :([+|-]number) set top position
+left :([+|-]number) set left position
+
+
+
+animation：类型：object。tooltip动画开始的位置。
+
+top :([+|-]number) set starting top position
+left :([+|-]number) set starting left position
+
+
+
+speed：类型：number。动画的速度，单位毫秒。
+
+easing：类型：number。如果使用jQuery easing插件，配置easing效果选项。默认值：linear。
+
+tooltip：类型：string|jQuery Object。tooltip的text/html/jQuery元素选择器。
+
+on：类型：string。触发tooltip的事件。默认值：mouseenter。
+
+off：类型：string。隐藏tooltip的事件。默认值：mouseleave。
+
+preventClose：类型：boolean。设置为true在离开或滑过tooltip元素的时候隐藏tooltip。默认值为false。
+
+onLoad：类型：function。tooltip加载完成后的回调函数。函数会传递一个tooltip的jquery对象。
+
+addClass：类型：string。定制当前tooltip的class名称。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1290">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1291">
+                        jQuery和CSS3超酷三面板幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1291" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503271646.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常酷的jQuery和CSS3三面板幻灯片特效插件。该幻灯片插件将一张图片分割为三部分，在幻灯片切换的时候，图片的每一部分都从不同方向进入显示，效果非常不错。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常酷的jQuery和CSS3三面板幻灯片特效插件。该幻灯片插件将一张图片分割为三部分，在幻灯片切换的时候，图片的每一部分都从不同方向进入显示，效果非常不错。
+你可以使用左右导航箭头或下面的原点导航来控制幻灯片图片的切换。该幻灯片被设计为可以加载无限图片的模式，所以你可以任意添加你想要播放的图片的数量。
+
+ 使用方法
+
+ HTML结构
+该幻灯片插件在HTML结构中，使用#slider-panels来包裹图片的三个面板。请注意#slider-dots，.slider-panel-left-carousel-tab，.slider-panel-center-carousel-tab，.slider-panel-right-carousel-tab这几个元素并不是直接写在HTML文件上的，而是通过jQuery来动态插入的。
+
+&amp;lt;div id=&#34;slider&#34;&amp;gt;
+&amp;lt;div id=&#34;slider-panels&#34;&amp;gt;
+&amp;lt;div id=&#34;slider-panels-next&#34;&amp;gt;&amp;lt;span class=&#34;iconb&#34; data-icon=&#34;&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;slider-panels-previous&#34;&amp;gt;&amp;lt;span class=&#34;iconb&#34; data-icon=&#34;&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;slider-panel-images&#34;&amp;gt;
+&amp;lt;img src=&#34;\_assets/1.jpg&#34; width=&#34;900&#34; height=&#34;400&#34; /&amp;gt;
+&amp;lt;img src=&#34;\_assets/2.jpg&#34; width=&#34;900&#34; height=&#34;400&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-left&amp;quot;&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-left-carousel&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-left-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/1.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-left-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/2.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-center&amp;quot;&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-center-carousel&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-center-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/1.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-center-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/2.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-right&amp;quot;&amp;gt;
+&amp;lt;div id=&amp;quot;slider-panel-right-carousel&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-right-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/1.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider-panel-right-carousel-tab&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;_assets/2.jpg&amp;quot; width=&amp;quot;900&amp;quot; height=&amp;quot;400&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;slider-dots&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;slider-dot slider-dot-current&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider-dot&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+这个效果并没有使用响应式的设计，所以每个元素都是固定大小的。最外围的包裹元素##slider的样式如下：
+
+#slider{
+width: 1000px;
+margin-top: 200px;
+margin-right: auto;
+margin-left: auto;
+} 
+
+#slider包裹着div#slider-panels，它下面又包裹着三个面板，它们的样式如下：
+
+#slider-panels{
+float: left;
+height: 400px;
+width: 1000px;
+position: relative;
+}
+#slider-dots{
+height: 50px;
+margin-right: auto;
+margin-left: auto;
+width: 135px;
+}
+.slider-dot{
+float: left;
+height: 12px;
+width: 12px;
+margin-top: 36px;
+margin-right: 12px;
+-webkit-transition: background 0.5s;
+-moz-transition: background 0.5s;
+-o-transition: background 0.5s;
+transition: background 0.5s;
+-moz-border-radius: 50\% 50\% 50\% 50\%;
+-webkit-border-radius: 50\% 50\% 50\% 50\%;
+border-radius: 50\% 50\% 50\% 50\%;
+-khtml-border-radius: 50\% 50\% 50\% 50\%;
+border: 1px solid rgba(0,147,253,1);
+}
+.slider-dot:hover {
+background-color: rgba(0,147,253,0.5);
+cursor: pointer;
+}
+.slider-dot-current {
+background-color: rgba(0,147,253,0.8);
+}
+
+在后面会使用jQuery来为每一幅图片都复制一个.slider-dot的class，在.slider-dot中还为背景添加了CSS过渡效果，是鼠标在滑过它们时，背景能够平滑的过渡。.slider-dot-current是当前显示的圆点，它会被添加到.slider-dot上。
+在#slider-panel-images中放置的是幻灯片的图片。这些图片需要900像素的宽度和400像素的高度。#slider-panel-images被设置为不可见，因为我们不需要它来显示图片。
+
+#slider-panel-images{
+display: none;
+}
+
+下面要来看看最重要的图片的三个面板样式。它们分别是#slider-panel-left、#slider-panel-right和#slider-panel-center。
+每一个面板中都有一个用于存放图片的div。例如左边面板中有一个#slider-panel-left-carousel，它的定位设置为绝对定位，后面会用js来控制它的位置到#slider-panel-left里面。为了达到每个面板显示不同图片部分的效果，还需要在#slider-panel-left-carousel中在添加一个.slider-panel-left-carousel-tab，它用于复制每一幅图片。因为我们只是要显示图片的一部分，而不是全部的图片。例如衣服图片900像素宽，400像素高，在左边面板中，使用.slider-panel-left-carousel-tab来显示图片的300像素宽度的部分，余下的部分使用overflow: hidden来隐藏它们。
+
+#slider-panel-left{
+float: left;
+height: 400px;
+width: 300px;
+overflow: hidden;
+position: relative;
+}
+#slider-panel-left-carousel{
+height: 400px;
+width: 0px;
+position: absolute;
+top: 0px;
+right: 0px;
+}
+.slider-panel-left-carousel-tab{
+float: right;
+height: 400px;
+width: 300px;
+overflow: hidden;
+text-align: left;
+position: relative;
+}
+.slider-panel-left-carousel-tab img {
+float: left;
+height: 400px;
+width: 900px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+#slider-panel-center{
+float: left;
+height: 400px;
+width: 300px;
+margin-left: 50px;
+overflow: hidden;
+position: relative;
+}
+#slider-panel-center-carousel{
+height: 0px;
+width: 300px;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+.slider-panel-center-carousel-tab{
+float: left;
+height: 400px;
+width: 300px;
+overflow: hidden;
+text-align: left;
+position: relative;
+}
+.slider-panel-center-carousel-tab img{
+float: left;
+height: 400px;
+width: 900px;
+position: absolute;
+top: 0px;
+left: -400px;
+}
+#slider-panel-right{
+float: left;
+height: 400px;
+width: 300px;
+margin-left: 50px;
+overflow: hidden;
+position: relative;
+}
+#slider-panel-right-carousel{
+height: 400px;
+width: 0px;
+position: absolute;
+top: 0px;
+right: 0px;
+}
+.slider-panel-right-carousel-tab{
+float: left;
+height: 400px;
+width: 300px;
+overflow: hidden;
+text-align: left;
+position: relative;
+}
+.slider-panel-right-carousel-tab img {
+float: left;
+height: 400px;
+width: 900px;
+position: absolute;
+top: 0px;
+right: 0px;
+}
+
+你会发现上面的代码中#slider-panel-left-carousel和#slider-panel-right-carousel的宽度设置为0，以及#slider-panel-center-carousel的高度设置为0，原因是这些值会在后面使用jQuery来设置它们，使它们匹配所有的图片。
+
+ JAVASCRIPT
+首先来设置一些变量，这会使得后面的控制更为方便。
+
+var slideTiming = 10000; 
+var animationTime = 500;
+var controlsHideTime = 200; 
+var current = 1;
+
+slideTiming变量用于控制幻灯片的切换速度。animationTime变量是动画持续的时间。controlsHideTime变量是控制前后导航按钮的隐藏时间。current变量代表当前的图片。
+接下来是鼠标滑过时箭头导航按钮的事件：
+
+$(&#34;#slider-panels-next&#34;).hide();
+$(&#34;#slider-panels-previous&#34;).hide();
+(&amp;quot;#slider-panels&amp;quot;).hover(function(){
+(&amp;quot;#slider-panels-next&amp;quot;).show(&amp;quot;drop&amp;quot;, { direction: &amp;quot;right&amp;quot; }, controlsHideTime);
+(&amp;quot;#slider-panels-previous&amp;quot;).show(&amp;quot;drop&amp;quot;, { direction: &amp;quot;left&amp;quot; }, controlsHideTime);
+},function(){
+(&amp;quot;#slider-panels-next&amp;quot;).hide(&amp;quot;drop&amp;quot;, { direction: &amp;quot;right&amp;quot; }, controlsHideTime);
+$(&amp;quot;#slider-panels-previous&amp;quot;).hide(&amp;quot;drop&amp;quot;, { direction: &amp;quot;left&amp;quot; }, controlsHideTime);
+});
+
+插件中使用check\_slide()来检测当前的位置和使幻灯片动起来。左边的面板从左向右运动，使用animate函数，并设置为负值。这个值是提供给current变量的幻灯片图片设置宽度值。
+
+function check\_slide(){
+$(&#34;#slider-panel-left-carousel&#34;).animate({&#34;right&#34;: -(300*(current-1))}, animationTime, &#34;easeInOutExpo&#34;);
+$(&#34;#slider-panel-center-carousel&#34;).animate({&#34;top&#34;: -(400*(current-1))}, animationTime, &#34;easeInOutExpo&#34;);
+$(&#34;#slider-panel-right-carousel&#34;).animate({&#34;left&#34;: -(300*(current-1))}, animationTime, &#34;easeInOutExpo&#34;);
+$(&#39;.slider-dot&#39;).removeClass(&#39;slider-dot-current&#39;);
+$(&#39;.slider-dot[data-slide=&#34;&#39;+current+&#39;&#34;]&#39;).addClass(&#39;slider-dot-current&#39;);
+}
+
+下面的函数用于在点击箭头导航按钮或圆点导航按钮的时候导航到相应的图片上：
+
+function nextslide() {if(current==total\_slides){current = 1}else{current++} check\_slide();}
+function previousslide() {if(current==1){current = total\_slides}else{current--} check\_slide();}
+$(&#34;#slider-panels-next&#34;).click(function() {nextslide();});
+$(&#34;#slider-panels-previous&#34;).click(function() {previousslide();});
+
+通过setInterval来使幻灯片可以自动播放。
+
+var refreshIntervalId = setInterval(nextslide, slideTiming);
+
+接下来需要调整三个面板的尺寸来填充适当的图片。左右两个面板需啊哟修改宽度，中间的面板需要修改高度。同时还要修改#slider-dots的宽度，因为不为它设置宽度它就不能居中显示。
+
+var total\_slides = 0;
+$(&#34;#slider-panel-images img&#34;).each(function() {
+total\_slides++;
+$(&#34;#slider-panel-left-carousel&#34;).append(&#39;&#39;);
+$(&#34;#slider-panel-center-carousel&#34;).append(&#39;&#39;);
+$(&#34;#slider-panel-right-carousel&#34;).append(&#39;&#39;);
+$(&#34;#slider-dots&#34;).append(&#39;&#39;);
+$(&#34;#slider-panel-left-carousel&#34;).css(&#39;width&#39;,(300*total\_slides));
+$(&#34;#slider-panel-right-carousel&#34;).css(&#39;width&#39;,(300*total\_slides));
+$(&#34;#slider-panel-center-carousel&#34;).css(&#39;height&#39;,(400*total\_slides));
+$(&#34;#slider-dots&#34;).css(&#39;width&#39;,(total\_slides*26));
+});
+
+最后，需要在点击.slider-dot的时候做出相应的动作。通过将当前元素的data-slide属性的值赋予current变量，然后调用check\_slide()方法来实现。
+
+$(&#34;.slider-dot&#34;).click(function() { current = $(this).attr(&#39;data-slide&#39;); check\_slide();});
+check_slide();
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1291">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1292">
+                        纯js带音符显示功能的网页电子琴插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1292" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504071757.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Beep是一款功能非常强大的基于浏览器的电子琴js插件。该电子琴插件可以在发音的同时显示出该声音的音符，并且自带演示功能，可以播放指定曲子的完整音乐。该电子琴插件支持键盘演奏和使用鼠标滑过琴键的方式演奏。
+内容：
+
+
+简要教程
+
+
+Beep是一款功能非常强大的基于浏览器的电子琴js插件。该电子琴插件可以在发音的同时显示出该声音的音符，并且自带演示功能，可以播放指定曲子的完整音乐。该电子琴插件支持键盘演奏和使用鼠标滑过琴键的方式演奏。
+Beep是基于WebAudio API来创建合成音乐效果的电子琴javascript框架。它用于模拟真实的钢琴演奏环境。使用一行代码synth = new BEEP.Instrument()就可以创建一组触发音符的Trigger接口，每个接口的音符Notes都有自己的音调Voices。使用synth.scorePlay()方法，可以使该电子琴插件自动进行演奏默认的曲子。
+
+
+ 使用方法
+要创建一个音符十分简单：n = new BEEP.Note()，你可以创建不同的音符，例如：new BEEP.Note(&#39;E♭&#39;)或new BEEP.Note(&#39;5E♭&#39;)，5E♭是第五个八度音阶，那么如何创建一个5E♭音符呢？可以像下面这样创建一个对象：
+
+{
+A: 440, //What Concert A are we tuned to?
+hertz: 622.253…,//Frequency of the note.
+isFlat: true, //Set if ♭. Similar: isSharp and isNatural.
+letter: &#34;E&#34;,//Explains itself, no?
+letterIndex: 4, //[&#39;ABCDEFG&#39;].indexOf(letter).
+modifier: &#34;♭&#34;,//Set to ♭, ♮, or ♯. 
+name: &#34;E♭&#34;, //Note name. Will include ♮. 
+nameIndex: 7, //[&#39;A♭&#39;,&#39;A♮&#39;,&#39;B♭&#39;,&#39;B♮&#39;,&#39;C♮&#39;…].indexOf(name)
+nameSimple: &#34;E♭&#34;, //Note name. Will NOT include ♮.
+octaveIndex: 5, //On a standard piano, 0–8.
+pianoKeyIndex: 55,//On a standard piano, 0–87.
+tuning: &#34;EDO12&#34; //Default: Equal Division of Octave into 12 steps.
+}
+
+
+ 灵活的参数
+你可以创建一个new BEEP.Note(&#39;E♭&#39;)并接受上面的默认参数来创建音符，你也可以使用一个对象来代替Note中的参数字符串，对象中指定你需要的参数：
+
+new BEEP.Note({ A: 442, name: &#39;E♭&#39;, octaveIndex: 5 })
+
+
+ 声音
+要如何使音符开始播放呢？使用Voice即可。可以在Note初始化的时候创建一个Voice，在创建的时候还可以传入一个AudioContext参数。和Note一样，Voice的所有参数都是可选的。
+
+voice = new BEEP.Voice()//We’re running with defaults.
+voice.play()//Listen to that pure 440Hz Concert A.
+voice.pause()//Ok, we’ve had enough.
+
+关于该网页电子琴更加详细的使用方法请参考：https://github.com/stewdio/beep.js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1292">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1293">
+                        jQuery简单实用的轻量级进度条插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1293" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504131539.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQMeter是一款简单实用的轻量级进度条jQuery插件，它可以显示为水平或垂直进度条，进度条加载时带有动画特效，你只需要简单的传入一些参数到jQMeter对象的构造函数中就可以完成你想要的进度条效果。
+内容：
+
+
+简要教程
+
+
+jQMeter是一款简单实用的轻量级进度条jQuery插件，它可以显示为水平或垂直进度条，进度条加载时带有动画特效，你只需要简单的传入一些参数到jQMeter对象的构造函数中就可以完成你想要的进度条效果。
+该进度条插件的构造函数中允许你定义进度条的宽度、高度、背景色、进度条颜色等等参数，通过这些参数你可以构造自己的进度条样式。
+
+ 使用方法
+使用这个进度条插件必须先引入jQuery和jqmeter.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jqmeter.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该进度条插件的HTML结构使用一个空的&amp;lt;div&amp;gt;即可。
+
+&amp;lt;div id=&#34;jqmeter-container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面加载完毕之后，可以通过下面的方法来调用该进度条插件。
+
+$(document).ready(function(){
+$(&#39;#jqmeter-container&#39;).jQMeter();
+}); 
+
+注意：该进度条插件有两个必填的参数：goal和raised。此外还有一些可用的参数，其中一些参数也可以使用css来实现，如颜色参数。
+
+$(&#39;#jqmeter-container&#39;).jQMeter({
+goal:&#39;$1,000&#39;,
+raised:&#39;$200&#39;,
+orientation:&#39;vertical&#39;,
+width:&#39;50px&#39;,
+height:&#39;200px&#39;
+});
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+goal
+string
+无默认值，必填参数
+进度条的总长度。可以设置为字符串，如&#34;$9000&#34;，或整数，如:&#34;9000&#34;
+
+
+raised
+string
+无默认值，必填参数
+进度条的当前进度。可以设置为字符串，如&#34;$5000&#34;，或整数，如:&#34;5000&#34;
+
+
+width
+string
+100\%-水平宽度。（在水平进度条中必须设置）
+设置进度条的水平宽度。可以设置为百分比或像素值
+
+
+height
+string
+50px。（在垂直进度条中必须设置）
+设置进度条的垂直高度。可以设置为百分比或像素值
+
+
+bgColor
+string
+#444
+进度条的背景颜色。支持hex、rgba和颜色关键字。
+
+
+barColor
+string
+#bfd255
+进度条的颜色。支持hex、rgba和颜色关键字。
+
+
+orientation
+string
+horizontal
+进度条的方向，可设置为： &#39;horizontal&#39; 或 &#39;vertical&#39;。如果设置为垂直进度条，该参数必须设置。
+
+
+displayTotal
+boolean
+true
+是否显示进度条完成的百分比数。
+
+
+animationSpeed
+integer
+2000
+进度条动画时间，单位毫秒
+
+
+counterSpeed
+integer
+2000
+进度条计数的时间，单位毫秒
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1293">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1294">
+                        纯js轻量级高性能点击元素动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1294" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504202028.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+cta.js或叫做&amp;quot;Call to Animation&amp;quot;是一款轻量级高性能的点击元素动画特效js插件。该插件可以在页面上通过点击某个元素来使其它任何元素产生动画效果。这个js插件可以制作出效果非常酷的元素动画视觉效果。
+内容：
+
+
+简要教程
+
+
+cta.js或叫做&#34;Call to Animation&#34;是一款轻量级高性能的点击元素动画特效js插件。该插件可以在页面上通过点击某个元素来使其它任何元素产生动画效果。这个js插件可以制作出效果非常酷的元素动画视觉效果。
+
+ 安装
+可以通过Bower或NPM来安装该js插件。
+
+bower install cta
+npm install cta
+
+cta.js同时也支持AMD 和 commonJS模式。
+
+ 使用方法
+通常情况下，你可以使用选择器selector X选择一个元素，并通过该元素使另外一个元素selector Y产生动画效果。
+
+var e1 = document.querySelector(X),
+e2 = document.querySelector(Y);
+cta(e1, e2);
+
+触发一个反转动画可以如下：
+
+var e1 = document.querySelector(&#39;#js-source-element&#39;),
+e2 = document.querySelector(&#39;#js-target-element&#39;);
+var reverseAnimate = cta(e1, e2);
+// Reverse previous animation. options and callback can be passed to this function too.
+reverseAnimate();
+
+指定动画的持续时间：
+
+var e1 = document.querySelector(&#39;#js-source-element&#39;),
+e2 = document.querySelector(&#39;#js-target-element&#39;);
+cta(e1, e2, {
+duration: 0.3 // seconds
+});
+
+在动画之后执行指定的回调函数：
+
+var button = document.querySelector(&#39;#js-button&#39;),
+hiddenModal = document.querySelector(&#39;#js-modal&#39;);
+cta(button, hiddenModal, function () {
+showModal();
+});
+
+
+ 公共API
+
+ cta(sourceElement, targetElement [, options] [, callback] )
+在targetElement目标元素上动画一个元素sourceElement。
+
+
+sourceElement：动画开始时的DOM元素。
+
+targetElement：动画结束时的DOM元素。
+
+options：一组控制动画效果的参数。
+
+
+duration：动画的持续时间，单位秒。默认值是0.3秒。
+
+targetShowDuration：targetElement元素变为可见状态的时间（如果它开始时隐藏状态），单位秒。默认值0秒。
+
+relativeToWindow：如果目标元素是固定在窗口中的，设置为true。默认目标元素是相对于文档单位。
+
+
+
+callback：动画结束之后的回调函数。
+
+
+ 浏览器兼容
+该js插件可以很好的工作在最新版本的Google Chrome、Firefox 和 Safari浏览器上。
+对于不支持该js插件的浏览器，插件不做任何处理，它会回退到默认的行为，你需要手动添加回退代码。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1294">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1295">
+                        Owl Carousel 2-支持触摸屏的响应式jQuery旋转木马插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1295" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502161835.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Owl Carousel 2是上一版Owl Carousel 1.x的升级版本。Owl Carousel 2是可以让你创建漂亮的响应式旋转木马的jQuery插件，它支持移动触摸屏，有丰富的参数设置，甚至可以嵌入视频，功能十分强大。
+内容：
+
+
+简要教程
+
+
+Owl Carousel 2是上一版Owl Carousel的升级版本。Owl Carousel 2可以让你创建漂亮的响应式旋转木马的jQuery插件，它支持移动触摸屏，功能十分强大。Owl的新特性有：
+
+可以无限循环
+项目可以居中显示
+灵活的速度控制
+多级别的padding设置
+项目间可以设置Margin
+使几乎所有的选项都具有响应能力
+多种宽度设置
+丰富的回调事件
+RTL（从右向左移动）
+YouTube/Vimeo视频支持
+锚链接导航
+合并项
+还有更多...
+
+
+ 浏览器兼容
+Owl Carousel 2.x.x 版本和以前的1.x.x版本不兼容。Owl Carousel 2.x.x版本的大部分文件和1.x.x版本的基本相同，但是核心文件已经被从新编写。
+Owl Carousel 2已经在下列浏览器中进行了测试：
+
+Chrome
+Firefox
+Opera
+IE7/8/10/11
+iPad Safari
+iPod4 Safari
+Nexus 7 Chrome
+Galaxy S4
+Nokia 8s Windows8
+
+
+ 文件结构
+Owl Carousel 2发行版的目录结构如下：
+
+owlcarousel/
+├── assets/
+│ ├── owl.carousel.css
+│ ├── owl.carousel.min.css
+│ ├── owl.theme.default.css
+│ ├── owl.theme.default.min.css
+│ ├── owl.theme.green.css
+│ ├── owl.theme.green.min.css
+│ └── owl.video.play.png
+│
+├── owl.carousel.js
+├── owl.carousel.min.js
+├── LICENSE-MIT
+└── README.md
+
+
+ 插件依赖
+Owl Carousel 2依赖于jQuery或Zepto。jQuery最低版本要求是1.8.3版本。
+
+ 使用方法
+
+ CSS文件
+在html头部中引入必要的css文件：
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;owlcarousel/owl.carousel.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;owlcarousel/owl.theme.default.min.css&#34;&amp;gt;
+
+owl.theme.default.css文件时可选的。
+
+ JS文件
+在页面的尾部添加owl.carousel.min.js文件：
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;owlcarousel/owl.carousel.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+Owl Carousel不需要设置复杂的html结构，你只需要将你的内容&amp;lt;div&amp;gt;（当然，owl可以工作在其它元素中，如a/img/span）包裹在一个class为owl-carousel的&amp;lt;div&amp;gt;中即可。Class owl-carousel是在owl.carousel.css文件中定义的，改变它需要修改整个owl.carousel.css文件。
+
+ 调用插件
+现在，你可以调用Owl Carousel的初始化方法来使旋转木马工作：
+
+$(document).ready(function(){
+$(&#34;.owl-carousel&#34;).owlCarousel();
+});
+
+
+ 参数选项
+下表中是所有内置的Owl Carousel参数选项：
+
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+
+
+items
+Type: Number
+Default: 3
+在屏幕中可见的旋转木马项
+
+
+margin
+Type: Number
+Default: 0
+旋转木马项的margin-right值，单位像素
+
+
+loop
+Type: Boolean
+Default: false
+是否无限循环，会复制第一项和最后一项来制作无限循环的错觉
+
+
+center
+Type: Boolean
+Default: false
+旋转木马项居中。在奇数和偶数项中都可以很好的工作
+
+
+mouseDrag
+Type: Boolean
+Default: true
+是否可以使用鼠标拖拽
+
+
+touchDrag
+Type: Boolean
+Default: true
+是否可以触摸拖拽
+
+
+pullDrag
+Type: Boolean
+Default: true
+Stage pull to edge.
+
+
+freeDrag
+Type: Boolean 
+Default: false
+Item pull to edge
+
+
+stagePadding
+Type: Number
+Default: 0
+Stage上的Padding left和Padding right(可以看到相邻的项)
+
+
+merge
+Type: Boolean 
+Default: false
+合并旋转木马项。Looking for data-merge=&#39;{number}&#39; inside item..
+
+
+mergeFit
+Type: Boolean
+Default: true
+如果屏幕比旋转木马项小，使旋转木马项适合屏幕大小
+
+
+autoWidth
+Type: Boolean 
+Default: false
+设置非网格内容。尝试在div上使用width样式
+
+
+startPosition
+Type: Number/String
+Default: 0
+开始点或URL Hash字符串，如：&#39;#id&#39;
+
+
+URLhashListener
+Type: Boolean
+Default: false
+监听url hash 的变化。必须在旋转木马项上设置data-hash属性
+
+
+nav
+Type: Boolean
+Default: false
+显示ext/prev按钮
+
+
+navRewind
+Type: Boolean
+Default: true
+跳转到前一项或后一项
+
+
+navText
+Type: Array
+Default: [&#39;next&#39;,&#39;prev&#39;]
+HTML箭头导航
+
+
+slideBy
+Type: Number/String
+Default: 1
+Navigation slide by x. &#39;page&#39; string can be set to slide by page.
+
+
+dots
+Type: Boolean
+Default: true
+显示圆点导航按钮
+
+
+dotsEach
+Type: Number/Boolean 
+Default: false
+每多少个项显示一个圆点导航按钮
+
+
+dotData
+Type: Boolean
+Default: false
+使用data-dot的内容
+
+
+lazyLoad
+Type: Boolean
+Default: false
+是否懒加载图片。data-src和data-src-retina为高分辨率。如果元素不是&amp;lt;img&amp;gt;会设置为元素的内联背景图像。
+
+
+lazyContent
+Type: Boolean
+Default: false
+lazyContent选项只在测试版中有，发行版中已经被删除。
+
+
+autoplay
+Type: Boolean
+Default: false
+旋转木马是否自动播放
+
+
+autoplayTimeout
+Type: Number
+Default: 5000
+旋转木马自动播放的时间间隔
+
+
+autoplayHoverPause
+Type: Boolean
+Default: false
+是否在鼠标滑过时停止自动播放
+
+
+smartSpeed
+Type: Number
+Default: 250
+速度计算
+
+
+fluidSpeed
+Type: Boolean
+Default: Number
+速度计算
+
+
+autoplaySpeed
+Type: Number/Boolean
+Default: false
+是新密码自动播放的速度
+
+
+navSpeed
+Type: Number/Boolean
+Default: false
+旋转木马导航的速度
+
+
+dotsSpeed
+Type: Boolean
+Default: Number/Boolean
+分页的速度
+
+
+dragEndSpeed
+Type: Number/Boolean
+Default: false
+Drag end speed
+
+
+callbacks
+Type: Boolean 
+Default: true
+是否允许回调函数
+
+
+responsive
+Type: Object
+Default: empty object
+包含responsive选项的对象。设置为flase取消responsive能力。
+
+
+responsiveRefreshRate
+Type: Number
+Default: 200
+Responsive的刷新频率
+
+
+responsiveBaseElement
+Type: DOM element
+Default: window
+可以设置在任何DOM元素上。如果你关心不支持响应式的浏览器（如IE8），可以在包裹容器中使用该属性。
+
+
+responsiveClass
+Type: Boolean 
+Default: false
+可选的辅助class。添加owl-reponsive-和breakpoint class到主元素上。可以在给定breakpoint的元素上设置内容样式。
+
+
+video
+Type: Boolean
+Default: false
+是否允许添加YouTube/Vimeo视频。
+
+
+videoHeight
+Type: Number/Boolean
+Default: false
+设置视频的高度。
+
+
+videoWidth
+Type: Number/Boolean
+Default: false
+设置视频的宽度。
+
+
+animateOut
+Type: String/Bolean
+Default: false
+CSS3 animation out.
+
+
+animateIn
+Type: String/Bolean 
+Default: false
+CSS3 animation in.
+
+
+fallbackEasing
+Type: String 
+Default: swing
+Easing for CSS2 $.animate.
+
+
+info
+Type: Function
+Default: false
+获取基本信息的回调函数(当前的 item/pages/widths) 。Info函数的第二个参数是Owl DOM元素的对象引用。
+
+
+nestedItemSelector
+Type: String/Class
+Default: false
+当owl元素嵌套在某些很深的DOM结构中时使用该参数。在class名字前面不要使用.号。
+
+
+itemElement
+Type: String
+Default: div
+owl-item的DOM元素类型。
+
+
+stageElement
+Type: String
+Default: div
+owl-stage.的DOM元素类型。
+
+
+navContainer
+Type: String/Class/ID/Bolean
+Default: false
+设置自定义的导航容器class
+
+
+dotsContainer
+Type: String/Class/ID/Bolean
+Default: false
+设置自定义的导航容器class
+
+
+
+
+
+ Classes
+下面的例子说明了Owl Carousel在HTML中是如何被渲染的。通过后面表格中列出的参数，你可以改变的class样式：
+
+&amp;lt;div class=&#34;owl-carousel owl-theme owl-loaded&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-stage-outer&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-stage&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-controls&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-nav&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-prev&#34;&amp;gt;prev&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-next&#34;&amp;gt;next&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-dots&#34;&amp;gt;
+&amp;lt;div class=&#34;owl-dot active&#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-dot&#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;owl-dot&#34;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+
+
+themeClass
+Type: Class/String
+Default: owl-theme
+Theme Class.
+
+
+baseClass
+Type: Class/String
+Default: owl-carousel
+Base element Class
+
+
+itemClass
+Type: Class/String
+Default: owl-item
+Item Class
+
+
+centerClass
+Type: Class/String
+Default: center
+Center Class.
+
+
+activeClass
+Type: Class/String
+Default: active
+Active Class
+
+
+navContainerClass
+Type: Class/String
+Default: owl-nav
+Nav container Class.
+
+
+navClass
+Type: Array/Class/String
+Default: [&#39;owl-prev&#39;,&#39;owl-next&#39;]
+Nav buttons Classes
+
+
+controlsClass
+Type: Class/String
+Default: owl-controls
+Controls Class - wrapper for navs and dots
+
+
+dotClass
+Type: Class/String
+Default: owl-dot
+Dot Class
+
+
+dotsClass
+Type: Class/String
+Default: owl-dots
+Dots Class - Container for dots..
+
+
+autoHeightClass
+Type: Class/String
+Default: owl-height
+Auto height Class.
+
+
+
+
+
+ 事件
+所有的事件都有Owl Carousel的核心代码提供。这使得你可以监听任何元素的变化和给出回调函数。
+
+var owl = $(&#39;.owl-carousel&#39;);
+owl.owlCarousel();
+// Listen to owl events:
+owl.on(&#39;changed.owl.carousel&#39;, function(event) {
+...
+})
+
+你也可以自行触发Owl Carousel事件：
+
+var owl = $(&#39;.owl-carousel&#39;);
+owl.owlCarousel();
+// Go to the next item
+$(&#39;.customNextBtn&#39;).click(function() {
+owl.trigger(&#39;next.owl.carousel&#39;);
+})
+// Go to the previous item
+$(&#39;.customPrevBtn&#39;).click(function() {
+// With optional speed parameter
+// Parameters has to be in square bracket &#39;[]&#39;
+owl.trigger(&#39;prev.owl.carousel&#39;, [300]);
+})
+
+
+ Callbacks
+
+$(&#39;.owl-carousel&#39;).owlCarousel({
+onDragged: callback
+});
+function callback(event) {
+...
+}
+
+
+ Data
+每一个事件都通过event object提供非常有用的信息。
+
+function callback(event) {
+// Provided by the core
+var element = event.target; // DOM element, in this example .owl-carousel
+var name= event.type; // Name of the event, in this example dragged
+var namespace = event.namespace;// Namespace of the event, in this example owl.carousel
+var items = event.item.count; // Number of items
+var item= event.item.index; // Position of the current item
+// Provided by the navigation plugin
+var pages = event.page.count; // Number of pages
+var page= event.page.index; // Position of the current page
+var size= event.page.size;// Number of items per page
+}
+
+
+ Carousel
+
+
+
+
+名称
+类型
+回调函数
+触发时机
+
+
+
+
+initialize.owl.carousel
+Type: attachable
+Callback: onInitialize
+插件初始化时触发
+
+
+initialized.owl.carousel
+Type: attachable
+Callback: onInitialized
+插件初始化后触发
+
+
+resize.owl.carousel
+Type: attachable
+Callback: onResize
+旋转木马尺寸改变时触发
+
+
+resized.owl.carousel
+Type: attachable
+Callback: onResized
+旋转木马尺寸改变后触发
+
+
+refresh.owl.carousel
+Type: attachable, cancelable, triggerable
+Callback: onRefresh,Parameter: [event, speed]
+When the internal state of the plugin needs update.
+
+
+refreshed.owl.carousel
+Type: attachable
+Callback: onRefreshed
+When the internal state of the plugin has updated.
+
+
+drag.owl.carousel
+Type: attachable
+Callback: onDrag
+当拖动旋转木马项时触发
+
+
+dragged.owl.carousel
+Type: attachable
+Callback: onDragged
+当拖动旋转木马项结束后触发
+
+
+translate.owl.carousel
+Type: attachable
+Callback: onTranslate
+When the translation of the stage starts.
+
+
+translated.owl.carousel
+Type: attachable
+Callback: onTranslated
+When the translation of the stage has finished.
+
+
+change.owl.carousel
+Type: attachable
+Callback: onChange,Parameter: property
+When a property is going to change its value
+
+
+changed.owl.carousel
+Type: attachable
+Callback: onChanged,Parameter: property
+When a property has changed its value.
+
+
+next.owl.carousel
+Type: triggerable
+Parameter: [speed] 
+Goes to next item.
+
+
+prev.owl.carousel
+Type: triggerable
+Parameter: [speed]
+Goes to previous item.
+
+
+to.owl.carousel
+Type: triggerable
+Parameter: [position, speed]
+Goes to postion
+
+
+destroy.owl.carousel
+Type: triggerable
+
+Destroys carousel
+
+
+replace.owl.carousel
+Type: triggerable
+Parameter: data
+Removes current content and add a new one passed in the parameter.
+
+
+add.owl.carousel
+Type: triggerable
+Parameter: [data, position]
+Adds a new item on a given position.
+
+
+remove.owl.carousel
+Type: triggerable
+Parameter: position
+Removes an item from a given position
+
+
+
+
+
+ Lazy
+
+
+
+
+名称
+类型
+回调函数
+触发时机
+
+
+
+
+load.owl.lazy
+Type: attachable
+Callback: onLoadLazy
+When lazy image loads.
+
+
+loaded.owl.lazy
+Type: attachable
+
+Callback: onLoadedLazy
+
+
+
+
+
+ Video
+
+
+
+
+名称
+类型
+回调函数
+触发时机
+
+
+
+
+stop.owl.video
+Type: attachable
+Callback: onStopVideo
+When video has unloaded.
+
+
+play.owl.video
+Type: attachable
+Callback: onPlayVideo
+When video has loaded.
+
+
+
+
+
+ Autoplay
+
+
+
+
+名称
+类型
+参数
+描述
+
+
+
+
+play.owl.autoplay
+Type: triggerable
+Parameter: [timeout, speed] 
+Runs autoplay
+
+
+stop.owl.autoplay
+Type: triggerable
+
+Stops autoplay
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1295">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1296">
+                        jQuery元素滚动动画库插件-ScrollMagic
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1296" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503011824.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ScrollMagic是一款制作各种HTML元素滚动动画效果的js库插件。正如其名字一样，该jquery元素滚动动画库出插件可以制作出各种神奇的滚动动画效果。它甚至可以制作网页视觉差效果和瀑布流效果。
+内容：
+
+
+简要教程
+
+
+ScrollMagic是一款制作各种HTML元素滚动动画效果的js库插件。正如其名字一样，该jQuery元素滚动动画库出插件可以制作出各种神奇的滚动动画效果。ScrollMagic动画库的强大之处在于：
+
+基于滚动位置执行动画-无论是触发一个动画或同步到滚动条的滚动。
+可以在指定的滚动位置开始一个元素的动画-无论是无限或有限的循环次数。
+基于滚动位置切换元素的CLASS样式。
+可以轻松的添加网页视觉差效果。
+可以创建无限滚动的瀑布流效果（通过AJAX调用添加新元素）。
+可以在指定的滚动位置或滚动到指定的区域时执行回调函数。
+
+ScrollMagic动画库可以和其它js框架集成，插件中建议与Greensock Animation Platform (GSAP)，GSAP的特点是性能稳定，功能丰富。也可以和轻量级的VelocityJS框架集成。
+ScrollMagic元素滚动动画库的特点有：
+
+优化性能
+轻量级（压缩后只有6KB）
+灵活可扩展
+兼容移动手机设备
+强大的事件管理
+支持响应式网页设计
+面向对象的编程方式和链式编程方式
+代码可读性强
+支持两个方向的滚动（even different on one page）
+支持在div容器中滚动（一个页面可以支持多个div）
+完善的调试和日志记录功能
+
+
+ 安装
+ScrollMagic元素滚动动画库插件支持git、Bower、nmp和CDN。
+
+git clone git://github.com/janpaepke/ScrollMagic.git
+bower install scrollmagic
+npm install scrollmagic
+http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.0/ScrollMagic.min.js
+
+
+ 使用方法
+在页面中引入ScrollMagic.js文件。
+
+&amp;lt;script src=&#34;js/scrollmagic/uncompressed/ScrollMagic.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+如果你使用的是min版本的ScrollMagic文件，记住logging功能在min版本的js文件中已经被移除。
+要使用插件的可视化功能，引入debug.addIndicators.js文件。
+
+&amp;lt;script src=&#34;js/scrollmagic/uncompressed/plugins/debug.addIndicators.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+如果你使用AMD，请查看这里。
+
+ 基本使用方法
+基本的ScrollMagic设计模式使用一个控制器，该控制器可以管理一个和多个场景。每一个场景用于定义当容器滚动到指定位置时发生的事件。
+
+// init controller
+var controller = new ScrollMagic.Controller();
+// create a scene
+new ScrollMagic.Scene({
+duration: 100,// the scne should last for a scroll distance of 100px
+offset: 50// start this scene after scrolling for 50px
+})
+.setPin(&amp;quot;#my-sticky-element&amp;quot;) // pins the element for the the scene&#39;s duration
+.addTo(controller); // assign the scene to the controller
+
+要了解更多的ScrollMagic的js代码结构，请查看这里。
+
+ 使用帮助
+To get started, check out the available learning resources in the wiki section.
+你可以查看每个例子，每个例子都有代码提示。你也可以查看ScrollMagic英文版的在线文档。
+
+ 浏览器兼容
+ScrollMagic支持所有的现代浏览器，包括：
+Firefox 26+, Chrome 30+, Safari 5.1+, Opera 10+, IE 9+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1296">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1297">
+                        jQuery超级简单的响应式幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1297" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502251739.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款设计的非常简单非常实用的jQuery幻灯片插件。现在的幻灯片插件层出不穷，这款jQuery幻灯片插件返璞归真，使用不到1000字节完成了幻灯片所需的必要功能。
+内容：
+
+
+简要教程
+
+
+这是一款设计的非常简单非常实用的jQuery幻灯片插件。现在的幻灯片插件层出不穷，这款jQuery幻灯片插件返璞归真，使用不到1000字节完成了幻灯片所需的必要功能。小巧玲珑，简单实用。它的特点有：
+
+简单小巧。该jQuery幻灯片插件的压缩版本的js文件只有991字节大小。非常适合于手机等移动设备的使用。
+支持键盘导航。可以使用键盘的左右方向键来控制幻灯片。
+支持所有的内容。幻灯片中的内容可以是图片、文字、视频或其他内容。
+跨浏览器支持。该幻灯片插件可以在最新版本的Chrome, Safari, Firefox, Opera和IE7+浏览器中工作。
+响应式设计。
+
+
+ 使用方法
+正如插件的名字一样，该jQuery幻灯片插件的设置非常简单。创建一个class为slider的div元素，里面放置图片和文本即可。如果你的图片或文内容的高度不一样，该插件会自动平滑的放大或缩小所需的高度。
+
+&amp;lt;div class=&#34;slider&#34;&amp;gt;
+&amp;lt;img src=&#34;images/image1.jpg&#34; /&amp;gt;
+&amp;lt;img src=&#34;images/image2.jpg&#34; /&amp;gt;
+&amp;lt;div class=&#34;just\_text&#34;&amp;gt;This one&#39;s just text.&amp;lt;/div&amp;gt;
+&amp;lt;img src=&#34;images/image3.jpg&#34; /&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;img src=&#34;images/image4.jpg&#34; /&amp;gt;&amp;lt;span class=&#34;caption&#34;&amp;gt;This one has a caption&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+要使用该jQuery幻灯片插件还要在页面中引入必要的JS和CSS文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/sss.css&#34; type=&#34;text/css&#34; media=&#34;all&#34;&amp;gt;
+&amp;lt;script src=&#34;http://libs.useso.com/js/jquery/1.9.0/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/sss.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后使用下面的方法调用插件：
+
+jQuery(function($) {
+$(&#39;.slider&#39;).sss();
+});
+
+
+ 可用参数
+
+$(&#39;.slider&#39;).sss({
+slideShow : true, // Set to false to prevent SSS from automatically animating.
+startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
+transition : 400, // Length (in milliseconds) of the fade transition.
+speed : 3500, // Slideshow speed in milliseconds.
+showNav : true // Set to false to hide navigation arrows.
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1297">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1298">
+                        url.js-可操纵网页URL地址的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1298" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503181738.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+url.js是一款可以非常实用方便的操纵网页URL地址的js插件。通过url.js你可以设置和获取当前URL的参数，也可以对当前URL的参数进行更新，删除操作，还可以将当前URL的参数显示为json字符串或是一个对象形式。
+内容：
+
+
+简要教程
+
+
+url.js是一款可以非常实用方便的操纵网页URL地址的js插件。通过url.js你可以设置和获取当前URL的参数，也可以对当前URL的参数进行更新，删除操作，还可以将当前URL的参数显示为json字符串或是一个对象形式。
+
+ 使用方法
+url.js的使用方法非常简单，在页面中引入url.js文件，然后就可以使用它提供的方法直接对URL进行操纵了，例如：
+
+&amp;lt;script src=&#34;path/to/url.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+Url.updateSearchParam(&#34;answer&#34;, 42);
+&amp;lt;/script&amp;gt;
+
+
+ 方法
+
+
+queryString(name, notDecoded)：查询name参数对应的值。
+
+
+name：类型：String，要查询的参数的名称。
+
+notDecoded：类型：Boolean，如果设置为true，查询结果将被编码。
+
+返回值：String，返回参数对应的值。
+
+
+parseQuery(search)：String，将search解析为查询字符串。
+
+
+search：类型：String，默认值：window.location.search，要被解析的字符串，可选。
+
+返回值：类型：Object。以对象的形式返回查询字符串。
+
+
+stringify(queryObj)：将一个查询对象字符串化。
+
+
+queryObj：类型：Object，要被字符串化的查询对象。
+
+返回值：类型：String。queryObj对象字符串化后的值。
+
+
+updateSearchParam(param, value)：对一个URL参数进行增、删、改操作，不会刷新页面。
+
+
+param：类型：String，参数的名称。
+
+value：类型：String，参数的值。如果没有定义，该参数会被移除。
+
+返回值：类型：Url。返回一个url对象。
+
+
+getLocation()：返回当前页面的url，不包括域名部分。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1298">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1299">
+                        jQuery和CSS3打造GOOGLE样式的用户登录界面
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1299" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503131746.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3打造的GOOGLE样式的用户登录界面特效。该登录界面特效中，右上角的小问号和错误提示小图标使用SVG来制作，用户名和密码输入框采用浮动标签特效，可点击的按钮上使用了很酷的点击波特效。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3打造的GOOGLE样式的用户登录界面特效。该登录界面特效中，右上角的小问号和错误提示小图标使用SVG来制作，用户名和密码输入框采用浮动标签特效，可点击的按钮上使用了很酷的点击波特效。整个登录界面简洁大方，互动性很强。
+该用户登录界面使用HTML5的&amp;lt;errorp&amp;gt;标签来提示用户输入错误。
+
+ HTML结构
+该GOOGLE样式用户登录界面的HTML结构使用标准的Form表单结构，图标使用&amp;lt;i&amp;gt;标签来包裹一个SVG图形，错误信息则用&amp;lt;erroru&amp;gt;来制作：
+
+&amp;lt;div class=&#34;login&#34;&amp;gt;
+&amp;lt;i ripple&amp;gt;
+&amp;lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&amp;gt;
+&amp;lt;path fill=&#34;#C7C7C7&#34; d=&#34;...&#34;/&amp;gt;
+&amp;lt;/svg&amp;gt;
+&amp;lt;/i&amp;gt;
+&amp;lt;div class=&#34;photo&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;span&amp;gt;Sign in with your Google Account&amp;lt;/span&amp;gt;
+&amp;lt;form action=&#34;&#34; id=&#34;login-form&#34;&amp;gt;
+&amp;lt;div id=&#34;u&#34; class=&#34;form-group&#34;&amp;gt;
+&amp;lt;input id=&#34;username&#34; spellcheck=false class=&#34;form-control&#34; name=&#34;username&#34; type=&#34;text&#34; size=&#34;18&#34; alt=&#34;login&#34; required=&#34;&#34;&amp;gt;
+&amp;lt;span class=&#34;form-highlight&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;form-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;label for=&#34;username&#34; class=&#34;float-label&#34;&amp;gt;Email&amp;lt;/label&amp;gt;
+&amp;lt;erroru&amp;gt;
+Username is required
+&amp;lt;i&amp;gt; 
+&amp;lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&amp;gt;
+...
+&amp;lt;/svg&amp;gt;
+&amp;lt;/i&amp;gt;
+&amp;lt;/erroru&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;p&#34; class=&#34;form-group&#34;&amp;gt;
+&amp;lt;input id=&#34;password&#34; class=&#34;form-control&#34; spellcheck=false name=&#34;password&#34; type=&#34;password&#34; size=&#34;18&#34; alt=&#34;login&#34; required=&#34;&#34;&amp;gt;
+&amp;lt;span class=&#34;form-highlight&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;form-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;label for=&#34;password&#34; class=&#34;float-label&#34;&amp;gt;Password&amp;lt;/label&amp;gt;
+&amp;lt;errorp&amp;gt;
+Password is required
+&amp;lt;i&amp;gt; 
+&amp;lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&amp;gt;
+...
+&amp;lt;/svg&amp;gt;
+&amp;lt;/i&amp;gt;
+&amp;lt;/errorp&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;form-group&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; id=&#34;rem&#34;&amp;gt;
+&amp;lt;label for=&#34;rem&#34;&amp;gt;Stay Signed in&amp;lt;/label&amp;gt;
+&amp;lt;button id=&#34;submit&#34; type=&#34;submit&#34; ripple&amp;gt;Sign in&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+该登录界面的用户头像是使用CSS ::before和::after伪元素制作的。
+
+.login .photo {
+position: relative;
+width: 100px;
+height: 100px;
+margin: 30px 135px;
+border-radius: 50\%;
+background: rgb(223, 223, 223);
+border: 13px solid rgb(223, 223, 223);
+overflow: hidden !important;
+transform: rotate(-1deg);
+}
+.login .photo:before {
+position: absolute;
+content: &#39;&#39;;
+width: 35px;
+height: 35px;
+top: 0px;
+right: 20px;
+border-radius: 50%;
+background: #aaa;
+border: 2px solid #fff;
+transform: scale(0);
+transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+-webkit-animation: user-head 0.5s 0s forwards;
+-moz-animation: user-head 0.5s 0s forwards;
+animation: user-head 0.5s 0s forwards;
+}
+.login .photo:after {
+position: absolute;
+content: &#39;&#39;;
+width: 140px;
+height: 220px;
+top: 38px;
+right: -32px;
+border-radius: 50%;
+background: #aaa;
+border: 2px solid #fff;
+transform: translateY(36px);
+transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+-webkit-animation: user-body 0.5s 0.3s forwards;
+-moz-animation: user-body 0.5s 0.3s forwards;
+animation: user-body 0.5s 0.3s forwards;
+}
+
+浮动标签float-label使用绝对定位，当输入框聚焦或:valid的时候，浮动标签使用指定的过渡动画向上移动。浮动标签是一个非常有创意的设计，想了解浮动标签的设计方式可以查看这里：CSS表单元素浮动标签的设计技巧与实现方法。
+
+.float-label {
+position: absolute;
+left: 0;
+top: 10px;
+font-size: 16px;
+color: #999;
+font-weight: 300;
+transition: 0.2s ease all;
+-moz-transition: 0.2s ease all;
+-webkit-transition: 0.2s ease all;
+}
+.form-control:focus ~ .float-label, .form-control:valid ~ .float-label {
+top: -15px;
+font-size: 12px;
+}
+
+该登录界面中还使用了一个有趣的特效-点击波特效。当在按钮上点击的时候，一个光圈从被点击的点开始，会像冲击波一样向外辐射。在HTML代码中，每个带有点击波特效的元素都有一个自定义的属性ripple。
+
+[ripple] {
+position: relative;
+overflow: hidden;
+-webkit-transition: box-shadow .4s;
+-moz-transition: box-shadow .4s;
+-ms-transition: box-shadow .4s;
+-o-transition: box-shadow .4s;
+transition: box-shadow .4s;
+cursor: inherit;
+}
+[ripple] .touch {
+background: rgba(255, 255, 255, 0.3);
+pointer-events: none;
+border-radius: 100%;
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1299">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/32/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/34/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

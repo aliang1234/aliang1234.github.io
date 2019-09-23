@@ -1,0 +1,598 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery功能强大的图片查看器插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery功能强大的图片查看器插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1509/201509031731.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509031731.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509032518.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>viewer是一款功能强大的图片查看器jQuery插件。它可以实现ACDsee等看图软件的功能。它可以对图片进行移动，缩放，旋转，翻转，可以前后浏览一组图片。该图片查看器还支持移动设备，支持键盘控制，功能十分强大。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>viewer是一款功能强大的图片查看器<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。它可以实现ACDsee等看图软件的部分功能。它可以对图片进行移动，缩放，旋转，翻转，可以前后浏览一组图片。该图片查看器还支持移动设备，支持键盘控制，功能十分强大。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过nmp或bower来安装该图片查看器插件。</p>
+<pre class="brush:html">
+npm install imageviewer
+bower install imageviewer
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该幻灯片插件需要引入jQuery，viewer.css和viewer.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/viewer.css" type="text/css"&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt; 
+&lt;script type="text/javascript" src="js/viewer.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该图片查看器需要一个块级元素来作为包裹元素，可以只有一张图片，直接使用<code>&lt;img&gt;</code>元素，或者是一组图片，使用无序列表来制作：</p>
+<pre class="brush:html">
+&lt;!--单张图片--&gt;
+&lt;div&gt;
+&lt;img class="image" src="picture.jpg" alt="Picture"&gt;
+&lt;/div&gt;
+&lt;!--一组图片--&gt;
+&lt;div&gt;
+&lt;ul class="images"&gt;
+&lt;li&gt;&lt;img src="picture.jpg" alt="Picture"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="picture-2.jpg" alt="Picture 2"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="picture-3.jpg" alt="Picture 3"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该图片查看器插件。</p>
+<pre class="brush:js">
+// View one image
+$('.image').viewer();
+<p>// View some images<br>
+$('.images').viewer();<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 键盘控制</h5>
+<p>在模态窗口模式下，可以使用键盘来控制查看图片：</p>
+<ul>
+<li>
+<code>Esc</code>：退出全屏并停止播放。</li>
+<li>
+<code>←</code>：查看前一张图片。</li>
+<li>
+<code>→</code>：查看下一张图片。</li>
+<li>
+<code>↑</code>：放大图片。</li>
+<li>
+<code>↓</code>：缩小图片。</li>
+<li>
+<code>Ctrl + 0</code>：缩小到初始大小。</li>
+<li>
+<code>Ctrl + 1</code>：放大到自然尺寸。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>你可以通过<code>$().viewer(options)</code>来设置这个图片查看器的参数。如果你要修改全局配置参数，你需要使用<code>$.fn.viewer.setDefaults(options)</code>。</p>
+<ul>
+<li>
+<code>inline</code>：类型：Boolean，默认值：false。使用内联模式来查看图片。</li>
+<li>
+<code>button</code>：类型：Boolean，默认值：true。在图片查看器的右上角显示按钮。</li>
+<li>
+<code>navbar</code>：类型：Boolean，默认值：true。显示导航条。</li>
+<li>
+<code>title</code>：类型：Boolean，默认值：true。显示图片标题。标题来自图片的<code>alt</code>属性或从URL解析的图片名称。</li>
+<li>
+<code>toolbar</code>：类型：Boolean，默认值：true。显示工具栏。</li>
+<li>
+<code>tooltip</code>：类型：Boolean，默认值：true。在放大缩小图片的时候显示图片的百分比比例。</li>
+<li>
+<code>movable</code>：类型：Boolean，默认值：true。图片是否可以移动。</li>
+<li>
+<code>zoomable</code>：类型：Boolean，默认值：true。图片是否可以放大缩小。</li>
+<li>
+<code>rotatable</code>：类型：Boolean，默认值：true。图片是否可以旋转。</li>
+<li>
+<code>scalable</code>：类型：Boolean，默认值：true。图片是否可以翻转。</li>
+<li>
+<code>transition</code>：类型：Boolean，默认值：true。是否为某些指定的元素使用<a href="http://www.htmleaf.com/css3/">CSS3</a> Transition效果。</li>
+<li>
+<code>fullscreen</code>：类型：Boolean，默认值：true。是否允许全屏模式。该功能需要浏览器支持<a href="http://caniuse.com/fullscreen" target="\_blank">Full Screen API</a>。</li>
+<li>
+<code>keyboard</code>：类型：Boolean，默认值：true。是否可以使用键盘控制。</li>
+<li>
+<code>interval</code>：类型：Number，默认值：5000。自动播放时图片的切换时间间隔。</li>
+<li>
+<code>zoomRatio</code>：类型：Number，默认值：0.1。在使用鼠标缩放图片时的缩放比例。</li>
+<li>
+<code>minZoomRatio</code>：类型：Number，默认值：0.01。图片缩小的最小比例。</li>
+<li>
+<code>maxZoomRatio</code>：类型：Number，默认值：100。图片放大的最小比例。</li>
+<li>
+<code>zIndex</code>：类型：Number，默认值：2015。定义图片查看器模态窗口的CSS <code>z-index</code>属性的值。</li>
+<li>
+<code>zIndexInline</code>：类型：Number，默认值：0。定义图片查看器在内联模式中CSS <code>z-index</code>属性的值。</li>
+<li>
+<code>url</code>：类型：String 或 Function，默认值：'src'。定义原始图片的URL地址。</li>
+<li>
+<code>build</code>：类型：Function，默认值：null。"build.viewer"事件的快捷方式。</li>
+<li>
+<code>built</code>：类型：Function，默认值：null。"built.viewer"事件的快捷方式。</li>
+<li>
+<code>show</code>：类型：Function，默认值：null。"show.viewer"事件的快捷方式。</li>
+<li>
+<code>shown</code>：类型：Function，默认值：null。"shown.viewer"事件的快捷方式。</li>
+<li>
+<code>hide</code>：类型：Function，默认值：null。"hide.viewer"事件的快捷方式。</li>
+<li>
+<code>hidden</code>：类型：Function，默认值：null。"hidden.viewer"事件的快捷方式。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>由于该图片查看器插件使用的是异步加载图片的方式，所以你需要在<code>shown</code>（模态窗口模式）或<code>built</code>（内联模式）之后才能调用下面的方法，除了模态窗口模式的<code>show</code>方法和<code>destroy</code>方法之外。</p>
+<pre class="brush:js">
+// Modal mode
+$().viewer({
+shown: function () {
+$().viewer('method', argument1, , argument2, ..., argumentN);
+}
+}
+<p>// Inline mode<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: … function () {
+'>().viewer({
+built: function () {
+</span>().viewer('method', argument1, , argument2, ..., argumentN);<br>
+}<br>
+}<br>
+</pre></p>
+<ul>
+<li>
+<code>show()</code>：显示图片查看器。只在模态窗口模式中有效。</li>
+<li>
+<code>hide()</code>：隐藏图片查看器。只在模态窗口模式中有效。</li>
+<li>
+<code>view([index])</code>：<p>index (optional)：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>默认值：<code>0</code>
+</li>
+<li>在查看的图片的index</li>
+</ul>
+<p>通过图片的index来查看某张图片。</p>
+<pre class="brush:js">
+$().viewer('view', 1); // 查看第二张图片
+</pre>
+</li>
+<li>
+<code>prev()</code>：查看前一张图片。</li>
+<li>
+<code>next()</code>：查看下一张图片。</li>
+<li>
+<code>move(offsetX[, offsetY])</code>：移动图片。
+<p><code>offsetX</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>默认值：<code>0</code>
+</li>
+<li>水平方向上移动的距离，单位像素。</li>
+</ul>
+<p><code>offsetY(optional)</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>垂直方向上移动的距离，单位像素。</li>
+<li>如果没有提供，默认值是<code>offsetX</code>。</li>
+</ul>
+<pre class="brush:js">
+$().viewer('move', 1);
+$().viewer('move', -1, 0); // 向左移动图片
+$().viewer('move', 1, 0);// 向有移动图片
+$().viewer('move', 0, -1); // 向上移动图片
+$().viewer('move', 0, 1);// 向下移动图片 
+</pre>
+</li>
+<li>
+<code>zoom(ratio[, hasTooltip])</code>：缩放图片。
+<p><code>ratio</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>Zoom in（放大）：需要一个正数（ratio &gt; 0）。</li>
+<li>Zoom out（缩小）：需要一个负数（ratio &lt; 0）</li>
+</ul>
+<p><code>hasTooltip</code> (optional)：</p>
+<ul>
+<li>类型：<code>Boolean</code>
+</li>
+<li>默认值：<code>false</code>
+</li>
+<li>显示tooltip。</li>
+</ul>
+<pre class="brush:js">
+$().viewer('zoom', 0.1);
+$().viewer('zoom', -0.1);
+</pre>
+</li>
+<li>
+<code>zoomTo(ratio[, hasTooltip])</code>：缩放图片到指定的比例。
+<p><code>ratio</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>需要一个正数（ratio &gt; 0）</li>
+</ul>
+<p><code>hasTooltip</code> (optional)：</p>
+<ul>
+<li>类型：<code>Boolean</code>
+</li>
+<li>默认值：<code>false</code>
+</li>
+<li>显示tooltip。</li>
+</ul>
+<pre class="brush:js">
+$().viewer('zoomTo', 0); // Zoom to zero size (0\%)
+$().viewer('zoomTo', 1); // Zoom to natural size (100\%)
+</pre>
+</li>
+<li>
+<code>rotate(degree)</code>：旋转图片。
+<p><code>degree</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>向右旋转需要一个正数（ratio &gt; 0）</li>
+<li>向左旋转需要一个负数（ratio &lt; 0）</li>
+</ul>
+<p>该方法需要浏览器支持<a href="http://caniuse.com/transforms2d" target="\_blank">CSS3 2D Transforms</a>（IE9+）。</p>
+<pre class="brush:js">
+$().viewer('rotate', 90);
+$().viewer('rotate', -90);
+</pre>
+</li>
+<li>
+<code>rotateTo(degree)</code>：将图片旋转到指定的角度。
+<p><code>degree</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+</ul>
+<p>该方法需要浏览器支持<a href="http://caniuse.com/transforms2d" target="\_blank">CSS3 2D Transforms</a>（IE9+）。</p>
+<pre class="brush:js">
+$().viewer('rotateTo', 0); // 将图片重置到0度
+$().viewer('rotateTo', 360); // 将图片旋转一周 
+</pre>
+</li>
+<li>
+<code>scale(scaleX[, scaleY])</code>：翻转图片。
+<p><code>scaleX</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>默认值：<code>1</code>
+</li>
+<li>图片横坐标方向上的缩放比例。</li>
+<li>当值为1时不做任何事情。</li>
+</ul>
+<p><code>scaleY</code>：(optional</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>图片纵坐标方向上的缩放比例。</li>
+<li>如果未指定，默认值为<code>scaleX</code>。</li>
+</ul>
+<p>该方法需要浏览器支持<a href="http://caniuse.com/transforms2d" target="\_blank">CSS3 2D Transforms</a>（IE9+）。</p>
+<pre class="brush:js">
+$().viewer('scale', -1); // 在垂直和水平方向上翻转图片
+$().viewer('scale', -1, 1); // 水平翻转
+$().viewer('scale', 1, -1); // 垂直翻转
+</pre>
+</li>
+<li>
+<code>scaleX(scaleX)</code>：水平翻转图片。
+<p><code>scaleX</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>默认值：<code>1</code>
+</li>
+<li>图片横坐标方向上的缩放比例。</li>
+<li>当值为1时不做任何事情。</li>
+</ul>
+<p>该方法需要浏览器支持<a href="http://caniuse.com/transforms2d" target="\_blank">CSS3 2D Transforms</a>（IE9+）。</p>
+<pre class="brush:js">
+$().viewer('scaleX', -1); // 水平翻转
+</pre>
+</li>
+<li>
+<code>scaleY(scaleY)</code>：垂直翻转。
+<p><code>scaleY</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>默认值：<code>1</code>
+</li>
+<li>图片纵坐标方向上的缩放比例。</li>
+<li>当值为1时不做任何事情。</li>
+</ul>
+<p>该方法需要浏览器支持<a href="http://caniuse.com/transforms2d" target="\_blank">CSS3 2D Transforms</a>（IE9+）。</p>
+<pre class="brush:js">
+$().viewer('scaleY', -1); // 水平翻转
+</pre>
+</li>
+<li>
+<code>play()</code>：播放图片。</li>
+<li>
+<code>stop()</code>：停止播放。</li>
+<li>
+<code>full()</code>：进入模态窗口模式。仅在内联模式中有效。</li>
+<li>
+<code>exit()</code>：退出模态窗口模式。仅在内联模式中有效。</li>
+<li>
+<code>tooltip()</code>：以百分比显示当前图片的比例。需要<code>tooltip</code>参数设置为<code>true</code>。</li>
+<li>
+<code>toggle()</code>：在原始尺寸和当前尺寸之间切换图片尺寸。</li>
+<li>
+<code>reset()</code>：重置图片到元素状态。</li>
+<li>
+<code>destroy()</code>：销毁图片查看器实例。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<ul>
+<li>
+<code>build.viewer</code>：当图片查看器实例开始创建时触发。</li>
+<li>
+<code>built.viewer</code>：当图片查看器实例被创建之后触发。</li>
+<li>
+<code>show.viewer</code>：当图片查看器元素开始显示时触发。仅在模态窗口模式有效。</li>
+<li>
+<code>shown.viewer</code>：当图片查看器元素显示之后触发。仅在模态窗口模式有效。</li>
+<li>
+<code>hide.viewer</code>：当图片查看器元素开始隐藏时触发。仅在模态窗口模式有效。</li>
+<li>
+<code>hidden.viewer</code>：当图片查看器元素隐藏之后触发。仅在模态窗口模式有效。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> No conflict</h3>
+<p>如果你使用了和这个图片查看器具有相同名称空间的其它插件，可以通过<code>$.fn.viewer.noConflict</code>方法来恢复它。</p>
+<pre class="brush:js">
+&lt;script src="other-plugin.js"&gt;&lt;/script&gt;
+&lt;script src="viewer.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$.fn.viewer.noConflict();
+// Code that uses other plugin's "$().viewer" can follow here.
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<ul>
+<li>Chrome (latest 2)</li>
+<li>Firefox (latest 2)</li>
+<li>Internet Explorer 8+</li>
+<li>Opera (latest 2)</li>
+<li>Safari (latest 2)</li>
+</ul>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509031731.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509032518.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1021">
+                                <h3 class="post-title">
+                                    jQuery和CSS3全屏整页切换过渡动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

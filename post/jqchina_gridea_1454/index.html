@@ -1,0 +1,322 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    超酷jQuery环形按钮菜单效果插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            超酷jQuery环形按钮菜单效果插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412232205.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410011601.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/2014100112.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的jQuery环形按钮菜单效果插件。该jQUery环形按钮菜单插件在鼠标点击或滑过中间的主导航按钮时，菜单按一个圆形的路径滑动展开，形成一个环形的大菜单，效果非常酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常酷的jQuery环形按钮菜单效果插件。要使用这个插件，首先需要在页面中引入jQuery和jquery.wheelmenu.js，以及wheelmenu.css文件。</p>
+<h3>HTML结构</h3>
+<p>要确保<span class="m">wheel-button</span>超链接中的href匹配你想要现实的环状按钮菜单列表。</p>
+<pre class="brush:html">
+&lt;a href="#wheel" class="wheel-button"&gt;
+&lt;span&gt;+&lt;/span&gt;
+&lt;/a&gt;
+&lt;ul id="wheel"&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+…
+&lt;/ul&gt;
+</pre>
+<h3>CSS样式</h3>
+<p>下面是环状按钮菜单的样式：</p>
+<pre class="brush:css">
+.wheel-button {
+position: relative;
+}
+<p>.wheel {<br>
+margin: 0;<br>
+padding: 0;<br>
+list-style: none;<br>
+width: 200px; /* this will determine the diameter of the circle*/<br>
+height: 200px; /* this will determine the diameter of the circle*/<br>
+visibility: hidden;<br>
+position: relative;<br>
+display: none;<br>
+}</p>
+<p>.wheel li {<br>
+overflow: hidden;<br>
+float:left;<br>
+}</p>
+<p>.wheel li a {<br>
+display: block;<br>
+}<br>
+</pre></p>
+<p>上面的样式是环状按钮菜单插件必须的样式。<span class="m">.wheel</span>的宽度和高度确定环状按钮菜单的直径有多大。按照你的需要调整它们。上面的其他部分样式不能被改变。</p>
+<h3>JAVASCRIPT</h3>
+<p>js部分代码十分简单。有3个参数你可以调整：animation、animationSpeed和angle。</p>
+<pre class="brush:js">
+$(".wheel-button").wheelmenu({
+animation: "fly",
+animationSpeed: "medium",
+angle: “all”
+ });
+</pre>
+<p><span class="m">animation</span>：你可以选择“fade”或“fly”效果。你可以在第二种效果中看它们的区别。默认值是“fade”。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/demo-21.jpg" alt=" 环形按钮菜单特效-1" width="800" height="450"></p>
+<p><span class="m">animationSpeed</span>：设置为“instant”，将立刻出现。其它选项还有：“fast”, “medium”, 或“slow”。默认值为“medium”。</p>
+<p><span class="m">angle</span>：你可以选择以下一些预定义的值：all, N, NE, E, SE, S, SW, W, 和 NW。这些选项可以使你将环形按钮菜单放置在页面的任何地方，并防止菜单展开时溢出页面。</p>
+<p>例如：如果你希望菜单按钮出现在页面的北边，你可以选择“N”选项。如果你希望菜单按钮出现在所有方向上，那么使用“all”选项。</p>
+<p>你甚至可以使用俩个值的数组来定义菜单出现的开始和结束位置。例如，你希望环形按钮菜单只显示3/4个圆，你可以使用<span class="m">[0,270]</span>来定义你的角度。如下图：</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/demo-5.jpg" alt=" 环形按钮菜单特效-2" width="800" height="450"></p>
+<h5>多按钮支持</h5>
+<p>这个插件还允许你为每一个不同的菜单按钮设置一个不同的角度值。看下面的例子：</p>
+<pre class="brush:html">
+&lt;a href="#wheel" class="wheel-button"&gt;
+&lt;span&gt;+&lt;/span&gt;
+&lt;/a&gt;
+&lt;ul id="wheel" data-angle=”N”&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li class="item"&gt;&lt;a href="#home"&gt;...&lt;/a&gt;&lt;/li&gt;
+….
+&lt;/ul&gt;
+<p>&lt;a href=&quot;#wheel2&quot; class=&quot;wheel-button&quot;&gt;<br>
+&lt;span&gt;+&lt;/span&gt;<br>
+&lt;/a&gt;<br>
+&lt;ul id=&quot;wheel2&quot; data-angle=”S”&gt;<br>
+&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#home&quot;&gt;...&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#home&quot;&gt;...&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;item&quot;&gt;&lt;a href=&quot;#home&quot;&gt;...&lt;/a&gt;&lt;/li&gt;<br>
+….<br>
+&lt;/ul&gt;<br>
+..<br>
+</pre></p>
+<p>同时不要忘记将<span class="m">data-angle</span>从全局函数中移除。</p>
+<h5>JS代码</h5>
+<pre class="brush:js">
+$(".wheel-button").wheelmenu({
+trigger: "hover",
+animation: "fly"
+});
+</pre>
+<div class="alert alert-danger" role="alert">注意：预定义的data属性总是会覆盖你设置的全局的参数。</div>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/demo-41.jpg" alt=" 环形按钮菜单特效-3" width="800" height="450"></p>
+<p>更多信息请参考：<a href="https://github.com/peachananr/wheel-menu" target="\_blank">https://github.com/peachananr/wheel-menu</a>。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410011601.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/2014100112.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1455">
+                                <h3 class="post-title">
+                                    jQuery和css3网站操作提示向导插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

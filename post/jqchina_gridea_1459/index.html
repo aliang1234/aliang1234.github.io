@@ -1,0 +1,442 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3全屏导航菜单圆形气泡动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3全屏导航菜单圆形气泡动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-banana">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412131633.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412131633.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141213776.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果炫酷的jQuery和css3全屏导航菜单圆形气泡动画特效插件。当用户点击右上角的导航按钮时，会从右上角出现一个圆形的遮罩并逐渐放大到整个屏幕，之后导航菜单在遮罩上出现。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款非常效果非常炫酷的jQuery和css3全屏导航菜单圆形气泡动画特效插件。所有的现代浏览器都支持这个特效。在插件中我们集成了<a href="http://julian.com/research/velocity/" target="\_blank"> Velocity.js</a>。</p>
+<h3>HTML结构</h3>
+<p>html结构使用一个无序列表作为导航菜单。<span class="m"> .cd-overlay-nav</span>和<span class="m">.cd-overlay-content</span>是用来做圆形气泡动画的层。它们被放置到右上角的导航菜单按钮的后面，它们里面的两个span是两种不同颜色的圆形展开效果。<span class="m"> .cd-nav-trigger</span>是用于触发菜单的导航按钮。</p>
+<pre class="brush:html">
+&lt;header&gt;
+&lt;a class="cd-logo" href="#0"&gt;&lt;img src="img/cd-logo.svg" alt="Logo"&gt;&lt;/a&gt;
+&lt;/header&gt;
+<p>&lt;nav&gt;<br>
+&lt;ul class=&quot;cd-primary-nav&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;The team&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Our services&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Our projects&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Start a project&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Join In&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Create an account&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;</p>
+<p>&lt;main class=&quot;cd-content&quot;&gt;<br>
+&lt;!-- your content here --&gt;<br>
+&lt;/main&gt;</p>
+<p>&lt;div class=&quot;cd-overlay-nav&quot;&gt;<br>
+&lt;span&gt;&lt;/span&gt;<br>
+&lt;/div&gt; &lt;!-- cd-overlay-nav --&gt;</p>
+<p>&lt;div class=&quot;cd-overlay-content&quot;&gt;<br>
+&lt;span&gt;&lt;/span&gt;<br>
+&lt;/div&gt; &lt;!-- cd-overlay-content --&gt;</p>
+<p>&lt;a href=&quot;#0&quot; class=&quot;cd-nav-trigger&quot;&gt;Menu&lt;span class=&quot;cd-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>当你查看CSS文件时，你会发现导航按钮时固定在右上角的<span class="m">position:fixed</span> 。为了使这个特效能够正常工作，我们将两个圆形动画层（<span class="m">.cd-overlay-nav</span>和<span class="m">.cd-overlay-content</span>）居中并放置在触发按钮后面的正确位置上。为了做到这一点，我们需要为它们定义固定的宽度和高度。但是你注意观察<span class="m">&lt;span&gt;</span>元素，它实际上是圆形动画元素，你会注意到，我们没有定义任何的位置或大小值。因为圆形衣架覆盖了整个屏幕，不论窗口大小，我们只需要在jQuery中定义positioning 和width即可。</p>
+<pre class="brush:css">
+.cd-nav-trigger {
+top: 18px;
+right: 5\%;
+height: 44px;
+width: 44px;
+z-index: 5;
+/* image replacement */
+overflow: hidden;
+text-indent: 100\%;
+white-space: nowrap;
+}
+.cd-overlay-nav, .cd-overlay-content {
+/* containers of the 2 main rounded backgrounds - these containers are used to position the rounded bgs behind the menu icon */
+position: fixed;
+top: 18px;
+right: 5\%;
+height: 4px;
+width: 4px;
+transform: translateX(-20px) translateY(20px);
+}
+.cd-overlay-nav span, .cd-overlay-content span {
+display: inline-block;
+position: absolute;
+border-radius: 50\%;
+will-change: transform;
+transform: scale(0);
+}
+</pre>
+<p>在点击触发按钮后，我们希望它产生一些动画效果，而不是立刻转变为关闭按钮。所以我们添加了一个<span class="m">&lt;span&gt;</span>元素<span class="m">.cd-icon</span>，这样我们就可以使用它的<span class="m">::before</span>和<span class="m">::after</span>伪元素来制作动画效果。</p>
+<pre class="brush:css">
+.cd-nav-trigger .cd-icon {
+/* icon created in CSS */
+position: absolute;
+left: 50\%;
+top: 50\%;
+bottom: auto;
+right: auto;
+transform: translateX(-50\%) translateY(-50\%);
+display: inline-block;
+width: 18px;
+height: 3px;
+background-color: #ffffff;
+z-index: 10;
+}
+.cd-nav-trigger .cd-icon::before, .cd-nav-trigger .cd-icon:after {
+/* upper and lower lines of the menu icon */
+position: absolute;
+top: 0;
+right: 0;
+width: 100\%;
+height: 100\%;
+background-color: inherit;
+transition: transform .3s;
+}
+.cd-nav-trigger .cd-icon::before {
+transform: translateY(-6px) rotate(0deg);
+}
+<p>.cd-nav-trigger .cd-icon::after {<br>
+transform: translateY(6px) rotate(0deg);<br>
+}<br>
+.cd-nav-trigger.close-nav .cd-icon {<br>
+/* user clicks on the .cd-nav-trigger element - transform the icon */<br>
+background-color: rgba(255, 255, 255, 0);<br>
+}<br>
+.cd-nav-trigger.close-nav .cd-icon::before, .cd-nav-trigger.close-nav .cd-icon::after {<br>
+background-color: white;<br>
+}<br>
+.cd-nav-trigger.close-nav .cd-icon::before {<br>
+transform: translateY(0) rotate(45deg);<br>
+}<br>
+.cd-nav-trigger.close-nav .cd-icon::after {<br>
+transform: translateY(0) rotate(-45deg);<br>
+}<br>
+</pre></p>
+<p>导航菜单，背景颜色的编号和他们的动画效果都带有一定的延时，我们通过2个伪元素来制作这种效果：</p>
+<pre class="brush:css">
+.cd-nav-trigger::before, .cd-nav-trigger::after {
+/* 2 rounded colored backgrounds for the menu icon */
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 50\%;
+height: 100\%;
+width: 100\%;
+transition-property: transform;
+}
+.cd-nav-trigger::before {
+background-color: #091d23;
+transform: scale(1);
+transition-duration: 0.3s;
+transition-delay: 0.4s;
+}
+.cd-nav-trigger::after {
+background-color: #ffb441;
+transform: scale(0);
+transition-duration: 0s;
+transition-delay: 0s;
+}
+.cd-nav-trigger.close-nav::before {
+/* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
+transform: scale(0);
+}
+.cd-nav-trigger.close-nav::after {
+/* user clicks on the .cd-nav-trigger element - 2nd rounded background appears */
+transform: scale(1);
+transition-duration: 0.3s;
+transition-delay: 0.4s;
+}
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>当用户点击了导航按钮，我们使<span class="m">.cd-overlay-nav</span>中的<span class="m">&lt;span&gt;</span>元素开始动画，当圆形气泡填充满整个屏幕，将显示导航菜单。当用户再次点击导航按钮来关闭导航菜单时，我们使<span class="m"> .cd-overlay-content</span>中的<span class="m">&lt;span&gt;</span>元素开始动画，在动画结束时，我们隐藏第一个圆形和菜单，它们将会因为被设置很低的z-index而不可见。最后，我们减少第二个圆形（黄色的那个）的透明度，从而使下面的内容显示出来。</p>
+<p>在jQuery中，我们使用span class="m"&gt; initLayer() </p>函数来定义<span class="m">&lt;span&gt;</span>元素的 position 和 size。我们指定了一个高度等于视口对角线的两倍，top和left等于负的视口对角线值。
+<p>当用户点击了触发按钮，我们使<span class="m">.cd-overlay-nav span</span>元素开始动画，改变它的<span class="m">scale</span>值从0到1。（我们使用<a href="http://julian.com/research/velocity/" target="\_blank"> Velocity.js </a>来制作这个动画效果。）</p>
+<pre class="brush:js">
+var overlayNav = $('.cd-overlay-nav'),
+toggleNav = $('.cd-nav-trigger'),
+navigation = $('.cd-primary-nav');
+<p>toggleNav.on('click', function(){<br>
+if(!toggleNav.hasClass('close-nav')) {<br>
+//animate menu icon into a cross icon<br>
+toggleNav.addClass('close-nav');<br>
+//animate the navigation layer<br>
+overlayNav.children('span').velocity({<br>
+translateZ: 0,<br>
+scaleX: 1,<br>
+scaleY: 1,<br>
+}, 500, 'easeInCubic', function(){<br>
+//show navigation<br>
+navigation.addClass('fade-in');<br>
+});<br>
+}<br>
+}<br>
+</pre></p>
+<p>当用户点击了关闭按钮，我们修改<span class="m">.cd-overlay-content span</span>的<span class="m">scale</span>值。</p>
+<pre class="brush:js">
+var overlayNav = $('.cd-overlay-nav'),
+overlayContent = $('.cd-overlay-content'),
+toggleNav = $('.cd-nav-trigger'),
+navigation = $('.cd-primary-nav');
+<p>toggleNav.on('click', function(){<br>
+if(!toggleNav.hasClass('close-nav')) {<br>
+//it means navigation is not visible yet - open it and animate navigation layer<br>
+//....<br>
+} else {<br>
+//animate cross icon into a menu icon<br>
+toggleNav.removeClass('close-nav');<br>
+//animate the content layer<br>
+overlayContent.children('span').velocity({<br>
+translateZ: 0,<br>
+scaleX: 1,<br>
+scaleY: 1,<br>
+}, 500, 'easeInCubic', function(){<br>
+//hide navigation<br>
+navigation.removeClass('fade-in');<br>
+//scale to zero the navigation layer<br>
+overlayNav.children('span').velocity({<br>
+translateZ: 0,<br>
+scaleX: 0,<br>
+scaleY: 0,<br>
+}, 0);<br>
+//reduce to opacity of the content layer with the is-hidden class<br>
+overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){<br>
+//wait for the end of the transition and scale to zero the content layer<br>
+overlayContent.children('span').velocity({<br>
+translateZ: 0,<br>
+scaleX: 0,<br>
+scaleY: 0,<br>
+}, 0, function(){overlayContent.removeClass('is-hidden')});</p>
+<p>});<br>
+});<br>
+}<br>
+});<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412131633.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141213776.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_146">
+                                <h3 class="post-title">
+                                    基于jQuery和bootstrap4进度条的计时器插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

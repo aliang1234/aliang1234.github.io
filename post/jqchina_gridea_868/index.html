@@ -1,0 +1,362 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Bootstrap3的滚动监听（Scrollspy）jQuery插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Bootstrap3的滚动监听（Scrollspy）jQuery插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_4">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1512/201512271613.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512271613.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512272958.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>dynamic-scrollspy是一款基于Bootstrap3的滚动监听（Scrollspy）jQuery插件。使用该jQuery插件可以非常轻松的制作出页面的滚动监听效果，它会自动为你添加一个侧边栏导航，并设置好原生的Bootstrap滚动监听。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>dynamic-scrollspy是一款基于Bootstrap3的滚动监听（Scrollspy）<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。使用该jQuery插件可以非常轻松的制作出页面的滚动监听效果，它会自动为你添加一个侧边栏导航，并设置好原生的Bootstrap滚动监听。</p>
+<p>在原生的Bootstrap中就有滚动监听效果，但是它使用起来相对要复杂一些，你可以在这里找到<a href="" target="\_blank">原生Bootstrap滚动监听插件的使用方法</a>。使用dynamic-scrollspy插件简化了这些操作，你可以通过简单的设置就生成一个非常好的页面滚动监听效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该滚动监听插件需要引入Bootstrap3+的依赖文件，以及jQuery1.11.0+和dynamicscrollspy.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="bootstrap-3.3.5/css/bootstrap.min.css" /&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="bootstrap-3.3.5/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/dynamicscrollspy.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>整个页面的滚动监听布局可以使用Bootstrap的网格布局，用9列作为文章的内容区域，用3列作为侧边栏的滚动监听面板区域。你可以自行调整。</p>
+<pre class="brush:html">
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-9"&gt;
+&lt;!-- 页面正文内容区域 --&gt;
+&lt;h2&gt;......&lt;/h2&gt;
+&lt;p&gt;......&lt;/p&gt;
+......
+&lt;/div&gt;
+&lt;div class="col-sm-3" id="scrollspy"&gt;
+&lt;!-- 滚动监听区域 --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素初加载完毕之后可以通过<code>DynamicScrollspy()</code>方法来初始化该滚动监听插件。注意是在滚动监听区域的容器上调用初始化方法。</p>
+<pre class="brush:js">
+$('#scrollspy').DynamicScrollspy();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<pre class="brush:js">
+$('#scrollspy').DynamicScrollspy({
+tH: 2, //lowest-level header to be included (H2)
+bH: 6, //highest-level header to be included (H6)
+genIDs: false, //generate random IDs for headers?
+offset: 100, //offset from viewport top for scrollspy
+ulClassNames: 'hidden-print', //add this class to top-most UL
+activeClass: '', //active class (besides .active) to add to LI
+testing: false //if testing, append heading tagName and ID to each heading
+})
+</pre>
+<ul>
+<li>
+<code>tH</code>：页面正文部分需要监听的最低级别的标题，默认为H2标签。</li>
+<li>
+<code>bH</code>：页面正文部分需要监听的最高级别的标题，默认为H6标签。</li>
+<li>
+<code>genIDs</code>：是否为标题随机生成ID，默认值为false。</li>
+<li>
+<code>offset</code>：滚动监听面板距离viewport顶部的偏移值，默认为100。</li>
+<li>
+<code>ulClassNames</code>：为最顶层的<code>ul</code>元素添加这个class。</li>
+<li>
+<code>activeClass</code>：添加到当前激活的<code>li</code>元素上的class。</li>
+<li>
+<code>testing</code>：如果设置为<code>true</code>，会为每一个标题添加<code>tagName</code>和id。</li>
+</ul>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> Destroy / Rebuild</h5>
+<p>销毁该滚动监听插件的方法为：</p>
+<pre class="brush:js">
+$('#somediv').DynamicScrollspy('destroy');
+</pre>
+<p>或者使用下面的方法来刷新滚动监听插件。</p>
+<pre class="brush:js">
+$('#somediv').DynamicScrollspy();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 关于CSS样式</h3>
+<p>侧边栏的CSS样式你可以在Bootstrap的官网上找到<a href="http://getbootstrap.com/css/" target="\_blank">更多的信息</a>。下面是该滚动监听效果所必须的一些CSS样式。</p>
+<pre class="brush:css">
+/* nav */
+.nav {
+padding-left: 0px;
+}
+/* all anchors */
+.nav &gt; li &gt; a {
+padding: 3px;
+border-left: 0px rgba(0,0,0,0);
+}
+/* first level */
+.nav li &gt;a {
+padding-left: 10px;
+}
+/* second */
+.nav .nav li &gt;a {
+padding-left: 20px;
+font-size:.9em;
+}
+/* third */
+.nav .nav .nav li &gt;a {
+padding-left: 30px;
+font-size:.8em;
+}
+/* fourth */
+.nav .nav .nav .nav li &gt;a {
+padding-left: 40px;
+}
+/* fifth */
+.nav .nav .nav .nav .nav li &gt;a {
+padding-left: 50px;
+}
+/* active link */
+li.active &gt; a {
+font-weight:bold;
+border-left: 2px solid gray;
+}
+/* hide second level lists */
+.nav .nav {
+display:none;
+}
+/* show second-level when active */
+.nav &gt; .active &gt; .nav {
+display: block;
+}
+</pre>
+<p>Dynamic-Scrollspy滚动监听插件的github地址：<a href="https://github.com/psalmody/dynamic-scrollspy" target="\_blank">https://github.com/psalmody/dynamic-scrollspy</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512271613.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512272958.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_869">
+                                <h3 class="post-title">
+                                    创意jQuery和CSS3滑动覆盖响应式幻灯片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

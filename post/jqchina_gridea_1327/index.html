@@ -1,0 +1,350 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和CSS3全屏推拉式滑动菜单特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和CSS3全屏推拉式滑动菜单特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502131803.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502131803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502131375.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的jQuery和CSS3全屏推拉式滑动菜单特效插件。这个插件的效果是当点击了主菜单按钮时，全屏菜单从屏幕左侧滑出，主菜单按钮动态旋转更换图标。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常炫酷的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>全屏推拉式滑动菜单特效插件。这个插件的效果是当点击了主菜单按钮时，全屏菜单从屏幕左侧滑出，主菜单按钮动态旋转更换图标。当再次点击主菜单按钮时，全屏菜单又从右向左滑会去。</p>
+<p>下面是一张描述这个过程的动态gif图片：</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1502/pushing-menu-prototype.gif" alt="jquery和css3全屏菜单效果" width="800" height="600"></p>
+<h3>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h3>
+<p>该全屏滑动菜单的HTML结构分为三个部分：包含可见内容的<code>&lt;main&gt;</code>元素，一个用于包含全屏导航菜单的<code>div.cd-nav</code>和一个用于触发事件的按钮<code>.cd-nav-trigger</code>。</p>
+<p><code>.cd-nav</code>中包含两个<code>div.cd-half-block</code>元素：第一个是包含菜单导航项的<code>.cd-primary-nav</code>，第二个是联系方式的内容<code>.cd-contact-info</code>。</p>
+<pre class="brush:html">
+&lt;div id="cd-nav" class="cd-nav"&gt;
+&lt;div class="cd-navigation-wrapper"&gt;
+&lt;div class="cd-half-block"&gt;
+&lt;h2&gt;Navigation&lt;/h2&gt;
+<p>&lt;nav&gt;<br>
+&lt;ul class=&quot;cd-primary-nav&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot; class=&quot;selected&quot;&gt;The team&lt;/a&gt;&lt;/li&gt;<br>
+&lt;!-- list items here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;<br>
+&lt;/div&gt;&lt;!-- .cd-half-block --&gt;</p>
+<p>&lt;div class=&quot;cd-half-block&quot;&gt;<br>
+&lt;address&gt;<br>
+&lt;ul class=&quot;cd-contact-info&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;mailto:info@myemail.co&quot;&gt;info@myemail.co&lt;/a&gt;&lt;/li&gt;<br>
+&lt;!-- other contact info here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/address&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-half-block --&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-navigation-wrapper --&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-nav --&gt;<br>
+</pre></p>
+<p>在<code>.cd-nav-trigger</code>中包含一个<code>span.cd-nav-icon</code>，它用于创建按钮的汉堡包图标，它本身是汉堡包中间的那条线，而它的<code>::before</code>和<code>::after</code>伪元素分别用于创建上面和下面的线。还包含一个<a href="http://www.htmleaf.com/html5/SVG/" target="\_blank">SVG</a>元素，它用于创建图标的动画。</p>
+<h3>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h3>
+<p>当用户点击<code>.cd-nav-trigger</code>主菜单按钮时，会在<code>&lt;body&gt;</code>元素上添加<code>.navigation-is-open</code> class。这个class会触发主菜单按钮动画和全屏菜单的滑动动画。</p>
+<p>对于主菜单按钮的动画可以分为三个部分：</p>
+<ul>
+<li>汉堡包图标被转换为箭头图标：<code>.cd-nav-icon::after</code>和<code>.cd-nav-icon::before</code>伪元素分别旋转45度和-45度，并使它们的宽度增加50\%。</li>
+<li>将<code>.cd-nav-icon</code>旋转180度。</li>
+<li>图标上的圆形进度条效果：开始的时候，图标的边框属性值为<code>stroke-dasharray="157 157"</code>和<code>stroke-dashoffset="157"</code>，157是圆周的值。动画开始后，<code>stroke-dashoffset</code>的值被设置为0。</li>
+</ul>
+<p>主按钮图标的每一步动画都使用CSS3 Transitions来使动画效果平滑过渡。</p>
+<p>下面是这个动画过程的gif动态示意图：</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1502/hamburger-explained.gif" alt="jquery和css3全屏菜单主按钮动画效果" width="800" height="600"></p>
+<pre class="brush:css">
+.cd-nav-trigger {
+transition: transform 0.5s;
+}
+.navigation-is-open .cd-nav-trigger {
+/* rotate trigger when navigation becomes visible */
+transform: rotate(180deg);
+}
+.cd-nav-trigger .cd-nav-icon::before, 
+.cd-nav-trigger .cd-nav-icon:after {
+/* upper and lower lines of the menu icon */
+width: 100\%;
+height: 100\%;
+transition: transform 0.5s, width 0.5s, top 0.3s;
+}
+.cd-nav-trigger .cd-nav-icon::before {
+transform-origin: right top;
+transform: translateY(-6px);
+}
+.cd-nav-trigger .cd-nav-icon::after {
+transform-origin: right bottom;
+transform: translateY(6px);
+}
+.navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
+.navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
+/* animate arrow --&gt; from hamburger to arrow */
+width: 50\%;
+transition: transform 0.5s, width 0.5s;
+}
+.navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
+transform: rotate(45deg);
+}
+.navigation-is-open .cd-nav-trigger .cd-nav-icon::after {
+transform: rotate(-45deg);
+}
+.cd-nav-trigger circle {
+/* circle border animation */
+transition: stroke-dashoffset 0.4s 0s;
+}
+.navigation-is-open .cd-nav-trigger circle {
+stroke-dashoffset: 0;
+transition: stroke-dashoffset 0.4s 0.3s;
+}
+</pre>
+<p>对于全屏菜单的滑动进入屏幕的效果，<code>&lt;main&gt;</code>元素和<code>.cd-navigation-wrapper</code>元素都在X轴上<code>translate</code>100\%的距离。为了制作更为逼真的推拉效果，插件中的<code>transition</code>时间函数使用的是<code>cubic bezier curve</code>，这个函数曲线允许你设置4个参数（曲线两端分别有两个控制点），可以通过调整这些控制点来定制<code>transition</code>时的动画效果。</p>
+<p>下图中展示了你设置自定义cubic-bezier timing functions和线性（linear）动画的区别：</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1502/curve\_1.gif" alt="cubic-bezier timing曲线" width="800" height="600"></p>
+<h3>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h3>
+<p>该全屏推拉式滑动菜单使用<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>来监听主菜单按钮的点击事件，并为相应的元素添加或移除<code>.navigation-is-open</code> class。</p>
+<pre class="brush:js">
+jQuery(document).ready(function($){
+var isLateralNavAnimating = false;
+<p>//open/close lateral navigation<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …imating ) {
+if('>(&#039;.cd-nav-trigger&#039;).on(&#039;click&#039;, function(event){
+event.preventDefault();
+//stop if nav animation is running 
+if( !isLateralNavAnimating ) {
+if(</span>(this).parents('.csstransitions').length &gt; 0 ) isLateralNavAnimating = true;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>b</mi><mi>o</mi><mi>d</mi><msup><mi>y</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>t</mi><mi>o</mi><mi>g</mi><mi>g</mi><mi>l</mi><mi>e</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>n</mi><mi>a</mi><mi>v</mi><mi>i</mi><mi>g</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>−</mo><mi>i</mi><mi>s</mi><mo>−</mo><mi>o</mi><mi>p</mi><mi>e</mi><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(&#x27;body&#x27;).toggleClass(&#x27;navigation-is-open&#x27;);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">b</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){<br>
+//animation is over<br>
+isLateralNavAnimating = false;<br>
+});<br>
+}<br>
+});<br>
+});<br>
+</pre></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502131803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502131375.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1328">
+                                <h3 class="post-title">
+                                    基于Twitter Bootstrap 3的炫酷jQuery下拉列表插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

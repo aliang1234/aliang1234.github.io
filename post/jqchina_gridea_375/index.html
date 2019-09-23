@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单的jquery前台分页插件paginathing.js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单的jquery前台分页插件paginathing.js
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1802/201802021515.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1802/201802021515.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201802024964.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Paginathing.js是一款简单的jquery前台分页插件。该jquery分页插件可以对页面中的列表和表格数据进行分页。它使用简单，兼容ie8，兼容Bootstrap框架。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Paginathing.js是一款简单的jquery前台分页插件。该jquery分页插件可以对页面中的列表和表格数据进行分页。它使用简单，兼容ie8，兼容Bootstrap框架。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和paginathing.js文件。</p>
+<pre class="brush:html">
+&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/paginathing.js.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>以列表为例，假设页面中有如下的一个无序列表，它的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="panel panel-primary"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3 class="panel-title"&gt;List of item.&lt;/h3&gt;
+&lt;/div&gt;
+&lt;ul class="list-group"&gt;
+&lt;li class="list-group-item"&gt; Your Item 1&lt;/li&gt;
+&lt;li class="list-group-item"&gt; Your Item 2&lt;/li&gt;
+&lt;li class="list-group-item"&gt; Your Item 3&lt;/li&gt;
+&lt;li class="list-group-item"&gt; Your Item 4&lt;/li&gt;
+&lt;li class="list-group-item"&gt; Your Item 5&lt;/li&gt;
+&lt;li class="list-group-item"&gt; Your Item 6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery分页插件。对无序列表进行分页，每页显示2条记录。</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+jQuery(document).ready(function($){
+$('.list-group').paginathing({
+perPage: 2,
+containerClass: 'panel'
+})
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>Paginathing.js jquery前台分页插件的可用配置参数如下：</p>
+<pre class="brush:js">
+perPage: 10, // show item per page
+limitPagination: false, // false or number. Limiting your pagination number.
+prevNext: true, // enable previous and next button
+firstLast: true, // enable first and last button
+prevText: '«', // Previous button text
+nextText: '»', // Next button text
+firstText: 'First', // "First button" text
+lastText: 'Last', // "Last button" text
+containerClass: 'pagination-container', // extend default container class
+ulClass: 'pagination', // extend default ul class
+liClass: 'page', // extend li class
+activeClass: 'active', // active link class
+disabledClass: 'disable' // disabled link class,
+insertAfter: null //class or id (eg: .element or #element). append the paginator after certain element
+pageNumbers: false // showing current page number of total pages number, to work properly limitPagination must be true 
+</pre>
+<ul>
+<li>
+<code>perPage</code>：每页显示的记录数。</li>
+<li>
+<code>limitPagination</code>：可以是<code>false</code>或一个数值。用于限制分页的页码。</li>
+<li>
+<code>prevNext</code>：是否允许显示前一页按钮。</li>
+<li>
+<code>firstLast</code>：是否允许显示第一页和最后一页按钮。</li>
+<li>
+<code>prevText</code>：前一页按钮上显示的文字。</li>
+<li>
+<code>nextText</code>：下一页按钮上显示的文字。</li>
+<li>
+<code>firstText</code>：第一页按钮上显示的文字。</li>
+<li>
+<code>lastText</code>：最后一页按钮上显示的文字。</li>
+<li>
+<code>containerClass</code>：容器的class名称。</li>
+<li>
+<code>ulClass</code>：ul元素的class名称。</li>
+<li>
+<code>liClass</code>：li元素的class名称。</li>
+<li>
+<code>activeClass</code>：当前分页按钮的class名称。</li>
+<li>
+<code>disabledClass</code>：被禁用的分页按钮的class名称。</li>
+<li>
+<code>insertAfter</code>：键分页传入到指定的元素之后，可以是<code>null</code>，或一个class名称，或一个id。</li>
+<li>
+<code>pageNumbers</code>：显示总页数，<code>limitPagination</code>参数必须设置为<code>true</code>。</li>
+</ul>
+<p>Paginathing.js jquery前台分页插件的github地址为：<a href="https://github.com/alfrcr/paginathing" target="\_blank">https://github.com/alfrcr/paginathing</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1802/201802021515.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201802024964.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_376">
+                                <h3 class="post-title">
+                                    检测浏览器版本提示升级js插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

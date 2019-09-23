@@ -1,0 +1,319 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    可通过导航视图精确滚动页面内容的js插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            可通过导航视图精确滚动页面内容的js插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504291828.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504291828.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504291755.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>viewport.js是一款非常有用的js插件，它可以通过设置导航视图来精确的对页面中每个章节的内容进行导航。同时你在滚动页面的时候还可以看到当前阅读的章节处于什么状态。viewport.js可以用于检测当前的滚动状态。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>viewport.js是一款非常有用的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">js插件</a>，它可以通过设置导航视图来精确的对页面中每个章节的内容进行导航。同时你在滚动页面的时候还可以看到当前阅读的章节处于什么状态。viewport.js可以用于检测当前的滚动状态。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower来安装该插件。</p>
+<pre class="brush:html">
+$ bower install vanilla-viewport
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该插件首先要引入viewport.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="/js/viewport.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>为每一个章节添加class <code>section</code>：</p>
+<pre class="brush:html">
+&lt;div id="firstSection" class="section"&gt;
+First section content goes here...
+&lt;/div&gt;
+<p>&lt;div id=&quot;secondSection&quot; class=&quot;section&quot;&gt;<br>
+Second section content goes here...<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在完成上面的代码之后，可以使用下面的代码来将一个导航视图和文章章节关联起来。</p>
+<pre class="brush:js">
+// use document.body if the whole page is scrollable
+var myViewport = document.getElementById('myViewport');
+var firstSection = document.getElementById('firstSection');
+<p>myViewport.addEventListener(<br>
+'scroll',<br>
+function() {<br>
+var location = firstSection.viewportTopLocation;<br>
+console.log(<br>
+'The viewport is at ' + location +<br>
+' relatively to the first section'<br>
+);<br>
+},<br>
+false<br>
+);<br>
+</pre></p>
+<p>Section元素有以下一些属性：</p>
+<ul>
+<li>
+<span class="m">viewportTopLoctaion</span>：一个视图滚动条进度。如果section在viewport中可见，它的值在0（section开始处）和1（section结束处）之间。值小于0或大于1表示section在屏幕之外。 </li>
+<li>
+<span class="m">veiwportTopStart</span>：section相对于viewport顶边的精确位置。值的意义和<code>viewportTopLocation</code>相同。</li>
+<li>
+<span class="m">viewportTopEnd</span>：与<code>veiwportTopStart</code>相同，只是到底边的位置。</li>
+</ul>
+<p>如果你想显示滚动进程为单一值使用<code>viewportTopLocation</code>。如果你想显示一个滚动位置范围则要使用<code>viewportTopStart</code>和<code>viewportTopEnd</code>属性。</p>
+<p>下面是水平滚动Section元素属性：</p>
+<ul>
+<li>
+<span class="m">viewportLeftLocation</span>：section相对于viewport的水平滚动位置。</li>
+<li>
+<span class="m">viewportLeftStart</span>：viewport左边部的位置。</li>
+<li>
+<span class="m">viewportLeftEnd</span>：viewport右边部的位置。</li>
+</ul>
+<p>下面的属性用于在viewport中滚动动一个指定的目标section位置。</p>
+<ul>
+<li><span class="m">viewportScrollTopTarget</span></li>
+<li><span class="m">viewportScrollLeftTarget</span></li>
+</ul>
+<p>你可以使用它们来在点击某个导航视图按钮的时候滚动到指定的section位置。</p>
+<p>如果viewport不是全屏的，需要在元素上添加一个<code>viewport</code> class。</p>
+<pre class="brush:html">
+&lt;div class="viewport" id="myViewport"&gt;
+&lt;div id="firstSection" class="section"&gt;
+First section content goes here...
+&lt;/div&gt;
+<p>&lt;div id=&quot;secondSection&quot; class=&quot;section&quot;&gt;<br>
+Second section content goes here...<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p>viewport元素还包含一个<code>currentSection</code>属性，该属性用于指定当前在viewport中可见的section元素。</p>
+<pre class="brush:js">
+var currentSection = document.getElementById('myViewport').currentSection; 
+</pre>
+<p>如果你在页面加载完成之后想动态的添加section内容，可以调用<code>viewport.reset()</code>方法来更新插件。</p>
+<p>处于性能原因，section的尺寸大小在页面加载时被缓存，并且假定只有在页面尺寸改变时才会改变。如果由于别的原因使section的尺寸发生了改变，可以调用<code>viewport.updateDimensions()</code>方法来进行更新。</p>
+<p>更多关于该插件的信息请参考：<a href="https://github.com/asvd/viewport">https://github.com/asvd/viewport</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504291828.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504291755.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1228">
+                                <h3 class="post-title">
+                                    jQuery绚丽霓虹灯文字特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

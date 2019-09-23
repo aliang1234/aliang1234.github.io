@@ -1,0 +1,530 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery缩略图翻转全屏响应式幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery缩略图翻转全屏响应式幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412051432.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412051432.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141205678.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果炫酷的jQuery缩略图翻转全屏响应式幻灯片插件。该幻灯片插件可以通过键盘上下键或鼠标滚轮进行导航切换。幻灯片在切换时缩略图会带有垂直翻转动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果炫酷的jQuery缩略图翻转全屏响应式幻灯片插件。该插件可以通过鼠标滚轮和键盘上下键进行导航。在缩略图上有一个放大缩小的按钮可以使背景图片退出全屏模式。它还是响应式的，你可以缩放浏览器看看效果。</p>
+<p>在这个幻灯片插件中使用了图片翻转插件<a href="http://lab.smashup.it/flip/" target="\_blank"> Flip </a>来制作缩略图的翻转效果。使用<a href="http://brandonaaron.net/code/mousewheel/docs" target="\_blank"> jQuery Mousewheel Plugin </a>来实现鼠标滚轮的控制。</p>
+<p>插件中的精美插图“植物大战僵尸”来自于<a href="http://huaban.com/boards/16301146/" target="\_blank">花瓣</a>。</p>
+<h3>HTML</h3>
+<p>首先添加一个loading元素用于加载图片时显示：</p>
+<pre class="brush:html">
+&lt;div id="tf\_loading" class="tf\_loading"&gt;&lt;/div&gt;
+</pre>
+<p>使用一个全屏大小的div包住所有的图片：</p>
+<pre class="brush:html">
+&lt;div id="tf\_bg" class="tf\_bg"&gt;
+&lt;img src="images/1.jpg" alt="Image 1" longdesc="images/thumbs/1.jpg" /&gt;
+&lt;img src="images/2.jpg" alt="Image 2" longdesc="images/thumbs/2.jpg"/&gt;
+&lt;img src="images/3.jpg" alt="Image 3" longdesc="images/thumbs/3.jpg"/&gt;
+&lt;img src="images/4.jpg" alt="Image 4" longdesc="images/thumbs/4.jpg"/&gt;
+&lt;img src="images/5.jpg" alt="Image 5" longdesc="images/thumbs/5.jpg"/&gt;
+&lt;img src="images/6.jpg" alt="Image 6" longdesc="images/thumbs/6.jpg"/&gt;
+&lt;div class="tf\_pattern"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>这里使用一个“longdesc”自定义属性来指定缩略图的位置。最后一个div用于叠加模式。</p>
+<p>接着用一个div <code>tf\_content\_wrapper</code>来制作左边的图片描述信息。</p>
+<pre class="brush:html">
+&lt;div id="tf\_content\_wrapper" class="tf\_content\_wrapper"&gt;
+&lt;div class="tf\_content" id="content1" style="display:block;"&gt;
+&lt;h2&gt;Dreamer&lt;/h2&gt;
+&lt;p&gt;Far far away, behind the word mountains, ... &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="tf\_content" id="content2"&gt;
+...
+&lt;/div&gt;
+...
+&lt;/div&gt;
+</pre>
+<p>右边的缩略图的结构如下：</p>
+<pre class="brush:html">
+&lt;div id="tf\_thumbs" class="tf\_thumbs"&gt;
+&lt;span id="tf\_zoom" class="tf\_zoom"&gt;&lt;/span&gt;
+&lt;img src="images/thumbs/1.jpg" alt="Thumb1"/&gt;
+&lt;/div&gt;
+</pre>
+<p>span中的class <code>tf\_zoom</code>或<code>tf\_fullscreen</code>用于控制是否全屏模式。</p>
+<p>最后添加一对前后导航按钮。</p>
+<pre class="brush:html">
+&lt;div id="tf\_next" class="tf\_next"&gt;&lt;/div&gt;
+&lt;div id="tf\_prev" class="tf\_prev"&gt;&lt;/div&gt;
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>首先要引入jQuery和相关的js文件：</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="http://ajax.useso.com/ajax/libs/jquery/1.5.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://ajax.useso.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.flip.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery-mousewheel-3.0.4/jquery.mousewheel.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>添加预加载图片函数：</p>
+<pre class="brush:js">
+(function($) {
+$.fn.preload = function(options) {
+var opts= $.extend({}, $.fn.preload.defaults, options);
+o = $.meta ? $.extend({}, opts, this.data()) : opts;
+var c = this.length,
+l = 0;
+return this.each(function() {
+var $i= $(this);
+$('<img>').load(function(i){
+++l;
+if(l == c) o.onComplete();
+}).attr('src',$i.attr('src'));
+});
+};
+$.fn.preload.defaults = {
+onComplete: function(){return false;}
+};
+})(jQuery);
+</pre>
+<p>接着设置一些变量参数：</p>
+<pre class="brush:js">
+var $tf\_bg= $('#tf\_bg'),
+$tf\_bg\_images = $tf\_bg.find('img'),
+$tf\_bg\_img= $tf\_bg\_images.eq(0),
+$tf\_thumbs= $('#tf\_thumbs'),
+total = $tf\_bg\_images.length,
+current = 0,
+$tf\_content\_wrapper = $('#tf\_content\_wrapper'),
+$tf\_next= $('#tf\_next'),
+$tf\_prev= $('#tf\_prev'),
+$tf\_loading = $('#tf\_loading');
+</pre>
+<p>接下来预加载图片：</p>
+<pre class="brush:js">
+$tf\_bg\_images.preload({
+onComplete: function(){
+$tf\_loading.hide();
+init();
+}
+});
+</pre>
+<p>然后使用参数函数显示第一张图片和初始化一些事件：</p>
+<pre class="brush:js">
+function init(){
+//get dimentions for the image, based on the windows size
+var dim = getImageDim($tf\_bg\_img);
+//set the returned values and show the image
+$tf\_bg\_img.css({
+width : dim.width,
+height: dim.height,
+left: dim.left,
+top : dim.top
+}).fadeIn();
+//resizing the window resizes the $tf\_bg\_img
+$(window).bind('resize',function(){
+var dim = getImageDim($tf\_bg\_img);
+$tf\_bg\_img.css({
+width : dim.width,
+height: dim.height,
+left: dim.left,
+top : dim.top
+});
+});
+//expand and fit the image to the screen
+$('#tf\_zoom').live('click',
+function(){
+if($tf\_bg\_img.is(':animated'))
+return false;
+var $this = $(this);
+if($this.hasClass('tf\_zoom')){
+resize($tf\_bg\_img);
+$this.addClass('tf\_fullscreen')
+.removeClass('tf\_zoom');
+}
+else{
+var dim = getImageDim($tf\_bg\_img);
+$tf\_bg\_img.animate({
+width : dim.width,
+height: dim.height,
+top : dim.top,
+left: dim.left
+},350);
+$this.addClass('tf\_zoom')
+.removeClass('tf\_fullscreen');
+}
+}
+);
+//click the arrow down, scrolls down
+$tf\_next.bind('click',function(){
+if($tf\_bg\_img.is(':animated'))
+return false;
+scroll('tb');
+});
+//click the arrow up, scrolls up
+$tf\_prev.bind('click',function(){
+if($tf\_bg\_img.is(':animated'))
+return false;
+scroll('bt');
+}); 
+//mousewheel events - down / up button trigger the scroll down / up
+$(document).mousewheel(function(e, delta) {
+if($tf\_bg\_img.is(':animated'))
+return false;
+<p>if(delta &gt; 0)<br>
+scroll('bt');<br>
+else<br>
+scroll('tb');<br>
+return false;<br>
+});<br>
+//key events - down / up button trigger the scroll down / up<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …unction(e){
+if('>(document).keydown(function(e){
+if(</span>tf_bg_img.is(':animated'))<br>
+return false;<br>
+switch(e.which){<br>
+case 38:<br>
+scroll('bt');<br>
+break;<br>
+case 40:<br>
+scroll('tb');<br>
+break;<br>
+}<br>
+});<br>
+}<br>
+</pre></p>
+<p>“scroll”函数用于控制前一张和后一张图片的显示：</p>
+<pre class="brush:js">
+function scroll(dir){
+//if dir is "tb" (top -&gt; bottom) increment current, 
+//else if "bt" decrement it
+current = (dir == 'tb')?current + 1:current - 1;
+//we want a circular slideshow, 
+//so we need to check the limits of current
+if(current == total) current = 0;
+else if(current &lt; 0) current = total - 1;
+//flip the thumb
+$tf\_thumbs.flip({
+direction : dir,
+speed : 400,
+onBefore: function(){
+//the new thumb is set here
+var content = '<span id="tf\_zoom" class="tf\_zoom"></span>';
+content +='&lt;img src="' + $tf\_bg\_images.eq(current).attr('longdesc') + '" alt="Thumb' + (current+1) + '"/&gt;';
+$tf\_thumbs.html(content);
+}
+});
+//we get the next image
+var $tf\_bg\_img\_next = $tf\_bg\_images.eq(current),
+//its dimentions
+dim = getImageDim($tf\_bg\_img\_next),
+//the top should be one that makes the image out of the viewport
+//the image should be positioned up or down depending on the direction
+top = (dir == 'tb')?$(window).height() + 'px':-parseFloat(dim.height,10) + 'px';
+//set the returned values and show the next image 
+$tf\_bg\_img\_next.css({
+width : dim.width,
+height: dim.height,
+left: dim.left,
+top : top
+}).show(); 
+//now slide it to the viewport
+$tf\_bg\_img\_next.stop().animate({
+top : dim.top
+},1000); 
+//we want the old image to slide in the same direction, out of the viewport
+var slideTo = (dir == 'tb')?-$tf\_bg\_img.height() + 'px':$(window).height() + 'px';
+$tf\_bg\_img.stop().animate({
+top : slideTo
+},1000,function(){
+//hide it
+$(this).hide();
+//the $tf\_bg\_img is now the shown image
+$tf\_bg\_img= $tf\_bg\_img\_next;
+//show the description for the new image
+$tf\_content\_wrapper.children()
+.eq(current)
+.show();
+});
+//hide the current description
+$tf\_content\_wrapper.children(':visible')
+.hide()
+<p>}<br>
+</pre></p>
+<p>“resize”函数用于控制屏幕缩小放大时图片的响应式效果：</p>
+<pre class="brush:js">
+function resize($img){
+var w\_w = $(window).width(),
+w\_h = $(window).height(),
+i\_w = $img.width(),
+i\_h = $img.height(),
+r\_i = i\_h / i\_w,
+new\_w,new\_h;
+<p>if(i_w &gt; i_h){<br>
+new_w = w_w;<br>
+new_h = w_w * r_i;</p>
+<p>if(new_h &gt; w_h){<br>
+new_h = w_h;<br>
+new_w = w_h / r_i;<br>
+}<br>
+}<br>
+else{<br>
+new_h = w_w * r_i;<br>
+new_w = w_w;<br>
+}</p>
+<p>$img.animate({<br>
+width : new_w + 'px',<br>
+height: new_h + 'px',<br>
+top : '0px',<br>
+left: '0px'<br>
+},350);<br>
+}<br>
+</pre></p>
+<p>最后一个函数“getImageDim”用于获取图片的位置：</p>
+<pre class="brush:js">
+function getImageDim($img){
+var w\_w = $(window).width(),
+w\_h = $(window).height(),
+r\_w = w\_h / w\_w,
+i\_w = $img.width(),
+i\_h = $img.height(),
+r\_i = i\_h / i\_w,
+new\_w,new\_h,
+new\_left,new\_top;
+<p>if(r_w &gt; r_i){<br>
+new_h = w_h;<br>
+new_w = w_h / r_i;<br>
+}<br>
+else{<br>
+new_h = w_w * r_i;<br>
+new_w = w_w;<br>
+}<br>
+return {<br>
+width : new_w + 'px',<br>
+height: new_h + 'px',<br>
+left: (w_w - new_w) / 2 + 'px',<br>
+top : (w_h - new_h) / 2 + 'px'<br>
+};<br>
+}<br>
+</pre></p>
+<p>css代码请参考下载文件。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412051432.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141205678.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1503">
+                                <h3 class="post-title">
+                                    jQuery鼠标滑过和鼠标点击圆形图片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

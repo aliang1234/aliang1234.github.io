@@ -1,0 +1,1816 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_940">
+                        Material Design风格分层显示动画jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_940" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512041556.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+material-design-hierarchical-display是一款Material Design风格分层显示动画jQuery插件。该插件关注的是某个元素从A点移动到B点的过渡动画效果。
+内容：
+
+
+简要教程
+
+
+material-design-hierarchical-display是一款Material Design风格分层显示动画jQuery插件。该插件关注的是某个元素从A点移动到B点的过渡动画效果。
+
+ 安装
+可以使用NPM或Bower来安装该插件。
+
+bower install material-design-hierarchical-display
+npm install material-design-hierarchical-display
+
+
+ 使用方法
+使用该插件需要引入jQuery1.7+、zmd.hierarchical-display.min.js和zmd.hierarchical-display.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;zmd.hierarchical-display.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.zmd.hierarchical-display.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该Material Design风格分层动画插件的HTML结构如下：
+
+&amp;lt;!-- It is parent element --&amp;gt;
+&amp;lt;div data-animation=&#34;hierarchical-display&#34;&amp;gt;
+&amp;lt;!-- All children (regardless of the tag name) in parent element would be animated, after plugin starts --&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+ 通过data属性来初始化
+可以在父容器元素上添加一个data-animation=&#34;hierarchical-display&#34;属性来初始化该插件。
+ 通过JavaScript来初始化
+也可以通过JavaScript来初始化插件。
+
+$(&#39;.zmd-hierarchical-display&#39;).hierarchicalDisplay();
+
+切换动画显示
+如果你需要切换动画的显示，可以在链接元素上添加data-toggle=&#34;hierarchical-display&#34;和data-target=&#34;#parent&#34;，data-target接收的是一个CSS选择器。
+
+&amp;lt;!-- It is parent element --&amp;gt;
+&amp;lt;div id=&#34;parent&#34; data-animation=&#34;hierarchical-display&#34;&amp;gt;
+&amp;lt;!-- All children (regardless of the tag name) in parent element would be animated, after plugin starts --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- This element will toggle animation --&amp;gt;
+&amp;lt;a href=&#34;#&#34; data-toggle=&#34;hierarchical-display&#34; data-target=&#34;#parent&#34;&amp;gt;Toggle animation&amp;lt;/a&amp;gt;
+
+
+ 配置参数
+以下的所有属性都可以通过data-*属性来设置。例如:speed属性可以使用data-speed属性来设置。
+
+
+action：插件被调用是执行的方法，默认值为show。
+
+speed：速度。可以使用小数，默认值为5。
+
+animationIn：当前元素显示时的CSS动画class类，默认值为zoomIn。
+
+animationOut：：当前元素隐藏时的CSS动画class类，默认值为zoomOut。
+
+debug：是否在控制台上显示事件信息。
+
+
+ 方法
+
+hierarchicalDisplay(options)：初始化插件并传入参数对象。
+
+$(&#39;.zmd-hierarchical-display&#39;).hierarchicalDisplay({
+speed: 10
+})
+
+
+
+hierarchicalDisplay(&#39;show&#39;)：显示当前动画元素。
+
+hierarchicalDisplay(&#39;hide&#39;)：隐藏当前动画元素。
+
+hierarchicalDisplay(&#39;toggle&#39;)：切换当前动画元素的可见状态。
+
+ 事件
+该Material Design风格分层显示动画插件有以下一些可用的事件。
+
+show.zmd.hierarchicalDisplay：当show方法被使用的时候该方法被调用。
+
+shown.zmd.hierarchicalDisplay：该方法在动画元素已经显示后被调用。
+
+hide.zmd.hierarchicalDisplay：当hide方法被使用的时候该方法被调用。
+
+hidden.zmd.hierarchicalDisplay：该方法在动画元素已经隐藏后被调用。
+事件使用示例：
+
+$(&#39;#myDisplayingElement&#39;).on(&#39;shown.zmd.hierarchicalDisplay&#39;, function () {
+// do something…
+})
+
+该插件的github地址为：https://github.com/zavoloklom/material-design-hierarchical-display
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_940">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_941">
+                        类似幻灯片效果的水平时间轴特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_941" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511271618.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款设计非常精美的jQuery和CSS3水平时间轴特效插件。该水平时间轴在设计上将时间轴和事件内容分离，时间轴在工作上类似幻灯片效果，而某个时间点对应的事件占据整个时间轴的宽度，并且一次只显示一个事件内容。
+内容：
+
+
+简要教程
+
+
+这是一款设计非常精美的jQuery和CSS3水平时间轴特效插件。该水平时间轴在设计上将时间轴和事件内容分离，时间轴在工作上类似幻灯片效果，而某个时间点对应的事件占据整个时间轴的宽度，并且一次只显示一个事件内容。
+
+ HTML结构
+该水平时间轴的HTML结构包括两个部分：一个是时间轴日期，另一个是相应的事件。ul.cd-timeline-navigation元素用于导航箭头，span.filling-line用于当一个新的事件时间点被选择的时候的时间轴填充效果。
+
+&amp;lt;section class=&#34;cd-horizontal-timeline&#34;&amp;gt;
+&amp;lt;div class=&#34;timeline&#34;&amp;gt;
+&amp;lt;div class=&#34;events-wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;events&#34;&amp;gt;
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#0&#34; data-date=&#34;16/01/2014&#34; class=&#34;selected&#34;&amp;gt;16 Jan&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#0&#34; data-date=&#34;28/02/2014&#34;&amp;gt;28 Feb&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other dates here --&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;span class=&amp;quot;filling-line&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .events --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .events-wrapper --&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-timeline-navigation&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;prev inactive&amp;quot;&amp;gt;Prev&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;next&amp;quot;&amp;gt;Next&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- .cd-timeline-navigation --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .timeline --&amp;gt;
+&amp;lt;div class=&amp;quot;events-content&amp;quot;&amp;gt;
+&amp;lt;ol&amp;gt;
+&amp;lt;li class=&amp;quot;selected&amp;quot; data-date=&amp;quot;16/01/2014&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Horizontal Timeline&amp;lt;/h2&amp;gt;
+&amp;lt;em&amp;gt;January 16th, 2014&amp;lt;/em&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li data-date=&amp;quot;28/02/2014&amp;quot;&amp;gt;
+&amp;lt;!-- event description here --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- other descriptions here --&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .events-content --&amp;gt;
+&amp;lt;/section&amp;gt;
+
+
+ CSS样式
+在水平时间轴的事件内容的样式中，所有的事件内容项都是从右边进入，开始时他们位于右侧视口的边缘（translateX(-100\%)）。当某个时间点被选择的时候，相应的事件内容会被添加.selected class，该class会将这些内容移动会屏幕中（translateX(0)）。
+有4个class用于创建幻灯片动画效果：.enter-right / .leave-left class用于事件内容向左或向右移出视口。这些class被应用2种不同的动画：cd-enter-right（用于 .enter-right和.leave-left），cd-enter-left（用于.enter-left和.leave-right）。
+
+.cd-horizontal-timeline .events-content {
+position: relative;
+}
+.cd-horizontal-timeline .events-content li {
+position: absolute;
+z-index: 1;
+width: 100\%;
+left: 0;
+top: 0;
+transform: translateX(-100\%);
+opacity: 0;
+animation-duration: 0.4s;
+animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+/* visible event content */
+position: relative;
+z-index: 2;
+opacity: 1;
+transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, 
+.cd-horizontal-timeline .events-content li.leave-right {
+animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, 
+.cd-horizontal-timeline .events-content li.leave-left {
+animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, 
+.cd-horizontal-timeline .events-content li.leave-left {
+animation-direction: reverse;
+}
+@keyframes cd-enter-right {
+0\% {
+opacity: 0;
+transform: translateX(100\%);
+}
+100\% {
+opacity: 1;
+transform: translateX(0\%);
+}
+}
+@keyframes cd-enter-left {
+0\% {
+opacity: 0;
+transform: translateX(-100\%);
+}
+100\% {
+opacity: 1;
+transform: translateX(0\%);
+}
+}
+
+
+ JavaScript
+对于时间轴，沿时间轴上的日期是使用jQuery设置上去的。时间轴上的日期分布并不是均匀的，但是这些日期之间的距离比例是一致的。
+在main.js文件中，使用变量eventsMinDistance来设置两个连续的最小日期之间的距离。在代码中设置的是eventsMinDistance = 60 ，表示最小距离为60像素。然后需要获取一个日期和下一个日期之间的差值，为了获取这些值，特效中为每一个日期都添加了data-date属性。最小距离将会作为参考来计算两个连续日期之间的距离。
+举个例子，假设最小的日期间隔为5天，那么在水平时间轴上5天之间的两个时间点距离为60像素，而10天的距离就为120像素。
+对于日期格式，插件中使用的日期格式为DD/MM/YYYY，如果需要你也可以添加时分秒。你可以使用以下3种不同的日期格式：
+
+DD/MM/YYYY
+DD/MM/YYYYTHH:MM
+HH:MM
+
+最后需要注意的是，时间轴日期上使用的data-date属性也会被设置到代表事件的项中，这样当用户在时间轴上旋转了一个日期之后，相应的事件项才能被显示。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_941">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_942">
+                        Visor Carousel|兼容Bootstrap3的jQuery旋转木马插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_3">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_942" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512131704.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+visor-carousel是一款兼容Bootstrap3的jQuery旋转木马插件。制作Visor Carousel旋转木马插件的目的是制作一个轻量级支持多个视图子项的旋转木马。
+内容：
+
+
+简要教程
+
+
+visor-carousel是一款兼容Bootstrap3的jQuery旋转木马插件。制作Visor Carousel旋转木马插件的目的是制作一个轻量级支持多个视图子项的旋转木马。它的特点有：
+
+99\%兼容Bootstrap3。
+可以使用该插件来制作缩略图幻灯片。
+支持landscape和portrait布局，并且会自动根据重力检测更改布局。
+支持CSS3动画，事件处理会等到 animations/transitions 结束才执行。
+通过添加VisorCarousel.ANIMATIONS能支持多重动画。
+
+
+ 使用方法
+使用该旋转木马插件需要引入jquery.visor-carousel.css和jquery.visor-carousel.js文件，以及Bootstrap的相关资源文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.visor-carousel.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.visor-carousel.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+visor-carousel旋转木马插件的解绑HTML结构如下：注意这里包括4个导航按钮，其中2个是landscape布局的左右prev/next导航按钮，另外2个是portrait布局的上下up-down导航按钮。
+
+&amp;lt;div id=&#34;myVisor&#34; class=&#34;visor-carousel slide&#34; data-ride=&#34;visor&#34;&amp;gt;
+&amp;lt;!-- Indicators --&amp;gt;
+&amp;lt;ol class=&#34;carousel-indicators&#34;&amp;gt;
+&amp;lt;li data-target=&#34;#myVisor&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li data-target=&#34;#myVisor&#34; data-slide-to=&#34;1&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li data-target=&#34;#myVisor&#34; data-slide-to=&#34;2&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;div class=&#34;carousel-inner&#34; role=&#34;listbox&#34;&amp;gt;
+&amp;lt;div class=&#34;item col-md-12 active&#34;&amp;gt;
+&amp;lt;img class=&#34;first-slide&#34; src=&#34;...&#34; alt=&#34;First slide&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;carousel-caption&#34;&amp;gt;
+&amp;lt;h1&amp;gt;Example headline.&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a class=&#34;btn btn-lg btn-primary&#34; href=&#34;#&#34; role=&#34;button&#34;&amp;gt;Sign up today&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item col-md-12&#34;&amp;gt;
+&amp;lt;img class=&#34;second-slide&#34; src=&#34;...&#34; alt=&#34;Second slide&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;carousel-caption&#34;&amp;gt;
+&amp;lt;h1&amp;gt;Another example headline.&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a class=&#34;btn btn-lg btn-primary&#34; href=&#34;#&#34; role=&#34;button&#34;&amp;gt;Learn more&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item col-md-12&#34;&amp;gt;
+&amp;lt;img class=&#34;third-slide&#34; src=&#34;...&#34; alt=&#34;Third slide&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;carousel-caption&#34;&amp;gt;
+&amp;lt;h1&amp;gt;One more for good measure.&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a class=&#34;btn btn-lg btn-primary&#34; href=&#34;#&#34; role=&#34;button&#34;&amp;gt;Browse gallery&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;a class=&#34;left carousel-control layout-landscape&#34; href=&#34;#myVisor&#34; role=&#34;button&#34; data-slide=&#34;prev&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-left&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Previous&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;left carousel-control layout-portrait&#34; href=&#34;#myVisor&#34; role=&#34;button&#34; data-slide=&#34;prev&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-up&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Previous&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;right carousel-control layout-landscape&#34; href=&#34;#myVisor&#34; role=&#34;button&#34; data-slide=&#34;next&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-right&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Next&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;right carousel-control layout-portrait&#34; href=&#34;#myVisor&#34; role=&#34;button&#34; data-slide=&#34;next&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-down&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Next&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /.visor --&amp;gt;
+
+
+ Data API
+你可以使用Bootstrap 3 carousel支持的data-*属性，下面是一些插件扩展的data属性。
+
+
+data-slide-to：用于支持jQuery选择器的扩展。
+
+data-slide-by：该属性可用于滑动到相对位置：正数表示向前滑动，负数表示向后滑动。例如data-slide-by=&#34;1&#34;相当于data-slide=&#34;next&#34;，而data-slide-by=&#34;-1&#34;相当于data-slide=&#34;prev&#34;
+
+
+visor-carousel旋转木马插件的github地址为：https://github.com/Webapper/visor-carousel
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_942">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_943">
+                        非常简单的云彩飘动效果jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_943" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512291838.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+CloudsJS是一款非常简单的云彩飘动效果jQuery插件。通过该插件你可以制作出多层云彩水平飘动的效果，它使用简单，可以为你的网站添加一些观赏性。
+内容：
+
+
+简要教程
+
+
+CloudsJS是一款非常简单的云彩飘动效果jQuery插件。通过该插件你可以制作出多层云彩水平飘动的效果，它使用简单，可以为你的网站添加一些观赏性。
+
+ 使用方法
+使用该白云飘动效果需要引入jQuery和clouds.js以及clouds.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/clouds.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/clouds.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+云彩层分为2个图层，一个是近视图层，一个远视图层。它们分别使用不同的云彩作为背景图片。
+
+&amp;lt;div id=&#34;far-clouds&#34; class=&#34;stage far-clouds&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;near-clouds&#34; class=&#34;stage near-clouds&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+页面的主要内容放置在div.content容器中。
+
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;!-- 页面内容 --&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该云彩飘动插件。
+
+$(document).ready(function () {
+$(&#34;#far-clouds&#34;).clouds({
+fps: 30,
+speed: 0.7,
+dir: &#34;left&#34;
+});
+$(&amp;quot;#near-clouds&amp;quot;).clouds({
+fps: 30,
+speed: 1,
+dir: &amp;quot;left&amp;quot;
+});
+});
+
+
+ 配置参数
+
+
+fps：执行动画的频率。插件会用1000除以这个数值来作为定时完成animate动画的时间。
+
+speed：云彩飘动的速度。
+
+dir：云彩飘动的风方向。
+
+CloudsJS插件的github地址为：https://github.com/csyntax/CloudsJS
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_943">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_944">
+                        ScrollReveal-元素随页面滚动产生动画的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_944" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512211845.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+scrollreveal.js是一款可以轻易实现桌面和移动浏览器元素随页面滚动产生动画的js插件。该插件通过配置可以在页面滚动，元素进入视口时产生炫酷的动画效果，同时还支持元素的3D效果，非常的实用。
+内容：
+
+
+简要教程
+
+
+scrollreveal.js是一款可以轻易实现桌面和移动浏览器元素随页面滚动产生动画的js插件。该插件通过配置可以在页面滚动，元素进入视口时产生炫酷的动画效果，同时还支持元素的3D效果，非常的实用。
+
+ 安装
+可以通过npm或bower来安装scrollreveal.js插件。
+
+npm install scrollreveal
+bower install scrollreveal
+
+
+ 基本使用方法
+HTML结构：
+
+&amp;lt;!-- HTML --&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt; Foo &amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bar&#34;&amp;gt; Bar &amp;lt;/div&amp;gt; 
+
+JavaScript：
+
+window.sr = ScrollReveal();
+sr.reveal(&#39;.foo&#39;);
+sr.reveal(&#39;.bar&#39;);
+
+
+ 链式编程方法
+ScrollReveal的构造函数和它主要的方法都支持链式编程。
+
+window.sr = ScrollReveal();
+sr.reveal(&#39;.foo&#39;);
+sr.reveal(&#39;.bar&#39;);
+// 上面的代码和下面的代码效果相同
+window.sr = ScrollReveal().reveal(&#39;.foo, .bar&#39;);
+
+
+ 配置参数
+可以通过传入一个配置参数对象到ScrollReveal()中来修改默认的参数设置。也可以通过向reveal()中插入配置参数对象来自定义动画集合。
+
+// 修改默认配置
+window.sr = ScrollReveal({ reset: true });
+// 自定义一个动画集合
+sr.reveal( &#39;.foo&#39;, { wait: 200 } );
+
+
+ 默认参数
+
+// Animation
+origin: &#39;bottom&#39;,
+distance: &#39;20px&#39;,
+duration: 500,
+delay : 0,
+rotate: { x: 0, y: 0, z: 0 },
+opacity : 0,
+scale : 0.9,
+easing: &#39;cubic-bezier( 0.6, 0.2, 0.1, 1 )&#39;,
+// Options
+container : null,
+mobile: true,
+reset : false,
+useDelay: &#39;always&#39;,
+viewFactor: 0.20,
+viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+afterReveal : function( domEl ) {},
+afterReset: function( domEl ) {}
+
+
+ 参数描述
+
+
+
+
+参数
+类型
+可用值
+描述
+
+
+
+
+origin
+string
+&#39;top&#39;,&#39;right&#39;,&#39;bottom&#39;,&#39;left&#39;
+动画的方向
+
+
+distance
+string
+可用任何CSS单位值，如：&#39;20px&#39;,&#39;10vw&#39;,&#39;5\%&#39;
+动画的距离
+
+
+duration
+number
+500
+动画持续时间，单位毫秒
+
+
+delay
+number
+0
+动画的延迟时间，单位毫秒
+
+
+rotate
+object/number
+{ x: 0, y: 0, z: 0 }
+开始的角度，单位degrees
+
+
+opacity
+number
+0
+开始的透明度
+
+
+scale
+number
+0.9
+开始的缩放值
+
+
+easing
+string
+&#39;ease&#39;&#39;ease&#39;&#39;ease-out&#39;&#39;ease-in-out&#39;&#39;ease-in-out&#39;
+动画的easing效果，可以是任何有效的CSS easing值
+
+
+container
+node
+document.getElementById(&#39;foo&#39;)
+容器
+
+
+mobile
+boolean
+true / false
+是否在移动手机上显示动画效果
+
+
+reset
+boolean
+true / false
+元素是否在容器边界内来回滚动时都产生动画效果
+
+
+useDelay
+string
+&#39;always&#39;,&#39;once&#39;,&#39;onload&#39;
+控制元素什么时候使用动画延迟
+
+
+viewFactor
+number
+0.20
+0.20表示元素在产生动画之前，它的20\%在viewport或容器的边界之内
+
+
+viewOffset
+object/number
+{ top: 48, bottom: 24 }
+增加viewport或容器边界，单位像素
+
+
+afterReveal
+function
+function( domEl ) {}
+reveal动画之后触发的回调函数
+
+
+afterReset
+function
+function( domEl ) {}
+reset动画之后触发的回调函数
+
+
+
+
+
+ 高级应用
+
+ 覆盖配置
+reveal()方法中的调用元素可以随时进行修改。例如：
+
+&amp;lt;div class=&#34;foo&#34;&amp;gt; Foo &amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foo&#34; id=&#34;chocolate&#34;&amp;gt; Chip &amp;lt;/div&amp;gt;
+
+
+var fooReveal = {
+delay: 200,
+distance : &#39;90px&#39;,
+easing : &#39;ease-in-out&#39;,
+rotate : { z: 10 },
+scale: 1.1
+};
+window.sr = ScrollReveal()
+.reveal( &#39;.foo&#39;, fooReveal )
+.reveal( &#39;#chocolate&#39;, { delay: 500, scale: 0.9 } );
+
+
+ 配置多个容器
+默认的容器是viewport，你可以对它进行修改。
+
+&amp;lt;div id=&#34;fooContainer&#34;&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt; Foo 1 &amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt; Foo 2 &amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt; Foo 3 &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;barContainer&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;bar&amp;quot;&amp;gt; Bar 1 &amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bar&amp;quot;&amp;gt; Bar 2 &amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bar&amp;quot;&amp;gt; Bar 3 &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+var fooContainer = document.getElementById(&#39;fooContainer&#39;);
+var barContainer = document.getElementById(&#39;barContainer&#39;);
+
+window.sr = ScrollReveal()
+.reveal( &#39;.foo&#39;, { container: fooContainer } );
+.reveal( &#39;.bar&#39;, { container: barContainer } );
+
+
+ 异步调用内容
+可以通过sync()方法来异步加载已经存在的reveal sets中的内容。
+
+&amp;lt;!-- index.html --&amp;gt;
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt;foo&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt;foo&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foo&#34;&amp;gt;foo&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- ajax.html --&amp;gt;
+&amp;lt;div class=&amp;quot;foo&amp;quot;&amp;gt;foo async&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;foo&amp;quot;&amp;gt;foo async&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;foo&amp;quot;&amp;gt;foo async&amp;lt;/div&amp;gt;
+
+
+var fooContainer, content, sr, xmlhttp;
+
+fooContainer = document.getElementById(&#39;fooContainer&#39;);
+
+sr = ScrollReveal();
+sr.reveal( &#39;.foo&#39;, { container: fooContainer } );
+
+// Setup a new asynchronous request...
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if ( xmlhttp.readyState == XMLHttpRequest.DONE ) {
+if ( xmlhttp.status == 200 ) {
+
+// Turn our response into HTML...
+var content = document.createElement(&#39;div&#39;);
+content.innerHTML = xmlhttp.responseText;
+content = content.childNodes;
+
+// Add each element to the DOM...
+for ( var i = 0; i &amp;lt; content.length; i++ ) {
+fooContainer.appendChild( content[ i ]);
+};
+
+// Finally!
+sr.sync();
+}
+}
+}
+
+xmlhttp.open(&#39;GET&#39;, &#39;ajax.html&#39;, true);
+xmlhttp.send();
+
+
+ 小技巧
+
+ 加载次序
+你需要注意的重要的一点是尽可能在页面的最后再调用ScrollReveal，也就是说：
+
+页面中的DOM元素已经被加载完成。
+任何第三方的js库已经被加载。
+页面中的元素样式已经被加载不会在被覆盖。
+
+示例代码如下：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;!-- All the things... --&amp;gt;
+&amp;lt;script src=&amp;quot;js/scrollreveal.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+window.sr = ScrollReveal();
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 提升用户体验
+在大多数情况下，你的元素都是从opacity: 0开始，以使它们可以制作淡入的效果。但是由于JavaScript在页面开始渲染时才被加载，用户可能会看到元素闪烁的情况发生。
+解决这个问题的方法是在&amp;lt;head&amp;gt;中设置reveal元素的可见性为隐藏状态。例如下面的代码：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script&amp;gt;
+// If JavaScript is enabled, add &#39;.js-enabled&#39; to &amp;lt;html&amp;gt; element
+document.documentElement.classList.add(&#39;js-enabled&#39;);
+&amp;lt;/script&amp;gt;
+&amp;lt;style&amp;gt;
+/* Ensure elements load hidden before ScrollReveal runs */
+.js-enabled .fooReveal { visibility: hidden; }
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;!-- All the things... --&amp;gt;
+&amp;lt;script src=&amp;quot;js/scrollreveal.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+window.sr = ScrollReveal();
+sr.reveal(&#39;.fooReveal&#39;);
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 添加3D透视效果
+ScrollReveal支持3D旋转效果，你需要做的是为你的容器指定一个perspective属性。
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script&amp;gt;
+document.documentElement.classList.add(&#39;js-enabled&#39;);
+&amp;lt;/script&amp;gt;
+&amp;lt;style&amp;gt;
+.js-enabled .fooReveal { visibility: hidden; }
+.fooContainer { perspective: 800px; }
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div class=&amp;quot;fooContainer&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;fooReveal&amp;quot;&amp;gt; Foo &amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;fooReveal&amp;quot;&amp;gt; Foo &amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;fooReveal&amp;quot;&amp;gt; Foo &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;quot;js/scrollreveal.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+window.sr = ScrollReveal();
+sr.reveal( &#39;.fooReveal&#39;, { rotate: {x: 65} } );
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+ScrollReveal插件的github地址为：https://github.com/jlmakes/scrollreveal.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_944">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_945">
+                        Newsticker-兼容IE8的jQuery滚动新闻插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_945" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601061710.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-newsticker是一款简单实用的jQuery滚动新闻（news ticker）插件。该滚动新闻插件使用简单，可以设置新闻滚动的速度，时间，动画函数等，并且可以兼容IE8浏览器。
+内容：
+
+
+简要教程
+
+
+jquery-newsticker是一款简单实用的jQuery滚动新闻（news ticker）插件。该滚动新闻插件使用简单，可以设置新闻滚动的速度，时间，动画函数等，并且可以兼容IE8浏览器。
+
+ 使用方法
+使用该滚动新闻插件需要引入jQuery1.8.2+、jquery.newsticker.js和jquery.newsticker.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jquery.newsticker.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.newsticker.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该滚动新闻采用无序列表的HTML结构，每一个列表项是一条新闻。
+
+&amp;lt;div class=&#34;newsticker&#34;&amp;gt;
+&amp;lt;ul class=&#34;newsticker-list&#34;&amp;gt;
+&amp;lt;li class=&#34;newsticker-item&#34;&amp;gt;
+That open was light...
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;newsticker-item&#34;&amp;gt;
+That creature his bring waters...
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;newsticker-item&#34;&amp;gt;
+And also. Firmament and Give....
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该滚动新闻插件。
+
+$(function() {
+$(&#39;.newsticker&#39;).newsticker();
+});
+
+
+ 配置参数
+该滚动新闻插件有如下一些可用的配置参数：
+
+
+height：newsticker的高度。
+
+speed：动画的速度，单位毫秒。
+
+start：文本的开始位置。
+
+interval：两个文本显示之间的时间间隔，单位毫秒。
+
+move：自定义动画函数。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_945">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_946">
+                        仿windows10开始菜单的下拉导航菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_946" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509231624.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款仿windows10开始菜单的下拉导航菜单特效。该下拉菜单使用jQuery和CSS3来完成类似windows10开始菜单样式效果，它的代码简洁，效果非常时尚。
+内容：
+
+
+简要教程
+
+
+这是一款仿windows10开始菜单的下拉导航菜单特效。该下拉菜单使用jQuery和CSS3来完成类似windows10开始菜单样式效果，它的代码简洁，效果非常时尚。
+
+ 使用方法
+
+ HTML结构
+该下拉菜单的HTML结构非常简单，基本的HTML结构如下：
+
+&amp;lt;div id=&#34;top-bar&#34; class=&#34;top-bar&#34;&amp;gt;
+&amp;lt;div class=&#34;bar&#34;&amp;gt;
+&amp;lt;button id=&#34;navbox-trigger&#34; class=&#34;navbox-trigger&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-lg fa-th&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;navbox&#34;&amp;gt;
+&amp;lt;div class=&#34;navbox-tiles&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;tile&#34;&amp;gt;
+&amp;lt;div class=&#34;icon&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-home&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;span class=&#34;title&#34;&amp;gt;Home&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+在CSS样式中，顶部导航条.top-bar设置为固定高度50像素和相对定位，并给出一个较高的z-index值。
+
+.top-bar {
+height: 50px;
+position: relative;
+z-index: 1000;
+}
+
+下拉菜单.navbox开始的时候是隐藏的，它采用绝对定位，通过translateY方法将它移动到导航条上方200像素的地方。
+
+.top-bar .navbox {
+visibility: hidden;
+opacity: 0;
+position: absolute;
+top: 100\%;
+left: 0;
+z-index: 1;
+-webkit-transform: translateY(-200px);
+-ms-transform: translateY(-200px);
+transform: translateY(-200px);
+-webkit-transition: all .2s;
+transition: all .2s;
+}
+
+接着在下拉菜单被激活的时候，它的透明度被设置回1，变为可见状态，并通过translateY方法将它移动回原来的位置。
+
+.top-bar.navbox-open .navbox {
+visibility: visible;
+opacity: 1;
+-webkit-transform: translateY(0);
+-ms-transform: translateY(0);
+transform: translateY(0);
+-webkit-transition: opacity .3s, -webkit-transform .3s;
+transition: opacity .3s, transform .3s;
+}
+
+
+ JavaScript
+该特效中使用jQUery切换相应的class类和用于打开菜单按钮。
+
+(function () {
+$(document).ready(function () {
+$(&#39;#navbox-trigger&#39;).click(function () {
+return $(&#39;#top-bar&#39;).toggleClass(&#39;navbox-open&#39;);
+});
+return $(document).on(&#39;click&#39;, function (e) {
+var $target;
+$target = $(e.target);
+if (!$target.closest(&#39;.navbox&#39;).length &amp;amp;&amp;amp; !$target.closest(&#39;#navbox-trigger&#39;).length) {
+return $(&#39;#top-bar&#39;).removeClass(&#39;navbox-open&#39;);
+}
+});
+});
+}.call(this));
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_946">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_947">
+                        基于Bootstrap3的简单柱状图表插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-banana">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_947" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510171703.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jchart是一款简单小巧的基于Bootstrap3.x的jQuery柱状图表插件。该柱状图片表插件通过简单的设置，就可以生成非常漂亮的水平柱状图，并带有水平和垂直标签以及图表的头部和尾部。
+内容：
+
+
+简要教程
+
+
+jchart是一款简单小巧的基于Bootstrap3.x的jQuery柱状图表插件。该柱状图片表插件通过简单的设置，就可以生成非常漂亮的水平柱状图，并带有水平和垂直标签以及图表的头部和尾部。
+
+ 使用方法
+该jQuery柱状图插件可以通过javascript来调用，也可以直接使用HTML标签来生成。
+
+ 通过JavaScript来调用
+
+&amp;lt;div id=&#34;population\_chart&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+$(&#34;#population\_chart&#34;).jChart({
+name: &#34;North American Regional Population Loss 2014&#34;,
+headers: [&#34;Arizona&#34;,&#34;Michigan&#34;,&#34;Ontario&#34;,&#34;British Columbia&#34;,&#34;Texas&#34;],
+values: [250000,478000,88000,429000,423000],
+footers: [100000,200000,300000,400000,500000],
+colors: [&#34;#1000ff&#34;,&#34;#006eff&#34;,&#34;#00b6ff&#34;,&#34;#00fff6&#34;,&#34;#00ff90&#34;]
+});
+
+
+ 直接使用HTML标签生成柱状图
+在HTML标签中，name属性是图表的标题，于Bootstrap标签相似，chart-sm或chart-lg分别表示图表的大小，data-width是图表的宽度，data-sort用于排序。
+
+&amp;lt;div id=&#34;bar\_of\_pies&#34; data-sort=&#34;true&#34; data-width=&#34;300&#34; class=&#34;jChart chart-sm&#34; name=&#34;My Favorite Pies&#34;&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;red&#34; title=&#34;Pumpkin&#34;&amp;gt;13&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;gray&#34; title=&#34;Pecan&#34;&amp;gt;24&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;green&#34; title=&#34;Cherry&#34;&amp;gt;17&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;orange&#34; title=&#34;Apple&#34;&amp;gt;26&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;black&#34; title=&#34;Rhubarb&#34;&amp;gt;12&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;define-chart-row&#34; data-color=&#34;blue&#34; title=&#34;Chocolate Cream&#34;&amp;gt;8&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;define-chart-footer&amp;quot;&amp;gt;10&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;define-chart-footer&amp;quot;&amp;gt;20&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;define-chart-footer&amp;quot;&amp;gt;30&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+width
+750
+图表的宽度，单位像素
+
+
+name
+null
+图表的标题，显示在图表上方
+
+
+type
+&#34;bar&#34;
+图表的类型，目前只支持柱状图
+
+
+headers
+null (没有标签)
+柱状图的标签，一个Javascript数组
+
+
+values
+null
+显示在柱状图左侧的每一条柱子的数字，一个Javascript数组
+
+
+footers
+null
+显示在柱状图下面的一组数字，一个Javascript数组
+
+
+colors
+#6b9bd6（深蓝色）
+一组颜色
+
+
+sort
+false
+是否进行排序
+
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_947">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_948">
+                        纯JavaScript响应式图片幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_948" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511101740.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Ideal-Image-Slider是一款纯JavaScript响应式图片幻灯片插件。该幻灯片的设计以简洁为目的，但是提供了扩展接口，可以扩展幻灯片的功能。
+内容：
+
+
+简要教程
+
+
+Ideal-Image-Slider是一款纯JavaScript响应式图片幻灯片插件。该幻灯片的设计以简洁为目的，但是提供了扩展接口，可以扩展幻灯片的功能。该幻灯片的特点有：
+
+
+HTML5（SEO优化）
+支持CSS3过渡效果
+支持左右导航（包括移动手机的 touch/swipe ）
+响应式
+HiDPI（高分辨率图片）支持
+ARIA支持
+使用简单，没有任何外部依赖
+可扩展性强
+使用渐进增强
+开放源代码
+
+
+ 安装
+可以通过bower来安装该幻灯片插件。
+
+bower install ideal-image-slider --save
+
+
+ 使用方法
+使用该幻灯片插件需要引入ideal-image-slider.css，ideal-image-slider.js和默认主题文件default.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/path/to/ideal-image-slider.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/path/to/themes/default/default.css&#34;&amp;gt;
+&amp;lt;script src=&#34;/path/to/ideal-image-slider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该幻灯片基本的HTML结构如下：
+
+&amp;lt;div id=&#34;slider&#34;&amp;gt;
+&amp;lt;img src=&#34;img/1.jpg&#34; alt=&#34;Minimum required attributes&#34;&amp;gt;
+&amp;lt;img data-src=&#34;img/2.jpg&#34; src=&#34;&#34; alt=&#34;Use data-src for on-demand loading&#34;&amp;gt;
+&amp;lt;img data-src=&#34;img/3.jpg&#34; data-src-2x=&#34;img/3@2x.jpg&#34; src=&#34;&#34; alt=&#34;Use data-src-2x for HiDPI devices&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img data-src=&#34;img/4.jpg&#34; src=&#34;&#34; alt=&#34;Links work too&#34;&amp;gt;&amp;lt;/a&amp;gt;
+...
+&amp;lt;/div&amp;gt; 
+
+在上面的HTML结构中，需要注意下面几点：
+
+该幻灯片只支持图片，其它内容会被移除。
+
+data-src属性用于在需要时才加载相应的图片。
+第一张图片不必使用data-src属性。
+如果你指定了data-src-2x属性的图片，它会被用于支持HiDPI的设备上（例如苹果的retina设备）
+
+
+ 初始化插件
+然后可以使用下面的方法来创建幻灯片。
+
+new IdealImageSlider.Slider(&#39;#slider&#39;);
+
+也可以设置一些配置参数。
+
+var slider = new IdealImageSlider.Slider({
+selector: &#39;#slider&#39;,
+height: 400, // Required but can be set by CSS
+interval: 4000
+});
+slider.start();
+
+注意：如果你没有在Javascript构造函数中设置height属性，就必须在CSS中设置这个属性。
+
+ 配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+selector
+&#39;&#39;
+幻灯片的CSS选择器
+
+
+height
+&#39;auto&#39;
+幻灯片的高度。可以设置为&#39;auto&#39;（自动改变高度），或固定的像素，如400，或一个比例，如:16:9
+
+
+
+initialHeight
+400
+如果height设置为auto或一个比例，该参数则为初始时图片的高度
+
+
+maxHeight
+null
+如果height设置为auto或一个比例，该参数为一个可选的最大高度值
+
+
+interval
+4000
+幻灯片移动到下一幅图片的延迟时间，单位毫秒
+
+
+transitionDuration
+700
+过渡动画的持续时间，单位毫秒
+
+
+effect
+&#39;slide&#39;
+动画过渡效果，默认为slide/fade
+
+
+disableNav
+false
+切换previous/next导航按钮（同时关闭touch和键盘导航）
+
+
+keyboardNav
+true
+切换键盘导航
+
+
+previousNavSelector
+&#39;&#39;
+previous导航元素的选择器
+
+
+nextNavSelector
+&#39;&#39;
+next 导航元素的选择器
+
+
+classes
+{...}
+幻灯片使用的一组class列表
+
+
+
+
+
+ 事件
+可以在设置中传入事件回调函数。
+
+new IdealImageSlider.Slider({
+selector: &#39;#slider&#39;,
+onStart: function(){
+console.log(&#39;onStart&#39;);
+}
+});
+
+
+
+
+
+事件
+描述
+
+
+
+
+onInit
+当幻灯片的第一张图片加载后触发
+
+
+onStart
+当幻灯片开始播放时触发
+
+
+onStop
+当幻灯片停止播放时触发
+
+
+onDestroy
+当幻灯片被销毁时触发
+
+
+beforeChange
+当幻灯片slide改变前触发
+
+
+afterChange
+当幻灯片slide改变后触发
+
+
+
+
+
+ API
+要使用API方法，首先需要保存一个幻灯片的示例对象。
+
+var slider = new IdealImageSlider.Slider(&#39;#slider&#39;);
+slider.start();
+
+
+
+
+
+方法
+描述
+
+
+
+
+start()
+开始播放幻灯片。注意，幻灯片会在点击导航按钮后停止自动播放
+
+
+stop()
+停止幻灯片播放
+
+
+previousSlide()
+跳到前一个幻灯片slide
+
+
+nextSlide()
+跳到后一个幻灯片slide
+
+
+gotoSlide(index)
+跳到指定的幻灯片slide
+
+
+destroy()
+销毁幻灯片
+
+
+get(attribute)
+获取属性值
+
+
+set(attribute, value)
+设置属性值
+
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_948">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_949">
+                        简单的多级垂直手风琴下拉列表菜单
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_949" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510081523.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单但实用的多级垂直手风琴下拉列表菜单。该多级手风琴菜单完全使用CSS来制作，它通过将不同的子菜单进行分组，制作出多级菜单的效果。
+内容：
+
+
+简要教程
+
+
+这是一款简单但实用的多级垂直手风琴下拉列表菜单。该多级手风琴菜单完全使用CSS来制作，它通过将不同的子菜单进行分组，制作出多级菜单的效果。
+该多级手风琴菜单通过在checkbox元素上使用:checked伪元素来制作。如果需要一些好看的动画效果，可以实用插件中提供的main.js文件，它可以提供菜单打开和收缩时左侧小箭头的动画效果。
+
+ 使用方法
+
+ HTML结构
+该多级手风琴菜单的HTML结构非常简单：整个手风琴是一个无序列表。如果某个列表项中包含有子菜单，则添加一个input[type=checkbox]和一个label标签，同时为该列表项添加一个.has-children的class类。所有其它标准的列表项都包含在一个a标签中。
+
+&amp;lt;ul class=&#34;cd-accordion-menu&#34;&amp;gt;
+&amp;lt;li class=&#34;has-children&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; name =&#34;group-1&#34; id=&#34;group-1&#34; checked&amp;gt;
+&amp;lt;label for=&#34;group-1&#34;&amp;gt;Group 1&amp;lt;/label&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&amp;quot;has-children&amp;quot;&amp;gt;
+&amp;lt;input type=&amp;quot;checkbox&amp;quot; name =&amp;quot;sub-group-1&amp;quot; id=&amp;quot;sub-group-1&amp;quot;&amp;gt;
+&amp;lt;label for=&amp;quot;sub-group-1&amp;quot;&amp;gt;Sub Group 1&amp;lt;/label&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Image&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-accordion-menu --&amp;gt;
+
+
+ CSS样式
+该多级手风琴菜单仅使用CSS来检测点击和展开子菜单。它使用的方法是通过checkbox元素，然后通过:checked伪类和相邻的兄弟选择器来改变&amp;lt;ul&amp;gt;元素的显示模式，从“none”改变为“block”。
+首先需要确保所有有子菜单的列表项都带有checkbox元素。当你点击在一个label元素上的时候，实际是点击了相应的checkbox元素：这通过设置label元素的for属性来实现。接着就可以简单的隐藏checkbox元素，通过label元素来取代它。
+
+.cd-accordion-menu input[type=checkbox] {
+/* hide native checkbox */
+position: absolute;
+opacity: 0;
+}
+.cd-accordion-menu label, .cd-accordion-menu a {
+position: relative;
+display: block;
+padding: 18px 18px 18px 64px;
+background: #4d5158;
+box-shadow: inset 0 -1px #555960;
+color: #ffffff;
+font-size: 1.6rem;
+}
+
+通过HTML结构可以看出，checkbox元素和label元素以及子菜单无序列表是兄弟节点的关系。通过使用:checked伪类，我们可以做如下的设置：当checkbox被选中的时候（label被点击），可以获取它的兄弟节点&amp;lt;ul&amp;gt;元素，并设置它的可见性，从“none”修改为“block”。
+
+.cd-accordion-menu ul {
+/* by default hide all sub menus */
+display: none;
+}
+.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+/* use label:nth-of-type(n) to fix a bug on safari (&amp;lt;= 8.0.8) with multiple adjacent-sibling selectors*/
+/* show children when item is checked */
+display: block;
+}
+
+
+ JavaScript
+如果你需要为这个手风琴菜单添加一些好看的动画效果，可以使用jQuery和插件中提供的main.js文件。同时需要在ul.cd-accordion-menu元素上添加.animate class类，它会使小箭头的方向在打开和关闭子菜单时产生动画效果。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_949">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/153/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/155/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

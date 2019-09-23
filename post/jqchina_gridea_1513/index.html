@@ -1,0 +1,340 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯js随鼠标位置变化移动速度图片放大缩小展示特 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯js随鼠标位置变化移动速度图片放大缩小展示特
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412041750.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041750.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204672.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的纯js随鼠标位置变化移动速度图片放大展示特效。该js特效插件会检测鼠标的位置，根据鼠标的不同位置，图片做相应的放大缩小和改变图片的移动速度。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用纯js制作的炫酷随鼠标位置变化移动速度图片放大缩小展示特效。整个js代码短小精悍，100多行代码即完成了令人惊叹的效果。</p>
+<h3>HTML</h3>
+<p>html结构非常简单：</p>
+<pre class="brush:html">
+&lt;div style="position:absolute;left:50\%;top:50\%"&gt;
+&lt;div style="position:absolute;width:720px;height:560px;left:-360px;top:-280px;background:#fff"&gt;&lt;/div&gt;
+&lt;div style="position:absolute;left:-40px;top:-6px;color:#000;font-family:arial;font-size:0.9em"&gt;Loading...&lt;/div&gt;
+&lt;div id="screen" style="position:absolute;width:640px;height:480px;left:-320px;top:-240px;overflow:hidden"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="images" style="visibility:hidden"&gt;
+&lt;img title="infinite" src="images/1.jpg"&gt;
+&lt;img title="yellow" src="images/2.jpg"&gt;
+&lt;img title="earth" src="images/3.jpg"&gt;
+&lt;img title="dream" src="images/4.jpg"&gt;
+&lt;img title="flowers" src="images/5.jpg"&gt;
+&lt;/div&gt;
+</pre>
+<h3>CSS</h3>
+<p>css代码如下，只是简单的定位一些元素和给出宽度和高度：</p>
+<pre class="brush:css">
+html {overflow: hidden;}
+body {
+background-image:-webkit-radial-gradient(circle at top right,#5596BC,#75BEC7);
+background-image:-moz-radial-gradient(circle at top right,#5596BC,#75BEC7);
+background-image:-o-radial-gradient(circle at top right,#5596BC,#75BEC7);
+background-image:-ms-radial-gradient(circle at top right,#5596BC,#75BEC7);
+background-image:radial-gradient(circle at top right,#5596BC,#75BEC7);
+width: 100\%;
+height: 100\%;
+cursor: crosshair;
+}
+.spanSlide {
+position: absolute;
+background: #000;
+font-size: 1px;
+overflow: hidden;
+}
+.imgSlide {
+position: absolute;
+left: 5\%;
+top: 5\%;
+width: 90\%;
+height: 90\%;
+overflow: hidden;
+}
+.txtSlide {
+position: absolute;
+top: 5\%;
+left: 50px;
+width:100\%;
+color:#FFF;
+font-family: arial, helvetica, verdana, sans-serif;
+font-weight: bold;
+font-size:96px;
+letter-spacing:12px;
+filter: alpha(opacity=70);
+-moz-opacity:0.7;
+opacity:0.7;
+}
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>所有的js代码仅仅是下面的73行代码：</p>
+<pre class="brush:js">
+var ym=0;
+var ny=0;
+createElement = function(container, type, param){
+o=document.createElement(type);
+for(var i in param)o[i]=param[i];
+container.appendChild(o);
+return o;
+}
+mooz = {
+O:[],
+/////////
+mult:6,
+nbI:5,
+/////////
+rwh:0,
+imgsrc:0,
+W:0,
+H:0,
+Xoom:function(N){
+this.o = createElement(document.getElementById("screen"), "span", {
+'className':'spanSlide'
+});
+img = createElement(this.o, "img", {
+'className':"imgSlide",
+'src':mooz.imgsrc[N\%mooz.imgsrc.length].src
+});
+spa = createElement(this.o, "span", {
+'className':"imgSlide"
+});
+txt = createElement(spa, "span", {
+'className':"txtSlide",
+'innerHTML':mooz.imgsrc[N\%mooz.imgsrc.length].title
+});
+this.N = 10000+N;
+},
+mainloop:function(){
+with(this){
+for(i=0; i<mooz.nbi i o n="O[i].N\%nbI;" ti="Math.pow(mult,N);" with left='Math.round((W-(ti*rwh))/(W+ti)*(W*.5))+"px";' top='Math.round((H-ti)/(H+ti)*(H*.5))+"px";' zindex="Math.round(10000-ti*.1);" width='Math.round(ti*rwh)+"px";' height='Math.round(ti)+"px";' settimeout oigres:function w='parseInt(document.getElementById("screen").style.width);' h='parseInt(document.getElementById("screen").style.height);' imgsrc='document.getElementById("images").getElementsByTagName("img");' rwh="imgsrc[0].width/imgsrc[0].height;" for new xoom mainloop document.onmousemove="function(e){" if e="window.event;" ym="(e.y" e.clienty>ny)ny=ym/2;
+}
+window.onload = function(){
+ym = ny+50;
+mooz.oigres();
+}
+</mooz.nbi></pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041750.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204672.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1514">
+                                <h3 class="post-title">
+                                    jQuery和css3鼠标滑过网格相邻图片浮动效果
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

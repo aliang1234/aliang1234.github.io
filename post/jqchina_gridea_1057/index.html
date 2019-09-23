@@ -1,0 +1,381 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    时尚响应式侧边栏布局和切换页面动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            时尚响应式侧边栏布局和切换页面动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1507/201507101514.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507101514.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507102201.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款非常时尚的jQuery和CSS3侧边栏布局和切换页面动画特效。该侧边栏布局采用响应式设计，在点击了某个菜单项之后，侧边栏的右边部会出现一条全屏高度的进度条。进度条动画之后，相应的页面从左向右平滑的滑出。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款非常时尚的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>侧边栏布局和切换页面动画特效。该侧边栏布局采用响应式设计，在点击了某个菜单项之后，侧边栏的右边部会出现一条全屏高度的进度条。进度条动画之后，相应的页面从左向右平滑的滑出。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该侧边栏布局的HTML结构使用一个<code>.cd-main</code>元素来包裹页面的内容。<code>.cd-side-navigation</code>用于包裹侧边栏元素。还有一个<code>#cd-loading-bar</code>用于制作阿波罗右侧的进度条动画。</p>
+<pre class="brush:html">
+&lt;nav class="cd-side-navigation"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="index.html" class="selected" data-menu="index"&gt;
+&lt;svg&gt;&lt;!-- svg content here --&gt;&lt;/svg&gt;
+Intro
+&lt;/a&gt;
+&lt;/li&gt;
+<p>&lt;li&gt;<br>
+&lt;!-- ... --&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;!-- other list items here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt; &lt;!-- .cd-dashboard --&gt;</p>
+<p>&lt;main class=&quot;cd-main&quot;&gt;<br>
+&lt;section class=&quot;cd-section index visible&quot;&gt;<br>
+&lt;header&gt;<br>
+&lt;div class=&quot;cd-title&quot;&gt;<br>
+&lt;h2&gt;Animated Page Transition #2&lt;/h2&gt;<br>
+&lt;span&gt;Some text here&lt;/span&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;a href=&quot;#index-content&quot; class=&quot;cd-scroll&quot;&gt;Scroll Down&lt;/a&gt;<br>
+&lt;/header&gt;</p>
+<p>&lt;div class=&quot;cd-content&quot; id=&quot;index-content&quot;&gt;<br>
+&lt;!-- content here --&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-content --&gt;<br>
+&lt;/section&gt; &lt;!-- .cd-section --&gt;<br>
+&lt;/main&gt; &lt;!-- .cd-main --&gt;<br>
+&lt;!-- lateral loading bar --&gt;<br>
+&lt;div id=&quot;cd-loading-bar&quot; data-scale=&quot;1&quot; class=&quot;index&quot;&gt;&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>侧边栏<code>.cd-side-navigation</code>使用固定定位方式，它的高度设置为100\%，同时设置<code>overflow:hidden;</code>。并且它的子元素<code>&lt;ul&gt;</code>设置了一个<code>overflow-y: auto</code>属性，这样，如果侧边栏的内容比页面的高度要高，可以在内部滚动侧边栏。</p>
+<p>为了创建在鼠标滑过菜单项时出现在右侧的线条，该特效中使用<code>a::after</code>伪元素来制作它。它们采用绝对定位，4像素宽，和<code>top:0;</code>，<code>right:-4px;</code>。</p>
+<p>这里要注意的是每一个列表项元素的宽度使用<code>calc(100\%- 4px)</code>来计算，这样可以使<code>a::after</code>伪元素放置在<code>.cd-side-navigation</code>的内部。</p>
+<pre class="brush:css">
+.cd-side-navigation {
+ position: fixed;
+ z-index: 3;
+ top: 0;
+ left: 0;
+ height: 100vh;
+ width: 94px;
+ overflow: hidden;
+}
+.cd-side-navigation ul {
+ height: 100\%;
+ overflow-y: auto;
+}
+.cd-side-navigation::before {
+ /* background color of the side navigation */
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100\%;
+ width: calc(100\% - 4px);
+ background-color: #131519;
+}
+.cd-side-navigation li {
+ width: calc(100\% - 4px);
+}
+.cd-side-navigation a {
+ display: block;
+ position: relative;
+}
+.cd-side-navigation a::after {
+ /* 4px line to the right of the item - visible on hover */
+ content: '';
+ position: absolute;
+ top: 0;
+ right: -4px;
+ height: 100\%;
+ width: 4px;
+ background-color: #83b0b9;
+ opacity: 0;
+}
+.no-touch .cd-side-navigation a:hover::after {
+ opacity: 1;
+}
+</pre>
+<p>但用户选择了一个新的菜单项之后，特效中会创建一个新的<code>.cd-section</code>元素，并将它插入到DOM中。</p>
+<p>默认情况下，<code>.cd-section</code>元素被使用<code>translateX(-100\%)</code>移动到左侧屏幕之外。在用户点击菜单项之后，它被赋予<code>.visible</code> class，使它移动会屏幕之中。</p>
+<pre class="brush:css">
+.cd-section{
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+height: 100\%;
+width: 100\%;
+transform: translateX(-100\%);
+transition: transform 0s 0.5s;
+}
+.cd-section.visible {
+/* this is the visible/selected section */
+position: relative;
+z-index: 2;
+transform: translateX(0);
+transition: transform 0.5s 0s;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>该特效中所有的文件的HTML结构都基本相同，只是<code>.cd-section</code>中的内容有所不同。</p>
+<p>当用户点击一个菜单项的时候，<code>triggerAnimation()</code>函数会被触发。这个函数会触发进度条动画函数<code>loadingBarAnimation()</code>，并通过<code>loadNewContent()</code>函数来加载新的内容。</p>
+<p>对于加载进度条，特效中使用<a href="http://julian.com/research/velocity/" target="\_blank">Velocity.js</a>来制作动画效果。在进度条动画开始之前，进度条<code>#cd-loading-bar</code>被放置在菜单项的右侧，高度和菜单项相同。然后通过<code>scaleY</code>来制作进度条的动画效果。</p>
+<pre class="brush:js">
+function loadingBarAnimation() {
+//loadingBar is the #cd-loading-bar element
+//scaleY is the loadingBar actual scale value
+//this is the scaleY value to cover the entire window height (100\% loaded)
+var scaleMax = loadingBar.data('scale'); 
+if( scaleY + 1 &lt; scaleMax) {
+newScaleValue = scaleY + 1;
+} 
+// ...
+<p>loadingBar.velocity({<br>
+scaleY: newScaleValue<br>
+}, 100, loadingBarAnimation);<br>
+}<br>
+</pre></p>
+<p>当一个新的页面被选择了之后，<code>.cd-section</code>元素会被创建并插入到DOM中。然后使用<code>load()</code>函数来加载新的内容。这里在菜单项中使用一个<code>data-menu</code>属性来决定要加载哪个文件。在页面被加载之后，进度条动画结束，旧的页面内容被新的页面内容替换，新的页面内容使用<code>pushState()</code>方法来放入到window.history中。</p>
+<pre class="brush:js">
+function loadNewContent(newSection) {
+//create a new section element and insert it into the DOM (newSection is the data-menu of the selected navigation item)
+var section = $('&lt;section class="cd-section overflow-hidden '+newSection+'"&gt;&lt;/section&gt;').appendTo(mainContent);
+<p>//load the new content from the proper html file<br>
+section.load(newSection+'.html .cd-section &gt; *', function(event){</p>
+<p>loadingBar.velocity({<br>
+scaleY: scaleMax //this is the scaleY value to cover the entire window height (100% loaded)<br>
+}, 400, function(){</p>
+<p>//add the .visible class to the new section element -&gt; it will cover the old one<br>
+section.addClass('visible');</p>
+<p>var url = newSection+'.html';</p>
+<p>if(url!=window.location){<br>
+//add the new page to the window.history<br>
+window.history.pushState({path: url},'',url);<br>
+}</p>
+<p>// ...<br>
+});<br>
+});<br>
+}<br>
+</pre></p>
+<p>为了让用户在点击浏览器的回退按钮时得到相同的动画效果，特效中监听<code>popstate</code>事件，并通过<code>triggerAnimation()</code>方法来触发它。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507101514.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507102201.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1058">
+                                <h3 class="post-title">
+                                    纯js轻量级tooltips工具提示插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

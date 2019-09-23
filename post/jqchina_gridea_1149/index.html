@@ -1,0 +1,359 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery仿Medium网站响应式lightbox特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery仿Medium网站响应式lightbox特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1506/201506112008.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1506/201506112008.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201506112017.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Simplezoom是一款轻量级响应式的仿Medium网站lightbox特效插件。该lightbox特效会在当前屏幕中居中放大用户点击的图片，并在用户向下滚动或再次点击图片时将图片缩放回原来的大小和位置。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Simplezoom是一款轻量级响应式的仿Medium网站lightbox特效<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。该lightbox特效会在当前屏幕中居中放大用户点击的图片，并在用户向下滚动或再次点击图片时将图片缩放回原来的大小和位置。</p>
+<p>另外一款Medium网站样式的图片放大插件也有类似的效果：<a href="http://www.htmleaf.com/jQuery/Image-Effects/201505071793.html" target="\_blank">jQuery超实用图片放大预览特效插件</a></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该lightbox插件需要引入jQuery和simplezoom.js以及simplezoom.css文件。</p>
+<pre class="brush:html">
+&lt;link href="path/to/simplezoom.css" rel="stylesheet"&gt;
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/simplezoom.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>将你的缩略图使用一个<code>&lt;a&gt;</code>元素来包裹，<code>&lt;a&gt;</code>元素的<code>href</code>属性指向大图。</p>
+<pre class="brush:html">
+&lt;a href="large.jpg" rel="simplezoom"&gt;&lt;img src="small.jpg"&gt;&lt;/a&gt;
+</pre>
+<p>该lightbox特效遮罩层默认的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="modal-simplezoom modal"&gt;
+&lt;div class="modal-bg"&gt;&lt;/div&gt;
+&lt;div class="modal-content"&gt;
+&lt;div class="simplezoom-item"&gt; &lt;img src="{{img}}" alt="simplezoom-img" /&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>默认图片加载时的loader的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="simplezoom-loader loader"&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面加载完毕之后，可以使用下面的方法来加载该Lightbox插件。</p>
+<pre class="brush:css">
+$('a[rel=simplezoom]').simplezoom(); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>classie</td>
+<td>''</td>
+<td>被创建元素的额外css类名称</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>40</td>
+<td>用户屏幕和lightbox之间的最小间距</td>
+</tr>
+<tr>
+<td>scrollclose</td>
+<td>true</td>
+<td>在用户滚动鼠标时自动关闭打开的lightbox</td>
+</tr>
+<tr>
+<td>imgclass</td>
+<td>'img'</td>
+<td>告诉插件到哪里去找原始图片。默认是img元素</td>
+</tr>
+<tr>
+<td>duration</td>
+<td></td>
+<td>图片放大动画的速度，单位毫秒。默认使用CSS属性，不建议使用这个参数，除非你不懂如何在CSS中设置</td>
+</tr>
+<tr>
+<td>modalTmpl</td>
+<td></td>
+<td>覆盖默认的lightbox的HTML代码。可以参考插件的TEMPLATE变量</td>
+</tr>
+<tr>
+<td>loaderTmpl</td>
+<td></td>
+<td>覆盖默认的lightbox loader的HTML代码。可以参考插件的LOADER变量</td>
+</tr>
+<tr>
+<td>onModalInit</td>
+<td></td>
+<td>当用户点击图片元素时触发</td>
+</tr>
+<tr>
+<td>onModalClosed</td>
+<td></td>
+<td>当用户关闭lightbox时触发</td>
+</tr>
+<tr>
+<td>onImageLoaded</td>
+<td></td>
+<td>当大图成功被调用时触发</td>
+</tr>
+<tr>
+<td>onImageError</td>
+<td></td>
+<td>当大图调用失败时触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 应用举例</h3>
+<p>在lightbox初始化时传入参数：</p>
+<pre class="brush:js">
+$('.lightbox').simplezoom({
+offset: 25,
+scrollclose : true
+});
+</pre>
+<p>在触发<code>onImageError</code>事件时调用自己的函数：</p>
+<pre class="brush:js">
+$('.lightbox').simplezoom({
+/**
+ * @image : 默认的图片链接元素
+ * @lightbox: lightbox元素
+ */
+onImageError: function(image, lightbox) {
+console.error( '糟糕! 没有找到图片。' );
+}
+});
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1506/201506112008.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201506112017.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_115">
+                                <h3 class="post-title">
+                                    jQuery水平滚动展示图片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

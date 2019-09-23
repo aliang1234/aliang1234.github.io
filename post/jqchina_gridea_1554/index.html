@@ -1,0 +1,346 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery带放大镜的迷你幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery带放大镜的迷你幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411151649.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411151649.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141115491.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用Cloud Zoom和Fancybox制作的jQuery迷你型幻灯片插件。这个jQuery幻灯片非常小，用户用鼠标放到幻灯片上时，就会出现图片放大的放大镜效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款非常迷你型的jQuery幻灯片插件。插件中带有放大镜效果，鼠标悬停在幻灯片上时即可放大当前的幻灯片图片。 </p>
+<p>插件中集成了 <a href="http://www.professorcloud.com/mainsite/cloud-zoom.htm" target="\_blank">Cloud Zoom plugin</a> 和 <a href="http://fancybox.net/" target="\_blank">Fancybox plugin</a>。</p>
+<h3>HTML</h3>
+<pre class="brush:html">
+&lt;div class="item"&gt;
+&lt;div class="thumb\_wrapper"&gt;
+&lt;div class="thumb"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="images/formstack1.jpg"&gt;
+&lt;img src="images/thumbs/formstack1.jpg" alt="Formstack 1"/&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+...
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;a class="prev" href="#"&gt;&lt;/a&gt;
+&lt;a class="next" href="#"&gt;&lt;/a&gt;
+&lt;span&gt;Hover to zoom, click to view&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="description"&gt;
+&lt;h2&gt;Portfolio Item&lt;/h2&gt;
+&lt;p&gt;Some description&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>另外，还要为每一个超链接添加下面的属性：</p>
+<pre class="brush:html">
+&lt;a rev="group1" rel="zoomHeight:200, zoomWidth:400, adjustX: 10, adjustY:-4, position:'body'" class='cloud-zoom' href="images/formstack1.jpg"&gt;...&lt;/a&gt;
+</pre>
+<p>因为集成的两个jQuery插件中都使用了“rel”属性，而我们在这里我们需要改变Fancybox的“rel”属性，所以我们使用了“rev”属性。Fancybox能够通过“rev”属性给定的图片组创建一个幻灯片。</p>
+<p>为了配置Cloud Zoom我们在“rel”中设定了一些参数。</p>
+<h3>调用插件</h3>
+<p>首先引入必要的js和css文件：</p>
+<pre class="brush:html">
+&gt;&lt;link rel="stylesheet" type="text/css" href="cloud-zoom/cloud-zoom.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" /&gt;
+&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="cloud-zoom/cloud-zoom.1.0.2.js"&gt;&lt;/script&gt;
+</pre>
+<p>调用插件</p>
+<pre class="brush:js">
+$("#content .cloud-zoom").fancybox({
+'transitionIn': 'elastic',
+'transitionOut' : 'none',
+'speedIn' : 600,
+'speedOut': 200,
+'overlayShow' : true,
+'overlayColor': '#000',
+'cyclic': true,
+'easingIn': 'easeInOutExpo'
+});
+$("#content .mousetrap").live('click',function(){
+$(this).prev().trigger('click');
+});
+var $content= $('#content'),
+$thumb\_list = $content.find('.thumb &gt; ul');
+$thumb\_list.each(function(){
+var $this\_list= $(this),
+total\_w = 0,
+loaded= 0,
+//preload all the images first
+$images = $this\_list.find('img'),
+total\_images= $images.length;
+$images.each(function(){
+var $img= $(this);
+$('<img alt="">').load(function(){
+++loaded;
+if (loaded == total\_images){
+$this\_list.data('current',0).children().each(function(){
+total\_w += $(this).width();
+});
+$this\_list.css('width', total\_w + 'px');
+<p>//next / prev events</p>
+<p>$this_list.parent()<br>
+.siblings('.next')<br>
+.bind('click',function(e){<br>
+var current = $this_list.data('current');<br>
+if(current == $this_list.children().length -1) return false;<br>
+var next= ++current,<br>
+ml= -next * $this_list.children(':first').width();</p>
+<p>$this_list.data('current',next)<br>
+.stop()<br>
+.animate({<br>
+'marginLeft': ml + 'px'<br>
+},400);<br>
+e.preventDefault();<br>
+})<br>
+.end()<br>
+.siblings('.prev')<br>
+.bind('click',function(e){<br>
+var current = $this_list.data('current');<br>
+if(current == 0) return false;<br>
+var prev= --current,<br>
+ml= -prev * $this_list.children(':first').width();</p>
+<p><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 104: …ventDefault();
+}̲);
+}
+}).attr(&#039;s…'>this\_list.data(&#039;current&#039;,prev)
+.stop()
+.animate({
+&#039;marginLeft&#039;: ml + &#039;px&#039;
+},400);
+e.preventDefault();
+});
+}
+}).attr(&#039;src&#039;,</span>img.attr('src'));<br>
+});<br>
+});</p>
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411151649.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141115491.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1555">
+                                <h3 class="post-title">
+                                    Vanillabox大小随图片变化的jquery焦点图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

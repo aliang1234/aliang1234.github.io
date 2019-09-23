@@ -1,0 +1,1246 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_284">
+                        json格式数据查看和编辑jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_284" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806281609.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.json-editor是一款json格式数据查看和编辑jQuery插件。该json数据查看插件支持语法高亮，支持支持数据块展开与收起，摒弃可以对json数据进行动态编辑。
+内容：
+
+
+简要教程
+
+
+jquery.json-editor是一款json格式数据查看和编辑jQuery插件。该json数据查看插件支持语法高亮，支持支持数据块展开与收起，摒弃可以对json数据进行动态编辑。
+
+
+
+ 使用方法
+在页面中引入jquery和jquery.json-editor.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.json-editor.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ 初始化插件
+然后按照先的规范来初始化该json格式数据查看和编辑jQuery插件。
+
+/**
+ * 初始化一个 JsonEditor
+ *
+ * @param {DOM|string} container DOM 元素或 jQuery 选择器字符串
+ * @param {Object} json JSON 对象
+ * @param {Object=} options 其他配置项，可选
+ * @param {boolean} options.defaultCollapsed 是否默认是收起状态，默认 false
+ * @param {boolean} options.editable 是否可编辑，默认 true
+ */
+var editor = new JsonEditor(container, json, options);
+// 更新 json
+editor.load(json);
+// 获取 json
+try {
+editor.get();
+} catch (ex) {
+// Trigger an Error when JSON invalid
+alert(ex);
+}
+
+ 该json格式数据查看和编辑jQuery插件的github地址为：https://github.com/dblate/jquery.json-editor
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_284">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_285">
+                        以Glitch闪烁为过渡动画效果的js轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_285" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803201526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款以Glitch闪烁为过渡动画效果的js轮播图特效。在该js轮播图中，当图片切换时，当前图片出现Glitch闪烁效果，然后过渡到下一张图片，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款以Glitch闪烁为过渡动画效果的js轮播图特效。在该js轮播图中，当图片切换时，当前图片出现Glitch闪烁效果，然后过渡到下一张图片，效果非常炫酷。
+Glitch效果是一种类似电视或电脑屏幕故障时的闪烁效果，在网页中可以通过CSS来模拟这种效果。
+由于IE或Edge不支持CSS clip-path属性，所以在IE或Edge浏览器中是看不到效果的。
+下面是该Glitch闪烁为过渡动画效果的js轮播图特效的一些屏幕截图效果。
+
+
+
+ 该以Glitch闪烁为过渡动画效果的js轮播图特效的github地址为：https://github.com/codrops/GlitchSlideshow/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_285">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_286">
+                        jQuery输入框限制输入内容格式插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_286" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803051556.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.mask.js是一款jQuery输入框限制输入内容格式插件。该插件可以通过指定的规则来限制用户在输入框中输入的内容，例如限制日期格式，限制电话号码格式等，非常实用。
+内容：
+
+
+简要教程
+
+
+jquery.mask.js是一款jQuery输入框限制输入内容格式插件。该插件可以通过指定的规则来限制用户在输入框中输入的内容，例如限制日期格式，限制电话号码格式等，非常实用。
+
+ 安装
+可以通过Bower或npm来安装jquery.mask.js插件。
+
+bower install jquery-mask-plugin
+npm i jquery-mask-plugin
+
+
+ 使用方法
+在页面中引入jquery和jquery.mask.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.mask.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 基本实用
+jquery.mask.js输入框限制输入内容插件的一些基本实用示例如下：
+
+$(document).ready(function(){
+$(&#39;.date&#39;).mask(&#39;00/00/0000&#39;);
+$(&#39;.time&#39;).mask(&#39;00:00:00&#39;);
+$(&#39;.date\_time&#39;).mask(&#39;00/00/0000 00:00:00&#39;);
+$(&#39;.cep&#39;).mask(&#39;00000-000&#39;);
+$(&#39;.phone&#39;).mask(&#39;0000-0000&#39;);
+$(&#39;.phone\_with\_ddd&#39;).mask(&#39;(00) 0000-0000&#39;);
+$(&#39;.phone\_us&#39;).mask(&#39;(000) 000-0000&#39;);
+$(&#39;.mixed&#39;).mask(&#39;AAA 000-S0S&#39;);
+$(&#39;.cpf&#39;).mask(&#39;000.000.000-00&#39;, {reverse: true});
+$(&#39;.cnpj&#39;).mask(&#39;00.000.000/0000-00&#39;, {reverse: true});
+$(&#39;.money&#39;).mask(&#39;000.000.000.000.000,00&#39;, {reverse: true});
+$(&#39;.money2&#39;).mask(&#34;#.##0,00&#34;, {reverse: true});
+$(&#39;.ip\_address&#39;).mask(&#39;0ZZ.0ZZ.0ZZ.0ZZ&#39;, {
+translation: {
+&#39;Z&#39;: {
+pattern: /[0-9]/, optional: true
+}
+}
+});
+$(&#39;.ip\_address&#39;).mask(&#39;099.099.099.099&#39;);
+$(&#39;.percent&#39;).mask(&#39;##0,00\%&#39;, {reverse: true});
+$(&#39;.clear-if-not-match&#39;).mask(&#34;00/00/0000&#34;, {clearIfNotMatch: true});
+$(&#39;.placeholder&#39;).mask(&#34;00/00/0000&#34;, {placeholder: &#34;\_\_/\_\_/\_\_\_\_&#34;});
+$(&#39;.fallback&#39;).mask(&#34;00r00r0000&#34;, {
+translation: {
+&#39;r&#39;: {
+pattern: /[\/]/,
+fallback: &#39;/&#39;
+},
+placeholder: &#34;\_\_/\_\_/\_\_\_\_&#34;
+}
+});
+$(&#39;.selectonfocus&#39;).mask(&#34;00/00/0000&#34;, {selectOnFocus: true});
+});
+
+
+ 通过data-mask属性来使用
+你可以直接在HTML标签上通过data-mask属性来限制用户输入的内容格式。
+
+&amp;lt;input type=&#34;text&#34; name=&#34;field-name&#34; data-mask=&#34;00/00/0000&#34; /&amp;gt;
+&amp;lt;input type=&#34;text&#34; name=&#34;field-name&#34; data-mask=&#34;00/00/0000&#34; data-mask-reverse=&#34;true&#34; /&amp;gt;
+&amp;lt;input type=&#34;text&#34; name=&#34;field-name&#34; data-mask=&#34;00/00/0000&#34; data-mask-clearifnotmatch=&#34;true&#34; /&amp;gt;
+&amp;lt;input type=&#34;text&#34; name=&#34;field-name&#34; data-mask=&#34;00/00/0000&#34; data-mask-selectonfocus=&#34;true&#34; /&amp;gt;
+
+
+ 回调函数示例
+
+var options ={
+onComplete: function(cep) {
+alert(&#39;CEP Completed!:&#39; + cep);
+},
+onKeyPress: function(cep, event, currentField, options){
+console.log(&#39;A key was pressed!:&#39;, cep, &#39; event: &#39;, event,
+&#39;currentField: &#39;, currentField, &#39; options: &#39;, options);
+},
+onChange: function(cep){
+console.log(&#39;cep changed! &#39;, cep);
+},
+onInvalid: function(val, e, f, invalid, options){
+var error = invalid[0];
+console.log (&#34;Digit: &#34;, error.v, &#34; is invalid for the position: &#34;, error.p, &#34;. We expect something like: &#34;, error.e);
+}
+};
+$(&#39;.cep_with_callback&#39;).mask(&#39;00000-000&#39;, options);
+
+
+ Mask作为函数来使用
+
+var SPMaskBehavior = function (val) {
+return val.replace(/\D/g, &#39;&#39;).length === 11 ? &#39;(00) 00000-0000&#39; : &#39;(00) 0000-00009&#39;;
+},
+spOptions = {
+onKeyPress: function(val, e, field, options) {
+field.mask(SPMaskBehavior.apply({}, arguments), options);
+}
+};
+$(&#39;.sp_celphones&#39;).mask(SPMaskBehavior, spOptions);
+
+关于jquery.mask.js输入框限制输入内容格式插件更加详细的介绍，请查看github：https://github.com/igorescobar/jQuery-Mask-Plugin
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_286">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_287">
+                        简单易用的jquery放大镜插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_287" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1802/201802221505.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+HiZoom.js是一款简单易用的jquery放大镜插件。该jquery放大镜插件的特点是简单，易用，轻量级，压缩后的版本仅3kb。
+内容：
+
+
+简要教程
+
+
+HiZoom.js是一款简单易用的jquery放大镜插件。该jquery放大镜插件的特点是简单，易用，轻量级，压缩后的版本仅3kb。该jquery放大镜的特点还有：
+
+简单：文档详细清楚，直接上手。
+轻量: 压缩后的文件仅仅3KB，是 MagicZoom 插件的 1/24。
+兼容性强：Chrome，Firefox，Safari，IE9+。
+
+
+ 使用方法
+在页面中引入hizoom.min.css，jquery和hizoom.min.js文件。
+
+&amp;lt;link href=&#34;css/hizoom.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;js/hizoom.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用该jquery放大镜插件的基本HTML结构如下：
+
+&amp;lt;div class=&#39;hizoom gakki&#39;&amp;gt;
+&amp;lt;img src=&#39;./1.png&#39;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#39;hizoom ldy&#39;&amp;gt;
+&amp;lt;img src=&#39;./2.png&#39;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery放大镜插件。
+
+// 调用
+$(&#39;.gakki&#39;).hiZoom({
+width: 400,
+position: &#39;right&#39;
+});
+$(&#39;.ldy&#39;).hiZoom({
+width: 300,
+position: &#39;left&#39;
+}); 
+
+
+ 配置参数
+该该jquery放大镜插件的可用配置参数如下：
+
+
+
+
+属性
+描述
+可选值
+默认值
+
+
+
+
+width
+放大镜容器的宽高（目前只支持正方形放大镜）
+任何正数
+400
+
+
+position
+被放大区域的位置
+left|right|top|bottom
+right
+
+
+background
+放大镜背景色
+合法CSS颜色值
+#FFF
+
+
+opacity
+放大镜透明度
+0~1（合法CSS值）
+0.7
+
+
+distance
+被放大区域和放大镜容器间的距离
+任何正数
+20
+
+
+
+
+HiZoom.js jquery放大镜插件的github地址为：https://github.com/javashop/HiZoom
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_287">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_288">
+                        创意Tabs选项卡特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_288" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1804/201804181538.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款创意Tabs选项卡特效。该tabs选项卡基于jquery和bootstrap，通过简单的十几行CSS代码，将原生的bootstrap选项卡进行美化，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款创意Tabs选项卡特效。该tabs选项卡基于jquery和bootstrap，通过简单的十几行CSS代码，将原生的bootstrap选项卡进行美化，效果非常炫酷。
+
+ 使用方法
+在页面中引入jquery和bootstrap相关文件。
+
+&amp;lt;link href=&#34;css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该tabs选项卡的基本HTML结构如下：：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-offset-3 col-md-6&#34;&amp;gt;
+&amp;lt;div class=&#34;tab&#34; role=&#34;tabpanel&#34;&amp;gt;
+&amp;lt;!-- Nav tabs --&amp;gt;
+&amp;lt;ul class=&#34;nav nav-tabs&#34; role=&#34;tablist&#34;&amp;gt;
+&amp;lt;li role=&#34;presentation&#34; class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;#Section1&#34; aria-controls=&#34;home&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section2&#34; aria-controls=&#34;profile&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section3&#34; aria-controls=&#34;messages&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- Tab panes --&amp;gt;
+&amp;lt;div class=&#34;tab-content tabs&#34;&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade in active&#34; id=&#34;Section1&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 1&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;.......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade&#34; id=&#34;Section2&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 2&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade&#34; id=&#34;Section3&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 3&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;.......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+
+ CSS样式
+然后通过下面的CSS代码来对tabs选项卡进行美化。
+
+a:hover,a:focus{
+text-decoration: none;
+outline: none;
+}
+.tab .nav-tabs{
+border: none;
+border-bottom: 2px solid #079fc9;
+margin: 0;
+}
+.tab .nav-tabs li a{
+padding: 10px 20px;
+margin: 0 10px -1px 0;
+font-size: 17px;
+font-weight: 600;
+color: #293241;
+text-transform: uppercase;
+border: 2px solid #e6e5e1;
+border-bottom: none;
+border-radius: 5px 5px 0 0;
+z-index: 1;
+position: relative;
+transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a{
+background: #fff;
+color: #079fc9;
+border: 2px solid #079fc9;
+border-bottom-color: transparent;
+}
+.tab .nav-tabs li a:before{
+content: &#34;&#34;;
+display: block;
+height: 2px;
+background: #fff;
+position: absolute;
+bottom: -2px;
+left: 0;
+right: 0;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out 0s;
+}
+.tab .nav-tabs li.active a:before,
+.tab .nav-tabs li a:hover:before{ transform: scaleX(1); }
+.tab .tab-content{
+padding: 10px;
+font-size: 17px;
+color: #6f6f6f;
+line-height: 30px;
+letter-spacing: 1px;
+position: relative;
+}
+@media only screen and (max-width: 479px){
+.tab .nav-tabs{ border: none; }
+.tab .nav-tabs li{
+width: 100\%;
+text-align: center;
+margin-bottom: 15px;
+}
+.tab .nav-tabs li a{
+margin: 0;
+border-bottom: 2px solid transparent;
+}
+.tab .nav-tabs li a:before{
+content: &#34;&#34;;
+width: 100\%;
+height: 2px;
+background: #079fc9;
+position: absolute;
+bottom: -2px;
+left: 0;
+}
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_288">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_289">
+                        基于CSS grid（网格）的全屏展开式菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_289" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803311530.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于CSS grid（网格）的全屏展开式菜单特效。该特效当用户点击屏幕左下角的触发按钮之后，菜单会在屏幕上以方形网格的方式逐渐展开，当点击某个网格之后，该网格全屏展开，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款基于CSS grid（网格）的全屏展开式菜单特效。该特效当用户点击屏幕左下角的触发按钮之后，菜单会在屏幕上以方形网格的方式逐渐展开，当点击某个网格之后，该网格全屏展开，效果非常炫酷。
+该特效使用anime.js来制作动画，并使用imagesLoaded来预加载图片。
+由于在该特效中使用了CSS 网格和CSS变量，所以不是所以的浏览器都支持该特效，请使用支持CSS变量的浏览器来查看演示。
+在演示示例中，要打开菜单，请点击屏幕右下角的+ info按钮。下面是该特效的一些屏幕截图效果。
+
+
+ 该基于CSS grid（网格）的全屏展开式菜单特效的github地址为：https://github.com/codrops/GridMenu/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_289">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_290">
+                        Bootstrap4带多选功能输入框组件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-primary">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_290" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1805/201805161443.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+BsMultiSelect.js是一款Bootstrap4带多选功能输入框组件。BsMultiSelect.js扩展了原生bootstrap4 input输入框，可在输入框中通过下拉框来选择多个输入内容。
+内容：
+
+
+简要教程
+
+
+BsMultiSelect.js是一款Bootstrap4带多选功能输入框组件。BsMultiSelect.js扩展了原生bootstrap4 input输入框，可在输入框中通过下拉框来选择多个输入内容。
+
+ 使用方法
+在页面中引入jquery和bootstrap4相关文件，以及BsMultiSelect.min.js和BsMultiSelect.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=bootstrap/4.1.0/css/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/popper.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;bootstrap/4.1.0/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/BsMultiSelect.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用BsMultiSelect.js插件时，需要添加下面的HTML结构：
+
+
+&amp;lt;div class=&#34;form-group row&#34;&amp;gt;
+ &amp;lt;label class=&#34;col-form-label col-sm-2&#34; for=&#34;edit-states1-id&#34;&amp;gt;可进行多选的输入框&amp;lt;/label&amp;gt;
+ &amp;lt;div class=&#34;col-sm-10&#34;&amp;gt;
+ &amp;lt;select name=&#34;States1&#34; id=&#34;edit-states1-id&#34; class=&#34;form-control&#34;multiple=&#34;multiple&#34; style=&#34;display: none;&#34;&amp;gt;
+ &amp;lt;option value=&#34;AL&#34;&amp;gt;Alabama&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;AK&#34;&amp;gt;Alaska&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;AZ&#34;&amp;gt;Arizona&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;AR&#34;&amp;gt;Arkansas&amp;lt;/option&amp;gt;
+ &amp;lt;option selected value=&#34;CA&#34;&amp;gt;California&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;CO&#34;&amp;gt;Colorado&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;CT&#34;&amp;gt;Connecticut&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;DE&#34;&amp;gt;Delaware&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;DC&#34;&amp;gt;District Of Columbia&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;FL&#34;&amp;gt;Florida&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;GA&#34;&amp;gt;Georgia&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;OH&#34;&amp;gt;Ohio&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;OK&#34;&amp;gt;Oklahoma&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;OR&#34;&amp;gt;Oregon&amp;lt;/option&amp;gt;
+ &amp;lt;option selected value=&#34;PA&#34;&amp;gt;Pennsylvania&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;RI&#34;&amp;gt;Rhode Island&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;SC&#34;&amp;gt;South Carolina&amp;lt;/option&amp;gt;
+ &amp;lt;option value=&#34;SD&#34;&amp;gt;South Dakota&amp;lt;/option&amp;gt;
+ &amp;lt;/select&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过dashboardCodeBsMultiSelect()方法来初始化该插件。
+
+$(&#34;select&#34;).dashboardCodeBsMultiSelect();
+
+ 该Bootstrap4带多选功能输入框组件的github地址为：https://github.com/DashboardCode/BsMultiSelect
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_290">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_291">
+                        带视觉差特效的jquery鼠标hover图片放大插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_291" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806111509.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Parazoom.js是一款带视觉差特效的jquery鼠标hover图片放大插件。该jquery图片放大插件可以实现图片内部放大，图片跟随鼠标平移，视觉差移动等特效，非常炫酷。
+内容：
+
+
+简要教程
+
+
+Parazoom.js是一款带视觉差特效的jquery鼠标hover图片放大插件。该jquery图片放大插件可以实现图片内部放大，图片跟随鼠标平移，视觉差移动等特效，非常炫酷。
+
+
+
+ 使用方法
+在页面中引入jquery和parazoom.min.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;parazoom.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+然后在页面中添加图片。
+
+&amp;lt;img src=&#34;your-image.jpg&#34; alt=&#34;Alt text&#34;&amp;gt;
+
+如果需要在鼠标hover时，替换高清版本的图片，使用下面的代码。
+
+&amp;lt;img src=&#34;thumb.jpg&#34; data-prz-large-img=&#34;large.jpg&#34; alt=&#34;images&#34;&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过parazoom()方法来初始化该jquery鼠标hover图片放大插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(function () {
+jQuery(&#39;img&#39;).parazoom();
+});
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+该jquery鼠标hover图片放大插件的可用配置参数有：
+
+$(&#39;img&#39;).parazoom({
+// scale level
+scale: &#39;1.2&#39;,
+// transition options
+transitionTime: &#39;0.3s&#39;,
+transitionTimeLeave: &#39;1s&#39;,
+// opacity options
+opacity: &#39;1&#39;,
+opacityHover: &#39;1&#39;,
+// or &#39;visible&#39;
+overflow: &#39;hidden&#39;,
+// cursor options
+cursor: &#39;default&#39;,
+customCursorIcon: &#39;&#39;,
+customCursorSize: &#39;20px&#39;,
+// tilt options
+tilt: false,
+tiltXamount: 10,
+tiltYamount: 10,
+// alt text options
+text: false,
+textClass: false,
+textPosition: &#39;middle&#39;,
+textAlignment: &#39;center&#39;,
+textXParallax: 10,
+textYParallax: 10,
+textOpacity: 0,
+textOpacityHover: 1
+});
+
+例如：在鼠标hover图片时，显示描述文本：
+
+$(&#39;img&#39;).parazoom({
+text: true
+});
+
+在鼠标hover图片时，实现视觉差特效：
+
+$(&#39;img&#39;).parazoom({
+tilt: true
+tiltXamount: &#39;30&#39;
+tiltYamount: &#39;20&#39;
+overflow: &#39;visible&#39;
+});
+
+在鼠标hover图片时，自定义鼠标样式。
+
+$(&#39;img&#39;).parazoom({
+customCursorIcon: &#39;cursor.svg&#39;,
+customCursorSize: &#39;100px&#39;
+});
+
+  该jquery鼠标hover图片放大插件的github地址为：https://github.com/olivier3lanc/Parazoom
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_291">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_292">
+                        Bootstrap tooltip工具提示修改主题样式插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_292" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1805/201805021418.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款Bootstrap tooltip工具提示修改主题样式插件。通过该插件，可以修改bootstrap3和bootstrap4的内置tooltip主题样式，生成各种颜色的漂亮的tooltip工具提示。
+内容：
+
+
+简要教程
+
+
+这是一款Bootstrap tooltip工具提示修改主题样式插件。通过该插件，可以修改bootstrap3和bootstrap4的内置tooltip主题样式，生成各种颜色的漂亮的tooltip工具提示。
+
+ 使用方法
+在页面中引入bootstrap文件，jquery以及对应版本的bootstrap-tooltip-custom-class.css和bootstrap-tooltip-custom-class.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap-tooltip-custom-class.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.min..js&#34;&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap-tooltip-custom-class.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+你可以通过data-custom-class属性来设置自定义的tooltip主题样式。
+插件中内置了5种tooltip主题样式：.tooltip-primary、.tooltip-success、.tooltip-info、.tooltip-warning和.tooltip-danger。
+下面是一张Bootstrap tooltip工具提示修改主题样式的效果图：
+
+以一个按钮为例，添加tooltip的代码如下：
+
+&amp;lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34; 
+data-toggle=&#34;tooltip&#34;
+data-placement=&#34;top&#34; 
+data-custom-class=&#34;tooltip-custom&#34; 
+title=&#34;自定义tooltip示例&#34;&amp;gt;Tooltip example&amp;lt;/button&amp;gt;
+
+
+ 初始化插件
+你也可以通过js代码来初始化该bootstrap tooltip插件。
+
+$(function () {
+$(&#39;.my-element&#39;).tooltip({
+customClass: &#39;tooltip-custom&#39;
+});
+});
+
+ Bootstrap tooltip工具提示修改主题样式插件的github地址为：https://github.com/andreivictor/bootstrap-tooltip-custom-class
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_292">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_293">
+                        jQuery Lightbox和弹出层插件flashy
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_293" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1805/201805301500.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Flashy.js是一款响应式jQuery Lightbox和弹出层插件。该jQuery Lightbox和弹出层插件支持图片，内联内容，iframes，以及vimeo和youtube 视频，功能非常强大。
+内容：
+
+
+简要教程
+
+
+Flashy.js是一款响应式jQuery Lightbox和弹出层插件。该jQuery Lightbox和弹出层插件支持图片，内联内容，iframes，以及vimeo和youtube 视频，功能非常强大。 它的特点还有：
+
+支持项目计数。
+支持移动设备的swipe事件。
+支持预加载动画。
+支持键盘导航，和ESC键退出。
+支持视频自动播放。
+支持无限循环。
+
+
+ 使用方法
+在页面中引入flashy.min.css和jquery以及jquery.flashy.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/flashy.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.flashy.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+如果你需要添加更加炫酷的切换效果，可以引入effect.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/effect.css&#34;&amp;gt;
+
+
+ HTML结构
+然后在页面中创建一组需要展示的内容，结构如下：
+
+&amp;lt;a class=&#34;demo&#34; href=&#34;image-big.jpg&#34;&amp;gt;&amp;lt;img src=&#34;image-small.jpg&#34; alt=&#34;image alt&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;demo&#34; data-flashy-type=&#34;video&#34; href=&#34;https://vimeo.com/271516323&#34;&amp;gt;Vimeo&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;demo&#34; data-flashy-type=&#34;video&#34; href=&#34;https://youtu.be/dzNvk80XY9s&#34;&amp;gt;YouTube&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;demo&#34; data-flashy-type=&#34;iframe&#34; href=&#34;https://example.com/&#34;&amp;gt;iFrame&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;demo&#34; data-flashy-type=&#34;inline&#34; href=&#34;#inline&#34;&amp;gt;Inline&amp;lt;/a&amp;gt;
+&amp;lt;div id=&amp;quot;inline&amp;quot; style=&amp;quot;display:none&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;inline&amp;quot;&amp;gt;
+&amp;lt;!--内联内容--&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面flashy()方法来初始化该插件。
+
+$(document).ready(function(){
+$(&#39;.demo&#39;).flashy(); 
+});
+
+或者在初始化是传入配置参数：
+
+$(&#39;.demo&#39;).flashy({
+// Applied when a new item is shown
+showClass: &#39;fx-fadeIn&#39;,
+// Applied when a new item is hidden
+hideClass: &#39;fx-fadeOut&#39;
+// Applied when a new item is shown on prev event
+prevShowClass: &#39;fx-bounceInLeft&#39;,
+// Applied when a new item is shown on next event
+nextShowClass: &#39;fx-bounceInRight&#39;,
+// Applied when the current item is hidden on prev event
+prevHideClass: &#39;fx-bounceOutRight&#39;,
+// Applied when the current item is hidden on next event
+nextHideClass: &#39;fx-bounceOutLeft&#39;
+});
+
+
+ 配置参数
+Flashy.js插件可用的配置参数有：
+
+$(&#39;.mixed&#39;).flashy({
+// image, inline, ajax, iframe, video
+type: &#39;image&#39;,
+// show title
+title: true,
+// can be any CSS valid unit - px, %, and etc
+width: null,
+height: null,
+// enable/disable gallery mode
+gallery: true,
+// enable/disable infinite loop
+galleryLoop: true,
+// show item counter
+galleryCounter: true,
+// show prev and next navigation controls
+galleryPrevNext: true,
+// message used in the item counter. If empty, no counter will be displayed
+galleryCounterMessage: &#39;[index] / [total]&#39;,
+// enable/disable swipe on desktop
+gallerySwipeDesktop: true,
+// enable/disable swipe on mobile devices
+gallerySwipeMobile: true,
+// set swipe threshold in px
+gallerySwipeThreshold: 100,
+// enable/disable keyboard navigation with arrows and close with ESC
+keyboard: true,
+// close lightbox via the close button or overlay click
+overlayClose: false,
+// additional css classes for customization
+themeClass: null,
+// enable/Disable video autoplay
+videoAutoPlay: false,
+// error message displayed when a content fails to load
+loadError: &#39;Sorry, an error occured while loading the content...&#39;
+});
+
+  Flashy.js响应式jQuery Lightbox和弹出层插件的github地址为：https://github.com/avirtum/flashy
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_293">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/81/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/83/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

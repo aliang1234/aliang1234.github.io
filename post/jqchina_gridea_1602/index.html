@@ -1,0 +1,357 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    sDashboard简单轻量级的jquery图表插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            sDashboard简单轻量级的jquery图表插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1410/201410201650.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410201650.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141020241.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>sDashboard是一个能将对象数组转换为jQuery图表的插件。每个对象数组将被渲染成一张图表，并且这张图表是可以被拖动、放大和关闭的。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>sDashboard是一个简单、轻量级的jquery图表插件。</p>
+<p>sDashboard能将对象数组转换为jQuery图表的插件。每个对象数组将被渲染成一张图表，并且这张图表是可以被拖动、放大和关闭的。</p>
+<p>sDashboard支持了渲染DataTable和flotr2图。它也支持侦听事件如单击图表数据表行，单击并选择图表数据。</p>
+<h3>创建一个最基本的图表</h3>
+<p>在文件头部引入以下文件</p>
+<pre class="brush:html">
+&lt;!-- load jquery ui css theme --&gt;
+&lt;link type="text/css" href="css/jquery-ui.css" rel="stylesheet" /&gt;
+<p>&lt;!-- load the sDashboard css --&gt;<br>
+&lt;link href=&quot;../sDashboard.css&quot; rel=&quot;stylesheet&quot;&gt;</p>
+<p>&lt;!-- load jquery library --&gt;<br>
+&lt;script src=&quot;libs/jquery/jquery-1.8.2.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- load jquery ui library --&gt;<br>
+&lt;script src=&quot;libs/jquery/jquery-ui.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- load datatables library --&gt;<br>
+&lt;script src=&quot;libs/datatables/jquery.dataTables.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- load flot charting library --&gt;<br>
+&lt;script src=&quot;libs/float/jquery.flotr2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- load sDashboard library --&gt;<br>
+&lt;script src=&quot;../jquery-sDashboard.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br>
+</pre></p>
+<p>调用插件</p>
+<pre class="brush:js">
+$(function(){
+var randomString = "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Aenean lacinia mollis condimentum. Proin vitae ligula quis ipsum elementum tristique. Vestibulum ut sem erat.";
+//dashboard json data
+//this is the data format that the dashboard framework expects
+//**********************************************//
+var dashboardJSON = [{
+widgetTitle : "Bubble Chart Widget",
+widgetId : "id009",
+widgetType : "chart",
+enableRefresh: true,
+refreshCallBack : function(widgetId){
+var refreshedData = {
+data : myExampleData.constructBubbleChartData(),
+options : myExampleData.bubbleChartOptions
+};
+return refreshedData;
+},
+widgetContent : {
+data : myExampleData.bubbleChartData,
+options : myExampleData.bubbleChartOptions
+}
+<p>}, {<br>
+widgetTitle : &quot;Table Widget&quot;,<br>
+widgetId : &quot;id3&quot;,<br>
+widgetType : &quot;table&quot;,<br>
+enableRefresh : true,<br>
+refreshCallBack : function(widgetData){<br>
+return {<br>
+&quot;aaData&quot; : [myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData(),<br>
+myExampleData.constructTableWidgetData()<br>
+],</p>
+<p>&quot;aoColumns&quot; : [{<br>
+&quot;sTitle&quot; : &quot;Engine&quot;<br>
+}, {<br>
+&quot;sTitle&quot; : &quot;Browser&quot;<br>
+}, {<br>
+&quot;sTitle&quot; : &quot;Platform&quot;<br>
+}]<br>
+};<br>
+},<br>
+widgetContent : myExampleData.tableWidgetData<br>
+}, {<br>
+widgetTitle : &quot;Text Widget&quot;,<br>
+widgetId : &quot;id2&quot;,<br>
+enableRefresh : true,<br>
+refreshCallBack : function(widgetId){<br>
+return randomString + new Date();<br>
+},<br>
+widgetContent : randomString<br>
+}, {<br>
+widgetTitle : &quot;Pie Chart Widget&quot;,<br>
+widgetId : &quot;id001&quot;,<br>
+widgetType : &quot;chart&quot;,<br>
+widgetContent : {<br>
+data : myExampleData.pieChartData,<br>
+options : myExampleData.pieChartOptions<br>
+}</p>
+<p>}, {<br>
+widgetTitle : &quot;bar Chart Widget&quot;,<br>
+widgetId : &quot;id002&quot;,<br>
+widgetType : &quot;chart&quot;,<br>
+enableRefresh: true,<br>
+refreshCallBack : function(widgetId){<br>
+var refreshedData = {<br>
+data : myExampleData.constructBarChartData(),<br>
+options : myExampleData.barChartOptions<br>
+};<br>
+return refreshedData;<br>
+},<br>
+widgetContent : {<br>
+data : myExampleData.barChartData,<br>
+options : myExampleData.barChartOptions<br>
+}</p>
+<p>}, {<br>
+widgetTitle : &quot;line Chart Widget&quot;,<br>
+widgetId : &quot;id003&quot;,<br>
+widgetType : &quot;chart&quot;,<br>
+getDataBySelection : true,<br>
+widgetContent : {<br>
+data : myExampleData.lineChartData,<br>
+options : myExampleData.lineChartOptions<br>
+}</p>
+<p>}, {<br>
+widgetTitle : &quot;Adding an existing dom element&quot;,<br>
+widgetId : &quot;tweet123&quot;,<br>
+widgetContent : <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&quot;#̲myTweets&quot;)
+}];
+…'>(&quot;#myTweets&quot;)
+}];
+//basic initialization example
+</span>(&quot;#myDashboard&quot;).sDashboard({<br>
+dashboardData : dashboardJSON<br>
+});<br>
+});<br>
+</pre></p>
+<p>更多信息：<a href="http://modeln.github.io/sDashboard/" target="\_blank">http://modeln.github.io/sDashboard/</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410201650.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141020241.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1603">
+                                <h3 class="post-title">
+                                    None
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

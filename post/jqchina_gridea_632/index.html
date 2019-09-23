@@ -1,0 +1,442 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery响应式图片无缝轮播插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery响应式图片无缝轮播插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1610/201610271533.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610271533.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610274146.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款简单实用的jQuery响应式图片无缝轮播插件。该插件会将要轮播的图片制作为背景图片，它支持ie8+浏览器，具有无限、无缝轮播等特点。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款简单实用的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>响应式图片无缝轮播插件。该插件会将要轮播的图片制作为背景图片，它支持ie8+浏览器，具有无限、无缝轮播等特点。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该轮播图插件的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="banner"&gt;
+&lt;ul&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;/ol&gt;
+&lt;i class="left"&gt;&lt;/i&gt;&lt;i class="right"&gt;&lt;/i&gt;
+&lt;/div&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>使用下面的CSS代码来制作轮播图的全屏响应式效果。</p>
+<pre class="brush:css">
+.banner {
+width: 100\%;
+position: relative;
+overflow: hidden;
+}
+<p>.banner ul { position: absolute; }</p>
+<p>.banner ul li {<br>
+width: 100%;<br>
+height: 560px;<br>
+float: left;<br>
+background: no-repeat center center;<br>
+}<br>
+</pre></p>
+<p>圆点导航和箭头导航按钮的样式如下：</p>
+<pre class="brush:css">
+.banner ol {
+height: 20px;
+background: rgba(0,0,0,0.5);
+position: absolute;
+left: 50\%;
+bottom: 30px;
+padding: 0 10px;
+border-radius: 10px;
+}
+<p>.banner ol li {<br>
+width: 10px;<br>
+height: 10px;<br>
+float: left;<br>
+margin: 5px 5px;<br>
+background: rgba(255,255,255,0.5);<br>
+border-radius: 50%;<br>
+cursor: pointer;<br>
+}</p>
+<p>.banner ol .current { background: rgba(255,255,255,1); }</p>
+<p>.banner i {<br>
+width: 58px;<br>
+height: 120px;<br>
+position: absolute;<br>
+top: 50%;<br>
+margin-top: -60px;<br>
+cursor: pointer;<br>
+border-radius: 5px;<br>
+display: none;<br>
+}</p>
+<p>.banner .left {<br>
+left: 60px;<br>
+background: url('left_right.png') no-repeat 0 0px;<br>
+}</p>
+<p>.banner .right {<br>
+right: 60px;<br>
+background: url('left_right.png') no-repeat 0px -120px;<br>
+}</p>
+<p>.banner .left:hover, .banner .right:hover { background-color: rgba(0, 0, 0, 0.31); }<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>在页面中引入jquery，实现该轮播图效果的jquery代码如下：</p>
+<pre class="brush:js">
+$(function(){ //页面加载完毕才执行
+<p>//=<mark><mark><mark><mark>设置参数</mark></mark></mark></mark>==<br>
+//图片统一高度：<br>
+var images_height = '560px';<br>
+//图片路径/链接(数组形式):<br>
+var images_url = [<br>
+'img/1.jpg',<br>
+'img/2.jpg',<br>
+'img/3.jpg'<br>
+];<br>
+var images_count = images_url.length;<br>
+//console.log(images_count);</p>
+<p>//创建节点<br>
+//图片列表节点<br>
+for(var j=0;j&lt;images_count+1;j++){<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 24: …r ul&#039;).append(&#039;&amp;̲lt;li&amp;gt;&amp;lt;/l…'>(&#039;.banner ul&#039;).append(&#039;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&#039;)
+}
+//轮播圆点按钮节点
+for(var j=0;j&amp;lt;images\_count;j++){
+if(j==0){
+</span>('.banner ol').append('&lt;li class=&quot;current&quot;&gt;&lt;/li&gt;')<br>
+}else{<br>
+$('.banner ol').append('&lt;li&gt;&lt;/li&gt;')<br>
+}<br>
+}</p>
+<p>//载入图片<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>n</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi>u</mi><mi>l</mi><mi>l</mi><msup><mi>i</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>b</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>g</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mo>−</mo><mi>i</mi><mi>m</mi><mi>a</mi><mi>g</mi><msup><mi>e</mi><mo mathvariant="normal">′</mo></msup><msup><mo separator="true">,</mo><mo mathvariant="normal">′</mo></msup><mi>u</mi><mi>r</mi><mi>l</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mo>+</mo><mi>i</mi><mi>m</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>s</mi><mi mathvariant="normal">_</mi><mi>u</mi><mi>r</mi><mi>l</mi><mo>[</mo><mn>0</mn><mo>]</mo><msup><mo>+</mo><mo mathvariant="normal">′</mo></msup><msup><mo>)</mo><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(&#x27;.banner ul li&#x27;).css(&#x27;background-image&#x27;,&#x27;url(&#x27;+images\_url[0]+&#x27;)&#x27;);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct"><span class="mpunct">,</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">+</span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mord"><span class="mbin">+</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>.each(images_url,function(key,value){<br>
+$('.banner ul li').eq(key).css('background-image','url('+value+')');<br>
+});</p>
+<p>$('.banner').css('height',images_height);</p>
+<p>$('.banner ul').css('width',(images_count+1)*100+'%');</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>n</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi>o</mi><msup><mi>l</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><msup><mi>h</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>i</mi><mi>m</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>s</mi><mi mathvariant="normal">_</mi><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mo>∗</mo><mn>20</mn><msup><mo>+</mo><mo mathvariant="normal">′</mo></msup><mi>p</mi><msup><mi>x</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(&#x27;.banner ol&#x27;).css(&#x27;width&#x27;,images\_count*20+&#x27;px&#x27;);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.835222em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin"><span class="mbin">+</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>('.banner ol').css('margin-left',-images_count<em>20</em>0.5-10+'px');</p>
+<p>//=========================</p>
+<p>var num = 0;<br>
+//获取窗口宽度<br>
+var window_width = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>w</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>o</mi><mi>w</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(window).width();
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>(window).resize(function(){<br>
+window_width = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>w</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>o</mi><mi>w</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(window).width();
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>('.banner ul li').css({width:window_width});<br>
+clearInterval(timer);<br>
+nextPlay();<br>
+timer = setInterval(nextPlay,2000);<br>
+});<br>
+//console.log(window_width);<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">.</mi><mi>b</mi><mi>a</mi><mi>n</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi>u</mi><mi>l</mi><mi>l</mi><msup><mi>i</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mi>w</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>o</mi><mi>w</mi><mi mathvariant="normal">_</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">轮</mi><mi mathvariant="normal">播</mi><mi mathvariant="normal">圆</mi><mi mathvariant="normal">点</mi></mrow><annotation encoding="application/x-tex">(&#x27;.banner ul li&#x27;).width(window\_width);
+//轮播圆点
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">轮</span><span class="mord cjk_fallback">播</span><span class="mord cjk_fallback">圆</span><span class="mord cjk_fallback">点</span></span></span></span>('.banner ol li').mouseover(function(){//用hover的话会有两个事件(鼠标进入和离开)<br>
+$(this).addClass('current').siblings().removeClass('current');<br>
+//第一张图： 0 * window_width<br>
+//第二张图： 1 * window_width<br>
+//第三张图： 2 * window_width<br>
+//获取当前编号<br>
+var i = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>x</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>i</mi><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(this).index();
+//console.log(i);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>('.banner ul').stop().animate({left:-i<em>window_width},500);<br>
+num = i;<br>
+});<br>
+//自动播放<br>
+var timer = null;<br>
+function prevPlay(){<br>
+num--;<br>
+if(num&lt;0){<br>
+//悄悄把图片跳到最后一张图(复制页,与第一张图相同),然后做出图片播放动画，left参数是定位而不是移动的长度<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 139: …ages\_count-1;
+}̲else{
+//console…'>(&#039;.banner ul&#039;).css({left:-window\_width*images\_count}).stop().animate({left:-window\_width*(images\_count-1)},500);
+num=images\_count-1;
+}else{
+//console.log(num);
+</span>('.banner ul').stop().animate({left:-num</em>window_width},500);<br>
+}<br>
+if(num==images_count-1){<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 94: …ss(&#039;current&#039;);
+}̲else{
+'>(&#039;.banner ol li&#039;).eq(images\_count-1).addClass(&#039;current&#039;).siblings().removeClass(&#039;current&#039;);
+}else{
+</span>('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');</p>
+<p>}<br>
+}<br>
+function nextPlay(){<br>
+num++;<br>
+if(num&gt;images_count){<br>
+//播放到最后一张(复制页)后,悄悄地把图片跳到第一张,因为和第一张相同,所以难以发觉,<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 176: …放至第二张了。
+num=1;
+}̲else{
+//在最后面加入一…'>(&#039;.banner ul&#039;).css({left:0}).stop().animate({left:-window\_width},500);
+//css({left:0})是直接悄悄改变位置，animate({left:-window\_width},500)是做出移动动画
+//随后要把指针指向第二张图片,表示已经播放至第二张了。
+num=1;
+}else{
+//在最后面加入一张和第一张相同的图片，如果播放到最后一张，继续往下播，悄悄回到第一张(肉眼看不见)，从第一张播放到第二张
+//console.log(num);
+</span>('.banner ul').stop().animate({left:-num*window_width},500);<br>
+}<br>
+if(num==images_count){<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 80: …ss(&#039;current&#039;);
+}̲else{
+'>(&#039;.banner ol li&#039;).eq(0).addClass(&#039;current&#039;).siblings().removeClass(&#039;current&#039;);
+}else{
+</span>('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');</p>
+<p>}<br>
+}<br>
+timer = setInterval(nextPlay,2000);<br>
+//鼠标经过banner，停止定时器,离开则继续播放<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …;
+//左右箭头显示(淡入)
+'>(&#039;.banner&#039;).mouseenter(function(){
+clearInterval(timer);
+//左右箭头显示(淡入)
+</span>('.banner i').fadeIn();<br>
+}).mouseleave(function(){<br>
+timer = setInterval(nextPlay,2000);<br>
+//左右箭头隐藏(淡出)<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 26: …i&#039;).fadeOut();
+}̲);
+//播放下一张
+'>(&#039;.banner i&#039;).fadeOut();
+});
+//播放下一张
+</span>('.banner .right').click(function(){<br>
+nextPlay();<br>
+});<br>
+//返回上一张<br>
+$('.banner .left').click(function(){<br>
+prevPlay();<br>
+});<br>
+});<br>
+</pre></p>
+<p>该jQuery响应式图片无缝轮播插件的github地址为：<a href="https://github.com/maizhenying09/jquery-seamless-picture-carousel" target="\_blank">https://github.com/maizhenying09/jquery-seamless-picture-carousel</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610271533.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610274146.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_633">
+                                <h3 class="post-title">
+                                    可快速生成各种阴影效果的jQuery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

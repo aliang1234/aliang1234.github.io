@@ -1,0 +1,328 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery表单验证插件-输入email地址正确才显示提交 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery表单验证插件-输入email地址正确才显示提交
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1410/201410061549.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410061549.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/2014100653.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款jQuery表单验证插件，这个demo中只展示email的效果，只有当用户输入正确的email地址时，提交按钮才显示出来，十分实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>简洁、大方和直观的用户界面是我们最喜欢的网页设计。这个插件正是这样的一个设计风格。</p>
+<p>如何才能做到页面的简洁大方并且人性化？大多数网站的表单采用文本提示的方法，提示用户哪里填写错了，哪里不正确，但我们应该能做得更好：填写不正确就不显示提交按钮！</p>
+<h3>HTML结构</h3>
+<pre class="brush:html">
+&lt;form class="newsletter"&gt;
+&lt;input type="email" value="" placeholder="Enter your email address" /&gt;
+&lt;input type="submit" value="OK" /&gt;
+&lt;/form&gt; 
+</pre>
+<h3>JAVASCRIPT：</h3>
+<p>检查输入的文本是否为一个正确的email地址，如果正确，就给表单添加特定的样式，否则不添加，通过css来控制这个样式是否显示按钮。</p>
+<p>依赖于jQuery的做法：</p>
+<pre class="brush:js">
+$( function( $, window, document, undefined )
+{
+'use strict';
+<p>var form= '.newsletter',<br>
+className = 'newsletter--active',<br>
+email = 'input[type=&quot;email&quot;]';</p>
+<p>$( form ).each( function()<br>
+{<br>
+var $form = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">( this ),
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span>email= $form.find( email ),<br>
+val = '';</p>
+<p>$email.on( 'keyup.addClassWhenEmail', function()<br>
+{<br>
+val = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>v</mi><mi>a</mi><mi>l</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">email.val();
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>form.toggleClass( className, val != '' &amp;&amp; /^([\w-.]+@([\w-]+.)+[\w-]{2,12})?$/.test( val ) );<br>
+});<br>
+});<br>
+})( jQuery, window, document );<br>
+</pre></p>
+<p>以上代码兼容IE6以上的浏览器</p>
+<p>如果你想关闭这项功能，可以通过关闭名称空间addClassWhenEmail来实现。</p>
+<pre class="brush:js">
+$( '.newsletter input[type="email"]' ).off( '.addClassWhenEmail' ); 	
+</pre>
+<p>不使用jQuery,纯javascript的做法：</p>
+<pre class="brush:js">
+;( function( window, document, undefined )
+{
+'use strict';
+<p>var form= '.newsletter',<br>
+className = 'newsletter--active',<br>
+email = 'input[type=&quot;email&quot;]',</p>
+<p>addEventListener = function( element, event, handler )<br>
+{<br>
+element.addEventListener ? element.addEventListener( event, handler ) : element.attachEvent( 'on' + event, function(){ handler.call( element ); });<br>
+},<br>
+forEach = function( elements, fn )<br>
+{<br>
+for( var i = 0; i &lt; elements.length; i++ ) fn( elements[ i ], i );<br>
+},<br>
+addClass = function( element, className )<br>
+{<br>
+element.classList ? element.classList.add( className ) : element.className += ' ' + className;<br>
+},<br>
+removeClass = function( element, className )<br>
+{<br>
+element.classList ? element.classList.remove( className ) : element.className += element.className.replace( new RegExp( '(^|\b)' + className.split( ' ' ).join( '|' ) + '(\b|$)', 'gi' ), ' ' );<br>
+};</p>
+<p>forEach( document.querySelectorAll( form ), function( $form )<br>
+{<br>
+var $email = $form.querySelectorAll( email );</p>
+<p>if( <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …ail.length )
+{
+'>email.length )
+{
+</span>email = $email[ 0 ];<br>
+addEventListener( <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …, function()
+{
+'>email, &#039;keyup&#039;, function()
+{
+</span>email.value != '' &amp;&amp; /^([\w-.]+@([\w-]+.)+[\w-]{2,12})?$/.test( $email.value ) ? addClass( $form, className ) : removeClass( $form, className );<br>
+});<br>
+}<br>
+});<br>
+})( window, document );	<br>
+</pre></p>
+<p>以上代码兼容IE8+以及所有现代浏览器。</p>
+<h3>可用参数</h3>
+<p>这里有三个参数可以用来改变选择器：</p>
+<pre class="brush:js">
+var form= '.newsletter',// form selector
+className = 'newsletter--active', // class name for form when correct email is entered
+email = 'input[type="email"]',// email input field selector	
+</pre>
+<h3>CSS代码</h3>
+<p>js代码用来切换样式，真正显示于隐藏则通过css来实现：</p>
+<pre class="brush:css">
+.newsletter:not( .newsletter--active ) input[type='submit']
+{
+display: none;
+}	
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410061549.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/2014100653.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1622">
+                                <h3 class="post-title">
+                                    jquery支持移动设备的响应式slider内容滑块插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

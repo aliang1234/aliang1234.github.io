@@ -1,0 +1,337 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和CSS3堆叠式Tab选项卡界面设计 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和CSS3堆叠式Tab选项卡界面设计
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508302040.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508302040.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508302496.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和CSS3制作的堆叠式Tab选项卡界面设计效果。该设计中所有的面板以不同的尺寸由小到大的堆叠在一起，当点击相应的面板后，这个面板会以过渡动画效果扩展到全屏大小。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>制作的堆叠式Tab选项卡界面设计效果。该设计中所有的面板以不同的尺寸由小到大的堆叠在一起，当点击相应的面板后，这个面板会以过渡动画效果扩展到全屏大小。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该选项卡的HTML结构使用的是无序列表，每一个<code>&lt;li&gt;</code>元素是一个面板。最后的<code>div.views-toggle</code>是面板全屏后显示的切换按钮。</p>
+<pre class="brush:html">
+&lt;ul class="tabs"&gt;
+&lt;li class="tabs\_\_item color1"&gt;
+&lt;h2&gt;Tony&lt;span&gt;...&lt;/span&gt;&lt;/h2&gt;
+&lt;p class="tabs\_\_num"&gt;...&lt;/p&gt;
+&lt;p class="tabs\_\_stats"&gt;
+...
+&lt;/p&gt;
+&lt;/li&gt;
+...
+&lt;div class="views-toggle views-toggle--hidden"&gt;
+&lt;svg fill="white" viewBox="0 0 24 24"&gt;
+ &lt;path d="M16.59 8.59l-4.59 4.58-4.59-4.58-1.41 1.41 6 6 6-6z"/&gt;
+ &lt;path d="M0 0h24v24h-24z" fill="none"/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;/ul&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>这个Tab选项卡效果的CSS样式中，整个Tab的高度设置为视口的高度，超出部分会被隐藏。每一个Tab面板都使用绝对定位，大小为视口的大小。最终效果中每一个Tab的大小都不一样，这是在jQuery代码中动态完成调整的。</p>
+<pre class="brush:css">
+.tabs {
+position: relative;
+min-height: 100vh;
+overflow: hidden;
+}
+.tabs\_\_item {
+will-change: transform, opacity, box-shadow;
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+height: 100\%;
+margin-bottom: 50px;
+z-index: 1;
+padding: 0 50px;
+color: white;
+box-shadow: 0 30px 60px transparent;
+-webkit-transform-origin: center 5\%;
+-ms-transform-origin: center 5\%;
+transform-origin: center 5\%;
+overflow: hidden;
+-webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+} 
+</pre>
+<p>其它的都是一些非常简单的设置。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>jQuery代码中，<code>moveTabs</code>函数用于缩放Tab，并移动到指定位置。<code>switchTabs</code>函数是切换Tab的操作处理。</p>
+<pre class="brush:js">
+var moveTabs = function (a) {
+var transY, scale;
+if (a) {
+tabs.css({
+'opacity': '1',
+'box-shadow': '0 30px 60px rgba(0,0,0,0.4)',
+'cursor': 'pointer'
+});
+tabs.each(function (index) {
+transY = index * 10;
+scale = 0.5 + index / 25;
+transform($(this), 'translate3d(0,' + transY + 'vh, 0) scale(' + scale + ')');
+});
+toggler.addClass('views-toggle--hidden');
+} else {
+transform(tabs, 'translate3d(0,0,0) scale(1)');
+}
+};
+var switchTabs = function () {
+var selected = $(this);
+var others = selected.siblings('li');
+if (toggled) {
+transition(others, 'transform 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06)');
+transform(others, 'translate3d(0, 100\%, 0) scale(1)');
+transform(selected, 'translate3d(0,0,0) scale(1)');
+tabs.css({
+'box-shadow': '0 30px 60px rgba(0,0,0,0.4)',
+'cursor': 'default'
+});
+toggled = false;
+selected.on('transitionend webkitTransitionend', function () {
+toggler.removeClass('views-toggle--hidden');
+others.css({ 'opacity': '0' });
+transform(others, 'translate3d(0, 100\%, 0) scale(0)');
+transition(others, 'transform 0.9s cubic-bezier(0.23, 1, 0.32, 1)');
+selected.off('transitionend webkitTransitionend');
+});
+}
+}; 
+</pre>
+<p>代码并不复杂，具体请参考下载文件。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508302040.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508302496.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1011">
+                                <h3 class="post-title">
+                                    jQuery和CSS3仿Apple TV海报背景视觉差特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

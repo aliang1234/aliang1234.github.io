@@ -1,0 +1,382 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery鼠标滑过和鼠标点击圆形图片特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery鼠标滑过和鼠标点击圆形图片特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412011646.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412011646.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141201644.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款实用的jQuery鼠标滑过和鼠标点击圆形图片特效。插件中的圆形图片使用css3制作，这款插件弥补了:hover伪元素应用于圆形图片上的不足。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款jQuery和css3鼠标滑过、鼠标离开、鼠标点击圆形图片的图片特效插件。在a元素上使用<code>:hover</code>伪元素来制作鼠标滑过、鼠标点击等效果是一个网站最常使用的方法。但是有一个非常头疼的问题，如果引入了<code>border-radius</code>属性，某些区域在鼠标滑过时将不可见，特别是设置border-radius为50\%的时候（圆形）。这个插件就是为解决这类问题而制作的。</p>
+<h3>HTML</h3>
+<p>html结构如下：</p>
+<pre class="brush:html">
+&lt;a href="#" id="circle" class="ec-circle"&gt;
+&lt;h3&gt;Hovered&lt;/h3&gt;
+&lt;/a&gt;
+</pre>
+<h3>CSS</h3>
+<p>将它做成圆形图片，样式如下：</p>
+<pre class="brush:css">
+.ec-circle{
+width: 420px;
+height: 420px;
+-webkit-border-radius: 210px;
+-moz-border-radius: 210px;
+border-radius: 50\%;
+text-align: center;
+overflow: hidden;
+font-family:'Kelly Slab', Georgia, serif;
+background: #dda994 url(../images/1.jpg) no-repeat center center;
+box-shadow: 
+inset 0 0 1px 230px rgba(0,0,0,0.6),
+inset 0 0 0 7px #d5ad94;
+transition: box-shadow 400ms ease-in-out;
+display: block;
+outline: none;
+}
+</pre>
+<p>现在定义一个鼠标滑过样式，但是这里不适用:hover伪元素。这里使用jQuery来切换鼠标滑过的样式。</p>
+<pre class="brush:css">
+.ec-circle-hover{
+box-shadow: 
+inset 0 0 0 0 rgba(0,0,0,0.6),
+inset 0 0 0 20px #c18167,
+0 0 10px rgba(0,0,0,0.3);
+}
+</pre>
+<p>如果浏览器不支持javascript，我们定义还是使用伪元素，这个class可以在noscript.css中找到：</p>
+<pre class="brush:css">
+.ec-circle:hover{
+box-shadow: 
+inset 0 0 0 0 rgba(0,0,0,0.6),
+inset 0 0 0 20px #c18167,
+0 0 10px rgba(0,0,0,0.3);
+}
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>我们将使插件中的所有事件仅仅应用于圆形图片上：</p>
+<pre class="brush:js">
+$.CircleEventManager= function( options, element ) {
+this.$el= $( element );
+this.\_init( options ); 
+};
+$.CircleEventManager.defaults = {
+onMouseEnter: function() { return false },
+onMouseLeave: function() { return false },
+onClick : function() { return false }
+};
+$.CircleEventManager.prototype= {
+\_init : function( options ) {
+this.options= $.extend( true, {}, $.CircleEventManager.defaults, options ); 
+// set the default cursor on the element
+this.$el.css( 'cursor', 'default' );
+<p>this._initEvents();<br>
+},<br>
+_initEvents : function() {<br>
+var _self = this;<br>
+this.$el.on({<br>
+'mouseenter.circlemouse': function( event ) {<br>
+var el= <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi><mo>)</mo><mo separator="true">,</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>W</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>=</mo><mi>e</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>W</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mi>t</mi><mi>r</mi><mi>u</mi><mi>e</mi><mo>)</mo><mo separator="true">,</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>H</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo>=</mo><mi>e</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>H</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo>(</mo><mi>t</mi><mi>r</mi><mi>u</mi><mi>e</mi><mo>)</mo><mo separator="true">,</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>L</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>=</mo><mi>e</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">.</mi><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo separator="true">,</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>T</mi><mi>o</mi><mi>p</mi><mo>=</mo><mi>e</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">.</mi><mi>t</mi><mi>o</mi><mi>p</mi><mo separator="true">,</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>P</mi><mi>o</mi><mi>s</mi><mo>=</mo><mrow><mi>x</mi><mo>:</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>L</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>+</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>W</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo separator="true">,</mo><mi>y</mi><mo>:</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>T</mi><mi>o</mi><mi>p</mi><mo>+</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>H</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo separator="true">,</mo><mi>r</mi><mi>a</mi><mi>d</mi><mi>i</mi><mi>u</mi><mi>s</mi><mo>:</mo><mi>c</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>W</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>s</mi><mi>a</mi><mi>v</mi><mi>e</mi><mi>c</mi><mi>u</mi><mi>r</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>y</mi><mi>p</mi><mi>e</mi><mi>v</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>u</mi><mi>r</mi><mi>s</mi><mi>o</mi><mi>r</mi><msup><mo>=</mo><mo mathvariant="normal">′</mo></msup><mi>d</mi><mi>e</mi><mi>f</mi><mi>a</mi><mi>u</mi><mi>l</mi><msup><mi>t</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">;</mo><mi>i</mi><mi>f</mi><mo>(</mo><mi mathvariant="normal">_</mi><mi>s</mi><mi>e</mi><mi>l</mi><mi>f</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(event.target), 
+circleWidth = el.outerWidth( true ),
+circleHeight= el.outerHeight( true ),
+circleLeft= el.offset().left,
+circleTop = el.offset().top,
+circlePos = {
+x : circleLeft + circleWidth / 2,
+y : circleTop + circleHeight / 2,
+radius: circleWidth / 2
+}; 
+// save cursor type
+var cursor= &#x27;default&#x27;; 
+if( \_self.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">L</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">L</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord">/</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord">/</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord">/</span><span class="mord">2</span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">=</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord">.</span></span></span></span>el.css('cursor') === 'pointer' || _self.$el.is('a') )<br>
+cursor = 'pointer';</p>
+<p>el.data( 'cursor', cursor );<br>
+el.on( 'mousemove.circlemouse', function( event ) {<br>
+var distance= Math.sqrt( Math.pow( event.pageX - circlePos.x, 2 ) + Math.pow( event.pageY - circlePos.y, 2 ) );<br>
+if( !Modernizr.borderradius ) {<br>
+// inside element / circle<br>
+el.css( 'cursor', el.data('cursor') ).data( 'inside', true );<br>
+_self.options.onMouseEnter( _self.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 7: el );
+}̲
+else {
+if( dis…'>el );
+}
+else {
+if( distance &amp;lt;= circlePos.radius &amp;amp;&amp;amp; !el.data(&#039;inside&#039;) ) { 
+// inside element / circle
+el.css( &#039;cursor&#039;, el.data(&#039;cursor&#039;) ).data( &#039;inside&#039;, true );
+\_self.options.onMouseEnter( \_self.</span>el );<br>
+}<br>
+else if( distance &gt; circlePos.radius &amp;&amp; el.data('inside') ) {</p>
+<p>// inside element / outside circle<br>
+el.css( 'cursor', 'default' ).data( 'inside', false );<br>
+_self.options.onMouseLeave( _self.$el );<br>
+}<br>
+}<br>
+});<br>
+},<br>
+'mouseleave.circlemouse': function( event ) {</p>
+<p>var el= $(event.target);</p>
+<p>el.off('mousemove');</p>
+<p>if( el.data( 'inside' ) ) {</p>
+<p>el.data( 'inside', false );<br>
+_self.options.onMouseLeave( _self.$el );<br>
+}<br>
+},<br>
+'click.circlemouse' : function( event ) {<br>
+// allow the click only when inside the circle<br>
+var el= <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi><mo>)</mo><mo separator="true">;</mo><mi>i</mi><mi>f</mi><mo>(</mo><mo>!</mo><mi>e</mi><mi>l</mi><mi mathvariant="normal">.</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>i</mi><mi>n</mi><mi>s</mi><mi>i</mi><mi>d</mi><msup><mi>e</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>)</mo><mi>r</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mi>f</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>e</mi><mo separator="true">;</mo><mi>e</mi><mi>l</mi><mi>s</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>s</mi><mi>e</mi><mi>l</mi><mi>f</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>p</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>n</mi><mi>C</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>k</mi><mo>(</mo><mi mathvariant="normal">_</mi><mi>s</mi><mi>e</mi><mi>l</mi><mi>f</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(event.target);
+if( !el.data( &#x27;inside&#x27; ) )
+return false;
+else
+\_self.options.onClick( \_self.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mclose">!</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">.</span><span class="mord mathdefault">d</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mopen">(</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord">.</span></span></span></span>el );<br>
+}<br>
+});<br>
+},<br>
+destroy : function() {<br>
+this.$el.unbind('.circlemouse').removeData('inside').removeData('cursor');<br>
+}<br>
+};<br>
+</pre></p>
+<p>当鼠标进入正方形的图片区域，我们为元素绑定“mousemove”事件，这样我们就能跟踪鼠标离圆心的距离，如果这个距离大于圆形的半径，我们就知道鼠标还没有滑过圆形图片，如下图：</p>
+<p><img src="http://img.htmleaf.com/1412/hoverTrigger.jpg" alt="jquery鼠标滑过圆形图片示意图" width="580" height="283"></p>
+<p>当检测到距离小于圆形的半径，我们为其绑定“mouseenter”事件。</p>
+<p>调用插件的方法：</p>
+<pre class="brush:js">
+$('#circle').circlemouse({
+onMouseEnter: function( el ) {
+el.addClass('ec-circle-hover');
+},
+onMouseLeave: function( el ) {
+el.removeClass('ec-circle-hover'); 
+},
+onClick : function( el ) { 
+alert('clicked');
+}
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412011646.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141201644.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1504">
+                                <h3 class="post-title">
+                                    jQuery和css3实用3d产品快速预览画廊插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

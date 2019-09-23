@@ -1,0 +1,1788 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_367">
+                        jquery动画表情插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_367" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1711/201711271511.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.mb.emoticons.js是一款jquery动画表情插件。它允许你通过面板拾取某个表情符号，然后可以通过这些表情相应的关键字符号将它们转换为gif动画表情。
+内容：
+
+
+简要教程
+
+
+jquery.mb.emoticons.js是一款jquery动画表情插件。它允许你通过面板拾取某个表情符号，然后可以通过这些表情相应的关键字符号将它们转换为gif动画表情。
+
+ 使用方法
+在页面中引入jquery和jquery.mb.emoticons.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.mb.emoticons.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;textarea&amp;gt;文本域来作为动画表情拾取的容器。
+
+&amp;lt;textarea id=&#34;ta&#34; class=&#34;ta&#34;&amp;gt;&amp;lt;/textarea&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过mbSmilesBox()方法即可完成该jquery动画表情插件的初始化。
+
+$(function(){
+$(&#34;#ta&#34;).mbSmilesBox();
+})
+
+如果需要将表情字符串渲染为gif动画表情，可以项下面这样操作。
+
+&amp;lt;div id=&#34;render&#34; style=&#34;display:none&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+$(&#39;#render&#39;).html($(&#39;#ta&#39;).val()).emoticonize(true).show();
+
+
+ 配置参数
+该jquery动画表情插件的默认配置参数如下：
+
+$(&#34;#ta&#34;).mbSmilesBox({
+smilesPath:&#34;&#34;,
+smiles: {
+&#34;(angel)&#34;:&#34;angel&#34;,
+&#34; :@&#34;:&#34;angry&#34;,
+&#34;(bandit)&#34;: &#34;bandit&#34;,
+&#34;(bear)&#34;: &#34;bear&#34;,
+&#34;(beer)&#34;: &#34;beer&#34;,
+&#34; :D&#34;:&#34;bigsmile&#34;,
+&#34;(bow)&#34;:&#34;bow&#34;,
+&#34;(u)&#34;:&#34;brokenheart&#34;,
+&#34;(bug)&#34;:&#34;bug&#34;,
+&#34;(^)&#34;:&#34;cake&#34;,
+&#34;(call)&#34;: &#34;call&#34;,
+&#34;(cash)&#34;: &#34;cash&#34;,
+&#34;(clap)&#34;: &#34;clapping&#34;,
+&#34;(coffee)&#34;: &#34;coffee&#34;,
+&#34; 8-)&#34;: &#34;cool&#34;,
+&#34; ;(&#34;:&#34;crying&#34;,
+&#34;(dance)&#34;:&#34;dance&#34;,
+&#34;(devil)&#34;:&#34;devil&#34;,
+&#34;(doh)&#34;:&#34;doh&#34;,
+&#34;(drink)&#34;:&#34;drink&#34;,
+&#34;(drunk)&#34;:&#34;drunk&#34;,
+&#34;(dull)&#34;: &#34;dull&#34;,
+&#34;(blush)&#34;:&#34;eblush&#34;,
+&#34;(emo)&#34;:&#34;emo&#34;,
+&#34;(envy)&#34;: &#34;envy&#34;,
+&#34; ]:)&#34;: &#34;evilgrin&#34;,
+&#34;(F)&#34;:&#34;flower&#34;,
+&#34;(fubar)&#34;:&#34;fubar&#34;,
+&#34;(giggle)&#34;: &#34;giggle&#34;,
+&#34;(handshake)&#34;:&#34;handshake&#34;,
+&#34;(happy)&#34;:&#34;happy&#34;,
+&#34;(headbang)&#34;: &#34;headbang&#34;,
+&#34;(heart)&#34;:&#34;heart&#34;,
+&#34;(heidy)&#34;:&#34;heidy&#34;,
+&#34;(hi)&#34;: &#34;hi&#34;,
+&#34;(inlove)&#34;: &#34;inlove&#34;,
+&#34;(wasntme)&#34;:&#34;itwasntme&#34;,
+&#34;(kiss)&#34;: &#34;kiss&#34;,
+&#34; :x&#34;:&#34;lipssealed&#34;,
+&#34;(mail)&#34;: &#34;mail&#34;,
+&#34;(makeup)&#34;: &#34;makeup&#34;,
+&#34;(finger)&#34;: &#34;middlefinger&#34;,
+&#34;(mmm)&#34;:&#34;mmm&#34;,
+&#34;(mooning)&#34;:&#34;mooning&#34;,
+&#34;(~)&#34;:&#34;movie&#34;,
+&#34;(muscle)&#34;: &#34;muscle&#34;,
+&#34;(music)&#34;:&#34;music&#34;,
+&#34;(myspace)&#34;:&#34;myspace&#34;,
+&#34; 8-|&#34;: &#34;nerd&#34;,
+&#34;(ninja)&#34;:&#34;ninja&#34;,
+&#34;(no)&#34;: &#34;no&#34;,
+&#34;(nod)&#34;:&#34;nod&#34;,
+&#34;(party)&#34;:&#34;party&#34;,
+&#34;(phone)&#34;:&#34;phone&#34;,
+&#34;(pizza)&#34;:&#34;pizza&#34;,
+&#34;(poolparty)&#34;:&#34;poolparty&#34;,
+&#34;(puke)&#34;: &#34;puke&#34;,
+&#34;(punch)&#34;:&#34;punch&#34;,
+&#34;(rain)&#34;: &#34;rain&#34;,
+&#34;(rock)&#34;: &#34;rock&#34;,
+&#34;(rofl)&#34;: &#34;rofl&#34;,
+&#34; :(&#34;:&#34;sadsmile&#34;,
+&#34;(shake)&#34;:&#34;shake&#34;,
+&#34;(skype)&#34;:&#34;skype&#34;,
+&#34; |-)&#34;: &#34;sleepy&#34;,
+&#34;(smile)&#34;:&#34;smile&#34;,
+&#34;(smirk)&#34;:&#34;smirk&#34;,
+&#34;(smoke)&#34;:&#34;smoke&#34;,
+&#34; :|&#34;:&#34;speechless&#34;,
+&#34;(*)&#34;:&#34;star&#34;,
+&#34;(sun)&#34;:&#34;sun&#34;,
+&#34; :O&#34;:&#34;surprised&#34;,
+&#34;(swear)&#34;:&#34;swear&#34;,
+&#34;(sweat)&#34;: &#34;sweating&#34;,
+&#34;(talk)&#34;: &#34;talking&#34;,
+&#34;(think)&#34;:&#34;thinking&#34;,
+&#34;(o)&#34;:&#34;time&#34;,
+&#34;(tmi)&#34;:&#34;tmi&#34;,
+&#34;(toivo)&#34;:&#34;toivo&#34;,
+&#34; :P&#34;:&#34;tongueout&#34;,
+&#34;(wait)&#34;: &#34;wait&#34;,
+&#34;(whew)&#34;: &#34;whew&#34;,
+&#34;(wink)&#34;: &#34;wink&#34;,
+&#34; :^)&#34;: &#34;wondering&#34;,
+&#34; :S&#34;:&#34;worried&#34;,
+&#34;(yawn)&#34;: &#34;yawn&#34;,
+&#34;(yes)&#34;:&#34;yes&#34;
+},
+smilesVariations: {
+&#34;:-)&#34;: &#34;smile&#34;,
+&#34;:)&#34;: &#34;smile&#34;
+},
+smileBoxBtn:&#34;#smileBoxBtn&#34;,
+});
+
+该jquery动画表情插件的github地址为：https://github.com/pupunzi/jquery.mb.emoticons
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_367">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_369">
+                        jquery多国语言切换特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_369" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1712/201712291426.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款实现多国语言切换的jquery特效。在这个示例中，通过简单的js代码，实现包括中文和英文在内的7种不同国家语言的切换效果。
+内容：
+
+
+简要教程
+
+
+这是一款实现多国语言切换的jquery特效。在这个示例中，通过简单的js代码，实现包括中文和英文在内的7种不同国家语言的切换效果。
+
+ 使用方法
+在页面中引入jquery和style.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+示例中，整个页面分为两个部分，一部分是选择语言的下拉列表框，另外一部分是显示文字的区域。
+
+&amp;lt;!--选择语言的下拉列表框--&amp;gt;
+&amp;lt;div class=&#34;translate\_wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;current\_lang&#34;&amp;gt;
+&amp;lt;div class=&#34;lang&#34;&amp;gt;
+&amp;lt;img src=&#34;https://image.flaticon.com/icons/svg/299/299722.svg&#34;&amp;gt;
+&amp;lt;span class=&#34;lang-txt&#34;&amp;gt;EN&amp;lt;/span&amp;gt; 
+&amp;lt;span class=&#34;fa fa-chevron-down chevron&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;more\_lang&#34;&amp;gt;
+&amp;lt;div class=&#34;lang&#34; data-value=&#39;cn&#39;&amp;gt;
+&amp;lt;img src=&#34;https://image.flaticon.com/icons/svg/299/299914.svg&#34;&amp;gt;
+&amp;lt;span class=&#34;lang-txt&#34;&amp;gt;简体中文&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang selected&amp;quot; data-value=&#39;en&#39;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299722.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;English&amp;lt;span&amp;gt; (US)&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang&amp;quot; data-value=&#39;de&#39;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299786.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;Deutsch&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang&amp;quot; data-value=&#39;es&#39;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299820.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;Español&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang&amp;quot; data-value=&#39;fr&#39;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299753.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;Français&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang&amp;quot; data-value=&amp;quot;pt&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299693.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;Português&amp;lt;span&amp;gt; (BR)&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;lang&amp;quot; data-value=&amp;quot;ar&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://image.flaticon.com/icons/svg/299/299815.svg&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;lang-txt&amp;quot;&amp;gt;العربية &amp;lt;span&amp;gt; (SA)&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!--文字内容--&amp;gt;
+&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;ct-img&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/lizard-765x510.jpg&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;ct-txt&amp;quot;&amp;gt;
+&amp;lt;h1 id=&amp;quot;title&amp;quot;&amp;gt;&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;span&amp;gt;Link&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ JavaScript
+实现多国语言切换的js代码页非常简单，各国语言的标题，内容等被存放在一个数组中。
+
+var trans = [ 
+{ 
+en : &#39;Chameleon&#39;,
+pt : &#39;Camaleão&#39;,
+es : &#39;Camaleón&#39;,
+fr : &#39;Caméléon&#39;,
+de : &#39;Chamäleon&#39;, 
+cn : &#39;变色龙&#39;,
+ar : &#39;حرباء&#39;
+},{ 
+en : &#39;For sheer breadth of freakish ......&#39;,
+pt : &#39;Por uma infinidade de caract......&#39;,
+es : &#39;Por pura amplitud de extrañas......&#39;,
+fr: &#34;Pour l&#39;ampleur pure des caract......&#34;,
+de: &#39;Wegen der schieren Breite der......&#39;,
+cn: &#39;由于极其奇特的解剖特征，变色......&#39;,
+ar : &#39;لمجرد اتساع الميزات التشريحية فظيع، ......&#39;
+},{ 
+en : &#39;See More&#39;,
+pt : &#39;Saiba mais&#39;,
+es : &#39;Más información&#39;,
+fr : &#39;En savoir plus&#39;,
+de : &#39;Weitere Infos&#39;,
+cn : &#39;查看更多&#39;,
+ar : &#39;مشاهدة المزيد&#39;
+},
+];
+
+实现翻译的是translate()函数，它通过数组下标来查找相应的语言。
+
+translate(tnum);
+function translate(tnum){
+$(&#39;h1#title&#39;).text(trans[0][tnum]);
+$(&#39;p&#39;).text(trans[1][tnum]);
+$(&#39;.content a span&#39;).text(trans[2][tnum]);
+}
+
+然后在点击下拉框中的选项时，通过获取data-value的值来得到当前用户选择了什么语言，然后再通过translate()函数将文字转换为相应的语言。
+
+$(&#39;.more\_lang .lang&#39;).click(function(){
+$(this).addClass(&#39;selected&#39;).siblings().removeClass(&#39;selected&#39;);
+$(&#39;.more\_lang&#39;).removeClass(&#39;active&#39;);
+var img = $(this).find(&#39;img&#39;).attr(&#39;src&#39;);
+var lang = $(this).attr(&#39;data-value&#39;);
+var tnum = lang;
+translate(tnum);
+(′.current_lang.lang−txt′).text(lang);(&amp;#x27;.current\_lang .lang-txt&amp;#x27;).text(lang);
+(′.current_lang.lang−txt′).text(lang);(&#39;.current_lang img&#39;).attr(&#39;src&#39;, img);
+if(lang == &#39;ar&#39;){
+(&amp;#039;body&amp;#039;).attr(&amp;#039;dir&amp;#039;, &amp;#039;rtl&amp;#039;);
+}else{
+(&#39;body&#39;).attr(&#39;dir&#39;, &#39;ltr&#39;);
+}
+});
+});
+
+该jquery多国语言切换特效的原文地址为：https://codepen.io/AndreCortellini/pen/xPMEWK
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_369">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_37">
+                        jQuery滚动固定侧边栏元素插件Sticksy.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_37" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1908/201908066389.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Sticksy.js是一款jQuery滚动固定侧边栏元素插件。该插件可以在页面滚动时，将任意元素固定在页面的可视区域中，跟随页面一起滚动。
+内容：
+
+
+简要教程
+
+
+Sticksy.js是一款jQuery滚动固定侧边栏元素插件。该插件可以在页面滚动时，将任意元素固定在页面的可视区域中，跟随页面一起滚动。
+
+ 使用方法 
+安装
+
+npm install sticksy --save
+yarn add sticksy
+
+
+ HTML结构
+
+&amp;lt;aside class=&#34;sidebar&#34;&amp;gt; 
+&amp;lt;!-- Non sticky element --&amp;gt;
+&amp;lt;div class=&#34;widget&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- Sticky element --&amp;gt;
+&amp;lt;div class=&#34;widget is-sticky&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;!-- Now, the next elements are sticky also --&amp;gt;
+&amp;lt;div class=&#34;widget&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&#34;widget&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;/aside&amp;gt;
+
+
+ 初始化插件
+
+var stickyElement = new Sticksy(&#39;.widget.is-sticky&#39;);
+
+作为jQuery插件使用。
+
+var stickyElement = $(&#39;.widget.is-sticky&#39;).sticksy();
+
+
+ API
+
+var instance = new Sticksy(target[, options]);
+// demo
+var stickyEl = new Sticksy(&#39;.block.is-sticky&#39;, {
+topSpacing: 60, // Specify this when you have a fixed top panel
+listen: true, // Listen for the DOM changes in the container
+});
+
+可用的配置参数如下：
+
+
+topSpacing：指定元素被固定时，距离页面顶部的距离。默认为0。
+
+listen：是否监听dom元素的变化。默认为false。
+
+ Sticksy.js插件的github网址为：https://github.com/kovart/sticksy
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_37">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_370">
+                        jquery响应式弹出层lightbox插件slick-lightbox.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_370" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1711/201711101503.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+slick-lightbox.js是一款基于slick.js和jquery的响应式弹出层lightbox插件。该jquery lightbox插件支持图片懒加载，支持键盘交互，支持HTML5 History API等。功能非常强大。
+内容：
+
+
+简要教程
+
+
+slick-lightbox.js是一款基于slick.js和jquery的响应式弹出层lightbox插件。该jquery lightbox插件支持图片懒加载，支持键盘交互，支持HTML5 History API等。功能非常强大。
+
+ 安装
+可以通过bower来安装slick-lightbox.js插件。
+
+bower install -S slick-lightbox
+
+
+ 使用方法
+在页面中引入slick-lightbox.css，jquery和slick-lightbox.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/slick-lightbox.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/slick-lightbox.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用该弹出层lightbox插件基本的HTML代码如下：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;title&amp;gt;slick lightbox&amp;lt;/title&amp;gt;
+&amp;lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;bower\_components/slick-carousel/slick/slick.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;bower\_components/slick-carousel/slick/slick-theme.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;styles/slick-lightbox.css&#34;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;http://placekitten.com/1600/1300&#34; data-caption=&#34;Lorem ipsum 1600x1300&#34;&amp;gt;图片1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;http://placekitten.com/1630/1280&#34; data-caption=&#34;Lorem ipsum 1630x1280&#34;&amp;gt;图片2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;http://placekitten.com/1500/1250&#34; data-caption=&#34;Lorem ipsum 1500x1250&#34;&amp;gt;图片3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;bower\_components/jquery/dist/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;bower\_components/slick-carousel/slick/slick.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;scripts/slick-lightbox.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(document).ready(function(){
+$(&#39;ul&#39;).slickLightbox({
+itemSelector: &#39;&amp;gt; li &amp;gt; a&#39;
+});
+});
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 配置参数
+slick-lightbox.js lightbox插件的可用配置参数如下：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+background
+string
+rgba(0,0,0,.8)
+lightbox的背景颜色。
+
+
+closeOnEscape
+boolean
+true
+是否可以通过ESC键关闭lightbox。
+
+
+closeOnBackdropClick
+boolean
+true
+是否可以通过点击背景关闭lightbox。
+
+
+destroyTimeout
+number
+500
+从DOM中移除lightbox之前需要等待多少毫秒。
+
+
+itemSelector
+string
+a
+类似jquery选择器。指向图片的锚链接选择器。
+
+
+navigateByKeyboard
+boolean
+true
+是否可以通过键盘来控制lightbox。
+
+
+slick
+object
+{}
+传入carousel的slick选项。
+
+
+caption
+various
+false
+是否设置图片标题？
+
+
+src
+various
+false
+如何获取图片？设置为false则使用href属性。
+
+
+captionPosition
+various
+&#39;dynamic&#39;
+图片标题放置的位置。
+
+
+images
+various
+false
+如果传入一个数组，那么插件就不会使用图片的url，而是直接使用这个数组。
+
+
+useHistoryApi
+boolean
+false
+设置为true时，打开图片将会有一个history.pushState。
+
+
+layouts
+object
+
+
+
+
+shouldOpen
+function
+null
+
+
+
+imageMaxHeight
+number
+0.9
+相对于视口高度的图片最大高度。
+
+
+lazy
+boolean
+false
+图片是否懒加载？
+
+
+lazyPlaceholder
+string
+null
+图片懒加载的占位图片地址。
+
+
+
+
+
+ 事件
+slick-lightbox.js lightbox插件的可用事件参数如下：
+
+
+
+
+事件
+描述
+
+
+
+
+show.slickLightbox
+当lightbox打开时触发。
+
+
+shown.slickLightbox
+当lightbox打开时，转换完成之后触发。
+
+
+hide.slickLightbox
+当lightbox关闭时触发。
+
+
+hidden.slickLightbox
+当lightbox关闭时，转换完成之后触发。
+
+
+
+
+
+$(document).ready(function(){
+$(&#39;ul&#39;).slickLightbox().on({
+&#39;show.slickLightbox&#39;: function(){ console.log(&#39;A `show.slickLightbox` event triggered.&#39;); },1
+&#39;shown.slickLightbox&#39;: function(){ console.log(&#39;A `shown.slickLightbox` event triggered.&#39;); },
+&#39;hide.slickLightbox&#39;: function(){ console.log(&#39;A `hide.slickLightbox` event triggered.&#39;); },
+&#39;hidden.slickLightbox&#39;: function(){ console.log(&#39;A `hidden.slickLightbox` event triggered.&#39;); }
+});
+});
+
+slick-lightbox.js lightbox插件的github地址为：https://github.com/mreq/slick-lightbox/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_370">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_372">
+                        卡通式圣诞节雪花飘落jquery下雪插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_372" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1712/201712141423.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-snow是一款卡通式圣诞节雪花飘落jquery下雪插件。jquery-snow插件可以在页面或指定元素上生成雪花飘落效果。雪花元素可以是字体图标或图片，通过配置你还可以设置雪花的大小和飘落速度等，非常方便。
+内容：
+
+
+简要教程
+
+
+jquery-snow是一款卡通式圣诞节雪花飘落jquery下雪插件。jquery-snow插件可以在页面或指定元素上生成雪花飘落效果。雪花元素可以是字体图标或图片，通过配置你还可以设置雪花的大小和飘落速度等，非常方便。
+
+ 使用方法
+在页面中引入jquery和jquery-snow.js文件，以及font-awesome字体图标文件。
+
+&amp;lt;link href=&#34;css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt; 
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.ckLine.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+不需要特别指定任何HTML结构，通过插件的target参数，你可以指定雪花是在页面的body还是其它指定元素中生成。
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该卡通式圣诞节雪花飘落jquery插件。
+
+var snowEffectInterval = jQuery.fn.snow({
+// min size of element (default: 20)
+minSize: 10,
+// max size of element (default: 50)
+maxSize: 50,
+// flake fall time multiplier (default: 20)
+fallTimeMultiplier: 20,
+// flake fall time difference (default: 10000)
+fallTimeDifference: 10000,
+// interval (miliseconds) between new element spawns (default: 500)
+spawnInterval: 500,
+// jQuery element to apply snow effect on (should work on any block element) (default: body)
+target: jQuery(&amp;quot;body&amp;quot;),
+//elements to use in generating snow effect
+elements: [
+// Element #1
+{
+// html element to be spawned for this element
+html: &#39;&amp;lt;i class=&amp;quot;fa fa-snowflake-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;,
+// hex color for this element - works only for font based icons
+color: &#39;#ffffff&#39;
+},
+// Element #2
+{
+// html element to be spawned for this element
+html: &#39;&amp;lt;i class=&amp;quot;fa fa-bell-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;,
+// hex color for this element - works only for font based icons
+color: &#39;#ed9b40&#39;
+},
+// Element #3
+{
+// html element to be spawned for this element
+html: &#39;&amp;lt;i class=&amp;quot;fa fa-snowflake-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;,
+// hex color for this element - works only for font based icons
+color: &#39;#ffffff&#39;
+},
+// Element #4
+{
+// html element to be spawned for this element
+html: &#39;&amp;lt;i class=&amp;quot;fa fa-music&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;,
+// hex color for this element - works only for font based icons
+color: &#39;#cc2037&#39;
+},
+// Element #5
+{
+// html element to be spawned for this element
+html: &#39;&amp;lt;i class=&amp;quot;fa fa-snowflake-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;,
+// hex color for this element - works only for font based icons
+color: &#39;#ffffff&#39;
+},
+]
+});
+
+
+ 配置参数
+该卡通式圣诞节雪花飘落jquery下雪插件的可用配置参数如下：
+
+
+minSize：雪花元素的最小尺寸。默认值为：10。
+
+maxSize：雪花元素的最小尺寸。默认值为：20。
+
+fallTimeMultiplier：雪花降落时间的乘数因子。默认值为：20。
+
+fallTimeDifference：雪花降落时间的差异因子。默认值为：10000。
+
+spawnInterval：新元素产生的时间间隔。默认值为：500毫秒。
+
+target：指定产生雪花的目标元素。默认值为：body。
+
+elements：用于产生雪花效果的一组HTML元素。
+
+该卡通式圣诞节雪花飘落jquery下雪插件的github地址为：https://github.com/VladErc/jquery-snow
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_372">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_373">
+                        jquery图片放大插件ZoomIt
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_373" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1801/201801101434.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ZoomIt.js是一款jquery图片放大插件。该 jquery图片放大插件在鼠标经过或悬停在图片上时，使用高清大图来代替缩略图。移动鼠标可以查看高清大图的各个部分内容。
+内容：
+
+
+简要教程
+
+
+ZoomIt.js是一款jquery图片放大插件。该 jquery图片放大插件在鼠标经过或悬停在图片上时，使用高清大图来代替缩略图。移动鼠标可以查看高清大图的各个部分内容。
+
+ 安装
+可以通过npm或bower来安装zoomit图片放大插件。
+
+bower install --save zoomit
+npm install --save zoomit 
+
+
+ 使用方法
+在页面中引入zoomit.css，jquery和zoomit.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; media=&#34;all&#34; href=&#34;dist/styles/zoomit.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;dist/scripts/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/scripts/jquery.zoomit.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+为要进行放大的图片添加data-zoomed属性。
+
+&amp;lt;img id=&#34;zoomit-target&#34; src=&#34;path/to/small.jpg&#34; data-zoomed=&#34;path/to/large.jpg&#34; alt=&#34;Image To Zoom&#34;&amp;gt; 
+
+
+ 初始化插件
+使用下面的方法来初始化该jquery图片放大插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(&#39;#zoomit-target&#39;).zoomIt();
+&amp;lt;/script&amp;gt;
+
+或者你也可以把它作为jquery插件来使用。
+
+$(&#39;#editSection&#39;).tuiEditor({
+initialEditType: &#39;markdown&#39;,
+previewStyle: &#39;vertical&#39;,
+height: &#39;300px&#39;
+});
+
+
+ 配置参数
+zoomit图片放大插件的可用配置参数有：
+
+
+img：要进行放大的图片对象，一个jquery对象。
+
+src：一个字符串，或一个能返回字符串的函数。该字符串指向高清大图的url地址。
+
+class：包含插件中要用到的class类的对象。
+
+
+container：容器的class类。默认为zoomit-container。
+
+loaded：当大图被加载后添加的lclass类。默认为loaded。
+
+img：被放大图片元素的class类，默认为zoomit-zoomed。
+
+ghost：图片复制元素的class类，默认为zoomit-ghost。
+
+
+
+
+ 事件
+zoomit图片放大插件的可用事件有：
+
+
+onZoomIn：图片被放大时的回调函数。
+
+onZoomOut：图片取消放大时的回调函数。
+
+onClick：当放大区域被点击时的回调函数。
+
+onInit：插件初始化时的回调函数。
+
+
+ 方法
+zoomit图片放大插件的可用方法有：
+
+
+enable()：使放大效果可用。
+
+disable()：禁用放大效果。
+
+zoomit jquery图片放大插件的github地址为：https://github.com/loganstellway/ZoomIt
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_373">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_374">
+                        jquery水平手风琴折叠菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_374" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1802/201802221507.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款炫酷的jquery水平手风琴折叠菜单效果。该jquery风琴折叠菜单效果以1870年为主题，在切换菜单项时带有幻影效果，并在整体上配以炫酷的文字动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款炫酷的jquery水平手风琴折叠菜单效果。该jquery风琴折叠菜单效果以1870年为主题，在切换菜单项时带有幻影效果，并在整体上配以炫酷的文字动画效果。
+
+ 使用方法
+在页面中引入1870primary.css和1870Level2.css样式文件，jquery和其它js文件。
+
+&amp;lt;link href=&#34;css/1870primary.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;link href=&#34;css/1870Level2.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.easing.1.3.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.transform2d.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/clientLogin.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/warTextEffect\_jvollmer3.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.accordianMenu\_jvollmer3.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+其中，构成水平手风琴效果的HTML结构如下：
+
+&amp;lt;div id=&#34;subMenu&#34; class=&#34;subMenu&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;pos1&#34;&amp;gt;
+&amp;lt;span class=&#34;menuPreview&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;menuImage&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;menuDescription&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Road to War&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;The Preliminaries&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+This section will discuss the conditions
+in Europe leading up to 1870 concentrating
+on the roles played by Prussia and France.
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;ul class=&#34;subNav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Pre-1870 Europe&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;1866 - The Austro-Prussian War&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Hohenzollern Candidature&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;France declares War&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Armies Mobilise&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end menuDescription div --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;pos2&#34;&amp;gt;
+&amp;lt;span class=&#34;menuPreview&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;menuImage&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;menuDescription&#34;&amp;gt;
+&amp;lt;h2&amp;gt;The Armies&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;The Fighting Men of 1870&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+The war of 1870 saw armies made up of diverse
+colorful units that fought in large-scale battles.
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;ul class=&#34;subNav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The French (Imperial forces)&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Prussians&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Bavarians&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Minor German States&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The French (Republican forces)&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end menuDescription div --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;pos3&#34;&amp;gt;
+&amp;lt;span class=&#34;menuPreview&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;menuImage&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;menuDescription&#34;&amp;gt;
+&amp;lt;h2&amp;gt;The Leaders&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;Movers and Shakers of 1870&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+The moral effect of leadership was to profoundly
+impact the outcome of the Franco-Prussian War
+- one of the most interesting aspects of 1870.
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;ul class=&#34;subNav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;A Narrative on Leadership&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Political Leaders of 1870&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;French Leaders (Imperial phase)&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;German Leaders&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;French Leaders (Republican phase)&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end menuDescription div --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;pos4&#34;&amp;gt;
+&amp;lt;span class=&#34;menuPreview&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;menuImage&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;menuDescription&#34;&amp;gt;
+&amp;lt;h2&amp;gt;The Timeline&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;The Chronology of 1870&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+The timeline of the Franco-Prussian War 
+organized into its distinctive parts.
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;ul class=&#34;subNav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Pre-war events&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Imperial Phase - to Sep, 1870&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Republican Phase&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Aftermath&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end menuDescription div --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;pos5&#34;&amp;gt;
+&amp;lt;span class=&#34;menuPreview&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;menuImage&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;menuDescription&#34;&amp;gt;
+&amp;lt;h2&amp;gt;The Battles&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;Battle Narratives of 1870-71&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+Battle narratives containing essential information
+for each battle including opposing plans, terrain, battle 
+progress, orders of battle, and the resulting consequences.
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;ul class=&#34;subNav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Frontier Battles&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;The Metz Campaign&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Sedan - End of the Empire&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Republican Phase Campaigns&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;End Game - the Surrender&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end menuDescription div --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- end subMenu div --&amp;gt;
+
+该jquery水平手风琴折叠菜单插件的github地址为：https://github.com/jjv329/AccordianSlider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_374">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_375">
+                        简单的jquery前台分页插件paginathing.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_375" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1802/201802021515.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Paginathing.js是一款简单的jquery前台分页插件。该jquery分页插件可以对页面中的列表和表格数据进行分页。它使用简单，兼容ie8，兼容Bootstrap框架。
+内容：
+
+
+简要教程
+
+
+Paginathing.js是一款简单的jquery前台分页插件。该jquery分页插件可以对页面中的列表和表格数据进行分页。它使用简单，兼容ie8，兼容Bootstrap框架。
+
+ 使用方法
+在页面中引入jquery和paginathing.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/paginathing.js.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+以列表为例，假设页面中有如下的一个无序列表，它的HTML结构如下：
+
+&amp;lt;div class=&#34;panel panel-primary&#34;&amp;gt;
+&amp;lt;div class=&#34;panel-heading&#34;&amp;gt;
+&amp;lt;h3 class=&#34;panel-title&#34;&amp;gt;List of item.&amp;lt;/h3&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;ul class=&#34;list-group&#34;&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 1&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 2&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 3&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 4&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 5&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;list-group-item&#34;&amp;gt; Your Item 6&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery分页插件。对无序列表进行分页，每页显示2条记录。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+jQuery(document).ready(function($){
+$(&#39;.list-group&#39;).paginathing({
+perPage: 2,
+containerClass: &#39;panel&#39;
+})
+});
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+Paginathing.js jquery前台分页插件的可用配置参数如下：
+
+perPage: 10, // show item per page
+limitPagination: false, // false or number. Limiting your pagination number.
+prevNext: true, // enable previous and next button
+firstLast: true, // enable first and last button
+prevText: &#39;«&#39;, // Previous button text
+nextText: &#39;»&#39;, // Next button text
+firstText: &#39;First&#39;, // &#34;First button&#34; text
+lastText: &#39;Last&#39;, // &#34;Last button&#34; text
+containerClass: &#39;pagination-container&#39;, // extend default container class
+ulClass: &#39;pagination&#39;, // extend default ul class
+liClass: &#39;page&#39;, // extend li class
+activeClass: &#39;active&#39;, // active link class
+disabledClass: &#39;disable&#39; // disabled link class,
+insertAfter: null //class or id (eg: .element or #element). append the paginator after certain element
+pageNumbers: false // showing current page number of total pages number, to work properly limitPagination must be true 
+
+
+
+perPage：每页显示的记录数。
+
+limitPagination：可以是false或一个数值。用于限制分页的页码。
+
+prevNext：是否允许显示前一页按钮。
+
+firstLast：是否允许显示第一页和最后一页按钮。
+
+prevText：前一页按钮上显示的文字。
+
+nextText：下一页按钮上显示的文字。
+
+firstText：第一页按钮上显示的文字。
+
+lastText：最后一页按钮上显示的文字。
+
+containerClass：容器的class名称。
+
+ulClass：ul元素的class名称。
+
+liClass：li元素的class名称。
+
+activeClass：当前分页按钮的class名称。
+
+disabledClass：被禁用的分页按钮的class名称。
+
+insertAfter：键分页传入到指定的元素之后，可以是null，或一个class名称，或一个id。
+
+pageNumbers：显示总页数，limitPagination参数必须设置为true。
+
+Paginathing.js jquery前台分页插件的github地址为：https://github.com/alfrcr/paginathing
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_375">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_378">
+                        jquery选择国家下拉列表框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_378" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1711/201711251525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+countrypicker.js是一款jquery选择国家下拉列表框插件。countrypicker.js带有搜索功能和显示国旗功能。通过简单的设置，既可以生成带既定国家的下拉列表框。
+内容：
+
+
+简要教程
+
+
+countrypicker.js是一款jquery选择国家下拉列表框插件。countrypicker.js带有搜索功能和显示国旗功能。通过简单的设置，既可以生成带既定国家的下拉列表框。
+
+ 使用方法
+在页面中引入jquery和bootstrap相关文件，以及bootstrap-select相关文件和countrypicker.js文件。
+
+&amp;lt;link href=&#34;css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap-select.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap-select.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/countrypicker.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;select&amp;gt;元素来作为该国家选择下拉列表框的HTML结构即可。
+
+&amp;lt;select class=&#34;selectpicker countrypicker&#34;&amp;gt;&amp;lt;/select&amp;gt;
+
+注意必须带上class类selectpicker countrypicker。
+如果需要下拉列表框带有搜索功能，可以添加data-live-search属性。
+
+&amp;lt;select class=&#34;selectpicker countrypicker&#34; 
+data-live-search=&#34;true&#34;&amp;gt;
+&amp;lt;/select&amp;gt;
+
+如果需要显示国旗，可以添加data-flag属性。
+
+&amp;lt;select class=&#34;selectpicker countrypicker&#34; 
+data-live-search=&#34;true&#34; 
+data-flag=&#34;true&#34;&amp;gt;
+&amp;lt;/select&amp;gt;
+
+你还可以通过data-default属性来设置默认选择的国家。
+
+&amp;lt;select class=&#34;selectpicker countrypicker&#34; 
+data-live-search=&#34;true&#34; 
+data-default=&#34;China&#34; 
+data-flag=&#34;true&#34;&amp;gt;
+&amp;lt;/select&amp;gt;
+
+countrypicker.js jquery选择国家下拉列表框插件的github地址为：https://github.com/Saganic/country-picker
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_378">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_379">
+                        简单易用的jquery响应式轮播图插件ma5slider
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_379" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1709/201709201520.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ma5slider是一款简单易用的jquery响应式轮播图插件。该轮播图支持鼠标拖拽，可以通过CSS定制外观，支持无限循环模式，内置水平，垂直和淡入淡出三种轮播图过渡动画效果。
+内容：
+
+
+简要教程
+
+
+ma5slider是一款简单易用的jquery响应式轮播图插件。该轮播图支持鼠标拖拽，可以通过CSS定制外观，支持无限循环模式，内置水平，垂直和淡入淡出三种轮播图过渡动画效果。
+
+ 使用方法
+在页面中引入jquery和jqueryui，jquery.ui.touch-punch.js文件，以及ma5slider轮播图插件的相关文件。
+
+&amp;lt;!-- jQuery --&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- jQuery UI mouse draggable widget --&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery-ui.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- Touch Event Support for jQuery UI --&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery.ui.touch-punch.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- MA5 Slider --&amp;gt;
+&amp;lt;link href=&amp;quot;css/ma5slider.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot;&amp;gt;
+&amp;lt;script src=&amp;quot;js/ma5slider.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+ma5slider轮播图的基本HTML结构如下：
+
+&amp;lt;body&amp;gt;
+&amp;lt;div class=&#34;ma5slider outside-navs outside-dots anim-horizontal loop-mode&#34;&amp;gt;
+&amp;lt;div class=&#34;slides&#34;&amp;gt;
+&amp;lt;a href=&#34;#slide-1&#34;&amp;gt;&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#slide-2&#34;&amp;gt;&amp;lt;img src=&#34;images/2.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#slide-3&#34;&amp;gt;&amp;lt;img src=&#34;images/3.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#slide-4&#34;&amp;gt;&amp;lt;img src=&#34;images/4.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#slide-5&#34;&amp;gt;&amp;lt;img src=&#34;images/5.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#slide-6&#34;&amp;gt;&amp;lt;img src=&#34;images/6.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过ma5slider()方法来初始化ma5slider轮播图插件。
+
+&amp;lt;script&amp;gt;
+$(window).on(&#39;load&#39;, function () {
+$(&#39;.ma5slider&#39;).ma5slider();
+});
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+你可以通过在轮播图的顶级容器上添加下面的class来自定义轮播图的外观和行为。
+
+
+anim-horizontal：水平滚动的轮播图。
+
+anim-vertical：垂直滚动的轮播图。
+
+anim-fade：淡入淡出的轮播图。
+
+autoplay：轮播图自动播放。
+
+loop-mode：无限循环模式。
+
+horizontal-navs：水平箭头导航按钮。
+
+vertical-navs：垂直箭头导航按钮。
+
+inside-navs：箭头导航按钮在轮播图内部。
+
+outside-navs：箭头导航按钮在轮播图外部。
+
+hover-navs：鼠标hover时才显示箭头导航按钮。
+
+hidden-navs：隐藏箭头导航按钮。
+
+horizontal-dots：水平圆点按钮。
+
+bottom-dots：底部分页导航按钮。
+
+inside-dots：圆点按钮在轮播图内部。
+
+outside-dots：圆点按钮在轮播图外部。
+
+hover-dots：鼠标hover时才显示圆点导航按钮。
+
+hidden-dots：隐藏圆点导航按钮。
+
+例如：
+
+&amp;lt;div id=&#34;example...&#34; class=&#34;ma5slider anim-horizontal top-dots outside-navs ...&#34;&amp;gt;
+
+
+ 通过HTML5 data属性来控制轮播图
+
+
+data-ma5-dot：覆盖圆点导航按钮的颜色。
+
+data-ma5-dot-active：覆盖激活状态圆点导航按钮的颜色。
+
+data-ma5-nav：覆盖箭头导航按钮的颜色。
+
+data-ma5-anim：覆盖默认的轮播图过渡动画。
+
+例如：
+
+&amp;lt;a href=&#34;#slide-2&#34; data-ma5-dot=&#34;#888&#34; data-ma5-dot-active=&#34;#649100&#34;&amp;gt;
+&amp;lt;img src=&#34;2.jpg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;/a&amp;gt; 
+
+
+ 方法
+ma5slider轮播图插件可用的方法如下：
+
+// 跳转到第三幅图片
+ma5sliderGoToSlide(&#39;#slider&#39;, 3 );
+// 跳转到下一幅图片
+ma5sliderGoToNext(&#39;#slider&#39;);
+// 跳转到前一幅图片
+ma5sliderGoToPrev(&#39;#slider&#39;);
+// 跳转到第一幅图片
+ma5sliderGoToFirst(&#39;#slider&#39;);
+// 跳转到最后一幅图片
+ma5sliderGoToLast(&#39;#slider&#39;);
+
+ma5slider轮播图插件的github地址为：https://github.com/ma-5/ma5slider
+
+
+本文版权属于jQuery之家，转载请注明出处：http://www.htmleaf.com/jQuery/Slideshow-Scroller/201709204749.html
+
+
+上一篇：jQuery和CSS3超酷3D立方体轮播图插件 
+下一篇：纯js图片碎片轮播图切换效果 
+
+
+
+
+
+相关插件 
+
+
+
+
+
+
+
+
+
+js堆叠卡片轮播图插件stackedCards
+
+
+
+
+
+
+
+jQuery和CSS3堆叠式轮播图特效
+
+
+
+
+
+
+
+js 3D旋转木马特效插件
+
+
+
+
+
+
+
+jQuery轮播图插件camRoll Slider
+
+
+
+
+
+
+
+
+
+
+
+
+网友评论 
+
+
+
+
+
+ --&gt;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_379">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/69/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/71/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

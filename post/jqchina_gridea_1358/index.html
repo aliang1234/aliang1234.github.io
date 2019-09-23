@@ -1,0 +1,579 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery适合移动设备触摸屏的响应式幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery适合移动设备触摸屏的响应式幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501291605.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501291605.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501291295.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>flickity是一款响应式、适用于移动设备触摸屏、可滑动显示的jQuery幻灯片插件。该幻灯片插件可以设置多种显示效果，可以自动播放，是一款移动优先的jQuery幻灯片插件。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>flickity是一款响应式、适用于移动设备触摸屏、可滑动显示的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>幻灯片插件。</p>
+<h3>安装方法</h3>
+<p>可以通过Bower或npm来安装：</p>
+<pre class="brush:html">
+Bower: bower install flickity --save
+<p>npm: npm install flickity --save<br>
+</pre></p>
+<h3>使用方法</h3>
+<p>要使用该幻灯片插件首先要在页面中引入 flickity.pkgd.js 和 flickity.css 文件。该幻灯片的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="/path/to/flickity.css" media="screen"&gt;
+&lt;script src="/path/to/flickity.pkgd.min.js"&gt;&lt;/script&gt;
+</pre>
+<pre class="brush:html">
+&lt;div class="gallery"&gt;
+&lt;div class="cell"&gt;...&lt;/div&gt;
+&lt;div class="cell"&gt;...&lt;/div&gt;
+&lt;div class="cell"&gt;...&lt;/div&gt;
+...
+&lt;/div&gt;
+</pre>
+<p>你可以将该幻灯片插件当做一个<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jquery插件</a>来调用：<code>$('selector').flickity()</code></p>
+<pre class="brush:js">
+$('#main-gallery').flickity({
+// options
+cellAlign: 'left',
+contain: true
+});
+</pre>
+<p>你也可以使用纯js来调用该插件：<code>new Flickity( elem )</code>。<code>Flickity()</code>构造函数接收两个参数：幻灯片元素和参数选项。</p>
+<pre class="brush:js">
+var elem = document.querySelector('#main-gallery');
+var flicky = new Flickity( elem, {
+// options
+cellAlign: 'left',
+contain: true
+});
+// element argument can be a selector string
+// for an individual element
+var flicky = new Flickity( '#main-gallery', {
+// options
+});
+</pre>
+<p>你还可以在HTML中初始化Flickity插件，不用写任何的js代码。你只需要在幻灯片元素上添加class <code>js-flickity</code>，可以通过<code>data-flickity-options</code>属性来设置参数。</p>
+<pre class="brush:html">
+&lt;div id="main-gallery" class="js-flickity"
+data-flickity-options='{ "cellAlign": "left", "contain": true }'&gt;
+</pre>
+<div class="alert alert-warning" role="alert">在HTML中设置的参数必须是正确的JSON格式的数据。JSON数据中，keys需要双引号引起来。注意：<code>data-flickity-options</code>属性的值用单引号，JSON数据的值用双引号。</div>
+<h3>Flickity对象的构造函数：</h3>
+<pre class="brush:js">
+var flky = new Flickity( '.gallery', {
+// options, defaults listed
+<p>accessibility: true,<br>
+// enable keyboard navigation, pressing left &amp; right keys</p>
+<p>autoPlay: false,<br>
+// advances to the next cell<br>
+// if true, default is 3 seconds<br>
+// or set time between advances in milliseconds<br>
+// i.e. <code>autoPlay: 1000</code> will advance every 1 second</p>
+<p>cellAlign: 'center',<br>
+// alignment of cells, 'center', 'left', or 'right'<br>
+// or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)</p>
+<p>cellSelector: undefined,<br>
+// specify selector for cell elements</p>
+<p>contain: false,<br>
+// will contain cells to container<br>
+// so no excess scroll at beginning or end<br>
+// has no effect if wrapAround is enabled</p>
+<p>draggable: true,<br>
+// enables dragging &amp; flicking</p>
+<p>freeScroll: false,<br>
+// enables content to be freely scrolled and flicked<br>
+// without aligning cells</p>
+<p>friction: 0.2,<br>
+// smaller number = easier to flick farther</p>
+<p>imagesLoaded: false,<br>
+// if imagesLoaded is present, Flickity can re-position cells<br>
+// once images are loaded</p>
+<p>initialIndex: 0,<br>
+// zero-based index of the initial selected cell</p>
+<p>percentPosition: true,<br>
+// sets positioning in percent values, rather than pixels<br>
+// Enable if items have percent widths<br>
+// Disable if items have pixel widths, like images</p>
+<p>prevNextButtons: true,<br>
+// creates and enables buttons to click to previous &amp; next cells</p>
+<p>pageDots: true,<br>
+// create and enable page dots</p>
+<p>resizeBound: true,<br>
+// listens to window resize events to adjust size &amp; positions</p>
+<p>watchCSS: false,<br>
+// watches the content of :after of the element<br>
+// activates if #element:after { content: 'flickity' }<br>
+// IE8 and Android 2.3 do not support watching :after<br>
+// set watch: 'fallbackOn' to enable for these browsers</p>
+<p>wrapAround: false<br>
+// at end of cells, wraps-around to first for infinite scrolling</p>
+<p>});<br>
+</pre></p>
+<h3>可用参数</h3>
+<h5>cellAlign</h5>
+<p>幻灯片元素中的单元对齐方式。可选值为：<code>'center'</code>, <code>'left'</code>, <code>'right'</code>。默认值为<code>'center'</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">cellAlign: <span class="string">'left'</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "cellAlign": "left" }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js"><span class="comment">// default 'center'</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity">
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">cellAlign: <span class="string">'right'</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "cellAlign": "right" }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h5>wrapAround</h5>
+<p>该参数可用于制作无限循环的幻灯片。设置为<code>true</code>时为无限循环。默认值为<code>false</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">wrapAround: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "wrapAround": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h5>contain</h5>
+<p>在幻灯片的开始或结束处包含一个单元格，防止幻灯片溢出。可选值为<code>true</code>和<code>false</code>。默认值为<code>false</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">contain: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery gallery--contain-demo js-flickity" data-flickity-options='{ "contain": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h5>freeScroll</h5>
+<p>允许自由滚动，最后一个单元格没有对齐格子。可选值为<code>true</code>和<code>false</code>。默认值为<code>false</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">freeScroll: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "freeScroll": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<p>允许<code>freeScroll</code>和<code>contain</code>可制作简单的水平滚动。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">freeScroll: <span class="literal">true</span>,
+contain: <span class="literal">true</span>,
+<span class="comment">// disable previous &amp; next buttons and dots</span>
+prevNextButtons: <span class="literal">false</span>,
+pageDots: <span class="literal">false</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<p><code>freeScroll</code>和<code>contain</code>设置为true的效果：</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">freeScroll: <span class="literal">true</span>,
+wrapAround: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery show-neighbors js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h5>autoPlay</h5>
+<p>设置自动播放。如果<code>autoPlay: true</code>则每3秒切换一次。幻灯片切换的速度单位是毫秒，例如设置为<code>autoPlay: 1500</code>则1.5秒切换一次。</p>
+<p>在鼠标滑过幻灯片时，自动播放将停止，鼠标离开后重新开始自动播放。幻灯片被点击或单元格被选择时，自动播放也会停止。</p>
+<p>可选值：<code>true</code>和<code>false</code>或一个整数。默认值为<code>false</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">autoPlay: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery gallery--auto-play-demo js-flickity" data-flickity-options='{ "autoPlay": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h5>watchCSS</h5>
+<p>你可以通过CSS来使用或禁用Flickity。<code>watchCSS</code>选项关注幻灯片元素的<code>:after</code>伪元素的内容。如果<code>:after</code>伪元素的<code>content</code>是<code>flickity</code>则幻灯片可用。</p>
+<p>IE8和Android 2.3不支持<code>:after</code>。当设置<code>watchCSS: true</code>时Flickity不可用。可以在这些浏览器上设置<code>watchCSS</code>为<code>'fallbackOn'</code>来使用Flickity。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">watchCSS: <span class="literal">true</span>
+</code></pre>
+<pre><code class="css"><span class="comment">/* enable Flickity by default */</span>
+<span class="class">.gallery</span><span class="pseudo">:after</span> <span class="rules">{
+<span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">'flickity'</span></span></span>;
+<span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>; <span class="comment">/* hide :after */</span>
+<span class="rule">}</span></span>
+
+<span class="at\_rule">@<span class="keyword">media</span> screen and ( min-width: <span class="number">768px</span> ) </span>{
+<span class="comment">/* disable Flickity for large devices */</span>
+<span class="class">.gallery</span><span class="pseudo">:after</span> <span class="rules">{
+<span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">''</span></span></span>;
+<span class="rule">}</span></span>
+}
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery gallery--watch-demo js-flickity" data-flickity-options='{ "watchCSS": true }'>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+<div class="gallery-cell"></div>
+</div>
+</div>
+</div>
+<h3>使用图片</h3>
+<p>Flickity可以制作效果很酷的图片幻灯片特效。</p>
+<pre class="brush:html">
+&lt;div class="gallery js-flickity"
+data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'&gt;
+&lt;img src="1.jpg" alt="orange tree" /&gt;
+&lt;img src="2.jpg" alt="submerged" /&gt;
+&lt;img src="3.jpg" alt="look-out" /&gt;
+...
+&lt;/div&gt;
+</pre>
+<div class="gallery gallery--images-demo js-flickity" data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+<!-- images from unsplash.com -->
+<img src="http://img.htmleaf.com/1501/sample-01.jpg" alt="orange tree">
+<img src="http://img.htmleaf.com/1501/sample-02.jpg" alt="submerged">
+<img src="http://img.htmleaf.com/1501/sample-03.jpg" alt="look-out">
+<img src="http://img.htmleaf.com/1501/sample-04.jpg" alt="freedom tower">
+<img src="http://img.htmleaf.com/1501/sample-05.jpg" alt="drizzle">
+<img src="http://img.htmleaf.com/1501/sample-01.jpg" alt="cat nose">
+</div>
+<h5>imagesLoaded</h5>
+<p>没有价值的图片是没有尺寸的，它们会跑到单元格之外。为了修补这个问题，可以使用<code>imagesLoaded</code>来将图片重新定位。</p>
+<p>可选值：<code>true</code>和<code>false</code>，默认值为<code>false</code>。</p>
+<div class="example">
+<div class="example\_\_code">
+<pre><code class="js">imagesLoaded: <span class="literal">true</span>
+</code></pre>
+</div>
+<div class="example\_\_demo">
+<div class="gallery gallery--images-loaded-demo js-flickity" data-flickity-options='{ "imagesLoaded": true }'>
+<!-- images from unsplash.com -->
+<img src="http://img.htmleaf.com/1501/sample-01.jpg" alt="orange tree">
+<img src="http://img.htmleaf.com/1501/sample-02.jpg" alt="submerged">
+<img src="http://img.htmleaf.com/1501/sample-03.jpg" alt="look-out">
+<img src="http://img.htmleaf.com/1501/sample-04.jpg" alt="freedom tower">
+<img src="http://img.htmleaf.com/1501/sample-05.jpg" alt="drizzle">
+<img src="http://img.htmleaf.com/1501/sample-01.jpg" alt="cat nose">
+</div>
+</div>
+</div>
+<p>该选项需要在页面中引入<a href="http://imagesloaded.desandro.com/" target="\_blank"> imagesLoaded </a>。</p>
+<pre class="brush:html">
+&lt;script src="/path/to/imagesloaded.pkgd.js"&gt;&lt;/script&gt;
+</pre>
+<h3>其它可选参数</h3>
+<pre class="brush:js">
+accessibility: true,
+// enable keyboard navigation, pressing left &amp; right keys
+<p>cellSelector: undefined,<br>
+// specify selector for cell elements</p>
+<p>draggable: true,<br>
+// enables dragging &amp; flicking</p>
+<p>initialIndex: 0,<br>
+// zero-based index of the initial selected cell</p>
+<p>percentPosition: true,<br>
+// sets positioning in percent values, rather than pixels<br>
+// Enable if items have percent widths<br>
+// Disable if items have pixel widths, like images</p>
+<p>pageDots: true,<br>
+// enables page dots</p>
+<p>prevNextButtons: true,<br>
+// creates and enables buttons to click to previous &amp; next cells</p>
+<p>resizeBound: true,<br>
+// listens to window resize events to adjust size &amp; positions</p>
+<p>rightToLeft: false<br>
+// enables right-to-left ordering for right-to-left languages<br>
+</pre></p>
+<p>还有一些用法请参考<a href="http://www.htmleaf.com/Demo/201501291295.html" target="\_blank">演示页面</a>中的说明。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501291605.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501291295.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1359">
+                                <h3 class="post-title">
+                                    基于SVG的jQuery星级评分插件-jRate
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

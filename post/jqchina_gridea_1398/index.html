@@ -1,0 +1,391 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3文章标题动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3文章标题动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412191440.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412191440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141219920.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和css3制作的文章标题动画特效。该文章标题动画特效共有10种效果，分别是：打印机效果、翻转效果、翻牌效果、滑动效果等等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常不错的jQuery和css3文章标题动画特效。</p>
+<h3>HTML结构</h3>
+<p>所有效果的html结构是一样的，使用一个<span class="m">&lt;section&gt;</span>作为wrapper，给它一些margins和max-width。标题使用的是<span class="m">&lt;h1&gt;</span>标签,每一个单词都使用<span class="m">&lt;b&gt;</span>标签包裹，然后所有的词都放到<span class="m">&lt;span&gt;</span>行内元素中。</p>
+<pre class="brush:html">
+&lt;section class="cd-intro"&gt;
+&lt;h1 class="cd-headline rotate-1"&gt;
+&lt;span&gt;My favourite food is&lt;/span&gt;
+&lt;span class="cd-words-wrapper"&gt;
+&lt;b class="is-visible"&gt;pizza&lt;/b&gt;
+&lt;b&gt;sushi&lt;/b&gt;
+&lt;b&gt;steak&lt;/b&gt;
+&lt;/span&gt;
+&lt;/h1&gt;
+&lt;/section&gt; &lt;!-- cd-intro --&gt;
+</pre>
+<h3>CSS样式</h3>
+<p>让我们来看看如何制作第一种旋转效果。</p>
+<p>首先第一件事是给<span class="m">&lt;h1&gt;</span>标签应用class <span class="m">.rotate-1</span>。</p>
+<p>我们将创建一个3d旋转效果，可见的文字将沿x轴消失，新的文字将从底部出现，它们总是绕着x轴旋转。看下图：</p>
+ <img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/animated-headline-effect-preview.gif" alt="文章标题动画特效示意图" width="600" height="450">
+ <p>要创建3d效果，我们需要设置perspective值。其它的元素将依旧是平面的。记住：Perspective属性不被应用到动画元素上（CSS Transition, Transformation 或者 Animation）。在这个例子中，Perspective被应用到<span class="m">.cd-words-wrapper</span>上。</p>
+<pre class="brush:css">
+.cd-headline.rotate-1 .cd-words-wrapper {
+display: inline-block;
+perspective: 300px;
+}
+</pre>
+<p>当设置了透视(Perspective)属性，我们将每一个<span class="m">&lt;b&gt;</span>元素作为目标，设置它们妈的透明度为0和绝对定位。通过这个方法，我们将它们隐藏并从文档流中将它们移除。最好，我们将<span class="m">.is-visible</span>类应用到第一个<span class="m">&lt;b&gt;</span>元素上，并将他的透明度设置为1，定位设置为相对定位。这样便可以使第一个单词可见。</p>
+<p>注意：我们为每一个单词应用一个transformation（rotateX(180deg)）。<span class="m">transform-origin</span>的值设置在底部。这一点很重要，你可以从gif图片中看出，旋转的原点并不是在中间的，我们需要在CSS文件中指定它。</p>
+<pre class="brush:css">
+.cd-headline.rotate-1 b {
+opacity: 0;
+transform-origin: 50\% 100\%;
+transform: rotateX(180deg);
+display: inline-block;
+position: absolute;
+left: 0;
+top: 0;
+}
+<p>.cd-headline.rotate-1 b.is-visible {<br>
+position: relative;<br>
+opacity: 1;<br>
+transform: rotateX(0deg);<br>
+}<br>
+</pre></p>
+<p>我们需要jQuery来帮助触发动画效果：我们从第一个元素上移除<span class="m">.is-visible</span>并将它添加到第二个元素上。然后以此类推往下移除添加，形成一个循环。每次我们移除<span class="m">.is-visible</span>类，就将它更换为<span class="m">.is-hidden</span>类。为什么这里需要两个class呢？因为在每个class中我们都定义了一个CSS animation。</p>
+<pre class="brush:css">
+.cd-headline.rotate-1 b {
+opacity: 0;
+transform-origin: 50\% 100\%;
+transform: rotateX(180deg);
+display: inline-block;
+position: absolute;
+left: 0;
+top: 0;
+}
+<p>.cd-headline.rotate-1 b.is-visible {<br>
+position: relative;<br>
+opacity: 1;<br>
+transform: rotateX(0deg);<br>
+animation: cd-rotate-1-in 1.2s;<br>
+}</p>
+<p>.cd-headline.rotate-1 b.is-hidden {<br>
+transform: rotateX(180deg);<br>
+animation: cd-rotate-1-out 1.2s;<br>
+}<br>
+</pre></p>
+<p>剩下要做的事情就是为动画制作动画关键帧。</p>
+<pre class="brush:css">
+@keyframes cd-rotate-1-in {
+0\% {
+transform: rotateX(180deg);
+opacity: 0;
+}
+35\% {
+transform: rotateX(120deg);
+opacity: 0;
+}
+65\% {
+opacity: 0;
+}
+100\% {
+transform: rotateX(360deg);
+opacity: 1;
+}
+}
+<p>@keyframes cd-rotate-1-out {<br>
+0% {<br>
+transform: rotateX(0deg);<br>
+opacity: 1;<br>
+}<br>
+35% {<br>
+transform: rotateX(-40deg);<br>
+opacity: 1;<br>
+}<br>
+65% {<br>
+opacity: 0;<br>
+}<br>
+100% {<br>
+transform: rotateX(180deg);<br>
+opacity: 0;<br>
+}<br>
+}<br>
+</pre></p>
+<h3>JAVASCRIPT</h3>
+<p>为了触发标题动画效果，我们定义了函数<span class="m">animateHeadline()</span>。</p>
+<pre class="brush:js">
+var animationDelay = 2500;
+<p>animateHeadline($('.cd-headline'));</p>
+<p>function animateHeadline(<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: headlines) {
+'>headlines) {
+</span>headlines.each(function(){<br>
+var headline = $(this);<br>
+//trigger animation<br>
+setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);<br>
+//other checks here ...<br>
+});<br>
+}<br>
+</pre></p>
+<p>它的作用是用于在延时2.5秒后触发<span class="m">hideWord() </span>。这个函数从第一个单词上移除<span class="m">.is-visible</span>，并将它添加到第二个单词上，同时移除第二个单词的<span class="m"> .is-hidden</span>。接下来，<span class="m">hideWord() </span>再次被触发以形成一个循环。</p>
+<pre class="brush:js">
+function hideWord($word) {
+var nextWord = takeNext($word);
+switchWord($word, nextWord);
+setTimeout(function(){ hideWord(nextWord) }, animationDelay);
+}
+<p>function takeNext(<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …rd) {
+return (!'>word) {
+return (!</span>word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);<br>
+}</p>
+<p>function switchWord($oldWord, <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: newWord) {
+'>newWord) {
+</span>oldWord.removeClass('is-visible').addClass('is-hidden');<br>
+$newWord.removeClass('is-hidden').addClass('is-visible');<br>
+}<br>
+</pre></p>
+<div class="alert alert-warning" role="alert">注意：有一些效果需要单个字母的动画效果（例如：打印机效果）。对于这些动画，我们为h1标题添加<span class="m"> .letters</span>类，并通过<span class="m">singleLetters()</span>函数将每一个字母用<span class="m"> &lt;i&gt; </span>标签来包裹起来。</div>
+<pre class="brush:js">
+singleLetters($('.cd-headline.letters').find('b'));
+<p>function singleLetters(<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: words) {
+'>words) {
+</span>words.each(function(){<br>
+var word = $(this),<br>
+letters = word.text().split(''),<br>
+selected = word.hasClass('is-visible');<br>
+for (i in letters) {<br>
+letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';<br>
+}<br>
+var newLetters = letters.join('');<br>
+word.html(newLetters);<br>
+});<br>
+}<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412191440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141219920.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1399">
+                                <h3 class="post-title">
+                                    jQuery点击弹出侧边栏提示信息面板特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

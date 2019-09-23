@@ -1,0 +1,1349 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_174">
+                        jQuery二维码生成插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_174" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807041427.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款经典的jQuery二维码生成插件。jquery.qrcode.js二维码插件允许你在网页中容易的插入二维码，可以生成表格形式的二维码，或基于canvas的图片二维码。
+内容：
+
+
+简要教程
+
+
+这是一款经典的jQuery二维码生成插件。jquery.qrcode.js二维码插件允许你在网页中容易的插入二维码，可以生成表格形式的二维码，或基于canvas的图片二维码。
+
+
+
+ 使用方法
+在页面中引入jquery和jquery.qrcode.min.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.qrcode.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素来作为二维码的容器。
+
+&amp;lt;div id=&#34;qrcode&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕，通过qrcode()的方法来初始化该jQuery二维码插件。
+
+$(&#39;#qrcode&#39;).qrcode({
+text: &#34;https://www.htmleaf.com&#34;
+});
+
+如果你想以表格的方式来显示二维码，可以使用render参数。
+
+$(&#39;#qrcode&#39;).qrcode({
+render: &#34;table&#34;,
+text: &#34;https://www.htmleaf.com&#34;
+});
+
+你还可以指定二维码的宽度和高度。
+
+$(&#39;#qrcode&#39;).qrcode({
+text: &#34;https://www.htmleaf.com&#34;,
+width: 256,
+height: 256
+});
+
+也可以指定二维码的前景色和背景色。
+
+$(&#39;#qrcode&#39;).qrcode({
+text: &#34;https://www.htmleaf.com&#34;,
+background: &#34;#ffffff&#34;,
+foreground: &#34;#000000&#34;
+});
+
+你还可以定制二维码的错误校正等级。
+
+$(&#39;#qrcode&#39;).qrcode({
+text: &#34;https://www.htmleaf.com&#34;,
+correctLevel: QRErrorCorrectLevel.H
+});
+
+
+QRErrorCorrectLevel.H: Approx 30\%
+QRErrorCorrectLevel.Q: Approx 25\%
+QRErrorCorrectLevel.M: Approx 15\%
+QRErrorCorrectLevel.L: Approx 7\%
+
+ 该jQuery二维码生成插件的github地址为：https://github.com/jeromeetienne/jquery-qrcode
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_174">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_175">
+                        Bootstrap4动态生成模态窗口插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-banana">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_175" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1812/201812031452.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bsModal是一款基于Bootstrap4的动态生成模态窗口插件。bsModal可以在模态窗口中使用任何自定义内容，并且可以和cropper.js结合使用，在模态窗口中剪裁图片并上传服务器。
+内容：
+
+
+简要教程
+
+
+bsModal是一款基于Bootstrap4的动态生成模态窗口插件。bsModal可以在模态窗口中使用任何自定义内容，并且可以和cropper.js结合使用，在模态窗口中剪裁图片并上传服务器。
+
+ 安装
+可以通过npm或yarn来安装bsModal插件。
+
+$ npm install jquery-plugin-bsmodal
+$ yarn add jquery-plugin-bsmodal
+
+
+ 使用方法
+在页面中引入下面的css和js文件。
+
+&amp;lt;linkhref=&#34;/path/to/bootstrap.css&#34; rel=&#34;stylesheet&#34;&amp;gt;&amp;lt;!-- Bootstrap is required --&amp;gt;
+&amp;lt;linkhref=&#34;/path/to/cropper.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- jQuery is required --&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/bootstrap.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- Bootstrap is required --&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/cropper.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- Cropper.js is required --&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/bsModal.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用bsModal插件的基本HTML结构如下。
+
+&amp;lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34; id=&#34;exampleBtn&#34;&amp;gt;
+打开模态窗口
+&amp;lt;/button&amp;gt;
+&amp;lt;!-- 这里显示剪裁后生成的图片 --&amp;gt;
+&amp;lt;div class=&amp;quot;mt-3&amp;quot;&amp;gt;
+&amp;lt;img id=&amp;quot;cropedImage&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕，通过下面的方法来初始化bsModal插件。
+
+// 基本的模态窗口
+$(&#39;#basicBtn&#39;).bsModal({
+id: &#39;bsModal&#39;,
+title: &#39;Title&#39;,
+body: &#39;Modal body text......&#39;,
+onOpen: function () {
+console.log(&#39;Open&#39;);
+},
+onClose: function () {
+console.log(&#39;Close&#39;);
+},
+onOk: function () {
+console.log(&#39;OK&#39;);
+},
+onCancel: function () {
+console.log(&#39;Cancel&#39;);
+}
+});
+// 剪裁图片模态窗口
+$(&#39;#cropImgBtn&#39;).bsModalCropper({
+id: &#39;bsModalCropper&#39;,
+title: &#39;Crop image&#39;,
+src: &#39;example-picture.jpg&#39;,
+// Cropper.js options
+cropper: {
+aspectRatio: 16 / 9
+},
+// On cropper
+onCropper: function (dataURL) {
+(&amp;#039;#cropedImageBox&amp;#039;).show();
+(&#39;#cropedImage&#39;).attr(&#39;src&#39;, dataURL);
+}
+});
+
+
+ 配置参数
+bsModal插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+id
+String
+exampleModal
+模态窗口的id
+
+
+title
+String
+Modal title
+模态窗口的标题
+
+
+titleLavel
+Number
+5
+模态窗口标题的字号，默认为&amp;lt;h5&amp;gt;
+
+
+
+body
+Any
+&#39;&#39;
+模态窗口的body内容。可以是字符串或html标签
+
+
+label
+String|null
+null
+模态窗口的标题id
+
+
+lang
+String|null
+null
+定义使用的语言，默认使用浏览器默认语言
+
+
+modal
+String|null
+null
+定义模态窗口的选择器，如果没有设置会创建一个新的模态窗口
+
+
+fade
+Boolean
+true
+打开模态窗口时是否使用渐现效果
+
+
+close
+Boolean
+true 
+是否显示关闭按钮
+
+
+backdrop
+Boolean
+true
+是否显示遮罩层
+
+
+confirm
+Boolean
+false
+是否作为确认框显示
+
+
+okBtnText
+String
+&#39;&#39;
+ok按钮的文字
+
+
+cancelBtnText
+String
+&#39;&#39;
+取消按钮的文字
+
+
+confirmOkText
+String
+&#39;&#39;
+确认按钮的文字
+
+
+confirmCancelText
+String
+&#39;&#39;
+取消确认按钮的文字
+
+
+langs
+Object
+{}
+文字的语言
+
+
+okBtnColor
+String
+primary
+ok按钮的颜色
+
+
+cancelBtnColor
+String
+secondary
+取消按钮的颜色
+
+
+onOpen
+Function
+null
+打开模态窗口时的回调函数
+
+
+onClose
+Function
+null
+关闭模态窗口时的回调函数
+
+
+onOk
+Function
+null
+点击ok按钮后的回调函数
+
+
+onCancel
+Function
+null
+点击取消按钮后的回调函数
+
+
+
+
+图片剪裁模态窗口的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+id
+String
+exampleModalCropper
+模态窗口的id
+
+
+confirm
+Boolean
+true
+是否使用确认框
+
+
+src
+String
+null
+剪裁图片的地址，如果没有设置，则是上传模式，否则指定的图片将被剪裁
+
+
+imgId
+String
+exampleImage
+剪裁图片的id
+
+
+cropper
+Object
+exampleImage
+ Cropper.js 的参数
+
+
+maxWidth
+Number|null
+null
+剪裁图片的最大宽度
+
+
+action
+String|null
+&#39;&#39;
+上传图片的地址
+
+
+method
+String
+post
+post或get
+
+
+fileName
+String
+file
+上传图片input的name属性
+
+
+data
+Object
+{}
+定义上传的data
+
+
+uploadConfig
+Object
+null
+该对象可以定义2个属性：allowTypes：默认为[&#39;image/jpeg&#39;, &#39;image/png&#39;]，指定上传图片的类型，和maxSize：默认值为5242880，指定上传图片的最大尺寸。
+
+
+success
+Function
+null
+上传成功后的回调函数
+
+
+error
+Function
+null
+上传失败后的回调函数
+
+
+axios
+Function
+null
+是否ajax使用的是axios
+
+
+axiosOriginalData
+Boolean
+false
+axios 成功回调返回的是res还是res.data
+
+
+
+onUpload
+Function
+null
+upload的回调函数
+
+
+onUploadError
+Function
+null
+uploadError的回调函数
+
+
+onCropper
+Function
+null
+u图片剪裁后的回调函数
+
+
+
+
+ 该Bootstrap4动态生成模态窗口插件的github网址为：https://github.com/ycs77/jquery-plugin-bsModal
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_175">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_176">
+                        js和CSS3翻转式翻页切换特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_176" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811151652.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3翻转式翻页切换特效。该特效使用CSS Grid进行布局，制作类似杂志的翻页效果。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3翻转式翻页切换特效。该特效使用CSS Grid进行布局，制作类似杂志的翻页效果。
+该翻页切换特效的动画效果使用TweenMax来制作。由于在布局中使用了CSS Grid和自定义css属性，所以不是所有的浏览器都支持该特效。
+下面是该特效的一些屏幕截图效果：
+
+
+ 该js和CSS3翻转式翻页切换特效的github网址为：https://github.com/codrops/PageFlipLayout/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_176">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_177">
+                         简洁实用的jQuery进度条插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_177" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810301525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简洁实用的jQuery进度条插件。该插件使用简单，通过在页面中放置指定的HTML代码，即可生成带动画效果的进度条。
+内容：
+
+
+简要教程
+
+
+这是一款简洁实用的jQuery进度条插件。该插件使用简单，通过在页面中放置指定的HTML代码，即可生成带动画效果的进度条。
+
+ 使用方法
+在页面中引入an-skill-bar.css和jquery、an-skill-bar.js文件。
+
+&amp;lt;link href=&#34;css/an-skill-bar.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/an-skill-bar.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+该进度条的基本HTML结构如下：
+
+&amp;lt;div class=&#34;skillbar html&#34;&amp;gt;
+&amp;lt;div class=&#34;filled&#34; data-width=&#34;90\%&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&#34;title&#34;&amp;gt;HTML&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;percent&#34;&amp;gt;90\%&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过skillbar()方法来初始化该插件。
+
+$(document).ready(function () {
+$(&#34;.skillbar&#34;).skillbar();
+});
+
+你可以在初始化时，指定进度条的动画速度和背景颜色。
+
+$(document).ready(function () {
+$(&#34;.skillbar&#34;).skillbar({
+speed: 1000,
+bg : &#34;#008080&#34;
+});
+});
+
+ 该进度条插件的github网址为：https://github.com/hasanmisbah/an-skill-bar
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_177">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_178">
+                        33种css3开关按钮特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_178" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810121430.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一组css3开关按钮特效。该css3开关按钮特效共33种效果，支持ie9以上的主流浏览器，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一组css3开关按钮特效。该css3开关按钮特效共33种效果，支持ie9以上的主流浏览器，非常实用。
+
+ 安装
+可以通过npm来安装该css3开关按钮特效代码。
+
+npm install css-checkbox-library
+
+
+ 使用方法
+在页面中引入checkboxes.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;dist/checkboxes.min.css&#34;&amp;gt; 
+
+
+ HTML
+使用下面的HTML结构俩创建一个开关按钮。
+
+&amp;lt;div class=&#34;ckbx-square-1&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; checked id=&#34;ckbx-square-1-2&#34; value=&#34;0&#34; name=&#34;ckbx-square-1&#34;&amp;gt;
+&amp;lt;label for=&#34;ckbx-square-1-2&#34;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 该css3开关按钮特效的github地址为：https://github.com/hunzaboy/CSS-Checkbox-Library
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_178">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_179">
+                        jQuery标签输入插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_179" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809211456.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带自动完成功能的jQuery标签输入插件。该jQuery标签输入插件还能实现简单的验证功能，并且采用响应式设计，十分实用。
+内容：
+
+
+简要教程
+
+
+这是一款带自动完成功能的jQuery标签输入插件。该jQuery标签输入插件还能实现简单的验证功能，并且采用响应式设计，十分实用。
+
+ 使用方法
+在页面中引入jquery和jqueryui文件，以及jquery.tagsinput-revisited.css和jquery.tagsinput-revisited.js文件。
+
+&amp;lt;link href=&#34;css/jquery-ui.css&#34; rel=&#34;stylesheet&#34;&amp;gt; 
+&amp;lt;link href=&#34;css/jquery.tagsinput-revisited.css&#34; rel=&#34;stylesheet&#34;&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery-ui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.tagsinput-revisited.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+使用一个input标签作为输入标签的容器，value中设置的值可以作为预定义标签使用。
+
+&amp;lt;input id=&#34;example&#34; name=&#34;example&#34; type=&#34;text&#34; value=&#34;jQuery,Script,Net&#34;&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery标签输入插件。
+
+$(&#39;#example&#39;).tagsInput();
+
+
+ 配置参数
+该jquery标签输入插件的可用配置参数有：
+
+$(&#39;.tagsinput#tags&#39;).tagsInput({
+interactive: true,
+placeholder: &#39;Add a tag&#39;,
+minChars: 2,
+maxChars: 20, // if not provided there is no limit
+limit: 5, // if not provided there is no limit
+validationPattern: new RegExp(&#39;^[a-zA-Z]+$&#39;), // a pattern you can use to validate the input
+width: &#39;300px&#39;, // standard option is &#39;auto&#39;
+height: &#39;100px&#39;, // standard option is &#39;auto&#39;
+autocomplete: { option: value, option: value},
+hide: true,
+delimiter: [&#39;,&#39;,&#39;;&#39;], // or a string with a single delimiter
+unique: true,
+removeWithBackspace: true,
+onAddTag: callback\_function,
+onRemoveTag: callback\_function,
+onChange: callback\_function
+}); 
+
+ 该jquery标签输入插件的github地址为：https://github.com/underovsky/jquery-tagsinput-revisited
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_179">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_180">
+                        Bootstrap模态窗口扩展jquery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-success">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_180" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1907/201907160658.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款bootstrap模态窗口扩展插件。它在原有的bootstrap模态窗口的基础上，通过CSS3添加了模态窗口动画，还添加了ajax获取数据功能和其它一些新的功能。
+内容：
+
+
+简要教程
+
+
+这是一款bootstrap模态窗口扩展插件。它在原有的bootstrap模态窗口的基础上，通过CSS3添加了模态窗口动画，还添加了ajax获取数据功能和其它一些新的功能。
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link href=&#34;css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;link href=&#34;css/bootstrap-modal-bs3patch.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;link href=&#34;css/bootstrap-modal.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap-modalmanager.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap-modal.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;div id=&#34;responsive&#34; class=&#34;modal fade&#34; tabindex=&#34;-1&#34; data-width=&#34;760&#34; style=&#34;display: none;&#34;&amp;gt;
+&amp;lt;div class=&#34;modal-header&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;close&#34; data-dismiss=&#34;modal&#34; aria-hidden=&#34;true&#34;&amp;gt;×&amp;lt;/button&amp;gt;
+&amp;lt;h4 class=&#34;modal-title&#34;&amp;gt;Responsive&amp;lt;/h4&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;modal-body&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-6&#34;&amp;gt;
+&amp;lt;h4&amp;gt;Some Input&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;col-md-6&#34;&amp;gt;
+&amp;lt;h4&amp;gt;Some More Input&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;input class=&#34;form-control&#34; type=&#34;text&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;modal-footer&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; data-dismiss=&#34;modal&#34; class=&#34;btn btn-default&#34;&amp;gt;Close&amp;lt;/button&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34;&amp;gt;Save changes&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+通过按钮打开模态窗口。
+
+&amp;lt;button class=&#34;demo btn btn-primary btn-lg&#34; data-toggle=&#34;modal&#34; href=&#34;#responsive&#34;&amp;gt;View Demo&amp;lt;/button&amp;gt;
+
+ 该bootstrap模态窗口扩展插件的github网址为：https://github.com/jschr/bootstrap-modal
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_180">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_181">
+                        超酷js对角线轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_181" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809011437.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的js对角线轮播图特效。该特效切换轮播图的方式为往左上角移动，每个轮播图项可以全屏展开，并且缩略图带有鼠标悬停动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的js对角线轮播图特效。该特效切换轮播图的方式为往左上角移动，每个轮播图项可以全屏展开，并且缩略图带有鼠标悬停动画效果。
+该js对角线轮播图特效使用了最新的CSS技术，不是所有的浏览器都支持该特效。
+下面是该js对角线轮播图特效的一些截图效果。
+
+
+
+ 该js对角线轮播图特效的github地址为：https://github.com/codrops/DiagonalSlideshow/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_181">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_182">
+                        纯CSS3 lightbox插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_182" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808181428.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+perfundo是一款纯CSS3 lightbox插件。它可以创建单张或多张图片的弹出lightbox层效果，也可以和js结合一起使用。
+内容：
+
+
+简要教程
+
+
+perfundo是一款纯CSS3 lightbox插件。它可以创建单张或多张图片的弹出lightbox层效果，也可以和js结合一起使用。
+
+ 使用方法
+在页面中引入perfundo-icons.css文件。
+
+&amp;lt;link href=&#34;dist/perfundo.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+
+
+ HTML结构
+单张图片的HTML结构如下。
+
+&amp;lt;div class=&#34;perfundo&#34;&amp;gt;
+&amp;lt;style&amp;gt;
+#perfundo-single:target:before{background-image:url(large.jpg);}
+&amp;lt;/style&amp;gt;
+&amp;lt;a class=&#34;perfundo\_\_link&#34; href=&#34;#perfundo-single&#34;&amp;gt; &amp;lt;img src=&#34;small.jpg&#34;&amp;gt; &amp;lt;/a&amp;gt;
+&amp;lt;div id=&#34;perfundo-single&#34; class=&#34;perfundo\_\_overlay&#34;&amp;gt; 
+&amp;lt;a href=&#34;#perfundo-untarget&#34; class=&#34;perfundo\_\_close perfundo\_\_control&#34;&amp;gt;Close&amp;lt;/a&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+多张图片的HTML结构如下：
+
+&amp;lt;div class=&#34;perfundo&#34;&amp;gt;
+&amp;lt;style&amp;gt;#perfundo-img1:target:before{background-image:url(1.jpg);}&amp;lt;/style&amp;gt;
+&amp;lt;a class=&#34;perfundo\_\_link&#34; href=&#34;#perfundo-img1&#34;&amp;gt;
+&amp;lt;img src=&#34;1.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div id=&#34;perfundo-img1&#34; class=&#34;perfundo\_\_overlay&#34;&amp;gt;
+&amp;lt;a href=&#34;#perfundo-untarget&#34; class=&#34;perfundo\_\_close perfundo\_\_control&#34;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;perfundo\_\_next perfundo\_\_control&#34; href=&#34;#perfundo-img2&#34;&amp;gt;Next&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;perfundo&amp;quot;&amp;gt;
+&amp;lt;style&amp;gt;#perfundo-img2:target:before{background-image:url(2.jpg);}&amp;lt;/style&amp;gt;
+&amp;lt;a class=&amp;quot;perfundo__link&amp;quot; href=&amp;quot;#perfundo-img2&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;2.jpg&amp;quot;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div id=&amp;quot;perfundo-img2&amp;quot; class=&amp;quot;perfundo__overlay&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#perfundo-untarget&amp;quot; class=&amp;quot;perfundo__close perfundo__control&amp;quot;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;a class=&amp;quot;perfundo__next perfundo__control&amp;quot; href=&amp;quot;#perfundo-img3&amp;quot;&amp;gt;Next&amp;lt;/a&amp;gt;
+&amp;lt;a class=&amp;quot;perfundo__prev perfundo__control&amp;quot; href=&amp;quot;#perfundo-img1&amp;quot;&amp;gt;Prev&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;perfundo&amp;quot;&amp;gt;
+&amp;lt;style&amp;gt;#perfundo-img3:target:before{background-image:url(3.jpg);}&amp;lt;/style&amp;gt;
+&amp;lt;a class=&amp;quot;perfundo__link&amp;quot; href=&amp;quot;#perfundo-img3&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;3.jpg&amp;quot;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div id=&amp;quot;perfundo-img3&amp;quot; class=&amp;quot;perfundo__overlay&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#perfundo-untarget&amp;quot; class=&amp;quot;perfundo__close perfundo__control&amp;quot;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;a class=&amp;quot;perfundo__prev perfundo__control&amp;quot; href=&amp;quot;#perfundo-img2&amp;quot;&amp;gt;Prev&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+ 该纯CSS3 lightbox插件的github地址为：https://github.com/maoberlehner/perfundo
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_182">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_183">
+                        jquery的全屏轮播插件jquery-fsscroll
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_183" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1904/201904257153.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-fsscroll是一款jquery的全屏轮播插件。该插件是基于jQuery的简便的，高扩展性的全屏轮播插件。可用于产品轮播导航，个人信息展示等场景
+内容：
+
+
+简要教程
+
+
+jquery-fsscroll是一款jquery的全屏轮播插件。该插件是基于jQuery的简便的，高扩展性的全屏轮播插件。可用于产品轮播导航，个人信息展示等场景
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;../src/jquery.fsscroll.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.fsscroll.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;sections&#34;&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+data属性方式加载：
+
+&amp;lt;div class=&#34;container&#34; data-fs-scroll&amp;gt;
+&amp;lt;div class=&#34;sections&#34;&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+JS方式加载：
+
+$(&#39;.container&#39;).fsScroll({
+direction: &#39;horizontal&#39;
+})
+
+
+ 配置参数
+
+
+selectors：选择器。
+
+index：设置当前页索引，默认为0。
+
+timing：动画曲线，默认为ease。
+
+duration：动画时间，默认为500毫秒。
+
+loop：是否循环of，默认为false。
+
+pagination：是否显示分页，默认为true。
+
+keyboard：是否支持键盘操作，默认为false。
+
+direction： 滑动方向，默认为&#39;vertical&#39;。
+
+beforeScroll：滑动开始前回调。
+
+afterScroll：滑动结束后回调。
+
+默认值：
+
+{
+selectors: {
+sections: &#39;.sections&#39;, // 播放页父容器类
+section: &#39;.section&#39;, // 播放页容器类
+page: &#39;.page&#39;, // 分页容器类
+active: &#39;.active&#39; // 活动页类
+}
+}
+
+
+ 事件
+option.beforeScroll(a,b)
+滑动开始前回调。,a: 显示页的容器section， jquery对象。b: 显示页的索引
+option.afterScroll(a,b)
+滑动开始前回调。a: 显示页的容器section， jquery对象。b: 显示页的索引
+ jquery-fsscroll插件的github网址为：https://github.com/wozien/jquery-fsscroll
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_183">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/70/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/72/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

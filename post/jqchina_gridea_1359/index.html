@@ -1,0 +1,383 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于SVG的jQuery星级评分插件-jRate | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于SVG的jQuery星级评分插件-jRate
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501221429.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501221429.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501221246.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jRate是一款基于SVG的jQuery星级评分插件。jRate评分插件提供许多参数，用于设置评分的星星个数、颜色、大小等属性。由于是SVG制作的，评分星星放大缩小都不会变形。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jRate是一款基于SVG的 <a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a> 星级评分插件。jRate能够通过参数设置来提供各种实用的评分功能。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1501/jRate-star.gif" alt="jRate星级评分效果动态图-1" width="500" height="103"></p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1501/jRate-bird.gif" alt="jRate星级评分效果动态图-2" width="307" height="75"></p>
+<h3>基本使用</h3>
+<p>在页面中引入jQuery和jRate.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jRate.js"&gt;&lt;/script&gt;
+</pre>
+<p>html结构：</p>
+<pre class="brush:html">
+&lt;div id="jRate"&gt;&lt;/div&gt;
+</pre>
+<p>然后按下面方法调用插件：</p>
+<pre class="brush:js">
+$("#jRate").jRate();
+</pre>
+<h3>BOWER</h3>
+<pre class="brush:html">
+bower install jqthumb
+</pre>
+<h3>高级特性</h3>
+<h5>设置评分星星的开始颜色和结束颜色</h5>
+<p>可以设置你喜欢的评分星星的开始颜色和结束颜色。颜色的取值可以是hex值、rgb值或标准的颜色名字。可以为评分条只提供一种同样的颜色。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+startColor: "cyan",
+endColor: "blue"
+});
+</pre>
+<h5>初始值</h5>
+<p>可以为已评分星星个数提供初始值。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+rating:2
+});
+</pre>
+<h5>宽度和高度设置</h5>
+<p>可以自定义评分星星的宽度和高度。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+width: 70,
+height: 70
+});
+</pre>
+<h5>评分图案</h5>
+<p>可以从可用的选项图型列表中选择评分图案。目前可用的图案有：STAR, RECTANGLE, SQUARE, CIRCLE, RHOMBUS, TRIANGLE。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+shape: 'RHOMBUS'
+});
+</pre>
+<h5>可增长的宽度和高度</h5>
+<p>使用growth字段可以使评分图形由小到大变化。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+widthGrowth: 0.2,
+heightGrowth: 0.2
+});
+</pre>
+<h5>计数</h5>
+<p>评分图形的数量由 <code>count</code> 属性决定。可以自定义它的数量。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+count: 10
+});
+</pre>
+<h5>背景颜色</h5>
+<p>可以使用hex值、rgb值和标准的颜色名字来设置背景颜色。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+backgroundColor: 'black'
+});
+</pre>
+<h5>描边颜色</h5>
+<p>可以设置评分图案的描边颜色。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+strokeColor: 'black'
+});
+</pre>
+<h5>间隙</h5>
+<p>可以设置两个图形之间的间隙。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+shapeGap: '10px'
+});
+</pre>
+<h5>透明度</h5>
+<p>可以设置评分图案的透明度。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+opacity: 0.3
+});
+</pre>
+<h5>最大值和最小值</h5>
+<p>可以设置所需的最大值和最小值。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+min: 10,
+max: 15
+});
+</pre>
+<h5>精度</h5>
+<p>可以设置需要的精度值。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+precision: 0
+});
+</pre>
+<h5>方向</h5>
+<p>可以通过布尔值来设置方向是水平的还是垂直的。也可以设置false来进行两个方向的交换。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+horizontal: false
+});
+</pre>
+<h5>反向</h5>
+<p>可以通过布尔值来设置是否反向显示。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+reverse: true
+});
+</pre>
+<h5>只读</h5>
+<p>可以将评分设置为只读模式。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+readOnly: true
+});
+</pre>
+<h5>onChange</h5>
+<p>当评分值改变时的一个回调函数。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+onChange: function(rating) {
+$('#demo-onchange-value').text("Your Rating: "+rating);
+}
+});
+</pre>
+<h5>onSet</h5>
+<p>当评分星星被点击或设置是的回调函数。</p>
+<pre class="brush:js">
+$("#jRate").jRate({
+onSet: function(rating) {
+$('#demo-onset-value').text("Selected Rating: "+rating);
+}
+});
+</pre>
+<p>更多关于该评分插件的信息请参考：<a href="https://github.com/senthilporunan/jRate" target="\_blank">https://github.com/senthilporunan/jRate</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501221429.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501221246.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_136">
+                                <h3 class="post-title">
+                                    基于TweenMax的多列图片动画展示布局
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

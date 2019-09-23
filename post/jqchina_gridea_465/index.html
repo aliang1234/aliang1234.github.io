@@ -1,0 +1,432 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯js实现电子时钟特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯js实现电子时钟特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1709/201709071448.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709071448.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709074727.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用纯js实现电子时钟特效。该电子时钟可以显示时间，星期几，以及是上午还是下午。它使用简单，非常容易集成到项目中。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用纯<strong>js实现电子时钟</strong>特效。该电子时钟可以显示时间，星期几，以及是上午还是下午。它使用简单，非常容易集成到项目中。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入电子时钟的样式文件main.css。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="css/main.css"&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该电子时钟的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;main&gt;
+&lt;!-- 星期几 --&gt;
+&lt;div class="days"&gt;
+&lt;div class="day"&gt;
+&lt;p class="sunday"&gt;星期日&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="monday"&gt;星期一&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="tuesday"&gt;星期二&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="wednesday"&gt;星期三&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="thursday"&gt;星期四&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="friday"&gt;星期五&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="day"&gt;
+&lt;p class="saturday"&gt;星期六&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- CLOCK --&gt;
+&lt;div class="clock"&gt;
+&lt;!-- 小时 --&gt;
+&lt;div class="numbers"&gt;
+&lt;p class="hours"&gt;&lt;/p&gt;
+&lt;p class="placeholder"&gt;88&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="colon"&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- 分 --&gt;
+&lt;div class="numbers"&gt;
+&lt;p class="minutes"&gt;&lt;/p&gt;
+&lt;p class="placeholder"&gt;88&lt;/p&gt;
+&lt;/div&gt;
+<p>&lt;div class=&quot;colon&quot;&gt;<br>
+&lt;p&gt;:&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;!-- 秒 --&gt;<br>
+&lt;div class=&quot;numbers&quot;&gt;<br>
+&lt;p class=&quot;seconds&quot;&gt;&lt;/p&gt;<br>
+&lt;p class=&quot;placeholder&quot;&gt;88&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;!-- 上午 / 下午 --&gt;<br>
+&lt;div class=&quot;am-pm&quot;&gt;<br>
+&lt;!-- AM --&gt;<br>
+&lt;div&gt;<br>
+&lt;p class=&quot;am&quot;&gt;am&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;!-- PM --&gt;<br>
+&lt;div&gt;<br>
+&lt;p class=&quot;pm&quot;&gt;pm&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;&lt;!-- END CLOCK --&gt;<br>
+&lt;/main&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>该电子时钟通过下面的js代码来获取系统时间，并通过定时器来动态更新时间的显示。</p>
+<pre class="brush:js">
+window.onload = function(){
+time();
+ampm();
+whatDay();
+setInterval(function(){
+time();
+ampm();
+whatDay();
+}, 1000);
+};
+<p>//gets current time and changes html to reflect it<br>
+function time(){<br>
+var date = new Date(),<br>
+hours = date.getHours(),<br>
+minutes = date.getMinutes(),<br>
+seconds = date.getSeconds();</p>
+<p>//make clock a 12 hour clock instead of 24 hour clock<br>
+hours = (hours &gt; 12) ? (hours - 12) : hours;<br>
+hours = (hours === 0) ? 12 : hours;</p>
+<p>//invokes function to make sure number has at least two digits<br>
+hours = addZero(hours);<br>
+minutes = addZero(minutes);<br>
+seconds = addZero(seconds);</p>
+<p>//changes the html to match results<br>
+document.getElementsByClassName('hours')[0].innerHTML = hours;<br>
+document.getElementsByClassName('minutes')[0].innerHTML = minutes;<br>
+document.getElementsByClassName('seconds')[0].innerHTML = seconds;<br>
+}</p>
+<p>//turns single digit numbers to two digit numbers by placing a zero in front<br>
+function addZero (val){<br>
+return (val &lt;= 9) ? (&quot;0&quot; + val) : val;<br>
+}</p>
+<p>//lights up either am or pm on clock<br>
+function ampm(){<br>
+var date = new Date(),<br>
+hours = date.getHours(),<br>
+am = document.getElementsByClassName(&quot;am&quot;)[0].classList,<br>
+pm = document.getElementsByClassName(&quot;pm&quot;)[0].classList;</p>
+<p>(hours &gt;= 12) ? pm.add(&quot;light-on&quot;) : am.add(&quot;light-on&quot;);<br>
+(hours &gt;= 12) ? am.remove(&quot;light-on&quot;) : pm.remove(&quot;light-on&quot;);<br>
+}</p>
+<p>//lights up what day of the week it is<br>
+function whatDay(){<br>
+var date = new Date(),<br>
+currentDay = date.getDay(),<br>
+days = document.getElementsByClassName(&quot;day&quot;);</p>
+<p>//iterates through all divs with a class of &quot;day&quot;<br>
+for (x in days){<br>
+//list of classes in current div<br>
+var classArr = days[x].classList;</p>
+<p>(classArr !== undefined) &amp;&amp; ((x == currentDay) ? classArr.add(&quot;light-on&quot;) : classArr.remove(&quot;light-on&quot;));<br>
+}<br>
+}<br>
+</pre></p>
+<p>该电子时钟的github地址为：<a href="https://github.com/SlyTy7/clock" target="\_blank">https://github.com/SlyTy7/clock</a></p>
+<!--简要教程-->
+<div class="alert alert-warning mt25" role="alert">
+本文版权属于jQuery之家，转载请注明出处：<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201709074726.html">http://www.htmleaf.com/jQuery/Layout-Interface/201709074726.html</a>
+</div>
+<div class="leaf-page-nav pt50minh50 clearfix">
+<div class="pull-left">上一篇：<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201708314714.html">简单的Material Design风格计算器</a> </div>
+<div class="pull-right">下一篇：<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201709284763.html">js动态炫酷数字时钟</a> </div>
+</div>
+<!--相关插件-->
+<div class="leaf-box mt45">
+<div class="leaf-tp leaf-like">
+<h3>
+相关插件 
+</h3>
+</div>
+<div class="row pt30 pb30 minh150">
+<div class="mt30 col-md-12 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201807105218.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1807/201807101451.jpg" alt="jQuery和CSS3精美翻页式电子时钟特效"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201807105218.html"><h5>jQuery和CSS3精美翻页式电子时钟特效</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Calendar-Date-Time-picker/201604273398.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1604/201604271720.jpg" alt="基于格林威治标准时间（GMT）的jQuery模拟时钟插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Calendar-Date-Time-picker/201604273398.html"><h5>基于格林威治标准时间（GMT）的jQuery模拟时钟插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201503311601.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1503/201503311725.jpg" alt="jQuery超酷3D翻页式电子时钟特效插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201503311601.html"><h5>jQuery超酷3D翻页式电子时钟特效插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/20141221955.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1412/201412212052.jpg" alt="使用jQuery和css3制作逼真的数字时钟效果"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/20141221955.html"><h5>使用jQuery和css3制作逼真的数字时钟效果</h5></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--相关插件结束-->
+<!--网友评论-->
+<!-- <div class="leaf-box mt45">
+<div class="leaf-tp leaf-pinglun">
+<h3>
+网友评论 
+</h3>
+</div>
+<div class="leaf-changyan">
+<div id="SOHUCS"></div>
+</div>
+</div> -->
+<!--网友评论结束-->
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709071448.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709074727.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_466">
+                                <h3 class="post-title">
+                                    SweetDropdown-多用途jQuery下拉列表插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

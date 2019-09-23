@@ -1,0 +1,443 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯js实现360度旋转预览图片特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯js实现360度旋转预览图片特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1906/201906172893.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1906/201906172893.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201906175695.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款纯js实现360度旋转预览图片特效。该js特效仅使用120行代码，即可实现通过滑块、或鼠标手动360度旋转图片，以及自动360度旋转图片的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款纯js实现360度旋转预览图片特效。该js特效仅使用120行代码，即可实现通过滑块、或鼠标手动360度旋转图片，以及自动360度旋转图片的效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<pre class="brush:html">
+import Rolldate from 'rolldate'
+new Rolldate({
+el:'#date'
+})
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> commonJS</h5>
+<pre class="brush:js">
+lt;div class="tabs"gt;
+lt;input type="radio" name="tabs" id="sol1" checked="checked"/gt;
+lt;label for="sol1"gt;Rangelt;/labelgt;
+lt;div class="tab"gt;
+lt;div class="frame" id="frame1"gt;lt;/divgt;
+lt;input type="range" id="slider" min="0" max="34" step="1" value="0"/gt;
+lt;/divgt;
+lt;input type="radio" name="tabs" id="sol2"/gt;
+lt;label for="sol2"gt;Drag / Swipelt;/labelgt;
+lt;div class="tab"gt;
+lt;div class="frame" id="frame2"gt;lt;/divgt;
+lt;/divgt;
+lt;input type="radio" name="tabs" id="sol3"/gt;
+lt;label for="sol3"gt;Canvaslt;/labelgt;
+lt;div class="tab"gt;
+lt;canvas class="frame" id="frame3"gt;lt;/canvasgt;
+lt;/divgt;
+lt;/divgt;
+lt;div id="overlay"gt;Loading...lt;/divgt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<pre class="brush:css">
+body {
+margin: 0;
+padding: 0;
+font-size: .8em;
+font-family: 'Open Sans', sans-serif;
+overflow: hidden;
+}
+body .tabs {
+position: absolute;
+left: 50\%;
+top: 50\%;
+transform: translate(-50\%, -50\%);
+width: 480px;
+height: 351px;
+}
+body .tabs label {
+cursor: pointer;
+border-radius: 4px;
+}
+body .tabs input[name="tabs"] {
+display: none;
+}
+body .tabs input[name="tabs"]:checked + label {
+background: #44abda;
+color: #fff;
+}
+body .tabs input[name="tabs"]:checked + label + .tab {
+display: block;
+}
+body .tabs label {
+display: inline-block;
+width: 33.3333\%;
+float: left;
+height: 24px;
+line-height: 24px;
+text-align: center;
+}
+body .tabs .tab {
+display: none;
+position: absolute;
+width: 100\%;
+height: 327px;
+top: 24px;
+text-align: center;
+}
+body .tabs .tab .frame {
+width: 100\%;
+height: 100\%;
+}
+body .tabs .tab #slider {
+width: calc(100\% - 80px);
+}
+body #overlay {
+position: absolute;
+width: 100\%;
+height: calc(100\% - 20px);
+background: rgba(0, 0, 0, 0.3);
+text-align: center;
+color: #fff;
+font-size: 1.1em;
+padding-top: 20px;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> javascript</h5>
+<pre class="brush:js">
+let frame1 = document.getElementById('frame1'),
+frame2 = document.getElementById('frame2'),
+frame3 = document.getElementById('frame3'),
+labels = document.querySelectorAll('label'),
+ctx = frame3.getContext('2d'),
+slider = document.getElementById('slider'),
+frameWidth = 480,
+frameHeight = 327,
+activeFrame = 0,
+frames = 34,
+xStart = null,
+s2Settings = {
+sensitivity: 40
+},
+s3Settings = {
+fps: 20,
+reverse: false
+},
+now, delta, then = Date.now(),
+interval = 1000 / s3Settings.fps,
+runCanvas = false;
+<p>let gui = new dat.GUI(),<br>
+s2 = gui.addFolder('Drag / Swipe'),<br>
+s3 = gui.addFolder('Canvas');</p>
+<p>s2.add(s2Settings, &quot;sensitivity&quot;, 10, 80, 1);<br>
+s3.add(s3Settings, &quot;fps&quot;, 1, 60, 1).onChange(() =gt; {interval = 1000 / s3Settings.fps;});<br>
+s3.add(s3Settings, &quot;reverse&quot;);</p>
+<p>s2.open();<br>
+s3.open();</p>
+<p>let sprite = new Image();<br>
+sprite.onload = function() {<br>
+frame1.style.background = frame2.style.background = <code>url(${sprite.src})</code>;<br>
+document.getElementById('overlay').style.display = 'none';</p>
+<p>solution1(); //input range<br>
+solution2(); // drag / swipe<br>
+solution3(); // canvas</p>
+<p>labels.forEach(function(element) {<br>
+element.addEventListener('click', function() {<br>
+runCanvas = false;<br>
+if(this.getAttribute('for') == &quot;sol3&quot;)<br>
+runCanvas = true;<br>
+});<br>
+});<br>
+};<br>
+sprite.src = 'https://serving.photos.photobox.com/<br>
+55967562d176c08ff2d7e23195f94e704faa7feede75617ac5<br>
+905d8dca9295f1a547077a.jpg';</p>
+<p>function solution1() {<br>
+slider.addEventListener(&quot;input&quot;, function() {<br>
+activeFrame = parseInt(this.value);<br>
+frame1.style.backgroundPositionX = <code>-${activeFrame * frameWidth}px</code>;<br>
+});<br>
+}</p>
+<p>function solution2() {<br>
+frame2.addEventListener('touchstart', (e) =gt; {<br>
+xStart = e.touches ? e.touches[0].clientX : e.clientX;<br>
+});<br>
+frame2.addEventListener('mousedown', (e) =gt; {<br>
+xStart = e.touches ? e.touches[0].clientX : e.clientX;<br>
+});<br>
+frame2.addEventListener('touchend', () =gt; { xStart = null; });<br>
+frame2.addEventListener('mouseup', () =gt; { xStart = null; });<br>
+frame2.addEventListener(&quot;mousemove&quot;, move);<br>
+frame2.addEventListener(&quot;touchmove&quot;, move);<br>
+}</p>
+<p>function move(e) {<br>
+if(!xStart)<br>
+return;</p>
+<p>let xEnd = e.touches ? e.touches[0].clientX : e.clientX;<br>
+if (xStart - xEnd gt; .5 * frameWidth / (10 + s2Settings.sensitivity)) {<br>
+activeFrame++;<br>
+if(activeFrame gt; frames)<br>
+activeFrame = 0;<br>
+frame2.style.backgroundPositionX = <code>${activeFrame * frameWidth}px</code>;<br>
+xStart = xEnd;<br>
+} else if(xEnd - xStart gt; .5 * frameWidth / (10 + s2Settings.sensitivity)) {<br>
+activeFrame--;<br>
+if(activeFrame lt; 0)<br>
+activeFrame = frames;<br>
+frame2.style.backgroundPositionX = <code>${activeFrame * frameWidth}px</code>;<br>
+xStart = xEnd;<br>
+}<br>
+}</p>
+<p>function solution3() {<br>
+frame3.width = frameWidth;<br>
+frame3.height = frameHeight;<br>
+animate();<br>
+}</p>
+<p>function animate() {<br>
+now = Date.now();<br>
+delta = now - then;</p>
+<p>if(runCanvas &amp;&amp; delta gt; interval) {<br>
+if(activeFrame gt; frames)<br>
+activeFrame = 0;<br>
+else if(activeFrame lt; 0)<br>
+activeFrame = frames;</p>
+<p>ctx.drawImage(<br>
+sprite, activeFrame * frameWidth, 0, frameWidth, frameHeight,<br>
+0, 0, frameWidth, frameHeight<br>
+);</p>
+<p>activeFrame += (s3Settings.reverse) ? -1 : 1;<br>
+then = now - (delta % interval);<br>
+}<br>
+window.requestAnimationFrame(animate);<br>
+}<br>
+</pre></p>
+<p><i class="fa fa-codepen"></i> 该纯js实现360度旋转预览图片特效的codepen网址为：<a href="https://codepen.io/\_massimo/pen/zVYVNb" target="\_blank">https://codepen.io/\_massimo/pen/zVYVNb</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1906/201906172893.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201906175695.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_700">
+                                <h3 class="post-title">
+                                    炫酷Apple TV多层背景视觉差特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

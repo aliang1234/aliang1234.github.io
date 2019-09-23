@@ -1,0 +1,807 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于jQuery UI的Bootstrap Panel面板功能增强插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于jQuery UI的Bootstrap Panel面板功能增强插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_3">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601221621.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601221621.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601223056.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>LobiPanel是一款基于jQuery UI的Bootstrap Panel面板功能增强插件。通过该插件可以为Bootstrap的原生Panel面板增加编辑标题，最大化，最小化，面板拖动关闭面板等功能。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>LobiPanel是一款基于<a href="http://www.htmleaf.com/jQuery/">jQuery</a> UI的Bootstrap Panel面板功能增强插件。通过该插件可以为Bootstrap的原生Panel面板增加编辑标题，最大化，最小化，面板拖动关闭面板等功能。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该Bootstrap面板功能增强插件需要引入jquery，jquery ui相关文件和bootstrap相关文件，以及lobipanel.css和lobipanel.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="lib/jquery-ui.min.css"/&gt;
+&lt;link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/&gt;
+&lt;link rel="stylesheet" href="dist/css/lobipanel.min.css"/&gt;
+<p>&lt;script src=&quot;lib/jquery.1.11.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;lib/jquery-ui.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;bootstrap/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;dist/js/lobipanel.min.js&quot;&gt;&lt;/script&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>LobiPanel最基本的HTML结构如下，它完全是bootstrap标准的panel结构：</p>
+<pre class="brush:html">
+&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;div class="panel-title"&gt;
+&lt;h4&gt;Panel title&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;
+Lorem ipsum...
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>lobiPanel()</code>方法来初始化该插件。</p>
+<pre class="brush:js">
+$(function(){
+$('.panel').lobiPanel({
+// 配置参数
+...
+});
+});
+</pre>
+<p>完成上面的操作之后，就可以得到类似下图的Panel面板。</p>
+<p><img src="http://img.htmleaf.com/1601/lobiPanel.jpg" alt="Bootstrap lobiPanel面板" width="577" height="193"></p>
+<p>使用面板右上角的图标按钮，你可以执行以下一些操作：</p>
+<ul>
+<li>
+<span class="glyphicon glyphicon-remove"></span> 按钮将从文档中移除该Panel面板。注意，这个操作是不可撤销的。</li>
+<li>
+<span class="glyphicon glyphicon-resize-full"></span> 按钮可以使面板全屏打开。</li>
+<li>
+<span class="glyphicon glyphicon-refresh"></span> 按钮从指定的URL中加载内容到<code>.panel-body</code>中。</li>
+<li>
+<span class="glyphicon glyphicon-move"></span> 按钮可以使面板浮动起来，并可以通过鼠标进行拖拽。再次点击这个按钮就可以使面板回到原来的位置上。</li>
+<li>
+<span class="glyphicon glyphicon-minus"></span> 按钮有2个功能：
+<ul>
+<li>1、收缩已经展开的面板。</li>
+<li>2、最小化该面板。</li>
+</ul>
+</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>以下所有的参数都可以通过<code>data-*</code>来设置，你只需要将参数的驼峰格式修改为连线格式即可。例如：<code>connectWith</code>参数使用<code>data-*</code>来表示就是<code>data-connect-with</code>。</p>
+<p>你也可以在<code>data-*</code>属性中插入一个对象，例如：<code>data-close="{tooltip: 'Something'}"</code>。</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>draggable</td>
+<td>Boolean</td>
+<td>true</td>
+<td>面板是否可以拖动。注意，该选项需要jQuery ui draggable的支持</td>
+</tr>
+<tr>
+<td>sortable</td>
+<td>Boolean</td>
+<td>false</td>
+<td>面板是否可以排序。注意，该选项需要jQuery ui sortable的支持</td>
+</tr>
+<tr>
+<td>connectWith</td>
+<td>String</td>
+<td>".ui-sortable"</td>
+<td>jQuery ui排序插件选项</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>String</td>
+<td>"both"</td>
+<td>设置面板缩放的方向，可选值有："both", "vertical", "horizontal", "none"</td>
+</tr>
+<tr>
+<td>minWidth</td>
+<td>Integer</td>
+<td>200</td>
+<td>面板的最小宽度</td>
+</tr>
+<tr>
+<td>minHeight</td>
+<td>Integer</td>
+<td>100</td>
+<td>面板的最小高度</td>
+</tr>
+<tr>
+<td>maxWidth</td>
+<td>Integer</td>
+<td>1200</td>
+<td>面板的最大宽度</td>
+</tr>
+<tr>
+<td>maxHeight</td>
+<td>Integer</td>
+<td>700</td>
+<td>面板的最大高度</td>
+</tr>
+<tr>
+<td>loadUrl</td>
+<td>String</td>
+<td>""</td>
+<td>加载内容的URL地址，如果没有提供reload按钮就不会加载任何东西</td>
+</tr>
+<tr>
+<td>tooltips</td>
+<td>Boolean</td>
+<td>true</td>
+<td>是否在面板控制按钮上显示tooltips</td>
+</tr>
+<tr>
+<td>toggleIcon</td>
+<td>String</td>
+<td>"glyphicon glyphicon-cog"</td>
+<td>下拉菜单切换图标</td>
+</tr>
+<tr>
+<td>expandAnimation</td>
+<td>Integer</td>
+<td>100</td>
+<td>扩展到全屏的动画持续时间</td>
+</tr>
+<tr>
+<td>collapseAnimation</td>
+<td>Integer</td>
+<td>100</td>
+<td>从全屏收缩回来的动画持续时间</td>
+</tr>
+<tr>
+<td>unpin</td>
+<td>Object</td>
+<td>{<br>icon : 'glyphicon glyphicon-move',<br>tooltip : 'Unpin'<br>}</td>
+<td>
+<code>icon</code>属性是切换拖动按钮的图标，<code>tooltip</code>属性是按钮的提示文本</td>
+</tr>
+<tr>
+<td>reload</td>
+<td>Object</td>
+<td>{<br>icon : 'glyphicon glyphicon-refresh',<br>tooltip : 'Reload'<br>}</td>
+<td>
+<code>icon</code>属性是重新加载按钮的图标，<code>tooltip</code>属性是按钮的提示文本</td>
+</tr>
+<tr>
+<td>minimize</td>
+<td>Object</td>
+<td>{<br>icon : 'glyphicon glyphicon-minus',<br>icon2 : 'glyphicon glyphicon-plus',<br>tooltip : 'Minimize'<br>}</td>
+<td>
+<code>icon</code>属性是全屏按钮的图标，<code>icon2</code>是收缩按钮的图标，<code>tooltip</code>属性是按钮的提示文本</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Object</td>
+<td>{<br>icon : 'glyphicon glyphicon-remove',<br>tooltip : 'Close'<br>}</td>
+<td>
+<code>icon</code>属性是关闭按钮按钮的图标，<code>tooltip</code>属性是按钮的提示文本</td>
+</tr>
+<tr>
+<td>editTitle</td>
+<td>Object</td>
+<td>{<br>icon: 'glyphicon glyphicon-pencil',<br>icon2: 'glyphicon glyphicon-floppy-disk',<br>tooltip: 'Edit title'<br>}</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>可以通过2个方法来调用该插件的方法。</p>
+<p>1、你可以获取<code>LobiPanel</code>的对象实例，然后调用方法。</p>
+<pre class="brush:js">
+//get the LobiPanel instance
+var instance = $('.lobipanel').data('lobiPanel');
+//call the methods
+instance.unpin();
+instance.setPosition(400, 360);
+instance.setLoadUrl("htpp://www.example.com");
+var position = instance.getPosition();
+//method chaining is also available
+instance.setSize(400, 400)
+.setPosition(400, 360)
+.setLoadUrl("htpp://www.example.com")
+.load();
+</pre>
+<p>2、或者你也可以直接调用方法。</p>
+<pre class="brush:js">
+$('.lobipanel').lobiPanel('startLoading');
+$('.lobipanel').lobiPanel("setPosition", 400, 360);
+var position = $('.lobipanel').lobiPanel("getPosition");
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>方法</td>
+<td>参数</td>
+<td>返回类型</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isPanelInit</td>
+<td>none</td>
+<td>Boolean</td>
+<td>检查面板是否被初始化。面板被初始化后会带有<code>.lobipanel</code> class和<code>data-inner-id</code>属性</td>
+</tr>
+<tr>
+<td>isPinned</td>
+<td>none</td>
+<td>Boolean</td>
+<td>检测面板是否是固定的</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>固定面板</td>
+</tr>
+<tr>
+<td>unpin</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>将面板浮动</td>
+</tr>
+<tr>
+<td>togglePin</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>将面板在固定和浮动之间切换</td>
+</tr>
+<tr>
+<td>isMinimized</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>检测面板是否被最小化</td>
+</tr>
+<tr>
+<td>minimize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>最小化面板</td>
+</tr>
+<tr>
+<td>maximize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>最大化面板</td>
+</tr>
+<tr>
+<td>toggleMinimize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>在最大化和最小化之间切换</td>
+</tr>
+<tr>
+<td>isOnFullScreen</td>
+<td>none</td>
+<td>Boolean</td>
+<td>检测面板是否扩展到全屏</td>
+</tr>
+<tr>
+<td>toFullScreen</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>将面板扩展到全屏</td>
+</tr>
+<tr>
+<td>toSmallSize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>将面板收缩到最小</td>
+</tr>
+<tr>
+<td>toggleSize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>在全屏和最小面板之间切换</td>
+</tr>
+<tr>
+<td>close</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>关闭面板（将面板从文档中移除）</td>
+</tr>
+<tr>
+<td>setWidth(width)</td>
+<td>width - Integer, REQUIRED new width of the panel</td>
+<td>LobiPanel对象</td>
+<td>改变面板的宽度，如果宽度超出<code>minWidth</code>和<code>maxWidth</code>之间的范围，将使用<code>minWidth</code>或<code>maxWidth</code>来作为宽度</td>
+</tr>
+<tr>
+<td>setHeight(height)</td>
+<td>height - Integer, REQUIRED new height of the panel</td>
+<td>LobiPanel对象</td>
+<td>改变面板的高度，如果高度超出<code>minHeight</code>和<code>maxHeight</code>之间的范围，将使用<code>minHeight</code>或<code>maxHeight</code>来作为高度</td>
+</tr>
+<tr>
+<td>setSize(width, height)</td>
+<td>width - Integer, REQUIRED new width of the panel<br>height - Integer, REQUIRED new height of the panel</td>
+<td>LobiPanel对象</td>
+<td>通过指定的宽度和高度来设置面板的尺寸</td>
+</tr>
+<tr>
+<td>getPosition</td>
+<td>none</td>
+<td>{<br>x: 'left coordinate',<br>y: 'top coordinate'<br>}</td>
+<td>获取面板的当前位置</td>
+</tr>
+<tr>
+<td>getWidth</td>
+<td>none</td>
+<td>面板的Integer类型宽度</td>
+<td>获取面板的宽度</td>
+</tr>
+<tr>
+<td>getHeight</td>
+<td>none</td>
+<td>面板的Integer类型高度</td>
+<td>获取面板的高度</td>
+</tr>
+<tr>
+<td>bringToFront</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>如果面板被其它元素遮盖，使用该方法将面板放置在前面</td>
+</tr>
+<tr>
+<td>enableDrag</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>使面板可以被拖动，在浮动面板中该方法自动被调用</td>
+</tr>
+<tr>
+<td>disableDrag</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>禁止拖动面板</td>
+</tr>
+<tr>
+<td>enableResize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>使面板可以修改尺寸</td>
+</tr>
+<tr>
+<td>disableResize</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>禁止面板修改尺寸</td>
+</tr>
+<tr>
+<td>startLoading</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>开始加载</td>
+</tr>
+<tr>
+<td>stopLoading</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>停止加载</td>
+</tr>
+<tr>
+<td>setLoadUrl(url)</td>
+<td>url - String , REQUIRED</td>
+<td>LobiPanel对象</td>
+<td>设置<code>loadUrl</code>属性</td>
+</tr>
+<tr>
+<td>load(params)</td>
+<td>params - Mixed，OPTIONAL</td>
+<td>LobiPanel对象</td>
+<td>通过ajax来加载内容到<code>.panel-body</code>中</td>
+</tr>
+<tr>
+<td>destroy</td>
+<td>none</td>
+<td>jQuery元素</td>
+<td>销毁LobiPanel实例</td>
+</tr>
+<tr>
+<td>startTitleEditing</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>编辑面板的标题</td>
+</tr>
+<tr>
+<td>isTitleEditing</td>
+<td>none</td>
+<td>Boolean</td>
+<td>检测面板标题是否在编辑中</td>
+</tr>
+<tr>
+<td>cancelTitleEditing</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>取消新编辑的标题，恢复原来的面板标题</td>
+</tr>
+<tr>
+<td>finishTitleEditing</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>完成面板标题的编辑</td>
+</tr>
+<tr>
+<td>enableTooltips</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>允许在面板控制按钮上显示提示文本</td>
+</tr>
+<tr>
+<td>disableTooltips</td>
+<td>none</td>
+<td>LobiPanel对象</td>
+<td>禁止在面板控制按钮上显示提示文本</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>使用事件：</p>
+<pre class="brush:js">
+$('.lobipanel').on('init.lobiPanel', function(ev, lobiPanel){
+window.console.log("init event called");
+});
+$('.lobipanel').on('beforeUnpin.lobiPanel', function(ev, lobiPanel){
+window.console.log("Before unpin", lobiPanel);
+});
+$('.lobipanel').on('onSmallSize.lobiPanel', function(ev, lobiPanel){
+window.console.log("On small size", ev, lobiPanel);
+});
+$('.lobipanel').on('loaded.lobiPanel', function(ev, lobiPanel, result, status, xhr){
+window.console.log("Loaded", ev, lobiPanel, result, status, xhr);
+});
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>事件</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init.lobiPanel</td>
+<td>当面板初始化时调用</td>
+</tr>
+<tr>
+<td>beforeUnpin.lobiPanel</td>
+<td>面板浮动前被调用</td>
+</tr>
+<tr>
+<td>onUnpin.lobiPanel</td>
+<td>面板浮动后被调用</td>
+</tr>
+<tr>
+<td>beforeClose.lobiPanel</td>
+<td>面板被关闭前调用</td>
+</tr>
+<tr>
+<td>onClose.lobiPanel</td>
+<td>面板被移除后调用</td>
+</tr>
+<tr>
+<td>beforeToFront.lobiPanel</td>
+<td>面板通过<code>z-index</code>属性被显示时调用</td>
+</tr>
+<tr>
+<td>onToFront.lobiPanel</td>
+<td>当面板被点击并通过<code>z-index</code>属性被显示时调用</td>
+</tr>
+<tr>
+<td>beforePin.lobiPanel</td>
+<td>面板被固定前调用</td>
+</tr>
+<tr>
+<td>onPin.lobiPanel</td>
+<td>面板被固定后调用</td>
+</tr>
+<tr>
+<td>beforeMinimize.lobiPanel</td>
+<td>面板最小化前调用</td>
+</tr>
+<tr>
+<td>onMinimize.lobiPanel</td>
+<td>面板最小化后调用</td>
+</tr>
+<tr>
+<td>beforeMaximize.lobiPanel</td>
+<td>面板最大化前调用</td>
+</tr>
+<tr>
+<td>onMaximize.lobiPanel</td>
+<td>面板最大化后调用</td>
+</tr>
+<tr>
+<td>beforeFullScreen.lobiPanel</td>
+<td>面板扩展到全屏前调用</td>
+</tr>
+<tr>
+<td>onFullScreen.lobiPanel</td>
+<td>面板扩展到全屏后调用</td>
+</tr>
+<tr>
+<td>beforeSmallSize.lobiPanel</td>
+<td>面板扩展从全屏时尚前调用</td>
+</tr>
+<tr>
+<td>onSmallSize.lobiPanel</td>
+<td>面板扩展从全屏时尚后调用</td>
+</tr>
+<tr>
+<td>beforeLoad.lobiPanel</td>
+<td>在面板内容被加载前调用</td>
+</tr>
+<tr>
+<td>startLoading.lobiPanel</td>
+<td>当通过ajax调用内容时触发</td>
+</tr>
+<tr>
+<td>loaded.lobiPanel</td>
+<td>当面板内容被加载后触发</td>
+</tr>
+<tr>
+<td>resizeStart.lobiPanel</td>
+<td>resize操作开始时触发</td>
+</tr>
+<tr>
+<td>onResize.lobiPanel</td>
+<td>在resize操作期间触发</td>
+</tr>
+<tr>
+<td>resizeStop.lobiPanel</td>
+<td>在浮动面板resize操作结束时触发</td>
+</tr>
+<tr>
+<td>dragged.lobiPanel</td>
+<td>在排序结束，DOM元素位置改变后触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>LobiPanel插件的github地址为：<a href="https://github.com/arboshiki/lobipanel" target="\_blank">https://github.com/arboshiki/lobipanel</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601221621.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601223056.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_899">
+                                <h3 class="post-title">
+                                    Air Datepicker|跨浏览器jQuery日期选择器插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

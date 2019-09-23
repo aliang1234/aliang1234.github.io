@@ -1,0 +1,1364 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_622">
+                        带鼠标滑过特效的jQuery霓虹灯文字插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_622" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609221632.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可以生成炫酷霓虹灯特效的jQuery插件。该霓虹灯特效使用CSS3 text-shadow属性来制作，在鼠标滑过文字时，还带有平滑变色效果。
+内容：
+
+
+简要教程
+
+
+这是一款可以生成炫酷霓虹灯特效的jQuery插件。该霓虹灯特效使用CSS3 text-shadow属性来制作，在鼠标滑过文字时，还带有平滑变色效果。
+
+ 使用方法
+在页面中引入jquery和neon\_text.js.js文件。
+
+&amp;lt;script src=&#34;js/jquery-1.9.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/neon\_text.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用&amp;lt;div&amp;gt;元素来包裹需要制作霓虹灯效果的文字：
+
+&amp;lt;div id=&#34;neon&#34;&amp;gt;NEON&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过neonText()方法来初始化该霓虹灯文字插件。
+
+$(&#39;#neon&#39;).neonText();
+
+
+ 配置参数
+该霓虹灯文字插件的默认配置参数如下：
+
+$(&#39;#container&#39;).neonText({
+textColor: &#39;#FFFFFF&#39;,
+textSize: &#39;40pt&#39;, 
+neonHighlight: &#39;#FFFFFF&#39;, 
+neonHighlightColor: &#39;#FF00DE&#39;,
+neonHighlightHover: &#39;#00FFFF&#39;, 
+neonFontHover: &#39;#FFFFFF&#39;
+}); 
+
+
+
+textColor：文字的颜色。
+
+textSize：文字的大小。
+
+neonHighlight：文字高光色。
+
+neonHighlightColor：文字高亮的颜色。
+
+neonHighlightHover：鼠标滑过时文字高光的颜色。
+
+neonFontHover：鼠标滑过时字体的颜色。
+
+neon\_text.js霓虹灯文字插件的github地址为：https://github.com/KryvenkoSergiy/neon-text-generator
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_622">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_623">
+                        nanobar-轻量级纯js进度条插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_623" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610171528.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+nanobar.js是一款轻量级的纯js进度条插件。这款进度条插件兼容ie8浏览器，它使用简单，并提供一些方法来控制进度条的当前进度。
+内容：
+
+
+简要教程
+
+
+nanobar.js是一款轻量级的纯js进度条插件。这款进度条插件兼容ie8浏览器，它使用简单，并提供一些方法来控制进度条的当前进度。
+
+ 安装
+可以通过bower或npm来安装nanobar.js进度条插件。
+
+$ bower install nanobar
+$ npm install nanobar
+
+
+ 使用方法
+在页面中引入nanobar.min.js文件。
+
+&amp;lt;script src=&#34;path/to/nanobar.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+可以使用new Nanobar()的方法来生成一个新的进度条实例对象。
+ 
+var nanobar = new Nanobar( options );
+ 
+ 可用的options参数有：
+ 
+ 
+id：String类型，可选参数。容纳nanobar的div容器的id。
+ 
+classname：String类型，可选参数。容纳nanobar的div容器的class。
+ 
+target：DOM元素，可选参数。nanobar的目标元素，nanobar会被放置到这个元素的顶部位置。
+ 
+ 通过nanobar.go(percentage)方法来移动进度条。
+ 
+ 示例代码
+ 
+var options = {
+classname: &#39;my-class&#39;,
+id: &#39;my-id&#39;,
+target: document.getElementById(&#39;myDivId&#39;)
+};
+var nanobar = new Nanobar( options );
+//move bar
+nanobar.go( 30 ); // size bar 30%
+nanobar.go( 76 ); // size bar 76%
+// size bar 100% and and finish
+nanobar.go(100);
+
+ 
+ CSS样式
+ Nanobar带有class.bar，它的容器带有class .nanobar。
+ 
+.nanobar {
+width: 100\%;
+height: 4px;
+z-index: 9999;
+top:0
+}
+.bar {
+width: 0;
+height: 100\%;
+transition: height .3s;
+background:#000;
+} 
+ 
+ nanobar进度条插件的github地址为：https://github.com/jacoborus/nanobar
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_623">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_624">
+                        jquery仿京东商城商品切换选项卡特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_624" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611231457.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用SuperSlide.js来制作的仿京东商城商品切换选项卡jquery特效。该选项卡特效兼容ie8浏览器，适合用于制作各种商品切换展示效果，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一款使用SuperSlide.js来制作的仿京东商城商品切换选项卡jquery特效。该选项卡特效兼容ie8浏览器，适合用于制作各种商品切换展示效果，非常实用。
+
+
+ 使用方法
+在页面中引入样式文件style.css和jquery.min.js、jquery.SuperSlide.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;jquery.SuperSlide.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该商品切换选项卡的基本HTML结构如下：
+
+&amp;lt;div class=&#34;tabox&#34;&amp;gt;
+&amp;lt;div class=&#34;hd&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34; &#34;&amp;gt;疯狂抢购&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34; &#34;&amp;gt;猜您喜欢&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34; &#34;&amp;gt;热卖商品&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34; &#34;&amp;gt;热评商品&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;on&#34;&amp;gt;新品上架&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bd&#34;&amp;gt;
+&amp;lt;ul class=&#34;lh&#34; style=&#34;display: none;&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;p-img ld&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.1.jpg&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-name&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;艾家纺全棉加厚磨毛四件套&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-price&#34;&amp;gt;京东价：
+&amp;lt;strong&amp;gt;￥399.00&amp;lt;/strong&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&#34;lh&#34; style=&#34;display: none;&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;p-img ld&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;
+&amp;lt;img src=&#34;images/2.1.jpg&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-name&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;安钛克（Antec） 黑化外型设计电源&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-price&#34;&amp;gt;京东价：
+&amp;lt;strong&amp;gt;￥399.00&amp;lt;/strong&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&#34;lh&#34; style=&#34;display: none;&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;p-img ld&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;
+&amp;lt;img src=&#34;images/3.1.jpg&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-name&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;冬季健身TOP1！瑞亚特仰卧板加送俯卧撑架&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-price&#34;&amp;gt;京东价：
+&amp;lt;strong&amp;gt;￥187.00&amp;lt;/strong&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&#34;lh&#34; style=&#34;display: none;&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;p-img ld&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;
+&amp;lt;img src=&#34;images/2.3.jpg&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-name&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;希捷（Seagate）1TB &amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-price&#34;&amp;gt;京东价：
+&amp;lt;strong&amp;gt;￥438.00&amp;lt;/strong&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&#34;lh&#34; style=&#34;display: block;&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;p-img ld&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;
+&amp;lt;img src=&#34;images/2.5.jpg&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-name&#34;&amp;gt;
+&amp;lt;a href=&#34;http://www.17sucai.com/&#34;&amp;gt;大水牛（BUBALUS）电脑机箱&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;p-price&#34;&amp;gt;京东价：
+&amp;lt;strong&amp;gt;￥112.00&amp;lt;/strong&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化创建
+在页面DOM元素加载完毕之后，通过slide()方法来初始化该商品切换选项卡插件：
+
+jQuery(&#34;.tabox&#34;).slide({delayTime: 0}); 
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_624">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_625">
+                        Material design风格浮动按钮特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_625" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611121420.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+material-floating-button是一款使用纯Js制作的Material design风格浮动按钮特效。该Material design风格浮动按钮特效提供4种动画特效，它们都可以在鼠标滑过按钮时以炫酷的方式展开按钮。
+内容：
+
+
+简要教程
+
+
+material-floating-button是一款使用纯Js制作的Material design风格浮动按钮特效。该Material design风格浮动按钮特效提供4种动画特效，它们都可以在鼠标滑过按钮时以炫酷的方式展开按钮。
+
+ 安装
+可以通过npm来安装该插件。
+
+npm install mfb --save
+
+
+ 使用方法
+在页面中引入mfb.css和mfb.js文件。
+
+&amp;lt;link href=&#34;path/to/css/mfb.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/js/mfb.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+创建浮动按钮的HTML结构如下：
+
+&amp;lt;ul id=&#34;menu&#34; class=&#34;mfb-component--br mfb-zoomin&#34; data-mfb-toggle=&#34;hover&#34;&amp;gt;
+&amp;lt;li class=&#34;mfb-component\_\_wrap&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;mfb-component\_\_button--main&#34;&amp;gt;
+&amp;lt;i class=&#34;mfb-component\_\_main-icon--resting ion-plus-round&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;i class=&#34;mfb-component\_\_main-icon--active ion-close-round&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;mfb-component\_\_list&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; data-mfb-label=&#34;Child Button 1&#34; class=&#34;mfb-component\_\_button--child&#34;&amp;gt;
+&amp;lt;i class=&#34;mfb-component\_\_child-icon ion-social-github&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34; data-mfb-label=&#34;Child Button 2&#34; class=&#34;mfb-component\_\_button--child&#34;&amp;gt;
+&amp;lt;i class=&#34;mfb-component\_\_child-icon ion-social-octocat&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34;
+ data-mfb-label=&#34;Child Button 3&#34; class=&#34;mfb-component\_\_button--child&#34;&amp;gt;
+&amp;lt;i class=&#34;mfb-component\_\_child-icon ion-social-twitter&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+其中，使用的class的含义如下：
+
+
+mfb-component–br：位置class，可用的还有：mfb-component–tl, mfb-component–br, mfb-component–tr, mfb-component–bl。
+
+mfb-zoomin：动画方式，可选的有：mfb-zoomin, mfb-slidein, mfb-slidein-spring 和 mfb-fountain。
+
+data-mfb-toggle=&#39;hover&#39;：打开按钮的事件，如果需要点击打开按钮，可以将事件切换为click。
+
+material-floating-button浮动按钮特效的github地址是：https://github.com/nobitagit/material-floating-button
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_625">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_626">
+                        可以为任何元素制作视觉差效果的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_626" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608141512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+saparallax.js是一款可以为任何元素制作视觉差效果的jQuery插件。该视觉差插件通过自定义元素的滚动速度，使背景元素和前景元素在页面滚动时产生视觉差特效。
+内容：
+
+
+简要教程
+
+
+saparallax.js是一款可以为任何元素制作视觉差效果的jQuey插件。该视觉差插件通过自定义元素的滚动速度，使背景元素和前景元素在页面滚动时产生视觉差特效。
+
+ 使用方法
+在页面中引入jquery和saparallax.js文件。
+
+
+
+
+
+ HTML结构
+为你需要慢速滚动的元素添加data-sabglayer属性。例如为一幅图片制作视觉差效果：
+
+
+
+
+
+
+ 元素居中
+如果你通过left: 50\%; translate: transformX: -50\%来居中元素，同时又想为该元素制作视觉差效果，可以通过添加下面的data属性来实现：
+
+data-sabglayer=&#34;centered&#34; 
+
+
+ 滚动速度
+要创建各种不同的元素滚动速度，你只需要简单的为data-sabglayer属性设置0-2之间的浮点数。0表示元素的速度为正常滚动速度。2表示元素在滚动时静止在页面上。如果数值大于2，那么元素在页面滚动时会向上运动。
+需要注意的是，元素居中和设置滚动速度不可以同时使用。当你使用了元素居中时候，元素的滚动速度为正常速度。
+saparallax.js滚动视觉差插件的github地址为：https://github.com/justMoritz/saparallax.js。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_626">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_627">
+                        功能齐全的jQuery倒计时插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_627" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608041452.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery.countdown是一款功能齐全的jQuery倒计时插件。jQuery.countdown.js一个文件中集合了所有的倒计时功能，它能够显示各种时间格式，并提供回调函数。
+内容：
+
+
+简要教程
+
+
+jQuery.countdown是一款功能齐全的jQuery倒计时插件。jQuery.countdown.js一个文件中集合了所有的倒计时功能，它能够显示各种时间格式，并提供回调函数。它的特点还有：
+
+内置各种时间格式。
+多元化支持。
+支持i118。
+支持日期从2011年开始。
+
+
+ 安装
+可以通过bower来安装jQuery.countdown插件。
+
+bower install jquery.countdown
+
+
+ 使用方法
+在页面中引入jquery1.7+和jquery.countdown.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.countdown.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+可以使用任何DOM元素作为容器。
+
+&amp;lt;span id=&#34;clock&#34;&amp;gt;&amp;lt;/span&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该倒计时插件。
+
+$(&#39;div#clock&#39;).countdown(finalDate[, callback]);
+
+该插件也支持jQuery的.on()方法来处理回调函数。
+
+$(&#39;div#clock&#39;).countdown(finalDate)
+.on(&#39;update.countdown&#39;, callback)
+.on(&#39;finish.countdown&#39;, callback); 
+
+
+ 配置参数
+finalDate：要倒计时的目标时间。该参数可以是以下任意格式：
+
+一个原生的日期对象。
+时间的毫秒数。
+字符串格式的日期：
+
+YYYY/MM/DD
+MM/DD/YYYY
+YYYY/MM/DD hh:mm:ss
+MM/DD/YYYY hh:mm:ss
+
+
+
+callback：回调函数。
+
+ 配置对象
+插件可以在第二个参数中接收一个配置对象。通过该配置对象可以自定义插件。
+
+$(&#39;div#clock&#39;).countdown(finalDate, {
+elapse: &#39;{bool} Allow to continue after finishes&#39;,
+precision:&#39;{int} The update rate in milliseconds&#39;
+})
+
+
+ 事件
+该倒计时插件在状态改变时会触发下面的一些事件：
+
+update.countdown
+finish.countdown
+stop.countdown
+
+
+ 事件对象
+多数情况下你需要event.strftime来格式化倒计时器，你可以访问下面的所有参数值：
+
+{
+type: &#39;{String} The namespaced event type {update,finish,stop}.countdown&#39;,
+strftime: &#39;{Function} The formatter function&#39;,
+finalDate:&#39;{Date} The parsed final date native object&#39;,
+elapsed:&#39;{bool} Passed away the final date?&#39;
+offset: {
+seconds:&#39;{int} Seconds left for the next minute&#39;,
+minutes:&#39;{int} Minutes left for the next hour&#39;,
+hours:&#39;{int} Hours left until next day&#39;,
+daysToWeek: &#39;{int} Days left until next week&#39;
+daysToMonth:&#39;{int} Days left until next month&#39;
+totalDays:&#39;{int} Total amount of days left until final date&#39;,
+weeks:&#39;{int} Weeks left until the final date&#39;,
+months: &#39;{int} Months left until final date&#39; ,
+years:&#39;{int} Year left until final date&#39;
+}
+} 
+
+
+ 格式化时间
+event.strftime为格式化时间的方法，它根据给定的格式字符串中的指令来格式化偏移日期。它的格式是使用\%符号来分隔参数，任何不带\%符号的字符串将被原样输出。
+
+event.strftime(&#39;\%W weeks \%-d days \%-H h \%M min \%S sec&#39;);
+// =&amp;gt; 1 星期 2 天 3 小时 04 分 05 秒
+
+数值可以前导0，或不带0。如果不带0则需要在数值前添加-符号。
+
+
+
+
+前导0格式（Directive）
+不带前导0（Blank-padded）
+描述
+
+
+
+
+\%Y
+\%-Y
+倒计时年份
+
+
+\%m
+\%-m
+倒计时月份
+
+
+\%n
+\%-n
+Days left until the next complete month
+
+
+\%w
+\%-w
+倒计时星期
+
+
+\%d
+\%-d
+倒计时天数
+
+
+\%D
+\%-D
+剩余的总天数
+
+
+\%H
+\%-H
+剩余的小时数
+
+
+\%M
+\%-M
+剩余的分钟数
+
+
+\%S
+\%-S
+剩余的秒数
+
+
+
+
+jQuery.countdown倒计时插件的github地址为：https://github.com/hilios/jquery.countdown
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_627">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_628">
+                        仿Key社游戏风格jQuery右键菜单
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_628" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609041507.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+GalMenu.js是一款仿Key社游戏风格的右键菜单特效jQuery插件。该插件将原生的浏览器右键菜单转换为一个动画的圆形菜单，并且带音效，效果非常的炫酷。
+内容：
+
+
+简要教程
+
+
+GalMenu.js是一款仿Key社游戏风格的右键菜单特效jQuery插件。该插件将原生的浏览器右键菜单转换为一个动画的圆形菜单，并且带音效，效果非常的炫酷。
+Key社游戏是ビジュアルアーツ(Visual Art&#39;s)旗下的一个品牌，它位于日本大阪市的一所游戏制作公司，以制作感人的Galgame而著称于业界。Key最著名的四季四部曲---春之《Clannad》、夏之《Air》、秋之《One~辉之季节~》、冬之《Kanon》。
+
+ 使用方法
+在页面中引入GalMenu.css，jquery和GalMenu.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/GalMenu.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/GalMenu.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用下面的代码作为右键菜单的HTML结构：
+
+&amp;lt;div class=&#34;GalMenu GalDropDown&#34;&amp;gt;
+&amp;lt;div class=&#34;circle&#34; id=&#34;gal&#34;&amp;gt;
+&amp;lt;div class=&#34;ring&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;Home&#34; class=&#34;menuItem&#34;&amp;gt;Home&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;Blog&#34; class=&#34;menuItem&#34;&amp;gt;Blog&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;About&#34; class=&#34;menuItem&#34;&amp;gt;About&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;Contact&#34; class=&#34;menuItem&#34;&amp;gt;Contact&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;Social&#34; class=&#34;menuItem&#34;&amp;gt;Social&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; title=&#34;Other&#34; class=&#34;menuItem&#34;&amp;gt;other&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+然后创建一个全屏的遮罩层，用于在右键菜单出现时，作为屏幕的遮罩。
+
+&amp;lt;div id=&#34;overlay&#34; style=&#34;opacity: 1; cursor: pointer;&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为右键菜单的菜单项设置背景图片。
+
+.ring a:nth-of-type(1) { background-image: url(&#34;1.jpg&#34;); }
+.ring a:nth-of-type(2) { background-image: url(&amp;quot;2.jpg&amp;quot;); }
+.ring a:nth-of-type(3) { background-image: url(&amp;quot;3.jpg&amp;quot;); }
+.ring a:nth-of-type(4) { background-image: url(&amp;quot;4.jpg&amp;quot;); }
+.ring a:nth-of-type(5) { background-image: url(&amp;quot;5.jpg&amp;quot;); }
+.ring a:nth-of-type(6) { background-image: url(&amp;quot;6.jpg&amp;quot;); }
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过GalMenu()方法来初始化该右键菜单插件。
+
+$(&#39;body&#39;).GalMenu({
+&#39;menu&#39;: &#39;GalDropDown&#39;
+})
+
+通过下面的JS代码来是菜单项形成一个圆形。
+
+for (var i = 0,
+l = items.length; i &amp;lt; l; i++) {
+items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + &#34;\%&#34;;
+items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + &#34;\%&#34;
+}
+
+
+ 配置参数
+GalMenu.js有2个可用的配置参数：
+
+
+click\_to\_close：是否在点击遮罩层时关闭右键菜单，默认为true。
+
+stay\_open：是否一直显示右键菜单，默认为false。
+
+GalMenu.js右键菜单插件的github地址为：https://github.com/LanlingKira/key\_style\_right\_click\_menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_628">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_629">
+                        Skippr-最简洁实用的jQuery幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_629" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608231705.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Skippr是一款简洁实用的jQuery幻灯片插件。该幻灯片的特点是易于使用，它需要的HTML代码非常简单，并提供各种参数来控制幻灯片的播放。
+内容：
+
+
+简要教程
+
+
+Skippr是一款简洁实用的jQuery幻灯片插件。该幻灯片的特点是易于使用，它需要的HTML代码非常简单，并提供各种参数来控制幻灯片的播放。
+
+ 安装
+可以通过bower来安装skippr幻灯片插件。
+
+bower install skippr
+
+
+ 使用方法
+在页面中引入jQuery和skippr.css和skippr.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;dist/skippr.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery/1.11.0/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/skippr.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;容器来包裹幻灯片，每个幻灯片可以通过background-image属性来设置背景图片。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div id=&#34;theTarget&#34;&amp;gt;
+&amp;lt;div style=&#34;background-image: url(img/image1.jpg)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div style=&#34;background-image: url(img/image2.jpg)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div style=&#34;background-image: url(img/image3.jpg)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div style=&#34;background-image: url(img/image4.jpg)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div style=&#34;background-image: url(img/image5.jpg)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过skippr()方法来初始化该幻灯片插件。
+
+$(document).ready(function(){
+$(&amp;quot;#theTarget&amp;quot;).skippr();
+});
+
+
+ 配置参数
+可以以对象的方式在skippr()中传入配置参数：
+
+$(&#34;#theTarget&#34;).skippr({
+transition: &#39;slide&#39;,
+speed: 1000,
+easing: &#39;easeOutQuart&#39;,
+navType: &#39;block&#39;,
+childrenElementType: &#39;div&#39;,
+arrows: true,
+autoPlay: false,
+autoPlayDuration: 5000,
+keyboardOnAlways: true,
+hidePrevious: false
+});
+
+
+
+
+
+参数
+类型
+可取值
+描述
+默认值
+
+
+
+
+transition
+string
+fade,slide
+指定过渡动画的类型。幻灯片的过渡动画使用velocity.js来加速。
+slide
+
+
+speed
+int
+任何整数值
+动画过渡的持续时间，单位毫秒。
+500
+
+
+easing
+string
+jQuery UI easing值
+过渡动画的easing效果。
+easeOutQuart
+
+
+navType
+string
+block, bubble
+导航按钮的样式。
+block
+
+
+childrenElementType
+string
+div, img
+选择目标元素的子元素。
+div
+
+
+arrows
+bool
+true,false
+是否显示前后箭头导航按钮。
+true
+
+
+autoPlay
+bool
+true,false
+是否自动播放。
+false
+
+
+autoPlayDuration
+int
+任何整数值
+自动播放时的切换时间。单位毫秒。
+5000
+
+
+keyboardOnAlways
+bool
+true,false
+是否总是允许使用键盘方向键来导航。
+true
+
+
+hidePrevious
+bool
+true,false
+是否在第一张幻灯片时隐藏向前导航按钮。
+false
+
+
+
+
+skippr幻灯片插件的github地址为：https://github.com/austenpayan/skippr
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_629">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_63">
+                        jQuery的图片展示插件imgZoomAndRotate
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_63" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811071523.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+imgZoomAndRotate是一款基于jQuery的图片展示插件。该图片展示插件支持图片循环切换，缩放，旋转，拖拽。
+内容：
+
+
+简要教程
+
+
+imgZoomAndRotate是一款基于jQuery的图片展示插件。该图片展示插件支持图片循环切换，缩放，旋转，拖拽。它的特点还有：
+
+支持在iframe下全屏展示和操作图片；
+添加上一张，下一张，左旋，右旋，和关闭图片按钮的功能；
+添加十字键盘切换图片和进行缩放；
+支持图片元素在dom不同的层级下同时进行绑定；
+缩放(原有功能)
+
+
+ 使用方法
+在页面中引入jquery、jquery.mousewheel.js、jquery.drag.js和imgZoomAndRotate.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.mousewheel.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.drag.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/imgZoomAndRotate.js&#34; &amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+可以通过下面的方法来在页面构建一组图片。
+
+&amp;lt;div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;span href=&#34;##&#34; id=&#34;#&#34;&amp;gt;
+&amp;lt;img src=&#34;img/01.jpg&#34; class=&#39;zoomImgs&#39;&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;img src=&#34;img/02.jpg&#34; class=&#39;zoomImgs&#39;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;img src=&#34;img/03.jpg&#34; class=&#39;zoomImgs&#39;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;img src=&#34;img/04.jpg&#34; class=&#39;zoomImgs&#39;&amp;gt;
+&amp;lt;img src=&#34;img/05.jpg&#34; class=&#39;zoomImgs&#39;&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;img src=&#34;img/06.png&#34; class=&#34;zoomImgs&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过imgZoomAndRotate()方法来初始化该插件。
+
+$(&#39;.zoomImgs&#39;).imgZoomAndRotate({&#39;loop&#39;:true})
+
+ 该基于jQuery的图片展示插件的github网址为：https://github.com/lenisleopold/imgZoomAndRotate
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_63">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_630">
+                        纯js实用格式化货币插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_630" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610031641.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+currencyFormatter.js是一款简单实用的纯js格式化货币插件。该插件包含155种不同国家的货币，以及715种不同语言的本地化设置。它还能处理某些不采用的货币，功能非常强大。
+内容：
+
+
+简要教程
+
+
+currencyFormatter.js是一款简单实用的纯js格式化货币插件。该插件包含155种不同国家的货币，以及715种不同语言的本地化设置。它还能处理某些不采用的货币，功能非常强大。
+
+ 使用方法
+在页面中引入currencyFormatter.js文件。
+
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;currencyFormatter.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+通过OSREC.CurrencyFormatter.format(number, parameters)方法可以非常容易的格式一个货币数值。只需要简单的在配置参数中设置你需要的格式即可。 参数的格式如下：
+
+var parameters = 
+{ 
+currency: &#39;EUR&#39;,// If currency is not supplied, defaults to USD
+symbol: &#39;€&#39;,// Overrides the currency&#39;s default symbol
+locale: &#39;fr&#39;, // Overrides the currency&#39;s default locale (see supported locales)
+decimal:&#39;,&#39;,// Overrides the locale&#39;s decimal character
+group:&#39;.&#39;,// Overrides the locale&#39;s group character (thousand separator)
+pattern:&#39;#,##0.00 !&#39;// Overrides the locale&#39;s default display pattern 
+// The pattern follows standard unicode currency pattern notation.
+// comma = group separator, dot = decimal separator, exclamation = currency symbol
+}
+
+通常你不需要指定所有的参数。该插件会使用适当的格式来显示每一种货币和语言设置。
+
+OSREC.CurrencyFormatter.format(2534234, { currency: &#39;INR&#39; }); // Returns ₹ 25,34,234.00
+OSREC.CurrencyFormatter.format(2534234, { currency: &#39;EUR&#39; }); // Returns 2.534.234,00 €
+OSREC.CurrencyFormatter.format(2534234, { currency: &#39;EUR&#39;, locale: &#39;fr&#39; }); // Returns 2 534 234,00 €
+
+使用OSREC.CurrencyFormatter.formatAll(parameters)方法可以将所有包含数值的元素都转换为好看的货币格式。
+html
+
+&amp;lt;div class=&#39;money&#39;&amp;gt; 1234536.32 &amp;lt;/div&amp;gt;
+&amp;lt;div class=&#39;money&#39;&amp;gt; 8798458.11 &amp;lt;/div&amp;gt;
+
+javascript
+
+OSREC.CurrencyFormatter.formatAll(
+{
+selector: &#39;.money&#39;, 
+currency: &#39;CNY&#39;
+});
+
+返回结果：
+￥1,234,536.32￥8,798,458.11
+更多的用法请参考DEMO演示页面。
+currencyFormatter.js格式化货币插件的github地址为：https://github.com/osrec/currencyFormatter.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_630">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/118/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/120/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

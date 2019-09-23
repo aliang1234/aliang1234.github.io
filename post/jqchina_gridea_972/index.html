@@ -1,0 +1,366 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单实用的jQuery全屏背景视觉差特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单实用的jQuery全屏背景视觉差特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1510/201510271737.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510271737.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510272714.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于jquery.parallax.js的简单实用的jQuery全屏背景视觉差特效。jquery.parallax.js是一个用于制作视觉差特效的jQuery插件，它可以将各个div设置为不同的层，并为各个层设置不同的速度，在鼠标移动时产生视觉差效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于jquery.parallax.js的简单实用的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>全屏背景视觉差特效。jquery.parallax.js是一个用于制作视觉差特效的<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>，它可以将各个div设置为不同的层，并为各个层设置不同的速度，在鼠标移动时产生视觉差效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该滑动开关按钮插件需要引入jQuery和jquery.parallax.min.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="dist/jquery.parallax.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该视觉差特效的HTML结构使用一个无序列表来作为背景图层，每一个列表项是一张图片，它们通过设置不同的<code>data-depth</code>属性来设置各种的运动速度。另外内容层放置在一个<code>div.wrapper</code>中，里面可以放置图片或文字。</p>
+<pre class="brush:html">
+&lt;main&gt;
+&lt;div id="overlay"&gt;&lt;/div&gt;
+&lt;ul id="scene"&gt;
+&lt;li class="layer" data-depth="0.1"&gt;
+&lt;div class="layer1"&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="layer" data-depth="0.2"&gt;
+&lt;div class="layer2"&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="wrapper"&gt;
+&lt;img alt="logo" src="img/35iw4ki.jpg"&gt;
+&lt;/div&gt;
+&lt;/main&gt; 
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在使用时需要添加下面的必要的CSS样式，其中背景图层的图片可以根据实际情况进行更改。</p>
+<pre class="brush:css">
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+overflow-y: auto;
+backface-visibility: hidden;
+}
+<p>#overlay {<br>
+background-color: #000;<br>
+position: fixed;<br>
+width: 100%;<br>
+height: 100%;<br>
+z-index: 99;<br>
+opacity: 0.08;<br>
+}</p>
+<p>#scene {<br>
+padding: 0;<br>
+margin: 0;<br>
+width: 115%;<br>
+height: 120vh;<br>
+overflow: hidden;<br>
+top: -5%;<br>
+left: -5%;<br>
+transform: translate(-50%,-50%);<br>
+-webkit-transform: translate(-50%,-50%);<br>
+}</p>
+<p>main {<br>
+width: 100%;<br>
+height: 100vh;<br>
+overflow: hidden;<br>
+}</p>
+<p>.wrapper {<br>
+position: absolute;<br>
+top: 50%;<br>
+left: 50%;<br>
+z-index: 101;<br>
+transform: translate(-50%,-50%);<br>
+-webkit-transform: translate(-50%,-50%);<br>
+text-align: center;<br>
+}</p>
+<p>.wrapper img {<br>
+width: 350px;<br>
+height: auto;<br>
+}</p>
+<p>.layer {<br>
+width: 110%;<br>
+height: 120vh;<br>
+overflow: hidden;<br>
+}</p>
+<p>.layer2 {<br>
+background-image: url(fx5wd1.png);<br>
+background-size: cover;<br>
+background-position: center;<br>
+position: absolute;<br>
+width: 100%;<br>
+height: 100%;<br>
+left: -5%;<br>
+top: -5%;<br>
+}</p>
+<p>.layer1 {<br>
+background-image: url(sp94ls.jpg);<br>
+background-position: center;<br>
+background-size: cover;<br>
+position: absolute;<br>
+width: 100%;<br>
+height: 100%;<br>
+left: -5%;<br>
+top: -5%;<br>
+}</p>
+<p>@media (max-width:700px) {<br>
+.layer2 {<br>
+background-size: cover;<br>
+background-position: center;<br>
+position: absolute;<br>
+width: 167%;<br>
+height: 77vh;<br>
+left: -69%;<br>
+top: 27%;<br>
+}</p>
+<p>.layer1 {<br>
+background-position: center;<br>
+background-size: cover;<br>
+position: absolute;<br>
+width: 100%;<br>
+height: 115%;<br>
+left: -5%;<br>
+top: -1%;<br>
+}</p>
+<p>.wrapper img {<br>
+width: 180px;<br>
+height: auto;<br>
+}<br>
+}<br>
+</pre></p>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>该视觉差特效依赖于<a href="https://github.com/IanLunn/jQuery-Parallax" target="\_blank">jquery.parallax.js</a>插件，关于该插件的详细介绍可以参考<a href="http://ianlunn.co.uk/articles/recreate-nikebetterworld-parallax/" target="\_blank">这里</a>。</p>
+<pre class="brush:js">
+$(document).ready(function () {
+$('#scene').parallax();
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510271737.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510272714.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_973">
+                                <h3 class="post-title">
+                                    简单漂亮的jQuery计时器插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

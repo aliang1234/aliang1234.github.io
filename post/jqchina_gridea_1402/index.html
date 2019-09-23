@@ -1,0 +1,385 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    tween.js可生成平滑动画效果的js动画库 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            tween.js可生成平滑动画效果的js动画库
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501271734.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501271734.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501271285.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>tween.js是一款可生成平滑动画效果的js动画库。tween.js允许你以平滑的方式修改元素的属性值。它可以通过设置生成各种类似CSS3的动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>tween.js是一款可生成平滑动画效果的js动画库。相关的动画库插件还有：<a href="http://www.htmleaf.com/jQuery/Image-Effects/201501061112.html" target="\_blank">snabbt.js 强大的jQuery动画库插件</a>和<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201501081124.html" target="\_blank">Tweene-超级强大的jQuery动画代理插件</a>。</p>
+<p>tween.js允许你以平滑的方式修改元素的属性值。你只需要告诉tween你想修改什么值，以及动画结束时它的最终值是什么，动画花费多少时间等信息，tween引擎就可以计算从开始动画点到结束动画点之间值，来产生平滑的动画效果。例如，假设你有一个对象<code>position</code>，它的坐标为 <code>x</code> 和 <code>y</code>：</p>
+<pre class="brush:js">
+var position = { x: 100, y: 0 }
+</pre>
+<p>如果你想改变 <code>x</code> 的值从100到200，你只需要这样做：</p>
+<pre class="brush:js">
+// Create a tween for position first
+var tween = new TWEEN.Tween(position);
+<p>// Then tell the tween we want to animate the x property over 1000 milliseconds<br>
+tween.to({ x: 200 }, 1000);<br>
+</pre></p>
+<p>到这里只是创建了tween对象，你需要激活它，让它开始动画：</p>
+<pre class="brush:js">
+// And set it to start
+tween.start();
+</pre>
+<p>最后为了平滑动画效果，你需要在同一个循环动画中调用<code>TWEEN.update</code>方法。代码如下：</p>
+<pre class="brush:js">
+animate();
+<p>function animate() {<br>
+requestAnimationFrame(animate);<br>
+// [...]<br>
+TWEEN.update();<br>
+// [...]<br>
+}<br>
+</pre></p>
+<p>这个动作将会更新所有被激活的tweens，在1秒钟（例如1000ms）<code>position.x</code> 将变为200。</p>
+<p>你也可以使用<code>onUpdate</code>回调函数将结果打印到控制台上。</p>
+<pre class="brush:js">
+tween.onUpdate(function() {
+console.log(this.x);
+});
+</pre>
+<p>这个函数在每次tweens被更新时都被调用。它的出现频次依赖于很多因素-例如：依赖于你的电脑或设备的运行速度。</p>
+<h3>tween.js动画</h3>
+<p>Tween.js本身不会运行，你需要通过<code>update</code>方法明确的告诉它什么时候开始运行。推荐在动画主循环中使用该方法。你可以通过调用<code>requestAnimationFrame</code>方法来获得良好的图像性能。</p>
+<p>来看下面的例子：</p>
+<pre class="brush:js">
+animate();
+<p>function animate() {<br>
+requestAnimationFrame(animate);<br>
+// [...]<br>
+TWEEN.update();<br>
+// [...]<br>
+}<br>
+</pre></p>
+<p>这里使用无参数调用方式，<code>update</code>方法将明确当前时间，以便于获取上一次动画的执行时间。</p>
+<p>你也可以为<code>update</code>方法明确一个时间：</p>
+<pre class="brush:js">
+TWEEN.update(100);
+</pre>
+<p>上面语句的意思是说：<code>update</code>的时间=100毫秒。你可以使用这种方法来明确代码中所有随时间变化的函数。例如，动画已经开始，你想所有动画都同步进行，你的<code>animate</code>代码一改像这样：</p>
+<pre class="brush:js">
+var currentTime = player.currentTime;
+TWEEN.update(currentTime);
+</pre>
+<h3>控制tween动画</h3>
+<h5>start和stop</h5>
+<p><code>Tween.start</code>和<code>Tween.stop</code>分别用于控制tween动画的开始和结束。</p>
+<p>对于已经结束和没有开始的动画，<code>Tween.stop</code>方法不起作用。<code>Tween.start</code>方法同样接收一个时间参数。如果你使用了该参数，tween动画将在延时该时间数后才开始动画。否则它将立刻开始动画。</p>
+<h5>update</h5>
+<p>可以通过<code>TWEEN.update</code>方法来执行动画的更新。</p>
+<h5>chain</h5>
+<p>如果你想制作多个多行，例如：一个动画在另一个动画结束后开始。可以通过<code>chain</code>方法来使实现。如下的代码，tweenB 在 tweenA 之后开始动画:</p>
+<pre class="brush:js">
+tweenA.chain(tweenB);
+</pre>
+<p>可以像下面这样制作一个无限循环的动画：</p>
+<pre class="brush:js">
+tweenA.chain(tweenB);
+tweenB.chain(tweenA);
+</pre>
+<h5>repeat</h5>
+<p>如果你想制作循环动画可以使用<code>chain</code>来实现，但是更好的方法是使用<code>repeat</code>方法。它接收一个用于描述你想循环多少次的参数：</p>
+<pre class="brush:js">
+tween.repeat(10); // repeats 10 times and stops
+tween.repeat(Infinity); // repeats forever
+</pre>
+<h5>yoyo</h5>
+<p>这个函数只在你使用<code>repeat</code>方法是起作用。当它被激活时，tween 的效果类似yoyo效果。该效果是动画会在开始或结束处向反方向反弹。</p>
+<h5>delay</h5>
+<p><code>delay</code>方法用于控制动画之间的延时。</p>
+<pre class="brush:js">
+tween.delay(1000);
+tween.start();
+</pre>
+<h3>全局方法</h3>
+<p>以下的方法定义在 TWEEN 的全局对象中，其中大多数方法你都用不上，除了<code>update</code>方法：</p>
+<h5>TWEEN.update(time)</h5>
+<p>该方法用于所有被激活的tweens，如果<code>time</code>没有被指定，将使用当前时间。</p>
+<h5>TWEEN.getAll 和 TWEEN.removeAll</h5>
+<p>这两个方法用于胡获取被激活的tweens数组的一个引用，或从数组中删除所有tweens。</p>
+<h5>TWEEN.add(tween) 和 TWEEN.remove(tween)</h5>
+<p>用于向被激活的tweens中添加一个tween，或移除一个tween。</p>
+<p>以上方法通常只是在内部使用，一般情况下你了解即可。</p>
+<h3>可用的easing函数：TWEEN.Easing</h3>
+<p>tween.js提供了一些可用的easing函数。可用函数有：Linear, Quadratic, Cubic, Quartic, Quintic, Sinusoidal, Exponential, Circular, Elastic, Back 和 Bounce。easing 类型分为: In, Out 和 InOut.</p>
+<h3>使用自定义的Easing函数</h3>
+<p>你不但可以使用tween.js提供的easing函数，还可以自定义easing函数。但必须遵守下面的规则：</p>
+<ul>
+<li>它必须接收一个参数。</li>
+<li>它必须基于输入参数返回一个值。</li>
+</ul>
+<p>easing函数仅在每个tween每次被更新时调用，而不管有多少属性被改变。结果随后会被用于初始值：</p>
+<pre class="brush:js">
+easedElapsed = easing(k);
+for each property:
+newPropertyValue = initialPropertyValue + propertyDelta * easedElapsed;
+</pre>
+<p>下面是一个使用Math.floor来做easing效果的例子：</p>
+<pre class="brush:js">
+function tenStepEasing(k) {
+return Math.floor(k * 10) / 10;
+}
+</pre>
+<p>你可以在tween 这样使用它：</p>
+<pre class="brush:js">
+tween.easing(tenStepEasing);
+</pre>
+<h3>回调函数</h3>
+<p>另外一个有用的特性是你可以在每次tween循环周期的指定时间点调用自定义的函数。</p>
+<p>例如：假设你想使一些不能直接修改参数的对象执行动画，要访问该对象的参数只能通过setter方法，你可以通过<code>update</code>方法的回调函数来设置新的setter值。</p>
+<pre class="brush:js">
+var trickyObjTween = new TWEEN.Tween({
+propertyA: trickyObj.getPropertyA(),
+propertyB: trickyObj.getPropertyB()
+})
+.to({ propertyA: 100, propertyB: 200 })
+.onUpdate(function() {
+this.setA( this.propertyA );
+this.setB( this.propertyB );
+});
+</pre>
+<p>或者如果你想确认tween动画开始后某个对象指定状态下的某个值，你可以通过<code>start</code>回调来获取它：</p>
+<pre class="brush:js">
+var tween = new TWEEN.Tween(obj)
+.to({ x: 100 })
+.onStart(function() {
+this.x = 0;
+});
+</pre>
+<h5>onStart</h5>
+<p>tween开始动画前的回调函数。</p>
+<h5>onStop</h5>
+<p>tween结束动画后的回调函数。</p>
+<h5>onUpdate</h5>
+<p>在tween每次被更新后执行。</p>
+<h5>onComplete</h5>
+<p>在tween动画全部结束后执行。</p>
+<p>更多关于tween的资料请参考：<a href="https://github.com/sole/tween.js/blob/master/docs/user\_guide.md" target="\_blank">https://github.com/sole/tween.js/blob/master/docs/user\_guide.md</a></p>
+<p>tween的相关资料：<a href="http://learningthreejs.com/blog/2011/08/17/tweenjs-for-smooth-animation/" target="\_blank">Tween.js for Smooth Animation</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501271734.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501271285.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1403">
+                                <h3 class="post-title">
+                                    jQuery绚丽全屏飘雪花特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1456 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        js</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_465">
+                        纯js实现电子时钟特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_465" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1709/201709071448.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用纯js实现电子时钟特效。该电子时钟可以显示时间，星期几，以及是上午还是下午。它使用简单，非常容易集成到项目中。
+内容：
+
+
+简要教程
+
+
+这是一款使用纯js实现电子时钟特效。该电子时钟可以显示时间，星期几，以及是上午还是下午。它使用简单，非常容易集成到项目中。
+
+ 使用方法
+在页面中引入电子时钟的样式文件main.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/main.css&#34;&amp;gt;
+
+
+ HTML结构
+该电子时钟的基本HTML结构如下：
+
+&amp;lt;main&amp;gt;
+&amp;lt;!-- 星期几 --&amp;gt;
+&amp;lt;div class=&#34;days&#34;&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;sunday&#34;&amp;gt;星期日&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;monday&#34;&amp;gt;星期一&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;tuesday&#34;&amp;gt;星期二&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;wednesday&#34;&amp;gt;星期三&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;thursday&#34;&amp;gt;星期四&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;friday&#34;&amp;gt;星期五&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;day&#34;&amp;gt;
+&amp;lt;p class=&#34;saturday&#34;&amp;gt;星期六&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- CLOCK --&amp;gt;
+&amp;lt;div class=&#34;clock&#34;&amp;gt;
+&amp;lt;!-- 小时 --&amp;gt;
+&amp;lt;div class=&#34;numbers&#34;&amp;gt;
+&amp;lt;p class=&#34;hours&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p class=&#34;placeholder&#34;&amp;gt;88&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;colon&#34;&amp;gt;
+&amp;lt;p&amp;gt;:&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 分 --&amp;gt;
+&amp;lt;div class=&#34;numbers&#34;&amp;gt;
+&amp;lt;p class=&#34;minutes&#34;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p class=&#34;placeholder&#34;&amp;gt;88&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;colon&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;:&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 秒 --&amp;gt;
+&amp;lt;div class=&amp;quot;numbers&amp;quot;&amp;gt;
+&amp;lt;p class=&amp;quot;seconds&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;placeholder&amp;quot;&amp;gt;88&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 上午 / 下午 --&amp;gt;
+&amp;lt;div class=&amp;quot;am-pm&amp;quot;&amp;gt;
+&amp;lt;!-- AM --&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;p class=&amp;quot;am&amp;quot;&amp;gt;am&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- PM --&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;p class=&amp;quot;pm&amp;quot;&amp;gt;pm&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- END CLOCK --&amp;gt;
+&amp;lt;/main&amp;gt;
+
+
+ JavaScript
+该电子时钟通过下面的js代码来获取系统时间，并通过定时器来动态更新时间的显示。
+
+window.onload = function(){
+time();
+ampm();
+whatDay();
+setInterval(function(){
+time();
+ampm();
+whatDay();
+}, 1000);
+};
+//gets current time and changes html to reflect it
+function time(){
+var date = new Date(),
+hours = date.getHours(),
+minutes = date.getMinutes(),
+seconds = date.getSeconds();
+//make clock a 12 hour clock instead of 24 hour clock
+hours = (hours &amp;gt; 12) ? (hours - 12) : hours;
+hours = (hours === 0) ? 12 : hours;
+//invokes function to make sure number has at least two digits
+hours = addZero(hours);
+minutes = addZero(minutes);
+seconds = addZero(seconds);
+//changes the html to match results
+document.getElementsByClassName(&#39;hours&#39;)[0].innerHTML = hours;
+document.getElementsByClassName(&#39;minutes&#39;)[0].innerHTML = minutes;
+document.getElementsByClassName(&#39;seconds&#39;)[0].innerHTML = seconds;
+}
+//turns single digit numbers to two digit numbers by placing a zero in front
+function addZero (val){
+return (val &amp;lt;= 9) ? (&amp;quot;0&amp;quot; + val) : val;
+}
+//lights up either am or pm on clock
+function ampm(){
+var date = new Date(),
+hours = date.getHours(),
+am = document.getElementsByClassName(&amp;quot;am&amp;quot;)[0].classList,
+pm = document.getElementsByClassName(&amp;quot;pm&amp;quot;)[0].classList;
+(hours &amp;gt;= 12) ? pm.add(&amp;quot;light-on&amp;quot;) : am.add(&amp;quot;light-on&amp;quot;);
+(hours &amp;gt;= 12) ? am.remove(&amp;quot;light-on&amp;quot;) : pm.remove(&amp;quot;light-on&amp;quot;);
+}
+//lights up what day of the week it is
+function whatDay(){
+var date = new Date(),
+currentDay = date.getDay(),
+days = document.getElementsByClassName(&amp;quot;day&amp;quot;);
+//iterates through all divs with a class of &amp;quot;day&amp;quot;
+for (x in days){
+//list of classes in current div
+var classArr = days[x].classList;
+(classArr !== undefined) &amp;amp;&amp;amp; ((x == currentDay) ? classArr.add(&amp;quot;light-on&amp;quot;) : classArr.remove(&amp;quot;light-on&amp;quot;));
+}
+}
+
+该电子时钟的github地址为：https://github.com/SlyTy7/clock
+
+
+本文版权属于jQuery之家，转载请注明出处：http://www.htmleaf.com/jQuery/Layout-Interface/201709074726.html
+
+
+上一篇：简单的Material Design风格计算器 
+下一篇：js动态炫酷数字时钟 
+
+
+
+
+
+相关插件 
+
+
+
+
+
+
+
+
+
+jQuery和CSS3精美翻页式电子时钟特效
+
+
+
+
+
+
+
+基于格林威治标准时间（GMT）的jQuery模拟时钟插件
+
+
+
+
+
+
+
+jQuery超酷3D翻页式电子时钟特效插件
+
+
+
+
+
+
+
+使用jQuery和css3制作逼真的数字时钟效果
+
+
+
+
+
+
+
+
+
+
+
+
+网友评论 
+
+
+
+
+
+ --&gt;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_465">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_469">
+                        js和CSS3仿宝丽莱Polaroid图片相册画廊
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_469" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1706/201706151520.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用纯js和CSS3制作的仿宝丽莱Polaroid图片相册画廊。开始时所有的图片被制作为Polaroid图片，堆叠放在一起。当用户使用鼠标hover图片时，图片会展开。点击图片时，最上面的图片会切换到最下面去。
+内容：
+
+
+简要教程
+
+
+这是一款使用纯js和CSS3制作的仿宝丽莱Polaroid图片相册画廊。开始时所有的图片被制作为Polaroid图片，堆叠放在一起。当用户使用鼠标hover图片时，图片会展开。点击图片时，最上面的图片会切换到最下面去。
+
+ 使用方法
+
+ HTML结构
+该宝丽莱Polaroid图片相册画廊的基本HTML结构如下：
+
+&amp;lt;div class=&#39;images&#39;&amp;gt;
+&amp;lt;img class=&#39;image&#39; src=&#39;img/1.jpg&#39;&amp;gt;
+&amp;lt;img class=&#39;image&#39; src=&#39;img/2.jpg&#39;&amp;gt;
+&amp;lt;img class=&#39;image&#39; src=&#39;img/3.jpg&#39;&amp;gt;
+&amp;lt;img class=&#39;image&#39; src=&#39;img/4.jpg&#39;&amp;gt;
+&amp;lt;img class=&#39;image&#39; src=&#39;img/5.jpg&#39;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+宝丽莱Polaroid图片相册画廊的基本CSS样式如下：
+
+.image {
+position: absolute;
+top: 50\%;
+left: 50\%;
+height: 200px;
+width: 200px;
+margin-top: -110px;
+margin-left: -105px;
+border: 5px solid #fff;
+border-bottom-width: 15px;
+-moz-box-shadow: 0 2px 5px rgba(30, 30, 30, 0.25);
+-webkit-box-shadow: 0 2px 5px rgba(30, 30, 30, 0.25);
+box-shadow: 0 2px 5px rgba(30, 30, 30, 0.25);
+z-index: 2;
+-moz-transition: -moz-transform 0.3s ease-in-out;
+-o-transition: -o-transform 0.3s ease-in-out;
+-webkit-transition: -webkit-transform 0.3s ease-in-out;
+transition: transform 0.3s ease-in-out;
+}
+.image:first-child {
+-moz-transform: rotate(8deg);
+-ms-transform: rotate(8deg);
+-webkit-transform: rotate(8deg);
+transform: rotate(8deg);
+}
+.image:nth-child(2) {
+-moz-transform: rotate(2deg);
+-ms-transform: rotate(2deg);
+-webkit-transform: rotate(2deg);
+transform: rotate(2deg);
+}
+.image:nth-child(3) {
+-moz-transform: rotate(-3deg);
+-ms-transform: rotate(-3deg);
+-webkit-transform: rotate(-3deg);
+transform: rotate(-3deg);
+}
+.image:nth-child(4) {
+-moz-transform: rotate(-10deg);
+-ms-transform: rotate(-10deg);
+-webkit-transform: rotate(-10deg);
+transform: rotate(-10deg);
+}
+.image:last-child {
+-moz-transform: rotate(-5deg);
+-ms-transform: rotate(-5deg);
+-webkit-transform: rotate(-5deg);
+transform: rotate(-5deg);
+}
+
+当鼠标hover图片时，使用下面的代码来制作图片展开动画效果。
+
+.images:hover .image:nth-child(4) {
+-moz-transform: rotate(10deg) translateX(50px);
+-ms-transform: rotate(10deg) translateX(50px);
+-webkit-transform: rotate(10deg) translateX(50px);
+transform: rotate(10deg) translateX(50px);
+}
+.images:hover .image:nth-child(3) {
+-moz-transform: rotate(3deg) translateX(75px);
+-ms-transform: rotate(3deg) translateX(75px);
+-webkit-transform: rotate(3deg) translateX(75px);
+transform: rotate(3deg) translateX(75px);
+}
+.images:hover .image:nth-child(2) {
+-moz-transform: rotate(-2deg) translateX(-50px);
+-ms-transform: rotate(-2deg) translateX(-50px);
+-webkit-transform: rotate(-2deg) translateX(-50px);
+transform: rotate(-2deg) translateX(-50px);
+}
+.images:hover .image:first-child {
+-moz-transform: rotate(-8deg) translateX(-75px) translateY(-10px);
+-ms-transform: rotate(-8deg) translateX(-75px) translateY(-10px);
+-webkit-transform: rotate(-8deg) translateX(-75px) translateY(-10px);
+transform: rotate(-8deg) translateX(-75px) translateY(-10px);
+}
+.image.slide-right {
+-moz-transform: rotate(290deg) translateX(250px);
+-ms-transform: rotate(290deg) translateX(250px);
+-webkit-transform: rotate(290deg) translateX(250px);
+transform: rotate(290deg) translateX(250px);
+}
+.image.slide-left {
+-moz-transform: rotate(-290deg) translateX(-250px);
+-ms-transform: rotate(-290deg) translateX(-250px);
+-webkit-transform: rotate(-290deg) translateX(-250px);
+transform: rotate(-290deg) translateX(-250px);
+}
+.image.back { z-index: 1; }
+
+
+ JavaScript
+最后通过下面的javascript代码来完成鼠标点击的交互动画效果。
+
+(function() {
+var cssTransition, imageOffset, imageWidth, images, queue, timeout, touch;
+cssTransition = function() {
+var body, i, len, style, vendor, vendors;
+body = document.body || document.documentElement;
+style = body.style;
+vendors = [&#39;Moz&#39;, &#39;Webkit&#39;, &#39;O&#39;];
+if (typeof style[&#39;transition&#39;] === &#39;string&#39;) {
+return true;
+}
+for (i = 0, len = vendors.length; i &amp;lt; len; i++) {if (window.CP.shouldStopExecution(1)){break;}
+vendor = vendors[i];
+if (typeof style[vendor + &#39;Transition&#39;] === &#39;string&#39;) {
+return true;
+}
+}
+window.CP.exitedLoop(1);
+return false;
+};
+queue = false;
+touch = document.documentElement[&#39;ontouchstart&#39;] !== void 0;
+images = document.querySelector(&#39;.images&#39;);
+imageWidth = images.firstElementChild.offsetWidth;
+imageOffset = images.firstElementChild.offsetLeft;
+timeout = cssTransition() ? [300, 400] : [0, 0];
+images.addEventListener((touch ? &#39;touchend&#39; : &#39;click&#39;), function(event) {
+var direction, lastClassList;
+if (queue) {
+return;
+}
+queue = true;
+if (((touch ? event.changedTouches[0].pageX : event.pageX) - imageOffset) &amp;gt; imageWidth / 2) {
+direction = &#39;slide-right&#39;;
+} else {
+direction = &#39;slide-left&#39;;
+}
+lastClassList = images.lastElementChild.classList;
+lastClassList.add(direction);
+return setTimeout(function() {
+lastClassList.remove(direction);
+lastClassList.add(&#39;back&#39;);
+return setTimeout(function() {
+images.insertBefore(images.lastElementChild, images.firstElementChild);
+lastClassList.remove(&#39;back&#39;);
+return queue = false;
+}, timeout[0]);
+}, timeout[1]);
+}, false);
+}).call(this);
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_469">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_478">
+                        纯js文字洗牌式切换特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_478" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1705/201705081526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ShuffleText是一款纯js文字洗牌式切换特效插件。该插件在鼠标滑过指定的文本时，文字会不停的逐个进行翻转，类似洗牌效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+ShuffleText是一款纯js文字洗牌式切换特效插件。该插件在鼠标滑过指定的文本时，文字会不停的逐个进行翻转，类似洗牌效果，非常炫酷。
+
+ 安装
+可以通过npm来安装ShuffleText插件。
+
+npm install shuffle-text 
+
+
+ 使用方法
+在页面中引入shuffle-text.js文件。
+
+&amp;lt;script src=&#34;path/to/shuffle-text.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+ShuffleText插件基本的HTML结构如下：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script src=&#34;shuffle-text.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;h1 id=&#34;myText&#34;&amp;gt;This is a ShuffleText.js Examle&amp;lt;/h1&amp;gt;
+&amp;lt;script&amp;gt;
+var el = document.getElementById(&#34;myText&#34;);
+var text = new ShuffleText(el);
+text.start();
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 初始化插件
+通过下面的方法为要进行洗牌切换的文字创建实例对象。
+
+var el = document.getElementById(&#34;myText&#34;);
+var text = new ShuffleText(el);
+
+
+ 方法
+ShuffleText洗牌式文字切换插件可用的方法有：
+
+//开始执行洗牌动画
+start(): void
+//结束洗牌动画
+stop(): void
+//设置文字
+setText(text: string): void
+dispose(): void
+
+ShuffleText纯js文字洗牌式切换特效插件的github地址为：https://github.com/ics-ikeda/shuffle-text
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_478">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_480">
+                        纯js百叶窗效果轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_480" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1706/201706141454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款纯js百叶窗效果轮播图插件。该js轮播图在图片切换时的效果类似于多张图片展开合成一张完整的大图。该轮播图由纯js编写，兼容ie8浏览器。
+内容：
+
+
+简要教程
+
+
+这是一款纯js百叶窗效果轮播图插件。该js轮播图在图片切换时的效果类似于多张图片展开合成一张完整的大图。该轮播图由纯js编写，兼容ie8浏览器。
+
+ 使用方法
+在页面中引入imgSwitch.min.js文件。
+
+&amp;lt;script src=&#34;&#34;path/to/js/imgSwitch.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该轮播图使用一个&amp;lt;div&amp;gt;元素来包裹一组图片。
+
+&amp;lt;div id=&#34;imgContainer&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/2.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/3.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/4.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/5.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/6.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/7.jpg&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过创建一个imgSwitch()对象来实例化一个轮播图。
+
+window.onload=function(){
+new imgSwitch(&#34;imgContainer&#34;,{
+Type:12,
+Width:943,
+Height:354,
+Pause:3000,
+Speed:&#34;fast&#34;,
+Auto:true,
+Navigate:&#34;numberic&#34;,
+NavigatePlace:&#34;outer&#34;,
+PicturePosition:&#34;left&#34;})
+}
+
+
+ 配置参数
+该轮播图可用的配置参数有：
+
+Auto:true,//是否自动播放
+Pause:3000,//暂停的时间
+Type:1,//播放类型
+Navigate:&#34;numberic&#34;,//导航，有三种，分别为no(无),numberic(数字),picture(图片)
+Width:874,//图片的宽度
+Height:211,//图片的高度
+Speed:&#34;normal&#34;,//转变的速度
+PicturePosition:&#34;inner&#34;,
+NavigatePlace:&#34;inner&#34;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_480">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_481">
+                        纯js二维码生成插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_481" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704211510.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+qrjs2.js是一款仿纯js二维码生成插件。该二维码生成插件能生成4种类型的二维码：SVG格式的二维码，data URI为SVG的图像，data URI为PNG的图像，和表格形式的二维码。
+内容：
+
+
+简要教程
+
+
+qrjs2.js是一款仿纯js二维码生成插件。该二维码生成插件能生成4种类型的二维码：SVG格式的二维码，data URI为SVG的图像，data URI为PNG的图像，和表格形式的二维码。
+
+ 安装
+可以通过npm和bower来安装qrjs2.js插件。
+
+npm install qrjs2
+bower install qrjs2
+
+
+ 使用方法
+在页面中引入qrjs2.min.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/qrjs2.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 生成svg二维码
+通过下面的代码可以生成svg格式的二维码。
+
+var svgElement = document.createElement(&#34;div&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateSVG(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+svgElement.appendChild(s);
+document.body.appendChild(svgElement); 
+
+生成后的代码如下：
+
+&amp;lt;svg viewBox=&#34;0 0 264 264&#34; style=&#34;shape-rendering:crispEdges&#34;&amp;gt;
+&amp;lt;style scoped=&#34;scoped&#34;&amp;gt;.bg{fill:#FFFFFF}.fg{fill:#373737}&amp;lt;/style&amp;gt;
+&amp;lt;rect class=&#34;bg&#34; fill=&#34;none&#34; x=&#34;0&#34; y=&#34;0&#34; width=&#34;264&#34; height=&#34;264&#34;&amp;gt;&amp;lt;/rect&amp;gt;
+&amp;lt;rect class=&#34;fg&#34; fill=&#34;none&#34; x=&#34;32&#34; y=&#34;32&#34; width=&#34;8&#34; height=&#34;8&#34;&amp;gt;&amp;lt;/rect&amp;gt;
+...
+&amp;lt;/svg&amp;gt;
+
+
+ 生成Data URI SVG格式的二维码
+通过下面的代码可以生成Data URI SVG格式的二维码。
+
+if (document.implementation.hasFeature(&#34;http://www.w3.org/2000/svg&#34;,&#34;1.1&#34;)) {
+var dataUriSvgImage = document.createElement(&#34;img&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateSVG(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+var XMLS = new XMLSerializer();
+s = XMLS.serializeToString(s);
+s = &#34;data:image/svg+xml;base64,&#34; + window.btoa(unescape(encodeURIComponent(s)));
+dataUriSvgImage.src = s;
+document.body.appendChild(dataUriSvgImage);
+}
+
+生成后的代码如下：
+
+&amp;lt;img src=&#34;data:image/svg+xml;base64,...&#34;&amp;gt;
+
+
+ 生成Data URI PNG格式的二维码
+通过下面的代码可以生成Data URI PNG格式的二维码。
+
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generatePNG(u, {
+ecclevel: &#34;M&#34;,
+format: &#34;html&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+dataUriPngImage.src = s;
+document.body.appendChild(dataUriPngImage); 
+
+生成后的代码如下：
+
+&amp;lt;img src=&#34;data:image/png;base64,...&#34;&amp;gt;
+
+
+ 生成表格格式的二维码
+通过下面的代码可以生成表格元素格式的二维码。
+
+var htmlTable = document.createElement(&#34;div&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateHTML(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+htmlTable.appendChild(s);
+document.body.appendChild(htmlTable);
+
+生成后的代码如下：
+
+&amp;lt;table style=&#34;border:32px solid #FFFFFF;background:#FFFFFF&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; border=&#34;0&#34;&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td style=&#34;width:8px;height:8px;background:#373737&#34;&amp;gt;&amp;lt;/td&amp;gt;
+...
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+qrjs2.js二维码生成插件的github地址为：https://github.com/englishextra/qrjs2
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_481">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_485">
+                        js和CSS3鼠标hover菜单文字特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_485" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1708/201708021502.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3鼠标hover菜单文字特效。该文字特效是在鼠标滑过菜单文字时，使用js和CSS3为单独的字母制作各种动画效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3鼠标hover菜单文字特效。该文字特效是在鼠标滑过菜单文字时，使用js和CSS3为单独的字母制作各种动画效果，非常炫酷。
+该鼠标hover菜单文字特效使用了大量新的CSS3特性，如css grid和css变量，因此不是所有的浏览器都支持该特效。
+下面是该鼠标hover菜单文字特效的一些截图效果：
+
+
+
+
+该鼠标hover菜单文字特效的github地址为：https://github.com/codrops/MenuHoverEffects/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_485">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_486">
+                        quietflow.js-jquery背景层动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_486" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1702/201702131447.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+quietflow.js是一款可以制作炫酷页面背景层动画效果的jquery插件。该jquery插件内置了9种不同效果的背景层动画，你可以为页面轻松的添加背景动画效果。
+内容：
+
+
+简要教程
+
+
+quietflow.js是一款可以制作炫酷页面背景层动画效果的jquery插件。该jquery插件内置了9种不同效果的背景层动画，你可以为页面轻松的添加背景动画效果。
+可用的背景层动画效果有：
+
+squareFlash
+vortex
+bouncingBalls
+shootingLines
+simpleGradient
+starfield
+layeredTriangles
+cornerSpikes
+floatingBoxes
+
+
+ 安装
+可以通过npm或bower来安装quietflow.js插件。
+
+npm install quietflow
+bower install quietflow
+
+
+ 使用方法
+在页面中引入jquery和quietflow.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/quietflow.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该插件。
+
+$(&#34;#element&#34;).quietflow();
+// 或者
+$(&#34;body&#34;).quietflow();
+
+
+ 配置参数
+quietflow.js的所有可用配置参数如下：
+
+squareFlash : {
+squareSize : 10,
+maxRed : 255,
+maxGreen : 255,
+maxBlue: 255,
+speed: 100
+},
+vortex : {
+mainRadius: 20,
+miniRadii : 30,
+backgroundCol : &amp;quot;#3498DB&amp;quot;,
+circleCol : &amp;quot;#34495E&amp;quot;,
+speed : 10
+},
+bouncingBalls : {
+specificColors: [],
+backgroundCol : &amp;quot;#ECF0F1&amp;quot;,
+maxRadius : 40,
+bounceSpeed : 50,
+bounceBallCount : 50,
+transparent : true
+},
+shootingLines : {
+backgroundCol : &amp;quot;#000&amp;quot;,
+lineColor : &amp;quot;#FFF&amp;quot;,
+speed : 150,
+lineGlow: &amp;quot;#FFF&amp;quot;,
+lines : 50
+},
+simpleGradient : {
+primary : &amp;quot;#D4145A&amp;quot;,
+accent: &amp;quot;#FBB03B&amp;quot;
+},
+starfield : {
+starColor : &amp;quot;#FFF&amp;quot;,
+starSize: 3,
+speed : 100
+},
+layeredTriangles : {
+backgroundCol: &amp;quot;#D6D6D6&amp;quot;,
+transparent: true,
+specificColors : [],
+triangles: 50
+},
+cornerSpikes : {
+specificColors : [],
+backgroundCol: &amp;quot;#FFF&amp;quot;,
+lineColor: &amp;quot;#000&amp;quot;,
+speed: 100,
+lineGlow : &amp;quot;#FFF&amp;quot;
+},
+floatingBoxes : {
+specificColors : [],
+boxCount : 400,
+maxBoxSize : 80,
+backgroundCol: &amp;quot;#D6D6D6&amp;quot;,
+transparent: false,
+speed: 100
+}
+
+quietflow.js插件的github地址为：https://github.com/paulkr/quietflow.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_486">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_487">
+                        纯js图片和视频查看器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_487" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704111526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+BigPicture.js是一款轻量级的图片和视频查看器js插件。它支持Youtube、Vimeo、和本地HTML5视频。同时还支持远程视频和图片的查看，非常时尚和方便。
+内容：
+
+
+简要教程
+
+
+BigPicture.js是一款轻量级的图片和视频查看器js插件。它支持Youtube、Vimeo、和本地HTML5视频。同时还支持远程视频和图片的查看，非常时尚和方便。
+
+ 安装
+可以通过npm安装BigPicture.js插件。
+
+npm install bigpicture
+
+
+ 使用方法
+在页面中引入BigPicture.js文件。
+
+&amp;lt;script src=&#34;js/BigPicture.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+你想通过BigPicture.js插件来打开任何东西，可以使用BigPicture()构造函数。它的第一个参数是一个容器的id，第二个参数是你要打开的图片或视频的地址。例如：
+打开远程图片：
+
+BigPicture({
+el: this,
+imgSrc: &#39;http://yourimage.jpg&#39;
+});
+
+打开远程视频：
+
+BigPicture({
+el: this,
+vidSrc: &#39;http://yourvideo.mp4&#39;
+});
+
+打开Youtube视频：
+
+BigPicture({
+el: this,
+ytSrc: &#39;z\_PeaHVcohg&#39; //打开的视频地址为：https://www.youtube.com/watch?v=z\_PeaHVcohg
+});
+
+打开Vimeo视频：
+
+BigPicture({
+el: this,
+vimeoSrc: &#39;119287310&#39; //打开的视频地址为：https://vimeo.com/119287310
+});
+
+如果触发的元素是一张图片或带背景图片的元素，可以直接将它作为元素传入：
+
+BigPicture({
+el: this
+});
+
+使用图片标题：
+
+&amp;lt;img src=&#34;yourimage.jpg&#34; caption=&#34;Example of an optional caption.&#34;/&amp;gt; 
+
+
+ 回调函数
+
+BigPicture({
+el: this,
+// executed immediately before open animation starts
+animationStart: function() {
+console.log(&#39;it is opening&#39;);
+},
+// executed immediately after open animation finishes
+animationEnd: function() {
+console.log(&#39;it has opened&#39;);
+}
+});
+
+
+ 隐藏加载loader指示器
+可以通过下面的方法来隐藏加载loader指示器。
+
+BigPicture({
+el: this,
+vimeoSrc: &#39;119287310&#39;,
+noLoader: true
+});
+
+BigPicture.js图片和视频查看器插件的github地址为：https://github.com/henrygd/bigpicture
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_487">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_490">
+                        jQuery查看json格式数据插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_490" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1703/201703221509.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.json-viewer.js是一款查看json格式数据的jquery插件。它可以将混乱的json数据漂亮的方式展示在页面中，并支持节点的伸展和收缩和语法高亮等功能。
+内容：
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_490">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_493">
+                        简单的js聊天机器人框架BotUI
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_493" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707141518.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Botui是一款简单的js聊天机器人框架。Botui基于Vue.js，通过简单配置，就可以制作出一个功能简单的聊天机器人，非常神奇。
+内容：
+
+
+简要教程
+
+
+Botui是一款简单的js聊天机器人框架。Botui基于Vue.js，通过简单配置，就可以制作出一个功能简单的聊天机器人，非常神奇。
+
+ 使用方法
+在页面中引入botui.min.css和botui-theme-default.css样式文件，vue.min.js和botui.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;botui.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;botui-theme-default.css&#34;&amp;gt;
+&amp;lt;script src=&#34;vue.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;botui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用下面的HTML结构来创建一个聊天机器人面板。
+
+&amp;lt;div class=&#34;botui-app-container&#34; id=&#34;botui-app&#34;&amp;gt;
+&amp;lt;bot-ui&amp;gt;&amp;lt;/bot-ui&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+通过下面的代码就可以生成一个最简单的聊天机器人。
+
+var botui = new BotUI(&#39;botui-app&#39;); // 参数是容器的id
+botui.message.bot({ // 第一条信息
+delay: 200,
+content: &#39;hello&#39;
+}).then(function () {
+return botui.message.bot({ // 第二条信息
+delay: 1000, // 等待1秒
+content: &#39;how are you?&#39;
+});
+}).then(function () {
+return botui.action.button({ // 与用户交互
+delay: 1000,
+action: [
+{
+text: &#39;Good&#39;,
+value: &#39;good&#39;
+},
+{
+text: &#39;Really Good&#39;,
+value: &#39;really_good&#39;
+}
+]
+});
+}).then(function (res) {
+return botui.message.bot({
+delay: 1000,
+content: &#39;You are feeling &#39; + res.text + &#39;!&#39;
+});
+});
+
+Botui聊天机器人框架的github地址为：https://github.com/moinism/botui
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_493">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/bNF36zwcF//page/18/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/bNF36zwcF//page/20/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

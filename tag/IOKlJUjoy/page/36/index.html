@@ -1,0 +1,1416 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1416">
+                        jQuery和css3实用滑动侧边栏购物车插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1416" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412141819.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的jQuery和css3滑动侧边栏购物车插件。该购物车插件中，购物车的结算、查看等内容被隐藏在侧边栏中，通过顶部导航条的购物车按钮可以使它滑动显示出来。
+内容：
+
+
+简要教程
+
+
+这个侧边栏购物车插件通过一种灵活的方式，在不刷新页面或弹出对话框的情况下，使用户能够进入购物车查看他们购买的商品和离开购物车。
+这个demo的灵感来自于 CreativeDash online store 。
+从手机应用程序，用户日益喜欢侧边栏内容。除了用户能够很容易的从购物车中移除商品，我们应该能够为用户提供更多好处：更多的顾忌顾客的感受，使它们更加信任商家。
+HTML结构
+html结构非常简单，#cd-cart-trigger用于触发购物车，空的 #cd-shadow-layer 用于显示购物车时屏幕背景的模糊层。
+
+&amp;lt;header&amp;gt;
+&amp;lt;!-- logo and menu here --&amp;gt;
+&amp;lt;div id=&#34;cd-cart-trigger&#34;&amp;gt;&amp;lt;a class=&#34;cd-img-replace&#34; href=&#34;#0&#34;&amp;gt;Cart&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;main&amp;gt;
+&amp;lt;!-- content here --&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;div id=&amp;quot;cd-shadow-layer&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;cd-cart&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Cart&amp;lt;/h2&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-cart-items&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-cart-items --&amp;gt;
+&amp;lt;div class=&amp;quot;cd-cart-total&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;Total &amp;lt;span&amp;gt;$39.96&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-cart-total --&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;checkout-btn&amp;quot;&amp;gt;Checkout&amp;lt;/a&amp;gt;
+&amp;lt;p class=&amp;quot;cd-go-to-cart&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Go to cart page&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-cart --&amp;gt;
+
+CSS样式
+开始时购物车放在视口外，设置position:fixed和right: -100\%。当用户点击了购物车按钮，我们使用jQuery为 #cd-cart 添加一个class  .speed-in。这个class修改right的值从-100\%到0。
+ -webkit-overflow-scrolling: touch 用于在webkit内核的移动浏览器上滚动更加平滑。
+
+#cd-cart {
+position: fixed;
+top: 0;
+right: -100\%;
+height: 100\%;
+/* header height */
+padding-top: 50px;
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+transition: right 0.3s;
+&amp;amp;.speed-in {
+right: 0;
+}
+}
+
+JAVASCRIPT
+有一点需要注意，开始时我们将导航菜单放置到header外面。因为我们的代码是基于移动优先的，我们想让菜单作为滑动侧边栏在左边出现。当屏幕的分辨率大于1200px的时候，我们使用jQuery将导航菜单移入header中。
+
+&amp;lt;header&amp;gt;
+&amp;lt;div id=&#34;logo&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;cd-hamburger-menu&amp;quot;&amp;gt;&amp;lt;a class=&amp;quot;cd-img-replace&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;Menu&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;cd-cart-trigger&amp;quot;&amp;gt;&amp;lt;a class=&amp;quot;cd-img-replace&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;Cart&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- we use jQuery to move the #main-nav here when the viewport is &amp;gt; 1200px --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;nav id=&amp;quot;main-nav&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+
+function move\_navigation( $navigation, $MQ) {
+if ( $(window).width() &amp;gt;= $MQ ) {
+$navigation.detach();
+$navigation.appendTo(&#39;header&#39;);
+} else {
+$navigation.detach();
+$navigation.insertAfter(&#39;header&#39;);
+}
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1416">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1417">
+                        jQuery和css3炫酷隐藏侧边栏菜单特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1417" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412111806.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款炫酷的jQuery和css3隐藏侧边栏菜单特效插件。该侧边栏插件初始化时是隐藏的，当用户点击了导航按钮，侧边栏从又侧边被滑动推出，该侧边栏还可以有二级子菜单。
+内容：
+
+
+简要教程
+
+
+这是一款 jQuery和css3炫酷隐藏侧边栏菜单特效插件。该侧边栏插件的灵感来自于Squarespace ：侧边栏菜单开始时被隐藏在主内容区域的下边，当点击了导航菜单按钮，侧边栏菜单踩从侧边平滑的滑动显示出来。
+HTML结构
+我们使用一个&amp;lt;header&amp;gt;元素作为顶部导航栏并使用一个&amp;lt;main&amp;gt;元素来作为内容区域。我们将隐藏侧边栏从&amp;lt;main&amp;gt;中分离出来，所以&amp;lt;main&amp;gt;元素中的内容不会受CSS Translation的影响。
+
+&amp;lt;header&amp;gt;
+&amp;lt;!-- logo here --&amp;gt;
+&amp;lt;nav id=&amp;quot;cd-top-nav&amp;quot;&amp;gt;&amp;lt;!-- your primary navigation here --&amp;gt;&amp;lt;/nav&amp;gt;
+&amp;lt;a id=&amp;quot;cd-menu-trigger&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;cd-menu-text&amp;quot;&amp;gt;Menu&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;cd-menu-icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;main class=&amp;quot;cd-main-content&amp;quot;&amp;gt;
+&amp;lt;!-- put your content here --&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;nav id=&amp;quot;cd-lateral-nav&amp;quot;&amp;gt;&amp;lt;!-- your secondary navigation here --&amp;gt;&amp;lt;/nav&amp;gt;
+
+在隐藏侧边栏菜单中，我们使用两个无序列表来制作，一个带有二级菜单，一个只是简单的菜单，还有一个社交网络导航的链接按钮。
+
+&amp;lt;nav id=&#34;cd-lateral-nav&#34;&amp;gt;
+&amp;lt;ul class=&#34;cd-navigation&#34;&amp;gt;
+&amp;lt;li class=&#34;item-has-children&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34;&amp;gt;Products&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;sub-menu&#34;&amp;gt;
+&amp;lt;!-- all its children here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- other .item-has-children here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&#34;cd-navigation cd-single-item-wrapper&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#0&#34;&amp;gt;Info&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other simple items here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div class=&#34;cd-navigation socials&#34;&amp;gt;
+&amp;lt;a class=&#34;cd-twitter cd-img-replace&#34; href=&#34;#0&#34;&amp;gt;Twitter&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;cd-github cd-img-replace&#34; href=&#34;#0&#34;&amp;gt;Git Hub&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;cd-facebook cd-img-replace&#34; href=&#34;#0&#34;&amp;gt;Facebook&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;cd-google cd-img-replace&#34; href=&#34;#0&#34;&amp;gt;Google Plus&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+CSS样式
+为制作&amp;lt;main&amp;gt;元素的动画，我们结合使用了CSS3 Transformation和CSS3 Transition。
+
+.cd-main-content {
+/* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+min-height: 100\%;
+z-index: 2;
+transition-property: transform;
+transition-duration: 0.4s;
+}
+.cd-main-content.lateral-menu-is-open {
+transform: translateX(-260px);
+}
+
+我们为&amp;lt;header&amp;gt;元素使用同样的方法来制作动画。
+注意一点：为了为&amp;lt;main&amp;gt;元素设置一个min-height ，我们为body和html设置了 height: 100\%。但是在实际应用中你的header元素中可能会有很多元素，所以这个特性不是必须的。
+友情提示：主菜单图标和“X”图标的互换是在CSS中完成的。我们使用了&amp;lt;span&amp;gt;元素和两个伪元素（::before 和 ::after）。当“X”图标可见时，我们通过设置visibility: hidden;隐藏&amp;lt;span&amp;gt;元素。当我们设置伪元素的可见性为visibility: visible时，因为visibility属性不像Display和Opacity属性那样默认进行继承（参看：visibility property）。为了在IE中使伪元素看起来像是继承父元素的visibility属性，这里使用了一些小技巧。这个小技巧是使用给背景颜色使用rgba background-color: rgba(255, 255, 255, 0);，对于&amp;lt;span&amp;gt;元素，对伪元素设置background-color: rgba(255, 255, 255, 1);。
+JAVASCRIPT
+在这个demo中jquery没有做别的事情，仅仅是在点击主菜单按钮时添加/移除class。
+
+jQuery(document).ready(function($){
+var $lateral\_menu\_trigger = $(&#39;#cd-menu-trigger&#39;),
+$content\_wrapper = $(&#39;.cd-main-content&#39;),
+$navigation = $(&#39;header&#39;);
+//open-close lateral menu clicking on the menu icon
+$lateral\_menu\_trigger.on(&#39;click&#39;, function(event){
+event.preventDefault(); 
+$lateral\_menu\_trigger.toggleClass(&#39;is-clicked&#39;);
+$navigation.toggleClass(&#39;lateral-menu-is-open&#39;);
+$content\_wrapper.toggleClass(&#39;lateral-menu-is-open&#39;).one(&#39;webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend&#39;, function(){
+// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+$(&#39;body&#39;).toggleClass(&#39;overflow-hidden&#39;);
+});
+$(&#39;#cd-lateral-nav&#39;).toggleClass(&#39;lateral-menu-is-open&#39;);
+//check if transitions are not supported - i.e. in IE9
+if((&amp;#039;html&amp;#039;).hasClass(&amp;#039;no-csstransitions&amp;#039;)) {
+(&#39;body&#39;).toggleClass(&#39;overflow-hidden&#39;);
+}
+});
+//close lateral menu clicking outside the menu itself
+content\_wrapper.on(&amp;#039;click&amp;#039;, function(event){
+if( !(event.target).is(&#39;#cd-menu-trigger, #cd-menu-trigger span&#39;) ) {
+lateral_menu_trigger.removeClass(′is−clicked′);lateral\_menu\_trigger.removeClass(&amp;#x27;is-clicked&amp;#x27;);
+lateral_menu_trigger.removeClass(′is−clicked′);navigation.removeClass(&#39;lateral-menu-is-open&#39;);
+content\_wrapper.removeClass(&amp;#039;lateral-menu-is-open&amp;#039;).one(&amp;#039;webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend&amp;#039;, function(){
+(&#39;body&#39;).removeClass(&#39;overflow-hidden&#39;);
+});
+(&amp;#039;#cd-lateral-nav&amp;#039;).removeClass(&amp;#039;lateral-menu-is-open&amp;#039;);
+//check if transitions are not supported
+if((&#39;html&#39;).hasClass(&#39;no-csstransitions&#39;)) {
+(&amp;#039;body&amp;#039;).removeClass(&amp;#039;overflow-hidden&amp;#039;);
+}
+}
+});
+//open (or close) submenu items in the lateral menu. Close all the other open submenu items.
+(&#39;.item-has-children&#39;).children(&#39;a&#39;).on(&#39;click&#39;, function(event){
+event.preventDefault();
+$(this).toggleClass(&#39;submenu-open&#39;).next(&#39;.sub-menu&#39;).slideToggle(200).end().parent(&#39;.item-has-children&#39;).siblings(&#39;.item-has-children&#39;).children(&#39;a&#39;).removeClass(&#39;submenu-open&#39;).next(&#39;.sub-menu&#39;).slideUp(200);
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1417">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1418">
+                        jquery.masonry制作3种类似Design Samsung效果的瀑布流插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1418" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1410/201410081608.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款仿照Design Samsung网站上的瀑布流插件。该瀑布流布局使用jquery.masonry制作，先有一个彩色的背景滑出，然后图片再在其上滑出，当向下滚动时，不断有图片被加载的瀑布流效果。
+内容：
+
+
+简要教程
+
+
+本教程将教大家怎么样实现“Design Samsung”网站上的瀑布流效果。这个效果是先有一个彩色的背景滑出，然后图片再在其上滑出，当向下滚动时，不断有图片被加载的瀑布流效果。
+如果你曾今访问过Design Samsung网站，那么你一定已经见识过这种神奇的效果了。彩色的背景先从左边滑出，随后图片再在其上左边从滑出，彩色的背景代表了图片的主要色彩（某张图片的主导颜色）。这是一个非常有创意的图片懒加载效果，本教程将教你如何使用Masonry和CSS animations来实现这种效果。
+更详细的教程请参看《如何实现“DESIGN SAMSUNG”网站的瀑布流效果》
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1418">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1419">
+                        jQuery和css3全屏背景模糊的轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1419" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412301525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常酷的jQuery和css3全屏背景模糊的轮播图插件。该轮播图插件在图片切换的时候，页面背景也会切换到该图片的大图，并将该大图片使用CSS进行模糊处理，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和css3全屏背景模糊的轮播图插件。这个轮播图插件的灵感来自于Google&#39;s TV website。
+注意：该3d旋转互动插件已经在Chrome, Firefox, Safari,IE10的桌面和移动设备浏览器测试通过。
+HTML结构
+要使用这个轮播图插件，需要在html的头部引入jQuery和jquery.immersive-slider.js以及immersive-slider.css文件。
+
+&amp;lt;div class=&#34;main&#34;&amp;gt;
+...
+&amp;lt;div id=&#34;immersive\_slider&#34;&amp;gt;
+&amp;lt;div class=&#34;slide&#34; data-blurred=&#34;&amp;lt;&amp;lt;background-image-url&amp;gt;&amp;gt;&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34; data-blurred=&#34;&amp;lt;&amp;lt;background-image-url&amp;gt;&amp;gt;&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;is-prev&amp;quot;&amp;gt;&amp;amp;laquo;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;is-next&amp;quot;&amp;gt;&amp;amp;raquo;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+容器.main将被用于显示模糊背景图像。你可以在.immersive\_slider中放置你喜欢的多张轮播图。不要忘记将data-blurred修改为模糊图片的URL。
+JAVASCRIPT
+通过下面的jQuery代码来调用插件：
+
+$(&#34;#immersive\_slider&#34;).immersive\_slider({
+animation: &#34;fade&#34;,
+slideSelector: &#34;.slide&#34;,
+container: &#34;.main&#34;,
+cssBlur: false,
+pagination: true,
+loop: true,
+autoStart: 5000
+});
+
+下面来说明一下这些参数：
+
+
+animation：该参数用于设置轮播图的动画效果。对于水平轮播图，可以设置的值有：“fade”, “slide”, “bounce”。对于垂直轮播图，你可以设置：“slideUp”或“bounceUp”。默认值是“slide”。
+
+slideSelector：如果你的页面中已经使用了.slide这个class，你可以通过该参数来自定义轮播图的class。
+
+container：该参数用于定义背景图像模糊容器。在上面的设置中，背景模糊容器为.main的div。你可以自定义它，但是一定要确保它包裹着轮播图。
+
+
+cssBlur：这是一个实验性的参数。如果你不想在每一个轮播图上都使用新的data-blurred属性，你可以设置它为true。
+
+pagination：该参数设置是否使用分页，true为使用。
+
+loop：该参数用于设置轮播图是否循环。默认为true。
+
+autoStart：该参数用于设置轮播图自动播放的时间间隔。设置为0或flase则表示不自动播放。默认值为5000ms。
+
+实验性的属性：CSSBlur
+这个插件可以模糊图像，将它们作为背景图片，而无需你为每一个轮播图的图片都设置背景图。它使用的是CSS3的Filter，但它只能在Chrome上工作。如果你想试一下这个功能，按下面操作：
+
+&amp;lt;div class=&#34;main&#34;&amp;gt;
+...
+&amp;lt;div id=&#34;immersive\_slider&#34;&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;
+&amp;lt;img src=&#34;&amp;lt;&amp;lt;background-image-url&amp;gt;&amp;gt;&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;
+&amp;lt;img src=&#34;&amp;lt;&amp;lt;background-image-url&amp;gt;&amp;gt;&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+JS
+
+$(&#34;#immersive\_slider&#34;).immersive\_slider({
+cssBlur: true
+});
+
+现在，轮播图插件将使用它找到的第一张图和CSS3来制作背景模糊效果。
+公共方法
+为了使开发者更加容易控制这个轮播图插件，插件中添加了几个用于控制前后轮播的公共方法。
+
+
+$.fn.moveNext()
+该方法可以导航到下一张轮播图片。
+
+$(&#34;#immersive\_slider&#34;).mmoveNextoveUp();
+
+
+
+$.fn.movePrev()
+该方法可以导航到前一张轮播图片。
+
+$(&#34;#immersive\_slider&#34;).movePrev();
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1419">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_142">
+                        jQuery显示隐藏和复制表单密码字段插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_142" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1908/201908168524.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery-peeper是一款jQuery显示隐藏和复制表单密码字段插件。该插件提供多种方式显示和隐藏表单password字段的密码，并额外提供复制密码字段为纯文本的功能。
+内容：
+
+
+简要教程
+
+
+jQuery-peeper是一款jQuery显示隐藏和复制表单密码字段插件。该插件提供多种方式显示和隐藏表单password字段的密码，并额外提供复制密码字段为纯文本的功能。
+
+ 使用方法 
+安装
+
+npm install jquery-peeper
+
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/jquery-peeper/dist/css/jquery-peeper.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;/path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;/path/to/jquery-peeper.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ 初始化插件
+
+$(function() {
+$(&#34;#password1&#34;).peeper();
+});
+
+
+ 配置参数
+
+$(function() {
+$(&#34;#password1&#34;).peeper({
+showEvent: &#39;mouseup&#39;, // event to show password 
+showElement: &#39;.peeper-mask&#39;, // DOM element (eg. button to show password)
+mask: true, // show mask
+maskOpacity: 1, //mask opacity (eg. 0.5)
+autohide: true, // hide password after time
+autohideTime: 4000, // hide password time in ms
+maskCss: &#39;gray&#39;, // mask style (eg. red, green, blue or custom)
+showPasswordCss: &#39;fa fa-key&#39;, // show password icon/style
+copyPasswordCss: &#39;fa fa-copy&#39;, // copy password icon/style
+showCopyBtn: true, // copy password button
+showPasswordBtn: true, // show password button
+animateDuration: 300 // mask animation time
+});
+});
+
+ 该jQuery显示隐藏和复制表单密码字段插件的github网址为：https://github.com/msztorc/jquery-peeper
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_142">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1420">
+                         jQuery select下拉菜单美化插件ddlist
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1420" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412181724.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款用于美化下拉列表菜单控件的jquery插件ddlist。使用该ddlist下拉列表美化插件可以为下拉列表添加图标，增强下拉列表的默认功能等。在美化的同时使下拉列表功能得到增强。
+内容：
+
+
+简要教程
+
+
+service.ddlist.jquery是一款小巧的jquery下拉列表插件，它允许我们在下拉列表中插入图片、文本和其它一些额外的东西。
+该下拉列表插件通过&amp;lt;select&amp;gt;元素开发，使用jQuery将其隐藏，并生成新的html结构。
+HTML结构
+要使用该插件，首先要在html的header中引入以下文件：
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;[your-path]/service.ddlist.jquery.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;[your-path]/service.ddlist.jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后在html中对于一个select元素，例如：
+
+&amp;lt;select id=&#34;myList&#34;&amp;gt;
+&amp;lt;option value=&#34;0&#34;&amp;gt;Text 0&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34; selected=&#34;selected&#34;&amp;gt;Text 1&amp;lt;/option&amp;gt;
+...
+&amp;lt;option value=&#34;9&#34;&amp;gt;Text 9&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+然后通过jQuery调用该下拉列表插件：
+
+
+// Execute on page load
+$(function () {
+$(&#39;#myList&#39;).ddlist({
+width: 270,
+onSelected: function (index, value, text) {
+// Do something with selected option
+...
+}
+});
+});
+
+
+获取下拉列表的值
+有三种方法可以指定列表项的值：
+
+在某个选项上设置“selected”；
+你可以在插件初始化的时候设置“selectionIndex”的值来选择指定的项；
+如果以上两个选项都未被设定，那么第一个选项将被执行。
+
+Example 1:
+
+&amp;lt;select id=&#34;myList&#34;&amp;gt;
+&amp;lt;option value=&#34;0&#34;&amp;gt;Red&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34; selected=&#34;selected&#34;&amp;gt;Green&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Blue&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+&#39;Green&#39;将被选择为默认选项。
+Example 2:
+
+&amp;lt;select id=&#34;myList&#34;&amp;gt;
+&amp;lt;option value=&#34;0&#34;&amp;gt;Red&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;Green&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Blue&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+
+// Execute on page load
+$(function () {
+$(&#39;#myList&#39;).ddlist({
+width: 270,
+selectionIndex: 2,
+onSelected: function (index, value, text) {
+// Do something with selected option
+...
+}
+});
+});
+
+
+例子2中，&#34;Blue&#34;将被设置为默认选项。
+带图片的选项
+你可以为每一个选项指定一张图和段描文本。你必须通过HTML5的data-imagesrc 和data-description属性来指定它们。
+
+&amp;lt;select id=&#34;myList&#34;&amp;gt;
+&amp;lt;option value=&#34;0&#34; data-imagesrc=&#34;/images/option0img.png&#34; data-description=&#34;A description for the option&#34;&amp;gt;text - 0&amp;lt;/option&amp;gt;
+...
+&amp;lt;option value=&#34;4&#34; data-imagesrc=&#34;/images/option4img.png&#34; data-description=&#34;A description for the option&#34;&amp;gt;text - 4&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+下拉列表的显示效果如下：
+
+
+编写CSS样式
+在该下拉列表插件带有一个CSS文件包含当前列表的内部元素的各种样式，但是如果你想自定义下拉列表的样式，那么你必须知道该下拉列表的DOM结构：
+
+&amp;lt;div id=&#34;ddList-[select-id]&#34; class=&#34;ddListContainer&#34;&amp;gt;
+&amp;lt;a&amp;gt;
+&amp;lt;img src=&#34;option-image-url&#34; /&amp;gt;
+&amp;lt;label&amp;gt;option-text&amp;lt;/label&amp;gt;
+&amp;lt;small&amp;gt;option-description&amp;lt;/small&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;span class=&#34;ddListArrow&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a&amp;gt;
+&amp;lt;img src=&#34;option-image-url&#34; /&amp;gt;
+&amp;lt;label&amp;gt;option-text&amp;lt;/label&amp;gt;
+&amp;lt;small&amp;gt;option-description&amp;lt;/small&amp;gt;
+&amp;lt;/li&amp;gt;
+...
+&amp;lt;li&amp;gt;..&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+根元素是一个id为ddList-开头的select元素。
+第一个&amp;lt;a&amp;gt;元素是下拉列表的可见选项：
+
+
+&amp;lt;label&amp;gt;元素用于显示选项
+
+&amp;lt;img&amp;gt;元素和&amp;lt;small&amp;gt;元素是可选的，它们用于显示选项前面的图标和选项的描述文本。
+
+第二个&amp;lt;span&amp;gt;元素是下拉列表的上下箭头。
+第三个&amp;lt;ul&amp;gt;元素包含所有的选项。
+
+API
+初始化方法：
+
+[jqObject(s)].ddlist(options)
+
+可选参数：
+width:Integerdefault:260-该参数对于下拉列表的宽度。
+selectionIndex:Integerdefault:0-该参数指定初始化是哪个选项被选择。
+disabled:Booleandefault:false-设置为“true”则下拉列表不可用。
+showSelectionTextOnly:Booleandefault:false-设置为“true”仅下拉列表的文本。
+onSelectedOnInit:Booleandefault:false-设置为“true”时onSelected回调函数被触发。
+onSelected:callback functionSignature: onSelected: function (index, value, text) { }。
+
+index：列表被选择项的index。
+value：列表被选择项的value。
+text：列表被选择项的text。
+
+更多详细详细请参考：https://github.com/JosHuybrighs/service.ddlist.jquery。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1420">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1422">
+                        jQuery超酷卡片动态3d翻转特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1422" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412251545.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery制作的炫酷卡片动态3d翻转特效插件。高卡片3d翻转特效共有5种效果，当鼠标滑过卡片时，卡片在各个方向上3d翻转生成新的卡片，效果非常酷。
+内容：
+
+
+简要教程
+
+
+这是一款效果很酷jQuery超酷卡片动态3d翻转特效插件。这个卡片3d翻转插件通过卡片3d翻转来显示更多的信息。这个插件已经在Chrome, Firefox, Safari的桌面和移动浏览器上测试通过，但还没有在IE上做过测试。
+这个插件所有的翻转效果都是通过css3来完成，我们使用jQuery来切换class，以使翻转动画能够顺利完成。
+为了使卡片序列按预定顺序先后出现，我们使用了时间戳和在每个方向上构建一个组序列。例如：某个方向上有5个“foc-left”卡片，插件将一一循环它们来执行动画。因为基于卡片检测数量的乘法计算，你可以任意添加多张卡片，插件可以自动将它们以特定的序列一一执行动画。
+要使用这个插件，需要在html中引入jQuery和jQuery.flipout\_cards.js 以及 flipout\_cards.css文件。
+HTML结构
+包装容器的class为foc-main的div是放置翻转卡的地方，所有放置在里面的卡片将被隐藏和用于向外翻转。
+
+&amp;lt;body&amp;gt;
+..
+&amp;lt;div class=&#34;flipout&#34;&amp;gt;
+&amp;lt;div class=&#34;foc-main&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;foc-left&#34;&amp;gt;
+ ...
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+..
+&amp;lt;/body&amp;gt;
+
+要定义卡片翻转的方向，可以简单的改变class foc-left，可以改为：“foc-right”, “foc-top” 或 “foc-bottom”。
+JAVASCRIPT
+jQuery插件将检测所有的卡片，将他们分组压栈。
+ 
+$(&#34;.flipout&#34;).flipout\_cards({
+animation: &#34;flipOut&#34;,
+beforeOpen: function () {},
+afterOpen: function () {}, 
+beforeClose: function () {}, 
+afterClose: function () {} 
+});
+ 
+ 下面是一些可用的参数：
+ 
+
+animation：该参数可以设置动画的类型：“flipOut”, “slideOut” 和 “foldOut”。默认为“flipOut”。
+
+beforeOpen：该参数是打开卡片动画前的回调函数。默认值为“null”。
+
+afterOpen：该参数是卡片动画结束后的回调函数。默认值为“null”。
+
+beforeClose：该参数是卡片动画结束后的回调函数。默认值为“null”。
+
+afterClose：该参数是卡片动画关闭后的回调函数。默认值为“null”。
+ 
+ 几个回调函数的用法如下：
+ beforeOpen()
+ 
+$(&#34;.flipout&#34;).flipout\_cards({
+beforeOpen: function () {
+alert(“About to be opened”)
+}
+});
+ 
+ afterOpen()
+ 
+$(&#34;.flipout&#34;).flipout\_cards({
+afterOpen: function () {
+alert(“Opened Successfully”)
+}
+});
+ 
+ beforeClose()
+ 
+$(&#34;.flipout&#34;).flipout\_cards({
+beforeClose: function () {
+alert(“About to be closed”)
+}
+});
+ 
+ beforeClose()
+ 
+$(&#34;.flipout&#34;).flipout\_cards({
+afterClose: function () {
+alert(“Closed successfully”)
+}
+});
+ 
+ 更多信息可以参考：https://github.com/peachananr/flipout\_cards
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1422">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1423">
+                        jQuery全屏跟随和可平滑跳转到相应文章段落的导
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1423" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501031623.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的jQuery全屏跟随和可平滑跳转到相应文章段落的导航菜单插件。该菜单插件可跟随屏幕滚动一直处于可见状态，并且点击菜单项后可平滑的跳转到相应的文章段落处。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的jQuery全屏跟随和可平滑跳转到相应文章段落的导航菜单插件。该菜单插件会自动检测你的HTML结构，搜索内容的标题并生成对应的菜单。当用户滚动页面，菜单将处于固定位置，并高亮当前用户正在浏览的内容的对应的菜单项。
+HTML结构
+要使用这个平滑跳转菜单插件，首先要在页面中引入 jquery 和jquery.jumpto.js以及immersive-slider.css文件。
+
+&amp;lt;div class=&#34;page\_container&#34;&amp;gt;
+&amp;lt;div class=&#34;jumpto-block&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Header 1&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;SubHeader 1&amp;lt;/h3&amp;gt;
+....
+&amp;lt;h3&amp;gt;SubHeader 2&amp;lt;/h3&amp;gt;
+....
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;jumpto-block&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Header 2&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;SubHeader 1&amp;lt;/h3&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+html结构使用page\_container作为wrapper。在它的内部，每一个文章段落都用一个div来包裹，在demo中是div jumpto-block，这是为了方便插件搜索每个段落的标题和子标题。&amp;lt;h2&amp;gt;标题用来做第一级标题，&amp;lt;h3&amp;gt;标题用来做第二级子标题。
+JAVASCRIPT
+使用下面的JS代码来调用该平滑跳转菜单插件。
+
+$(&#34;.page\_container&#34;).jumpto({
+firstLevel: &#34;&amp;gt; h2&#34;,
+secondLevel: false,
+innerWrapper: &#34;.jumpto-block&#34;,
+offset: 400,
+animate: 1000,
+navContainer: false,
+anchorTopPadding: 20,
+showTitle: &#34;Jump To&#34;,
+closeButton: true
+});
+
+在上面的调用设置中，二级子菜单将在一级菜单内部动态生成。菜单在用户滚动页面400px后会固定在页面上，并且当用户点击菜单项时，将在1000毫秒黑平滑的滚动到对应的段落处。
+下面是一些可用的参数：
+
+
+firstLevel：该参数用于设置一级菜单的选择器。默认值是&amp;gt; h2 。
+
+secondLevel：该参数用于设置二级子菜单的选择器。如果你设置它为&amp;gt; h3 ，那么所有一级菜单中的h3标签都被设置为二级子标题。默认值为&#34;false&#34;。
+
+innerWrapper：该参数用于自定义文章内容段落的选择器。默认值为.jumpto-block。
+
+offset：该参数用于定义页面向下滚动多少像素后菜单开始固定。默认值为400像素。
+
+animate：该参数用于定义在点的菜单项时页面的滚动速度。设置为&#34;false&#34;关闭该参数。
+
+navContainer：该参数用于设置菜单项出现的位置，可以通过该参数设置菜单的选择器（如demo3）。默认值为false。
+
+anchorTopPadding：该参数用于设置标题和页面顶部的padding值。默认值为20px。
+
+showTitle：你可以通过该参数为导航菜单设置一个标题。默认值为&#34;Jump To&#34;。设置为&#34;false&#34;可以隐藏它。
+
+closeButton：该参数用于在菜单底部设置一个关闭按钮。默认值为&#34;true&#34;。设置为&#34;false&#34;可以隐藏关闭按钮。
+
+closeButton：该参数用于在菜单底部设置一个关闭按钮。默认值为&#34;true&#34;。设置为&#34;false&#34;可以隐藏关闭按钮。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1423">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1424">
+                        jQuery和css3图片画廊Lightbox插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1424" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501181422.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的图片画廊Lightbox插件。该lightbox插件中使用CSS3来为图片制作阴影和旋转效果，并使用jQuery来在点击图片的时候制作淡入淡出的图片放大效果。
+内容：
+
+
+简要教程
+
+
+这是一款使用 jQuery 和 CSS3 制作的图片画廊Lightbox插件。该插件中使用CSS3来为图片制作阴影和旋转效果，并使用jQuery来在点击图片的时候制作淡入淡出的图片放大效果。
+HTML结构
+HTML结构采用section作为wrapper。图片部分分为两部分：&amp;lt;div class=&#34;span-6 column rotated&#34;&amp;gt;对放置的是缩略图，&amp;lt;div id=&#34;pic-n&#34;&amp;gt;是对应的大图。它们通过第一个div中a元素的href和第二个div中的id值来对应。 
+
+&amp;lt;section id=&#34;content&#34; class=&#34;gallery-container&#34;&amp;gt;
+&amp;lt;div class=&#34;span-18 column rounded&#34;&amp;gt;
+&amp;lt;div class=&#34;span-6 column rotated&#34;&amp;gt;
+&amp;lt;a id=&#34;image1&#34; class=&#34;cms-editable polaroid&#34; href=&#34;#pic-1&#34; rel=&#34;lightbox&#34; title=&#34;first image&#34;&amp;gt;
+&amp;lt;img src=&#34;gallery/1\_s.jpg&#34; alt=&#34;image&#34; /&amp;gt; 
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;div id=&amp;quot;pic-1&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;gallery/1.jpg&amp;quot; alt=&amp;quot;image&amp;quot; /&amp;gt;
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+
+CSS样式
+通过CSS3来为图片添加阴影和旋转角度。
+
+a.polaroid { 
+-moz-transition: all 0.2s ease-in-out; 
+-webkit-transition: all 0.2s ease-in-out; 
+display: block; background: #fff; 
+padding: 10px; margin:5px; 
+-moz-box-shadow: #ccc 5px 5px 20px; 
+-webkit-box-shadow: #ccc 5px 5px 20px; 
+margin-bottom:1em; 
+}
+a.polaroid img { width: 200px; }
+a.polaroid:hover { 
+-moz-box-shadow: #666 5px 5px 20px; 
+-webkit-box-shadow: #666 5px 5px 20px; 
+}
+
+JAVASCRIPT
+插件中使用了fancyzoom.js，它能够将元素放到，并带有非常酷的淡入淡出效果。使用时首先要引入jQuery和fancyzoom.js文件：
+
+&amp;lt;script src=&#34;http://libs.useso.com/js/jquery/1.4.2/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;js/fancyzoom.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后就可以使用下面的方法来调用插件：
+
+$(function() {
+$(&#34;a.polaroid&#34;).each(function() {
+$(this).css({
+&#34;-webkit-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg)&#39;,
+&#34;-moz-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg)&#39;
+})
+.hover(function() {
+$(this).css({
+&#34;-webkit-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg) scale(1.05)&#39;,
+&#34;-moz-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg) scale(1.05)&#39;
+})
+}, function() {
+$(this).css({
+&#34;-webkit-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg) scale(1)&#39;,
+&#34;-moz-transform&#34;: &#39;rotate(&#39; + (Math.floor(Math.random()*10)-5) + &#39;deg) scale(1)&#39;
+})
+});
+});
+$(&#39;a[rel=lightbox]&#39;).fancyZoom();
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1424">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1425">
+                        jQuery和css3超酷图片预览插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1425" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412081746.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果很酷的jquery图片预览插件。该插件当用户点击预览图片的时候，会弹出模态窗口，图片会放大并滑出图片说明文本。当点击关闭图片按钮后，图片缩小回到原来的位置。
+内容：
+
+
+简要教程
+
+
+这是一款使用css3和Velocity.js制作的jquery图片预览插件。
+电子商务网站设计的宗旨是通过简化的设计提高用户体验，提高转化率也有一定的模式。另外一种模式是在需要的地方提供更多的信息来达到同样的目的。这款jquery图片预览插件使用的就是第二种模式。
+这个插件的操作十分简单：点击quick view按钮触发模态窗口来显示大图和图片的信息。
+一个插件程序的设计理念是为用户提供最好的体验，有很多工具可以帮助我们制作平滑的动画效果，例如：Joel Besada 的Bounce.js 和 Julian Shapiro 的Velocity.js。
+回到我们的教程，下面是一张显示该插件功能的gif图片：
+
+HTML结构
+html结构中图片画廊使用一个无序列表制作。.cd-quick-view &amp;lt;div&amp;gt;是插件的重点部分，它包含一个slider .cd-slider-wrapper和图片信息 .cd-item-info。
+
+&amp;lt;ul class=&#34;cd-items cd-container&#34;&amp;gt;
+&amp;lt;li class=&#34;cd-item&#34;&amp;gt;
+&amp;lt;img src=&#34;img/item-1.jpg&#34; alt=&#34;Item Preview&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34; class=&#34;cd-trigger&#34;&amp;gt;Quick View&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt; &amp;lt;!-- cd-item --&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-items --&amp;gt;
+&amp;lt;div class=&#34;cd-quick-view&#34;&amp;gt;
+&amp;lt;div class=&#34;cd-slider-wrapper&#34;&amp;gt;
+&amp;lt;ul class=&#34;cd-slider&#34;&amp;gt;
+&amp;lt;li class=&#34;selected&#34;&amp;gt;&amp;lt;img src=&#34;img/item-1.jpg&#34; alt=&#34;Product 1&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;img/item-2.jpg&#34; alt=&#34;Product 2&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;img/item-3.jpg&#34; alt=&#34;Product 3&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-slider --&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-slider-navigation&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a class=&amp;quot;cd-next&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;Prev&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a class=&amp;quot;cd-prev&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;Next&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-slider-navigation --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-slider-wrapper --&amp;gt;
+&amp;lt;div class=&amp;quot;cd-item-info&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Produt Title&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing...&amp;lt;/p&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-item-action&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;button class=&amp;quot;add-to-cart&amp;quot;&amp;gt;Add to cart&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Learn more&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-item-action --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-item-info --&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-close&amp;quot;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-quick-view --&amp;gt;
+
+CSS样式
+首先需要注意的是，该插件的效果在移动设备和手机上隐藏的。原因是使用手机很容易就可以进入到产品页面。
+大部分的动画效果都使用jQuery和 Velocity.js 来完成。半透明的遮罩层使用body::after伪元素来制作。
+
+body::after {
+/* dark overlay layer - visible when we fire .cd-quick-view */
+position: fixed;
+top: 0;
+left: 0;
+width: 100\%;
+height: 100\%;
+background: rgba(71, 55, 78, 0.8);
+visibility: hidden;
+opacity: 0;
+transition: opacity .3s 0s, visibility 0s .3s;
+}
+@media only screen and (min-width: 1024px) {
+body.overlay-layer::after {
+visibility: visible;
+opacity: 1;
+transition: opacity .3s 0s, visibility 0s 0s;
+}
+}
+
+插件中很多元素的动画都带有CSS3 transition。为了是插件性能更好，我们使用了translateZ(0) hack技术。
+
+.cd-quick-view {
+display: block;
+position: fixed;
+max-width: 900px;
+visibility: hidden;
+/* Force Hardware Acceleration in WebKit */
+transform: translateZ(0);
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+will-change: left, top, width;
+z-index: 1;
+}
+
+JAVASCRIPT
+当用户点击了.cd-trigger元素，我们获取被选择图片的top、left和宽度值，并将它放入到.cd-quick-view元素中（该元素是position: fixed的）。通过这个方法使.cd-quick-view拥有和图片相同的大小。
+当我们移动 .cd-quick-view元素，第一步我们移动 .cd-quick-view的宽度到最终宽度（在插件中是400px）。我们也移动 .cd-quick-view的位置，使它相对于屏幕居中。在这一步中，只有图片是可见的，图片说明仍被隐藏。
+第二步我们 改变 .cd-quick-view到它的最终值（屏幕宽度的80\%，最大宽度900px），并改变它的位置使其居中。
+我们使用 Velocity.js 来制作动画效果。这个插件重新实现了jQuery的$.animate() 方法，使其性能更加优秀。在插件中，第一步动画使用了spring easing 效果，第二步中使用量为ease easing 效果。
+
+$(&#39;.cd-trigger&#39;).on(&#39;click&#39;, function(event){
+(&amp;#039;.cd-quick-view&amp;#039;).css({
+&amp;quot;top&amp;quot;: topSelected, // this is the selected image top value
+&amp;quot;left&amp;quot;: leftSelected, // this is the selected image left value
+&amp;quot;width&amp;quot;: widthSelected, // this is the selected image width
+}).velocity({
+//animate the quick view: animate its width and center it in the viewport
+//during this animation, only the slider image is visible
+&amp;#039;width&amp;#039;: sliderFinalWidth+&amp;#039;px&amp;#039;,
+&amp;#039;left&amp;#039;: finalLeft+&amp;#039;px&amp;#039;, // ((window).width - sliderFinalWidth)/2,
+&#39;top&#39;: finalTop+ &#39;px&#39;, // ((window).height - slider final height)/2,
+}, 1000, [ 400, 20 ])
+.velocity({
+&amp;#039;width&amp;#039;: quickViewWidth+&amp;#039;px&amp;#039;, // 80\% of the viewport
+&amp;#039;left&amp;#039;: quickViewLeft+&amp;#039;px&amp;#039;, // 10\% of the viewport
+}, 300, &amp;#039;ease&amp;#039; ,function(){
+//show quick view content
+(&#39;.cd-quick-view&#39;).addClass(&#39;add-content&#39;);
+}).addClass(&#39;is-visible&#39;);
+//assign .overlay-layer class to the body, assign the .empty-box class to the selected .cd-item
+//...
+});
+
+当用户关闭图片预览窗口，动画效果也是非常酷的。
+注意：在关闭图片预览窗口之前，我们改变了图片的src的值。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1425">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/35/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/37/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

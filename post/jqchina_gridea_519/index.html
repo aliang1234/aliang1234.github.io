@@ -1,0 +1,339 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery和CSS3 3d立方体旋转特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery和CSS3 3d立方体旋转特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-banana">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1704/201704041343.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704041343.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704044438.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jquery和CSS3制作的3D旋转立方体特效。该特效使用GSAP来制作动画，通过CSS transform来制作立方体效果兼容除IE之外的其它现代浏览器。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用jquery和CSS3制作的<strong>3D旋转立方体</strong>特效。该特效使用GSAP来制作动画，通过<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/transform.html">CSS transform</a>来制作立方体效果兼容除IE之外的其它现代浏览器。</p>
+<p>由于IE浏览器不知支持<code>transform-style:preserve3d</code>，所以在IE中看到的不是立方体效果，而是平面效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和TweenMax.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src='path/to/jquery.min.js'&gt;&lt;/script&gt;
+&lt;script src='path/to/TweenMax.min.js'&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>3D立方体的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="trans3DDemo1"&gt;
+&lt;div id="trans3DBoxes1"&gt;
+&lt;div&gt;Front&lt;/div&gt;
+&lt;div&gt;Left&lt;/div&gt;
+&lt;div&gt;Right&lt;/div&gt;
+&lt;div&gt;Top&lt;/div&gt;
+&lt;div&gt;Bottom&lt;/div&gt;
+&lt;div&gt;Back&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为立方体添加如下的CSS样式：</p>
+<pre class="brush:css">
+#trans3DDemo1 {
+position:relative;
+display:inline-block;
+width:250px;
+height:250px;
+}
+<p>#trans3DBoxes1 div {<br>
+position:absolute;<br>
+width:248px;<br>
+height:248px;<br>
+padding:0;<br>
+margin:0;<br>
+background:url(../img/girl.jpg);<br>
+border:solid 2px #FFF;<br>
+display:block;<br>
+text-align:center;<br>
+font-size:36px;<br>
+font-weight:bold;<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>在页面DOM元素加载完毕之后，通过下面的方法来初始化该立方体效果：</p>
+<pre class="brush:js">
+var trans3DDemo1 = $("#trans3DDemo1"), 
+trans3DBoxes1 = $("#trans3DBoxes1"),// div containing all the the boxes
+boxes1 = $("#trans3DBoxes1 div"), // all the boxes
+threeDTimeline = new TimelineMax({onUpdate:updateCube, repeat:-1}),
+stageW = ($(window).width())/2,
+stageH = ($(window).height())/2,
+stageX = (stageW-(trans3DBoxes1.width()/2)),
+stageY = (stageH-(250/2));
+//transformPerspective gives the element its own vanishing point
+//perspective allows all the child elements (orange boxes) to share the same vanishing point with each other
+//transformStyle:"preserve3d" allows the child elements to maintain their 3D position (noticeable only when their parent div is rotated in 3D space)
+TweenMax.set(trans3DBoxes1, {css:{transformPerspective:3000, transformStyle:"preserve-3d"}}); //saves a dozen lines of vendor-prefixed css ;)
+/*
+K, lets build a cube and place it
+boxes1[0] = frontside
+boxes1[1] = leftside
+boxes1[2] = rightside
+boxes1[3] = topside
+boxes1[4] = bottomside
+boxes1[5] = backside
+*/
+threeDTimeline.set(boxes1[0], {rotationX:0, rotationY:0, x:0, y:0, z:125, opacity:0.85})
+.set(boxes1[1], {rotationX:0, rotationY:-90, x:-125, y:0, z:0, opacity:0.85})
+.set(boxes1[2], {rotationX:0, rotationY:90, x:125, y:0, z:0, opacity:0.85})
+.set(boxes1[3], {rotationX:90, rotationY:0, x:0, y:-125, z:0, opacity:0.85})
+.set(boxes1[4], {rotationX:-90, rotationY:0, x:0, y:125, z:0, opacity:0.85})
+.set(boxes1[5], {rotationX:0, rotationY:180, x:0, y:0, z:-125, opacity:0.85})
+.set(trans3DBoxes1, {x:150, y:150, transformOrigin:"125px 125px 0px"});
+<p>// hover events<br>
+boxes1.each(function (index, element) {<br>
+$(element).hover(over, out);<br>
+function over(){<br>
+TweenMax.to(element, 0.15, {opacity:0.33});<br>
+//threeDTimeline.pause();<br>
+}<br>
+function out(){<br>
+TweenMax.to(element, 0.15, {opacity:0.85});<br>
+//threeDTimeline.play();<br>
+}<br>
+});</p>
+<p>threeDTimeline.to(trans3DBoxes1, 15, {css:{rotationY:360, rotationX:-720, transformOrigin:&quot;125px 125px 0px&quot;}, ease:Power0.easeNone});</p>
+<p>function updateCube(){<br>
+stageW = (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>w</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>o</mi><mi>w</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mo>)</mo><mo>)</mo><mi mathvariant="normal">/</mi><mn>2</mn><mo separator="true">;</mo><mi>s</mi><mi>t</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>H</mi><mo>=</mo><mo>(</mo></mrow><annotation encoding="application/x-tex">(window).width())/2;
+stageH = (</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mclose">)</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">2</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span></span></span></span>(window).height())/2;<br>
+stageX = (stageW-(trans3DBoxes1.width()/2));<br>
+stageY = (stageH-(250/2));<br>
+TweenMax.to(trans3DBoxes1, 1, {css:{x:stageX, y:stageY}});<br>
+}<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704041343.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704044438.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_52">
+                                <h3 class="post-title">
+                                    时尚简洁的js轮播图特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

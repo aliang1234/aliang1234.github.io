@@ -1,0 +1,484 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery下拉选择框美化插件select-mania | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery下拉选择框美化插件select-mania
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1712/201712081418.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1712/201712081418.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201712084870.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>select-mania是一款jQuery下拉选择框美化插件。该插件可以将普通的select下拉选择框转换漂亮的下拉选择框，并且转换后的下拉选择框带搜索功能，可通过AJAX获取数据，带多种主题，还可以自定义主题等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>select-mania是一款jQuery下拉选择框美化插件。该插件可以将普通的select下拉选择框转换漂亮的下拉选择框，并且转换后的下拉选择框带搜索功能，可通过AJAX获取数据，带多种主题，还可以自定义主题等。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入select-mania.css和select-mania.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/select-mania.css"&gt;
+&lt;script src="js/select-mania.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<p>该下拉选择框自带5种主题，使用是要引入相应的主题CSS文件。</p>
+<pre class="brush:html">
+&lt;link href="src/themes/select-mania-theme-darkblue.css" rel="stylesheet"&gt;
+&lt;link href="src/themes/select-mania-theme-green.css" rel="stylesheet"&gt;
+&lt;link href="src/themes/select-mania-theme-orange.css" rel="stylesheet"&gt;
+&lt;link href="src/themes/select-mania-theme-red.css" rel="stylesheet"&gt;
+&lt;link href="src/themes/select-mania-theme-square.css" rel="stylesheet"&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该插件可以将任意select选择框进行转换，你还可以为每个选项设置一个小图标。例如：</p>
+<pre class="brush:html">
+&lt;optgroup data-icon="fa fa-share" label="Group"&gt;
+&lt;option value="1" data-icon="fa fa-facebook"&gt;Facebook&lt;/option&gt;
+&lt;option value="1" data-icon="fa fa-Twitter"&gt;Twitter&lt;/option&gt;
+&lt;option value="1" data-icon="fa fa-google-plus"&gt;Google+&lt;/option&gt;
+...
+&lt;/optgroup&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>select-mania下拉选择框插件的使用非常简单，初始化方法如下：</p>
+<pre class="brush:js">
+$('target-selector').selectMania();
+//带配置参数
+$('target-selector').selectMania({
+//配置参数
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>select-mania下拉选择框插件的可用配置参数如下：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>'100\%'</td>
+<td>下拉选择框的宽度。必须是有效的CSS长度值。可以在select元素上通过<code>data-width</code>属性来使用。</td>
+</tr>
+<tr>
+<td>size</td>
+<td>'medium'</td>
+<td>下拉选择框的尺寸。可选值有：'tiny', 'small', 'medium', 'large'。可以在select元素上通过<code>data-size</code>属性来使用。</td>
+</tr>
+<tr>
+<td>themes</td>
+<td>[]</td>
+<td>主题名称的数组。主题的名称可以在<code>select-mania-theme-[主题名称].css</code>找到。你也可以自己创建一个主题。</td>
+</tr>
+<tr>
+<td>scrollContainer</td>
+<td>null</td>
+<td>select下拉框可滚动的容器的选择器或元素。</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>'Select an item'</td>
+<td>占位符文本。可以在select元素上通过<code>data-placeholder</code>属性来使用。</td>
+</tr>
+<tr>
+<td>removable</td>
+<td>false</td>
+<td>设置为<code>true</code>时可以删除已选择的选项。可以在select元素上通过<code>data-removable</code>属性来使用。</td>
+</tr>
+<tr>
+<td>empty</td>
+<td>false</td>
+<td>设置为<code>true</code>时将强制在初始化时情况选项。可以在select元素上通过<code>data-empty</code>属性来使用。</td>
+</tr>
+<tr>
+<td>search</td>
+<td>false</td>
+<td>设置为<code>true</code>时将显示搜索框，并允许进行选项搜索。可以在select元素上通过<code>data-search</code>属性来使用。</td>
+</tr>
+<tr>
+<td>ajax</td>
+<td>false</td>
+<td>插件可以在选项向下滚动时通过ajax来调用数据，并执行ajax查询。关于ajax参数，请看后面的详细解释。</td>
+</tr>
+<tr>
+<td>data</td>
+<td>{}</td>
+<td>该参数作为ajax的参数使用。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ajax参数：为了使用ajax参数，你必须向下面这样设置<code>ajax</code>参数：</p>
+<pre class="brush:js">
+function(search, page, data, callback) {
+//send back html options to select-mania
+callback(hmtlOptions);
+}
+</pre>
+<p>这个函数有4个参数：</p>
+<ul>
+<li>
+<code>search</code>：当前搜索框中的值。</li>
+<li>
+<code>page</code>：请求的页码。</li>
+<li>
+<code>data</code>：提供自定义数据。</li>
+<li>
+<code>callback</code>：成功之后的回调函数。</li>
+</ul>
+<p>执行成功之后的回调函数中的数据必须是一串HTML代码或jQuery / Dom元素。例如：</p>
+<pre class="brush:js">
+ajax: function(search, page, data, callback) {
+$.ajax({
+type: 'POST', 
+url: 'myAjaxScript.php', 
+data: {
+search: search, 
+page: page, 
+custom: data.custom
+}, 
+success: function(html) {
+callback(html);
+}
+});
+}
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 可选配置参数</h3>
+<p>select-mania下拉选择框插件支持<code>Optgroup</code>元素。</p>
+<pre class="brush:html">
+&lt;optgroup label="Group"&gt;
+&lt;option value="1"&gt;Item&lt;/option&gt;
+&lt;/optgroup&gt; 
+</pre>
+<p>在每个选项之前你还可以设置一个小图标。通过<code>data-icon</code>属性来设置图标，插件完全支持font-awesome字体图标。</p>
+<pre class="brush:html">
+&lt;optgroup data-icon="fa fa-user" label="Group"&gt;
+&lt;option value="1" data-icon="fa fa-user"&gt;Item&lt;/option&gt;
+&lt;/optgroup&gt; 
+</pre>
+<p>你还可以禁用一个选项组。</p>
+<pre class="brush:html">
+&lt;optgroup label="Group" disabled&gt;
+&lt;option value="1" disabled&gt;Item&lt;/option&gt;
+&lt;/optgroup&gt; 
+</pre>
+<p>任何被选择的选项都被设置一个选项值。</p>
+<pre class="brush:html">
+&lt;option value="1" selected&gt;Item&lt;/option&gt; 
+</pre>
+<p>另外还有一个全局设置参数的方法：</p>
+<pre class="brush:js">
+$.selectManiaSetup({
+/* 全局配置参数 */
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>select-mania下拉选择框插件的可用方法有：</p>
+<ul>
+<li>
+<code>init</code>：初始化方法。
+<pre class="brush:js">
+//simple call
+$('target-selector').selectMania({/*settings*/});
+//explicit call
+$('target-selector').selectMania('init', {/*settings*/});
+</pre>
+</li>
+<li>
+<code>update</code>：在目标元素上更新插件。
+<pre class="brush:js">
+$('target-selector').selectMania('update');
+</pre>
+</li>
+<li>
+<code>destroy</code>：销毁指定的select-mania下拉选择框。
+<pre class="brush:js">
+$('target-selector').selectMania('destroy');
+</pre>
+</li>
+<li>
+<code>check</code>：这个方法只能在单一元素上使用，返回<code>true</code>表示目标元素上已经进行了初始化。
+<pre class="brush:js">
+if($('target-selector').selectMania('check')) {
+// select-mania is initialized!
+}
+</pre>
+</li>
+<li>
+<code>get</code>：这个方法只能在单一元素上使用，用于获取当前选择的值。
+<pre class="brush:js">
+var values = $('select').selectMania('get');
+</pre>
+</li>
+<li>
+<code>set</code>：这个方法只能在单一元素上使用，用于为下拉选择框设置新的值。
+<pre class="brush:js">
+$('target-selector').selectMania('set', [
+{
+value: '20', 
+text: 'Value number twenty'
+}, 
+{
+value: '60', 
+text: 'Value number sixty'
+}
+]);
+</pre>
+</li>
+<li>
+<code>clear</code>：在目标元素上情况已选择的值。
+<pre class="brush:js">
+$('target-selector').selectMania('clear');
+</pre>
+</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 自定义主题</h3>
+<p>如果你需要自定义主题，按下面来进行。</p>
+<pre class="brush:css">
+/* SELECTMANIA ELEMENT */
+.select-mania-theme-[CHANGE-THE-NAME-HERE] .select-mania-inner { border: 1px solid #D6D6D6; }
+<p>/* SELECTED VALUES */<br>
+.select-mania-theme-[CHANGE-THE-NAME-HERE].select-mania.select-mania-multiple .select-mania-value {<br>
+border: 1px solid [YOUR-COLOR];<br>
+background-color: [YOUR-COLOR]; color: white; }</p>
+<p>/*DROPDOWN */<br>
+.select-mania-theme-[CHANGE-THE-NAME-HERE] .select-mania { border: 1px solid #D6D6D6; }</p>
+<p>.select-mania-theme-[CHANGE-THE-NAME-HERE] .select-mania-search-input {<br>
+border: 1px solid #D6D6D6;<br>
+color: #5A5A5A;<br>
+}</p>
+<p>.select-mania-theme-[CHANGE-THE-NAME-HERE] .select-mania-item:hover { background:[YOUR-HOVER-COLOR];<br>
+}</p>
+<p>.select-mania-theme-[CHANGE-THE-NAME-HERE] .select-mania-item.select-mania-selected {<br>
+background: [YOUR-COLOR]; color: white; }</p>
+</pre>
+<p>select-mania下拉选择框插件的github地址为：<a href="https://github.com/pitininja/select-mania" target="\_blank">https://github.com/pitininja/select-mania</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1712/201712081418.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201712084870.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_395">
+                                <h3 class="post-title">
+                                    仿github表情符号和at自动完成jquery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

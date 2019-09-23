@@ -1,0 +1,512 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Masonry瀑布流的全屏预览图片画廊插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Masonry瀑布流的全屏预览图片画廊插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1510/201510281543.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510281543.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510282716.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Chroma Gallery是一款基于Masonry瀑布流的全屏预览图片画廊jQuery插件。该图片画廊使用Masonry瀑布流布局，当鼠标滑过图片时，图片颜色会变为黑白色。点击某张图片缩略图时，该图片会全屏放大，而且全屏时的背景色为该图片的主导颜色。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Chroma Gallery是一款基于Masonry瀑布流的全屏预览图片画廊<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。该图片画廊使用Masonry瀑布流布局，当鼠标滑过图片时，图片颜色会变为黑白色。点击某张图片缩略图时，该图片会全屏放大，而且全屏时的背景色为该图片的主导颜色。在全屏放大模式下可以前后导航预览每一张图片。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该图片画廊插件依赖于jQuery，<a href="http://masonry.desandro.com/" target="\_blank">Masonry</a>，<a href="http://imagesloaded.desandro.com/" target="\_blank">Images Loaded</a>以及一个自定义的Modernizr插件。</p>
+<pre class="brush:html">
+&lt;script src="scripts/modernizr-chrg.min.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/imagesloaded.min.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/masonry.min.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/chromagallery.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>另外还需要引入chromagallery.min.css文件，CSS文件中使用了字体文件，字体文件夹需要放置在合适的路径下。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="stylesheets/chromagallery.min.css"&gt;
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该图片画廊的HTML结构非常简单：使用一个<code>&lt;div&gt;</code>元素来包裹所有的图片。</p>
+<pre class="brush:html">
+&lt;div class="chroma-gallery mygallery"&gt;
+&lt;img src="images/thumbs/1.jpg" alt="Pic 1" data-largesrc="images/1.jpg"&gt;
+&lt;img src="images/thumbs/2.jpg" alt="Pic 2" data-largesrc="images/2.jpg"&gt;
+&lt;img src="images/thumbs/3.jpg" alt="Pic 3" data-largesrc="images/3.jpg"&gt;
+&lt;img src="images/thumbs/4.jpg" alt="Pic 4" data-largesrc="images/4.jpg"&gt;
+&lt;img src="images/thumbs/5.jpg" alt="Pic 5" data-largesrc="images/5.jpg"&gt;
+&lt;img src="images/thumbs/6.jpg" alt="Pic 6" data-largesrc="images/6.jpg"&gt;
+&lt;img src="images/thumbs/7.jpg" alt="Pic 7" data-largesrc="images/7.jpg"&gt;
+&lt;img src="images/thumbs/8.jpg" alt="Pic 8" data-largesrc="images/8.jpg"&gt;
+&lt;img src="images/thumbs/9.jpg" alt="Pic 9" data-largesrc="images/9.jpg"&gt;
+&lt;img src="images/thumbs/10.jpg" alt="Pic 10" data-largesrc="images/10.jpg"&gt;
+&lt;/div&gt; 
+</pre>
+<p>图片上的<code>alt</code>属性用于指定图片的标题。<code>data-largesrc</code>属性用于指定该图片的高清版本图片的URL位置。</p>
+<p>包裹div元素上的<code>chroma-gallery</code> class用于防止图片过早的显示。</p>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该图片画廊插件。</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+$(".mygallery").chromaGallery(};
+&lt;/script&gt; 
+</pre>
+<p>也可以在初始化的时候配置一些参数：</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+$(".mygallery").chromaGallery
+({
+color:'#000',
+gridMargin:15,
+maxColumns:5
+dof:true,
+screenOpacity:0.8
+});
+&lt;/script&gt;
+</pre>
+<p>你可以像下面的样子在代码中调用图片：</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+$(".mygallery").chromaGallery
+({
+items:
+[
+{
+alt:'Pic 1',
+largesrc:'images/1.jpg'
+},
+{
+alt:'Pic 2',
+largesrc:'images/2.jpg'
+},
+{
+alt:'Pic 3',
+largesrc:'images/3.jpg'
+},
+{
+alt:'Pic 4',
+largesrc:'images/4.jpg'
+}
+]
+});
+&lt;/script&gt;
+</pre>
+<p>注意：如果你即提供了HTML的图片代码，有提供了一个<code>items</code>参数，那么插件会使用<code>items</code>参数中提供的图片。</p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>chroma</td>
+<td>设置图片画廊的背景色。默认值为“chroma”，它使用图片的主导颜色作为背景色</td>
+</tr>
+<tr>
+<td>maxColumns</td>
+<td>4</td>
+<td>网格布局的最大列数</td>
+</tr>
+<tr>
+<td>items</td>
+<td>null</td>
+<td>要加载的图片数组</td>
+</tr>
+<tr>
+<td>dof</td>
+<td>false</td>
+<td>深度背景效果，对性能有影响</td>
+</tr>
+<tr>
+<td>screenOpacity</td>
+<td>0.98</td>
+<td>屏幕的透明度，值在0-1之间</td>
+</tr>
+<tr>
+<td>lazyLoad</td>
+<td>true</td>
+<td>是否启用图片懒加载</td>
+</tr>
+<tr>
+<td>gridMargin</td>
+<td>7</td>
+<td>网格图片之间的间隔</td>
+</tr>
+<tr>
+<td>fullscreen</td>
+<td>false</td>
+<td>是否添加全屏模式</td>
+</tr>
+<tr>
+<td>easing</td>
+<td>easeInOutQuart</td>
+<td>设置打开和关闭图片画廊时的easing动画效果，可用值如下：</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>可用的easing效果有：</p>
+<ul>
+<li>linear</li>
+<li>ease</li>
+<li>easeIn</li>
+<li>easeOut</li>
+<li>easeInOut</li>
+<li>easeInQuad</li>
+<li>easeInCubic</li>
+<li>easeInQuart</li>
+<li>easeInQuint</li>
+<li>easeInSine</li>
+<li>easeInExpo</li>
+<li>easeInCirc</li>
+<li>easeInBack</li>
+<li>easeOutQuad</li>
+<li>easeOutCubic</li>
+<li>easeOutQuart</li>
+<li>easeOutQuint</li>
+<li>easeOutSine</li>
+<li>easeOutExpo</li>
+<li>easeOutCirc</li>
+<li>easeOutBack</li>
+<li>easeInOutQuad</li>
+<li>easeInOutCubic</li>
+<li>easeInOutQuart</li>
+<li>easeInOutQuint</li>
+<li>easeInOutSine</li>
+<li>easeInOutExpo</li>
+<li>easeInOutCirc</li>
+<li>easeInOutBack</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>方法名称</td>
+<td>参数</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openImg</td>
+<td>图片的index</td>
+<td>从网格中打开一张图片</td>
+</tr>
+<tr>
+<td>closeImg</td>
+<td>none</td>
+<td>关闭任何打开的图片</td>
+</tr>
+<tr>
+<td>goTo</td>
+<td>图片的index</td>
+<td>当有图片已经打开时跳转到指定的图片上</td>
+</tr>
+<tr>
+<td>next</td>
+<td>none</td>
+<td>跳转到下一张图片上</td>
+</tr>
+<tr>
+<td>prev</td>
+<td>none</td>
+<td>跳转到前一张图片上</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>示例代码：</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+var mygallery = $(".mygallery").chromaGallery();
+<p>//will open the third<br>
+mygallery.chromaGallery(&quot;openImg&quot;,2);<br>
+&lt;/script&gt;<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 回调函数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onLoad</td>
+<td>图片画廊加载时被调用</td>
+</tr>
+<tr>
+<td>onOpen</td>
+<td>当一张图片被打开时调用</td>
+</tr>
+<tr>
+<td>onClose</td>
+<td>当一张图片被关闭时调用</td>
+</tr>
+<tr>
+<td>onNext</td>
+<td>当跳转到下一张图片时被调用</td>
+</tr>
+<tr>
+<td>onPrev</td>
+<td>当跳转到前一张图片时被调用</td>
+</tr>
+<tr>
+<td>onFullscreen</td>
+<td>当跳转到全屏模式时被调用（如果可用）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>示例代码： </p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+$(".mygallery").chromaGallery
+({
+onLoad:function()
+{
+this.chromaGallery("openImg",2);
+}
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<ul>
+<li>Firefox 4+</li>
+<li>IE 9+</li>
+<li>Google Chrome 8+</li>
+<li>Safari 3.1+</li>
+<li>Opera 11.5+</li>
+<li>IOS Safari 3.2+</li>
+<li>Android Browser 2.1+</li>
+<li>Opera Mobile 12+</li>
+</ul>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510281543.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510282716.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_962">
+                                <h3 class="post-title">
+                                    基于Bootstrap3的隐藏滑动侧边栏插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

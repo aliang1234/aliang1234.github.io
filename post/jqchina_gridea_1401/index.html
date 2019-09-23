@@ -1,0 +1,572 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3炫酷3D互动图片画廊特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3炫酷3D互动图片画廊特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501051638.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501051638.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501051110.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和css3制作的炫酷3D互动图片画廊特效插件。该3d互动图片画廊插件可以使图片3d倾斜排列，当点击图片后，图片3d旋转到屏幕中间，并出现该图片信息的tooltips。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常炫酷的jQuery和css3 3D互动图片画廊特效插件。遗憾的是该特效只在WEBKIT内核的浏览器中可以看到效果。</p>
+<h3>基本样式</h3>
+<h5>HTML</h5>
+<p>使用一个<span class="m">gallery</span> div作为wrapper。里面每个div <span class="m">item</span>是一个用于3D倾斜和旋转的图片。</p>
+<pre class="brush:html">
+&lt;div class="gallery"&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/c2NAjXD.jpg"/&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/FeCziip.png"/&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/OYlw7Pw.jpg?"/&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/MVammek.jpg?"/&gt;
+&lt;/div&gt;
+&lt;div href="#" class="item"&gt;
+&lt;img align="left" src="img/gfp57KR.png"/&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/FeCziip.png"/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>CSS样式</h5>
+<pre class="brush:css">
+body {
+margin: 0;
+}
+<p>.gallery {<br>
+margin: 0 auto;<br>
+width: 700px;<br>
+}<br>
+.gallery .item{<br>
+cursor: pointer;<br>
+position: relative;<br>
+display: block;<br>
+float: left;<br>
+z-index: 1;<br>
+}</p>
+<p>.gallery .item img {<br>
+-webkit-transition-property: all;<br>
+-webkit-transition-duration: 0.7s;<br>
+box-shadow:-10px 10px 25px rgba(0,0,0,0.25);<br>
+max-width: 100%;<br>
+width: 190px;<br>
+height: 340px;<br>
+}<br>
+</pre></p>
+<p>首先，我们简单的将图片排成一排。注意，所有的图片都使用图像占位，如果你想使用自己的图片，那么建议图片的尺寸要一样大小。否则你可能需要其他一些jQuery插件来帮助你排列你的图片，如：<a href="http://www.wookmark.com/jquery-plugin" target="\_blank">Woomark</a> 或<a href="http://masonry.desandro.com/" target="\_blank">Masonry</a>。</p>
+<h3>3D倾斜效果</h3>
+<h5>CSS样式</h5>
+<pre class="brush:css">
+body {
+background: url(img/LBONKMh.jpg) repeat fixed right bottom;
+margin: 0;
+}
+<p>.gallery {<br>
+margin: 0 auto;<br>
+width: 700px;<br>
+}<br>
+.gallery .item{<br>
+cursor: pointer;<br>
+position: relative;<br>
+display: block;<br>
+float: left;<br>
+margin: 0 50px -175px;<br>
+z-index: 1;<br>
+transform-origin:20% 40%;<br>
+-webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg);<br>
+-webkit-transition-property: all;<br>
+-webkit-transition-duration: 0.7s;<br>
+}</p>
+<p>.gallery .item img {<br>
+-webkit-transition-property: all;<br>
+-webkit-transition-duration: 0.7s;<br>
+box-shadow:-10px 10px 25px rgba(0,0,0,0.25);<br>
+max-width: 100%;<br>
+width: 190px;<br>
+height: 340px;<br>
+}<br>
+</pre></p>
+<p>在这一步中将使用CSS transform来将图片进行3d倾斜。</p>
+<h3>互动效果</h3>
+<h5>CSS样式</h5>
+<pre class="brush:css">
+.gallery .item{
+cursor: pointer;
+position: relative;
+display: block;
+float: left;
+margin: 0 50px -175px;
+z-index: 1;
+transform-origin:20\% 40\%;
+-webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg);
+-webkit-transition-property: all;
+-webkit-transition-duration: 0.7s;
+}
+<p>.gallery .item img {<br>
+-webkit-transition-property: all;<br>
+-webkit-transition-duration: 0.7s;<br>
+box-shadow:-10px 10px 25px rgba(0,0,0,0.25);<br>
+max-width: 100%;<br>
+width: 190px;<br>
+height: 340px;<br>
+}</p>
+<p>.gallery .item:hover {<br>
+z-index: 2;<br>
+-webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg) scale(1.2);<br>
+}</p>
+<p>.gallery .item.clicked{<br>
+z-index: 3;<br>
+-webkit-transform:none;<br>
+}<br>
+</pre></p>
+<h5>JAVASCRIPT</h5>
+<pre class="brush:js">
+$(document).ready(function() {
+$(".item").click(function (e) {
+e.stopPropagation();
+$(".item").removeClass("clicked");
+$(this).toggleClass("clicked");
+$("body").addClass("showing-item");
+});
+$('html').click(function() {
+ $(".item").removeClass("clicked");
+ $("body").removeClass("showing-item");
+});
+});
+</pre>
+<p>确保在上面代码之前引入jQuery文件。这一步将制作出鼠标滑过图片和点击图片是的效果。</p>
+<h3>添加图片提示效果</h3>
+<h5>HTML结构</h5>
+<pre class="brush:html">
+&lt;div class="gallery"&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/c2NAjXD.jpg"/&gt;
+&lt;span class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/FeCziip.png"/&gt;
+&lt;span class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/OYlw7Pw.jpg?1"/&gt;
+&lt;span class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/MVammek.jpg?1"/&gt;
+&lt;span class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div href="#" class="item"&gt;
+&lt;img align="left" src="img/gfp57KR.png"/&gt;
+&lt;span class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="item"&gt;
+&lt;img align="left" src="img/FeCziip.png"/&gt;
+&lt;div class="caption"&gt;
+&lt;h1&gt;
+htmleaf.com
+&lt;/h1&gt;
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>CSS样式</h5>
+<pre class="brush:css">
+body {
+background: url(img/LBONKMh.jpg) repeat fixed right bottom;
+margin: 0;
+}
+body.showing-item .item:not(.clicked){
+ -webkit-filter: blur(2px) grayscale(0.5) opacity(0.8);
+}
+.gallery {
+margin: 0 auto;
+width: 700px;
+}
+.gallery .item{
+cursor: pointer;
+position: relative;
+display: block;
+float: left;
+margin: 0 50px -175px;
+z-index: 1;
+transform-origin:20\% 40\%;
+-webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg);
+-webkit-transition-property: all;
+-webkit-transition-duration: 0.7s;
+}
+.gallery .item:hover {
+z-index: 2;
+-webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg) scale(1.2);
+}
+.gallery .item.clicked{
+z-index: 3;
+-webkit-transform:none;
+}
+.gallery .item .caption{
+display: none;
+border-radius: 3px 3px;
+font-family: helvetica, arial;
+background: white;
+padding: 10px;
+box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+width: 300px;
+}
+.gallery .item .caption:after{
+background-color: #fff;
+box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+content: "\00a0";
+display: block;
+height: 15px;
+left: -5px;
+position: absolute;
+top: 50\%;
+margin-top: -7px;
+-webkit-transform: rotate( 45deg );
+width:15px;
+}
+.gallery .item.left .caption:after{
+right: -8px;
+left: auto;
+box-shadow: 2px -1px 2px 0 rgba( 178, 178, 178, .4 );
+}
+.gallery .item .caption h1{
+color: black;
+font-weight: 100;
+text-align: center;
+letter-spacing: -1px;
+margin: 0 0 5px;
+margin-bottom: 10px;
+border-bottom: 1px solid #EFEFEF;
+padding-bottom: 10px;
+}
+.gallery .item .caption p{
+ color: #444;
+font-weight: 100;}
+.gallery .item.clicked .caption{
+position: absolute;
+top: 25px;
+display: inline; 
+-webkit-transition-property: display;
+-webkit-transition-duration: 0.7s;
+}
+.gallery .item.clicked.right .caption {
+left: 115\%;
+margin-left: 15px;
+<p>}<br>
+.gallery .item.clicked.left .caption {<br>
+right: 115%;<br>
+margin-right: 15px;<br>
+}<br>
+.gallery .item.clicked img {<br>
+box-shadow:0 0 25px rgba(0,0,0,0.25);<br>
+-webkit-transform: scale(1.25);<br>
+}<br>
+.gallery .item img {<br>
+-webkit-transition-property: all;<br>
+-webkit-transition-duration: 0.7s;<br>
+box-shadow:-10px 10px 25px rgba(0,0,0,0.25);<br>
+max-width: 100%;<br>
+width: 190px;<br>
+height: 340px;<br>
+}<br>
+</pre></p>
+<h5>JAVASCRIPT</h5>
+<pre class="brush:js">
+$(document).ready(function () {
+$(".item").click(function (e) {
+e.stopPropagation();
+$(".item").removeClass("clicked");
+$(this).toggleClass("clicked");
+$("body").addClass("showing-item");
+<p>var offset = $(this).offset();<br>
+var pos = offset.left + $(this).width()<br>
+var center = <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 35: …) / 2;
+if (pos &amp;̲gt; center) {
+v…'>(&quot;.gallery&quot;).width() / 2;
+if (pos &amp;gt; center) {
+var align = &quot;left&quot;;
+} else {
+var align = &quot;right&quot;;
+}
+</span>(this).removeClass(&quot;.left, .right&quot;).addClass(align);</p>
+<p>return false;<br>
+});</p>
+<p><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …(function () {
+'>(&#039;html&#039;).click(function () {
+</span>(&quot;.item&quot;).removeClass(&quot;clicked&quot;);<br>
+$(&quot;body&quot;).removeClass(&quot;showing-item&quot;);<br>
+});<br>
+});<br>
+</pre></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501051638.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501051110.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1402">
+                                <h3 class="post-title">
+                                    tween.js可生成平滑动画效果的js动画库
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

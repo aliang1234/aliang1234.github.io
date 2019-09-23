@@ -1,0 +1,346 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持移动设备带缩略图的jQuery幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持移动设备带缩略图的jQuery幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1511/201511111648.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511111648.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511112771.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>photor.js是一款支持移动设备带缩略图的jQuery幻灯片插件。该幻灯片插件支持所有主流浏览器和移动设备，支持IE7以上的IE浏览器，只是在IE7-IE9浏览器中没有动画过渡效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>photor.js是一款支持移动设备带缩略图的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>幻灯片插件。该<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片插件</a>支持所有主流浏览器和移动设备，支持IE7以上的IE浏览器，只是在IE7-IE9浏览器中没有动画过渡效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该幻灯片插件需要引入jQuery，photor.min.js和photor.min.css文件。</p>
+<pre class="brush:html">
+&lt;linkhref="photor.min.css" rel="stylesheet"&gt; 
+&lt;script src="jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="photor.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>photor幻灯片基本的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="photor"&gt;
+&lt;div class="photor\_\_viewport"&gt;
+&lt;div class="photor\_\_viewportLayer"&gt;
+&lt;!-- Add photos --&gt;
+&lt;img src="images/1.jpg" data-thumb="thumbs/1.jpg"&gt;
+&lt;img src="images/2.jpg" data-thumb="thumbs/2.jpg"&gt;
+<p>&lt;/div&gt;<br>
+&lt;div class=&quot;photor__viewportControl&quot;&gt;<br>
+&lt;div class=&quot;photor__viewportControlPrev&quot;&gt;&lt;/div&gt;<br>
+&lt;div class=&quot;photor__viewportControlNext&quot;&gt;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;photor__thumbs&quot;&gt;<br>
+&lt;div class=&quot;photor__thumbsWrap&quot;&gt;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p>其中<code>data-thumb</code>是指向缩略图的路径。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该幻灯片插件。</p>
+<pre class="brush:js">
+&lt;script&gt;
+$(document).ready(function() {
+$('.photor').photor();
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<pre class="brush:js">
+$('.photor').photor({
+<p>// General options<br>
+current: 0, // {Number}开始slide的index<br>
+duration: 300,// {Number}过渡动画的除锈时间<br>
+loop: false,// {Boolean} 是否无限循环<br>
+slidesOnScreen: 1,// {Number}在viewport中可见的slides数量</p>
+<p>// Handlers<br>
+single: false,// {Boolean} Initialize event handlers if gallery contains only one photo?<br>
+keyboard: true, // {Boolean} 是否初始化键盘处理事件</p>
+<p>// Prefixes<br>
+slideIdPrefix: '_', // {String}Prefix for class with slide index (e.g. &quot;_12&quot;)<br>
+ieClassPrefix: '_ie', // {String}Prefix for class with IE version (e.g. &quot;_ie8&quot;)</p>
+<p>// Classnames<br>
+control: 'photor__viewportControl',<br>
+next: 'photor__viewportControlNext',<br>
+prev: 'photor__viewportControlPrev',<br>
+thumbs: 'photor__thumbs',<br>
+thumbsLayer: 'photor__thumbsWrap',<br>
+thumb: 'photor__thumbsWrapItem',<br>
+thumbImg: 'photor__thumbsWrapItemImg',<br>
+thumbFrame: 'photor__thumbsWrapFrame',<br>
+viewport: 'photor__viewport',<br>
+layer: 'photor__viewportLayer',<br>
+slide: 'photor__viewportLayerSlide',<br>
+slideImg: 'photor__viewportLayerSlideImg',</p>
+<p>// State modifiers<br>
+_loading: '_loading', // Photo is loading<br>
+_current: '_current', // Current slide or thumbnail<br>
+_dragging: '_dragging', // Dragging in progress<br>
+_disabled: '_disabled', // Control element is disabled (e.g. left button on first slide)<br>
+_alt: '_alt', // For photos with an alt attribute<br>
+_single: '_single', // Gallery contains only one photo<br>
+_animated: '_animated', // Animation in progress<br>
+_hidden: '_hidden', // Slide is hidden</p>
+<p>// Algorithm<br>
+_auto: '_auto', // Photo is larger than viewport<br>
+_center: '_center', // Photo is smaller than viewport</p>
+<p>// Orientation<br>
+_portrait: '_portrait', // [image width/image height] &lt; [gallery width/gallery height]<br>
+_landscape: '_landscape', // [image width/image height] &gt;= [gallery width/gallery height]</p>
+<p>// Thumbs<br>
+_draggable: '_draggable', // Dragging is allowed for thumbnails</p>
+<p>// Transition callback<br>
+onShow: function() {}</p>
+<p>});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>注意：一些方法使用<code>galleryId</code>作为第一个参数。这样允许你在一个页面中使用多个不同的幻灯片实例。</p>
+<ul>
+<li>
+<code>init</code>：初始化Photor。参数：<code>options {Object}</code>：初始化参数。</li>
+<li>
+<code>update</code>：重新计算幻灯片的大小和位置。无参数。</li>
+<li>
+<code>destroy</code>：销毁单个实例或所有实例。参数：<code>galleryId {String|Number}</code>：可选。</li>
+<li>
+<code>handlers</code>：设置当前幻灯片实例的处理程序。参数：<code>galleryId {String|Number}</code>。</li>
+<li>
+<code>go</code>：跳转到指定的slide。参数：<code>galleryId {String|Number}</code>；<code>target {Number}</code>：目标slide的index；<code>duration {Number}</code>：过渡的持续时间，可选。</li>
+<li>
+<code>next</code>：跳转到下一个slide。参数：<code>galleryId {String|Number}</code>。</li>
+<li>
+<code>prev</code>：跳转到前一个slide。参数：<code>galleryId {String|Number}</code>。</li>
+<li>
+<code>loadSlides</code>：Loads photos before and after the specified slide。参数：<code>galleryId {String|Number}</code>；<code>target {Number}</code>：目标slide的index。</li>
+<li>
+<code>loadSlide</code>：加载一张图片。参数：<code>galleryId {String|Number}</code>；<code>target {Number}</code>：目标slide的index。</li>
+</ul>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511111648.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511112771.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_938">
+                                <h3 class="post-title">
+                                    jQuery超酷3D网格照片墙动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

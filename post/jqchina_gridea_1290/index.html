@@ -1,0 +1,322 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery简单实用的Tooltip提示插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery简单实用的Tooltip提示插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1503/201504011821.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201504011821.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504011609.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款简单且非常实用的jQuery Tooltip工具提示插件。该Tooltip插件没有CSS，意味着你可以自定义你自己的Tooltip样式。你可以在Tooltip中显示任何内容：文本、DOM元素、图片等等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款简单且非常实用的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a> Tooltip工具提示插件。该<a href="http://www.htmleaf.com/jQuery/Tooltips/" target="\_blank">Tooltips插件</a>没有CSS，意味着你可以自定义你自己的Tooltip样式。你可以在Tooltip中显示任何内容：文本、DOM元素、图片等等。它的特点有：</p>
+<ul>
+<li>源文件非常小。</li>
+<li>没有依赖CSS文件，你可以自己定制。</li>
+<li>可以Tooltip任何你需要的东西。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower来安装这个Tooltip插件：</p>
+<pre class="brush:html">
+$ bower install tinytip
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<pre class="brush:js">
+&lt;!-- first include jQuery library --&gt;
+&lt;script src="./jQuery.js"&gt;&lt;/script&gt;
+&lt;!-- Then tinytip plugin --&gt;
+&lt;script src="./tinytip.js"&gt;&lt;/script&gt;
+$('.block.link').tinytip({
+//position [top|bottom|left|right]
+position : 'bottom',
+<p>//tooltip position fix [+-][yx]<br>
+fix : {<br>
+top : -10,<br>
+left: +20<br>
+},</p>
+<p>//animation effect start position [+,-][top,left]<br>
+//example +10 =&gt; animate up 10 pixels<br>
+animation : {<br>
+top : +10,<br>
+left: -5,<br>
+},</p>
+<p>//animation speed in milliseconds<br>
+speed : 100,</p>
+<p>//tooltip text, or can be a jQuery object of<br>
+//selected element<br>
+tooltip : &quot;Hi There&quot; || $('.some-selector'),</p>
+<p>//when to show tooltip event (default: mouseenter)<br>
+on : 'click',</p>
+<p>//when to hide tooltip event (default: mouseleave)<br>
+off: 'click'</p>
+<p>//prevent tooltip close when hover over it<br>
+preventClose : true,</p>
+<p>//callback function fired once the tooltip completely loaded<br>
+//passes tooltip element jQuery object (e)<br>
+onLoad : function(e){<br>
+e.text('lool');<br>
+},</p>
+<p>//add custom class to this tooltip<br>
+addClass : 'unique'<br>
+});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<span class="m">position</span>：类型：<code>string</code>。tooltip元素放置在何处，选项有：[top|bottom|left|right]。</li>
+<li>
+<span class="m">fix</span>：类型：<code>object</code>。将tooltip位置固定。
+<ul>
+<li>top :([+|-]number) set top position</li>
+<li>left :([+|-]number) set left position</li>
+</ul>
+</li>
+<li>
+<span class="m">animation</span>：类型：<code>object</code>。tooltip动画开始的位置。
+<ul>
+<li>top :([+|-]number) set starting top position</li>
+<li>left :([+|-]number) set starting left position</li>
+</ul>
+</li>
+<li>
+<span class="m">speed</span>：类型：<code>number</code>。动画的速度，单位毫秒。</li>
+<li>
+<span class="m">easing</span>：类型：<code>number</code>。如果使用jQuery easing插件，配置easing效果选项。默认值：<code>linear</code>。</li>
+<li>
+<span class="m">tooltip</span>：类型：<code>string|jQuery Object</code>。tooltip的text/html/jQuery元素选择器。</li>
+<li>
+<span class="m">on</span>：类型：<code>string</code>。触发tooltip的事件。默认值：<code>mouseenter</code>。</li>
+<li>
+<span class="m">off</span>：类型：<code>string</code>。隐藏tooltip的事件。默认值：<code>mouseleave</code>。</li>
+<li>
+<span class="m">preventClose</span>：类型：<code>boolean</code>。设置为<code>true</code>在离开或滑过tooltip元素的时候隐藏tooltip。默认值为<code>false</code>。</li>
+<li>
+<span class="m">onLoad</span>：类型：<code>function</code>。tooltip加载完成后的回调函数。函数会传递一个tooltip的jquery对象。</li>
+<li>
+<span class="m">addClass</span>：类型：<code>string</code>。定制当前tooltip的class名称。</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201504011821.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504011609.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1291">
+                                <h3 class="post-title">
+                                    jQuery和CSS3超酷三面板幻灯片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    可将HTML表格导出为Excel|csv|txt文件的jQuery插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            可将HTML表格导出为Excel|csv|txt文件的jQuery插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-info">
+                            #html
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1605/201605111555.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1605/201605111555.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201605113453.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>TableExport是一款可以将HTML表格导出为Excel xlsx格式、xls格式，以及csv和txt文件的jQuery插件。TableExport插件使用简单，默认使用Bootstrap的CSS表格样式，也支持普通的HTML表格。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>TableExport是一款可以将HTML表格导出为Excel xlsx格式、xls格式，以及csv和txt文件的<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。TableExport插件使用简单，默认使用Bootstrap的CSS表格样式，也支持普通的HTML表格。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower或npm来安装TableExport插件。</p>
+<pre class="brush:html">
+$ bower install tableexport.js
+$ npm install tableexport
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>TableExport插件依赖于jQuery（1.2.1+），<a href="https://github.com/eligrey/FileSaver.js/" target="\_blank">FileSaver.js</a>。为了支持<code>.xlsx</code>（Office Open XML SpreadsheetML Format）格式，你必须在 FileSaver.js 和 TableExport.js文件之前引入<a href="https://github.com/SheetJS/js-xlsx" target="\_blank">xlsx-core.js</a>文件。为了使旧的浏览器（Firefox &lt; 20, Opera &lt; 15, Safari &lt; 6）支持<code>.xlsx</code>，需要在 FileSaver.js 文件之前引入 <a href="https://github.com/eligrey/Blob.js/" target="\_blank">Blob.js</a>文件。</p>
+<pre class="brush:html"> 
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="xlsx-core.js"&gt;&lt;/script&gt;
+&lt;script src="blob.js"&gt;&lt;/script&gt;
+&lt;script src="filesaver.js"&gt;&lt;/script&gt;
+&lt;script src="tableexport.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>TableExport插件默认使用Bootstrap框架来制作表格和按钮。如果你在项目中没有使用Bootstrap，可以将参数<code>bootstrap</code>设置为<code>false</code>。</p>
+<pre class="brush:js">
+$("table").tableExport({
+bootstrap: false
+}); 
+</pre>
+<p>如果使用了Bootstrap，那么有4个可用的按钮class类，它们分别为.xlsx, .xls, .csv 和 .txt的导出按钮提供样式。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>tableExport()</code>方法来初始化该表格插件。</p>
+<pre class="brush:js">
+$("table").tableExport();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>TableExport插件的默认配置参数如下：</p>
+<pre class="brush:js">
+/* Defaults */
+$("table").tableExport({
+headings: true, 
+footers: true, 
+formats: ["xls", "csv", "txt"],
+fileName: "id",
+bootstrap: true,
+position: "bottom",
+ignoreRows: null,
+ignoreCols: null
+});
+</pre>
+<ul>
+<li>
+<code>headings</code>：是否在<code>&lt;thead&gt;</code>元素中显示表格的头部（th或td元素）。</li>
+<li>
+<code>footers</code>：是否在<code>&lt;tfoot&gt;</code>元素中显示表格的脚部（th或td元素）。</li>
+<li>
+<code>formats</code>：导出的文件类型，会生成相应的导出按钮。</li>
+<li>
+<code>fileName</code>：下载的文件名称。</li>
+<li>
+<code>bootstrap</code>：是否使用bootstrap样式的按钮。</li>
+<li>
+<code>position</code>：标题元素相对于表格的位置，可以是top或bottom。</li>
+<li>
+<code>ignoreRows</code>：设置不被导出的表格行，可以是数值或一个数值数组。</li>
+<li>
+<code>ignoreCols</code>：设置不被导出的表格列，可以是数值或一个数值数组。</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 按钮设置</h5>
+<p>每一个按钮都有一个自己的class类，和显示的内容。如下：</p>
+<pre class="brush:js">
+/* default class, content, and separator for each export type */
+<p>/* Excel Open XML spreadsheet (.xlsx) */<br>
+$.fn.tableExport.xlsx = {<br>
+defaultClass: &quot;xlsx&quot;,<br>
+buttonContent: &quot;Export to xlsx&quot;,<br>
+mimeType: &quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;,<br>
+fileExtension: &quot;.xlsx&quot;<br>
+};</p>
+<p>/* Excel Binary spreadsheet (.xls) */<br>
+$.fn.tableExport.xls = {<br>
+defaultClass: &quot;xls&quot;,<br>
+buttonContent: &quot;Export to xls&quot;,<br>
+separator: &quot;\t&quot;,<br>
+mimeType: &quot;application/vnd.ms-excel&quot;,<br>
+fileExtension: &quot;.xls&quot;<br>
+};</p>
+<p>/* Comma Separated Values (.csv) */<br>
+$.fn.tableExport.csv = {<br>
+defaultClass: &quot;csv&quot;,<br>
+buttonContent: &quot;Export to csv&quot;,<br>
+separator: &quot;,&quot;,<br>
+mimeType: &quot;application/csv&quot;,<br>
+fileExtension: &quot;.csv&quot;<br>
+};</p>
+<p>/* Plain Text (.txt) */<br>
+$.fn.tableExport.txt = {<br>
+defaultClass: &quot;txt&quot;,<br>
+buttonContent: &quot;Export to txt&quot;,<br>
+separator: &quot;&quot;,<br>
+mimeType: &quot;text/plain&quot;,<br>
+fileExtension: &quot;.txt&quot;<br>
+};<br>
+</pre></p>
+<p>下面是插件额外的默认值。</p>
+<pre class="brush:js">
+/* default charset encoding (UTF-8) */
+$.fn.tableExport.charset = "charset=utf-8";
+<p>/* default filename if &quot;id&quot; attribute is set and undefined */<br>
+$.fn.tableExport.defaultFileName = &quot;myDownload&quot;;</p>
+<p>/* default class to style buttons when not using bootstrap*/<br>
+$.fn.tableExport.defaultButton = &quot;button-default&quot;;</p>
+<p>/* bootstrap classes used to style and position the export buttons */<br>
+$.fn.tableExport.bootstrap = [&quot;btn&quot;, &quot;btn-default&quot;, &quot;btn-toolbar&quot;];</p>
+<p>/* row delimeter used in all filetypes */<br>
+$.fn.tableExport.rowDel = &quot;\r\n&quot;;<br>
+</pre></p>
+<p>TableExport插件的github地址为：<a href="https://github.com/clarketm/TableExport" target="\_blank">https://github.com/clarketm/TableExport</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1605/201605111555.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201605113453.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_768">
+                                <h3 class="post-title">
+                                    简单实用的jQuery计时器插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

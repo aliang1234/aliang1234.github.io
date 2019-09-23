@@ -1,0 +1,422 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    仿github表情符号和at自动完成jquery插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            仿github表情符号和at自动完成jquery插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1801/201801081454.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1801/201801081454.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201801084920.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>At.js是一款仿github表情符号和at自动完成jquery插件。通过At.js插件，可以在表单，后某个可编辑的div元素，或某些所见即所得的文本编辑器中，通过快捷方式来自动补全表情符号，或at某人的操作。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>At.js是一款仿github表情符号和at自动完成jquery插件。通过At.js插件，可以在表单，后某个可编辑的div元素，或某些所见即所得的文本编辑器中，通过快捷方式来自动补全表情符号，或at某人的操作。At.js插件的特点还有：</p>
+<ul>
+<li>支持IE7+的textarea元素。</li>
+<li>支持HTML5 <code>contentEditable</code>元素（不包括IE8）.</li>
+<li>可以监听任何字符，不单单只是<code>@</code>字符。</li>
+<li>使用模板来返回格式化数据。</li>
+<li>支持键盘控制。</li>
+<li>支持AMD。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该插件依赖于jquery.caret.js。在使用是要引入jquery，jquery.caret.js，jquery.atwho.css和jquery.atwho.js文件。</p>
+<pre class="brush:html">
+&lt;link href="css/jquery.atwho.css" rel="stylesheet"&gt;
+&lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.caret.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.atwho.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>At.js插件最基本的用法如下：</p>
+<pre class="brush:js">
+$('.atwho-inputor').atwho({
+at: "@",
+data: ["one", "two", "three"],
+}).atwho({
+at: ":",
+data: ["+1", "-1", "smile"]
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>At.js插件的可用配置参数如下：</p>
+<pre class="brush:js">
+$('.atwho-inputor').atwho({
+// key char for observing such as `@`
+at: void 0,
+/*
+alias name of `at`
+it would be an id attribute of the popup view.
+*/
+alias: void 0,
+/*
+ should be a plain object *Array* or a *URL*
+ would save *Array* directly.
+ would load and save remote JSON data by *URL*
+ */
+data: null,
+/*
+ Would render the passed value at the top of the selector popup.
+*/
+headerTpl: "&lt;h3&gt;Select a user&lt;/h3&gt;",
+/*
+ would eval it and assign value of the key contained in `${}`
+ key-value ( {'name': "one"} ) is an item in `data` Array.
+ Alternatively, this can be a function accepting one data item as a parameter.
+*/
+displayTpl: "&lt;li&gt;${name}&lt;/li&gt;",
+/*
+ It will be evaluated and inserted in the inputor.
+ `atwho-at` is the `at` for runtime by default.
+ You change it into anything you want.
+*/
+insertTpl: "${atwho-at}${name}",
+/*
+There are several data processors that can be overriden here such as `filter`.
+we will cover it later.
+*/
+callbacks: DEFAULT\_CALLBACKS,
+/*
+would matching item by test against the value of this `search\_key` with query string.
+*/
+searchKey: "name",
+/*
+limit number of items to show in popup list.
+*/
+limit: 5,
+/*
+setting the max length of the string after `at` that would be matched
+It will stop matching if the query string is longer than `max\_len`.
+*/
+maxLen: 20,
+/*
+if `yes`, At.js will match the query with a spaaace before the `at`.
+*/
+startWithSpace: true,
+// time in ms to persist the popup menu for after blurring from the invoking text field
+displayTimeout: 300,
+// highlight\_first suggestion in popup menu
+highlightFirst: true,
+// delay time trigger At.js while typing. For example: delay: 400
+delay: null,
+// suffix for inserting string.
+suffix: undefined,
+// don't show dropdown view without `suffix`
+hideWithoutSuffix: false,
+// Add attribute to the inserted element for contenteditable mode
+// check out the issue: https://github.com/ichord/At.js/issues/253#issuecomment-75694945
+editableAtwhoQueryAttrs: {}
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 应用示例</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 自定义模板</h5>
+<p>你可以自定义要在自动完成列表中显示的内容，如显示一个头像，或一个表情符号。</p>
+<p>一个有效的模板必须是一个<code>&lt;li&gt;</code>元素，例如：</p>
+<pre class="brush:html">
+&lt;li&gt;这里可以放任何东西&lt;/li&gt;
+</pre>
+<p>你可以在<code>&lt;li&gt;</code>元素中放任何HTML代码，如一张图片。</p>
+<pre class="brush:js">
+var emojis = ["smile", "iphone", "girl", "smiley", "heart", "kiss", "copyright", "coffee"];
+var emojisList = $.map(emojis, function(value, i) {
+return {'id':i, 'name':value};
+});
+//http://a248.e.akamai.net/assets.github.com/images/icons/emoji/8.png
+$(".container textarea").atwho({
+at: ':',
+displayTpl: "&lt;li&gt;&lt;img src='icons/emoji/${name}.png' height='20' width='20'/&gt; ${name} &lt;/li&gt;",
+insertTpl: ":${name}:",
+data: emojisList
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 注册多个<code>at</code>关键字</h5>
+<p>At.js可以监听多个<code>at</code>关键字，并且每个关键字都有自己的配置。</p>
+<pre class="brush:js">
+var emojis = ["smile", "iphone", "girl", "smiley", "heart", "kiss", "copyright", "coffee"];
+<p>var names = [&quot;Jacob&quot;, &quot;Isabella&quot;, &quot;Ethan&quot;, &quot;Emma&quot;, &quot;Michael&quot;, &quot;Olivia&quot;, &quot;Alexander&quot;, &quot;Sophia&quot;, &quot;William&quot;, &quot;Ava&quot;, &quot;Joshua&quot;, &quot;Emily&quot;, &quot;Daniel&quot;, &quot;Madison&quot;, &quot;Jayden&quot;, &quot;Abigail&quot;, &quot;Noah&quot;, &quot;Chloe&quot;, &quot;你好&quot;, &quot;你你你&quot;];</p>
+<p>var emojisList = $.map(emojis, function(value, i) {<br>
+return {'id':i, 'name':value};<br>
+});</p>
+<p>var issues = [<br>
+{ name: &quot;1&quot;, content: &quot;stay foolish&quot;},<br>
+{ name: &quot;2&quot;, content: &quot;stay hungry&quot;},<br>
+{ name: &quot;3&quot;, content: &quot;stay heathly&quot;},<br>
+{ name: &quot;4&quot;, content: &quot;this happiess&quot;},<br>
+];</p>
+<p><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;#&#039; at position 72: …
+.atwho({
+at: &quot;#̲&quot;, 
+displayTpl:…'>(&quot;.container textarea&quot;)
+.atwho({
+at: &quot;@&quot;,
+data: names
+})
+.atwho({
+at: &quot;#&quot;, 
+displayTpl: &#039;&amp;lt;li&amp;gt;</span>{name} &lt;small&gt;<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 10: {content}&amp;̲lt;/small&amp;gt;&amp;l…'>{content}&amp;lt;/small&amp;gt;&amp;lt;/li&amp;gt;&#039;,
+data: issues
+})
+.atwho({
+at: &quot;:&quot;, 
+displayTpl: &quot;&amp;lt;li&amp;gt;&amp;lt;img src=&#039;icons/emoji/</span>{name}.png' height='20' width='20'/&gt; <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 8: {name} &amp;̲lt;/li&amp;gt;&quot;,
+in…'>{name} &amp;lt;/li&amp;gt;&quot;,
+insertTpl: &#039;:</span>{name}:',<br>
+data: emojisList<br>
+});<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 远程加载更多数据</h5>
+<p>当你从某个URL获取数据时，At.js将执行AJAX请求异步加载更多json数据。</p>
+<pre class="brush:js">
+$('textarea').atwho({
+at: "@", 
+data: "http://www.atjs.com/users.json",
+limit: 7
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 定义查询条件</h5>
+<p>如果你想支持unicode编码，你可以自定义查询条件。</p>
+<pre class="brush:js">
+$('#inputor').atwho({
+at: "@", 
+callbacks: {
+matcher: function(flag, subtext) {
+var match, matched, regexp;
+regexp = new XRegExp('(\\s+|^)' + flag + '(\\p{L}+)$', 'gi');
+match = regexp.exec(subtext);
+// ... get matched result
+return matched;
+}
+//, ... others callbacks
+}
+});
+</pre>
+<p>At.js 仿github表情符号自动完成js插件的github地址为：<a href="https://github.com/ichord/At.js" target="\_blank">https://github.com/ichord/At.js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1801/201801081454.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201801084920.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_396">
+                                <h3 class="post-title">
+                                    jquery和CSS3 Tabs选项卡
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

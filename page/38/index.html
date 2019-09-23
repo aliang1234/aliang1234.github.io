@@ -1,0 +1,2027 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1336">
+                        实现跨浏览器CSS3 transitions效果的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1336" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501311827.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+tram.js是一款实现跨浏览器CSS3 transitions效果的jQuery插件。tram.js旨在提高CSS3 transitions的性能和灵活性，并通过jQuery来定义它们。tram.js提供强大的API来实现auto-stopping、sequencing和跨浏览器等功能。
+内容：
+
+
+简要教程
+
+
+tram.js是一款实现跨浏览器CSS3 transition效果的jQuery插件。tram.js旨在提高CSS3 transitions的性能和灵活性，并通过jQuery来定义它们。tram.js提供强大的API来实现auto-stopping、sequencing和跨浏览器等功能。
+tram.js目前通过jQuery来实现，需要jQuery的主要原因有：
+
+每个元素的 data API
+跨浏览器的CSS getters/setters
+scrollTop/Left偏移量的帮助
+
+安装
+可以通过npm或bower来安装tram.js。
+
+npm install tram
+bower install tram
+
+使用方法
+当该jQuery插件首次加载时，它将使用特性检测来判断浏览器是否支持CSS transitions。如果浏览器支持，Tram将管理样式并有浏览器来执行CSS动画。如果浏览器不支持，Tram将使用自己的补间动画引擎为每一帧动画设置样式，这个引擎是由requestAnimationFrame和performance.now()来驱动。
+Tram可以通过AMD、CommonJS和浏览器的全局变量来调用。
+
+var tram = window.tram;
+// or
+var tram = require(&#39;tram&#39;);
+
+在你为一个元素添加过渡效果之前，你需要用tram()方法来包装它。它会在元素的data中存储一个Tram class实例。我们需要它来制作auto-stop和其它状态。
+
+tram(element);
+
+你也可以将它保存到一个变量中，这会在有大量元素的时候提供一些性能。
+
+var myTram = tram(element); // optional
+
+必须通过add()方法来定义每一个元素的属性。它和CSS3 transition的标准语法很类似：property-name duration easing-function delay。
+
+tram(element).add(&#39;opacity 500ms ease-out&#39;);
+
+当定义了一个过渡效果之后，它被存储在元素的data中。你可以在后面重新覆盖它，例如：
+
+tram(element).add(&#39;opacity 2s&#39;); // changed duration to 2 seconds
+
+使用start()方法来开始元素的过渡动画。
+
+tram(element).start({ opacity: 0.5 });
+
+如果你需要在过渡动画结束时监听事件，可以通过then()方法来实现：
+
+tram(element)
+.start({ opacity: 0.5 })
+.then(function () { console.log(&#39;done!&#39;) });
+
+序列也可以使用then()方法：
+
+tram(element)
+.start({ opacity: 0.5 })
+.then({ opacity: 1 })
+.then({ opacity: 0 });
+
+Tram提供了一些虚拟属性来帮助完成CSS3 transforms。
+
+tram(element)
+.add(&#39;transform 1s ease-out-quint&#39;)
+.start({ x: 100, rotate: 45 }); // aka: translateX(100px) rotate(45deg)
+
+可以通过set()方法来设置元素的样式。这个方法会停止所有的transitions，并立刻开始设置给定的样式：
+
+tram(element).set({ x: 0, opacity: 1 });
+
+可以通过stop()方法来停止过渡动画。该方法会自动在start()或set()方法被调用是被触发。
+
+tram(element).stop(&#39;opacity&#39;); // specific property
+tram(element).stop({ opacity: true, x: true }); // multiple properties
+tram(element).stop(); // stops all property transitions
+
+支持的属性
+每个浏览器对DOM过渡属性的支持是有限的，Tram最大限度的覆盖了所有的跨浏览器属性，另外添加了一些扩展。
+支持的属性（属性名/值）
+
+&#39;color&#39; //color
+&#39;background&#39; //color
+&#39;outline-color&#39; //color
+&#39;border-color&#39; //color
+&#39;border-top-color&#39; //color
+&#39;border-right-color&#39; //color
+&#39;border-bottom-color&#39; //color
+&#39;border-left-color&#39; //color
+&#39;border-width&#39; //length
+&#39;border-top-width&#39; //length
+&#39;border-right-color&#39; //length
+&#39;border-bottom-color&#39; //length
+&#39;border-left-color&#39; //length
+&#39;border-spacing&#39; //length
+&#39;letter-spacing&#39; //length
+&#39;margin&#39; //length
+&#39;margin-top&#39; //length
+&#39;margin-right&#39; //length
+&#39;margin-bottom&#39; //length
+&#39;margin-left&#39; //length
+&#39;padding&#39; //length
+&#39;padding-top&#39; //length
+&#39;padding-right&#39; //length
+&#39;padding-bottom&#39; //length
+&#39;padding-left&#39; //length
+&#39;outline-width&#39; //length
+&#39;opacity&#39; //number
+&#39;top&#39; //length, percentage
+&#39;right&#39; //length, percentage
+&#39;bottom&#39; //length, percentage
+&#39;left&#39; //length, percentage
+&#39;font-size&#39; //length, percentage
+&#39;text-indent&#39; //length, percentage
+&#39;word-spacing&#39; //length, percentage
+&#39;width&#39; //length, percentage
+&#39;min-width&#39; //length, percentage
+&#39;max-width&#39; //length, percentage
+&#39;height&#39; //length, percentage
+&#39;min-height&#39; //length, percentage
+&#39;max-height&#39; //length, percentage
+&#39;line-height&#39; //length, percentage
+&#39;transform&#39; //length, percentage
+&#39;scroll-top&#39; //length, percentage
+&#39;scroll-left&#39; //length, percentage
+
+
+TODO - planned support
+&#39;background-position&#39;// [x, y] length, percentage
+&#39;transform-origin&#39; // [x, y] length, percentage
+&#39;clip&#39; // [x, y, w, h] rectangle
+&#39;crop&#39; // [x, y, w, h] rectangle
+
+注意：.add()方法需要dash-style的名字，而其他方法如.start()和.stop()需要驼峰写法。
+Transforms
+
+&#39;x&#39;// length, percentage
+&#39;y&#39;// length, percentage
+&#39;z&#39;// length, percentage
+&#39;rotate&#39; // angle
+&#39;rotateX&#39;// angle
+&#39;rotateY&#39;// angle
+&#39;rotateZ&#39;// angle
+&#39;scale&#39;// number
+&#39;scaleX&#39; // number
+&#39;scaleY&#39; // number
+&#39;scaleZ&#39; // number
+&#39;skew&#39; // angle
+&#39;skewX&#39;// angle
+&#39;skewY&#39;// angle
+&#39;perspective&#39;// length
+
+Easings
+// Defaults
+
+&#39;ease&#39;
+&#39;ease-in&#39;
+&#39;ease-out&#39;
+&#39;ease-in-out&#39;
+&#39;linear&#39;
+
+// Quad
+
+&#39;ease-in-quad&#39;
+&#39;ease-out-quad&#39;
+&#39;ease-in-out-quad&#39;
+
+// Cubic
+
+&#39;ease-in-cubic&#39;
+&#39;ease-out-cubic&#39;
+&#39;ease-in-out-cubic&#39;
+
+// Quart
+
+&#39;ease-in-quart&#39;
+&#39;ease-out-quart&#39;
+&#39;ease-in-out-quart&#39;
+
+// Quint
+
+&#39;ease-in-quint&#39;
+&#39;ease-out-quint&#39;
+&#39;ease-in-out-quint&#39;
+
+// Sine
+
+&#39;ease-in-sine&#39;
+&#39;ease-out-sine&#39;
+&#39;ease-in-out-sine&#39;
+
+// Expo
+
+&#39;ease-in-expo&#39;
+&#39;ease-out-expo&#39;
+&#39;ease-in-out-expo&#39;
+
+// Circ
+
+&#39;ease-in-circ&#39;
+&#39;ease-out-circ&#39;
+&#39;ease-in-out-circ&#39;
+
+// Back
+
+&#39;ease-in-back&#39;
+&#39;ease-out-back&#39;
+&#39;ease-in-out-back&#39;
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1336">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1337">
+                        所见即所得的jQuery富文本编辑器插件-wysiwyg.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1337" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501221623.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+wysiwyg.js是一款十分强大的、所见即所得的jQuery富文本编辑器插件。wysiwyg.js富文本编辑器体积小，支持选择、键盘、占位等众多事件。而且该富文本编辑器的兼容性十分好，甚至兼容IE6。
+内容：
+
+
+简要教程
+
+
+wysiwyg.js是一款所见即所得的轻量级 jQuery 富文本编辑器插件。wysiwyg.js没有任何依赖，大小只有12k。该富文本编辑器的特点还有：
+
+可以将任何HTML元素设置为contenteditable（可编辑）模式。
+支持选择事件：例如工具条。
+支持键盘事件：例如处理热键。
+支持占位符：可以显示和隐藏占位文字。
+提供众多的方法：.bold(), .forecolor(), .inserthtml()...。
+
+浏览器兼容
+
+Internet Explorer 6+
+Firefox 3.5+
+Chrome 4+
+Safari 3.1+
+
+如果一个&amp;lt;textarea&amp;gt;已经被作为“元素”使用，该富文本编辑器插件将：
+
+将&amp;lt;textarea&amp;gt;保持为同步状态。
+如果浏览器不支持 contenteditable 则将&amp;lt;textarea&amp;gt;回退。
+旧的 iOS 和 Android 2.3-也将回退为&amp;lt;textarea&amp;gt;。
+
+该富文本编辑器还有一个大小10k（minified）的jQuery插件-$.wysiwyg()，在加上一个配套的2k CSS文件可以创建全部功能的wysiwyg富文本编辑器。它依赖于：
+
+wysiwyg.js
+jQuery
+FontAwesome (或 JPG/PNG/GIF/SVG 图片)
+
+wysiwyg.js-API
+
+// create wysiwyg:
+var wysiwygeditor = wysiwyg({
+element: document.getElementById(&#39;editor-id&#39;),
+onkeypress: function( code, character, shiftKey, altKey, ctrlKey, metaKey ) {
+},
+onselection: function( collapsed, rect, nodes, rightclick ) {
+},
+onplaceholder: function( visible ) {
+},
+hijackcontextmenu: false
+});
+// properties:
+wysiwygeditor.getElement();
+wysiwygeditor.getHTML(); -&amp;gt; &#39;html&#39;
+wysiwygeditor.setHTML( html );
+wysiwygeditor.getSelectedHTML(); -&amp;gt; &#39;html&#39;|false
+// selection and popup:
+wysiwygeditor.collapseSelection();
+wysiwygeditor.openPopup(); -&amp;gt; popup-handle
+wysiwygeditor.closePopup();
+// exec commands:
+wysiwygeditor.removeFormat();
+wysiwygeditor.bold();
+wysiwygeditor.italic();
+wysiwygeditor.underline();
+wysiwygeditor.strikethrough();
+wysiwygeditor.forecolor( &#39;#color&#39; );
+wysiwygeditor.highlight( &#39;#color&#39; );
+wysiwygeditor.fontName( fontname );
+wysiwygeditor.fontSize( fontsize );
+wysiwygeditor.subscript();
+wysiwygeditor.superscript();
+wysiwygeditor.align( &#39;left&#39;|&#39;center&#39;|&#39;right&#39;|&#39;justify&#39; );
+wysiwygeditor.format( tagname );
+wysiwygeditor.insertLink( &#39;http://url.com/&#39; );
+wysiwygeditor.insertImage( &#39;http://url.com/&#39; );
+wysiwygeditor.insertHTML( &#39;html&#39; );
+wysiwygeditor.insertList( ordered );
+
+$.wysiwyg()-API
+
+var $editor = $(&#39;#editor&#39;).wysiwyg({
+classes: &#39;some-more-classes&#39;,
+toolbar: &#39;selection&#39;|&#39;top&#39;|&#39;top-selection&#39;|&#39;bottom&#39;|&#39;bottom-selection&#39;,
+buttons = { ... },
+submit = { ... },
+placeholder: &#39;Type your text here...&#39;,
+dropfileclick: &#39;Click or drop image&#39;,
+placeholderUrl: &#39;www.example.com&#39;,
+maxImageSize: [width,height],
+onImageUpload: function( insert\_image ){},
+onKeyEnter: function(){}
+})
+Properties:
+$editor.wysiwyg(&#39;container&#39;); -&amp;gt; $(container-div)
+$editor.wysiwyg(&#39;shell&#39;); -&amp;gt; wysiwyg.js API
+Events:
+.focus(function(){})
+.blur(function(){})
+.change(function(){});
+
+更多关于该所见即所得的富文本编辑器的信息请参考：https://github.com/wysiwygjs/wysiwyg.js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1337">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1338">
+                        jQuery UI增强功能的Slider滑块插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1338" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502131638.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于jQuery UI并在它的基础上增强了许多功能的Slider滑块插件。该插件在原来jQuery UI的滑块基础上进行了样式美化，各种label都可以自定义，并且提供了很多slider滑块移动时的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于jQuery UI并在它的基础上增强了许多功能的Slider滑块插件。该插件在原来jQuery UI的滑块基础上进行了样式美化，各种label都可以自定义，并且提供了很多slider滑块移动时的动画效果。
+注意：
+该slider滑块插件在于jqueryui 1.11.2配合使用时会有一点不兼容的情况。具体表现为当步长值不能够整除最大值的时候，那么滑块上的点和标签将会分布不均匀。
+
+
+
+ 安装
+如果你使用Bower，你可以通过命令行快速的安装该滑块插件。
+
+bower install jquery-ui-slider-pips --save
+
+另外你可以下载文件到本地使用。
+
+ 插件需求
+
+jQuery (1.9+)
+jQuery UI (1.10+)
+
+
+ 使用方法
+在页面中引入jQuery和jQuery UI文件，然后引入jquery-ui-slider-pips.css和jquery-ui-slider-pips.js文件。CSS文件可以根据你的需求自行修改。
+
+&amp;lt;!-- plus a jQuery UI theme, here I use &#34;flick&#34; --&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css&#34;&amp;gt; 
+&amp;lt;!-- include the jQuery and jQuery UI scripts --&amp;gt;
+&amp;lt;script src=&amp;quot;https://code.jquery.com/jquery-2.1.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;https://code.jquery.com/ui/1.11.1/jquery-ui.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;https://code.jquery.com/ui/1.11.1/jquery-ui-slider-pips.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+如果你不需要其他的jQuery ui部件，强烈建议你只下载只包含slider滑块的jQuery自定义文件。
+
+ Pips
+
+&amp;lt;div class=&#34;slider&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+// to create the slider on the page we use jQuery to select the element
+// from the HTML and apply the .slider() method, then we apply the pips afterwards.
+$(&amp;quot;.slider&amp;quot;).slider().slider(&amp;quot;pips&amp;quot;);
+
+
+ Float
+
+&amp;lt;div class=&#34;slider&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+// we still select the jQuery element from the HTML like before, 
+// but now we supply the float method instead of pips.
+$(&amp;quot;.slider&amp;quot;).slider().slider(&amp;quot;float&amp;quot;);
+
+
+ 链式编程
+该slider滑块的所有方法都是可以链式编程的：
+
+// if you just want the defaults, copy &amp;amp; paste this code.
+$(&#39;.element&#39;).slider().slider(&#39;pips&#39;).slider(&#39;float&#39;);
+
+
+ 高级使用和选项：
+
+// First of all attach a slider to an element. If you want to customize the range of values, you do it in the initialization.
+$(&#39;.element&#39;).slider({min: 20, max: 65});
+// Then you can give it pips and labels!
+$(&#39;.element&#39;).slider(&#39;pips&#39;, {
+first: &#39;label&#39;,
+last: &#39;label&#39;,
+rest: &#39;pip&#39;,
+labels: [&#39;label1&#39;, &#39;label2&#39;, ...],
+prefix: &amp;quot;&amp;quot;,
+suffix: &amp;quot;&amp;quot;
+});
+// And finally can add floaty numbers (if desired)
+$(&#39;.element&#39;).slider(&#39;float&#39;, {
+handle: true,
+pips: true,
+labels: [&#39;label1&#39;, &#39;label2&#39;, ...],
+prefix: &amp;quot;&amp;quot;,
+suffix: &amp;quot;&amp;quot;
+});
+
+
+ 配置参数
+可以通过设置参数来控制该jQuery ui滑块插件如何pips或floats。 
+
+$(&#34;.slider&#34;)
+.slider()
+.slider(&#34;pips&#34;, {
+/* options go here as an object */
+})
+.slider(&#34;float&#34;, {
+/* options go here as an object */
+})
+
+
+ Pips
+以下是pips的所有可用参数：
+
+
+
+
+参数选项
+参数值
+默认值
+描述
+
+
+
+
+
+first
+
+
+&#34;label&#34;, 
+&#34;pip&#34; or 
+false
+
+
+&#34;label&#34;
+
+
+决定在slider滑块上的第一个pip的样式
+
+
+
+
+last
+
+
+&#34;label&#34;, 
+&#34;pip&#34; or 
+false
+
+
+&#34;label&#34;
+
+
+决定在slider滑块上的最后一个pip的样式
+
+
+
+
+rest
+
+
+&#34;label&#34;, 
+&#34;pip&#34; or 
+false
+
+
+&#34;pip&#34;
+
+
+决定在slider滑块上其它pip的样式
+
+
+
+
+step
+
+
+number
+
+
+1 / 5\%
+
+
+step参数仅仅会在没nth个pip上生成。例如：如果我们设置step:2，那么获取的值只会是：0 ，2，4，6，8...
+The step parameter will only
+之一：如果slider滑块的值超过100，滑块的step将会被设置为这个值的5\%。
+
+
+
+
+
+labels
+
+
+array or
+object or
+false
+
+
+false
+
+
+使用数组中给定的值覆盖pips的值。
+例如：[ &#34;Monday&#34;, &#34;Tuesday&#34;, &#34;Wednesday&#34;, ... ] or { &#34;first&#34;: &#34;Monday&#34;, &#34;last&#34;: &#34;Sunday&#34; }
+
+
+
+
+prefix
+
+
+string
+
+
+&#34;&#34;
+
+
+在pip 标签之前添加一个字符串。 
+例如: prefix: $ =&amp;gt; $1, $2, $3, $4, ...
+
+
+
+
+suffix
+
+
+string
+
+
+&#34;&#34;
+
+
+在pip 标签之后添加一个字符串。 
+例如: suffix: °c =&amp;gt; 1°c, 2°c, 3°c, 4°c, ...
+
+
+
+
+
+
+ Float
+以下是Float的所有可用参数：
+
+
+
+
+参数选项
+参数值
+默认值
+描述
+
+
+
+
+
+handle
+
+
+boolean
+
+
+true
+
+
+设置是否在slider手柄上使用float效果。
+
+
+
+
+pips
+
+
+boolean
+
+
+false
+
+
+设置是否在pips上使用float效果。
+
+
+
+
+labels
+
+
+array or
+object or
+false
+
+
+false
+
+
+使用数组给定的值覆盖floats。 
+例如: [&#34;Monday&#34;, &#34;Tuesday&#34;, &#34;Wednesday&#34;, ... ] or { &#34;first&#34;: &#34;Monday&#34;, &#34;last&#34;: &#34;Sunday&#34; }
+
+
+
+
+prefix
+
+
+string
+
+
+&#34;&#34;
+
+
+在浮动label之前添加一个字符串。 
+例如: prefix: $ =&amp;gt; $1, $2, $3, $4, ...
+
+
+
+
+suffix
+
+
+string
+
+
+&#34;&#34;
+
+
+在浮动label之前添加一个字符串。
+例如: suffix: °c =&amp;gt; 1°c, 2°c, 3°c, 4°c, ...
+
+
+
+
+
+
+ 自定义滑块样式
+该jQuery ui slider滑块插件可以高度自定义滑块的CSS样式。将滑块设置为与你的项目样式统一的样式是非常重要的，你可以通过修改很伤的CSS代码，就可以获得令你满意的结果。
+
+// here is a list of the presentation classes used in a heirarchical tree.
+.ui-slider.ui-slider-pips{}
+.ui-slider-float {}
+.ui-slider-handle {}
+.ui-slider-tip {}
+.ui-slider-pip {}
+.ui-slider-pip-first {}
+.ui-slider-pip-last {}
+.ui-slider-pip-nth {}
+.ui-slider-pip-label {}
+.ui-slider-pip-hide {}
+.ui-slider-line {}
+.ui-slider-label {}
+.ui-slider-tip-label {}
+.ui-slider-pip-selected-initial {}
+.ui-slider-pip-selected {}
+
+为了使代码尽可能简洁和高效，该slider滑块插件使用了最小的javascript配置，主要是应用在pips的显示、定位和格式化方面。还有用于切换各种元素的class。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1338">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1339">
+                        基于Bootstrap的jQuery隐藏滑动侧边栏特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1339" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502281535.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Bootstrap Offcanvas是一款非常简单的jQuery隐藏滑动侧边栏插件。该jQuery插件使用Bootstrap的样式和标签来创建隐藏的滑动侧边栏，在大屏幕上会显示正常的导航菜单，当屏幕尺寸缩小到一定尺寸时该滑动侧边栏才会出现。
+内容：
+
+
+简要教程
+
+
+Bootstrap Offcanvas是一款非常简单的jQuery隐藏滑动侧边栏插件。该jQuery插件使用Bootstrap的样式和标签来创建隐藏的滑动侧边栏，样式虽然有些单调，但可以通过修改CSS样式来使其更加美观。而且它的工作性能是一流的。下图演示了该隐藏滑动按钮的工作过程。
+
+
+ 安装
+可以通过Bower来安装该插件：
+
+bower install bootstrap-offcanvas
+
+
+ 使用方法
+要使用该Bootstrap隐藏侧边栏插件，首先要在页面中引入bootstrap.offcanvas.css和jquery、bootstrap.offcanvas.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap.offcanvas.min.css&#34;/&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.offcanvas.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+HTML结构上你需要一个按钮或其它元素来触发侧边栏菜单。可以是任何的HTML元素。
+
+&amp;lt;button type=&#34;button&#34; class=&#34;navbar-toggle offcanvas-toggle&#34; data-toggle=&#34;offcanvas&#34; data-target=&#34;#js-bootstrap-offcanvas&#34;&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Toggle navigation&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+
+侧边栏菜单的代码如下，你需要注意两个地方：
+
+
+navbar-offcanvas class
+在按钮的data-target指定的选择器要指向侧边栏菜单。例如像上边一样使用ID选择器。注意：该选择器可以使用任何元素的class或属性来充当。
+
+
+&amp;lt;nav class=&#34;navbar navbar-default navbar-offcanvas&#34; role=&#34;navigation&#34; id=&#34;js-bootstrap-offcanvas&#34;&amp;gt;
+...
+&amp;lt;/nav&amp;gt;
+
+你可以通过设置下面的class来改变滑动侧边栏的位置：
+
+navbar-offcanvas-right
+
+该插件支持下拉菜单，使用的是标准的Bootstrap代码。唯一区别是它不需要data-toggle属性。
+
+&amp;lt;li class=&#34;dropdown&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;dropdown-toggle&#34;&amp;gt;Dropdown &amp;lt;span class=&#34;caret&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;dropdown-menu&#34; role=&#34;menu&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Action&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Another action&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Something else here&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;divider&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Separated link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;divider&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;One more separated link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+
+你也可以在页面中添加另外的按钮来触发隐藏滑动菜单的滑入和滑出。
+注意，该插件不知道你会使用哪个按钮来作为触发事件的主按钮，它会使用第一个找到的按钮来作为主按钮。
+
+&amp;lt;button type=&#34;button&#34; class=&#34;navbar-toggle offcanvas-toggle pull-right&#34; data-toggle=&#34;offcanvas&#34; data-target=&#34;#js-bootstrap-offcanvas&#34; style=&#34;float:left;&#34;&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Toggle navigation&amp;lt;/span&amp;gt;
+&amp;lt;i class=&#34;glyphicon glyphicon-remove&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/button&amp;gt;
+
+下面是一个使用图标的内置版本的主菜单按钮代码：
+
+&amp;lt;button type=&#34;button&#34; class=&#34;navbar-toggle offcanvas-toggle offcanvas-toggle-close&#34; data-toggle=&#34;offcanvas&#34; data-target=&#34;#js-bootstrap-offcanvas&#34;&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Toggle navigation&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+
+
+ Transitions
+通过使用下面的class，可以制作淡入淡出的滑动效果。注意：这个class也可以在触摸屏事件上工作。
+
+navbar-offcanvas-fade
+
+
+ 触摸屏事件
+通过添加下面的class，可以增加触摸屏的触摸事件，从而可以通过触摸菜单按钮来展开或隐藏侧边栏。
+
+navbar-offcanvas-touch
+
+注意：虽然可以在触摸屏上使用多个侧边栏菜单，但必须保证它们不同时在一个侧边上。如果两个侧边栏同时在一个侧边上，该滑动侧边栏插件将不能正常工作。
+
+ 事件
+有4个事件可以出发侧边栏的滑入和滑出。它们的语法和Bootstrap官方的js语法相同。
+
+
+
+
+事件类型
+描述
+
+
+
+
+show.bs.offcanvas
+隐藏滑动菜单显示前触发
+
+
+shown.bs.offcanvas
+隐藏滑动菜单显示后触发
+
+
+hide.bs.offcanvas
+隐藏滑动菜单隐藏前触发
+
+
+hidden.bs.offcanvas
+隐藏滑动菜单隐藏后触发
+
+
+
+
+
+ 定制
+你可以通过SASS文件来定制该滑动侧边栏的样式。
+你可以在下载包中找到SASS文件，这个SASS文件只使用了少量的变量，如：
+
+$offcanvas-width: 250px !default; // The width of the offcanvas menu
+$offcanvas-animation-time: 0.15s !default; // Transition time to pull/hide menu
+$offcanvas-toggle-background: #f8f8f8 !default; // Background colour for toggle
+$offcanvas-toggle-bars-color: #000 !default; // Colour for icon bars in toggle
+
+插件中只有一个media query，它使用Bootstrap的$screen-sm变量，如果它不存在，宽度的breakpoint被设置为768px。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1339">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_134">
+                        带视觉差效果的超酷js轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_134" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1904/201904306599.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带视觉差效果的超酷js轮播图插件。该轮播图通过js代码将多重图片合成为canvas元素，在图片移动时产生炫酷的视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款带视觉差效果的超酷js轮播图插件。该轮播图通过js代码将多重图片合成为canvas元素，在图片移动时产生炫酷的视觉差效果。
+
+ 使用方法
+在页面中引入css和js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/index.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;p id=&#34;loading&#34;&amp;gt;loading...&amp;lt;/p&amp;gt;
+&amp;lt;div id=&#34;images&#34;&amp;gt;
+&amp;lt;div class=&#34;lighten&#34;&amp;gt;
+&amp;lt;img src=&#34;img/lighten1.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/lighten2.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/lighten3.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/lighten4.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;normal&#34;&amp;gt;
+&amp;lt;img src=&#34;img/normal1.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/normal2.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/normal3.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;img src=&#34;img/normal4.jpg&#34; alt=&#34;&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;nav&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;pre&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;next&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+
+ 该带视觉差效果的超酷js轮播图插件的codepen网址为：https://codepen.io/mnmxmx/pen/vKxQbm
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_134">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1340">
+                        jQuery炫酷弹性模态窗口导航菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1340" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502061451.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery弹性模态窗口导航菜单插件。该jQuery插件将列表和模态窗口非常完美的结合到了一起，使用了CSS3 animations和一些jquery创建了一种带弹性动画效果的模态窗口导航菜单。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery弹性模态窗口导航菜单插件。当一个网站在制作导航菜单时，一般有两种选择：列表形式或模态窗口。该jQuery插件将两者非常完美的结合到了一起，创建了一种带弹性动画效果的模态窗口导航菜单。插件中使用了CSS3 animations 和一些jQuery来制作这种弹性效果的导航菜单。
+
+ 使用方法
+
+ HTML结构
+该导航菜单的HTML结构非常简单：使用一个无序列表来制作导航菜单项，它内包裹在一个&amp;lt;nav&amp;gt;元素中，然后&amp;lt;nav&amp;gt;元素元素放置在一个div.cd-bouncy-nav-modal中。
+
+&amp;lt;div class=&#34;cd-bouncy-nav-modal&#34;&amp;gt;
+&amp;lt;nav&amp;gt;
+&amp;lt;ul class=&#34;cd-bouncy-nav&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#0&#34;&amp;gt;Item 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other list items here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;a href=&#34;#0&#34; class=&#34;cd-close&#34;&amp;gt;Close modal&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式 
+在该弹性导航菜单插件中使用了 CSS3 transition 和CSS3 animations。默认情况下，导航菜单是被隐藏在窗口下面的（使用translateY(100vh)）。当用户点击了.cd-bouncy-nav-trigger按钮时，.cd-bouncy-nav元素被添加上class .fade-in，.cd-bouncy-nav元素的透明度和可见性都被改变（这里使用CSS3 transitions来制作平滑的过渡效果）。然后使用cd-move-in来制作导航菜单列表项的动画。
+插件中使用CSS animations是为了制作弹性效果，CSS animations可以定义关键帧，这样我们可以灵活的控制动画效果。
+为了增加动画效果，插件中使用animation-delay来为不同的导航菜单列表项添加动画延时。
+注意：插件中设置animation-fill-mode: forwards是为了再弹性动画结束时，导航菜单列表项不会改变它们的位置（由于不同的animation-delay值，我们不能直接为列表项设置translateY(0)）。
+
+.cd-bouncy-nav-modal {
+position: fixed;
+width: 100\%;
+height: 100\%;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s 0.6s, visibility 0s 0.9s;
+}
+.cd-bouncy-nav-modal.fade-in {
+visibility: visible;
+opacity: 1;
+transition: opacity 0.1s 0s, visibility 0s 0s;
+}
+.cd-bouncy-nav li {
+transform: translateY(100vh);
+}
+.fade-in .cd-bouncy-nav li {
+animation: cd-move-in 0.4s;
+animation-fill-mode: forwards;
+}
+@keyframes cd-move-in {
+0\% {
+transform: translateY(100vh);
+}
+65\% {
+transform: translateY(-1.5vh);
+}
+100\% {
+transform: translateY(0vh);
+}
+}
+
+
+ JAVASCRIPT
+该导航菜单插件中使用jQuery来监听.cd-bouncy-nav-trigger元素（或.cd-close元素）的点击事件，为它添加相应的.fade-in/.fade-out class来打开关闭模态窗口。
+
+jQuery(document).ready(function($){
+var is\_bouncy\_nav\_animating = false;
+//open bouncy navigation
+$(&#39;.cd-bouncy-nav-trigger&#39;).on(&#39;click&#39;, function(){
+triggerBouncyNav(true);
+});
+//close bouncy navigation
+$(&#39;.cd-bouncy-nav-modal .cd-close&#39;).on(&#39;click&#39;, function(){
+triggerBouncyNav(false);
+});
+$(&#39;.cd-bouncy-nav-modal&#39;).on(&#39;click&#39;, function(event){
+if($(event.target).is(&#39;.cd-bouncy-nav-modal&#39;)) {
+triggerBouncyNav(false);
+}
+});
+function triggerBouncyNav($bool) {
+//check if no nav animation is ongoing
+if( !is_bouncy_nav_animating) {
+is_bouncy_nav_animating = true;
+//toggle list items animation
+$(&#39;.cd-bouncy-nav-modal&#39;).toggleClass(&#39;fade-in&#39;, bool).toggleClass(′fade−out′,!bool).toggleClass(&amp;#x27;fade-out&amp;#x27;, !bool).toggleClass(′fade−out′,!bool).find(&#39;li:last-child&#39;).one(&#39;webkitAnimationEnd oanimationend msAnimationEnd animationend&#39;, function(){
+$(&#39;.cd-bouncy-nav-modal&#39;).toggleClass(&#39;is-visible&#39;, bool);if(!bool);
+if(!bool);if(!bool) $(&#39;.cd-bouncy-nav-modal&#39;).removeClass(&#39;fade-out&#39;);
+is_bouncy_nav_animating = false;
+});
+//check if CSS animations are supported...
+if((&amp;#039;.cd-bouncy-nav-trigger&amp;#039;).parents(&amp;#039;.no-csstransitions&amp;#039;).length &amp;amp;gt; 0 ) {
+(&#39;.cd-bouncy-nav-modal&#39;).toggleClass(&#39;is-visible&#39;, $bool);
+is_bouncy_nav_animating = false;
+}
+}
+}
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1340">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1341">
+                        jQuery和CSS3全屏3D背景图片视觉差特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1341" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502201650.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的超酷3D背景图片视觉差特效。该视觉差特效在左右晃动鼠标时，前景图片和背景图片之间就会产生动态的视觉差效果。非常有意思。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3制作的超酷3D背景图片视觉差特效。该视觉差特效在左右晃动鼠标时，前景图片和背景图片之间就会产生动态的视觉差效果。非常有意思。
+该视觉差特效采用CSS 3D Transforms来制作，它将图片沿Z轴方向排列，然后将鼠标当做3D相机，这样在移动鼠标的时候就能够产生3D透视效果。图片在3D空间中如何选择取决于鼠标的位置。
+因为该视觉差效果依赖于鼠标，所以不适合在移动触摸设备上使用。
+
+ HTML结构
+该视觉差效果的HTML结果使用一个&amp;lt;figure&amp;gt;元素来包裹用于制作视觉差效果的图片。然后将它们都放到.cd-background-wrapper的包裹div中。
+
+&amp;lt;div class=&#34;cd-background-wrapper&#34;&amp;gt;
+&amp;lt;figure class=&#34;cd-floating-background&#34;&amp;gt;
+&amp;lt;img src=&#34;img/cd-img-1.jpg&#34; alt=&#34;image-1&#34;&amp;gt;
+&amp;lt;!-- images here --&amp;gt;
+&amp;lt;/figure&amp;gt;
+&amp;lt;/div&amp;gt;
+
+插件中的图片尺寸大小要相同。
+
+ CSS样式
+为了制作3D空间Z轴方向上的视觉差效果，插件中将图片在Z轴上一张张的堆叠起来：第一张图片是static定位，其它图片采用absolute定位，然后为每张图片使用不同的translateZ值。
+当以后移动鼠标滑过图片时，.cd-floating-background元素根据鼠标的位置沿X轴和Y轴旋转，由于&amp;lt;img&amp;gt;元素有各自不同的translateZ值，因此它们会有各自不同的旋转动画。
+
+为了制作这个特效，要确保&amp;lt;img&amp;gt;元素都位于3D空间中：首先要为.cd-background-wrapper设置perspective值，这样会创建一个它和它的子元素共享的3D空间。然后为.cd-floating-background元素添加transform-style: preserve-3d属性，这样可以使它的子元素在空间中是3D的。
+
+@media only screen and (min-width: 1024px) {
+.cd-background-wrapper {
+overflow: hidden;
+perspective: 4000px;
+}
+.cd-floating-background {
+transform-style: preserve-3d;
+}
+.cd-floating-background img:first-child {
+transform: translateZ(50px);
+}
+.cd-floating-background img:nth-child(2) {
+transform: translateZ(290px);
+}
+.cd-floating-background img:nth-child(3) {
+transform: translateZ(400px);
+}
+}
+
+关于IE浏览器：IE9浏览器不支持CSS3 3D Transforms属性，IE10+浏览器不支持transform-style: preserve-3d属性，所以这个视觉差特效在IE浏览器中是没有效果的。
+
+ JAVASCRIPT
+该视觉差特效使用initBackground()方法来制作图片load事件：这个方法将&amp;lt;figure&amp;gt;元素的位置属性从static改变为absolute。当该方法被调用的时候，.cd-background-wrapper元素被添加一个hight属性（由于它的子元素是static定位的，所以它的高度为0），.cd-floating-background的尺寸属性同时也被改变。
+.cd-background-wrapper上绑定了一个mousemove事件：鼠标的position由event.pageX和event.pageY来决定，并且相应的为.cd-floating-background设置rotateX和rotateY值。
+注意：Modernizr 不会去检查浏览器是否支持preserve-3d。所以为了要知道浏览器是否支持它，插件中使用getPerspective函数来为&amp;lt;html&amp;gt;添加preserve-3d或no-preserve-3d class来检测浏览器的支持。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1341">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1342">
+                        jQuery和CSS3炫酷表单浮动标签特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1342" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503161802.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款炫酷的jQuery和CSS3表单浮动标签特效。浮动标签是指输入框中的文字或占位文本在输入框聚焦的时候，以动画的方式浮动到指定的地方。浮动标签特效是一种新颖时尚的动画特效。
+内容：
+
+
+简要教程
+
+
+这是一款炫酷的jQuery和CSS3表单浮动标签特效。浮动标签是指输入框中的文字或占位文本在输入框聚焦的时候，以动画的方式浮动到指定的地方。浮动标签特效是一种新颖时尚的动画特效，不仅效果很酷，而且能以明确的方式提示用户该输入框应该填写上面内容，用户体验非常不错。
+这个浮动标签特效中共有4种不同的动画效果。分别是Fieldset样式的浮动标签，使用font-size来动画的浮动标签，使用CSS3 transforms和jquery easing来动画的浮动标签和透明度动画浮动标签。
+更多浮动标签的制作方法请参考：CSS表单元素浮动标签的设计技巧与实现方法。
+
+ 使用方法
+
+ HTML结构
+这4中浮动标签的HTML结构都使用&amp;lt;div&amp;gt;嵌套结构，在&amp;lt;div&amp;gt;中放置&amp;lt;input&amp;gt;元素和它的标签&amp;lt;label&amp;gt;元素，外层使用表单form包裹起来。
+
+&amp;lt;form class=&#34;flp&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;input type=&#34;text&#34; id=&#34;fname&#34; /&amp;gt;
+&amp;lt;label for=&#34;fname&#34;&amp;gt;First Name&amp;lt;/label&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;input type=&#34;text&#34; id=&#34;email&#34; /&amp;gt;
+&amp;lt;label for=&#34;email&#34;&amp;gt;Email&amp;lt;/label&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ CSS样式
+每一中浮动标签的CSS样式各不相同，来看看第一种浮动标签的设计方式。第一种浮动标签方式使用的是Fieldset，在输入框聚焦的时候，占位文本会浮动到Filedset上面。为了美观，整个效果还添加了一层包裹&amp;lt;main&amp;gt;元素以及一个h2文本作为大标题。为&amp;lt;main&amp;gt;元素添加一些节本样式：
+
+main {
+width: 500px; margin: 0 auto; padding-bottom: 10px;
+background: white; border-radius: 3px; overflow: hidden;
+}
+main h2 {
+font-size: 24px; font-weight: normal;
+background: hsl(120, 40\%, 95\%); color: hsl(120, 40\%, 40\%);
+text-align: center; 
+padding: 20px 0; margin-bottom: 40px;
+}
+
+form表单中的div设置为相对定位。div中的input和label元素设置相同的宽度、高度和行高。在高度设置上，为了修补Firefox浏览器的一个小bug，使用一个计算公式来获取高度。height = 24(lineheight) + 10*2(padding) + 2(border)。
+
+.flp input, .flp label {
+width: 400px; display: block;
+font: inherit; font-size: 16px; line-height: 24px;
+/*fixed height for FF line height issue. 
+height = 24(lineheight) + 10*2(padding) + 2(border)*/
+height: 46px;
+border: 1px solid #999;
+}
+
+然后input和label元素分别设置各自的不同样式，label元素需要动画，设置为绝对定位方式，并且它的左右padding要比上下padding少2个像素，因为后面需要做单个文字的动画，在.ch中会补足这2个像素。
+最后是实际的动画效果的CSS样式。插件初始化的时候，会将所有的字母单独使用&amp;lt;span&amp;gt;包裹起来，做成一个一个的单独字母。在输入框聚焦的时候，js代码会为输入框元素添加.focussed class。实际的字母浮动动画是通过jquery.easing来完成的。
+
+/*label styles*/
+.ch {
+display: block; float: left;
+position: relative; /*for upward animation*/
+background: white; 
+}
+.ch:first-child {padding-left: 2px;}
+.ch:last-child {padding-right: 2px;}
+/active input label/
+.focussed {
+/when any input is already focussed clicking on it(label) again won&#39;t do anything/
+pointer-events: none;
+}
+
+
+ JAVASCRIPT
+该浮动标签效果中使用jquery.easing来完成实际的动画特效。首先，插件在初始化时将每一个输入框中的文字打散为单个的字母，每一个字母都用&amp;lt;span&amp;gt;元素来包裹起来。接下来当输入框聚焦的时候，使用jquery.easing来完成字母的浮动动画特效。
+
+//breakdown the labels into single character spans
+$(&#34;.flp label&#34;).each(function(){
+var sop = &#39;&#39;; //span opening
+var scl = &#39;&#39;; //span closing
+//split the label into single letters and inject span tags around them
+$(this).html(sop + $(this).html().split(&#34;&#34;).join(scl+sop) + scl);
+//to prevent space-only spans from collapsing
+$(&#34;.ch:contains(&#39; &#39;)&#34;).html(&#34; &#34;);
+})
+var d;
+//animation time
+$(&amp;quot;.flp input&amp;quot;).focus(function(){
+//calculate movement for .ch = half of input height
+var tm = (this).outerHeight()/2∗−1+&amp;quot;px&amp;quot;;//label=nextsiblingofinput//topreventmultipleanimationtriggerbymistakewewilluse.stop()beforeanimatinganycharacterandclearanyanimationqueuedby.delay()(this).outerHeight()/2 *-1 + &amp;quot;px&amp;quot;;
+//label = next sibling of input
+//to prevent multiple animation trigger by mistake we will use .stop() before animating any character and clear any animation queued by .delay()
+(this).outerHeight()/2∗−1+&amp;quot;px&amp;quot;;//label=nextsiblingofinput//topreventmultipleanimationtriggerbymistakewewilluse.stop()beforeanimatinganycharacterandclearanyanimationqueuedby.delay()(this).next().addClass(&amp;quot;focussed&amp;quot;).children().stop(true).each(function(i){
+d = i50;//delay
+(this).delay(d).animate({top: tm}, 200, &amp;#039;easeOutBack&amp;#039;);
+})
+})
+(&amp;quot;.flp input&amp;quot;).blur(function(){
+//animate the label down if content of the input is empty
+if((this).val() == &amp;quot;&amp;quot;)
+{
+(this).next().removeClass(&amp;quot;focussed&amp;quot;).children().stop(true).each(function(i){
+d = i50;
+$(this).delay(d).animate({top: 0}, 500, &#39;easeInOutBack&#39;);
+})
+}
+})
+
+其它几个效果的CSS和JS都分别写在了HTML文件中，原理基本相同，你可以下载来自行研究。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1342">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1343">
+                        带loading指示器的js提交按钮动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1343" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503101526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Ladda是一款内置Loading指示器和进度条的提交js按钮特效插件。该js按钮特效用于制作提交按钮，在点击按钮后，按钮上会出现无限循环的Loading指示器和加载进度条效果。这种设计大大增强了用户的体验性。
+内容：
+
+
+简要教程
+
+
+Ladda是一款内置Loading指示器和进度条的提交js按钮特效插件。该js按钮特效用于制作提交按钮，在点击按钮后，按钮上会出现无限循环的Loading指示器和加载进度条效果。这种设计大大增强了用户的体验性。
+
+ 安装
+你可以使用bower install ladda或npm install ladda来安装该js按钮插件。指示器和Ladda可以通过AMD作为一个module来调用：
+
+// Using Require.js
+define([&#39;ladda&#39;], function(Ladda) {
+// Make Buttons Here
+});
+
+或在Common.js中，你可以：
+
+var ladda = require(&#39;Ladda/dist/ladda.min&#39;);
+
+
+ 使用方法
+该js按钮特效在使用时要引入ladda.min.js和spin.min.js文件，如果你想要和DEMO中一样的按钮样式，可以使用ladda.min.css样式文件，如果你只是需要按钮的功能而不需要样式，可以使用ladda-themeless.min.css文件。
+
+ HTML结构
+Ladda js按钮特效必须在按钮上使用class ladda-button，按钮的标签使用ladda-label作为class。如果在DOM中不存在，ladda-label会自动创建。下面的代码是向右扩展的进度条动画的按钮代码：
+
+&amp;lt;button class=&#34;ladda-button&#34; data-style=&#34;expand-right&#34;&amp;gt;&amp;lt;span class=&#34;ladda-label&#34;&amp;gt;Submit&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; 
+
+按钮接收3个参数：
+
+
+data-style：按钮的某个样式，所有的样式前查看DEMO。
+
+data-color：green/red/blue/purple/mint。
+
+data-size： xs/s/l/xl,默认值是中等大小。
+
+data-spinner-size： 直径40像素，默认会依据按钮的尺寸动态调整。
+
+data-spinner-color： hex颜色代码或css 颜色名称。
+
+
+ JAVASCRIPT
+如果你是在一个表单中使用该js按钮来向服务器提交信息，你可以使用bind()方法来提交信息：
+
+// Automatically trigger the loading animation on click
+Ladda.bind( &#39;input[type=submit]&#39; );
+// Same as the above but automatically stops after two seconds
+Ladda.bind( &#39;input[type=submit]&#39;, { timeout: 2000 } );
+
+如果你想使用javascript来控制该js按钮特效,可以使用下面的方法：
+
+// Create a new instance of ladda for the specified button
+var l = Ladda.create( document.querySelector( &#39;.my-button&#39; ) );
+// Start loading
+l.start();
+// Will display a progress bar for 50% of the button width
+l.setProgress( 0.5 );
+// Stop loading
+l.stop();
+// Toggle between loading/not loading states
+l.toggle();
+// Check the current state
+l.isLoading();
+// Delete the button&#39;s ladda instance
+l.remove();
+
+页面上所用的loading加载动画可以通过下面的方法来停止：
+
+Ladda.stopAll();
+
+
+ 与jQuery结合使用
+该js按钮特效可以和jQuery完美结合，如果你是在一个表单中使用该js按钮来向服务器提交信息，你可以使用ladda(&#39;bind&#39;)方法来提交信息：
+
+// Automatically trigger the loading animation on click
+$( &#39;input[type=submit]&#39; ).ladda( &#39;bind&#39; );
+// Same as the above but automatically stops after two seconds
+$( &#39;input[type=submit]&#39; ).ladda( &#39;bind&#39;, { timeout: 2000 } );
+
+如果你想使用jQuery来控制该js按钮特效,可以使用下面的方法：
+
+// Create a new instance of ladda for the specified button
+var l = $( &#39;.my-button&#39; ).ladda();
+// Start loading
+l.ladda( &#39;start&#39; );
+// Will display a progress bar for 50% of the button width
+l.ladda( &#39;setProgress&#39;, 0.5 );
+// Stop loading
+l.ladda( &#39;stop&#39; );
+// Toggle between loading/not loading states
+l.ladda( &#39;toggle&#39; );
+// Check the current state
+l.ladda( &#39;isLoading&#39; );
+
+页面上所用的loading加载动画可以通过下面的方法来停止：
+
+$.ladda( &#39;stopAll&#39; ); 
+
+
+ 浏览器兼容
+该js按钮特效插件在Chrome和Firefox上进行了测试。它可以很好的工作在当前最新版本的Chrome, Firefox, Safari和IE9+浏览器上。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1343">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1344">
+                        基于Bootstrap 3的jQuery日期时间选择器
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_2">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1344" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503041714.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bootstrap-datetimepicker是一款基于Bootstrap 3的超实用jQuery日期时间选择器。通过该jQuery插件你可以非常容易的创建很酷的bootstrap样式的日期时间选择器。
+内容：
+
+
+简要教程
+
+
+bootstrap-datetimepicker是一款基于Bootstrap 3的超实用jQuery日期时间选择器。通过该jQuery插件你可以非常容易的创建很酷的bootstrap样式的日期时间选择器。你也可以通过修改css文件来自定义它的样式。
+
+ 安装
+该jQuery日期时间选择器的最小外部依赖需求是：
+
+jQuery
+Moment.js
+Bootstrap.js(如果你不想使用完整的bootstrap，至少需要transition 和collapse)
+Bootstrap Datepicker script
+Bootstrap CSS
+Bootstrap Datepicker CSS
+Moment.js文件可以在这里下载。(关于Moment请看这篇文章)
+
+可以通过Bower来按钮该jQuery日期时间选择器插件。
+
+bower install eonasdan-bootstrap-datetimepicker#latest --save
+
+生成的文件包括了必要的css和js文件：
+
+&amp;lt;head&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;/bower\_components/jquery/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;/bower\_components/moment/min/moment.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;/bower\_components/bootstrap/dist/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;/bower\_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/bower\_components/bootstrap/dist/css/bootstrap.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/bower\_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css&#34; /&amp;gt;
+&amp;lt;/head&amp;gt;
+
+
+ 配置参数
+
+
+format：Default: false。有效的格式可以查看momentjs的文档。Format 同时也决定容器的显示方式。例如:MM/dd/YYYY将不会显示时间选择器。
+
+dayViewHeaderFormat：Default: &#39;MMMM YYYY&#39;。在 &#34;days&#34; 视图中改变日期选择器的标题。
+
+extraFormats：Default: false。允许多种输入格式是有效的。查看这里。
+
+stepping：Default: 1。时间选择器中分钟的上下箭头移动分钟的数值。
+
+minDate：
+
+Default: false
+Accepts: date, moment, string 
+
+该日期前的日期时间不可选择。
+
+
+maxDate：
+
+Default: false
+Accepts: date, moment, string
+
+该日期后的日期时间不可选择。
+
+
+useCurrent：Default: true。在日期时间选择器显示时，显示当前的日期时间。
+
+collapse：Default: true。使用 Bootstraps collapse 来切换日期和时间选择器。
+
+locale：
+
+Default: moment.locale()
+Accepts: string, moment.local(&#39;locale&#39;)
+
+有效的格式可以查看momentjs的文档。你必须引入moment-with-locales.js文件。
+
+
+defaultDate：
+
+Default: false
+Accepts: date, moment, string 
+
+设置默认的日期和时间选择器。覆盖useCurrent。
+
+
+disabledDates：
+
+Default: false
+Accepts: array of [date, moment, string]
+
+在数组中的日期不能被选择，例如节假日。
+
+
+enabledDates：
+
+Default: false
+Accepts: array of [date, moment, string]
+
+不在数组中的日期将不能被选择。
+
+
+icons：
+
+ Default: {
+time: &#39;glyphicon glyphicon-time&#39;
+date: &#39;glyphicon glyphicon-calendar&#39;
+up: &#39;glyphicon glyphicon-chevron-up&#39;
+down: &#39;glyphicon glyphicon-chevron-down&#39;
+previous: &#39;glyphicon glyphicon-chevron-left&#39;
+next: &#39;glyphicon glyphicon-chevron-right&#39;
+today: &#39;glyphicon glyphicon-screenshot&#39;
+clear: &#39;glyphicon glyphicon-trash&#39;
+ }
+ Accepts: object with all or some of the parameters above
+
+改变选择器默认你的图标。
+
+
+useStrict：Default: false。Defines if moment should use scrict date parsing when considering a date to be valid。
+
+sideBySide：Default: false。当同时使用日期时间选择器时将它们并排排列。
+
+
+
+daysOfWeekDisabled：
+
+Default: []
+Accepts: array of numbers from 0-6
+
+不允许选择一个星期中的某些天。
+
+
+calendarWeeks：Default: false。Shows the week of the year to the left of first day of the week.
+
+
+
+viewMode：
+
+Default: &#39;days&#39;
+Accepts: &#39;years&#39;,&#39;months&#39;,&#39;days&#39;
+
+选择器显示时的默认视图。
+Note: To limit the picker to selecting, for instance the year and month, use format: MM/YYYY.
+
+
+toolbarPlacement：
+
+Default: &#39;default&#39;
+Accepts: &#39;default&#39;, &#39;top&#39;, &#39;bottom&#39;
+
+改变工具栏上的图标。
+
+
+
+showTodayButton：Default: false。在工具栏上显示&#34;Clear&#34;按钮，点击该按钮将情况选择器。
+
+widgetPositioning：
+
+Default: {
+horizontal: &#39;auto&#39;
+vertical: &#39;auto&#39;
+ }
+Accepts: object with the all or one of the parameters above
+ horizontal: &#39;auto&#39;, &#39;left&#39;, &#39;right&#39;
+ vertical: &#39;auto&#39;, &#39;top&#39;, &#39;bottom&#39;
+
+
+
+widgetParent：
+
+Default: null
+Accepts: string or jQuery object
+
+On picker show, places the widget at the identifier (string) or jQuery object if the element has css position: &#39;relative&#39;
+
+
+keepOpen：Default: false。Will cause the date picker to stay open after selecting a date if no time components are being used.
+
+
+ 方法
+
+
+destroy()：销毁日期时间选择器并移除所有的事件。
+
+toggle()：显示或隐藏日期时间选择器。
+Emits：
+
+
+hide.dp：如果在该方法调用时组件的状态时隐藏的。
+
+show.dp：如果在该方法调用时组件的状态时可见的。
+
+change.dp： if the widget is opened for the first time and the input element is empty and options.useCurrent != false
+
+
+
+
+show()：显示日期时间选择器。
+Emits：
+
+
+show.dp：如果在该方法调用时组件的状态时隐藏的。
+
+change.dp：如果组件是第一次打开，并且useCurrent设置为true，并且input元素上为空值。
+
+
+
+hide()：隐藏日期时间选择器。
+Emits：
+
+
+hide.dp：如果在该方法调用时组件的状态时可见的。
+
+
+
+disable()：设置input元素为不可用状态。通过设置disabled=&#34;true&#34;可以使组件也不可用。如果在该方法调用时组件的状态时可见的，将设置其为不可见。
+Emits：
+
+
+hide.dp：如果在该方法调用时组件的状态时可见的。
+
+
+
+enable()：设置input元素为可用状态。通过移除disabled可以使组件也可用。
+
+date()：返回组件的当前日期。一个moment对象或null（未设置值）
+
+date([newDate])：设置组件的当前moment为newDate string, Date, moment, null。设置为null则不改变当前组件的值。通过moment库的options.format和options.useStrict来解析新的日期时间。
+Throws：
+
+TypeError ：newDate不能被解析。
+Emits：
+
+change.dp ：newDate与当前日期不同。
+
+
+disabledDates()：返回当前设置为不可用的日期的数组。设置一个[ string or Date or moment ]值，不允许用户选择它们。该方法优先于options.minDate和options.maxDate配置。也可以通过该方法移除options.enabledDates配置参数。Note: These values are matched with Day granularity.
+
+
+enabledDates()：返回当前设置为可用的日期的数组。
+
+enabledDates(dates)：于disabledDates(dates)用法相反。
+
+defaultDate()：返回一个带options.defaultDate或false参数的moment对象。
+
+defaultDate(defaultDate)：通过string, Date, moment, boolean:false参数设置选择器的初始状态。如果options.defaultDate设置了boolean:false，参数将被清空。
+
+
+useCurrent()：通过options.useCurrent返回一个布尔值或字符串。
+
+useCurrent(boolean or string)：参数为boolean或string。If a boolean true is passed and the components model moment is not set (either through setDate or through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on the input element. You can select the granularity on the initialized moment by passing one of the following strings (&#39;year&#39;, &#39;month&#39;, &#39;day&#39;, &#39;hour&#39;, &#39;minute&#39;) in the variable.
+If for example you pass &#39;day&#39; to the setUseCurrent function and the input field is empty the first time the user opens the datetimepicker widget the input text will be initialized to the current datetime with day granularity (ie if currentTime = 2014-08-10 13:32:33 the input value will be initialized to 2014-08-10 00:00:00)
+Note: If the options.defaultDate is set or the input element the component is attached to has already a value that takes precedence and the functionality of useCurrent is not triggered!
+
+
+该日期时间选择器还有很多事件，具体请看这里。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1344">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/37/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/39/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

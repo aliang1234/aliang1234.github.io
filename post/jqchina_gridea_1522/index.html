@@ -1,0 +1,329 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js和css3局部3d幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            js和css3局部3d幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411241445.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411241445.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141124581.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款神奇的3d幻灯片插件。该幻灯片插件通过js和css3将图片3d倾斜后嵌入到局部div中，然后制作成自动播放的幻灯片效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这款s和css3局部3d幻灯片插件的灵感来自于Franklin Ta写的一篇<a href="http://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/" target="\_blank">文章</a>，文章中他描述了如何使用脚本将嵌入在框架中的图形进行3d转换。</p>
+<p>下面是第一个demo中如何在嵌入屏幕的手机界面中添加动画的css代码：</p>
+<pre class="brush:css">
+.mobile {
+overflow: hidden;
+position: absolute;
+z-index: 100;
+background: #333;
+width: 320px;
+height: 480px;
+top: 200px;
+left: 500px;
+outline: 1px solid transparent; /* For Firefox (jagged edges bug) */
+transform-origin: 0 0 0;
+transform: matrix3d(0.846234173238242, 0.251585817964749, 0, 0.000085171934399447, -0.115203182108559, 0.800700357116676, 0, -0.000214263459947427, 0, 0, 1, 0, 23, 14, 0, 1);
+}
+</pre>
+<p>例子demo中是简单的幻灯片，使用CSS animations来显示和隐藏图片，你可以自定义一些幻灯片过渡效果，例如使用Daniel Eden的<a href="http://daneden.github.io/animate.css/" target="\_blank">animate.css</a>。</p>
+<p>下面是例子1中幻灯片自定义动画的代码：</p>
+<pre class="brush:js">
+.slideshow {
+padding: 0;
+margin: 0;
+width: 100\%;
+height: 100\%;
+list-style-type: none;
+}
+<p>.slideshow__item {<br>
+width: 100%;<br>
+height: 100%;<br>
+position: absolute;<br>
+overflow: hidden;<br>
+pointer-events: none;<br>
+z-index: 1;<br>
+transform: translate3d(-100%, 0, 0);<br>
+}</p>
+<p>.slideshow__item.current{<br>
+pointer-events: auto;<br>
+z-index: 100;<br>
+transform: translate3d(0, 0, 0);<br>
+}</p>
+<p>.slideshow img {<br>
+width: 100%;<br>
+}<br>
+</pre></p>
+<p>demo2中使用了animation ，它的代码如下：</p>
+<pre class="brush:js">
+.slideshow\_\_item.in--next {
+animation: inNext 0.5s forwards;
+}
+<p>.slideshow__item.out--next {<br>
+animation: outNext 0.5s forwards;<br>
+}</p>
+<p>.slideshow__item.in--prev {<br>
+animation: inPrev 0.5s forwards;<br>
+}</p>
+<p>.slideshow__item.out--prev {<br>
+animation: outPrev 0.5s forwards;<br>
+}</p>
+<p>@keyframes inPrev {<br>
+0% {<br>
+transform: translate3d(0, 100%, 0);<br>
+}<br>
+100% {<br>
+transform: none;<br>
+}<br>
+}</p>
+<p>@keyframes inNext {<br>
+0% {<br>
+transform: scale3d(0.5, 0.5, 1);<br>
+}<br>
+100% {<br>
+transform: none;<br>
+}<br>
+}</p>
+<p>@keyframes outPrev {<br>
+100% {<br>
+transform: scale3d(0.5, 0.5, 1);<br>
+}<br>
+}</p>
+<p>@keyframes outNext {<br>
+100% {<br>
+transform: translate3d(0, 100%, 0);<br>
+}<br>
+}<br>
+</pre></p>
+<p>下面是所有4个效果的截图：</p>
+<p><img src="http://img.htmleaf.com/1411/MockupSlideshow01.jpg" alt="局部幻灯片效果1"></p>
+<p><img src="http://img.htmleaf.com/1411/MockupSlideshow02.jpg" alt="局部幻灯片效果2"></p>
+<p><img src="http://img.htmleaf.com/1411/MockupSlideshow03.jpg" alt="局部幻灯片效果3"></p>
+<p><img src="http://img.htmleaf.com/1411/MockupSlideshow04.jpg" alt="局部幻灯片效果4"></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411241445.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141124581.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1523">
+                                <h3 class="post-title">
+                                    jQuery和css3音量调节旋钮插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

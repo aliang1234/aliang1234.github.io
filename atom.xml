@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hao12306.github.io</id>
     <title>JQ下载中国</title>
-    <updated>2019-09-23T02:23:32.160Z</updated>
+    <updated>2019-09-23T02:34:26.457Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hao12306.github.io"/>
     <link rel="self" href="https://hao12306.github.io/atom.xml"/>
@@ -11,80 +11,1261 @@
     <icon>https://hao12306.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, JQ下载中国</rights>
     <entry>
-        <title type="html"><![CDATA[基于Bootstrap4的material design风格表单插件]]></title>
-        <id>https://hao12306.github.io/post/jqchina_gridea_32</id>
-        <link href="https://hao12306.github.io/post/jqchina_gridea_32">
+        <title type="html"><![CDATA[简单快速的js的数字动画插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_100</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_100">
         </link>
         <updated>2019-09-20T08:22:21.000Z</updated>
         <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
-<p><a href="http://down.htmleaf.com/1909/201909062931.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909065785.html">在线预览</a></p>
+<p><a href="http://down.htmleaf.com/1807/201807271415.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807275249.html">在线预览</a></p>
 <h4 id="简介">简介：</h4>
-<p>这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。</p>
+<p>slowNumber.js是一款简单快速的js的数字动画插件。slowNumber.js插件以最简单的方式快速的执行数字动画特效，你甚至还可以控制每秒钟的动画帧数。</p>
 <h4 id="内容">内容：</h4>
 <article class="leaf-jian-yao">
 <header>
 <h5>简要教程</h5>
 </header>
 <div class="ct-post-content">
-<p>这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。</p>
+<p>slowNumber.js是一款简单快速的js的数字动画插件。slowNumber.js插件以最简单的方式快速的执行数字动画特效，你甚至还可以控制每秒钟的动画帧数。</p>
+<p>
+</p>
 <h3>
 <span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
-<p>在HTML文件中引入。</p>
+<p>在页面中引入slowNumber.js文件。</p>
 <pre class="brush:html">
-&lt;link rel="stylesheet" type="text/css" href="../src/input-material.css"&gt;
-&lt;script type="text/javascript" src="../src/jquery.min.js"&gt;&lt;/script&gt; 
-&lt;script type="text/javascript" src="../src/boostrap.min.js"&gt;&lt;/script&gt; 
-&lt;script type="text/javascript" src="../src/input-material.js"&gt;&lt;/script&gt; 
+&lt;script type="text/javascript" src="js/slowNumber.js"&gt;&lt;/script&gt;
 </pre>
 <h5>
 <span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>在页面中添加需要制作数字动画的元素，为它添加<code>slowNumber</code>class类。</p>
 <pre class="brush:html">
-&lt;form id="contact-form"&gt;
-&lt;div class="form-group input-material"&gt;
-&lt;input type="text" class="form-control" id="name-field" required&gt;
-&lt;label for="name-field"&gt;Name&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="form-group input-material"&gt;
-&lt;input type="email" class="form-control" id="email-field" required&gt;
-&lt;label for="email-field"&gt;Email&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="form-group input-material"&gt;
-&lt;textarea class="form-control" id="textarea-field" rows="3" required&gt;&lt;/textarea&gt;
-&lt;label for="textarea-field"&gt;Your Message&lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="text-center"&gt;
-&lt;button type="submit" class="btn btn-primary"&gt;Send&lt;/button&gt;
-&lt;/div&gt;
-&lt;/form&gt;
+&lt;h2 class="slowNumber"&gt;100,42&lt;/h2&gt; 
 </pre>
 <h5>
-<span class="glyphicon glyphicon-paperclip"></span> javascript</h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>slowNumber.js的整个实现代码如下：</p>
 <pre class="brush:js">
-$('document').ready(function(){
-<p>// enable material-style inputs in entire body<br>
-$('body').materializeInputs();</p>
-<p>});<br>
+var easing = {
+quadratic: function (x){
+return Math.sqrt(x);
+}
+};
+<p>function range(start, stop, step){<br>
+var array = [];<br>
+for(var i = start; i &lt; stop; i += step) array.push(i);<br>
+return array;<br>
+}</p>
+<p>function interpolation(fps, easing, finalValue){<br>
+function scaleIt(value){return finalValue * value; }</p>
+<p>var x = range(0, 1, 1/fps),<br>
+y = x.map(easing).map(scaleIt);</p>
+<p>return y;<br>
+}</p>
+<p>function animateEl(values, duration, onAnimate){<br>
+var frameIndex = 0,<br>
+fps = values.length,<br>
+id = setInterval(anime, duration/fps );</p>
+<p>function anime(){<br>
+var current = values[frameIndex],<br>
+isLastFrame = (frameIndex === fps - 1);</p>
+<p>onAnimate(current, frameIndex, values);</p>
+<p>if(isLastFrame){<br>
+clearInterval(id);<br>
+}else{<br>
+frameIndex++;<br>
+}<br>
+}<br>
+}</p>
+<p>function round(value, decimals) {<br>
+return Number(Math.round(value+'e'+decimals)+'e-'+decimals);<br>
+}</p>
+<p>function unformat(content){<br>
+var unlocalized = content.replace('.', '').replace(',', '.'),<br>
+value = parseFloat(unlocalized);<br>
+return value;<br>
+}</p>
+<p>function format(value){<br>
+return value.toString().replace('.', ',');<br>
+}</p>
+<p>window.addEventListener(&quot;DOMContentLoaded&quot;, function(){<br>
+var fps = 30,<br>
+els = [].slice.call(document.querySelectorAll('.slowNumber'));</p>
+<p>els.forEach(function(el){<br>
+var content = (el.firstChild.textContent).trim(),<br>
+decimalPlaces = content.split(',')[1] || '',<br>
+value = unformat(content),<br>
+values = interpolation(fps, easing.quadratic, value);</p>
+<p>animateEl(values, 1000, function (current, i, values){<br>
+var isLast = (i === values.length - 1),<br>
+value = round(current, decimalPlaces.length);<br>
+el.firstChild.textContent = isLast? content : format(value);<br>
+});<br>
+});<br>
+});<br>
 </pre></p>
-<p>或者你也可以为某个表单元素设置浮动标签效果。</p>
-<pre class="brush:js">
-$('document').ready(function(){
-<p>$('form').materializeInputs(&quot;.input-material input-1, .input-material input-2&quot;);</p>
-<p>});<br>
-</pre></p>
-<p><i class="fa fa-github"></i> 该基于Bootstrap4的material design风格表单插件的github网址为：<a href="https://github.com/RalphvK/bootstrap-material-input" target="\_blank">https://github.com/RalphvK/bootstrap-material-input</a></p>
+<p><i class="fa fa-github"></i> slowNumber.js数字动画插件的github地址为：<a href="https://github.com/israelst/slowNumber.js" target="\_blank">https://github.com/israelst/slowNumber.js</a></p>
 </div>
 </article>
 <h4 id="下载预览-2">下载预览</h4>
-<p><a href="http://down.htmleaf.com/1909/201909062931.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909065785.html">在线预览</a></p>
+<p><a href="http://down.htmleaf.com/1807/201807271415.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807275249.html">在线预览</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://hao12306.github.io/post/about</id>
-        <link href="https://hao12306.github.io/post/about">
+        <title type="html"><![CDATA[简单实用的垂直手风琴滑动菜单列表特效]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1000</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1000">
         </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>hi aliang hello world！</p>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509191524.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509192592.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和CSS3制作的简单实用的垂直手风琴滑动菜单列表特效。该手风琴菜单列表特效通过CSS3来制作平滑过渡的动画效果，它的样式时尚大方，代码简单，非常的实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用<a href="http://www.htmleaf.com/jQuery/">jQuery</a>和<a href="http://www.htmleaf.com/css3/">CSS3</a>制作的简单实用的垂直手风琴滑动菜单列表特效。该手风琴菜单列表特效通过CSS3来制作平滑过渡的动画效果，它的样式时尚大方，代码简单，非常的实用。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该垂直手风琴列表的HTML结构采用无序列表来制作。每一个菜单项中的子菜单是采用和<code>&lt;li&gt;</code>元素平级的无序列表来制作。</p>
+<pre class="brush:html">
+&lt;ul class="mainmenu"&gt;
+&lt;li&gt;&lt;img src="images/user.png" alt="User icon" class="icon"&gt;&lt;span&gt;Account&lt;span&gt;&lt;/li&gt;
+&lt;ul class="submenu"&gt;
+&lt;div class="expand-triangle"&gt;&lt;/div&gt;
+&lt;li&gt;&lt;span&gt;Basics&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Picture&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Go Premium&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;&lt;img src="images/envelope.png" alt="Envelope icon" class="icon"&gt;&lt;span&gt;Messages&lt;/span&gt;&lt;div class="messages"&gt;23&lt;/div&gt;&lt;/li&gt;
+&lt;ul class="submenu"&gt;
+&lt;div class="expand-triangle"&gt;&lt;/div&gt;
+&lt;li&gt;&lt;span&gt;New&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Sent&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Trash&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;&lt;img src="images/cog.png" alt="Cog icon" class="icon"&gt;&lt;span&gt;Settings&lt;/span&gt;&lt;/li&gt;
+&lt;ul class="submenu"&gt;
+&lt;div class="expand-triangle"&gt;&lt;/div&gt;
+&lt;li&gt;&lt;span&gt;Language&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Password&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Notifications&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Privacy&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span&gt;Payments&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;&lt;img src="images/key.png" alt="Key icon" class="icon"&gt;&lt;span&gt;Logout&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>该垂直手风琴列表的CSS样式非常简单。主菜单采用相对定位，每个菜单项设置固定高度为48像素，并且第一个菜单项和最后一个菜单项设置了圆角效果。</p>
+<pre class="brush:css">
+.mainmenu {
+margin: 90px auto;
+font-size: 16px;
+position:relative;
+padding:0;
+}
+<p>.mainmenu &gt; li {<br>
+background-color: #e4644b;<br>
+border-top: 1px solid #d05942;<br>
+height: 48px;<br>
+color: #f7f1e3;<br>
+box-sizing: border-box;<br>
+}</p>
+<p>.mainmenu &gt; li:first-child {<br>
+border-radius: 7px 7px 0 0;<br>
+border-top: 0;<br>
+}</p>
+<p>.mainmenu &gt; li:last-child {<br>
+border-radius: 0 0 7px 7px;<br>
+}<br>
+</pre></p>
+<p>主菜单项的小三角形是一张图片。</p>
+<pre class="brush:css">
+.expand-triangle {
+background: url("../images/expand.gif") top left no-repeat;
+height: 10px;
+width: 276px;
+content: " ";
+margin-left: -40px;
+} 
+</pre>
+<p>菜单项页设置了固定的高度为35像素，它们会执行一个<code>border-left</code>的动画过渡效果，这是在鼠标滑过子菜单项时显示在左侧的竖条动画。</p>
+<pre class="brush:css">
+.submenu {
+box-sizing: border-box;
+color: #ae9f9f;
+font-size: 13px;
+content: " ";
+}
+<p>.submenu li {<br>
+line-height: 20px;<br>
+height: 35px;<br>
+padding-top: 11px;<br>
+margin-left: -40px;<br>
+background-color: #484141;<br>
+border-left: solid 6px #484141;<br>
+transition: border-left 220ms ease-in;<br>
+}</p>
+<p>.submenu .chosen,<br>
+.submenu .chosen:hover {<br>
+border-left: solid 6px #96d145;<br>
+}</p>
+<p>.submenu li:hover {<br>
+border-left: solid 6px #d05942;<br>
+}</p>
+<p>.submenu li span {<br>
+margin-left:30px;<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>在jQuery代码中，初始化的时候，在延迟400毫秒之后，先使第一个主菜单项向下展开。然后在为主菜单和子菜单添加<code>click</code>事件监听，为相应的元素添加和移除相应的class。</p>
+<pre class="brush:js">
+$(document).ready( function() {
+var $submenu = $('.submenu');
+var $mainmenu = $('.mainmenu');
+$submenu.hide();
+$submenu.first().delay(400).slideDown(700);
+$submenu.on('click','li', function() {
+$submenu.siblings().find('li').removeClass('chosen');
+$(this).addClass('chosen');
+});
+$mainmenu.on('click', 'li', function() {
+$(this).next('.submenu').slideToggle().siblings('.submenu').slideUp();
+});
+$mainmenu.children('li:last-child').on('click', function() {
+$mainmenu.fadeOut().delay(500).fadeIn();
+});
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509191524.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509192592.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[简单实用的鼠标滑过图片遮罩层动画jQuery插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1001</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1001">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509111707.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509112560.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>nsHover是一款简单实用的鼠标滑过图片遮罩层动画jQuery插件。该插件可以在图片或块级元素上制作鼠标滑过时的遮罩层动画效果，它可以设置遮罩层的前景色和背景色，可以制作圆形图片等，非常实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>nsHover是一款简单实用的鼠标滑过图片遮罩层动画<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。该插件可以在图片或块级元素上制作鼠标滑过时的遮罩层动画效果，它可以设置遮罩层的前景色和背景色，可以制作圆形图片等，非常实用。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该鼠标滑过插件需要引入jQuery和ns.hover.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/ns.hover.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，只需要需要制作鼠标滑过效果的元素上调用<code>nsHover()</code>方法即可。你可以在父元素上使用该方法，那么它的所有子元素都会被初始化。</p>
+<pre class="brush:js">
+&lt;script&gt;
+$(container\_class\_or\_id).nsHover({
+scaling : false,
+speed: 'normal',
+rounded: 'normal',
+bgcolor: '#ffffff',
+bgopacity : 0.5,
+bgpic : 'imgs/lens.png',
+bgsize : '50\%',
+bganim : 'fade',
+shadow : false,
+content: ''
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>可用值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaling</td>
+<td>false</td>
+<td>false / 0 / 0.0 - 1.0</td>
+<td>设置0.0 - 1.0的值使元素在鼠标滑过时收缩，或设置为0 / false来禁用缩放效果</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>normal</td>
+<td>normal / fast / slow</td>
+<td>设置鼠标滑过是过渡动画的速度</td>
+</tr>
+<tr>
+<td>rounded</td>
+<td>normal</td>
+<td>none(0\%) / normal(5\%) / circle(50\%) / xx\% / xx px</td>
+<td>该参数用于控制元素的圆角，你可以将一个元素设置为正圆形</td>
+</tr>
+<tr>
+<td>bganim</td>
+<td>fade</td>
+<td>fade / scale / slide</td>
+<td>遮罩层背景动画的类型</td>
+</tr>
+<tr>
+<td>bgcolor</td>
+<td>'#ffffff'</td>
+<td></td>
+<td>遮罩层的背景颜色</td>
+</tr>
+<tr>
+<td>bgopacity</td>
+<td>0.5</td>
+<td>0.0-1.0</td>
+<td>遮罩层背景的透明度</td>
+</tr>
+<tr>
+<td>bgpic</td>
+<td>imgs/lens.png</td>
+<td>有效的图片路径</td>
+<td>遮罩层背景图片的位置</td>
+</tr>
+<tr>
+<td>bgsize</td>
+<td>25\%</td>
+<td>0\% - 100\%</td>
+<td>遮罩层背景图片的大小</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>false</td>
+<td>true / false</td>
+<td>是否设置阴影效果</td>
+</tr>
+<tr>
+<td>content</td>
+<td>''</td>
+<td>任何有效的html内容</td>
+<td>遮罩层上显示的文字内容</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509111707.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509112560.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[实现背景图片镜头模糊特效的jQuery插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1002</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1002">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510131529.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510132662.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>refocus是一款可以实现背景图片镜头模糊特效的轻量级jQuery插件。该插件可以制作出类似摄像机镜头聚焦和不聚焦的效果。它使用的是CSS filter和transition属性来实现。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>refocus是一款可以实现背景图片镜头模糊特效的轻量级<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。该插件可以制作出类似摄像机镜头聚焦和不聚焦的效果。它使用的是CSS filter和transition属性来实现。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该镜头模糊特效插件需要引入jQuery和refocus.js和refocus.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/refocus.css"&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/refocus.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>在HTML结果中，要分别为聚焦和不聚焦的容器添加<code>focus-in</code>和<code>focus-out</code> class。</p>
+<pre class="brush:html">
+&lt;div class="refocus" id="hero-header"&gt;
+&lt;div class="refocus-img-bg"&gt;&lt;/div&gt;
+&lt;!--带focus-in的容器中的内容将被模糊处理--&gt;
+&lt;div class="refocus-img focus-in"&gt;
+&lt;img src="bg.jpg"&gt;
+&lt;/div&gt;
+&lt;!--带focus-out的容器中的内容不会变模糊--&gt;
+&lt;div class="refocus-text-container"&gt;
+&lt;div class="t"&gt;
+&lt;div class="tc"&gt;
+&lt;h1 class="focus-out"&gt;I'm a 'Hero' header.&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>引入refocus.css文件之后，如果你需要修改模糊的程度，可以修改refocus.css文件中下面代码的<code>blur</code>值。</p>
+<pre class="brush:css">
+/*加大或减小模糊程度*/
+#refocus-1 .focus-out,
+#refocus-1 .refocus-img-bg {
+filter: blur(15px);
+-webkit-filter: blur(15px);
+}
+/*下面的代码是修改显示的速度*/
+#refocus-1 .focus-in,
+#refocus-1 .focus-out {
+transition: filter 2s ease 0.3s;
+-webkit-transition: -webkit-filter 2s ease 0.3s;
+} 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该镜头模糊特效插件。</p>
+<pre class="brush:js">
+$(window).load(function () {
+$('#refocus-1').refocus();
+});
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510131529.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510132662.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTML5文件上传组件美化jQuery插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1003</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1003">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511051800.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511052750.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jQuery.filer是一款简单的HTML5文件上传组件美化jQuery插件。它能够完成单文件和多文件的上传，支持文件的拖拽，支持不同的文件格式校验，支持缩略图和图标等，是一款非常实用的文件上传插件。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jQuery.filer是一款简单的<a href="http://www.htmleaf.com/html5/">HTML5</a>文件上传组件美化<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。它能够完成单文件和多文件的上传，支持文件的拖拽，支持不同的文件格式校验，支持缩略图和图标等，是一款非常实用的文件上传插件。它的特点还有：</p>
+<ul>
+<li>对文件上传File Input组件进行美化</li>
+<li>支持多文件上传</li>
+<li>支持校验文件：大小，扩展名等</li>
+<li>支持创建文件的缩略图</li>
+<li>每种类型的文件可以自定义图标</li>
+<li>可以为缩略图，图标和input自定义模板和主题</li>
+<li>可以移出已选择的文件</li>
+<li>可以从剪切板粘贴图片</li>
+<li>所有的图标在一个字体文件中</li>
+<li>支持文件拖拽</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower来安装该文件上传插件。</p>
+<pre class="brush:html">
+$ bower install jquery.filer
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该文件上传插件需要在页面头部引入jQuery.filer的样式文件。</p>
+<pre class="brush:html">
+&lt;link href="./css/jquery.filer.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="./css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" /&gt;
+</pre>
+<p>引入jQuery和jquery.filer.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+&lt;script src="./js/jquery.filer.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>最简单的文件上传HTML结构如下：</p>
+<pre class="brush:html">
+&lt;form action="./php/upload.php" method="post" enctype="multipart/form-data"&gt;
+&lt;input type="file" name="files[]" id="filer\_input" multiple="multiple"&gt;
+&lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该文件上传插件。</p>
+<pre class="brush:js">
+$(document).ready(function() {
+ $('#filer\_input').filer(); 
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<code>limit</code>：最大上传文件的数量，类型：Number，默认值为:null。</li>
+<li>
+<code>maxSize</code>：上传文件的最大尺寸，单位MB。类型：Number，默认值为:null。</li>
+<li>
+<code>extensions</code>：可上传的文件的文件扩展名。类型：Array，默认值为:null。</li>
+<li>
+<code>changeInput</code>：创建一个新的文件上传input元素。你可以使用默认的模板或自己编写自己的模板。类型：Boolean, String, Function, Object，默认值为:true。</li>
+<li>
+<code>showThumbs</code>：显示文件预览。类型：Boolean，默认值为: false。</li>
+<li>
+<code>appendTo</code>：目标缩略图的目标元素选择器。当需要在指定的元素上添加文件预览时使用该选项。类型：String，默认值为:null。</li>
+<li>
+<code>theme</code>：指定jQuery.filer的主题。类型：String，默认值为:null。</li>
+<li>
+<code>templates</code>：指定文件预览的模板，选择器和一些参数。
+<pre class="brush:js">
+{
+box: null, //Thumbnail's box element {null, String}
+item: null, //File item element {String(use Filer Variables), Function}
+itemAppend: null, //File item element for edit mode {String(use Filer Variables), Function}
+progressBar: null, //File upload progress bar element {String}
+itemAppendToEnd: false, //Append the new file item to the end of the list {Boolean}
+removeConfirmation: true, //Remove file confirmation {Boolean}
+\_selectors: {
+list: null, //List selector {String}
+item: null, //Item selector {String}
+progressBar: null, //Progress bar selector {String}
+remove: null //Remove button selector {String}
+}
+}
+</pre>
+</li>
+<li>
+<code>uploadFile</code>：启用即时文件上传功能。在这个对象中，你可以指定普通jQuery的$.ajax参数或回调函数。
+<pre class="brush:js">
+{
+url: null, //URL to which the request is sent {String}
+data: null, //Data to be sent to the server {Object}
+type: 'POST', //The type of request {String}
+enctype: 'multipart/form-data', //Request enctype {String}
+beforeSend: null, //A pre-request callback function {Function}
+success: null, //A function to be called if the request succeeds {Function}
+error: null, //A function to be called if the request fails {Function}
+statusCode: null, //An object of numeric HTTP codes {Object}
+onProgress: null, //A function called while uploading file with progress percentage {Function}
+onComplete: null //A function called when all files were uploaded {Function}
+}
+</pre>
+</li>
+<li>
+<code>dragDrop</code>：允许文件拖拽功能。在该对象中可以指定回调函数。
+<pre class="brush:js">
+{
+dragEnter: null, //A function that is fired when a dragged element enters the input. {Function}
+dragLeave: null, //A function that is fired when a dragged element leaves the input. {Function}
+drop: null, //A function that is fired when a dragged element is dropped on a valid drop target. {Function}
+}
+</pre>
+</li>
+<li>
+<code>addMore</code>：允许选择多个文件。类型：Boolean，默认值为: false。</li>
+<li>
+<code>clipBoardPaste</code>：允许粘贴拷贝图片。类型：Boolean，默认值为: false。</li>
+<li>
+<code>excludeName</code>：在移除文件的时候，插件会创建一个隐藏域，<code>name</code>属性将使用该参数。默认值为: jfiler-items-exclude-(input file name)-(input index)。</li>
+<li>
+<code>files</code>：已经上传的文件。
+<pre class="brush:js">
+[
+{
+name: "appended\_file.jpg",
+size: 5453,
+type: "image/jpg",
+file: "/path/to/file.jpg"
+},
+{
+name: "appended\_file\_2.jpg",
+size: 9453,
+type: "image/jpg",
+file: "path/to/file2.jpg"
+}
+]
+</pre>
+</li>
+<li>
+<code>beforeRender</code>：在渲染jQuery.filer input之前触发。</li>
+<li>
+<code>afterRender</code>：在渲染jQuery.filer input之后触发。</li>
+<li>
+<code>beforeShow</code>：在显示缩略图之前触发。</li>
+<li>
+<code>afterShow</code>：在显示缩略图之后触发。</li>
+<li>
+<code>beforeSelect</code>：在选择一个文件之后，并在将该文件添加到input之前触发。该函数返回一个布尔值。</li>
+<li>
+<code>onSelect</code>：在选择一个文件之后触发。</li>
+<li>
+<code>onRemove</code>：在移除一个文件之后触发。</li>
+<li>
+<code>onEmpty</code>：在没有文件被选择的时候触发。</li>
+<li>
+<code>options</code>：在对象中定义自己的参数，定义之后可以在任何地方使用。</li>
+<li>
+<code>captions</code>：指定自己的标题。
+<pre class="brush:js">
+{
+button: "Choose Files",
+feedback: "Choose files To Upload",
+feedback2: "files were chosen",
+drop: "Drop file here to Upload",
+removeConfirmation: "Are you sure you want to remove this file?",
+errors: {
+filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
+filesType: "Only Images are allowed to be uploaded.",
+filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
+filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
+}
+}
+</pre>
+</li>
+</ul>
+<p>关于该文件上传插件更详细的资料请参考：<a href="http://filer.grandesign.md/#documentation" target="\_blank">http://filer.grandesign.md/#documentation</a>。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511051800.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511052750.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[实用的jQuery多层图片视觉差互动特效插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1004</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1004">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509291513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509292632.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery.parallaxmouse是一款非常实用的jQuery多层图片视觉差互动特效插件。该视觉差插件文件体积小，可以通过鼠标的上下左右移动来进行互动，非常适合用于制作网站的Banner。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery.parallaxmouse是一款非常实用的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>多层图片视觉差互动特效插件。该<a href="http://www.htmleaf.com/jQuery/shijuecha/201509292631.html">视觉差插件</a>文件体积小，可以通过鼠标的上下左右移动来进行互动，非常适合用于制作网站的Banner。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该视觉差特效插件需要引入jQuery和jquery.parallaxmouse.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="dist/jquery.parallaxmouse.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该视觉差插件使用class来决定每个元素的原点方向。如果想要一个元素从左边开始定位，可以为它添加<code>left</code> class。如果是从上边，使用<code>top</code> class。如果是从右边，则不要添加<code>left</code> class，如果是从下巴，则不要添加<code>top</code> class。</p>
+<pre class="brush:html">
+&lt;div id="galaxy"&gt;
+&lt;img id="star1" src="images/star1.png" class="top left"&gt;
+&lt;img id="star2" src="images/star2.png" class="top"&gt;
+&lt;img id="star3" src="images/star3.png" class=""&gt;
+&lt;/div&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在CSS中设置元素的初始位置的时候，<code>position</code>属性必须设置为<code>absolute</code>。另外该插件所需要的CSS单位为像素。</p>
+<pre class="brush:css">
+#galaxy {
+width: 100\%;
+height: 400px;
+max-height: 400px;
+position: relative;
+background: #2f2f6d;
+overflow: hidden;
+}
+#star1 {
+position: absolute;
+top: 150px;
+left: 200px;
+}
+#star2 {
+position: absolute;
+top: 150px;
+right: 200px;
+}
+#star3 {
+position: absolute;
+bottom: 150px;
+right: 200px;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<pre class="brush:js">
+jQuery(window).parallaxmouse({
+invert: true,
+range: 400,
+elms: [
+{el: $('#star1'), rate: 0.2},
+{el: $('#star2'), rate: 0.4},
+{el: $('#star3'), rate: 0.1},
+]
+});
+</pre>
+<p>jQuery选择器选择的元素是视觉差元素在鼠标互动是相对的元素。</p>
+<p>插件的参数配置非常简单：</p>
+<ul>
+<li>
+<code>invert</code>：指定元素的运动方向是否相对于鼠标移动的方向。</li>
+<li>
+<code>range</code>：指定一个元素在某个方向上可以运动的最大距离。</li>
+<li>
+<code>elms</code>：一个数组对象，用于指定哪些元素要进行视觉差互动。每一个元素对象都包含一个指向视觉差元素的引用，<code>rate</code>属性指定该元素的运动速率。</li>
+</ul>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509291513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509292632.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[适合移动手机使用的jQuery响应式滚动新闻插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1005</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1005">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510261601.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510262708.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Responsive-Ticker是一款适合移动手机使用的响应式jQuery滚动新闻插件。该插件通过简单的设置HTML代码即可生成全屏响应式的滚动新闻效果，它可以在移动手机和桌面设备上完美的工作。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Responsive-Ticker是一款适合移动手机使用的响应式<a href="http://www.htmleaf.com/jQuery/">jQuery</a>滚动新闻插件。该插件通过简单的设置HTML代码即可生成全屏响应式的滚动新闻效果，它可以在移动手机和桌面设备上完美的工作。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该jQuery滚动新闻插件需要引入jQuery和ticker.js、ticker.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="css/ticker.css"&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/ticker.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该jQuery滚动新闻插件的HTML结构如下：使用带<code>.ticker-container</code> class的<code>div</code>作为包裹元素，里面使用带<code>.ticker-caption</code> class的<code>div</code>元素作为滚动新闻的标题，所有的滚动新闻使用无序列表来制作。</p>
+<pre class="brush:html">
+&lt;div class="ticker-container"&gt;
+&lt;div class="ticker-caption"&gt;
+&lt;p&gt;Responsive Ticker&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;div&gt;
+&lt;li&gt;&lt;span&gt;Ticker element 1 – &lt;a href="#"&gt;read more&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;li&gt;&lt;span&gt;Ticker element 2 – &lt;a href="#"&gt;read more&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;li&gt;&lt;span&gt;Ticker element 3 – &lt;a href="#"&gt;read more&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;li&gt;&lt;span&gt;Ticker element 4 – &lt;a href="#"&gt;read more&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;li&gt;&lt;span&gt;Ticker element 5 – &lt;a href="#"&gt;read more&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;/li&gt;
+&lt;/div&gt;
+&lt;/ul&gt;
+&lt;/div&gt; 
+</pre>
+<p>通过上面的设置即可在页面上生成滚动新闻。其样式可以通过ticker.css文件进行自定义。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1510/201510261601.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201510262708.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[基于Animate.css的jQuery全屏幻灯片插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1006</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1006">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508081513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508082376.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>crosscover是一款基于animate.css的jQuery全屏幻灯片插件。该幻灯片可以使图片无限循环轮播，可以使用animate.css的所有效果来制作图片进入和离开的动画效果，可以暂停自动播放等，并且使用非常简单。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>crosscover是一款基于<a href="http://www.htmleaf.com/css3/css3donghua/201501061114.html">animate.css</a>的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>全屏幻灯片插件。该幻灯片可以使图片无限循环轮播，可以使用animate.css的所有效果来制作图片进入和离开的动画效果，可以暂停自动播放等，并且使用非常简单。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该幻灯片插件需要引入下面的一些依赖文件。</p>
+<pre class="brush:html">
+&lt;!-- animate.css --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css"&gt;
+&lt;!-- crosscover.css --&gt;
+&lt;link rel="stylesheet" href="./dist/css/crosscover.min.css"&gt;
+&lt;!-- jQuery --&gt;
+&lt;script src="jquery/1.7.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- crosscover.js --&gt;
+&lt;script src="./dist/js/crosscover.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="crosscover"&gt;
+&lt;div class="crosscover-overlay"&gt;
+&lt;div class="crosscover-island"&gt;
+&lt;h1 class="crosscover-title"&gt;...&lt;/h1&gt;
+&lt;h2 class="crosscover-description"&gt;...&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+<p>&lt;ul class=&quot;crosscover-list&quot;&gt;<br>
+&lt;li&gt;&lt;img src=&quot;./images/01.jpg&quot; alt=&quot;image01&quot;/&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;./images/02.jpg&quot; alt=&quot;image02&quot;/&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;./images/03.jpg&quot; alt=&quot;image03&quot;/&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;./images/04.jpg&quot; alt=&quot;image04&quot;/&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;./images/05.jpg&quot; alt=&quot;image05&quot;/&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该幻灯片插件。</p>
+<pre class="brush:js">
+$(".crosscover").crosscover({
+animateInClass:'fade-in',
+animateOutClass:'fade-out',
+interval : 5000,
+startIndex : 0,
+autoPlay : true,
+controller : true,
+controllerClass: 'crosscover-controller',
+prevClass : 'crosscover-prev',
+nextClass : 'crosscover-next',
+playerClass : 'crosscover-player',
+playerActiveClass : 'is-playing',
+playerInnerHtml : '&lt;span class="crosscover-icon-player"&gt;&lt;/span&gt;',
+prevInnerHtml : '&lt;span class="crosscover-icon-prev"&gt;&lt;/span&gt;',
+nextInnerHtml : '&lt;span class="crosscover-icon-next"&gt;&lt;/span&gt;'
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 可用的动画效果</h5>
+<div class="table-responsive">
+<table class="table table-striped">
+<tbody>
+<tr>
+<td>bounce</td>
+<td>flash</td>
+<td>pulse</td>
+<td>rubberBand</td>
+</tr>
+<tr>
+<td>shake</td>
+<td>swing</td>
+<td>tada</td>
+<td>wobble</td>
+</tr>
+<tr>
+<td>jello</td>
+<td>bounceIn</td>
+<td>bounceInDown</td>
+<td>bounceInLeft</td>
+</tr>
+<tr>
+<td>bounceInRight</td>
+<td>bounceInUp</td>
+<td>bounceOut</td>
+<td>bounceOutDown</td>
+</tr>
+<tr>
+<td>bounceOutLeft</td>
+<td>bounceOutRight</td>
+<td>bounceOutUp</td>
+<td>fadeIn</td>
+</tr>
+<tr>
+<td>fadeInDown</td>
+<td>fadeInDownBig</td>
+<td>fadeInLeft</td>
+<td>fadeInLeftBig</td>
+</tr>
+<tr>
+<td>fadeInRight</td>
+<td>fadeInRightBig</td>
+<td>fadeInUp</td>
+<td>fadeInUpBig</td>
+</tr>
+<tr>
+<td>fadeOut</td>
+<td>fadeOutDown</td>
+<td>fadeOutDownBig</td>
+<td>fadeOutLeft</td>
+</tr>
+<tr>
+<td>fadeOutLeftBig</td>
+<td>fadeOutRight</td>
+<td>fadeOutRightBig</td>
+<td>fadeOutUp</td>
+</tr>
+<tr>
+<td>fadeOutUpBig</td>
+<td>flipInX</td>
+<td>flipInY</td>
+<td>flipOutX</td>
+</tr>
+<tr>
+<td>flipOutY</td>
+<td>lightSpeedIn</td>
+<td>lightSpeedOut</td>
+<td>rotateIn</td>
+</tr>
+<tr>
+<td>rotateInDownLeft</td>
+<td>rotateInDownRight</td>
+<td>rotateInUpLeft</td>
+<td>rotateInUpRight</td>
+</tr>
+<tr>
+<td>rotateOut</td>
+<td>rotateOutDownLeft</td>
+<td>rotateOutDownRight</td>
+<td>rotateOutUpLeft</td>
+</tr>
+<tr>
+<td>rotateOutUpRight</td>
+<td>hinge</td>
+<td>rollIn</td>
+<td>rollOut</td>
+</tr>
+<tr>
+<td>zoomIn</td>
+<td>zoomInDown</td>
+<td>zoomInLeft</td>
+<td>zoomInRight</td>
+</tr>
+<tr>
+<td>zoomInUp</td>
+<td>zoomOut</td>
+<td>zoomOutDown</td>
+<td>zoomOutLeft</td>
+</tr>
+<tr>
+<td>zoomOutRight</td>
+<td>zoomOutUp</td>
+<td>slideInDown</td>
+<td>slideInLeft</td>
+</tr>
+<tr>
+<td>slideInRight</td>
+<td>slideInUp</td>
+<td>slideOutDown</td>
+<td>slideOutLeft</td>
+</tr>
+<tr>
+<td>slideOutRight</td>
+<td>slideOutUp</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508081513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508082376.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[可实现响应式图片懒加载的js插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1007</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1007">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508222108.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508222456.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>responsively-lazy是一款非常实用的可实现响应式图片懒加载的js插件。它可以根据容器的大小来智能选择加载适合尺寸的图片，做到图片的响应式效果。并且使用它对于SEO是十分友好的。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>responsively-lazy是一款非常实用的可实现响应式图片懒加载的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">js插件</a>。它可以根据容器的大小来智能选择加载适合尺寸的图片，做到图片的响应式效果。并且使用它对于SEO是十分友好的。该图片懒加载插件的特点还有：</p>
+<ul>
+<li>响应式图片</li>
+<li>不做任何不必要的请求</li>
+<li>可以在任何支持srcset的浏览器中工作</li>
+<li>智能处理加载的合适尺寸的图片</li>
+<li>在旧的浏览器中不会破坏布局</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm或bower来安装该插件。</p>
+<pre class="brush:html">
+npm install responsively-lazy
+bower install responsively-lazy
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该图片懒加载插件需要引入responsivelyLazy.min.css和responsivelyLazy.min.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="responsivelyLazy.min.css"&gt;
+&lt;script async src="responsivelyLazy.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>为你需要进行懒加载的图片添加下面的HTML结构：</p>
+<pre class="brush:html">
+&lt;div class="responsively-lazy" style="padding-bottom:68.44\%;"&gt;
+&lt;img alt="" src="images/2500.jpg" data-srcset="images/600.jpg 600w, images/400.jpg 400w, images/800.jpg 800w, images/1500.jpg 1500w, images/1000.jpg 1000w, images/2000.jpg 2000w" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /&gt;
+&lt;/div&gt; 
+</pre>
+<p>你需要自定义<code>&lt;div&gt;</code>容器的<code>padding-bottom</code>样式。如果你不知道图片的比例，你也可以不用<code>&lt;div&gt;</code>容器，直接使用<code>&lt;img&gt;</code>。</p>
+<pre class="brush:html">
+&lt;img class="responsively-lazy" alt="" src="images/2500.jpg" data-srcset="images/600.jpg 600w, images/400.jpg 400w, images/800.jpg 800w, images/1500.jpg 1500w, images/1000.jpg 1000w, images/2000.jpg 2000w" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /&gt;
+</pre>
+<p>关于这个插件更详细的介绍信息，请参考<a href="http://ivopetkov.com/b/lazy-load-responsive-images/" target="\_balnk">Lazy load responsive images</a>。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508222108.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508222456.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FlexSlider|功能强大的响应式jQuery幻灯片插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_1008</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_1008">
+        </link>
+        <updated>2019-09-20T08:22:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508151642.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508152416.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>FlexSlider是一款功能强大的响应式jQuery幻灯片插件。该幻灯片插件可以制作为带缩略图模式，旋转木马模式等。它可以自适应屏幕大小，并可以制作多种幻灯片过渡特效。它的兼容性强，可以兼容IE7+的现代浏览器。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>FlexSlider是一款功能强大的响应式<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>幻灯片插件。该<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片插件</a>可以制作为带缩略图模式，旋转木马模式等。它可以自适应屏幕大小，并可以制作多种幻灯片过渡特效。它的兼容性强，可以兼容IE7+的现代浏览器。它的特点还有：</p>
+<ul>
+<li>支持多种幻灯片模式</li>
+<li>支持iOS滑动手势</li>
+<li>支持回调函数API</li>
+<li>支持多种<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>动画过渡效果</li>
+<li>有额外的旋转木马选项</li>
+<li>大量的配置参数</li>
+<li>多种主题</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片最基本的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="flexslider"&gt;
+&lt;ul class="slides"&gt;
+&lt;li&gt;
+&lt;img src="images/1.jpg" /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="images/2.jpg" /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="images/3.jpg" /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="images/4.jpg" /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面加载完毕之后，可以通过下面的方法来初始化该FlexSlider幻灯片插件。</p>
+<pre class="brush:js">
+$('.flexslider').flexslider({
+animation: "slide",
+start: function(slider){
+$('body').removeClass('loading');
+}
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<code>namespace</code>：<code>namespace</code>是有插件产生的元素的CSS名称的前缀。
+<p>默认值：<code>"flex-"</code></p>
+<p>接收值：<code>String</code></p>
+<pre class="brush:html">
+&lt;!-- Example generated elements --&gt;
+&lt;ul class="flex-control-nav flex-paging"&gt;
+&lt;li&gt;&lt;a class="flex-active" href="#"&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+</pre>
+<p class="bg-info">提示：<code>namespace</code>也可以是一个空白符，这会去除掉前缀。</p>
+</li>
+<li>
+<code>selector</code>：用于选择幻灯片容器和slide的选择器。这个选择器必须是以下模式：<code>'{container} &gt; {slide}'</code>。
+<p>默认值：<code>".slides &gt; li"</code></p>
+<p>接收值：<code>selector</code></p>
+<pre class="brush:js">
+// FlexSlider setup using custom selector
+$(".slider").flexslider({
+selector: ".tabs &gt; .tab"
+}); 
+</pre>
+<pre class="brush:html">
+&lt;div class="slider"&gt;
+&lt;div class="tabs"&gt;
+&lt;div class="tab"&gt; ... &lt;/div&gt;
+&lt;div class="tab"&gt; ... &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt; 
+</pre>
+</li>
+<li>
+<code>animation</code>：slider的动画类型。目前只支持2种动画：fade和slide。
+<p>默认值：<code>"fade"</code></p>
+<p>接收值：<code>"fade" 或 "slide"</code></p>
+<p class="bg-info">你可以考虑在移动触摸设备中使用淡入淡出模式，下面的代码使用Modernizr来检测touch事件是否可用。</p>
+<pre class="brush:js">
+$(".flexslider").flexslider({
+animation: Modernizr.touch ? "slide" : "fade"
+});
+</pre>
+</li>
+<li>
+<code>easing</code>：该参数允许使用jQuery easing。默认是由jQuery提供的“swing”和“linear”，你可以通过引入<a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="\_blank">jQuery Easing plugin</a>来使用更多的动画过渡效果。注意，如果你选择一个不存在的easing效果，插件可能会崩溃。
+<p>默认值：<code>"swing"</code></p>
+<p>接收值：<code>String</code></p>
+<p class="bg-info">注意：你需要设置<code>useCCS: false</code>来强制在支持translate3d的浏览器执行过渡动画。</p>
+</li>
+<li>
+<code>direction</code>：幻灯片的方向。支持<code>"horizontal"</code>和<code>"vertical"</code>2种方向。在淡入淡出效果中不能使用这个参数。
+<p>默认值：<code>"horizontal"</code></p>
+<p>接收值：<code>horizontal</code>或<code>vertical</code></p>
+<p class="bg-info">注意：垂直幻灯片的图片高度必须相等。</p>
+</li>
+<li>
+<code>reverse</code>：该参数决定幻灯片是从左向右运动还是从右向左运动。
+<p>默认值：<code>"false"</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>animationLoop</code>：幻灯片是否无缝无限循环。如果设置为<code>false</code>，<code>directionNav</code>将会在结尾处添加<code>.flex-disable</code>class。
+<p>默认值：<code>"true"</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>smoothHeight</code>：该参数允许在不同高度的图片之间平滑过渡。在水平淡入淡出幻灯片上无效果。
+<p>默认值：<code>"false"</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>startAt</code>：幻灯片的开始位置。0是第一张幻灯片。
+<p>默认值：<code>0</code></p>
+<p>接收值：<code>Number</code></p>
+</li>
+<li>
+<code>slideshow</code>：幻灯片是否自动播放。
+<p>默认值：<code>true</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>slideshowSpeed</code>：幻灯片的切换速度，单位毫秒。
+<p>默认值：<code>600</code></p>
+<p>接收值：<code>Number</code></p>
+<p class="bg-info">提示：如果你使用一个很慢的速度（&gt;=700），可以考虑在移动触摸设备上使用一个较快的速度，这会使动画过渡更加平滑。
+</p>
+<pre class="brush:js">
+$(".flexslider").flexslider({
+animation: "slide",
+animationSpeed: Modernizr.touch ? 400 : 1000
+});
+</pre>
+</li>
+<li>
+<code>initDelay</code>：初始化延迟时间，单位毫秒。
+<p>默认值：<code>0</code></p>
+<p>接收值：<code>Number</code></p>
+</li>
+<li>
+<code>randomize</code>：在幻灯片初始化时打乱图片的顺序。
+<p>默认值：<code>false</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>pauseOnAction</code>：<code>pauseOnAction</code>是幻灯片自动播放模式的二级控制。它会在鼠标滑过幻灯片时暂停播放，离开时重新播放。
+<p>默认值：<code>false</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>useCSS</code>：<code>useCSS</code>决定在CSS transitions可用时是否使用它们。
+<p>默认值：<code>true</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>touch</code>：允许幻灯片使用touch-swipe事件。
+<p>默认值：<code>true</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>video</code>：使用视频。Translate3D在视频上使用时会有一些bug，所以开启该参数会禁用CSS transitions，而改用 jQuery transitions。
+<p>默认值：<code>false</code></p>
+<p>接收值：<code>Boolean</code></p>
+</li>
+<li>
+<code>controlNav</code>：用于动态创建幻灯片导航元素。在<code>controlNav</code>中传入<code>thumbnails</code>参数会动态创建缩略图导航。
+<p>默认值：<code>true</code></p>
+<p>接收值：<code>Boolean</code>或<code>"thumbnails"</code></p>
+<p>缩略图的结构如下：</p>
+<pre class="brush:js">
+&lt;!-- Example markup for using the thumbnails pattern --&gt;
+&lt;div class="flexslider"&gt;
+&lt;ul class="slides"&gt;
+&lt;li data-thumb="image/path.jpg"&gt;
+&lt;!-- slide content --&gt;
+&lt;/li&gt;
+&lt;li data-thumb="image/path.jpg"&gt;
+&lt;!-- slide content --&gt;
+&lt;/li&gt;
+&lt;li data-thumb="image/path.jpg"&gt;
+&lt;!-- slide content --&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508151642.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508152416.html">在线预览</a></p>
 ]]></content>
     </entry>
 </feed>

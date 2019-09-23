@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    捕获键盘输入和输入组合键的js库hotkeys | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            捕获键盘输入和输入组合键的js库hotkeys
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1708/201708171514.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1708/201708171514.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201708174690.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>hotkeys.js是一款用于捕获键盘输入和输入组合键的js库。hotkeys.js没有依赖，压缩后小于3kb。hotkeys.js可以捕获用户的键盘按键或组合键的输入，非常实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>hotkeys.js是一款用于捕获键盘输入和输入组合键的js库。hotkeys.js没有依赖，压缩后小于3kb。hotkeys.js可以捕获用户的键盘按键或组合键的输入，非常实用。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以使用bower，npm来安装hotkeys.js。</p>
+<pre class="brush:html">
+# bower 安装
+$ bower install hotkeysjs
+<h1 id="npm-安装">npm 安装</h1>
+<p>$ npm install hotkeys-js<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> React中使用</h5>
+<p>react-hotkeys，安装如下：</p>
+<pre class="brush:js">
+npm i -S react-hot-keys
+</pre>
+<p>示例</p>
+<pre class="brush:js">
+import React, { Component } from 'react';
+import Hotkeys from 'react-hot-keys';
+<p>export default class HotkeysDemo extends Component {<br>
+constructor(props) {<br>
+super(props);<br>
+this.state = {<br>
+output: 'Hello, I am a component that listens to keydown and keyup of a',<br>
+}<br>
+}<br>
+onKeyUp(keyName, e, handle) {<br>
+console.log(&quot;test:onKeyUp&quot;, e, handle)<br>
+this.setState({<br>
+output: <code>onKeyUp ${keyName}</code>,<br>
+});<br>
+}<br>
+onKeyDown(keyName, e, handle) {<br>
+console.log(&quot;test:onKeyDown&quot;, keyName, e, handle)<br>
+this.setState({<br>
+output: <code>onKeyDown ${keyName}</code>,<br>
+});<br>
+}<br>
+render() {<br>
+return (<br>
+&lt;Hotkeys<br>
+keyName=&quot;shift+a,alt+s&quot;<br>
+onKeyDown={this.onKeyDown.bind(this)}<br>
+onKeyUp={this.onKeyUp.bind(this)}<br>
+&gt;<br>
+&lt;div style={{ padding: &quot;50px&quot; }}&gt;<br>
+{this.state.output}<br>
+&lt;/div&gt;<br>
+&lt;/Hotkeys&gt;<br>
+)<br>
+}<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 传统方法</h5>
+<p>传统方法在页面中hotkeys.js。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="./js/hotkeys.js"&gt;&lt;/script&gt;
+</pre>
+<p>或使用包加载：</p>
+<pre class="brush:js">
+import hotkeys from 'hotkeys-js';
+<p>hotkeys('shift+a,alt+d, w', function(e){<br>
+console.log('干点活儿',e);<br>
+if(hotkeys.shift) console.log('你按下了 shift 键！');<br>
+if(hotkeys.ctrl) console.log('你按下了 ctrl 键！');<br>
+if(hotkeys.alt) console.log('你按下了 alt 键！');<br>
+});<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 定义快捷键</h5>
+<pre class="brush:js">
+// 定义a快捷键
+hotkeys('a', function(event,handler){
+//event.srcElement: input 
+//event.target: input
+if(event.target === "input"){
+alert('你在输入框中按下了 a!')
+}
+alert('你按下了 a!') 
+});
+<p>// 定义a快捷键<br>
+hotkeys('ctrl+a,ctrl+b,r,f', function(event,handler){<br>
+switch(handler.key){<br>
+case &quot;ctrl+a&quot;:alert('你按下了ctrl+a!');break;<br>
+case &quot;ctrl+b&quot;:alert('你按下了ctrl+b!');break;<br>
+case &quot;r&quot;:alert('你按下了r!');break;<br>
+case &quot;f&quot;:alert('你按下了f!');break;<br>
+}<br>
+//handler.scope 范围<br>
+});</p>
+<p>// 返回false将停止活动，并阻止默认浏览器事件<br>
+hotkeys('ctrl+r', function(){ alert('停止刷新!'); return false });</p>
+<p>// 多个快捷方式做同样的事情<br>
+hotkeys('⌘+r, ctrl+r', function(){ });</p>
+<p>// 对所有摁键执行任务<br>
+hotkeys('*','wcj', function(e){<br>
+console.log('干点活儿',e);<br>
+console.log(&quot;key.getScope()::&quot;,hotkeys.getScope());<br>
+if(hotkeys.shift) console.log('你按下了 shift 键！');<br>
+if(hotkeys.ctrl) console.log('你按下了 ctrl 键！');<br>
+if(hotkeys.alt) console.log('你按下了 alt 键！');<br>
+});<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 修饰键判断</h5>
+<p>可以对下面的修饰键判断 <code>shift</code> <code>alt</code> <code>option</code> <code>ctrl</code> <code>control</code> <code>command</code>，特别注意<code>+</code>和<code>=</code>键值相同，组合键设置<code>⌘</code><code>+</code><code>=</code>。</p>
+<pre class="brush:js">
+hotkeys('shift+a,alt+d, w', function(e){
+console.log('干点活儿',e);
+if(hotkeys.shift) console.log('你按下了 shift 键！');
+if(hotkeys.ctrl) console.log('你按下了 ctrl 键！');
+if(hotkeys.alt) console.log('你按下了 alt 键！');
+}); 
+</pre>
+<p>关于hotkeys.js更多的使用方法请查看官方github地址：<a href="https://github.com/jaywcjlove/hotkeys/" target="\_blank">https://github.com/jaywcjlove/hotkeys/</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1708/201708171514.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201708174690.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_41">
+                                <h3 class="post-title">
+                                    jQuery全屏滚动插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#npm-%E5%AE%89%E8%A3%85">npm 安装</a><br>
+*<br>
+*<br>
+* <a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

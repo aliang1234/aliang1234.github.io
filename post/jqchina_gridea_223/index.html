@@ -1,0 +1,634 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    bootstrap4滑动侧边栏特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            bootstrap4滑动侧边栏特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1807/201807191428.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807191428.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807195235.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于bootstrap4的滑动侧边栏特效。该滑动侧边栏使用bootstrap4框架，通过css和jquery来完成隐藏侧边栏，当点击打开侧边栏按钮时，侧边栏会以动画的方式滑动出来。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于bootstrap4的滑动侧边栏特效。该滑动侧边栏使用bootstrap4框架，通过css和jquery来完成隐藏侧边栏，当点击打开侧边栏按钮时，侧边栏会以动画的方式滑动出来。</p>
+<p>
+</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap4相关文件。</p>
+<pre class="brush:html">
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;script src="js/jquery-1.11.0.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>侧边栏的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-offcanvas"&gt;
+&lt;div class="container-fluid"&gt;
+&lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+&lt;ul class="navbar-nav navbar-top"&gt;
+&lt;li class="nav-item active"&gt;
+&lt;a class="nav-link" href="#"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button class="navbar-toggler navbar-toggler-right navbar-icon" type="button" data-toggle="collapse" data-target="#navbar-mobile" aria-controls="navbar-mobile" aria-expanded="false" aria-label="Toggle navigation"&gt;
+&lt;span class="icon-bar bar1"&gt;&lt;/span&gt;
+&lt;span class="icon-bar bar2"&gt;&lt;/span&gt;
+&lt;span class="icon-bar bar3"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class="navbar-collapse collapse ml-auto" id="navbar-mobile"&gt;
+&lt;ul class="navbar-nav ml-auto"&gt;
+&lt;li class="nav-image"&gt;
+&lt;img src="logo.png" alt=""&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a href="#!" class="nav-link"&gt;Link 1&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a href="#!" class="nav-link"&gt;Link 2&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a href="#!" class="nav-link"&gt;Link 3&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+<p>页面的内容放置在<code>wrapper</code>class的div容器中。</p>
+<pre class="brush:css">
+&lt;div class="wrapper"&gt;
+...
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为侧边栏添加下面的CSS样式。</p>
+<pre class="brush:css">
+.wrapper { transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
+<p>.navbar {<br>
+height: 75px;<br>
+transition: all .5s .1s;<br>
+}</p>
+<p>.navbar-offcanvas { z-index: 1030; }</p>
+<p>.navbar-offcanvas .container-fluid {<br>
+position: relative;<br>
+padding: 0;<br>
+transform: translate3d(0px, 0, 0);<br>
+transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);<br>
+}</p>
+<p>.navbar-offcanvas .navbar-top { display: none; }<br>
+@media (min-width: 992px) {</p>
+<p>.navbar-offcanvas .navbar-top {<br>
+display: flex;<br>
+margin-left: auto;<br>
+}<br>
+}</p>
+<p>.navbar-offcanvas .navbar-top .nav-item {<br>
+margin-right: 22px;<br>
+text-align: center;<br>
+}</p>
+<p>@media (max-width: 991px) {</p>
+<p>.navbar-offcanvas .navbar-top .nav-item .nav-link { color: #000; }<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler {<br>
+padding: 0;<br>
+border: 0;<br>
+outline: none;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler:hover, .navbar-offcanvas .navbar-toggler:focus { cursor: pointer; }</p>
+<p>@media (min-width: 768px) {</p>
+<p>.navbar-offcanvas .navbar-toggler { display: block; }<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler .icon-bar {<br>
+display: block;<br>
+position: relative;<br>
+width: 24px;<br>
+height: 2px;<br>
+border-radius: 1px;<br>
+background-color: #fff;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler .icon-bar + .icon-bar { margin-top: 4px; }</p>
+<p>.navbar-offcanvas .navbar-toggler .icon-bar.bar1 {<br>
+top: 0;<br>
+outline: 1px solid transparent;<br>
+animation: topbar-back 500ms 0s;<br>
+animation-fill-mode: forwards;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler .icon-bar.bar2 {<br>
+outline: 1px solid transparent;<br>
+opacity: 1;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler .icon-bar.bar3 {<br>
+bottom: 0;<br>
+outline: 1px solid transparent;<br>
+animation: bottombar-back 500ms 0s;<br>
+animation-fill-mode: forwards;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler.toggled .icon-bar.bar1 {<br>
+top: 6px;<br>
+animation: topbar-x 500ms 0s;<br>
+animation-fill-mode: forwards;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-toggler.toggled .icon-bar.bar2 { opacity: 0; }</p>
+<p>.navbar-offcanvas .navbar-toggler.toggled .icon-bar.bar3 {<br>
+bottom: 6px;<br>
+animation: bottombar-x 500ms 0s;<br>
+animation-fill-mode: forwards;<br>
+}</p>
+<p>.navbar-offcanvas .navbar-collapse.collapse, .navbar-offcanvas .navbar-collapse.collapse.in, .navbar-offcanvas .navbar-collapse.collapsing { display: none !important; }</p>
+<p>.nav-open .navbar-collapse { transform: translate3d(0px, 0, 0); }</p>
+<p>.nav-open .navbar &gt; .container-fluid { transform: translate3d(-424px, 0, 0); }</p>
+<p>@media (max-width: 991px) {</p>
+<p>.nav-open .navbar &gt; .container-fluid { transform: translate3d(-282.6666666667px, 0, 0); }<br>
+}</p>
+<p>.nav-open .wrapper { transform: translate3d(-150px, 0, 0); }</p>
+<p>body &gt; .navbar-collapse {<br>
+display: block !important;<br>
+position: fixed;<br>
+top: 0;<br>
+right: -10px;<br>
+width: 424px;<br>
+height: 100%;<br>
+padding: 60px 1rem;<br>
+background-color: #fff;<br>
+border-left: 1px solid #e3e3e3;<br>
+text-align: center;<br>
+visibility: visible;<br>
+overflow-y: visible;<br>
+transform: translate3d(424px, 0, 0);<br>
+transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);<br>
+z-index: 1032;<br>
+}</p>
+<p>body &gt; .navbar-collapse:after {<br>
+content: &quot;&quot;;<br>
+position: absolute;<br>
+top: 28px;<br>
+left: -20px;<br>
+border-left: 10px solid #fff;<br>
+border-top: 10px solid transparent;<br>
+border-bottom: 10px solid transparent;<br>
+border-right: 10px solid transparent;<br>
+transform: rotate(180deg);<br>
+transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);<br>
+z-index: 1032;<br>
+}</p>
+<p>@media (max-width: 991px) {</p>
+<p>body &gt; .navbar-collapse { width: 282.6666666667px; }<br>
+}</p>
+<p>body &gt; .navbar-collapse .nav-image { margin-bottom: 65px; }</p>
+<p>body &gt; .navbar-collapse .nav-image img {<br>
+display: block;<br>
+margin: 0 auto;<br>
+border: 1px solid rgba(0, 0, 0, 0.14);<br>
+width: 91px;<br>
+height: 69px;<br>
+}</p>
+<p>body &gt; .navbar-collapse .navbar-top {<br>
+margin: 0 !important;<br>
+flex-direction: column;<br>
+}</p>
+<p>@media (min-width: 992px) {</p>
+<p>body &gt; .navbar-collapse .navbar-top { display: none; }<br>
+}</p>
+<p>body &gt; .navbar-collapse .navbar-top li { text-align: center; }</p>
+<p>body &gt; .navbar-collapse .navbar-top li a {<br>
+display: block;<br>
+padding: .5rem 1rem;<br>
+font-weight: 700;<br>
+color: #000;<br>
+}</p>
+<p>body &gt; .navbar-collapse .navbar-top li a:hover, body &gt; .navbar-collapse .navbar-top li a:focus { text-decoration: none; }</p>
+<p>body &gt; .navbar-collapse .nav-link, body &gt; .navbar-collapse .dropdown-toggle {<br>
+font-weight: 700;<br>
+color: #222;<br>
+transition: color .2s ease-out;<br>
+}</p>
+<p>body &gt; .navbar-collapse .nav-link:hover, body &gt; .navbar-collapse .nav-link:focus, body &gt; .navbar-collapse .dropdown-toggle:hover, body &gt; .navbar-collapse .dropdown-toggle:focus { text-decoration: none; }</p>
+<p>body &gt; .navbar-collapse .nav-link.disabled, body &gt; .navbar-collapse .dropdown-toggle.disabled { color: rgba(0, 0, 0, 0.35); }</p>
+<p>body &gt; .navbar-collapse .nav-link.disabled:hover, body &gt; .navbar-collapse .nav-link.disabled:focus, body &gt; .navbar-collapse .dropdown-toggle.disabled:hover, body &gt; .navbar-collapse .dropdown-toggle.disabled:focus { cursor: not-allowed; }<br>
+@media (min-width: 992px) {</p>
+<p>body &gt; .navbar-top { display: none; }<br>
+}</p>
+<p>body &gt; #overlay {<br>
+content: &quot;&quot;;<br>
+position: fixed;<br>
+top: 0;<br>
+left: auto;<br>
+right: calc(282.6666666667px - 10px);<br>
+width: 100%;<br>
+height: 100%;<br>
+opacity: 0;<br>
+overflow-x: hidden;<br>
+z-index: 1029;<br>
+}</p>
+<p>@media (min-width: 992px) {</p>
+<p>body &gt; #overlay { right: calc(424px - 10px); }<br>
+}</p>
+<p>@keyframes<br>
+topbar-x {0% {<br>
+top: 0px;<br>
+transform: rotate(0deg);<br>
+}<br>
+45% {<br>
+top: 6px;<br>
+transform: rotate(145deg);<br>
+}<br>
+75% {<br>
+transform: rotate(130deg);<br>
+}<br>
+100% {<br>
+transform: rotate(135deg);<br>
+}<br>
+}</p>
+<p>@keyframes<br>
+topbar-back {0% {<br>
+top: 6px;<br>
+transform: rotate(135deg);<br>
+}<br>
+45% {<br>
+transform: rotate(-10deg);<br>
+}<br>
+75% {<br>
+transform: rotate(5deg);<br>
+}<br>
+100% {<br>
+top: 0px;<br>
+transform: rotate(0);<br>
+}<br>
+}</p>
+<p>@keyframes<br>
+bottombar-x {0% {<br>
+bottom: 0px;<br>
+transform: rotate(0deg);<br>
+}<br>
+45% {<br>
+bottom: 6px;<br>
+transform: rotate(-145deg);<br>
+}<br>
+75% {<br>
+transform: rotate(-130deg);<br>
+}<br>
+100% {<br>
+transform: rotate(-135deg);<br>
+}<br>
+}</p>
+<p>@keyframes<br>
+bottombar-back {0% {<br>
+bottom: 6px;<br>
+transform: rotate(-135deg);<br>
+}<br>
+45% {<br>
+transform: rotate(10deg);<br>
+}<br>
+75% {<br>
+transform: rotate(-5deg);<br>
+}<br>
+100% {<br>
+bottom: 0px;<br>
+transform: rotate(0);<br>
+}<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>最后通过下面的js代码来完成侧边栏的显示和隐藏。</p>
+<pre class="brush:js">
+var window\_height;
+var window\_width;
+var navbar\_initialized = false;
+var nav\_toggle;
+<p>var offCanvas = {<br>
+sidenav: {<br>
+// Sidenav is not visible by default.<br>
+// Change to 1 if necessary<br>
+sidenav_visible: 0<br>
+},<br>
+initSideNav: function initSideNav() {<br>
+if (!navbar_initialized) {<br>
+var $nav = $('nav');</p>
+<p>// Add the offcanvas class to the navbar if it's not initialized<br>
+$nav.addClass('navbar-offcanvas');</p>
+<p>// Clone relevant navbars<br>
+var $navtop = $nav.find('.navbar-top').first().clone(true);<br>
+var $navbar = $nav.find('.navbar-collapse').first().clone(true);</p>
+<p>// Let's start with some empty vars<br>
+var ul_content = '';<br>
+var top_content = '';</p>
+<p>// Set min-height of the new sidebar to the screen height<br>
+$navbar.css('min-height', window.screen.height);</p>
+<p>// Take the content of .navbar-top<br>
+$navtop.each(function() {<br>
+var navtop_content = $(this).html();<br>
+top_content = top_content + navtop_content;<br>
+});</p>
+<p>// Take the content of .navbar-collapse<br>
+$navbar.children('ul').each(function() {<br>
+var nav_content = $(this).html();<br>
+ul_content = ul_content + nav_content;<br>
+});</p>
+<p>// Wrap the new content inside an &lt;ul&gt;<br>
+ul_content = '&lt;ul class=&quot;navbar-nav sidebar-nav&quot;&gt;' + ul_content + '&lt;/ul&gt;';</p>
+<p>// Insert the html content into our cloned content<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>a</mi><mi>v</mi><mi>b</mi><mi>a</mi><mi>r</mi><mi mathvariant="normal">.</mi><mi>h</mi><mi>t</mi><mi>m</mi><mi>l</mi><mo>(</mo><mi>u</mi><mi>l</mi><mi mathvariant="normal">_</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">navbar.html(ul\_content);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.06em;vertical-align:-0.31em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">.</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>navtop.html(top_content);</p>
+<p>// Append the navbar to body,<br>
+// and insert the content of the navicons navbar just below the logo/nav-image<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>b</mi><mi>o</mi><mi>d</mi><msup><mi>y</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo>(</mo></mrow><annotation encoding="application/x-tex">(&#x27;body&#x27;).append(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">b</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen">(</span></span></span></span>navbar);<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">.</mi><mi>n</mi><mi>a</mi><mi>v</mi><mo>−</mo><mi>i</mi><mi>m</mi><mi>a</mi><mi>g</mi><msup><mi>e</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>(</mo></mrow><annotation encoding="application/x-tex">(&#x27;.nav-image&#x27;).after(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">.</span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span></span></span></span>navtop);</p>
+<p>// Set the toggle-variable to the Bootstrap navbar-toggler button<br>
+var $toggle = $('.navbar-toggler');</p>
+<p>// Add/remove classes on toggle and set the visiblity of the sidenav,<br>
+// and append the overlay. Also if the user clicks the overlay,<br>
+// the sidebar will close<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …isible == 1) {
+'>toggle.on(&#039;click&#039;, function () {
+if (offCanvas.sidenav.sidenav\_visible == 1) {
+</span>('html').removeClass('nav-open');<br>
+offCanvas.sidenav.sidenav_visible = 0;<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&#039;#̲overlay&#039;).remov…'>(&#039;#overlay&#039;).remove();
+setTimeout(function() {
+</span>toggle.removeClass('toggled');<br>
+}, 300);<br>
+} else {<br>
+setTimeout(function() {<br>
+$toggle.addClass('toggled');<br>
+}, 300);</p>
+<p>// Add the overlay and make it close the sidenav on click<br>
+var div = '&lt;div id=&quot;overlay&quot;&gt;&lt;/div&gt;';<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …, function() {
+'>(div).appendTo(&quot;body&quot;).on(&#039;click&#039;, function() {
+</span>('html').removeClass('nav-open');<br>
+offCanvas.sidenav.sidenav_visible = 0;<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&#039;#̲overlay&#039;).remov…'>(&#039;#overlay&#039;).remove();
+setTimeout(function() {
+</span>toggle.removeClass('toggled');<br>
+}, 300);<br>
+});</p>
+<p>$('html').addClass('nav-open');<br>
+offCanvas.sidenav.sidenav_visible = 1;<br>
+}<br>
+});<br>
+// Set navbar to initialized<br>
+navbar_initialized = true;<br>
+}<br>
+}<br>
+};</p>
+<p>$(document).ready(function () {<br>
+window_width = $(window).width();</p>
+<p>nav_toggle = $('nav').hasClass('navbar-offcanvas') ? true : false;</p>
+<p>if (window_width &lt; 992 || nav_toggle) {<br>
+offCanvas.initSideNav();<br>
+}</p>
+<p>// Close the sidebar if the user clicks a link or a dropdown-item,<br>
+// and close the sidebar<br>
+$('.nav-link:not(.dropdown-toggle), .dropdown-item').on('click', function () {<br>
+var $toggle = $('.navbar-toggler');</p>
+<p><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …(function () {
+'>(&#039;html&#039;).removeClass(&#039;nav-open&#039;);
+offCanvas.sidenav.sidenav\_visible = 0;
+setTimeout(function () {
+</span>toggle.removeClass('toggled');<br>
+}, 300);<br>
+});<br>
+});</p>
+<p>$(window).resize(function () {<br>
+window_width = $(window).width();</p>
+<p>// More responsive checks if the user resize the browser<br>
+if (window_width &lt; 992) {<br>
+offCanvas.initSideNav();<br>
+}</p>
+<p>if (window_width &gt; 992 &amp;&amp; !nav_toggle) {<br>
+$('nav').removeClass('navbar-offcanvas');<br>
+offCanvas.sidenav.sidenav_visible = 1;<br>
+navbar_initialized = false;<br>
+}<br>
+});<br>
+</pre></p>
+<p><i class="fa fa-codepen"></i> 该bootstrap4滑动侧边栏特效的codepen地址为：<a href="https://codepen.io/moso/pen/LjvRep" target="\_blank">https://codepen.io/moso/pen/LjvRep</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807191428.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807195235.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_224">
+                                <h3 class="post-title">
+                                    jQuery多层图片背景视觉差特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3圆形缩略图导航轮播图插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3圆形缩略图导航轮播图插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412041558.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041558.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204668.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款精美的使用jQuery和css3制作的圆形缩略图导航轮播图插件。该轮播图插件在鼠标滑过前后导航按钮时，出现前一张或后一张图片的圆形缩略图，点击可以切换到该图片。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这个jQuery和css3圆形缩略图导航轮播图插件的亮点在于鼠标滑过导航箭头时出现的圆形缩略图效果。该效果使用css3 transitions来完成。</p>
+<h3>HTML</h3>
+<p>html结构采用标准的导航按钮结构：</p>
+<pre class="brush:html">
+&lt;div class="cn-nav"&gt;
+&lt;a href="#" class="cn-nav-prev"&gt;
+&lt;span&gt;Previous&lt;/span&gt;
+&lt;div style="background-image:url(../images/thumbs/1.jpg);"&gt;&lt;/div&gt; 
+&lt;/a&gt;
+&lt;a href="#" class="cn-nav-next"&gt;
+&lt;span&gt;Next&lt;/span&gt;
+&lt;div style="background-image:url(../images/thumbs/3.jpg);"&gt;&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<h3>CSS</h3>
+<p>设置元素为绝对定位，为了是鼠标滑过区域不至于太小，设置超链接的宽度和高度为70像素：</p>
+<pre class="brush:css">
+.cn-nav &gt; a{
+position: absolute;
+top: 0px;
+height: 70px;
+width: 70px;
+}
+a.cn-nav-prev{
+left: 0px;
+}
+a.cn-nav-next{
+right: 0px;
+}
+</pre>
+<p>用于显示前后导航的箭头span
+</p>
+<pre class="brush:css">
+.cn-nav a span{
+width: 46px;
+height: 46px;
+display: block;
+text-indent: -9000px;
+-moz-border-radius: 23px;
+-webkit-border-radius: 23px;
+border-radius: 23px;
+cursor: pointer;
+opacity: 0.9;
+position: absolute;
+top: 50\%;
+left: 50\%;
+background-size: 17px 25px;
+margin: -23px 0 0 -23px;
+-webkit-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+-ms-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+</pre>
+<p>设置左右箭头的背景图像：</p>
+<pre class="brush:css">
+.cn-nav a.cn-nav-prev span{
+background: #666 url(../images/prev.png) no-repeat center center;
+}
+.cn-nav a.cn-nav-next span{
+background: #666 url(../images/next.png) no-repeat center center;
+}
+</pre>
+<p>作为背景缩略图的div初始化时宽度和高度为0像素，并设置为绝对定位，相对于超链接元素居中。它的Border radius和margins初始化时也为0。背景图片将填充整个div，因此给它的宽和高100\%的background-size。最后给它的所有属性transition，动画时间200ms和ease-out动画效果：</p>
+<pre class="brush:css">
+.cn-nav a div{
+width: 0px;
+height: 0px;
+position: absolute;
+top: 50\%;
+left: 50\%;
+overflow: hidden;
+background-size: 100\% 100\%;
+background-position: center center;
+background-repeat: no-repeat;
+margin: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px; 
+-webkit-transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease-out;
+-o-transition: all 0.2s ease-out;
+-ms-transition: all 0.2s ease-out;
+transition: all 0.2s ease-out;
+}
+</pre>
+<p>下面来设置鼠标滑过hover样式。</p>
+<p>span元素的宽和高将增长到100像素。同样为它设置负的margin和一半大小的border radius。为背景图片增加一点大小，同时改变背景图片的颜色和透明度：</p>
+<pre class="brush:css">
+.cn-nav a:hover span{
+width: 100px;
+height: 100px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+opacity: 0.6;
+margin: -50px 0 0 -50px;
+background-size: 22px 32px;
+background-color:#a8872d;
+}
+</pre>
+<p>最后，缩略图div将扩大到90像素，这样我们仍然可以看到span元素环绕着它。我们同样增加一点background size和设置负的margins以及元素一半宽度的border radius：</p>
+<pre class="brush:css">
+.cn-nav a:hover div{
+width: 90px;
+height: 90px;
+background-size: 120\% 120\%;
+margin: -45px 0 0 -45px;
+-moz-border-radius: 45px;
+-webkit-border-radius: 45px;
+border-radius: 45px; 
+}
+</pre>
+<p>js代码请参考下载文件。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412041558.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141204668.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1439">
+                                <h3 class="post-title">
+                                    CSS交替固定网页背景视觉差特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

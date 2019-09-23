@@ -1,0 +1,333 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3全屏弹出式导航菜单特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3全屏弹出式导航菜单特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412141543.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412141543.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141214809.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款非常实用的jQuery和css3全屏弹出式导航菜单特效插件。该插件的顶部导航条可以随时通过鼠标唤出，点击导航条上的导航主按钮，会弹出半透明的全屏导航菜单，该菜单非常方便实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常酷的jQuery和css3全屏弹出式导航菜单特效插件。</p>
+<h3>HTML结构</h3>
+<p>html结构使用一个<span class="m">&lt;header&gt;</span>作为wrapper。里面放logo、登录/注册按钮和用于触发全屏导航菜单的触发按钮。全屏导航菜单放置在header外面，为它使用easier的 CSS transformation效果。</p>
+<pre class="brush:html">
+&lt;header class="cd-header"&gt;
+&lt;div class="cd-logo"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+<p>&lt;nav&gt;<br>
+&lt;ul class=&quot;cd-secondary-nav&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Log In&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt; &lt;!-- cd-nav --&gt;</p>
+<p>&lt;a class=&quot;cd-primary-nav-trigger&quot; href=&quot;#0&quot;&gt;<br>
+&lt;span class=&quot;cd-menu-text&quot;&gt;Menu&lt;/span&gt;&lt;span class=&quot;cd-menu-icon&quot;&gt;&lt;/span&gt;<br>
+&lt;/a&gt; &lt;!-- cd-primary-nav-trigger --&gt;<br>
+&lt;/header&gt;</p>
+<p>&lt;nav&gt;<br>
+&lt;ul class=&quot;cd-primary-nav&quot;&gt;<br>
+&lt;li class=&quot;cd-label&quot;&gt;About us&lt;/li&gt;</p>
+<p>&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;The team&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Our services&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Our projects&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;!-- ... --&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;</p>
+<p>&lt;main&gt;<br>
+&lt;!-- content --&gt;<br>
+&lt;/main&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>为了制作全屏菜单的滑动效果，我们结合使用了CSS3 transitions和transformations。开始时，导航菜单被隐藏，它被放置在屏幕的上方（<span class="m">translateY(-100\%)</span>）。当用户点击了触发按钮<span class="m">.cd-primary-nav-trigger</span>，我们使用jQuery为导航菜单添加class <span class="m">.is-visible</span>。在transition属性中使用transform 使动画更加平滑。</p>
+<pre class="brush:css">
+.cd-primary-nav {
+/* by default it's hidden - on top of the viewport */
+position: fixed;
+left: 0;
+top: 0;
+height: 100\%;
+width: 100\%;
+transform: translateY(-100\%);
+transition-property: transform;
+transition-duration: 0.4s;
+}
+<p>.cd-primary-nav.is-visible {<br>
+transform: translateY(0);<br>
+}<br>
+</pre></p>
+<p>对于顶部菜单的滑动显示效果-顶部菜单在用户往上滚动鼠标时出现，我们需要创建一些class并用jQuery来控制它们。默认情况下，顶部导航菜单是绝对定位的：意思是它会随内容一起滚动。当顶部菜单不可见时，我们给它class <span class="m">.is-fixed</span>，将它的定位从absolute改变为fixed，并将它放在窗口的右上方（<span class="m">top: -80px</span>）。当用户往上滚动页面，我们给顶部菜单<span class="m">.is-visible</span>，使它从Y轴往下移动（translate3d(0, 100\%, 0)）。</p>
+<pre class="brush:css">
+.cd-header {
+position: absolute;
+top: 0;
+left: 0;
+background: transparent;
+height: 80px;
+width: 100\%;
+transition: background-color 0.3s;
+}
+<p>.cd-header.is-fixed {<br>
+/* when the user scrolls down, we hide the header right above the viewport */<br>
+position: fixed;<br>
+top: -80px;<br>
+background-color: rgba(2, 23, 37, 0.96);<br>
+transition: transform 0.3s;<br>
+}</p>
+<p>.cd-header.is-visible {<br>
+/* if the user changes the scrolling direction, we show the header */<br>
+transform: translate3d(0, 100%, 0);<br>
+}<br>
+</pre></p>
+<h3>JAVASCRIPT</h3>
+<p>当用户开始滚动鼠标，我们需要检查是向上还是向下滚动，为顶部菜单添加/移除相应的class。</p>
+<pre class="brush:js">
+$(window).on('scroll',
+{
+previousTop: 0
+}, 
+function () {
+var currentTop = $(window).scrollTop();
+//check if user is scrolling up
+if (currentTop &lt; this.previousTop ) {
+//if scrolling up...
+//add class 'is-visible' to the main navigation
+//if currentTop == 0, remove 'is-fixed' and 'is-visible' classes 
+} else {
+//if scrolling down...
+//add the 'is-fixed' class to the main navigation as soon as it is no longer visible
+//add class 'is-visible' to the main navigation
+}
+//set previousTop for the next iteration
+this.previousTop = currentTop;
+}
+);
+</pre>
+<p>注意，顶部菜单的上下滑动效果只用在大屏幕（分辨率大于1170px）的浏览器上才有效果。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412141543.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141214809.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1438">
+                                <h3 class="post-title">
+                                    jQuery和css3圆形缩略图导航轮播图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

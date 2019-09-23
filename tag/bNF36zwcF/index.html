@@ -1,0 +1,1335 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        js</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_100">
+                        简单快速的js的数字动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_100" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807271415.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+slowNumber.js是一款简单快速的js的数字动画插件。slowNumber.js插件以最简单的方式快速的执行数字动画特效，你甚至还可以控制每秒钟的动画帧数。
+内容：
+
+
+简要教程
+
+
+slowNumber.js是一款简单快速的js的数字动画插件。slowNumber.js插件以最简单的方式快速的执行数字动画特效，你甚至还可以控制每秒钟的动画帧数。
+
+
+
+ 使用方法
+在页面中引入slowNumber.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/slowNumber.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+在页面中添加需要制作数字动画的元素，为它添加slowNumberclass类。
+
+&amp;lt;h2 class=&#34;slowNumber&#34;&amp;gt;100,42&amp;lt;/h2&amp;gt; 
+
+
+ JavaScript
+slowNumber.js的整个实现代码如下：
+
+var easing = {
+quadratic: function (x){
+return Math.sqrt(x);
+}
+};
+function range(start, stop, step){
+var array = [];
+for(var i = start; i &amp;lt; stop; i += step) array.push(i);
+return array;
+}
+function interpolation(fps, easing, finalValue){
+function scaleIt(value){return finalValue * value; }
+var x = range(0, 1, 1/fps),
+y = x.map(easing).map(scaleIt);
+return y;
+}
+function animateEl(values, duration, onAnimate){
+var frameIndex = 0,
+fps = values.length,
+id = setInterval(anime, duration/fps );
+function anime(){
+var current = values[frameIndex],
+isLastFrame = (frameIndex === fps - 1);
+onAnimate(current, frameIndex, values);
+if(isLastFrame){
+clearInterval(id);
+}else{
+frameIndex++;
+}
+}
+}
+function round(value, decimals) {
+return Number(Math.round(value+&#39;e&#39;+decimals)+&#39;e-&#39;+decimals);
+}
+function unformat(content){
+var unlocalized = content.replace(&#39;.&#39;, &#39;&#39;).replace(&#39;,&#39;, &#39;.&#39;),
+value = parseFloat(unlocalized);
+return value;
+}
+function format(value){
+return value.toString().replace(&#39;.&#39;, &#39;,&#39;);
+}
+window.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function(){
+var fps = 30,
+els = [].slice.call(document.querySelectorAll(&#39;.slowNumber&#39;));
+els.forEach(function(el){
+var content = (el.firstChild.textContent).trim(),
+decimalPlaces = content.split(&#39;,&#39;)[1] || &#39;&#39;,
+value = unformat(content),
+values = interpolation(fps, easing.quadratic, value);
+animateEl(values, 1000, function (current, i, values){
+var isLast = (i === values.length - 1),
+value = round(current, decimalPlaces.length);
+el.firstChild.textContent = isLast? content : format(value);
+});
+});
+});
+
+ slowNumber.js数字动画插件的github地址为：https://github.com/israelst/slowNumber.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_100">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1007">
+                        可实现响应式图片懒加载的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1007" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508222108.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+responsively-lazy是一款非常实用的可实现响应式图片懒加载的js插件。它可以根据容器的大小来智能选择加载适合尺寸的图片，做到图片的响应式效果。并且使用它对于SEO是十分友好的。
+内容：
+
+
+简要教程
+
+
+responsively-lazy是一款非常实用的可实现响应式图片懒加载的js插件。它可以根据容器的大小来智能选择加载适合尺寸的图片，做到图片的响应式效果。并且使用它对于SEO是十分友好的。该图片懒加载插件的特点还有：
+
+响应式图片
+不做任何不必要的请求
+可以在任何支持srcset的浏览器中工作
+智能处理加载的合适尺寸的图片
+在旧的浏览器中不会破坏布局
+
+
+ 安装
+可以通过npm或bower来安装该插件。
+
+npm install responsively-lazy
+bower install responsively-lazy
+
+
+ 使用方法
+使用该图片懒加载插件需要引入responsivelyLazy.min.css和responsivelyLazy.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;responsivelyLazy.min.css&#34;&amp;gt;
+&amp;lt;script async src=&#34;responsivelyLazy.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+为你需要进行懒加载的图片添加下面的HTML结构：
+
+&amp;lt;div class=&#34;responsively-lazy&#34; style=&#34;padding-bottom:68.44\%;&#34;&amp;gt;
+&amp;lt;img alt=&#34;&#34; src=&#34;images/2500.jpg&#34; data-srcset=&#34;images/600.jpg 600w, images/400.jpg 400w, images/800.jpg 800w, images/1500.jpg 1500w, images/1000.jpg 1000w, images/2000.jpg 2000w&#34; srcset=&#34;data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&#34; /&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+你需要自定义&amp;lt;div&amp;gt;容器的padding-bottom样式。如果你不知道图片的比例，你也可以不用&amp;lt;div&amp;gt;容器，直接使用&amp;lt;img&amp;gt;。
+
+&amp;lt;img class=&#34;responsively-lazy&#34; alt=&#34;&#34; src=&#34;images/2500.jpg&#34; data-srcset=&#34;images/600.jpg 600w, images/400.jpg 400w, images/800.jpg 800w, images/1500.jpg 1500w, images/1000.jpg 1000w, images/2000.jpg 2000w&#34; srcset=&#34;data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&#34; /&amp;gt;
+
+关于这个插件更详细的介绍信息，请参考Lazy load responsive images。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1007">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1019">
+                        纯js和CSS3炫酷自动幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1019" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508141802.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Karrot Slider是一款纯Javascript和CSS3制作的自动播放的幻灯片插件。该幻灯片没有任何外部依赖，内置有8种不同的动画过渡效果。该幻灯片支持响应式图片设计模式，也可以制作为全屏幻灯片模式。
+内容：
+
+
+简要教程
+
+
+Karrot Slider是一款纯Javascript和CSS3制作的自动播放的幻灯片插件。该幻灯片没有任何外部依赖，内置有8种不同的动画过渡效果。该幻灯片支持响应式图片设计模式，也可以制作为全屏幻灯片模式。
+
+ 使用方法
+使用该幻灯片插件需要引入slider.css和sliderEffects.js文件。
+
+&amp;lt;link href=&#34;css/slider.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt; 
+&amp;lt;script src=&#34;js/sliderEffects.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+创建一个带ID号的&amp;lt;div&amp;gt;，然后设置它的宽度和高度，并将第一张图片放置在这个&amp;lt;div&amp;gt;中。
+
+&amp;lt;div id=&#34;slider&#34; style=&#34;width: 900px; height: 505px; margin: auto;&#34;&amp;gt; 
+&amp;lt;img src=&#34;images/1.jpg&#34; &amp;gt; 
+&amp;lt;/div&amp;gt;
+
+
+ 8种内置过渡动画效果的使用
+该幻灯片内置了8种不同的动画过渡效果：
+
+Dissolve
+Slide Up
+Slide Down
+Slide Left
+Slide Right
+Mosaic
+Window
+Doors
+
+所有的效果函数都包含2个参数，第一个是当前图片的引用，第二个是下一张图片的引用。
+
+//effect(current, next); 
+KSDissolve(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSSlideUp(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSSlideDown(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSSlideLeft(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSSlideRight(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSMosaic(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSWindows(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+KSDoors(&#34;images/1.jpg&#34;, &#34;images/2.jpg&#34;);
+
+
+ 初始化插件
+要初始化该幻灯片插件，可以创建3个变量：一个图片数组，图片显示的时间和当前图片的下标。
+
+var images = [&#34;images/1.jpg&#34; , &#34;images/2.jpg&#34; , &#34;images/3.jpg&#34;, &#34;images/4.jpg&#34; ];
+var timing = 3000;
+var currentImg = 1;
+
+然后创建一个函数来选择下一张图片，并可以设置过渡到下一张图片时的动画效果。
+
+function karrotSlider() { 
+var nextimg = (currentImg + 1) &amp;gt; images.length ? 1 : currentImg + 1 ;
+var effect = Math.floor (Math.random()*6 +1 );
+switch (effect) {
+case 1:
+KSDissolve(images[currentImg- 1], images[nextimg- 1])
+break;
+case 2:
+KSSlideUp(images[currentImg- 1], images[nextimg- 1])
+break;
+case 3:
+KSSlideDown(images[currentImg- 1], images[nextimg- 1])
+break;
+case 4:
+KSSlideLeft(images[currentImg- 1], images[nextimg- 1])
+break;
+case 5:
+KSSlideRight(images[currentImg- 1], images[nextimg- 1])
+break;
+case 6:
+KSMosaic(images[currentImg- 1], images[nextimg- 1])
+break;
+case 7:
+KSWindows(images[currentImg- 1], images[nextimg- 1])
+break;
+case 8:
+KSDoors(images[currentImg- 1], images[nextimg- 1])
+break;
+}
+currentImg = (currentImg + 1) &amp;gt; images.length ? 1 : currentImg + 1;
+}
+
+最后使用setInterval()函数来调用这个函数。
+
+setInterval(function () { karrotSlider() } , timing);
+
+注意：所有的图片必须尺寸相同。如果想制作全屏幻灯片，可以在body结束之前调用fullScreen();函数。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1019">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_103">
+                        纯js仿Medium.com图片缩放预览插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_103" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1812/201812101439.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+lightense-images是一款纯js仿Medium.com图片缩放预览插件。该插件没有任何依赖，压缩后的版本仅2KB，可以用来制作图片的预览和展示效果。
+内容：
+
+
+简要教程
+
+
+lightense-images是一款纯js仿Medium.com图片缩放预览插件。该插件没有任何依赖，压缩后的版本仅2KB，可以用来制作图片的预览和展示效果。
+
+ 安装
+可以通过npm来安装该图片缩放预览插件。
+
+$ npm install lightense-images --save
+
+
+ 使用方法
+在页面中引入lightense.js文件。
+
+&amp;lt;script src=&#34;js/lightense.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+在页面中添加图片元素。
+
+&amp;lt;img src=&#34;photo.jpg&#34; class=&#34;lightense&#34;&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该图片缩放预览插件。
+
+window.addEventListener(&#39;load&#39;, function () {
+var el = document.querySelectorAll(&#39;img.lightense&#39;);
+Lightense(el);
+}, false);
+
+
+ 配置参数
+该图片缩放预览插件可用的配置参数有：
+
+Lightense(elements, {
+time: 300,
+padding: 40,
+offset: 40,
+keyboard: true,
+cubicBezier: &#39;cubic-bezier(.2, 0, .1, 1)&#39;,
+background: &#39;rgba(255, 255, 255, .98)&#39;,
+zIndex: 2147483647
+});
+
+也可以通过data属性来设置配置参数。
+
+&amp;lt;img src=&#34;image.png&#34;
+data-lightense-padding=&#34;40&#34;
+data-lightense-cubic-bezier=&#34;cubic-bezier(.2, 0, .1, 1)&#34;
+data-lightense-background=&#34;rgba(255, 255, 255, .98)&#34;
+data-lightense-z-index=&#34;2147483647&#34;&amp;gt;
+
+ 该图片缩放预览插件的github网址为：https://github.com/sparanoid/lightense-images 
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_103">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1047">
+                        超大图片全屏动态展示js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1047" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507271648.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+intense-images是一款非常实用的超大图片全屏动态展示js插件。该图片查看插件可以全屏显示超大图片，可以使用鼠标来和图片进行交互，上下左右移动鼠标会相应的移动图片，对于超大图片的展示是非常好的用户体验。
+内容：
+
+
+简要教程
+
+
+intense-images是一款非常实用的超大图片全屏动态展示js插件。该图片查看插件可以全屏显示超大图片，可以使用鼠标来和图片进行交互，上下左右移动鼠标会相应的移动图片，对于超大图片的展示是非常好的用户体验。
+
+ 使用方法
+该超大图片展示插件没有任何外部依赖，使用时仅需引入intense.js文件即可。
+
+&amp;lt;script src=&#39;js/intense.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该js插件的HTML结构非常简单。位移一个强制性的属性是src或一个data-image属性。他们都用于指向一个图片文件。
+
+&amp;lt;img src=&#34;./img/awesome-source.jpg&#34; /&amp;gt;
+&amp;lt;!-- OR --&amp;gt;
+&amp;lt;div class=&amp;quot;anything&amp;quot; data-image=&amp;quot;./img/awesome-source.jpg&amp;quot; /&amp;gt;
+
+你也可以传入图片的标题和描述文本，它们会被显示在屏幕的左下角位置。图片标题使用data-title属性，图片描述使用data-caption属性。
+
+&amp;lt;img src=&#34;./img/awesome-source.jpg&#34; data-title=&#34;图片标题&#34; 
+data-caption=&#34;图片描述信息&#34;/&amp;gt;
+
+
+ 初始化插件
+你可以使用document.querySelector()方法来获取你要全屏显示的图片，然后将它作为参数传入到Intense()方法中。
+
+&amp;lt;img src=&#34;./img/awesome-source.jpg&#34; /&amp;gt;
+&amp;lt;script&amp;gt;
+window.onload = function() {
+// 获取页面中所有的图片
+var element = document.querySelector( &#39;img&#39; );
+Intense( element );
+}
+&amp;lt;/script&amp;gt;
+
+或者也可以通过CSS名称来选择多个图片。
+
+&amp;lt;img src=&#34;./img/awesome-source.jpg&#34; class=&#34;intense&#34; /&amp;gt;
+&amp;lt;img src=&#34;./img/awesome-source.jpg&#34; class=&#34;intense&#34; /&amp;gt;
+&amp;lt;script&amp;gt;
+window.onload = function() {
+// 选择所有class名称为intense的图片
+var elements = document.querySelectorAll( &#39;.intense&#39; );
+Intense( elements );
+}
+&amp;lt;/script&amp;gt;
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1047">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1052">
+                        基于Three.js的360X180度全景图预览插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1052" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508111743.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Photo Sphere Viewer是一款基于Three.js的360X180度全景图预览js插件。该js插件可以360度旋转查看全景图，也可以上下180度查看图片。使用该插件的唯一要求是浏览器支持canvas或WebGL。
+内容：
+
+
+简要教程
+
+
+Photo Sphere Viewer是一款基于Three.js的360X180度全景图预览js插件。该js插件可以360度旋转查看全景图，也可以上下180度查看图片。使用该插件的唯一要求是浏览器支持canvas或WebGL。
+
+ 使用方法
+使用该全景图插件时要引入three.min.js和photo-sphere-viewer.min.js文件。
+
+&amp;lt;script src=&#34;js/three.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/photo-sphere-viewer.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以创建一个空的&amp;lt;div&amp;gt;来放置全景图，通过CSS来设置它的尺寸。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+要初始化该全景图插件，可以创建一个新的PhotoSphereViewer对象，然后在这个对象中插入一个参数对象，有两个参数是必须设置的：
+
+var PSV = new PhotoSphereViewer({
+// Path to the panorama
+panorama: &#39;1.jpg&#39;,
+// Container
+container: div
+});
+
+
+ 配置参数
+下面是该全景图插件的所有可用配置参数：
+
+
+panorama：必填参数，全景图的路径。
+
+container：必填参数，放置全景图的div元素。
+
+autoload：可选，默认值为true，true为自动调用全景图，false为在后面加载全景图（通过.load()方法）。
+
+usexmpdata：可选，默认值为true，如果Photo Sphere Viewer必须读入XMP数据则为true。
+
+default\_position：可选，默认值为{}，定义默认的位置，及用户看见的第一个点，例如：{long: Math.PI, lat: Math.PI/2}。
+
+min\_fov：可选，默认值为30，观察的最小区域，单位degrees，在1-179之间。
+
+max\_fov：可选，默认值为90，观察的最大区域，单位degrees，在1-179之间。
+
+allow\_user\_interactions：可选，默认值为true，设置为false则禁止用户和全景图交互（导航条不可用）。
+
+tilt\_up\_max：可选，默认值为Math.PI/2，向上倾斜的最大角度，单位radians。
+
+tilt\_down\_max：可选，默认值为Math.PI/2，向下倾斜的最大角度，单位radians。
+
+zoom\_level：可选，默认值为0，默认的缩放级别，值在0-100之间。
+
+long\_offset：可选，默认值为PI/360，mouse/touch移动时每像素经过的经度值。
+
+lat\_offset：可选，默认值为PI/180，mouse/touch移动时每像素经过的纬度值。
+
+time\_anim：可选，默认值为2000，全景图在time\_anim毫秒后会自动进行动画。（设置为false禁用它）
+
+theta\_offset：过时的选项，可选，默认值为1440，自动动画时水平方向的速度。
+
+anim\_speed：可选，默认值为2rpm，动画的速度，每秒/分钟多少radians/degrees/revolutions。
+
+navbar：可选值，默认为false。显示导航条。
+
+navbar\_style：可选值，默认为{}。导航条的自定义样式。下面是可用的样式列表：
+
+
+backgroundColor：导航条的背景颜色，默认值为rgba(61, 61, 61, 0.5)。
+
+buttonsColor：按钮的前景颜色，默认值为transparent。
+
+activeButtonsBackgroundColor：按钮激活状态的背景颜色，默认值为rgba(255, 255, 255, 0.1)。
+
+buttonsHeight：按钮的高度，单位像素，默认值为20。
+
+autorotateThickness：autorotate图标的厚度，单位像素，默认值为1。
+
+zoomRangeWidth：缩放的范围，单位显示，默认值50。
+
+zoomRangeThickness：缩放的范围的厚度，单位像素，默认值1。
+
+zoomRangeDisk：缩放范围的圆盘直径，单位像素，默认值为7。
+
+fullscreenRatio：全屏图标的比例，默认值为3/4。
+
+fullscreenThickness：全屏图标的厚度，单位像素，默认值为2。
+
+
+
+loading\_msg：可选，默认值为Loading…，图片加载时的提示文字。
+
+loading\_img：可选，默认值为null，在加载时显示的图片的路径。
+
+size：可选，默认值null，全景图容器的最终尺寸。例如：{width: 500, height: 300}。
+
+onready：可选值，默认值为null。当全景图准备就绪并且第一张图片显示时的回调函数。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1052">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1058">
+                        纯js轻量级tooltips工具提示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1058" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507271525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+html5tooltipsjs是一款使用纯javacript编写的轻量级tooltips工具提示插件。该tooltips插件不依赖任何框架，内容可带HTML标签，并可以使用预设的CSS3动画来制作tooltips动画效果。
+内容：
+
+
+简要教程
+
+
+html5tooltipsjs是一款使用纯javacript编写的轻量级tooltips工具提示插件。该tooltips插件不依赖任何框架，内容可带HTML标签，并可以使用预设的CSS3动画来制作tooltips动画效果。
+
+ 使用方法
+
+ 基本使用方法
+最简单的在某个元素上显示tooltips的方法是在这个元素上添加data-*属性。
+
+&amp;lt;span id=&#34;refresh&#34; data-tooltip=&#34;Refresh&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+
+
+ 高级使用方法
+你也可以通过JavaScript来调用该tooltips插件。
+
+html5tooltips({
+contentText: &#34;Refresh&#34;,
+targetSelector: &#34;#refresh&#34;
+});
+
+你可以指定tooltips在元素的什么方向上出现。
+
+html5tooltips({
+contentText: &#34;Refresh&#34;,
+stickTo: &#34;right&#34;,
+targetSelector: &#34;#refresh&#34;
+});
+
+你还可以在tooltips中添加额外的说明文本。这些文本会在元素聚焦时显示。这个特性用于在输入框或可编辑字段中使用。你可以使用HTML标签。
+
+html5tooltips({
+contentText: &#34;Not less then 8 symbols&#34;,
+contentMore: &#34;Use lower and UPPER case letters, 
+num&amp;lt;span style=&#39;color:red&#39;&amp;gt;6&amp;lt;/span&amp;gt;ers and 
+spec&amp;lt;span style=&#39;color:red&#39;&amp;gt;!&amp;lt;/span&amp;gt;al symbols 
+to make password safe and secure.&#34;,
+maxWidth: &#34;180px&#34;,
+targetSelector: &#34;#password&#34;
+});
+
+你可以定义多个tooltips，每个tooltips在参数数组中作为一个对象。
+
+html5tooltips([
+{
+contentText: &#34;Delete&#34;,
+targetSelector: &#34;#delete&#34;
+},
+{
+contentText: &#34;Refresh&#34;,
+stickTo: &#34;top&#34;,
+targetSelector: &#34;#refresh&#34;
+},
+{
+contentText: &#34;Simple to remember&#34;,
+contentMore: &#34;Check that your login name is not used by anyone else.&#34;,
+stickTo: &#34;left&#34;,
+maxWidth: &#34;180px&#34;,
+targetSelector: &#34;#username&#34;
+}
+]);
+
+
+ 配置参数
+
+
+animateFunction：tooltips可用的CSS3动画类型。可用的动画有：fadein，foldin，foldout，roll，scalein，slidein，spin。
+
+color：tooltips可用的预定义颜色。可用值有：daffodil, daisy, mustard, citrus-zest, pumpkin, tangerine, salmon, persimmon, rouge, scarlet, hot-pink, princess, petal, lilac, lavender, violet, cloud, dream, gulf, turquoise, indigo, navy, sea-foam, teal, peacock, ceadon, olive, bamboo, grass, kelly, forrest, chocolate, terra-cotta, camel, linen, stone, smoke, steel, slate, charcoal, black, white, metalic-silver, metalic-gold, metalic-copper，或者任何CSS颜色。
+
+contentText：tooltip的内容，可以是HTML标签。
+
+contentMore：tooltip中显示的更多内容，会在元素聚焦时显示。
+
+disableAnimation：是否禁用动画。
+
+stickTo：tooltip显示的位置。可用值有bottom，left，right和top。
+
+stickDistance：tooltip和目标元素之间的距离，单位像素。
+
+targetSelector：目标元素的CSS选择器。
+
+targetXPath：目标元素的xPath值。
+
+maxWidth：tooltip的扩展文本的最大宽度。
+
+
+ 可用的data-*属性
+
+
+data-tooltip：与contentText参数相同。
+
+data-tooltip-animate-function：与animateFunction参数相同。
+
+data-tooltip-color：与color参数相同。
+
+data-tooltip-more：与contentMore参数相同。
+
+data-tooltip-stickto：与stickTo参数相同。
+
+data-tooltip-maxwidth：与maxWidth参数相同。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1058">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_106">
+                        jquery滑动侧边栏插件jSide
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_106" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810191552.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jSide是一款jquery滑动侧边栏插件。该jquery滑动侧边栏支持多级菜单，采用响应式设计，支持CSS3动画，内置多种皮肤，兼容所有的主流浏览器，非常实用。
+内容：
+
+
+简要教程
+
+
+jSide是一款jquery滑动侧边栏插件。该jquery滑动侧边栏支持多级菜单，采用响应式设计，支持CSS3动画，内置多种皮肤，兼容所有的主流浏览器，非常实用。
+
+ 使用方法
+在页面中引入jquery和jquery.jside.menu.js文件，以及jside-menu.css和jside-skins.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jside-menu.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jside-skins.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.jside.menu.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML
+然后使用下面的HTML结构创建菜单。
+
+&amp;lt;div class=&#34;menu-head&#34;&amp;gt; 
+&amp;lt;span class=&#34;layer&#34;&amp;gt;
+&amp;lt;div class=&#34;col&#34;&amp;gt;
+&amp;lt;div class=&#34;row for-pic&#34;&amp;gt;
+&amp;lt;div class=&#34;profile-pic&#34;&amp;gt;
+&amp;lt;img src=&#34;profile.jpg&#34; alt=&#34;profile&#34; /&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;row for-name&#34;&amp;gt;
+&amp;lt;h3 title=&#34;User Name&#34;&amp;gt; Username &amp;lt;/h3&amp;gt;
+&amp;lt;span class=&#34;tagline&#34;&amp;gt; Tagline&amp;lt;/span&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/span&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;nav class=&#34;menu-container&#34;&amp;gt;
+&amp;lt;ul class=&#34;menu-items&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;item-icon&#34;&amp;gt;&amp;lt;i class=&#34;zmdi zmdi-android&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;a href=&#34;#1&#34;&amp;gt; Main item one &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;span class=&#34;item-icon&#34;&amp;gt; &amp;lt;i class=&#34;zmdi zmdi-apple&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;a href=&#34;#1&#34;&amp;gt; Main item two &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;has-sub&#34;&amp;gt; &amp;lt;span class=&#34;item-icon&#34;&amp;gt; &amp;lt;i class=&#34;zmdi zmdi-windows&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;span class=&#34;dropdown-heading&#34;&amp;gt; Item three with dropdown &amp;lt;/span&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt;dropdown sub item 1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt; dropdown sub item 2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt; dropdown sub item 3 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;has-sub&#34;&amp;gt; &amp;lt;span class=&#34;item-icon&#34;&amp;gt; &amp;lt;i class=&#34;zmdi zmdi-devices&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;span class=&#34;dropdown-heading&#34;&amp;gt; Item four with dropdown &amp;lt;/span&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt;sub item 1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt;sub item 2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#2&#34;&amp;gt;sub item 3 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;span class=&#34;item-icon&#34;&amp;gt; &amp;lt;i class=&#34;zmdi zmdi-keyboard&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;a href=&#34;#1&#34;&amp;gt; Main item four &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;span class=&#34;item-icon&#34;&amp;gt; &amp;lt;i class=&#34;zmdi zmdi-dock&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;a href=&#34;#1&#34;&amp;gt; Main item five &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+另外还要使用div来创建一个遮罩层。
+
+&amp;lt;div class=&#34;dim-overlay&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过jSideMenu()方法来初始化该插件。
+
+$(&#34;.menu-container&#34;).jSideMenu(); 
+
+你可以控制侧边栏的位置：
+
+$(&#34;.menu-container&#34;).jSideMenu({
+jSidePosition: &#34;position-right&#34;
+});
+
+也可以将侧边栏制作为静态的。
+
+$(&#34;.menu-container&#34;).jSideMenu({
+jSideSticky: false
+});
+
+插件中内置了多种侧边栏皮肤，可以根据需要来切换。
+
+$(&#34;.menu-container&#34;).jSideMenu({
+jSideSkin: &#34;default-skin&#34;
+});
+
+可用的皮肤有：
+
+flickr
+fb-messenger
+moonlit
+park-life
+d2f
+steel-man
+amethyst
+between-clouds
+crazy-orange
+endless-river
+
+ 该jQuery滑动侧边栏插件的github地址为：https://github.com/CodeHimBlog/jquery-jside-menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_106">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1061">
+                        最小的响应式动态网格瀑布流布局js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1061" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507311531.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+minigrid是一款非常实用的动态网格瀑布流布局js插件。该瀑布流插件的大小只有2KB，纯js编写，没有任何外部依赖。你可以使用CSS3动画来制作简单的网格动画，也可以和dynamics.js集合来制作炫酷的网格动画。
+内容：
+
+
+简要教程
+
+
+minigrid是一款非常实用的动态网格瀑布流布局js插件。该瀑布流插件的大小只有2KB，纯js编写，没有任何外部依赖。你可以使用CSS3CSS3动画来制作简单的网格动画，也可以和dynamics.js集合来制作炫酷的网格动画。
+
+ 安装
+你可以通过nmp或bower来安装该网格瀑布流插件。
+
+npm install minigrid
+bower install minigrid
+
+
+ 使用方法
+使用时需要引入minigrid.js文件。
+
+&amp;lt;script src=&#34;js/minigrid.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该网格瀑布流的HTML结构使用嵌套&amp;lt;div&amp;gt;的HTML结构。
+
+&amp;lt;div class=&#34;grid&#34;&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+你需要为这个网格瀑布流布局设置一些基本样式。包裹容器div.grid建议设置为相对定位方式。
+
+.grid {
+position: relative;
+}
+
+然后为网格项设置决定定位方式。
+
+.grid-item {
+position: absolute;
+}
+
+
+ 初始化插件
+在页面加载之后，可以通过下面的方法来初始化该网格瀑布流插件。
+
+minigrid(&#39;.grid&#39;, &#39;.grid-item&#39;);
+
+
+ API
+
+ 构造函数
+
+minigrid(containerSelector, itemSelector, gutter, animate, done)
+
+
+
+containerSelector：String。包裹容器的选择器。该参数必须指定。
+
+itemSelector：String。网格项的选择器。该参数必须指定。
+
+gutter：Number。网格之间的间隙。默认值为6。
+
+animate：function。网格动画。可选项。
+
+done：function。网格更新之后的回调函数。
+
+animate参数：
+该参数是一个带element，x，y和index的函数。
+
+function animate(el, x, y, index) {
+// 在这里可以使用你的动画库来制作动画
+}
+minigrid(&#39;.grid&#39;, &#39;.grid-item&#39;, 6, animate);
+
+
+ 响应式
+要制作响应式的网格布局，你可以为window对象添加事件监听。
+
+window.addEventListener(&#39;resize&#39;, function(){
+minigrid(&#39;.grid&#39;, &#39;.grid-item&#39;);
+});
+
+
+ 动画
+你可以使用CSS3的transition来制作简单的网格动画效果。
+
+.grid-item {
+transition: .3s ease-in-out;
+}
+
+或者你可以结合Dynamics.js动画库来制作更为复杂和炫酷的网格动画效果。
+
+function animate(item, x, y, index) {
+dynamics.animate(item, {
+translateX: x,
+translateY: y
+}, {
+type: dynamics.spring,
+duration: 800,
+frequency: 120,
+delay: 100 + index * 30
+});
+}
+minigrid(&#39;.grid&#39;, &#39;.grid-item&#39;, 6, animate);
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1061">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_107">
+                        js和CSS3带详情页的炫酷网格布局
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_107" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809261446.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3带详情页的炫酷网格布局。该网格布局中，当鼠标移动到某一项上时，会有文字动画效果。当点击了某一项后，会进入相应的详情页面。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3带详情页的炫酷网格布局。该网格布局中，当鼠标移动到某一项上时，会有文字动画效果。当点击了某一项后，会进入相应的详情页面。
+由于该网格布局使用了一些新的CSS3属性，请使用支持CSS3属性的浏览器来查看演示。
+下面是该特效的一些屏幕截图：
+
+
+ 该js和CSS3带详情页的炫酷网格布局的github地址为：https://github.com/codrops/GridLayoutScrollableContent/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_107">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+                
+                    <a href="https://hao12306.github.io/tag/bNF36zwcF//page/2/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单实用的Bootstrap3表单验证插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单实用的Bootstrap3表单验证插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601061556.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601061556.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601062990.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>bootstrap-validator是一款简单实用的Bootstrap3表单验证jQuery插件。该表单验证插件使用HTML5的data属性来设置验证属性，可以完成所有常用的表单验证功能。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>bootstrap-validator是一款简单实用的Bootstrap3表单验证<a href="http://www.htmleaf.com/jQuery/">jQuery插件</a>。该表单验证插件使用<a href="http://www.htmleaf.com/html5/">HTML5</a>的data属性来设置验证属性，可以完成所有常用的表单验证功能。它的特点还有：</p>
+<ul>
+<li>可以通过data-api和标准的HTML5属性来进行配置。</li>
+<li>可以及时通知用户表单输入的错误。</li>
+<li>只有在所有的表单验证都通过之后提交按钮才可用。</li>
+<li>可自定义错误提示信息。</li>
+<li>可自定义验证函数。</li>
+<li>可通过Ajax来验证一个表单域。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该表单验证插件需要引入Bootstrap3的相关依赖文件，以及jQuery和validator.js文件。</p>
+<pre class="brush:js">
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/validator.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>DEMO中的表单的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;form data-toggle="validator" role="form"&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="inputName" class="control-label"&gt;Name&lt;/label&gt;
+&lt;input type="text" class="form-control" id="inputName" 
+ placeholder="Cina Saffary" required&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-feedback"&gt;
+&lt;label for="inputTwitter" class="control-label"&gt;Twitter&lt;/label&gt;
+&lt;div class="input-group"&gt;
+&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+&lt;input type="text" pattern="^[\_A-z0-9]{1,}$" maxlength="15" 
+ class="form-control" id="inputTwitter" placeholder="1000hz" required&gt;
+&lt;/div&gt;
+&lt;span class="glyphicon form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="help-block with-errors"&gt;Hey look, this one has feedback icons!&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="inputEmail" class="control-label"&gt;Email&lt;/label&gt;
+&lt;input type="email" class="form-control" id="inputEmail" placeholder="Email" 
+ data-error="你输入的不是一个有效的邮件地址！" required&gt;
+&lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="inputPassword" class="control-label"&gt;Password&lt;/label&gt;
+&lt;div class="form-inline row"&gt;
+&lt;div class="form-group col-sm-6"&gt;
+&lt;input type="password" data-toggle="validator" data-minlength="6" 
+ class="form-control" id="inputPassword" placeholder="Password" required&gt;
+&lt;span class="help-block"&gt;最少需要6个字符&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group col-sm-6"&gt;
+&lt;input type="password" class="form-control" id="inputPasswordConfirm" 
+ data-match="#inputPassword" 
+ data-match-error="两次输入的密码不匹配！" 
+ placeholder="Confirm" required&gt;
+&lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;div class="radio"&gt;
+&lt;label&gt;
+&lt;input type="radio" name="underwear" required&gt;
+Boxers
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+&lt;label&gt;
+&lt;input type="radio" name="underwear" required&gt;
+Briefs
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;div class="checkbox"&gt;
+&lt;label&gt;
+&lt;input type="checkbox" id="terms" data-error="Before you wreck yourself" required&gt;
+Check yourself
+&lt;/label&gt;
+&lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>表单验证可以通过标签的data-api属性或JS来完成。你可以在表单<code>&lt;form&gt;</code>元素中添加<code>data-toggle="validator"</code>来使表单自动实现验证功能。</p>
+<pre class="brush:html">
+&lt;form role="form" data-toggle="validator"&gt;
+...
+&lt;/form&gt;
+</pre>
+<p>或者通过JavaScript来激活表单验证功能。</p>
+<pre class="brush:js">
+$('#myForm').validator() 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 关于标签</h5>
+<p>在Bootstrap的官网中提供了一些<a href="http://getbootstrap.com/css/#forms" target="\_blank">表单的例子</a>。在使用验证插件的时候需要注意的是，每一个input域都要放在一个有效的<code>.form-group</code>容器中，这样验证的错误信息才能被正确的显示。</p>
+<p>验证的规则可以在表单的input元素使用下面的HTML5属性来编写。</p>
+<ul>
+<li><code>type="email"</code></li>
+<li><code>type="url"</code></li>
+<li>
+<code>type="number"</code>，另外包含额外的<code>max</code>和<code>min</code>属性。</li>
+<li>
+<code>pattern="Reg(ular )?Exp(ression)?"</code>（适用于text, search, tel, url 或 email类型的input域）</li>
+<li><code>required</code></li>
+</ul>
+<p>另外还有下面一些非标准的HTML5属性。</p>
+<ul>
+<li>
+<code>data-match="#inputToMatch"</code>：确保2个输入域输入的内容相同，例如密码和确认密码。</li>
+<li>
+<code>data-minlength="5"</code>：输入的最少字符数。</li>
+<li>
+<code>data-remote="/path/to/remote/validator"</code>：通过Ajax请求来验证表单域。要确保input元素带有一个<code>name</code>属性，然后通过<code>/path/to/remote/validator?&lt;name&gt;=&lt;value&gt;</code>的方式发送请求。如果通过验证则会返回200状态码，否则会返回<code>4XX</code>。</li>
+</ul>
+<p>要显示错误信息，可以在input域之后添加一个带<code>help-block</code>和<code>with-errors</code> class的div容器。</p>
+<pre class="brush:html">
+&lt;form role="form" data-toggle="validator"&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="inputEmail"&gt;Email&lt;/label&gt;
+&lt;input type="email" id="inputEmail"&gt;
+&lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>参数可以通过data属性或JavaScript的方式传入。</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delay</td>
+<td>number</td>
+<td>500</td>
+<td>在显示错误信息之前的延迟时间，单位毫秒</td>
+</tr>
+<tr>
+<td>html</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否在错误信息中插入HTML标签</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>boolean</td>
+<td>true</td>
+<td>禁用submit按钮直到所有验证都通过</td>
+</tr>
+<tr>
+<td>feedback</td>
+<td>object</td>
+<td>glyphicon classes</td>
+<td>使用图标来显示验证是否通过。默认使用Bootstrap的glyphicon：<br>
+<code>feedback: {
+success: 'glyphicon-ok',
+error: 'glyphicon-remove'
+}<code>
+</code></code>
+</td>
+</tr>
+<tr>
+<td>custom</td>
+<td>object</td>
+<td>{}</td>
+<td>执行自定义的表单验证。验证器将接收jQuery元素作为参数，并返回一个真假值。<br>
+对象的结构为: <code>{foo: function($el) { return true || false } }</code><br>
+Adding the validator to an input is done just like the others, data-foo="bar".<br>
+You must also add default error messages for any custom validators via the errors option
+</td>
+</tr>
+<tr>
+<td>errors</td>
+<td>object</td>
+<td>sensible defaults</td>
+<td>显示的错误信息，默认为：<br>
+<code>
+errors: {
+match: 'Does not match',
+minlength: 'Not long enough'
+}
+</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<ul>
+<li>
+<code>$().validator(options)</code>：为一个表单添加验证。</li>
+<li>
+<code>$().validator('validate')</code>：立刻验证整个表单。</li>
+<li>
+<code>$().validator('destroy')</code>：销毁表单验证插件。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>所有的事件都在表单元素上激活，并通过<code>event.relatedTarget</code>为表单域提供一个于事件相关的引用。</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>事件类型</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>validate.bs.validator</td>
+<td>当一个表单域被验证的时候触发</td>
+</tr>
+<tr>
+<td>invalid.bs.validator</td>
+<td>当一个表单域没有通过验证时触发，错误信息通过<code>event.detail</code>提供</td>
+</tr>
+<tr>
+<td>valid.bs.validator</td>
+<td>当一个表单域通过验证时触发</td>
+</tr>
+<tr>
+<td>validated.bs.validator</td>
+<td>当一个表单域被验证之后触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<p>由于该表单验证插件依赖于HTML5 Constraint Validation API，所以IE9级以下的IE浏览器无法兼容。如果你需要支持这些浏览器，可以添加Ryan Seddon的<a href="https://github.com/ryanseddon/H5F" target="\_blank">H5F</a>。</p>
+<p>bootstrap-validator表单验证插件的github地址为：<a href="https://github.com/1000hz/bootstrap-validator" target="\_blank">https://github.com/1000hz/bootstrap-validator</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601061556.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601062990.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_857">
+                                <h3 class="post-title">
+                                    Toolbar.js-实用的tooltip样式jQuery工具栏插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

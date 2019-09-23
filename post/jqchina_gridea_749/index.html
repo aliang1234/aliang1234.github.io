@@ -1,0 +1,375 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    谷歌Material Design风格纯JS进度条插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            谷歌Material Design风格纯JS进度条插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1606/201606111627.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606111627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606113585.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>MProgress.js是一款谷歌Material Design风格纯JS进度条插件。该进度条通过纯JS和CSS3来制作，没有外部依赖库。你可以通过MProgress.js制作出4种不同类型的Material Design风格进度条效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>MProgress.js是一款谷歌Material Design风格纯JS进度条插件。该进度条通过纯JS和<a href="http://www.htmleaf.com/css3/">CSS3</a>来制作，没有外部依赖库。你可以通过MProgress.js制作出4种不同类型的Material Design风格进度条效果。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower 或npm来安装MProgress.js进度条插件。</p>
+<pre class="brush:html">
+bower install --save mprogress
+npm install --save mprogress
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该进度条插件需要在页面中引入mprogress.min.css和mprogress.min.js文件。</p>
+<pre class="brush:html">
+&lt;link rel='stylesheet' href='mprogress.min.css'/&gt;
+&lt;script src='mprogress.min.js'&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本使用</h5>
+<p>以<code>Determinate</code>进度条类型为例，可以通过<code>new Mprogress()</code>方法来实例化一个进度条对象。</p>
+<pre class="brush:js">
+var mprogress = new Mprogress();
+</pre>
+<p>然后可以通过对象的<code>start()</code>方法来开始显示进度条。</p>
+<pre class="brush:js">
+mprogress.start();
+</pre>
+<p>你也可以使用下面的代码来完成以上两个步骤：</p>
+<pre class="brush:js">
+var mprogress = new Mprogress('start');// 进度条实例化后立刻开始动画
+</pre>
+<p>最后你可以通过<code>end()</code>方法来结束和隐藏进度条。</p>
+<pre class="brush:js">
+mprogress.end();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 高级使用方法</h3>
+<p>所有的类型都有<code>start()</code>和<code>end()</code>方法。</p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 类型1：Determinate</h5>
+<p><code>Determinate</code>类型的进度条有<code>set()</code>和<code>inc()</code>方法。</p>
+<ul>
+<li>
+<code>set(n)</code>：设置进度条的状态。当n为一个数值时，可以设置为0.0-1.0之间的任何数值。例如：
+<pre class="brush:js">
+mprogress.set(0.3);
+</pre>
+</li>
+<li>
+<code>inc()</code>：随机增加一个数值。例如：
+<pre class="brush:js">
+mprogress.inc(); // 随机之间进度条的数值
+mprogress.inc(0.3); // 获取当前的状态值，并加上0.3
+</pre>
+</li>
+</ul>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 类型2：Buffer</h5>
+<p>通常该类型进度条用于视频文件的加载。</p>
+<p>初始化一个Buffer类型的进度条：</p>
+<pre class="brush:js">
+var bufferIntObj = {
+template: 2
+};
+var bufferProgress = new Mprogress(bufferIntObj);
+</pre>
+<p>进度条开始动画：</p>
+<pre class="brush:js">
+bufferProgress.start();
+</pre>
+<p>如果你项初始化后立刻开始进度条动画，代码可以如下：</p>
+<pre class="brush:js">
+var bufferIntObj = {
+template: 2, // type number
+start: true// start it now
+};
+var bufferProgress = new Mprogress(bufferIntObj);
+</pre>
+<p>结束进度条动画：</p>
+<pre class="brush:js">
+ufferProgress.end();
+</pre>
+<p>Buffer类型的进度条同样有<code>set()</code>和<code>inc()</code>方法，另外还有一个<code>setBuffer()</code>方法。</p>
+<ul>
+<li>
+<code>set(n)</code>：设置进度条的状态（0-1）。</li>
+<li>
+<code>setBuffer(num)</code>：设置buffer progress的状态（0-1）。</li>
+<li>
+<code>inc()</code>：进度条随机增加一个数值。</li>
+</ul>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 类型3：Indeterminate</h5>
+<p>初始化Indeterminate类型的进度条：</p>
+<pre class="brush:js">
+var intObj = {
+template: 3, 
+parent: '#customId' // this option will insert bar HTML into this parent Element 
+};
+var indeterminateProgress = new Mprogress(intObj);
+</pre>
+<p>Indeterminate类型的进度条只有<code>start()</code>和<code>end()</code>方法。</p>
+<pre class="brush:js">
+indeterminateProgress.start();
+<p>indeterminateProgress.end();<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 类型4：Query Indeterminate and Determinate</h5>
+<p>初始化Query类型的进度条：</p>
+<pre class="brush:js">
+var intObj = {
+template: 4,
+parent: '#anothercustomId' // to other position
+};
+var queryProgress = new Mprogress(intObj);
+</pre>
+<p>Query类型的进度条只有<code>start()</code>和<code>end()</code>方法。</p>
+<pre class="brush:js">
+queryProgress.start();
+<p>queryProgress.end();<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>可以在初始化的时候以对象的方式为进度条传入配置参数：</p>
+<pre class="brush:js">
+var mp = new Mprogress({
+template: 2,
+parent: '#customContainer',
+start: true
+});
+</pre>
+<ul>
+<li>
+<code>template</code>：设置进度条的类型，默认为1。可选值有：1、Determinate，2、Buffer，3、Indeterminate，4、Query。</li>
+<li>
+<code>parent</code>：设置显示进度条的父容器。</li>
+<li>
+<code>start</code>：进度条是否立刻开始动画。对于类型1的Determinate类型，你只能使用<code>var mp = new Mprogress('start');</code>来立刻执行进度条动画。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<p>MProgress.js是移动优先的进度条插件，适合在移动端使用。</p>
+<p>所有类型的进度条都可以在Chrome和Firefox浏览器中支持工作。</p>
+<p>MProgress.js进度条插件的github地址为：<a href="https://github.com/lightningtgc/MProgress.js">https://github.com/lightningtgc/MProgress.js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606111627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606113585.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_75">
+                                <h3 class="post-title">
+                                    jQuery电子邮件地址填写自动完成插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1748 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_35">
+                        支持移动端的纯js轮播图插件awesome-slider
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_35" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1906/201906214879.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+awesome-slider是一款支持移动端的纯js轮播图插件。该轮播图插件支持任何HTML标签，可以自定义分页标签和Loading效果，支持在前端框架如react中使用。
+内容：
+
+
+简要教程
+
+
+awesome-slider是一款支持移动端的纯js轮播图插件。该轮播图插件支持任何HTML标签，可以自定义分页标签和Loading效果，支持在前端框架如react中使用。
+
+ 使用方法
+安装：
+
+/* yarn */
+yarn add awesome-slider
+/* npm */
+npm install awesome-slider
+/* cdn */
+&amp;lt;script src=&amp;quot;https://unpkg.com/awesome-slider/dist/awesome-slider.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+使用了requestAnimationFrame, 如果要向低浏览器兼容, 可以自行引入requestAnimationFrame polyfill 比如yarn add raf
+
+ 基本使用
+
+const AwesomeSlider = require(&#34;awesome-slider&#34;);
+// or
+import AwesomeSlider from &#34;awesome-slider&#34;;
+const awesomeSlider = new AwesomeSlider(images, container, [options]);
+
+
+ API
+
+
+images：轮播图的图片。可以是简单模式，也可以是也可以自由组合模式。
+
+/* 简单模式 */
+[&#34;./images/1.jpg&#34;, &#34;./images/2.jpg&#34;, &#34;./images/3.jpg&#34;, &#34;./images/4.jpg&#34;];
+/* 自由组合模式 */
+[
+{
+tagName: &amp;quot;a&amp;quot;,
+attrs: {
+style: &amp;quot;&amp;quot;,
+class: &amp;quot;&amp;quot;,
+href: &amp;quot;https://wwww.example.com&amp;quot;
+},
+children: [
+&amp;quot;this just textNote, not object&amp;quot;,
+{
+tagName: &amp;quot;div&amp;quot;,
+attrs: {
+style:&amp;quot;&amp;quot;
+},
+},
+&amp;quot;./images/example.jpg&amp;quot;
+]
+
+
+
+container：包裹 images 的 html 元素。
+
+var container1 = document.querySelector(&#34;.container&#34;); 
+// react
+...
+const containerRef = useRef(null);
+...
+const container1 = containerRef.current;
+...
+&amp;lt;div className=&#34;container1&#34; ref={containerRef}&amp;gt;
+
+
+
+
+ 配置参数
+
+
+ratio：图片的宽高比。
+
+duration：轮播动画过渡的时长(ms)。
+
+autoplay：是否开启自动轮播。
+
+interval：自动轮播的间隔时长(ms)。
+
+indicator：轮播状态的指示 js创建html, 通过有传递的参数做样式交互, 如果要使用this, 就不要使用箭头函数, 一般现有传递的参数够用。
+
+initIndex：初始展示的图片的序号。
+
+manual：js创建html, 插入两部分, 分别是previous和next。
+
+timing：轮播动画类型。
+
+enableResize：是否开启窗口大小变化的监听。
+
+imageDownloading：js创建html, 插入图片加载的效果。
+
+imagePlaceholder：js创建html, 插入图片加载失败的占位。
+
+ awesome-slider插件的github网址为：https://github.com/metxnbr/awesome-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_35">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_350">
+                        jquery日期范围选择器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_350" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1712/201712161453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jquery日期范围选择器插件。该jquery日期范围选择器插件基于bootstrap，它提供日期范围选择功能，字符串本地化功能，时间选择功能等，功能非常强大。
+内容：
+
+
+简要教程
+
+
+这是一款jquery日期范围选择器插件。该jquery日期范围选择器插件基于bootstrap，它提供日期范围选择功能，字符串本地化功能，时间选择功能等，功能非常强大。
+
+ 使用方法
+该jquery日期范围选择器依赖于 Bootstrap， jQuery 和 Moment.js，使用时引入相关文件。
+
+&amp;lt;link href=&#34;http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;assets/css/daterangepicker.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/moment.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/daterangepicker.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ HTML结构
+使用一个&amp;lt;input&amp;gt;元素作为日期范围选择器定的容器：
+
+&amp;lt;input type=&#34;text&#34; id=&#34;demo&#34; class=&#34;form-control&#34;&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过daterangepicker()方法来初始化该jquery日期范围选择器插件。
+
+$(document).ready(function() {
+$(&#39;#demo&#39;).daterangepicker();
+});
+
+
+ 配置参数
+该jquery日期范围选择器插件的可用配置参数有：
+
+
+startDate：日期范围的开始时间（可以是Date对象，moment对象或字符串）。
+
+endDate：日期范围的结束时间（可以是Date对象，moment对象或字符串）。
+
+minDate：用户可以选择的最早的日期（可以是Date对象，moment对象或字符串）。
+
+maxDate：用户可以选择的最晚的日期（可以是Date对象，moment对象或字符串）。
+
+dateLimit：用户可以选择的最大时间跨度。
+
+showDropdowns：是否显示月份和年份下拉框，方便用户选择。
+
+showWeekNumbers：是否显示是第几周。
+
+showISOWeekNumbers：是否以ISO的格式显示是第几周。
+
+timePicker：是否允许选择时间。
+
+timePickerIncrement：选择时间时的分钟间隔数，例如间隔30分钟。
+
+timePicker24Hour：使用24小时制还是12小时制。
+
+timePickerSeconds：是否显示秒数选择。
+
+ranges：显示一组预定义好的日期范围（见示例）。
+
+showCustomRangeLabel：在预定义日期范围底部显示“Custom Range”标签。
+
+alwaysShowCalendars：默认情况下，日期范围只会显示预定义日期范围，只有在用户点击了底部的“Custom Range”标签时才会显示日期选择面板。当这个选项设置为true时，则总是会显示日期选择面板。
+
+opens：日期选择器显示的位置。可以是 ：&#39;left&#39;，&#39;right&#39;，&#39;center&#39;。
+
+drops：日期选择器显示在HTML元素的上面或下面。可以是：&#39;down&#39; 或 &#39;up&#39;。
+
+buttonClasses：一个数组。数组中是添加到日期选择器按钮上的class类名称。
+
+applyClass：添加到“确定”按钮的class类名称。
+
+cancelClass：添加到“取消”按钮的class类名称。
+
+locale：本地化字符串（见示例）。
+
+singleDatePicker：只显示一个日期选择面板。开始日期和结束日期都是同一个日期。
+
+autoApply：隐藏“确定”和“取消”按钮。当两个日期被选择之后立刻被显示到输入框中。
+
+linkedCalendars：是否将左右日期面板的左右箭头联动。
+
+isInvalidDate：回调函数，日期作为参数传入函数中，返回true则表示是有效日期，否则为无效日期。
+
+isCustomDate：回调函数，日期作为参数传入函数中，返回字符串，或一个日期选择面板日期单元格上的class类的数组。
+
+autoUpdateInput：是否自动更新&amp;lt;input&amp;gt;元素。
+
+parentEl：日期选择器的父元素的jQuery选择器，如果没有指定，默认为body元素。
+
+
+ 方法
+该jquery日期范围选择器插件的可用的方法有：
+
+
+setStartDate(Date/moment/string)：手动设置开始日期。
+
+setEndDate(Date/moment/string)：手动设置结束日期。
+
+
+ 事件
+该jquery日期范围选择器插件的可用的事件有：
+
+
+show.daterangepicker：当日期范围选择器显示时触发。
+
+hide.daterangepicker：当日期范围选择器隐藏时触发。
+
+showCalendar.daterangepicker：当日期范围面板显示时触发。
+
+hideCalendar.daterangepicker：当日期范围面板隐藏时触发。
+
+apply.daterangepicker：当“确定”按钮被点击，或任何一个预定义事件范围被选择时触发。
+
+cancel.daterangepicker：当“取消”按钮被点击时触发。
+
+该jquery日期范围选择器插件的github地址为：https://github.com/dangrossman/bootstrap-daterangepicker
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_350">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_351">
+                        360度图片旋转产品预览展示js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_351" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1801/201801121436.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款360度图片旋转产品预览展示js插件。该360度图片旋转产品预览js插件提供多种控制产品图片旋转的方法，包括自动旋转，通过按钮来控制旋转，通过鼠标拖拽或鼠标移动来控制旋转，通过鼠标滚轮来控制旋转等。
+内容：
+
+
+简要教程
+
+
+这是一款360度图片旋转产品预览展示js插件。该360度图片旋转产品预览js插件提供多种控制产品图片旋转的方法，包括自动旋转，通过按钮来控制旋转，通过鼠标拖拽或鼠标移动来控制旋转，通过鼠标滚轮来控制旋转等。
+
+ 使用方法
+在页面中引入pdt360DegViewer.js文件。
+
+&amp;lt;script src=&#34;js/pdt360DegViewer.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素作为旋转产品图片的容器。
+
+&amp;lt;divid=&#34;product\_id&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+添加下面的CSS样式。
+
+#pdtViewer.container {
+width: 67\%;
+height: 450px;
+margin: 0 auto;
+border: 0.5px solid #eee;
+}
+#pdtViewer img { padding: 40px 20px; }
+@media screen and (max-width:1250px) {
+#pdtViewer img { width: 100%; }
+}
+#pdtViewer .nxt { left: 85%; }
+#pdtViewer .prev { left: 12%; }
+#pdtViewer button {
+position: absolute;
+top: 57%;
+background: none;
+border-radius: 30px;
+padding: 0;
+font-weight: bold;
+font-size: 30px;
+width: 50px;
+cursor: pointer;
+height: 52px;
+box-shadow: 0 6px 15px #aaa;
+}
+#pdtViewer button:focus { outline: 0; }
+#dummy { display: none; }
+#loader {
+width: 67%;
+height: 450px;
+position: absolute;
+background: rgba(0,0,0,0.5);
+}
+.three-bounce {
+text-align: center;
+font-size: 26px;
+position: absolute;
+top: 50%;
+left: 50%;
+}
+.three-bounce div {
+display: inline-block;
+width: 18px;
+height: 18px;
+border-radius: 100%;
+background-color: #fff;
+-webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+.three-bounce .one {
+-webkit-animation-delay: -0.32s;
+animation-delay: -0.32s;
+}
+.three-bounce .two {
+-webkit-animation-delay: -0.16s;
+animation-delay: -0.16s;
+}
+@keyframes
+bouncedelay {0%, 80%, 100% {
+-webkit-transform: scale(0);
+transform: scale(0);
+}
+40% {
+transform: scale(1);
+-webkit-transform: scale(1);
+}
+}
+
+
+ 初始化插件
+然后通过下面的方法来初始化该360度图片旋转预览插件。
+
+var path = &#39;./img/&#39;;
+pdt360DegViewer(&#39;product\_id&#39;, 51, &#39;./img/&#39;, &#39;png&#39;, true, true, false, false, false, false, false);
+
+
+ 配置参数
+在初始化是，传入pdt360DegViewer()中的参数分别代表：
+
+pdt360DegViewer(imgDivid, count, path, imgType, playable, autoPlay, 
+drag, mouseMove, buttonNavigation, keyNavigation, scroll);
+
+
+
+imgDivid：容器的ID。
+
+count：产品图片的数量。
+
+path：产品图片存放的路径。
+
+imgType：产品图片的类型，如&#39;png&#39;, &#39;jpg&#39;, &#39;gif&#39;等。
+
+playable：是否允许控制旋转。
+
+autoPlay：是否自动旋转。
+
+drag：是否允许通过鼠标拖拽来控制旋转。
+
+mouseMove：是否允许通过鼠标移动来控制旋转。
+
+buttonNavigation：是否显示前后导航按钮。
+
+keyNavigation：是否允许通过键盘方向键来控制旋转。
+
+scroll：是否允许通过鼠标滚轮来控制旋转。
+
+该360度图片旋转产品预览js插件的github地址为：https://github.com/Jeya-Prakash/3D-Product-Viewer-JavaScript-Plugin
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_351">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_352">
+                        jQuery表单浮动标签插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_352" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803091543.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单实用的jQuery表单浮动标签插件。通过该jquery插件。可以在表单输入框聚焦的时候，将提示占位文本以动画的方式浮动到文本框的左上角去，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款简单实用的jQuery表单浮动标签插件。通过该jquery插件。可以在表单输入框聚焦的时候，将提示占位文本以动画的方式浮动到文本框的左上角去，效果非常炫酷。
+
+ 安装
+可以通过npm或bower来安装floating-form-labels插件。
+
+npm install floating-form-labels
+bower install floating-form-labels
+
+
+ 使用方法
+在页面中引入\_floating-form-labels.css和jquery以及floatingFormLabels.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/\_floating-form-labels.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/floatingFormLabels.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用该jquery浮动标签插件的基本HTML结构如下：
+
+&amp;lt;form&amp;gt;
+&amp;lt;div class=&#34;ffl-wrapper&#34;&amp;gt;
+&amp;lt;label for=&#34;name&#34; class=&#34;ffl-label&#34;&amp;gt;Name&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; placeholder=&#34;Your Name&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ffl-wrapper&#34;&amp;gt;
+&amp;lt;label for=&#34;email&#34; class=&#34;ffl-label&#34;&amp;gt;Email&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ffl-wrapper&#34;&amp;gt;
+&amp;lt;label for=&#34;message&#34; class=&#34;ffl-label&#34;&amp;gt;Message &amp;lt;span&amp;gt;(optional)&amp;lt;/span&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;textarea id=&#34;message&#34; name=&#34;message&#34;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;button type=&#34;submit&#34;&amp;gt;Send&amp;lt;/button&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过floatingFormLabels()方法来初始化该jquery浮动标签插件。
+
+$(&#39;.ffl-wrapper&#39;).floatingFormLabels();
+
+
+ 配置参数
+该jquery浮动标签插件的可用配置参数如下：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+label
+String
+&#39;.ffl-label&#39;
+浮动标签的选择器字符串。
+
+
+formElements
+String
+&#39;input, textarea&#39;
+被插件监听的表单元素，这些元素的标签将会浮动。
+
+
+floatedClass
+String
+&#39;ffl-floated&#39;
+当某个标签浮动时，会为这个DOM元素添加该class类。
+
+
+
+
+ 
+ 事件
+该jquery浮动标签插件的可用事件如下：
+
+
+
+
+事件
+返回值
+描述
+
+
+
+
+init.ffl
+返回插件实例对象
+当浮动标签被创建好之后触发。
+
+
+toggle.ffl
+返回插件实例对象
+每一次和输入框的交互都会触发该事件。
+
+
+
+
+例如：
+
+$(&#39;label#label-for-input-1&#39;).on(&#39;toggle.ffl&#39;, function (event, ffl) {
+// log out the current state of the label
+console.log(ffl.floated);
+});
+
+该jquery浮动标签插件的github地址为：https://github.com/Baedda/floating-form-labels
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_352">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_353">
+                        纯js超酷select下拉框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_353" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1802/201802261526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+tastySelect是一款纯js超酷select下拉框美化插件。tastySelect下拉框插件支持多选，内置两种主题，使用CSS3动画过渡效果，整体设计时尚大方。
+内容：
+
+
+简要教程
+
+
+tastySelect是一款纯js超酷select下拉框美化插件。tastySelect下拉框插件支持多选，内置两种主题，使用CSS3动画过渡效果，整体设计时尚大方。
+
+ 使用方法
+在页面中引入tastySelect.css和tastySelect.min.js文件。
+
+&amp;lt;link href=&#34;css/tastySelect.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/tastySelect.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+如果要创建多选的下拉选择框，它的HTML结构如下：
+
+&amp;lt;select name=&#34;&#34; id=&#34;tastySelect&#34; multiple&amp;gt;
+&amp;lt;optgroup label=&#34;JavaScript&#34;&amp;gt;
+&amp;lt;option value=&#34;jQuery&#34;&amp;gt;jQuery&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;React&#34;&amp;gt;ReactJS&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Angular&#34;&amp;gt;AngularJS&amp;lt;/option&amp;gt;
+&amp;lt;/optgroup&amp;gt;
+&amp;lt;optgroup label=&#34;HTML&#34;&amp;gt;
+&amp;lt;option value=&#34;HTML5&#34;&amp;gt;HTML 5&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;XML&#34;&amp;gt;XML&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;XHTML&#34;&amp;gt;XHTML&amp;lt;/option&amp;gt;
+&amp;lt;/optgroup&amp;gt;
+&amp;lt;option value=&#34;css&#34;&amp;gt;CSS/SCSS/LESS&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;more&#34;&amp;gt;More Options Here&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 初始化插件
+通过tastySelect()方法来初始化该select下拉框美化插件。
+
+tastySelect({
+defaultText: &#34;通过 (Ctrl+Click)组合键可以选择多个选项&#34;,
+}); 
+
+
+ 配置参数
+tastySelect下拉框插件的可用配置参数如下：
+
+tastySelect({
+selector: &#39;select&#39;,
+mobileFix: true,
+mask: &#39;\%&#39;,
+maskJoin: &#39;, &#39;,
+defaultText: &#39;Select item...&#39;,
+classes : {
+outer: &#39;style-select&#39;,
+title: &#39;style-select-title&#39;,
+options: &#39;style-select-options&#39;,
+label: &#39;style-select-label&#39;,
+optgroup: &#39;style-select-optgroup&#39;,
+list: &#39;style-select-list&#39;,
+item: &#39;style-select-option&#39;,
+open: &#39;st\_open&#39;,
+selected: &#39;st\_selected&#39;,
+mobile: &#39;is\_mobile&#39;,
+},
+attributes : {
+index: &#39;data-index&#39;,
+value: &#39;data-value&#39;,
+selectReady: &#39;data-tastyselect&#39;,
+},
+});
+
+tastySelect下拉框插件的github地址为：https://github.com/jekyenin/tastySelect
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_353">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_354">
+                        基于SVG的jquery圆形进度条插件ProgressCircle
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_354" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1802/201802071513.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ProgressCircle.js是一款基于SVG的jquery圆形进度条插件。该jquery圆形进度条插件通过动态生成SVG元素和CSS3动画来制作漂亮的圆形进度条动画特效。
+内容：
+
+
+简要教程
+
+
+ProgressCircle.js是一款基于SVG的jquery圆形进度条插件。该jquery圆形进度条插件通过动态生成SVG元素和CSS3动画来制作漂亮的圆形进度条动画特效。
+
+ 使用方法
+在页面中引入progresscircle.css和jquery以及progresscircle.js文件。
+
+&amp;lt;link href=&#34;css/progresscircle.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;progresscircle.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该jquery圆形进度条的基本HTML结构如下：
+
+&amp;lt;div class=&#34;circlechart&#34; 
+ data-percentage=&#34;-20&#34;&amp;gt;
+ -20\%
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;circlechart&amp;quot;
+data-percentage=&amp;quot;50&amp;quot;&amp;gt;
+50%
+&amp;lt;/div&amp;gt;
+
+data-percentage属性代表圆形进度条的百分比，可以是负数，负数表示反向执行动画。
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过circlechart()方法来初始化该jquery圆形进度条插件。
+
+$(function(){
+$(&#39;.circlechart&#39;).circlechart();
+});
+
+该jquery圆形进度条插件的github地址为：https://github.com/killia15/ProgressCircle
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_354">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_355">
+                        jquery 3d Carousel轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_355" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803241605.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery-Waterwheel-Carousel是一款jquery 3d Carousel轮播图插件。该jquery Carousel轮播图插件兼容ie8浏览器，提供丰富的参数和API方法由于控制Carousel，使用简单，非常实用。
+内容：
+
+
+简要教程
+
+
+jQuery-Waterwheel-Carousel是一款jquery 3d Carousel轮播图插件。该jquery Carousel轮播图插件兼容ie8浏览器，提供丰富的参数和API方法由于控制Carousel，使用简单，非常实用。它的特点还有：
+
+支持水平或垂直Carousel轮播。
+可以通过键盘来控制前后轮播。
+图片移动时提供回调函数钩子。
+支持不同尺寸的图片。
+支持图片边部透明效果。
+支持无缝滚动。
+兼容Chrome, FireFox, Safari 和 IE7+浏览器。
+
+
+ 使用方法
+在页面中引入jquery和jquery.waterwheelCarousel.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/jquery.waterwheelCarousel.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;来作为容器，里面放置一组图片。
+
+&amp;lt;div id=&#34;carousel&#34;&amp;gt;
+&amp;lt;img src=&#34;/image1.jpg&#34; alt=&#34;Image 1&#34; /&amp;gt;
+&amp;lt;img src=&#34;/image2.jpg&#34; alt=&#34;Image 2&#34; /&amp;gt;
+&amp;lt;img src=&#34;/image3.jpg&#34; alt=&#34;Image 3&#34; /&amp;gt;
+&amp;lt;img src=&#34;/image4.jpg&#34; alt=&#34;Image 4&#34; /&amp;gt;
+&amp;lt;img src=&#34;/image5.jpg&#34; alt=&#34;Image 5&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为carousel指定下面的CSS样式。
+
+&amp;lt;style type=&#34;text/css&#34;&amp;gt;
+#carousel {
+width:800px;
+height: 300px;
+display: relative;
+}
+#carousel img {
+display: hidden; /* hide images until carousel prepares them */
+cursor: pointer; /* not needed if you wrap carousel items in links */
+}
+&amp;lt;/style&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该Carousel轮播图插件。
+
+$(document).ready(function() {
+$(&#34;#carousel&#34;).waterwheelCarousel({
+// include options like this:
+// (use quotes only for string values, and no trailing comma after last option)
+// option: value,
+// option: value
+});
+});
+
+
+ 配置参数
+该jquery Carousel轮播图插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+largeFeatureWidth
+integer
+0
+可取3个种值。0表示原始图片宽度。0-1之间的数表示原始图片乘以该数值。大于1的数表示使用该数值作为图片的宽度。
+
+
+largeFeatureHeight
+integer
+0
+和largeFeatureWidth参数的意义相同。
+
+
+smallFeatureWidth
+integer
+0.5
+可取3种值。0表示原始图片的一半。0-1之间表示原始图片乘以该数值。大于1的数值表示使用该数值作为图片的宽度。
+
+
+smallFeatureHeight
+integer
+0.5
+和smallFeatureWidth参数的意义相同。
+
+
+topPadding
+integer
+20
+容器顶部到Carousel边部的内边距。
+
+
+sidePadding
+integer
+50
+容器左右边部到Carousel边部的内边距。
+
+
+smallFeatureOffset
+integer
+50
+容器顶部到Carousel边部的补白。
+
+
+startingFeature
+integer
+1
+标示那副图片在初始化时显示在中间。
+
+
+carouselSpeed
+integer
+1000
+Carousel的旋转速度，单位毫秒。
+
+
+autoPlay
+integer
+4000
+如果数值大于0，将使用该数值作为自动播放的速度。
+
+
+pauseOnHover
+boolean
+true
+是否在鼠标hover是停止自动播放。
+
+
+stopOnHover
+boolean
+false
+如果设置了autoplay参数可用，该参数设置为true时，当鼠标hover图片时停止自动播放。
+
+
+trackerIndividual
+boolean
+true
+是否显示跟踪信息。
+
+
+trackerSummation
+boolean
+true
+a summation of the features can also be used to display an &#34;x Of y&#34; style of tracking this can be combined with the above option as well
+
+
+preload
+boolean
+true
+是否在显示Carousel之前预加载图片。
+
+
+displayCutoff
+integer
+0
+If greater than &#39;0&#39;, will only use this amount of features within the carousel. Any after this number will be ignored.
+
+
+animationEasing
+string
+&#39;swing&#39;
+carousel动画的easing效果。
+
+
+leftButtonTag
+string
+&#39;#carousel-left&#39;
+prev按钮的jquery选择器。
+
+
+rightButtonTag
+string
+&#39;#carousel-right&#39;
+next按钮的jquery选择器。
+
+
+captionBelow
+boolean
+false
+是否在carousel下方显示描述文字。
+
+
+movedToCenter
+function
+$.noop
+当图片移动到中间时触发的回调函数。
+
+
+leavingCenter
+function
+$.noop
+当图片离开中间位置时触发的回调函数。
+
+
+clickedCenter
+function
+$.noop
+当中间的图片是一个链接，单该链接被点击时触发的回调函数。
+
+
+
+
+ jQuery-Waterwheel-Carousel 3d Carousel轮播图插件的github地址为：https://github.com/bkosborne/jQuery-Waterwheel-Carousel
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_355">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_356">
+                        js侧边栏菜单插件canvi
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_356" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1710/201710171525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+canvi.js是一款js侧边栏菜单插件。canvi.js使用简单，可以快速的制作出侧边栏展开收缩js特效。你可以在同一个页面实例化多个侧边栏实例，还可以设置侧边栏的响应式宽度，自定义侧边栏样式等。
+内容：
+
+
+简要教程
+
+
+canvi.js是一款js侧边栏菜单插件。canvi.js使用简单，可以快速的制作出侧边栏展开收缩js特效。你可以在同一个页面实例化多个侧边栏实例，还可以设置侧边栏的响应式宽度，自定义侧边栏样式等。
+
+ 使用方法
+在页面中引入canvi.css和canvi.js文件。
+
+&amp;lt; link rel=&#34;stylesheet&#34; href=&#34;canvi.css&#34; type=&#34;text/css&#34; &amp;gt;
+&amp;lt; script type=&#34;text/javascript&#34; src=&#34;canvi.js&#34; &amp;gt;&amp;lt; /script&amp;gt; 
+
+
+ HTML结构
+要使用该侧边栏插件，你必须遵循下面的HTML结构：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&#34;zh&#34;&amp;gt;
+&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;!--侧边栏--&amp;gt;
+&amp;lt;div class=&#34;canvi-navbar&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!--页面内容--&amp;gt;
+&amp;lt;div class=&#34;canvi-content&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 初始化插件
+然后通过下面的js码来初始化该侧边栏插件。
+
+var canvi = new Canvi(); 
+
+如果在同一个页面实例化多个侧边栏，可以像下面这样初始化插件。
+
+var canviLeft = new Canvi({
+content: &#39;.js-canvi-content&#39;,
+navbar: &#39;.js-canvi-navbar--left&#39;,
+openButton: &#39;.js-canvi-open-button--left&#39;
+});
+var canviRight = new Canvi({
+content: &#39;.js-canvi-content&#39;,
+navbar: &#39;.js-canvi-navbar--right&#39;,
+openButton: &#39;.js-canvi-open-button--right&#39;
+});
+
+
+ 配置参数
+canvi.js侧边栏插件的可用配置参数有：
+
+
+content：默认值：&#39;.canvi-content&#39;。用于定义主体内容的选择器。
+
+isDebug：默认值：false。是否打开调试模式。
+
+navbar：默认值：&#39;.canvi-navbar&#39;。定义侧边栏的选择器。
+
+speed：默认值： &#39;0.3s&#39;。打开或关闭侧边栏的速度。
+
+openButton：默认值：&#39;.canvi-open-button&#39;。打开侧边栏的触发按钮的选择器。
+
+position：默认值：&#39;left&#39;。指定侧边栏的位置。可以是&#39;left&#39;或&#39;right&#39;。
+
+pushContent：默认值：true。默认为打开侧边栏时，侧边栏会推动页面内容。
+
+width：默认值：&#39;300px&#39;。设置侧边栏的宽度。
+
+responsiveWidths：默认值：[]。设置侧边栏的响应式宽度。这是一个数组，你可以填入多个响应式断点。
+
+配置参数实例：
+
+var canviRight = new Canvi({
+content: &#39;.js-canvi-content&#39;,
+navbar: &#39;.js-canvi-navbar--right&#39;,
+openButton: &#39;.js-canvi-open-button--right&#39;,
+position: &#39;right&#39;,
+pushContent: true,
+width: &#39;300px&#39;
+});
+
+
+ 方法
+canvi.js侧边栏插件提供了下面的可用方法。
+
+
+open()：打开侧边栏。例如：canviRight.open();。
+
+close()：关闭侧边栏。例如：canviRight.close();。
+
+toggle()：切换侧边栏的状态。
+
+canvi.js侧边栏插件的github项目地址为：https://github.com/thepinecode/canvi
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_356">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_357">
+                        jquery分页插件jqPaginator
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_357" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1711/201711281452.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jqPaginator.js是一款强大的jquery分页插件。该jquery分页插件简洁大方，可以高度自定义，适用于多种场景。
+内容：
+
+
+简要教程
+
+
+jqPaginator.js是一款强大的jquery分页插件。该jquery分页插件简洁大方，可以高度自定义，适用于多种场景。
+
+ 使用方法
+在页面中引入jquery和jqPaginator.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jqPaginator.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;ul&amp;gt;元素来作为分页组件的容器。
+
+&amp;lt;ul class=&#34;pagination&#34; id=&#34;pagination1&#34;&amp;gt;&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来完成对该分页组件的初始化。
+
+$(&#39;#pagination1&#39;).jqPaginator({
+totalPages: 100,
+visiblePages: 10,
+currentPage: 1,
+first: &#39;&amp;lt;li class=&amp;quot;first&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;javascript:void(0);&amp;quot;&amp;gt;First&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+prev: &#39;&amp;lt;li class=&amp;quot;prev&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;javascript:void(0);&amp;quot;&amp;gt;Previous&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+next: &#39;&amp;lt;li class=&amp;quot;next&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;javascript:void(0);&amp;quot;&amp;gt;Next&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+last: &#39;&amp;lt;li class=&amp;quot;last&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;javascript:void(0);&amp;quot;&amp;gt;Last&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+page: &#39;&amp;lt;li class=&amp;quot;page&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;javascript:void(0);&amp;quot;&amp;gt;{{page}}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#39;,
+onPageChange: function (num) {
+$(&#39;#text&#39;).html(&#39;当前第&#39; + num + &#39;页&#39;);
+}
+});
+
+
+ 配置参数
+jqPaginator分页插件的可用配置参数如下：
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+totalPages
+0
+设置分页的总页数
+
+
+totalCounts
+0
+设置分页的总条目数
+
+
+pageSize
+0
+设置每一页的条目数。注意：要么设置totalPages，要么设置totalCounts + pageSize，否则报错；设置了totalCounts和pageSize后，会自动计算出totalPages。
+
+
+
+currentPage
+1
+设置当前的页码
+
+
+visiblePages
+7
+设置最多显示的页码数（例如有100页，当前第1页，则显示1 - 7页）
+
+
+disableClass
+&#39;disabled&#39;
+设置首页，上一页，下一页，末页的“禁用状态”样式
+
+
+activeClass
+&#39;active&#39;
+设置当前页码样式
+
+
+first
+bootstrap风格
+设置“首页”的Html结构
+
+
+prev
+bootstrap风格
+设置“上一页”的Html结构
+
+
+next
+bootstrap风格
+设置“下一页”的Html结构
+
+
+last
+bootstrap风格
+设置“末页”的Html结构
+
+
+page
+bootstrap风格
+设置页码的Html结构,其中可以使用{{page}}代表当前页，{{totalPages}}代表总页数，{{totalCounts}}代表总条目数（例如：上面的“极简风格”的Demo，就是使用了{{占位符}}，并将visiblePages设为1实现的。）注意：first、prev、next、last。page只要设置一个，其余未设置的会变为空。
+
+
+
+wrapper
+(无)
+分页结构的Html包裹，例如：&amp;lt;div class=&#34;your class&#34;&amp;gt;&amp;lt;/div&amp;gt;，一般不会用到
+
+
+onPageChange
+(无)
+回调函数，当换页时触发（包括初始化第一页的时候），会传入两个参数：
+1、“目标页&#34;的页码，Number类型
+2、触发类型，可能的值：“init”（初始化），“change”（点击分页）
+
+
+
+
+
+
+ 扩展方法
+jqPaginator分页插件在初始化之后，提供了两个扩展方法，方便初始化后对组件进行操作。
+
+// 扩展方法一
+$(&#39;#id&#39;).jqPaginator(&#39;option&#39;, options)
+
+这个方法用于动态修改jqPaginator分页插件的配置信息。例如：
+
+$(&#39;#id&#39;).jqPaginator(&#39;option&#39;, {
+currentPage: 1//将当前页修改为第一页
+});
+
+
+// 扩展方法二
+$(&#39;#id&#39;).jqPaginator(&#39;destroy&#39;)
+
+该方法用于销毁jqPaginator分页插件。
+jqPaginator分页插件的官方网址为：http://jqpaginator.keenwon.com/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_357">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_358">
+                        jquery简单轮播图代码
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_358" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1801/2018011440.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jquery简单轮播图代码。该jquery轮播图仅用40多行js代码就可以实现，轮播图带前后导航按钮，分页圆点导航按钮，并可以自动进行播放。
+内容：
+
+
+简要教程
+
+
+这是一款jquery简单轮播图代码。该jquery轮播图仅用40多行js代码就可以实现，轮播图带前后导航按钮，分页圆点导航按钮，并可以自动进行播放。
+
+ 使用方法
+在页面中引入jquery和样式文件style.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该轮播图的HTML结构如下：
+
+&amp;lt;div id=&#34;wrapper&#34;&amp;gt;
+&amp;lt;div id=&#34;slider-wrap&#34;&amp;gt;
+&amp;lt;ul id=&#34;slider&#34;&amp;gt;
+ &amp;lt;li data-color=&#34;#1abc9c&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h3&amp;gt;Slide #1&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Sub-title #1&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;i class=&#34;fa fa-image&#34;&amp;gt;&amp;lt;/i&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li data-color=&#34;#3498db&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h3&amp;gt;Slide #2&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Sub-title #2&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;i class=&#34;fa fa-gears&#34;&amp;gt;&amp;lt;/i&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li data-color=&#34;#9b59b6&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h3&amp;gt;Slide #3&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Sub-title #3&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;i class=&#34;fa fa-sliders&#34;&amp;gt;&amp;lt;/i&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li data-color=&#34;#34495e&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h3&amp;gt;Slide #4&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Sub-title #4&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;i class=&#34;fa fa-code&#34;&amp;gt;&amp;lt;/i&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li data-color=&#34;#e74c3c&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h3&amp;gt;Slide #5&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Sub-title #5&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;i class=&#34;fa fa-microphone-slash&#34;&amp;gt;&amp;lt;/i&amp;gt;
+ &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;!--控制按钮--&amp;gt;
+&amp;lt;div class=&#34;btns&#34; id=&#34;next&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-arrow-right&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;btns&#34; id=&#34;previous&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-arrow-left&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;counter&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;pagination-wrap&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!--控制按钮--&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ JavaScript
+实现该jquery轮播图的js代码如下：
+
+//current position
+var pos = 0;
+//number of slides
+var totalSlides = $(&#39;#slider-wrap ul li&#39;).length;
+//get the slide width
+var sliderWidth = $(&#39;#slider-wrap&#39;).width();
+$(document).ready(function(){
+/*****************
+ BUILD THE SLIDER
+*****************/
+//set width to be &#39;x&#39; times the number of slides
+$(&#39;#slider-wrap ul#slider&#39;).width(sliderWidth*totalSlides);
+ //next slide 
+$(&#39;#next&#39;).click(function(){
+slideRight();
+});
+//previous slide
+$(&#39;#previous&#39;).click(function(){
+slideLeft();
+});
+/*************************
+//*OPTIONAL SETTINGS
+************************/
+//automatic slider
+var autoSlider = setInterval(slideRight, 3000);
+//for each slide
+.each(.each(.each((&#39;#slider-wrap ul li&#39;), function() {
+//set its color
+var c = $(this).attr(&amp;quot;data-color&amp;quot;);
+$(this).css(&amp;quot;background&amp;quot;,c);
+//create a pagination
+var li = document.createElement(&#39;li&#39;);
+$(&#39;#pagination-wrap ul&#39;).append(li);
+});
+//counter
+countSlides();
+//pagination
+pagination();
+//hide/show controls/btns when hover
+//pause automatic slide when hover
+$(&#39;#slider-wrap&#39;).hover(
+function(){ $(this).addClass(&#39;active&#39;); clearInterval(autoSlider); },
+function(){ $(this).removeClass(&#39;active&#39;); autoSlider = setInterval(slideRight, 3000); }
+);
+});
+/***********
+SLIDE LEFT
+***********/
+function slideLeft(){
+pos--;
+if(pos==-1){ pos = totalSlides-1; }
+$(&#39;#slider-wrap ul#slider&#39;).css(&#39;left&#39;, -(sliderWidthpos));
+//&amp;gt; optional
+countSlides();
+pagination();
+}
+/***********
+SLIDE RIGHT
+*************/
+function slideRight(){
+pos++;
+if(pos==totalSlides){ pos = 0; }
+(&amp;#039;#slider-wrap ul#slider&amp;#039;).css(&amp;#039;left&amp;#039;, -(sliderWidth*pos)); 
+countSlides();
+pagination();
+}
+/************************
+ //*&amp;amp;gt; OPTIONAL SETTINGS
+************************/
+function countSlides(){
+(&#39;#counter&#39;).html(pos+1 + &#39; / &#39; + totalSlides);
+}
+function pagination(){
+(&amp;#039;#pagination-wrap ul li&amp;#039;).removeClass(&amp;#039;active&amp;#039;);
+(&#39;#pagination-wrap ul li:eq(&#39;+pos+&#39;)&#39;).addClass(&#39;active&#39;);
+}
+
+该jquery轮播图的原文地址为：https://codepen.io/AndreCortellini/pen/kxwmj
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_358">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/88/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/90/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

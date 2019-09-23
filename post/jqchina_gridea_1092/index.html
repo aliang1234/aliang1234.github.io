@@ -1,0 +1,375 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    6种炫酷的鼠标滑过图片显示遮罩层特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            6种炫酷的鼠标滑过图片显示遮罩层特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508031811.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508031811.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508032350.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和CSS3制作的炫酷的鼠标滑过图片显示遮罩层特效。该图片制作层特效共6种不同的效果，使用一些简单的jQuery代码和CSS3过渡效果来完成，简单实用，可以为网站图片添加非常不错的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>制作的炫酷的鼠标滑过图片显示遮罩层特效。该图片制作层特效共6种不同的效果，使用一些简单的jQuery代码和CSS3过渡效果来完成，简单实用，可以为网站图片添加非常不错的效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该图片遮罩效果的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="effect-1" class="effects clearfix"&gt;
+&lt;div class="img"&gt;
+&lt;img src="img/jpg/1.jpg" alt=""&gt;
+&lt;div class="overlay"&gt;
+&lt;a href="#" class="expand"&gt;+&lt;/a&gt;
+&lt;a class="close-overlay hidden"&gt;x&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+...
+&lt;/div&gt; 
+</pre>
+<p>在上面的<code>.close-overlay</code>标签是一个关闭按钮，它用于在移动触摸设备中关闭遮罩层，在大屏幕显示器中你不会看到它。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>该图片遮罩层效果的通用CSS样式如下：</p>
+<pre class="brush:css">
+.effects {
+padding-left: 15px;
+}
+.effects .img {
+position: relative;
+float: left;
+margin-bottom: 5px;
+width: 25\%;
+overflow: hidden;
+}
+.effects .img:nth-child(n) {
+margin-right: 5px;
+}
+.effects .img:first-child {
+margin-left: -15px;
+}
+.effects .img:last-child {
+margin-right: 0;
+}
+.effects .img img {
+display: block;
+margin: 0;
+padding: 0;
+max-width: 100\%;
+height: auto;
+}
+<p>.overlay {<br>
+display: block;<br>
+position: absolute;<br>
+z-index: 20;<br>
+background: rgba(0, 0, 0, 0.8);<br>
+overflow: hidden;<br>
+transition: all 0.5s;<br>
+}</p>
+<p>a.close-overlay {<br>
+display: block;<br>
+position: absolute;<br>
+top: 0;<br>
+right: 0;<br>
+z-index: 100;<br>
+width: 45px;<br>
+height: 45px;<br>
+font-size: 20px;<br>
+font-weight: 700;<br>
+color: #fff;<br>
+line-height: 45px;<br>
+text-align: center;<br>
+background-color: #000;<br>
+cursor: pointer;<br>
+}<br>
+a.close-overlay.hidden {<br>
+display: none;<br>
+}</p>
+<p>a.expand {<br>
+display: block;<br>
+position: absolute;<br>
+z-index: 100;<br>
+width: 60px;<br>
+height: 60px;<br>
+border: solid 5px #fff;<br>
+text-align: center;<br>
+color: #fff;<br>
+line-height: 50px;<br>
+font-weight: 700;<br>
+font-size: 30px;<br>
+border-radius: 30px;<br>
+}<br>
+</pre></p>
+<p>通过上面的通用CSS样式，已经为遮罩层，链接按钮和关闭按钮提供了必要的样式。下面是效果1的图片遮罩层样式：</p>
+<pre class="brush:css">
+/* ============================================================
+EFFECT 1 - SLIDE IN BOTTOM
+============================================================ */
+#effect-1 .overlay {
+bottom: 0;
+left: 0;
+right: 0;
+width: 100\%;
+height: 0;
+}
+#effect-1 .overlay a.expand {
+left: 0;
+right: 0;
+bottom: 50\%;
+margin: 0 auto -30px auto;
+}
+#effect-1 .img.hover .overlay {
+height: 100\%;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>该图片遮罩层特效使用Modernizr来检测浏览器，并在相应的事件中为图片添加和移除相应的CLASS。</p>
+<pre class="brush:js">
+$(document).ready(function(){
+if (Modernizr.touch) {
+// show the close overlay button
+$(".close-overlay").removeClass("hidden");
+// handle the adding of hover class when clicked
+$(".img").click(function(e){
+if (!$(this).hasClass("hover")) {
+$(this).addClass("hover");
+}
+});
+// handle the closing of the overlay
+$(".close-overlay").click(function(e){
+e.preventDefault();
+e.stopPropagation();
+if ($(this).closest(".img").hasClass("hover")) {
+$(this).closest(".img").removeClass("hover");
+}
+});
+} else {
+// handle the mouseenter functionality
+$(".img").mouseenter(function(){
+$(this).addClass("hover");
+})
+// handle the mouseleave functionality
+.mouseleave(function(){
+$(this).removeClass("hover");
+});
+}
+});
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508031811.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508032350.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1093">
+                                <h3 class="post-title">
+                                    jQuery和CSS3简单的3D旋转木马插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

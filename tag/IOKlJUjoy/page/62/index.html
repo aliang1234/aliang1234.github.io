@@ -1,0 +1,1448 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_248">
+                        简单的jQuery文字动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_248" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1901/201901081532.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单的jQuery文字动画特效插件。该插件通过js代码来修改文字的位置和透明度，来实现简单的文字显示动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款简单的jQuery文字动画特效插件。该插件通过js代码来修改文字的位置和透明度，来实现简单的文字显示动画效果。
+
+ 使用方法
+在页面中引入style.css和jquery.min.js、textyle.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34;&amp;gt;
+&amp;lt;scriptsrc=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;scriptsrc=&#34;js/textyle.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+在页面中创建一些简单的文字。
+
+&amp;lt;p class=&#34;ex1&#34;&amp;gt;TEXTYLE&amp;lt;/p&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该插件。
+
+$(&#39;target&#39;).textyle();
+
+
+ 配置参数
+该jQuery文字动画特效插件的可用配置参数有：
+
+$(&#39;target&#39;).textyle({
+duration : 400,
+delay : 100,
+easing : &#39;swing&#39;,
+callback : null
+});
+
+可以通过jquery.easing.js插件来使用easing缓动效果。
+
+$(&#39;target&#39;).textyle({
+duration : 600,
+delay : 150,
+easing : &#39;linear&#39;,
+callback : function(){
+$(this).css({
+color :&#39;coral&#39;,
+transition :&#39;1s&#39;,
+});
+}
+});
+
+ 该简单的jQuery文字动画特效插件的github网址为：https://github.com/mycreatesite/Textyle.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_248">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_249">
+                        等高卡片布局jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_249" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806291508.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款等高卡片布局jQuery插件。在普通的卡片布局中，卡片会随着文字内容的不同而高度不同，影响布局的美观。通过该jQuery插件，可以，可以使各卡片保存一致的高度，保持界面的美观。
+内容：
+
+
+简要教程
+
+
+这是一款等高卡片布局jQuery插件。在普通的卡片布局中，卡片会随着文字内容的不同而高度不同，影响布局的美观。通过该jQuery插件，可以，可以使各卡片保存一致的高度，保持界面的美观。
+
+
+
+ 安装
+可以通过npm来安装该等高卡片布局jQuery插件。
+
+npm install jquery-equal-height --save
+
+
+ 使用方法
+在页面中引入jquery和jquery-equal-height.min.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery-equal-height.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用该等高卡片布局jQuery插件的基本HTML结构如下：
+
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-6 jQueryEqualHeight&#34;&amp;gt;
+&amp;lt;div class=&#34;card&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕，通过下面的方法来初始化该等高卡片布局jQuery插件。
+
+$(window).on(&#39;load&#39;, function(event) {
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight();
+}); 
+
+默认的卡片选择器是.card ，你可以自定义卡片选择器。
+
+$(window).on(&#39;load&#39;, function(event) {
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight(&#39;.new-card-class&#39;);
+}); 
+
+在浏览器视口大小改变时，可以监听resize事件，重新计算卡片的高度。
+
+$(window).resize(function(event) {
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight();
+});
+
+你还可以设置卡片的不同部分为相等的高度，如标题部分等高，文字部分等高。
+
+$(window).on(&#39;load&#39;, function(event) {
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight(&#39;.card .card-body .card-title&#39;);
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight(&#39;.card .card-body .card-text&#39;);
+$(&#39;.jQueryEqualHeight&#39;).jQueryEqualHeight(&#39;.card&#39;);
+});
+
+ 该等高卡片布局jQuery插件的github地址为：https://github.com/susonwaiba/jquery-equal-height
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_249">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_255">
+                        精美的jQuery科学计算器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_255" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808291502.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jsRapCalculator是一款jQuery科学计算器插件。该科学计算器提供除加减乘除外，还有或和异或、取反、八进制，十六进制和二进制等功能。
+内容：
+
+
+简要教程
+
+
+jsRapCalculator是一款jQuery科学计算器插件。该科学计算器提供除加减乘除外，还有或和异或、取反、八进制，十六进制和二进制等功能。
+
+ 使用方法
+在页面中引入jquery和jsRapCalculator.js文件和样式文件jsRapCalculator.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jsRapCalculator.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/jsRapCalculator.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个div元素作为计算器的容器。
+
+&amp;lt;div id=&#34;example&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+
+$(document).ready(function(){
+$(&#39;#example&#39;).jsRapCalculator({
+name:&#39;CalculatorDemo&#39;
+});
+});
+
+隐藏八进制，十六进制和二进制选项。
+
+$(document).ready(function(){
+$(&#39;#example&#39;).jsRapCalculator({
+name:&#39;CalculatorDemo&#39;,
+showMode: false
+});
+});
+
+隐藏或和异或、取反等选项。
+
+$(document).ready(function(){
+$(&#39;#example&#39;).jsRapCalculator({
+name:&#39;CalculatorDemo&#39;,
+showBitwise: false
+});
+});
+
+禁用计算器的记忆功能。
+
+$(document).ready(function(){
+$(&#39;#example&#39;).jsRapCalculator({
+name: &#39;CalculatorDemo&#39;,
+showHistory: false
+});
+});
+
+ 该jQuery科学计算器插件的github地址为：https://github.com/Thibor/jsRapCalculator
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_255">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_256">
+                        jQuery模态对话框插件jAlert
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_256" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808131426.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jAlert是一款兼容ie8的jQuery模态对话框插件。jAlert可以实现模态对话框，弹出窗口，Lightbox 等，并且在显示对话框时带有炫酷的动画效果。
+内容：
+
+
+简要教程
+
+
+jAlert是一款兼容ie8的jQuery模态对话框插件。jAlert可以实现模态对话框，弹出窗口，Lightbox 等，并且在显示对话框时带有炫酷的动画效果。
+
+ 使用方法
+在页面中引入jQuery和jAlert.js、jAlert.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/jAlert.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jAlert.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+可以通过一个超链接来触发模态对话框。
+
+&amp;lt;a href=&#39;#&#39; data-jAlert data-title=&#39;New jAlert!&#39; data-content=&#39;Great job!&#39;&amp;gt;Click Me&amp;lt;/a&amp;gt;
+
+
+$(function(){
+$.jAlert(&#39;attach&#39;);
+});
+
+如果你不使用jAlert-functions.js，可以安装下面的方法来使用。
+
+$.jAlert({ //this is the normal usage
+&#39;title&#39;: &#39;Test&#39;,
+&#39;content&#39;: &#39;Howdy&#39;,
+&#39;theme&#39;: &#39;green&#39;,
+&#39;size&#39;: &#39;xsm&#39;
+});
+
+如果你添加了jAlert-functions.js文件，可以简单的通过下面的方法实现一个对话框。
+
+alert(&#39;hi&#39;); //override is enabled by default 
+
+你还可以使用下面的方法来实现各种主题效果。
+
+successAlert(&#39;Success&#39;, &#39;You did it!&#39;); //green alert
+errorAlert(&#39;Error&#39;, &#39;It didn\&#39;t work!&#39;); //red alert
+infoAlert(&#39;Info&#39;, &#39;Information!&#39;); //blue alert
+warningAlert(&#39;Warning&#39;, &#39;Warning!&#39;); //yellow alert
+blackAlert(&#39;Warning&#39;, &#39;Warning!&#39;); //black alert (obviously)
+imageAlert(&#39;http://mydomain.com/myimg.jpg&#39;); //optional second param is the image width (defaults to auto)
+videoAlert(&#39;http://youtube.com/viddk35k&#39;);
+ajaxAlert(&#39;http://mydomain.com/myfile.php&#39;); //optional second param is onOpen callback which gets passed the instance of jAlert
+iframeAlert(&#39;http://mydomain.com&#39;); //optional second param is height (defaults to fill the viewport height)
+confirm(function(){
+console.log(&#39;confirmed!&#39;);
+}, function(){
+console.log(&#39;denied&#39;);
+});
+$.fn.jAlert.defaults.backgroundColor = &#39;white&#39;; //override a default setting
+$.fn.jAlert({ //same as $.jAlert when you&#39;re not passing an element - this alert will now have the white background color
+&#39;title&#39;: &#39;Test&#39;,
+&#39;content&#39;: &#39;Howdy&#39;,
+&#39;theme&#39;: &#39;green&#39;,
+&#39;size&#39;: &#39;xsm&#39;
+//&#39;backgroundColor&#39;: &#39;white&#39; //you could also pass it here
+});
+$.fn.jAlert.defaults.backgroundColor = &#39;black&#39;; //set it back to black
+$(&#39;.btn&#39;).alertOnClick({ //this function attaches an onclick handler to .btn and passes the options to jAlert
+&#39;title&#39;: &#39;It worked!&#39;,
+&#39;content&#39;: &#39;You clicked the button&#39;
+});
+$.alertOnClick(&#39;.btn&#39;, { //this function attaches an onclick handler to the body for .btn and kicks off jAlert
+&#39;title&#39;: &#39;Like magic&#39;,
+&#39;content&#39;: &#39;You clicked the button that was dynamically added&#39;
+});
+$.jAlert({ //creates a lightbox for the image - responsive and all
+&#39;image&#39;: &#39;http://mysite.com/my-image.jpg&#39;
+});
+$.jAlert({ //creates a lightbox for the video - responsive and all
+&#39;video&#39;: &#39;http://youtube.com/dflskd&#39;
+});
+$.jAlert({ //creates an alert that fills most of the height with a scrollable iframe
+&#39;iframe&#39;: &#39;http://mysite.com&#39;
+});
+$.jAlert({ //gets content from another file with $.get()
+&#39;ajax&#39;: &#39;my-ajax-content.php&#39;
+});
+
+ 该jQuery模态对话框插件的github地址为：https://github.com/VersatilityWerks/jAlert
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_256">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_257">
+                        jQuery消息通知显示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_257" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1803/201803231649.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+MessageNotifyPlugin是一款简单的jQuery消息通知显示插件。该jQuery消息通知显示插件能够自动生成最新消息和提醒消息两个消息通知按钮。并且可以设置消息的是否已读状态等。
+内容：
+
+
+简要教程
+
+
+MessageNotifyPlugin是一款简单的jQuery消息通知显示插件。该jQuery消息通知显示插件能够自动生成最新消息和提醒消息两个消息通知按钮。并且可以设置消息的是否已读状态等。
+
+ 使用方法
+在页面中引入jquery、message.js和message.css样式文件，以及font-awsome字体图标文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/message.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/message.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;来作为该消息通知显示框的容器。
+
+&amp;lt;div id=&#34;message&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+插件的效果截图如下：
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该消息通知显示插件。
+
+MessagePlugin.init({
+elem: &#34;#message&#34;,
+msgData: [{text: &#34;message1&#34;, id: 1, readStatus: 1},
+{text: &#34;message2&#34;, id: 2, readStatus: 0},
+{text: &#34;message3&#34;, id: 3, readStatus: 0},
+{text: &#34;message4&#34;, id: 4, readStatus: 0},
+{text: &#34;message5&#34;, id: 5, readStatus: 0},
+{text: &#34;message6&#34;, id: 6, readStatus: 0}],
+msgUnReadData: 99,
+noticeUnReadData: 99,
+msgClick: function(obj) {
+alert(&#34;消息点击事件&#34;);
+},
+noticeClick: function(obj) {
+alert(&#34;提醒点击事件&#34;);
+},
+allRead: function(obj) {
+alert(&#34;全部已读&#34;);
+},
+getNodeHtml: function(obj, node) {
+if (obj.readStatus == 1) {
+node.isRead = true;
+} else {
+node.isRead = false;
+}
+var html = &#34;&amp;lt;p&amp;gt;&#34;+ obj.text +&#34;&amp;lt;/p&amp;gt;&#34;;
+node.html = html;
+return node;
+}
+});
+
+ MessageNotifyPlugin jQuery消息通知显示插件的github地址为：https://github.com/Inaho-yzb/MessageNotifyPlugin
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_257">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_258">
+                        炫酷jQuery和SVG遮罩轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_258" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1804/201804231451.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和SVG遮罩轮播图特效。该轮播图特效使用SVG剪裁和遮罩技术，通过snap.svg插件制作轮播图图片过渡特效，支持移动手机，支持键盘控制和滑动控制。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery和SVG遮罩轮播图特效。该轮播图特效使用SVG剪裁和遮罩技术，通过snap.svg插件制作轮播图图片过渡特效，支持移动手机，支持键盘控制和滑动控制。
+
+ 使用方法
+在页面中引入下面的js和CSS文件。
+
+&amp;lt;!-- CSS --&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/path/to/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/slider.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/main.css&#34;&amp;gt;
+&amp;lt;!-- JavaScipt --&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/jquery-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/jquery.mobile.custom.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/snap.svg-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;/path/to/TweenMax.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;js/slider.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该jQuery和SVG遮罩轮播图特效的HTML结构如下。
+
+&amp;lt;div class=&#34;portfolio slider-wrapper&#34;&amp;gt;
+&amp;lt;ul class=&#34;slider&#34; data-step1=&#34;M1402,800h-2V0h1c0.6,0,1,0.4,1,1V800z&#34; data-step2=&#34;M1400,800H379L771.2,0H1399c0.6,0,1,0.4,1,1V800z&#34; data-step3=&#34;M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z&#34; data-step4=&#34;M-2,800h2V0h-1c-0.6,0-1,0.4-1,1V800z&#34; data-step5=&#34;M0,800h1021L628.8,0L1,0C0.4,0,0,0.4,0,1L0,800z&#34; data-step6=&#34;M0,800h1400V0L1,0C0.4,0,0,0.4,0,1L0,800z&#34;&amp;gt;
+&amp;lt;li class=&amp;quot;visible&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;svg-wrapper&amp;quot;&amp;gt;
+&amp;lt;svg viewBox=&amp;quot;0 0 1400 800&amp;quot;&amp;gt;
+&amp;lt;defs&amp;gt;
+&amp;lt;clipPath id=&amp;quot;image-1&amp;quot;&amp;gt;
+&amp;lt;path id=&amp;quot;changing-path-1&amp;quot; d=&amp;quot;M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z&amp;quot;/&amp;gt;
+&amp;lt;/clipPath&amp;gt;
+&amp;lt;/defs&amp;gt;
+&amp;lt;image height=&#39;100%&#39; width=&amp;quot;100%&amp;quot; clip-path=&amp;quot;url(#image-1)&amp;quot; href=&amp;quot;img/2.jpg&amp;quot;&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;div class=&amp;quot;slider__info&amp;quot;&amp;gt;
+&amp;lt;p class=&amp;quot;slider__title text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Karbokam&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #3A7E94&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;slider__desc text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Production of technical carboxymethyl cellulose &amp;lt;br&amp;gt; (CMC) and polyanionic cellulose (PAC)&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #E688A1&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider__link cd-slider-navigation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;next-slide slider__site text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Visit karbokam.ru &amp;lt;img class=&amp;quot;arrow&amp;quot; src=&amp;quot;img/arrow.svg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #3A7E94&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;p class=&amp;quot;slider__visit text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Official website&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #E688A1&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/svg&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .svg-wrapper --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&amp;quot;svg-wrapper&amp;quot;&amp;gt;
+&amp;lt;svg viewBox=&amp;quot;0 0 1400 800&amp;quot;&amp;gt;
+&amp;lt;defs&amp;gt;
+&amp;lt;clipPath id=&amp;quot;image-2&amp;quot;&amp;gt;
+&amp;lt;path id=&amp;quot;changing-path-2&amp;quot; d=&amp;quot;M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z&amp;quot;/&amp;gt;
+&amp;lt;/clipPath&amp;gt;
+&amp;lt;/defs&amp;gt;
+&amp;lt;image height=&#39;100%&#39; width=&amp;quot;100%&amp;quot; clip-path=&amp;quot;url(#image-2)&amp;quot; href=&amp;quot;img/1.jpg&amp;quot;&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;div class=&amp;quot;slider__info&amp;quot;&amp;gt;
+&amp;lt;p class=&amp;quot;slider__title text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;UAZ KD&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #535986&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;slider__desc text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Authorized distributor of UAZ (Ulyanovsk Automobile &amp;lt;br&amp;gt; Plant)&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #DABDB2&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider__link cd-slider-navigation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;next-slide slider__site text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Visit uaz159.ru&amp;lt;img class=&amp;quot;arrow&amp;quot; src=&amp;quot;img/arrow.svg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #535986&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;p class=&amp;quot;slider__visit text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Official website&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #DABDB2&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/svg&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .svg-wrapper --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&amp;quot;svg-wrapper&amp;quot;&amp;gt;
+&amp;lt;svg viewBox=&amp;quot;0 0 1400 800&amp;quot;&amp;gt;
+&amp;lt;defs&amp;gt;
+&amp;lt;clipPath id=&amp;quot;image-3&amp;quot;&amp;gt;
+&amp;lt;path id=&amp;quot;changing-path-3&amp;quot; d=&amp;quot;M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z&amp;quot;/&amp;gt;
+&amp;lt;/clipPath&amp;gt;
+&amp;lt;/defs&amp;gt;
+&amp;lt;image height=&#39;100%&#39; width=&amp;quot;100%&amp;quot; clip-path=&amp;quot;url(#image-3)&amp;quot; href=&amp;quot;img/3.jpg&amp;quot;&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;div class=&amp;quot;slider__info&amp;quot;&amp;gt;
+&amp;lt;p class=&amp;quot;slider__title text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Karbokam&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #1ABDFE&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&amp;quot;slider__desc text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Production of technical carboxymethyl cellulose &amp;lt;br&amp;gt; (CMC) and polyanionic cellulose (PAC)&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #CB1537&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;slider__link cd-slider-navigation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;next-slide slider__site text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__first&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Visit karbokam.ru &amp;lt;img class=&amp;quot;arrow&amp;quot; src=&amp;quot;img/arrow.svg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__first-bg&amp;quot; style=&amp;quot;background-color: #1ABDFE&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;p class=&amp;quot;slider__visit text&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__second&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;text__word&amp;quot;&amp;gt;Official website&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;text__second-bg&amp;quot; style=&amp;quot;background-color: #CB1537&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/svg&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .svg-wrapper --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- .slider --&amp;gt;
+&amp;lt;ol class=&amp;quot;slider-controls&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;selected&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Item 1&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Item 2&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Item 2&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other list items here --&amp;gt;
+&amp;lt;/ol&amp;gt; &amp;lt;!-- .slider-controls --&amp;gt;
+&amp;lt;/div&amp;gt;
+
+ 该jQuery和SVG遮罩轮播图特效的github地址为：https://github.com/alikinvv/svg-mask-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_258">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_259">
+                        jQuery菜单条鼠标跟随线条特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_259" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1804/201804061501.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单的jQuery菜单条鼠标跟随线条特效。该特效在当鼠标在菜单项上移动时，会有线条跟随鼠标在菜单项下面移动，并且线条的长度会随着菜单项的长度而变化。
+内容：
+
+
+简要教程
+
+
+这是一款简单的jQuery菜单条鼠标跟随线条特效。该特效在当鼠标在菜单项上移动时，会有线条跟随鼠标在菜单项下面移动，并且线条的长度会随着菜单项的长度而变化。
+
+ 使用方法
+在页面中引入jquery文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+使用时，菜单的HTML结构如下：
+
+&amp;lt;div class=&#34;menu&#34;&amp;gt;
+&amp;lt;div class=&#34;menu-item current-menu-item&#34;&amp;gt;
+&amp;lt;h6&amp;gt;Home&amp;lt;/h6&amp;gt;
+&amp;lt;div class=&#34;wee&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;h6&amp;gt;Contact&amp;lt;/h6&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;h6&amp;gt;About&amp;lt;/h6&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;h6&amp;gt;Blog&amp;lt;/h6&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;h6&amp;gt;Jobs&amp;lt;/h6&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为菜单添加下面的CSS样式，你可以根据实际情况，添加自己的菜单样式。
+
+.menu {
+width: 100\%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.menu .menu-item {
+position: relative;
+cursor: pointer;
+}
+.menu .menu-item .wee {
+height: 2px;
+width: 100%;
+background-color: #002b75;
+position: absolute;
+left: 0;
+bottom: 0;
+transition: 0.75s;
+}
+.menu .menu-item h6 {
+margin: 0;
+padding: 0 1rem 1.5rem;
+font-size: 1rem;
+color: #232323;
+transition: 0.75s;
+}
+.menu .menu-item:hover h6 { color: #002b75; }
+.menu .current-menu-item h6 { color: #002b75; }
+
+
+ JavaScript
+然后使用下面的jQuery代码来时线条在鼠标移动时，跟随鼠标移动。
+
+$(document).ready(function() {
+$(window).on(&#39;load resize&#39;, function() {
+var $thisnav = $(&#39;.current-menu-item&#39;).offset().left;
+$(&#39;.menu-item&#39;).hover(function() {
+var $left = $(this).offset().left - $thisnav;
+var $width = $(this).outerWidth();
+var $start = 0;
+$(&#39;.wee&#39;).css({ &#39;left&#39;: $left , &#39;width&#39;: $width });
+}, function() {
+var $initwidth = $(&#39;.current-menu-item&#39;).width();
+$(&#39;.wee&#39;).css({ &#39;left&#39;: &#39;0&#39; , &#39;width&#39;: $initwidth });
+});
+});
+}); 
+
+ jQuery菜单条鼠标跟随线条特效的原文地址为：https://codepen.io/cmdeveloped/pen/LdmMwE
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_259">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_261">
+                        简单实用的jQuery Tooltips工具提示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_261" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806151433.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+minimalTips.js是一款简单实用的jQuery Tooltips工具提示插件。该jquery工具提示插件压缩后的版本仅3kb，它不仅支持超链接元素，而且支持段落和span等元素显示tooltips，非常强大。
+内容：
+
+
+简要教程
+
+
+minimalTips.js是一款简单实用的jQuery Tooltips工具提示插件。该jquery工具提示插件压缩后的版本仅3kb，它不仅支持超链接元素，而且支持段落和span等元素显示tooltips，非常强大。
+
+
+
+ 使用方法
+在页面中引入jquery.minimalTips.css、jquery和jquery.minimalTips.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;jquery.minimalTips.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.minimalTips.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以为超链接&amp;lt;a&amp;gt;元素和&amp;lt;span&amp;gt;、&amp;lt;p&amp;gt;等元素添加tooltip效果，显示的内容通过title属性来设置；
+
+&amp;lt;a href=&#34;#&#34; title=&#34;Primeiro link&#34;&amp;gt;这是一个超链接&amp;lt;/a&amp;gt;
+&amp;lt;span class=&#34;mintip&#34; title=&#34;Outro elemento&#34;&amp;gt;这是一个span元素&amp;lt;/span&amp;gt;
+
+
+ CSS样式
+下面是插件自带的tooltips样式，你可以修改它，设置自己的样式。
+
+#MinimalTip {
+font-family: Helvetica, Sans-Serif;
+font-size: 12px;
+color: #EEE;
+border: 1px solid #000;
+background: #222;
+position: absolute;
+padding: 2px 5px;
+display: none;
+max-width: 260px;
+z-index: 3001;
+box-shadow: 1px 1px 2px #000;
+-moz-box-shadow: 1px 1px 2px #000;
+-webkit-box-shadow: 1px 1px 2px #000;
+filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 135, color = &#39;#000000&#39;);
+-ms-filter: &amp;quot;progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 135, Color = &#39;#000000&#39;)&amp;quot;;
+opacity: 0.9;
+-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+filter: alpha(opacity=90);
+-moz-opacity:0.9;
+-webkit-opacity:0.9
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过$.minimalTips();方法来初始化该jquery tooltips工具提示插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(document).ready(function() {
+$.minimalTips();
+});
+&amp;lt;/script&amp;gt;
+
+  jQuery Tooltips工具提示插件的github地址为：https://github.com/vinicius-stutz/jquery-minimal-tips
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_261">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_263">
+                        兼容IE8的jQuery弹窗插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_263" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806011518.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+popup.js是一款兼容IE8的jQuery弹窗插件。该jquery弹窗样式简洁，可实现自动隐藏，点击按钮触发回调函数等功能。
+内容：
+
+
+简要教程
+
+
+popup.js是一款兼容IE8的jQuery弹窗插件。该jquery弹窗样式简洁，可实现自动隐藏，点击按钮触发回调函数等功能。
+
+ 使用方法
+在页面中引入popup.css、jquery以及popup.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/popup.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;popup.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+1、实现普通的消息弹窗（不能自动关闭）
+
+$(&#39;#popupA&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;info&#39;,
+&#39;title&#39;: &#39;提示信息&#39;,
+&#39;text&#39;: &#39;此弹窗为普通信息弹窗，需点击关闭按钮进行关闭&#39;
+});
+})
+
+2、实现普通信息弹窗（弹窗可以自动隐藏）
+
+$(&#39;#popupB&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;info&#39;,
+&#39;title&#39;: &#39;提示信息&#39;,
+&#39;text&#39;: &#39;此弹窗为普通信息弹窗，2秒钟之后自动关闭&#39;,
+&#39;color&#39;: &#39;#fff&#39;,
+&#39;bgcolor&#39;: &#39;#213bfd&#39;,
+&#39;autohide&#39;: true,
+&#39;showtime&#39;: 2000
+});
+})
+
+3、带回调函数的普通信息弹窗（点击关闭按钮调用回调函数）
+
+$(&#39;#popupC&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;info&#39;,
+&#39;title&#39;: &#39;提示信息&#39;,
+&#39;text&#39;: &#39;点击关闭按钮后，可调用回调函数&#39;,
+&#39;closeCallBack&#39;: function(){
+alert(&#39;调用回调函数&#39;);
+}
+})
+})
+
+4、设置了具体宽高的普通信息弹窗，有具体的宽高，但css中设置了弹窗的最小宽度和最小高度，如果设置的宽高小于最小宽高，将按照最小宽高显示。
+
+$(&#39;#popupD&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;info&#39;,
+&#39;title&#39;: &#39;提示信息&#39;,
+&#39;text&#39;: &#39;设置了具体宽高的普通信息弹窗&#39;,
+&#39;width&#39;: &#39;350px&#39;,
+&#39;height&#39;: &#39;200px&#39;
+})
+})
+
+5、信息确认弹窗
+
+$(&#39;#popupE&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;submit&#39;,
+&#39;title&#39;: &#39;请您确认&#39;,
+&#39;text&#39;: &#39;将确认的具体信息填写在此处&#39;
+})
+})
+
+6、带有确认和取消两个按钮的信息确认弹窗
+
+$(&#39;#popupF&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;submit&#39;,
+&#39;title&#39;: &#39;确认或取消&#39;,
+&#39;text&#39;: &#39;带有确认或取消两个按钮的信息确认弹窗&#39;,
+&#39;cancelbutton&#39;: true
+})
+})
+
+7、可配置按钮样式及文字
+
+$(&#39;#popupG&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;submit&#39;,
+&#39;title&#39;: &#39;样式及文字&#39;,
+&#39;text&#39;: &#39;可配置按钮的样式及文字的弹窗&#39;,
+&#39;cancelbutton&#39;: true,
+&#39;submitvalue&#39;: &#39;同意&#39;,
+&#39;submitcolor&#39;: &#39;#fff&#39;,
+&#39;submitbgcolor&#39;: &#39;#0088cc&#39;,
+&#39;submitbordercolor&#39;: &#39;#007fbe&#39;,
+&#39;cancelvalue&#39;: &#39;不同意&#39;,
+&#39;cancelcolor&#39;: &#39;#0088cc&#39;,
+&#39;cancelbgcolor&#39;: &#39;#fff&#39;,
+&#39;cancelbordercolor&#39;: &#39;#0088cc&#39;
+})
+})
+
+8、带有回调函数的信息确认弹窗
+
+$(&#39;#popupH&#39;).click(function(){
+var popup = new Popup({
+&#39;type&#39;: &#39;submit&#39;,
+&#39;title&#39;: &#39;回调函数&#39;,
+&#39;text&#39;: &#39;带有回调函数的信息确认弹窗&#39;,
+&#39;cancelbutton&#39;: true,
+&#39;closeCallBack&#39;: function(){
+alert(&#39;点击了关闭&#39;)
+},
+&#39;submitCallBack&#39;: function(){
+alert(&#39;点击了确认&#39;)
+}
+})
+})
+
+  popup.js兼容IE8的jQuery弹窗插件的github地址为：https://github.com/liaojunhongyue/popup
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_263">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_264">
+                        jQuery和CSS3斑马线样式range滑块特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_264" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807301415.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3斑马线样式range滑块特效。该range滑块通过css3将普通的range滑块渲染成斑马线样式，并通过jquery代码来控制滑块数值的显示。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3斑马线样式range滑块特效。该range滑块通过css3将普通的range滑块渲染成斑马线样式，并通过jquery代码来控制滑块数值的显示。
+
+
+
+ 使用方法
+在页面中引入jquery和bootstrap.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrapcss&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该range滑块的基本HTML结构如下：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row pad-15&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-offset-2 col-md-8&#34;&amp;gt;
+&amp;lt;div class=&#34;range-slider&#34;&amp;gt;
+&amp;lt;input type=&#34;range&#34; value=&#34;150&#34; min=&#34;0&#34; max=&#34;500&#34;&amp;gt;
+&amp;lt;span class=&#34;range-value&#34;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;range-slider&amp;quot;&amp;gt;
+&amp;lt;input type=&amp;quot;range&amp;quot; value=&amp;quot;280&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;500&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;range-value&amp;quot;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;range-slider&amp;quot;&amp;gt;
+&amp;lt;input type=&amp;quot;range&amp;quot; value=&amp;quot;360&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;500&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;range-value&amp;quot;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+然后通过下面的CSS样式来对滑块进行美化，将它渲染为斑马线样式。
+
+.range-slider{ margin: 50px 0 0 0; }
+.range-slider input[type=&#34;range&#34;]{
+width: calc(100\% - (68px));
+height: 12px;
+background: #f8fc04;
+background-image: repeating-linear-gradient(28deg, transparent, transparent 10px, #08b2e3 10px, #08b2e3 20px);
+box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+outline: none;
+float: left;
+-webkit-appearance: none;
+position: relative
+}
+.range-slider input[type=&#34;range&#34;]::-webkit-slider-thumb{
+width: 35px;
+height: 35px;
+background: #2c2144;
+border-left: 5px solid #08b2e3;
+border-right: 5px solid #08b2e3;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+transition: all 0.15s ease 0s;
+}
+.range-slider input[type=&#34;range&#34;]::-webkit-slider-thumb:hover,
+.range-slider input[type=&#34;range&#34;]:active::-webkit-slider-thumb{ background: #08b2e3; }
+.range-slider input[type=&#34;range&#34;]::-moz-range-thumb{
+width: 25px;
+height: 35px;
+background: #2c2144;
+border-radius: 0;
+border: none;
+border-left: 5px solid #08b2e3;
+border-right: 5px solid #08b2e3;
+cursor: pointer;
+transition: all 0.15s ease 0s;
+}
+.range-slider input[type=&#34;range&#34;]::-moz-range-thumb:hover,
+.range-slider input[type=&#34;range&#34;]:active::-moz-range-thumb{ background: #08b2e3; }
+.range-slider .range-value{
+display: inline-block;
+width: 50px;
+height: 50px;
+line-height: 50px;
+background: #fff;
+margin-left: 8px;
+font-size: 15px;
+font-weight: 600;
+color: #000;
+text-align: center;
+position: relative;
+top: -20px;
+-webkit-clip-path: polygon(40\% 0\%, 40\% 20\%, 100\% 20\%, 100\% 80\%, 40\% 80\%, 40\% 100\%, 0\% 50\%);
+clip-path: polygon(40\% 0\%, 40\% 20\%, 100\% 20\%, 100\% 80\%, 40\% 80\%, 40\% 100\%, 0\% 50\%);
+}
+::-moz-range-track{
+background: transparent;
+border: 0;
+}
+
+
+ JavaScript
+最后通过下面的jquery代码，来在拖动滑块时，动态显示滑块的数值。
+
+$(document).ready(function(){
+var rangeSlider = function(){
+var slider = $(&#39;.range-slider&#39;),
+range = $(&#39;.range-slider input[type=&#34;range&#34;]&#39;),
+value = $(&#39;.range-value&#39;);
+slider.each(function(){
+value.each(function(){
+var value = $(this).prev().attr(&#39;value&#39;);
+$(this).html(value);
+});
+range.on(&#39;input&#39;, function(){
+$(this).next(value).html(this.value);
+});
+});
+};
+rangeSlider();
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_264">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/61/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/63/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

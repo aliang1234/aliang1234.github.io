@@ -1,0 +1,395 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Tippy.js-纯js tooltip工具提示插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Tippy.js-纯js tooltip工具提示插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1704/201704051607.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704051607.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704054440.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Tippy.js是一款轻量级的纯js tooltip工具提示插件。该tooltip插件功能强大，提供多种动画效果和主题效果，并允许用户自定义tooltip主题和使用html代码作为tooltip的模板。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Tippy.js是一款轻量级的纯js tooltip工具提示插件。该tooltip插件功能强大，提供多种动画效果和主题效果，并允许用户自定义tooltip主题和使用html代码作为tooltip的模板。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm来安装在Tippy.js插件。</p>
+<pre class="brush:html">
+npm install --save tippy.js
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入tippy.js和tippy.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/tippy.css"&gt;
+&lt;script src='path/to/tippy.js'&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>你需要为使用tooltip的元素设置一个<code>title</code>属性，这个属性中的内容就是tooltip的内容。</p>
+<pre class="brush:html">
+&lt;button class="btn tippy" title="I'm a tooltip!"&gt;tooltip测试&lt;/button&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，通过<code>new Tippy()</code>方法来实例化tooltip。</p>
+<pre class="brush:js">
+new Tippy('.tippy')
+</pre>
+<p>一个完整的使用tippy.js的HTML文档的结构如下：</p>
+<pre class="brush:html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="tippy.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button id="myId" title="Tooltip text"&gt;Button text&lt;/button&gt;
+&lt;script src="tippy.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+new Tippy('#myId')
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>你可以在实例化<code>Tippy</code>对象时以对象的方式传入配置参数，例如：</p>
+<pre class="brush:js">
+new Tippy('.tippy', { position: 'right', animation: 'fade' })
+</pre>
+<p>也可以在HTML中直接以<code>data-*</code>的方式来使用配置参数：</p>
+<pre class="brush:html">
+&lt;button class="btn tippy" title="I'm a tooltip!" 
+data-animatefill="false" 
+data-animation="scale" 
+data-position="bottom"&gt;Overridden&lt;/button&gt; 
+</pre>
+<p>Tippy.js所有可用的配置参数如下：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>可选值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>position</td>
+<td>'top'</td>
+<td>'top' 'bottom' 'left' 'right'</td>
+<td>指定tooltip出现的位置。</td>
+</tr>
+<tr>
+<td>trigger</td>
+<td>'mouseenter focus'</td>
+<td>'mouseenter' 'focus' 'click' 'manual'</td>
+<td>指定触发tooltip的事件。</td>
+</tr>
+<tr>
+<td>interactive</td>
+<td>false</td>
+<td>true false</td>
+<td>toltip是否可互动。</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>0</td>
+<td>&gt;=0的整数</td>
+<td>指定多少毫秒之后才显示tooltip。</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>'shift'</td>
+<td>'shift' 'perspective' 'fade' 'scale' 'none'</td>
+<td>指定tooltip的动画类型。</td>
+</tr>
+<tr>
+<td>arrow</td>
+<td>false</td>
+<td>true false</td>
+<td>是否在tooltip上显示箭头。</td>
+</tr>
+<tr>
+<td>animateFill</td>
+<td>true</td>
+<td>true false</td>
+<td>添加material design风格的动画。如果arrow设置为true，该选项无效。</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>400</td>
+<td>&gt;=0的整数</td>
+<td>tooltip的持续动画时间。</td>
+</tr>
+<tr>
+<td>html</td>
+<td>false</td>
+<td>false或模板的id</td>
+<td>是否允许在tooltip中显示html模板内容。</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>'dark'</td>
+<td>'dark' 'light'</td>
+<td>tooltip的主题。</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>0</td>
+<td>任何数值</td>
+<td>tooltip的偏移值，单位像素。</td>
+</tr>
+<tr>
+<td>hideOnClick</td>
+<td>true</td>
+<td>true false</td>
+<td>指定是否在悬停后单击其元素时隐藏tooltip。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>Tippy.js提供了4个可用的回调函数：</p>
+<pre class="brush:js">
+new Tippy('.tippy', {
+beforeShown: function() {
+// When the tooltip has been triggered and has started to transition in
+},
+shown: function() {
+// When the tooltip has fully transitioned in and is showing
+},
+beforeHidden: function() {
+// When the tooltip has begun to transition out
+},
+hidden: function() {
+// When the tooltip has fully transitioned out and is hidden
+}
+})
+</pre>
+<p>关于Tippy.js tooltip工具提示插件的更多信息，请参考：<a href="https://github.com/atomiks/tippyjs" target="\_blank">https://github.com/atomiks/tippyjs</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704051607.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704054440.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_509">
+                                <h3 class="post-title">
+                                    基于velocity.js过渡动画效果的Bootstrap模态窗口和
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

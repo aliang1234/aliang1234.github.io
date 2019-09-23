@@ -1,0 +1,331 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯JavaScript炫酷鼠标滑过图片放大镜特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯JavaScript炫酷鼠标滑过图片放大镜特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601131647.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601131647.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601133017.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款轻量级的纯JavaScript炫酷鼠标滑过图片放大特效插件。该插件有两种显示形式：鼠标点击和鼠标滑过。两种方式都可以制作出图片放大镜效果，并且还可以将这两种放大镜效果结合在一起使用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款轻量级的纯JavaScript炫酷鼠标滑过图片放大特效插件。该插件有两种显示形式：鼠标点击和鼠标滑过。两种方式都可以制作出图片放大镜效果，并且还可以将这两种放大镜效果结合在一起使用。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过NPM或Bower来安装Drift插件。</p>
+<pre class="brush:html">
+npm install drift-zoom
+bower install drift
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> Luminous鼠标点击放大镜效果</h5>
+<p>下载压缩包，在页面中引入Luminous.js和luminous-basic.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" media="screen, projection" href="dist/luminous-basic.css"&gt;
+&lt;script src="dist/Luminous.js"&gt;&lt;/script&gt;
+</pre>
+<p>Luminous放大镜效果的HTML结构是使用一个超链接元素来包裹一张图片，超链接的地址是高清大图的地址，图片指向的是缩略图。</p>
+<pre class="brush:html">
+&lt;a class="demo-trigger" href="img/wristwatch.jpg"&gt;
+&lt;img src="img/wristwatch-thumb.jpg"&gt;
+&lt;/a&gt;
+</pre>
+<p>完成上面的操作之后，可以通过下面的JS代码来进行初始化。</p>
+<pre class="brush:js">
+var demoTrigger = document.querySelector('.demo-trigger');
+new Luminous(demoTrigger);
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> Drift鼠标滑过放大镜效果</h5>
+<p>下载压缩包，在页面中引入Drift.js和drift-basic.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" media="screen, projection" href="dist/drift-basic.css"&gt;
+&lt;script src="dist/Drift.js"&gt;&lt;/script&gt;
+</pre>
+<p>Drift图片放大镜的HTML结果和Luminous放大镜的区别是它使用<code>data-zoom</code>属性来作为高清大图。</p>
+<pre class="brush:html">
+&lt;img class="demo-trigger" 
+ src="img/wristwatch-thumb.jpg" 
+ data-zoom="img/wristwatch-hd.jpg"&gt;
+</pre>
+<p>初始化Drift图片放大镜插件。</p>
+<pre class="brush:js">
+var demoTrigger = document.querySelector('.demo-trigger');
+new Drift(demoTrigger); 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 结合使用Luminous和Drift</h5>
+<p>Luminous和Drift图片放大镜效果可以结合在一起使用。例如DEMO3的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="wrapper"&gt;
+&lt;a class="demo-trigger" href="img/vintagecameras-hd.jpg"&gt;
+&lt;img src="img/vintagecameras-thumb.jpg"&gt;
+&lt;/a&gt;
+<p>&lt;div class=&quot;detail&quot;&gt;<br>
+&lt;section&gt;<br>
+&lt;h1&gt;......&lt;/h1&gt;<br>
+&lt;p&gt;......&lt;/p&gt;<br>
+&lt;/section&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p>初始化的方法如下：</p>
+<pre class="brush:js">
+var demoTrigger = document.querySelector('.demo-trigger');
+new Drift(demoTrigger, {
+paneContainer: document.querySelector('.detail'),
+inlinePane: 900,
+inlineOffsetY: -85,
+containInline: true,
+sourceAttribute: 'href'
+});
+new Luminous(demoTrigger);
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<code>namespace</code>：生成元素的class名称前缀。默认值：<code>null</code>。</li>
+<li>
+<code>showWhitespaceAtEdges</code>：当接近边部时ZoomPane是否显示白边，默认值是false。</li>
+<li>
+<code>containInline</code>：内部的ZoomPane是否在内部。默认值为false。</li>
+<li>
+<code>inlineOffsetX</code>，<code>inlineOffsetY</code>：How much to offset the ZoomPane from the interaction point when inline.</li>
+<li>
+<code>sourceAttribute</code>：用于指向大图的属性，默认值为：<code>data-zoom</code>。</li>
+<li>
+<code>zoomFactor</code>：图片放大倍数。默认值为3。</li>
+<li>
+<code>paneContainer</code>：添加到非内部放大镜上面的DOM元素。默认值为：<code>document.body</code>。</li>
+<li>
+<code>inlinePane</code>：合适切换到内部放大镜模式。这个取值可以是一个布尔值或一个整数。如果为true，将一直是内部放大镜模式，如果为false，将在`windowWidth &lt;= inlinePane时切换到内部放大镜模式。默认值为375。</li>
+<li>
+<code>handleTouch</code>：如果为true，touch事件将被启用。</li>
+<li>
+<code>onShow</code>：ZoomPane显示时触发。</li>
+<li>
+<code>onHide</code>：ZoomPane隐藏时触发。</li>
+<li>
+<code>injectBaseStyles</code>：在页面中添加基本的样式。</li>
+</ul>
+<p>Drift插件的github地址为：<a href="https://github.com/imgix/drift" target="\_blank">https://github.com/imgix/drift</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601131647.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601133017.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_848">
+                                <h3 class="post-title">
+                                    lightcase.js-智能灵活的jQuery Lightbox插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

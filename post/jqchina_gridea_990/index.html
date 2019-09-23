@@ -1,0 +1,379 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单实用的jQuery左侧固定侧边栏插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单实用的jQuery左侧固定侧边栏插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1509/201509121626.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509121626.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509122562.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery-vertical-navigation是一款简单实用的jQuery左侧固定侧边栏插件。它可以制作多级子菜单，使用Font Awesome作为默认图标，通过简单的设置就可以生成一个漂亮的固定侧边栏菜单。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery-vertical-navigation是一款简单实用的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>左侧固定侧边栏插件。它可以制作多级子菜单，使用Font Awesome作为默认图标，通过简单的设置就可以生成一个漂亮的固定侧边栏菜单。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该侧边栏插件需要引入jQuery，jquery.ssd-vertical-navigation.min.js文件</p>
+<pre class="brush:html">
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.ssd-vertical-navigation.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该侧边栏菜单使用嵌套的无序列表作为菜单项和子菜单项。在菜单的外围，<code>div.contentLeft</code>是侧边栏的包裹容器。<code>div.contentRight</code>是正文内容。</p>
+<pre class="brush:html">
+&lt;div id="contentWrapper"&gt;
+&lt;div id="contentLeft"&gt;
+&lt;ul id="leftNavigation"&gt;
+&lt;li class="active"&gt; &lt;a href="#"&gt;&lt;i class="fa fa-coffee leftNavIcon"&gt;&lt;/i&gt; &lt;a href="#"&gt;Menu&lt;/a&gt; 1 &lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 1.1 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 1.2 &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-flask leftNavIcon"&gt;&lt;/i&gt; Menu 2 &lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 2.1 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 2.2 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 2.3 &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-truck leftNavIcon"&gt;&lt;/i&gt; Menu 3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 3.1 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 3.2 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 3.3 &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-envelope-o leftNavIcon"&gt;&lt;/i&gt; Menu 4 &lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 4.1 &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; &lt;a href="#"&gt;&lt;i class="fa fa-angle-right leftNavIcon"&gt;&lt;/i&gt; Menu 4.2 &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="contentRight"&gt;
+Your main content goes here
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为该侧边栏菜单添加下面的基本CSS样式。要做得更漂亮，你可以自定义这些样式。</p>
+<pre class="brush:css">
+#contentWrapper {
+width: 100\%;
+height: 100\%;
+position: relative;
+}
+#contentLeft {
+z-index: 10;
+width: 250px;
+height: 100\%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #283c51;
+}
+#contentRight {
+padding: 1.3rem 2rem;
+margin-left: 250px;
+}
+#leftNavigation {
+margin: 2rem 0;
+}
+#leftNavigation, #leftNavigation li ul {
+list-style: none;
+padding: 0;
+}
+#leftNavigation li a {
+font-size: 0.875rem;
+display: block;
+padding: 0.8rem 1rem 0.8rem 3rem;
+color: #adadad;
+border-bottom: solid 1px #395673;
+text-overflow: ellipsis;
+overflow: hidden;
+position: relative;
+-webkit-transition: color 0.2s ease;
+transition: color 0.2s ease;
+}
+#leftNavigation li a, #leftNavigation li a .leftNavIcon {
+line-height: 120\%;
+}
+#leftNavigation li a .leftNavIcon {
+position: absolute;
+top: 0;
+left: 0;
+width: 3rem;
+padding: 0.8rem 0;
+text-align: center;
+}
+#leftNavigation li a:hover {
+color: white;
+}
+#leftNavigation li ul {
+display: none;
+margin: 0;
+background-color: #17232f;
+}
+#leftNavigation li ul li a {
+border-bottom: solid 1px #233547;
+}
+#leftNavigation li ul li:last-child a {
+border-bottom: none;
+}
+#leftNavigation li ul li.active a {
+color: white;
+}
+#leftNavigation li.active &gt; a {
+color: white;
+}
+#leftNavigation li.active ul {
+display: block;
+}
+#leftNavigation &gt; li.active {
+background-color: #427c97;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以使用下面的方法来初始化该固定侧边栏插件。</p>
+<pre class="brush:js">
+$(function() {
+var verticalNavigation = new SSDSystem.VerticalNavigation();
+verticalNavigation.init();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<code>classMaster</code>：自动添加到顶级<code>ul</code>元素上的class。默认值：<code>'master'</code>。</li>
+<li>
+<code>classActive</code>：添加到激活的菜单项<code>li</code>元素上的class。默认值：<code>'active'</code>。</li>
+<li>
+<code>classClickable</code>：添加到第一级<code>li</code>元素上的class。默认值：<code>'clickable'</code>。</li>
+</ul>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509121626.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509122562.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_991">
+                                <h3 class="post-title">
+                                    可拖拽文件的jQuery文件上传控件美化插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

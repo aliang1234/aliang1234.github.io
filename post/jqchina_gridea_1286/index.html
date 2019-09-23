@@ -1,0 +1,489 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    实用的轻量级js自动完成autocomplete插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            实用的轻量级js自动完成autocomplete插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502252127.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502252127.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502251420.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Awesomplete是一款实用的轻量级js自动完成autocomplete插件。该autocomplete插件的特点有：轻量级、高度可定制、简单易用、无外部依赖等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Awesomplete是一款实用的轻量级js自动完成autocomplete插件。它的特点有：轻量级、高度可定制、简单易用、无外部依赖等。该js自动完成autocomplete插件支持<a href="http://www.htmleaf.com/html5/" target="\_blank">HTML5</a>的<code>&lt;datalist&gt;</code>属性，该属性只有现代浏览器才支持。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>要使用该自动完成autocomplete插件，首先需要在页面中引入<code>awesomplete.css</code>和<code>awesomplete.js</code>文件：</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="awesomplete.css" /&gt;
+&lt;script src="awesomplete.js" async&gt;&lt;/script&gt;
+</pre>
+<p>该自动完成autocomplete插件的html结构只需要一个<code>&lt;input&gt;</code>元素（也许可以工作在有<code>contentEditable</code>属性的元素，如<code>&lt;textarea&gt;</code>上，但未经测试）。为<code>&lt;input&gt;</code>元素添加class<code>awesomplete</code>，在<code>data-list</code>中填写你想要自动提示的字符串，逗号隔开。你也可以通过js代码来初始化它。</p>
+<pre class="brush:html">
+&lt;input class="awesomplete" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" /&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用datalist</h5>
+<p>可以有多种方式来将一组选项与<code>&lt;input&gt;</code>元素联系起来完成自动提示功能。上面的例子也可以使用下面的方法来编写，下面的写法会在js脚本没有被加载的时候提供一个完美的回退：</p>
+<pre class="brush:html">
+&lt;input class="awesomplete" list="mylist" /&gt;
+&lt;datalist id="mylist"&gt;
+&lt;option&gt;Ada&lt;/option&gt;
+&lt;option&gt;Java&lt;/option&gt;
+&lt;option&gt;JavaScript&lt;/option&gt;
+&lt;option&gt;Brainfuck&lt;/option&gt;
+&lt;option&gt;LOLCODE&lt;/option&gt;
+&lt;option&gt;Node.js&lt;/option&gt;
+&lt;option&gt;Ruby on Rails&lt;/option&gt;
+&lt;/datalist&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用无序列表</h5>
+<p>如果你不想使用<code>&lt;datalist&gt;</code>，可以使用下面的无序列表：</p>
+<pre class="brush:html">
+&lt;input class="awesomplete" data-list="#mylist" /&gt;
+&lt;ul id="mylist"&gt;
+&lt;li&gt;Ada&lt;/li&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;Brainfuck&lt;/li&gt;
+&lt;li&gt;LOLCODE&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Ruby on Rails&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用JS来初始化</h5>
+<p>可以使用下面的方法来使用js初始化该自动完成插件：</p>
+<pre class="brush:html">
+&lt;input id="myinput" /&gt;
+&lt;ul id="mylist"&gt;
+&lt;li&gt;Ada&lt;/li&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;Brainfuck&lt;/li&gt;
+&lt;li&gt;LOLCODE&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Ruby on Rails&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<pre class="brush:js">
+var input = document.getElementById("myinput");
+new Awesomplete(input, {list: "#mylist"});
+</pre>
+<p>或者使用一个选择器来引用列表元素：</p>
+<pre class="brush:js">
+var input = document.getElementById("myinput");
+new Awesomplete(input, {list: document.querySelector("#mylist")});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 直接使用字符串来初始化</h5>
+<p>可以直接使用一个字符串数组来作为列表：</p>
+<pre class="brush:html">
+&lt;input id="myinput" /&gt;
+</pre>
+<pre class="brush:js">
+var input = document.getElementById("myinput");
+new Awesomplete(input, {
+list: ["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"]
+});
+</pre>
+<p>甚至可以在初始化之后再设置（或覆盖）这个数组：</p>
+<pre class="brush:js">
+var input = document.getElementById("myinput");
+var awesomplete = new Awesomplete(input);
+<p>/* ...more code... */</p>
+<p>awesomplete.list = [&quot;Ada&quot;, &quot;Java&quot;, &quot;JavaScript&quot;, &quot;Brainfuck&quot;, &quot;LOLCODE&quot;, &quot;Node.js&quot;, &quot;Ruby on Rails&quot;];<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>下面所有的参数都可以通过在<code>&lt;input&gt;</code>元素中使用<code>data-</code>属性来实现。如果你在<code>&lt;input&gt;</code>元素设置了<code>data-minchars</code>属性，又在js代码中设置了<code>minChars</code>选项，将以HTML属性优先。你可以使用js选项来在自动完成插件被初始化后改变它的配置，这时，即使是HTML属性也会被改变。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>js选项</td>
+<td>HTML属性</td>
+<td>描述</td>
+<td>值</td>
+<td>默认值</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>data-list</td>
+<td>调用自动完成的字符串列表。</td>
+<td><ul>
+<li>字符串数组</li>
+<li>HTML元素</li>
+<li>CSS选择器</li>
+<li>包含逗号的字符串</li>
+</ul></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>minChars</td>
+<td>data-minchars</td>
+<td>用户键入多少个字符才开始自动提示</td>
+<td>Number</td>
+<td>2</td>
+</tr>
+<tr>
+<td>maxItems</td>
+<td>data-maxitems</td>
+<td>显示匹配词的数量</td>
+<td>Number</td>
+<td>10</td>
+</tr>
+<tr>
+<td>autoFirst</td>
+<td>data-autofirst</td>
+<td>第一个元素是否被自动选择？</td>
+<td>Boolean</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 扩展</h5>
+<p>下面的js选项没有对应的HTML属性，因为它们的值是函数。它们允许你在Awesomplete工作时改变设置的属性：</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>属性</td>
+<td>描述</td>
+<td>值</td>
+<td>默认值</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter</td>
+<td>控制匹配的方式。默认情况下，输入的字符串可以匹配任何一处的字符串，并且区分大小写。</td>
+<td>该函数有两个参数：第一个是用于测试的字符串，第二个是用户输入的字符串。如果匹配返回<code>true</code>，不匹配返回<code>false</code>。要想从第一个字符开始匹配，可以使用<code>Awesomplete.FILTER\_STARTSWITH</code>。</td>
+<td>Awesomplete.FILTER\_CONTAINS：可以从任何地方开始匹配，大小写敏感。</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>控制列表元素的顺序。</td>
+<td>Sort function to sort the items after they have been filtered and before they are truncated and converted to HTML elements.</td>
+<td>Sorted by length first, order second.</td>
+</tr>
+<tr>
+<td>item</td>
+<td>控制如何生成列表元素。</td>
+<td>该函数有两个参数：第一个是用于测试的字符串，第二个是用户输入的字符串。返回一个列表元素。</td>
+<td>生成的列表元素通过用户输入的字符串被高亮（通过<code>&lt;mark&gt;</code>）</td>
+</tr>
+<tr>
+<td>replace</td>
+<td>控制使用什么方式来用选择的列表项替换用户输入文本。</td>
+<td>该函数有一个参数：用户选择的文本。使用该文本来替换当前输入的文本。</td>
+<td>function (text) {this.input.value = value;}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>为避免冲突，所有的事件都使用<code>awesomplete-</code>前缀。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>事件名称</td>
+<td>事件描述</td>
+<td>event.preventDefault()?</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>awesomplete-select</td>
+<td>The user has made a selection (either via pressing enter or clicking on an item), but it has not been applied yet.</td>
+<td>Yes. The selection will not be applied and the popup will not close.</td>
+</tr>
+<tr>
+<td>awesomplete-selectcomplete</td>
+<td>The user has made a selection (either via pressing enter or clicking on an item), and it has been applied.</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>awesomplete-open</td>
+<td>The popup just appeared.</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>awesomplete-close</td>
+<td>The popup just closed.</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> API</h3>
+<p>下面是Awesomplete的一些可用方法：</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>方法名称</td>
+<td>方法描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open()</td>
+<td>打开提示框</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>关闭提示框</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>在提示框中高亮下一个选项</td>
+</tr>
+<tr>
+<td>previous()</td>
+<td>在提示框中高亮前一个选项</td>
+</tr>
+<tr>
+<td>goto(i)</td>
+<td>在提示框中高亮第i个选项（设置为-1取消所有的选择），避免使用该方法，尽量使用next()和previous()方法。</td>
+</tr>
+<tr>
+<td>select()</td>
+<td>选择当前高亮的元素使用它来替换input中的文本，并关闭提示框。</td>
+</tr>
+<tr>
+<td>evaluate()</td>
+<td>Evaluates the current state of the widget and regenerates the list of suggestions or closes the popup if none are available. You need to call it if you dynamically set list while the popup is open.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502252127.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502251420.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1287">
+                                <h3 class="post-title">
+                                    jQuery和CSS3创意商品图片预览轮播图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和CSS3通过AJAX调用切换页面过渡动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和CSS3通过AJAX调用切换页面过渡动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1505/201505211530.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1505/201505211530.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201505211875.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常酷的jQuery和CSS3通过AJAX调用切换页面过渡动画特效插件。该页面切换特效使用AJAX来动态加载链接内容，在页面加载的时候，使用CSS3来制作非常酷的页面过渡动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常酷的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>通过AJAX调用切换页面过渡动画特效插件。该页面切换特效使用AJAX来动态加载链接内容，在页面加载的时候，使用<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>来制作非常酷的页面过渡动画效果。插件中使用<code>pushState</code>方法来管理浏览器的浏览历史。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该页面切换特效的HTML结构使用一个<code>&lt;main&gt;</code>元素来作为页面的包裹元素，<code>div.cd-cover-layer</code>用于制作页面切换时的遮罩层，<code>div.cd-loading-bar</code>是进行ajax加载时的loading进度条。</p>
+<pre class="brush:html">
+&lt;main&gt;
+&lt;div class="cd-index cd-main-content"&gt;
+&lt;div&gt;
+&lt;h1&gt;Page Transition&lt;/h1&gt;
+&lt;!-- your content here --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+<p>&lt;div class=&quot;cd-cover-layer&quot;&gt;&lt;/div&gt; &lt;!-- this is the cover layer --&gt;</p>
+<p>&lt;div class=&quot;cd-loading-bar&quot;&gt;&lt;/div&gt; &lt;!-- this is the loading bar --&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>该页面切换特效中使用<code>body::before</code>和<code>body::after</code>伪元素在页面切换过程中创建两个遮罩层来遮住页面内容。它们的定位是固定定位，高度等于50vh，宽度为100\%。默认情况下，使用CSS transform属性将它们隐藏起来（<code>translateY(-100\%)/translateY(100\%)</code>）。当用户切换页面的时候，这些元素被移动回视口当中（通过在<code>&lt;body&gt;</code>元素上添加<code>.page-is-changing</code> class）。</p>
+<p>下面的图片演示了这个过程：</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1505/page-transition.gif" alt="页面切换特效" width="600" height="450"></p>
+<pre class="brush:css">
+body::after, body::before {
+/* these are the 2 half blocks which cover the content once the animation is triggered */
+height: 50vh;
+width: 100\%;
+position: fixed;
+left: 0;
+}
+body::before {
+top: 0;
+transform: translateY(-100\%);
+}
+body::after {
+bottom: 0;
+transform: translateY(100\%);
+}
+body.page-is-changing::after, body.page-is-changing::before {
+transform: translateY(0);
+}
+</pre>
+<p>页面切换时，页面内容的淡入淡出效果是通过改变<code>div.cd-cover-layer</code>的透明度实现的。它覆盖了<code>.cd-main-content</code>元素，并具有相同的背景色，然后在<code>&lt;body&gt;</code>被添加<code>.page-is-changing</code> class的时候，将透明度从0修改为1。</p>
+<p>Loading进度条使用<code>.cd-loading-bar::before</code>伪元素来制作。默认它被缩小（<code>scaleX(0)</code>）和<code>transform-origin: left center</code>。当页面切换开始时它被使用<code>scaleX(1)</code>放大会原来的尺寸。</p>
+<pre class="brush:css">
+.cd-loading-bar {
+/* this is the loading bar - visible while switching from one page to the following one */
+position: fixed;
+height: 2px;
+width: 90\%;
+}
+.cd-loading-bar::before {
+/* this is the progress bar inside the loading bar */
+position: absolute;
+left: 0;
+top: 0;
+height: 100\%;
+width: 100\%;
+transform: scaleX(0);
+transform-origin: left center;
+}
+.page-is-changing .cd-loading-bar::before {
+transform: scaleX(1);
+}
+</pre>
+<p>特效中平滑的过渡效果使用CSS Transitions来实现。每一个动画元素都被添加了不同的<code>transition-delay</code>，以实现不同的元素动画顺序。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>该页面切换特效中在链接上使用<code>data-type="page-transition"</code>属性，用于触发页面切换事件。当插件检测到用户点击事件，<code>changePage()</code>方法将被执行。</p>
+<pre class="brush:js">
+$('main').on('click', '[data-type="page-transition"]', function(event){
+event.preventDefault();
+//detect which page has been selected
+var newPage = $(this).attr('href');
+//if the page is not animating - trigger animation
+if( !isAnimating ) changePage(newPage, true);
+});
+</pre>
+<p>这个方法会触发页面切换动画，并通过<code>loadNewContent()</code>方法加载新内容。</p>
+<pre class="brush:js">
+function changePage(url, bool) {
+isAnimating = true;
+// trigger page animation
+$('body').addClass('page-is-changing');
+//...
+loadNewContent(url, bool);
+//...
+}
+</pre>
+<p>当新的内容被加载后，会替代原来<code>&lt;main&gt;</code>元素中的内容。<code>.page-is-changing</code> class被从body中移除，新加载的内容会被添加到window.history中（使用<code>pushState()</code>方法）。</p>
+<pre class="brush:js">
+function loadNewContent(url, bool) {
+var newSectionName = 'cd-'+url.replace('.html', ''),
+section = $('&lt;div class="cd-main-content '+newSectionName+'"&gt;&lt;/div&gt;');
+<p>section.load(url+' .cd-main-content &gt; *', function(event){<br>
+// load new content and replace &lt;main&gt; content with the new one<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>m</mi><mi>a</mi><mi>i</mi><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>h</mi><mi>t</mi><mi>m</mi><mi>l</mi><mo>(</mo><mi>s</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(&#x27;main&#x27;).html(section);
+//...
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>('body').removeClass('page-is-changing');<br>
+//...</p>
+<p>if(url != window.location){<br>
+//add the new page to the window.history<br>
+window.history.pushState({path: url},'',url);<br>
+}<br>
+});<br>
+}<br>
+</pre></p>
+<p>为了在用户点击浏览器的回退按钮时触发相同的页面切换动画效果，插件中监听<code>popstate</code>事件，并在它触发时执行<code>changePage()</code>函数。</p>
+<pre class="brush:js">
+$(window).on('popstate', function() {
+var newPageArray = location.pathname.split('/'),
+//this is the url of the page to be loaded 
+newPage = newPageArray[newPageArray.length - 1];
+if( !isAnimating ) changePage(newPage);
+});
+</pre>
+<p>关于<code>popstate</code>事件和浏览器是如何处理它的，你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/Events/popstate" target="\_blank">这里</a>获得更多的信息。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1505/201505211530.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201505211875.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1201">
+                                <h3 class="post-title">
+                                    Bootstrap响应式tabs选项卡转下拉列表框jQuery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

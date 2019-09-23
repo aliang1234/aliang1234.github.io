@@ -1,0 +1,479 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery响应式隐藏滑动侧边栏插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery响应式隐藏滑动侧边栏插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1507/201507011653.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507011653.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507012144.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>flyPanels是一款非常实用的jQuery响应式隐藏滑动侧边栏插件。该侧边栏菜单插件可以兼容包括IE9在内的所有现代浏览器。可以用它来做侧边栏菜单，联系表单或搜索面板组件等等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>flyPanels是一款非常实用的响应式隐藏滑动侧边栏<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。该侧边栏菜单插件可以兼容包括IE9在内的所有现代浏览器。可以用它来做侧边栏菜单，联系表单或搜索面板组件等等。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以使用bower来安装该侧边栏插件。</p>
+<pre class="brush:html">
+bower install flyPanels --save
+</pre>
+<p>在页面中引入jQuery和jquery.flyPanels.js以及flyPanels.css文件。</p>
+<pre class="brush:html">
+&lt;!-- You'll need jquery --&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.flyPanels.js"&gt;&lt;/script&gt;
+<p>&lt;!-- Some basic CSS is required of course --&gt;<br>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/flyPanels.css&quot;&gt;<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本HTML结构</h5>
+<p>该隐藏滑动侧边栏的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="flypanels-container preload"&gt;
+&lt;div class="offcanvas flypanels-left"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;panel content goes here&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-main"&gt;
+&lt;div class="flypanels-topbar"&gt;
+&lt;a class="flypanels-button-left icon-menu" data-panel="default" href="#"&gt;&lt;/a&gt;
+&lt;a class="flypanels-button-right icon-menu" data-panel="default" href="#"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-content"&gt;
+你的页面内容放置在这里...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas flypanels-right"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;panel content goes here&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 多内容面板HTML结构</h5>
+<p>你可以使用<code>data-panel</code>属性设置多个不同的隐藏侧边栏面板，在按下不同的按钮时触发不同的面板。</p>
+<pre class="brush:html">
+&lt;div class="flypanels-container preload"&gt;
+&lt;div class="offcanvas flypanels-left"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;左边默认面板&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="panelcontent" data-panel="more"&gt;
+&lt;p&gt;左边附加面板&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-main"&gt;
+&lt;div class="flypanels-topbar"&gt;
+&lt;a class="flypanels-button-left icon-menu" data-panel="default" href="#"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="flypanels-button-left icon-menu" data-panel="more" href="#"&gt;&lt;i class="fa fa-gears"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="flypanels-button-right icon-menu" data-panel="default" href="#"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-content"&gt;
+你的页面内容放这里...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas flypanels-right"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;右边默认面板&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用树形菜单面板</h5>
+<p>如果你需要使用树形菜单面板，需要在配置参数中将<code>treeMenu</code>的初始化选项设置为<code>true</code>，同时添加必要的HTML结构。</p>
+<pre class="brush:js">
+jQuery(document).ready(function($) {
+$(document).ready(function(){
+$('.flypanels-container').flyPanels({
+treeMenu: {
+init: true
+}
+});
+});
+});
+</pre>
+<pre class="brush:html">
+&lt;div class="flypanels-container preload"&gt;
+&lt;div class="offcanvas flypanels-left"&gt;
+&lt;div class="panelcontent" data-panel="treemenu"&gt;
+&lt;nav class="flypanels-treemenu"&gt;
+&lt;ul&gt;
+&lt;li class="haschildren"&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt; &lt;span class="expand"&gt;2&lt;i class="fa icon"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li class="haschildren"&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt; &lt;span class="expand"&gt;2&lt;i class="fa icon"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li class="haschildren"&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt; &lt;span class="expand"&gt;2&lt;i class="fa icon"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li class="haschildren"&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt; &lt;span class="expand"&gt;2&lt;i class="fa icon"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="link"&gt;Example menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-main"&gt;
+&lt;div class="flypanels-topbar"&gt;
+&lt;a class="flypanels-button-left icon-menu" data-panel="treemenu" href="#"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="flypanels-button-right icon-menu" data-panel="default" href="#"&gt;&lt;i class="fa fa-gears"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-content"&gt;
+你的页面内容放这里...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas flypanels-right"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;panel content goes here&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 用于作为搜索面板组件</h5>
+<p>要使用搜索面板组件，需要在配置参数中将<code>search</code>的初始化选项设置为<code>true</code>，同时添加必要的HTML结构。</p>
+<pre class="brush:js">
+jQuery(document).ready(function($) {
+$(document).ready(function(){
+$('.flypanels-container').flyPanels({
+search: {
+init: true,
+saveQueryCookie: true
+}
+});
+});
+});
+</pre>
+<pre class="brush:html">
+&lt;div class="flypanels-container preload"&gt;
+&lt;div class="offcanvas flypanels-left"&gt;
+&lt;div class="panelcontent" data-panel="default"&gt;
+&lt;p&gt;panel content goes here&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-main"&gt;
+&lt;div class="flypanels-topbar"&gt;
+&lt;a class="flypanels-button-left icon-menu" data-panel="default" href="#"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="flypanels-button-right icon-menu" data-panel="search" href="#"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="flypanels-content"&gt;
+Your page content goes here...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="offcanvas flypanels-right"&gt;
+&lt;div class="panelcontent" data-panel="search"&gt;
+&lt;div class="searchbox" data-searchurl="json/searchresult.json?search=true"&gt;
+&lt;input type="text" /&gt;
+&lt;a href="#" class="searchbutton"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="resultinfo" style="display:none"&gt;
+You search for "&lt;span class="query"&gt;lorem ipsum&lt;/span&gt;" resulted in &lt;span class="num"&gt;5&lt;/span&gt; hits.
+&lt;/div&gt;
+&lt;div class="errormsg" style="display:none"&gt;
+Something went wrong, please refresh the page and try again.
+&lt;/div&gt;
+<p>&lt;div class=&quot;loading&quot; style=&quot;display:none&quot;&gt;&lt;div class=&quot;loader&quot;&gt;&lt;/div&gt;&lt;span&gt;Searching...&lt;/span&gt;&lt;/div&gt;<br>
+&lt;nav class=&quot;flypanels-searchresult&quot; style=&quot;display:none&quot;&gt;&lt;/nav&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<pre class="brush:js">
+$(document).ready(function(){
+$('.flypanels-container').flyPanels();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>下面是该隐藏侧边栏插件的配置参数：</p>
+<pre class="brush:js">
+options: {
+treeMenu: {
+init: false,
+expandHandler: 'span.expand'
+},
+search = {
+init: false,
+saveQueryCookie: false
+},
+onInit: function () {},
+onLoad: function () {},
+onOpenLeft: function () {},
+onOpenRight: function () {},
+onCloseLeft: function () {},
+onCloseRight: function () {},
+onDestroy: function () {}
+};
+</pre>
+<ul>
+<li>
+<code>treeMenu</code>：
+<ul>
+<li>
+<code>init</code>：Boolean，是否初始化属性菜单。</li>
+<li>
+<code>expandHandler</code>：String，打开和关闭元素子按钮时的点击事件。</li>
+</ul>
+</li>
+<li>
+<code>search</code>：
+<ul>
+<li>
+<code>init</code>：Boolean，是否初始化搜索面板组件。</li>
+<li>
+<code>saveQueryCookie</code>：Boolean，使用将搜索结果记录在cookie中以记住最后的搜索结果。</li>
+</ul>
+</li>
+<li>
+<code>onInit</code>：侧边栏插件初始化后的回调函数。</li>
+<li>
+<code>onLoad</code>：侧边栏插件被调用之后的回调函数。</li>
+<li>
+<code>onOpenLeft</code>：屏幕左边的隐藏侧边栏被打开后的回调函数。</li>
+<li>
+<code>onOpenRight</code>：屏幕右边的隐藏侧边栏被打开后的回调函数。</li>
+<li>
+<code>onCloseLeft</code>：屏幕左边的隐藏侧边栏被关闭后的回调函数。</li>
+<li>
+<code>onCloseRight</code>：屏幕右边的隐藏侧边栏被关闭后的回调函数。</li>
+<li>
+<code>onDestroy</code>：在侧边栏插件被销毁时的回调函数。</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507011653.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507012144.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1132">
+                                <h3 class="post-title">
+                                    基于animate.css的响应式jQuery轮播图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

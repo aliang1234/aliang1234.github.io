@@ -1,0 +1,337 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3带全屏背景图片可放大的栏目导航特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3带全屏背景图片可放大的栏目导航特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501021600.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501021600.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501021074.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果炫酷的jQuery和css3可全屏放大的网站栏目导航菜单特效插件。该导航菜单插件将栏目以背景图片的方式平均分配放置在页面上，鼠标滑过菜单项时，背景图片显示并有轻微放大效果，点击菜单项后可全屏放大。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常酷的jQuery和css3可全屏放大的网站栏目导航菜单特效插件。通过CSS Transitions我们可以制作从A点到B点的平滑动画效果。在这个插件中，我们使用CSS Transitions 和 Transformations以及CSS background-attachment实现来制作一种菜单的"diving-in"效果。</p>
+<h3>HTML结构</h3>
+<p>html结构使用一个div包裹一个无序列表。每一个列表项都包含一个<span class="m">div.cd-title</span>和一个<span class="m">div.cd-project-info</span>。列表图片使用列表项的<span class="m">::after</span>伪元素来制作背景图像。</p>
+<pre class="brush:html">
+&lt;div class="projects-container"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="cd-title"&gt;
+&lt;h2&gt;Project 1&lt;/h2&gt;
+&lt;p&gt;Brief description of the project here&lt;/p&gt;
+&lt;/div&gt; &lt;!-- .cd-title --&gt;
+<p>&lt;div class=&quot;cd-project-info&quot;&gt;<br>
+&lt;p&gt;&lt;!-- your content here --&gt;&lt;/p&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-project-info --&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;li&gt;<br>
+&lt;!-- .... --&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;!-- .... --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;cd-close&quot;&gt;Close&lt;/a&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;cd-scroll&quot;&gt;Scroll&lt;/a&gt;<br>
+&lt;/div&gt; &lt;!-- .project-container --&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>在小屏幕上，每一个菜单项的图片宽度等于屏幕的宽度，高度等于1/4屏幕高度（因为这个DEMO有4个项目）。并设置一个<span class="m">translateX(-100\%)</span>使它移动到屏幕外面。在背景图片被加载后（使用jQuery），列表项被添加class <span class="m"> .is-loaded </span>（<span class="m"> .is-loaded </span>的作用是设置<span class="m">translateX(0)</span>），将它们移回屏幕中来。这里使用CSS3 transitions来使动画平滑过渡。</p>
+<pre class="brush:css">
+.projects-container li {
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+height: 25\%;
+transition: transform 0.4s;
+/* on mobile -move items outside the viewport */
+transform: translateX(-100\%);
+}
+.projects-container li.is-loaded {
+/* move items in the viewport when background images have been loaded */
+transform: translateX(0);
+}
+.projects-container li::after {
+/* background image */
+background-image: url("../img/img-1-small.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+}
+.projects-container li:nth-of-type(2) {
+top: 25vh;
+}
+.projects-container li:nth-of-type(2)::after {
+background-image: url("../img/img-2-small.jpg");
+}
+/*other projects*/
+</pre>
+<p>当用户点击了一个菜单项，该菜单项被添加class <span class="m">.is-full-width</span>：当<span class="m"> .cd-project-info</span>可见时，<span class="m">::after</span>伪元素的高度被设置为100vh(<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/20141224972.html" target="\_blank"> 快速了解vh </a>)。</p>
+<pre class="brush:css">
+.projects-container li.is-full-width {
+/* selected item */
+top: 0;
+height: auto;
+z-index: 1;
+}
+.projects-container li.is-full-width::after {
+height: 100vh;
+}
+<p>.cd-project-info {<br>
+visibility: hidden;<br>
+opacity: 0;<br>
+}<br>
+.is-full-width .cd-project-info {<br>
+visibility: visible;<br>
+opacity: 1;<br>
+}<br>
+</pre></p>
+<p>在大屏幕上，每一个菜单项的高度等于屏幕的高度，宽度等于1/4屏幕宽度。菜单项的<span class="m">::after</span>伪元素的<span class="m">background-attachment</span>属性被设置为<span class="m"> fixed: </span>。这样，图片可以固定在屏幕上，不会随屏幕而滚动，并通过设置<span class="m">background-size: cover</span>是背景图片全屏。（<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/20141229997.html" target="\_blank">快速了解background-size: cover用法</a>）</p>
+<div class="alert alert-warning" role="alert">注意：我们已经使用菜单项的<span class="m">::before</span>伪元素来包含背景图片的URL属性（它用来检测背景图片是否被加载）。所以，在你设置每一个新的菜单项的<span class="m">::after</span>伪元素时，你需要更新它包含的<span class="m">::before</span>伪元素的内容。</div>
+<pre class="brush:css">
+.projects-container li::after {
+background-image: url("../img/img-1-small.jpg");
+}
+.projects-container li::before {
+/* never visible - this is used in jQuery to detect if the background image has been loaded*/
+content: 'img/img-1-small.jpg';
+display: none;
+}
+@media only screen and (min-width: 1024px) {
+.projects-container li:first-of-type::after {
+background-image: url("../img/img-1-large.jpg");
+}
+.projects-container li:first-of-type::before {
+content: 'img/img-1-large.jpg';
+}
+}
+/*other projects*/
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>我们使用jQuery来检测背景图片是否被加载，当背景图片被加载完毕，通过<span class="m">showCaption()</span>函数来为每一个菜单项添加<span class="m">.is-loaded</span>类。另外，<span class="m"> .cd-close</span>和菜单项上的click事件用于放大和关闭菜单项。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501021600.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501021074.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1435">
+                                <h3 class="post-title">
+                                    jQuery文章底部弹出相关文章列表插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

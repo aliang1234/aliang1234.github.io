@@ -1,0 +1,351 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    可自由配置的jQuery消息提示框插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            可自由配置的jQuery消息提示框插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1606/201606051515.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606051515.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606053561.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery.toast.js是一款可自由配置的jQuery消息提示框插件。该消息提示框可以自定义背景和前景色，提示框的位置，提示框的显示时间，提示框的动画效果等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery.toast.js是一款可自由配置的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>消息提示框插件。该消息提示框可以自定义背景和前景色，提示框的位置，提示框的显示时间，提示框的动画效果等。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower或npm来安装该消息提示框插件。</p>
+<pre class="brush:html">
+bower install jquery-toast-plugin
+npm install jquery-toast-plugin
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery.toast.css文件，jquery和jquery.toast.js文件。</p>
+<pre class="brush:html">
+&lt;link type="text/css" rel="stylesheet" href="css/jquery.toast.css"&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.toast.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>简单文本的消息提示框：</p>
+<pre class="brush:js">
+// Non sticky version
+$.toast("Lorem ipsum dolor sit amet...")
+// Sticky version
+$.toast({
+text : "Lorem ipsum dolor sit amet...",
+hideAfter : false
+})
+</pre>
+<p>使用HTML标签的消息提示框：</p>
+<pre class="brush:js">
+// Non sticky
+$.toast("Let's test some HTML stuff... &lt;a href='#'&gt;github&lt;/a&gt;")
+// sticky
+$.toast({
+text : "&lt;strong&gt;Remember!&lt;/strong&gt; You can &lt;span style='font-weight: bold; color:red;' class='horribly-styled'&gt;always&lt;/span&gt; introduce your own × HTML and &lt;span style='font-size: 18px;'&gt;CSS&lt;/span&gt; in the toast.",
+hideAfter : false
+})
+</pre>
+<p>使用数组作为列表元素的消息提示框：</p>
+<pre class="brush:js">
+// Non sticky version
+$.toast(["Ubuntu : One of it's kind", "Sublime Text : Productivity unleashed", "HeidiSQL : Just love it", "Github : Just Lovely"])
+// Sticky version
+$.toast({
+text : ["Ubuntu : One of it's kind", "Sublime Text : Productivity unleashed", "HeidiSQL : Just love it", "Github : Just Lovely"],
+hideAfter : false
+}) 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>自定义动画：</p>
+<pre class="brush:js">
+$.toast({ 
+text : "Let's test some HTML stuff... &lt;a href='#'&gt;github&lt;/a&gt;", 
+showHideTransition : 'slide'// It can be plain, fade or slide
+})
+</pre>
+<p>自定义消息提示框的样式：</p>
+<pre class="brush:js">
+$.toast({ 
+text : "......", 
+showHideTransition : 'slide',
+bgColor : 'blue',
+textColor : '#eee',
+allowToastClose : false,
+hideAfter : 5000,
+stack : 5,
+textAlign : 'left',
+position : 'bottom-left'
+}) 
+</pre>
+<ul>
+<li>
+<code>text</code>：消息提示框的内容。</li>
+<li>
+<code>showHideTransition</code>：消息提示框的动画效果。可取值：plain，fade，slide。</li>
+<li>
+<code>bgColor</code>：背景颜色。</li>
+<li>
+<code>textColor</code>：文字颜色。</li>
+<li>
+<code>allowToastClose</code>：是否显示关闭按钮。</li>
+<li>
+<code>hideAfter</code>：设置为false则消息提示框不自动关闭。设置为一个数值则在指定的毫秒之后自动关闭消息提示框。</li>
+<li>
+<code>stack</code>：消息栈。</li>
+<li>
+<code>textAlign</code>：文本对齐：left, right, center。</li>
+<li>
+<code>position</code>：消息提示框的位置：bottom-left 、 bottom-right 、 bottom-center 、 top-left 、 top-right 、 top-center 、 mid-center。</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 重置消息提示框</h5>
+<pre class="brush:js">
+var myToast = $.toast('Some toast that needs to be removed.');
+myToast.reset(); // remove the toast "Some toast that needs to be removed"
+</pre>
+<p>可以通过下面的方法来重置所有的消息提示框：</p>
+<pre class="brush:js">
+$.toast().reset('all');
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 更新消息提示框</h5>
+<p>你可以通过下面的方法来更新页面上的消息提示框：</p>
+<pre class="brush:js">
+var myToast = $.toast({
+text : 'Some toast that needs to show the success message after the ajax call.',
+hideAfter : false,
+bgColor : '#E01A31'
+});
+<p>window.setTimeout(function(){<br>
+myToast.update({<br>
+text : '&lt;strong&gt;Updated after a few seconds&lt;/strong&gt;',<br>
+bgColor : '#23B65D'<br>
+});<br>
+}, 5000);<br>
+</pre></p>
+<p>jquery.toast.js消息提示框插件的github地址为：<a href="https://github.com/kamranahmedse/jquery-toast-plugin" target="\_blank">https://github.com/kamranahmedse/jquery-toast-plugin</a>。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606051515.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606053561.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_755">
+                                <h3 class="post-title">
+                                    响应式无限轮播jQuery旋转木马插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

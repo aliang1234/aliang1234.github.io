@@ -1,0 +1,303 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery炫酷点击变形全屏放大的模态窗口 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery炫酷点击变形全屏放大的模态窗口
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501291813.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501291813.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501291297.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的点击变形全屏放大的jQuery模态窗口插件。该模态窗口插件当用户点击某个按钮时，按钮先变形缩小变为圆形，然后在由小圆到大圆全屏放大，效果非常酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常炫酷的点击变形全屏放大的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>模态窗口插件。该模态窗口插件当用户点击某个按钮时，按钮先缩小变形为圆形，然后在由小圆到大圆全屏放大，效果非常酷。最后在生成模态窗口的时候的动画效果使用jQuery和<a href="http://julian.com/research/velocity/" target="\_blank">Velocity</a>以及<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a> transition 和 transformations共同完成。</p>
+<h3>HTML结构</h3>
+<p>该模态窗口的HTML结构非常简单：使用<code> .cd-section </code>作为wrapper，<code>.cd-modal-action</code>是用于触发模态窗口的按钮，<code>.cd-modal</code>是模态窗口。<code>.cd-modal-bg</code>用于制作模态窗口的背景，模态窗口中的内容被包裹在<code> .cd-modal-content</code>中。</p>
+<pre class="brush:html">
+&lt;section class="cd-section"&gt;
+&lt;!-- section content here --&gt;
+<p>&lt;div class=&quot;cd-modal-action&quot;&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;btn&quot; data-type=&quot;modal-trigger&quot;&gt;Fire Modal Window&lt;/a&gt;<br>
+&lt;span class=&quot;cd-modal-bg&quot;&gt;&lt;/span&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;div class=&quot;cd-modal&quot;&gt;<br>
+&lt;div class=&quot;cd-modal-content&quot;&gt;<br>
+&lt;!-- modal content here --&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;a href=&quot;#0&quot; class=&quot;cd-modal-close&quot;&gt;Close&lt;/a&gt;<br>
+&lt;/section&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>该模态窗口插件使用<code>.cd-modal-bg</code>来制作模态窗口的背景：开始的时候它是absolute定位，放置在<code>.btn</code>按钮的恩下吧，并用<code>visibility: hidden</code>来隐藏它。</p>
+<p>当用户点击了按钮，<code>.btn</code>按钮变形为一个圆形（使用<code>.to-circle</code> class），这时<code>.cd-modal-bg</code>变为可见状态，并开始增大覆盖整个窗口。缩放值依赖于窗口的大小，这个值使用js来获取。</p>
+<pre class="brush:css">
+.cd-modal-action {
+position: relative;
+}
+.cd-modal-action .btn {
+width: 12.5em;
+height: 4em;
+background-color: #123758;
+border-radius: 5em;
+transition: color 0.2s 0.3s, width 0.3s 0s;
+}
+.cd-modal-action .btn.to-circle {
+width: 4em;
+color: transparent;
+transition: color 0.2s 0s, width 0.3s 0.2s;
+}
+.cd-modal-action .cd-modal-bg {
+position: absolute;
+top: 0;
+left: 50\%;
+transform: translateX(-2em);
+width: 4em;
+height: 4em;
+background-color: #123758;
+border-radius: 50\%;
+opacity: 0;
+visibility: hidden;
+transition: visibility 0s 0.5s;
+}
+.cd-modal-action .cd-modal-bg.is-visible {
+opacity: 1;
+visibility: visible;
+}
+</pre>
+<p>在增长动画结束时，模态窗口变为可见（通过<code>.modal-is-visible </code> class），模态窗口中的内容被显示出来。</p>
+<h3>事件处理</h3>
+<p>该模态窗口插件中使用<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>来获取那些CSS不能获取的值：<code>.cd-modal-bg</code>背景的缩放值和它的左边和上边的位置。</p>
+<p>例如下面的代码是如何获取背景的缩放值：</p>
+<pre class="brush:js">
+var btnRadius = $('.cd-modal-bg').width()/2,
+left = $('.cd-modal-bg').offset().left + btnRadius,
+top = $('.cd-modal-bg').offset().top + btnRadius - $(window).scrollTop(),
+scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+<p>function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {<br>
+var maxDistHor = ( leftValue &gt; windowW/2) ? leftValue : (windowW - leftValue),<br>
+maxDistVert = ( topValue &gt; windowH/2) ? topValue : (windowH - topValue);<br>
+return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);<br>
+}<br>
+</pre></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501291813.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501291297.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1348">
+                                <h3 class="post-title">
+                                    jQuery和CSS3扁平化风格滑动面板
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

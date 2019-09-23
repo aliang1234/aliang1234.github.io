@@ -1,0 +1,335 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery炫酷鼠标滑过菜单高亮菜单项动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery炫酷鼠标滑过菜单高亮菜单项动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508271627.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508271627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508272481.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jQuery Gooey Menu是一款可以制作炫酷的鼠标滑过菜单动画特效的jQuery插件。当鼠标滑过菜单项时，指定的CSS样式会跟随鼠标在菜单上运动，以平滑的动画方式高亮当前鼠标指向的菜单项。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jQuery Gooey Menu是一款可以制作炫酷的鼠标滑过菜单动画特效的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。当鼠标滑过菜单项时，指定的CSS样式会跟随鼠标在菜单上运动，以平滑的动画方式高亮当前鼠标指向的菜单项。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该插件需要引入jQuery，gooeymenu.js和gooeymenu.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="css/gooeymenu.css"/&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/gooeymenu.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该菜单插件的基本HTML结构使用无序列表。</p>
+<pre class="brush:html">
+&lt;ul id="gooeymenu1" class="gelbuttonmenu"&gt;
+&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;CSS Codes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;CSS Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在gooeymenu.css文件中预置了一些菜单项高亮的样式。你可以根据实际情况自行修改为自己需要的样式。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该插件。</p>
+<pre class="brush:js">
+&lt;script&gt;
+gooeymenu.setup({id:'gooeymenu1', selectitem:1})
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p><code>gooeymenu.setup()</code>方法接收下面的一些可用参数：</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id: "string"（必选）</td>
+<td></td>
+<td>指定菜单<code>&lt;ul&gt;</code>容器元素的ID号</td>
+</tr>
+<tr>
+<td>selectitem: interger</td>
+<td>undefined</td>
+<td>设置页面初始化之后默认选择的菜单项。它也是鼠标离开菜单后高亮效果要回到的项。它是一个整数，0是第一项，1是第二项</td>
+</tr>
+<tr>
+<td>fx: "string"</td>
+<td>easeOutBack</td>
+<td>设置动画的easing效果。默认值为：“easeOutBack”，可选值有：“swing”和“linear”</td>
+</tr>
+<tr>
+<td>fxtime: milliseconds</td>
+<td>500</td>
+<td>设置动画的持续时间，单位毫秒</td>
+</tr>
+<tr>
+<td>snapdelay: milliseconds</td>
+<td>300</td>
+<td>设置在鼠标离开菜单时高亮效果回到默认项之前的延迟时间，单位毫秒</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>还有第二种方式可以设置默认高亮的菜单项：通过为菜单项添加class <code>selected</code>来实现。</p>
+<pre class="brush:html">
+&lt;ul id="gooeymenu1" class="gelbuttonmenu"&gt;
+&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;CSS Codes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" class="selected"&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;CSS Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 自定义高亮效果</h3>
+<p>该插件的高亮效果只是简单的在菜单中动态的添加一些绝对定位的<code>&lt;li&gt;</code>元素，在js文件中，你可以找到下面的代码：</p>
+<pre class="brush:js">
+effectmarkup: '&lt;li class="active"&gt;&lt;/li&gt;',
+</pre>
+<p>如果你想自定义高亮效果，可以在gooeymenu.css文件中修改<code>li.active</code>的样式，下面的代码是使用图片作为高亮样式的CSS代码：</p>
+<pre class="brush:css">
+ul.gelbuttonmenu li.active{ 
+position:absolute;
+width:0;
+background:lightblue;
+background:url(gelbuttonleft.gif) top left no-repeat,
+ url(gelbuttonright.gif) top right no-repeat, 
+ url(gelbuttoncenter.gif) top center repeat-x;
+}
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508271627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508272481.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1044">
+                                <h3 class="post-title">
+                                    基于Bootstrap3的轻量级大型导航菜单
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

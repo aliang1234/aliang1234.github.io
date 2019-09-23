@@ -1,0 +1,358 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    simsCheckbox无序列表转换jquery插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            simsCheckbox无序列表转换jquery插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1707/201707011549.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1707/201707011549.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201707014606.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>simsCheckbox是一款可以将普通的html无序列表转换为bootstrap样式的checkbox列表的jquery插件。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>simsCheckbox是一款可以将普通的html无序列表转换为bootstrap样式的checkbox列表的jquery插件。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入bootstrap样式文件，jquery和simsCheckbox.css，以及simsCheckbox.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" /&gt;
+&lt;link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" /&gt;
+&lt;link rel="stylesheet" href="css/simsCheckbox.css" type="text/css" /&gt;
+&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/simsCheckbox.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>无序列表的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;ul class="sims-batch-students"&gt;
+&lt;li&gt;Jamie Blue&lt;/li&gt;
+&lt;li&gt;Mike Tennis&lt;/li&gt;
+&lt;li class="checked"&gt;Quentin Hiker&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<p>可以通过设置<code>disabled</code> class来禁用某个列表项。</p>
+<pre class="brush:html">
+&lt;ul class="sims-batch-students"&gt;
+&lt;li class="disabled"&gt;Jamie Blue&lt;/li&gt;
+&lt;li&gt;Mike Tennis&lt;/li&gt;
+&lt;li class="checked"&gt;Quentin Hiker&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，通过<code>simsCheckbox()</code>方法来初始化该插件。</p>
+<pre class="brush:js">
+$(document).ready(function (){
+$(".sims-batch-students").simsCheckbox();
+}); 
+</pre>
+<p>无序列表转换前：</p>
+<p><img src="http://img.htmleaf.com/1707/simsCheckbox-before.png" width="451" height="155" alt="无序列表转换前的效果" style="max-width: 100\%;"></p>
+<p>无序列表转换后：</p>
+<p><img src="http://img.htmleaf.com/1707/simsCheckbox-after.png" width="451" height="195" alt="无序列表转换后的效果" style="max-width: 100\%;"></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>simsCheckbox插件的可用配置参数有：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>btnStyle</td>
+<td>string</td>
+<td>'checkbox'</td>
+<td>列表是转换为checkbox还是radio。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>string</td>
+<td>'auto'</td>
+<td>设置列表的高度。</td>
+</tr>
+<tr>
+<td>element</td>
+<td>string</td>
+<td>'li'</td>
+<td>设置要被转换的html元素。</td>
+</tr>
+<tr>
+<td>titleIcon</td>
+<td>string</td>
+<td>'square-o'</td>
+<td>设置checkbox的图标。它是Font Awesome字体图标的名称。可选值有：'circle'，'circle-o'，'square'，'square-o'。</td>
+</tr>
+<tr>
+<td>uncheckedClass</td>
+<td>string</td>
+<td>'btn-default'</td>
+<td>设置未选择的checkbox的class名称。可选值有：btn-default, btn-info, btn-warning, btn-danger, btn-primary。</td>
+</tr>
+<tr>
+<td>checkedClass</td>
+<td>string</td>
+<td>'btn-warning'</td>
+<td>设置选择后的checkbox的class名称。可选值有：btn-default, btn-info, btn-warning, btn-danger, btn-primary。</td>
+</tr>
+<tr>
+<td>selectAllBtn</td>
+<td>boolean</td>
+<td>false</td>
+<td>设置是否在列表底部添加 "全选/全不选" 复选框。</td>
+</tr>
+<tr>
+<td>selectAllText</td>
+<td>string</td>
+<td>'Select/Unselect All'</td>
+<td>设置"全选/全不选"的标题。</td>
+</tr>
+<tr>
+<td>ifChecked</td>
+<td>function</td>
+<td>null</td>
+<td>列表被选择后的回调函数。</td>
+</tr>
+<tr>
+<td>ifUnChecked</td>
+<td>function</td>
+<td>null</td>
+<td>列表被取消选择后的回调函数。</td>
+</tr>
+<tr>
+<td>ifToggled</td>
+<td>function</td>
+<td>null</td>
+<td>列表切换选择项时的回调函数。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>simsCheckbox插件的github地址为：<a href="https://github.com/simsek97/simsCheckbox" target="\_blank">https://github.com/simsek97/simsCheckbox</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1707/201707011549.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201707014606.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_474">
+                                <h3 class="post-title">
+                                    基于Bootstrap支持多种模式的表格分页插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

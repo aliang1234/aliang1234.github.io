@@ -1,0 +1,396 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js左右两侧分屏动画轮播图特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            js左右两侧分屏动画轮播图特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1805/201805221448.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1805/201805221448.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201805225135.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款js左右两侧分屏动画轮播图特效。该轮播图特效中，图片和描述文本分居屏幕的两侧，在鼠标上下滚动时，图片和描述文本做上下相对运动，效果非常炫酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款js左右两侧分屏动画轮播图特效。该轮播图特效中，图片和描述文本分居屏幕的两侧，在鼠标上下滚动时，图片和描述文本做上下相对运动，效果非常炫酷。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入style.css文件。</p>
+<pre class="brush:html">
+&lt;link href="css/style.css" rel="stylesheet"&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该轮播图的html结构如下：</p>
+<pre class="brush:html">
+&lt;div class="wrapper"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="slideshow"&gt;
+&lt;div class="slideshow-left"&gt;
+&lt;div class="Lslide"&gt;
+&lt;div class="Lslide-content"&gt;
+&lt;h2&gt;Probably not&lt;/h2&gt;
+&lt;p&gt;Be a part of our creation&lt;/p&gt;
+&lt;div class="button"&gt;
+&lt;a href="#"&gt;
+&lt;p&gt;More&lt;/p&gt;
+&lt;i class="fa fa-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="Lslide"&gt;
+&lt;div class="Lslide-content"&gt;
+&lt;h2&gt;But not today&lt;/h2&gt;
+&lt;p&gt;Be a part of our creation&lt;/p&gt;
+<p>&lt;div class=&quot;button&quot;&gt;<br>
+&lt;a href=&quot;#&quot;&gt;<br>
+&lt;p&gt;More&lt;/p&gt;<br>
+&lt;i class=&quot;fa fa-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;<br>
+&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;Lslide&quot;&gt;<br>
+&lt;div class=&quot;Lslide-content&quot;&gt;<br>
+&lt;h2&gt;Probably not&lt;/h2&gt;<br>
+&lt;p&gt;Be a part of our creation&lt;/p&gt;</p>
+<p>&lt;div class=&quot;button&quot;&gt;<br>
+&lt;a href=&quot;#&quot;&gt;<br>
+&lt;p&gt;More&lt;/p&gt;<br>
+&lt;i class=&quot;fa fa-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;<br>
+&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;slideshow-right&quot;&gt;<br>
+&lt;div class=&quot;Rslide&quot;&gt;<br>
+&lt;img src=&quot;img/flower-3.jpg&quot; alt=&quot;&quot;&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;div class=&quot;Rslide&quot;&gt;<br>
+&lt;img src=&quot;img/flower-5.jpg&quot; alt=&quot;&quot;&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;Rslide&quot;&gt;<br>
+&lt;img src=&quot;img/flower-1.jpg&quot; alt=&quot;&quot;&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;control&quot;&gt;<br>
+&lt;div class=&quot;oncontrol control-top&quot;&gt;<br>
+&lt;i class=&quot;fa fa-arrow-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;<br>
+&lt;/div&gt;<br>
+&lt;div class=&quot;oncontrol control-bottom&quot;&gt;<br>
+&lt;i class=&quot;fa fa-arrow-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> javaScript</h5>
+<p>然后在页面DOM元素加载完毕之后，通过下面的方法来初始化该轮播图。</p>
+<pre class="brush:js">
+var Lslide= document.querySelectorAll('.Lslide'),
+Rslide= document.querySelectorAll('.Rslide'),
+control = document.querySelectorAll('.oncontrol'),
+slideHeight = document.querySelector('.wrapper').clientHeight,
+color = ['#fdc97c', '#e5d3d0', '#71b3d6'],
+index = 0;
+<p>function init() {<br>
+slideHeight = document.querySelector('.wrapper').clientHeight;<br>
+for (i = 0; i &lt; Lslide.length; i++) {<br>
+Lslide[i].style.backgroundColor = color[i];<br>
+Lslide[i].style.top = -slideHeight * i + &quot;px&quot;;<br>
+Rslide[i].style.top = slideHeight * i + &quot;px&quot;;<br>
+}<br>
+}<br>
+init()<br>
+window.addEventListener('resize', function(){<br>
+init()<br>
+});</p>
+<p>function moveToTop() {</p>
+<p>index++;<br>
+for (el = 0; el &lt; Lslide.length; el++) {<br>
+Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight + &quot;px&quot;;<br>
+Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight + &quot;px&quot;;<br>
+}</p>
+<p>if (index &gt; Lslide.length-1) {<br>
+index = 0;<br>
+for (el = 0; el &lt; Lslide.length; el++) {<br>
+Lslide[el].style.top = -slideHeight * el + &quot;px&quot;;<br>
+Rslide[el].style.top = slideHeight * el + &quot;px&quot;;<br>
+}<br>
+}<br>
+}</p>
+<p>function moveToBottom() {<br>
+index--;<br>
+for (el = 0; el &lt; Lslide.length; el++) {<br>
+Lslide[el].style.top = parseInt(Lslide[el].style.top) - slideHeight + &quot;px&quot;;<br>
+Rslide[el].style.top = parseInt(Rslide[el].style.top) + slideHeight + &quot;px&quot;;</p>
+<p>}<br>
+if (index &lt; 0) {<br>
+index = Rslide.length-1;<br>
+for (el = 0; el &lt; Lslide.length; el++) {<br>
+Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight * Lslide.length + &quot;px&quot;;<br>
+Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight * Rslide.length + &quot;px&quot;;<br>
+}<br>
+}<br>
+}</p>
+<p>function transition() {<br>
+for (t = 0; t &lt; Lslide.length; t++) {<br>
+Lslide[t].style.transition = &quot;all 0.8s&quot;;<br>
+Rslide[t].style.transition = &quot;all 0.8s&quot;;<br>
+}<br>
+}</p>
+<p>for (t = 0; t &lt; control.length; t++) {<br>
+control[t].addEventListener(&quot;click&quot;, function() {</p>
+<p>if (this.classList.contains('control-top')) {<br>
+moveToTop()<br>
+}<br>
+if (this.classList.contains('control-bottom')) {<br>
+moveToBottom()<br>
+}</p>
+<p>transition()</p>
+<p>});<br>
+}</p>
+<p>var wheeling;<br>
+function mousemouve(e) {</p>
+<p>clearTimeout(wheeling);<br>
+e.preventDefault();<br>
+var e = window.event || e;<br>
+var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));</p>
+<p>wheeling = setTimeout(function() {<br>
+wheeling = undefined;<br>
+if (delta === 1) {<br>
+moveToTop()<br>
+}<br>
+if (delta === -1) {<br>
+moveToBottom()<br>
+}<br>
+}, 100);</p>
+<p>transition()<br>
+}</p>
+<p>document.addEventListener(&quot;mousewheel&quot;, mousemouve);<br>
+document.addEventListener(&quot;DOMMouseScroll&quot;, mousemouve);<br>
+</pre></p>
+<p><i class="fa fa-codepen"></i> 该js左右两侧分屏动画轮播图特效的codepen地址为：<a href="https://codepen.io/GrandvincentMarion/pen/NaEELP" target="\_blank">https://codepen.io/GrandvincentMarion/pen/NaEELP</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1805/201805221448.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201805225135.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_219">
+                                <h3 class="post-title">
+                                    兼容ie8的漂亮jQuery计时器插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3弹性3d图片翻转分组展示特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3弹性3d图片翻转分组展示特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412061646.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412061646.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141206697.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款炫酷的jQuery和css3弹性3d图片翻转分组展示特效插件。该图片展示插件不但节省空间，而且效果十分的酷。用户可以以图片3d翻转的方式每次更换一批图片。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款炫酷的jQuery和css3弹性3d图片翻转分组展示特效。内容分组过滤对于一些网站来说是非常重要的，如商务网站和图片站。如何使组图片切换时不必刷新网页呢？最好的方法是使用CSS3 3D Transforms来在用户选择某组类别时翻转图片。这款插件在IE9以下的IE浏览器中看不到效果。</p>
+<h3>HTML</h3>
+<p>html结构使用一个<span class="s">nav</span>作为wrapper，在里面使用无序列表作为分组图片。在插件中只用三个分组，但是你会发现使用了4个列表项，第一个列表项是一个占位，它将被用来在移动设备上制作选择按钮（通过jQuery）。在大屏幕上这个占位将被移除（display:none）。</p>
+<pre class="brush:html">
+&lt;nav&gt;
+&lt;ul&gt;
+&lt;li class="placeholder"&gt; 
+&lt;a href="#0"&gt;Option 1&lt;/a&gt; &lt;!-- default option on mobile --&gt;
+&lt;/li&gt; 
+<p>&lt;li&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;Option 1&lt;/a&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;li&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;Option 2&lt;/a&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;li&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;Option 3&lt;/a&gt;<br>
+&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;<br>
+</pre></p>
+<p>在每个分组中，又使用一个无序列表来作为图片画廊。这个无序列表的<code>ul</code>元素将被用于旋转，它里面的<code>li</code>元素将和它一起呗旋转。</p>
+<pre class="brush:html">
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt; &lt;!-- this is the element that will rotate --&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-1.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-2.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-3.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt; &lt;!-- this is the element that will rotate --&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-1.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-2.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src="img/thumb-3.jpg" alt="thumbnail"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;!-- ... --&gt;
+&lt;/ul&gt;
+</pre>
+<h3>CSS</h3>
+<p>包含图片的无序列表的第一个列表项是可见的，我们给它class<span class="s">.is-visible</span>。</p>
+<pre class="brush:css">
+li.is-visible { /* the front item, visible by default */
+position: relative;
+z-index: 5;
+}
+</pre>
+<p>在同一个无序列表中，将使用绝对定位，这意味着其他列表项的高度将依赖与第一个列表项的高度。</p>
+<p>另外两个class是<span class="s"> .is-hidden </span>和<span class="s"> .is-selected </span>。<span class="s"> .is-hidden </span>将隐藏所有的列表项。<span class="s"> .is-selected </span>将使被选择的分组被显示。注意：这里使用CSS3 transformation（180deg rotation）来旋转<span class="s">ul</span>元素。</p>
+<pre class="brush:css">
+li.is-hidden { /* the hidden items, right behind the front one */
+position: absolute;
+top: 0;
+left: 0;
+height: 100\%;
+width: 100\%;
+z-index: 1;
+transform: rotateY(180deg); 
+}
+<p>li.is-selected { /* the next item that will be visible */<br>
+z-index: 3 !important;<br>
+}<br>
+</pre></p>
+<p>当用户点击分组按钮时，我们使用jQuery为<span class="s">ul</span>添加<span class="s">.is-switched</span>来使它旋转。</p>
+<pre class="brush:css">
+ul.is-switched li.is-visible {
+transform: rotateY(180deg);
+animation: cd-rotate 0.5s;
+}
+<p>ul.is-switched li.is-hidden {<br>
+transform: rotateY(0);<br>
+animation: cd-rotate-inverse 0.5s;<br>
+opacity: 0;<br>
+}</p>
+<p>ul.is-switched li.is-selected {<br>
+opacity: 1;<br>
+}<br>
+</pre></p>
+<p>我们使用 CSS3 Animations 来制作弹性效果，这不会影响到CSS3 transitions的旋转效果。</p>
+<pre class="brush:css">
+@keyframes cd-rotate {
+0\% {
+transform: perspective(800px) rotateY(0);
+}
+<p>70% { /* this creates the bounce effect */<br>
+transform: perspective(800px) rotateY(200deg);<br>
+}</p>
+<p>100% {<br>
+transform: perspective(800px) rotateY(180deg);<br>
+}<br>
+}</p>
+<p>@keyframes cd-rotate-inverse {<br>
+0% {<br>
+transform: perspective(800px) rotateY(-180deg);<br>
+}</p>
+<p>70% {<br>
+transform: perspective(800px) rotateY(20deg);<br>
+}</p>
+<p>100% {<br>
+transform: perspective(800px) rotateY(0);<br>
+}<br>
+}<br>
+</pre></p>
+<p>你也许会有些奇怪：为什么不直接将旋转应用到<span class="s">ul</span>元素上？因为那样做需要使用到<span class="s">transform-style: preserve-3d</span>。看起来这样做更简单，但是别忘记了，IE11以下的浏览器不支持<span class="s">transform-style: preserve-3d</span>。</p>
+<h3>JAVASCRIPT</h3>
+<pre class="brush:js">
+jQuery(document).ready(function($){
+//wrap each one of your filter in a .cd-gallery-container
+bouncy\_filter($('.cd-gallery-container'));
+<p>function bouncy_filter(<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: container) {
+'>container) {
+</span>container.each(function(){<br>
+var $this = $(this);<br>
+var filter_list_container = $this.children('.cd-filter'),<br>
+filter_values = filter_list_container.find('li:not(.placeholder) a'),<br>
+filter_list_placeholder = filter_list_container.find('.placeholder a'),<br>
+filter_list_placeholder_text = filter_list_placeholder.text(),<br>
+filter_list_placeholder_default_value = 'Select',<br>
+gallery_item_wrapper = $this.children('.cd-gallery').find('.cd-item-wrapper');</p>
+<p>//store gallery items<br>
+var gallery_elements = {};<br>
+filter_values.each(function(){<br>
+var filter_type = $(this).data('type');<br>
+gallery_elements[filter_type] = gallery_item_wrapper.find('li[data-type=&quot;'+filter_type+'&quot;]');<br>
+});</p>
+<p>//detect click event<br>
+filter_list_container.on('click', function(event){<br>
+event.preventDefault();<br>
+//detect which filter item was selected<br>
+var selected_filter = $(event.target).data('type');</p>
+<p>//check if user has clicked the placeholder item (for mobile version)<br>
+if( $(event.target).is(filter_list_placeholder) || $(event.target).is(filter_list_container) ) {</p>
+<p>(filter_list_placeholder_default_value == filter_list_placeholder.text()) ? filter_list_placeholder.text(filter_list_placeholder_text) : filter_list_placeholder.text(filter_list_placeholder_default_value) ;<br>
+filter_list_container.toggleClass('is-open');</p>
+<p>//check if user has clicked a filter already selected<br>
+} else if( filter_list_placeholder.data('type') == selected_filter ) {</p>
+<p>filter_list_placeholder.text($(event.target).text()) ;<br>
+filter_list_container.removeClass('is-open');</p>
+<p>} else {<br>
+//close the dropdown (mobile version) and change placeholder text/data-type value<br>
+filter_list_container.removeClass('is-open');<br>
+filter_list_placeholder.text($(event.target).text()).data('type', selected_filter);<br>
+filter_list_placeholder_text = $(event.target).text();</p>
+<p>//add class selected to the selected filter item<br>
+filter_values.removeClass('selected');<br>
+$(event.target).addClass('selected');</p>
+<p>//give higher z-index to the gallery items selected by the filter<br>
+show_selected_items(gallery_elements[selected_filter]);</p>
+<p>//rotate each item-wrapper of the gallery<br>
+//at the end of the animation hide the not-selected items in the gallery amd rotate back the item-wrappers</p>
+<p>// fallback added for IE9<br>
+var is_explorer_9 = navigator.userAgent.indexOf('MSIE 9') &gt; -1;</p>
+<p>if( is_explorer_9 ) {<br>
+hide_not_selected_items(gallery_elements, selected_filter);<br>
+gallery_item_wrapper.removeClass('is-switched');<br>
+} else {<br>
+gallery_item_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {<br>
+hide_not_selected_items(gallery_elements, selected_filter);<br>
+gallery_item_wrapper.removeClass('is-switched');<br>
+});<br>
+}<br>
+}<br>
+});<br>
+});<br>
+}<br>
+});</p>
+<p>function show_selected_items(selected_elements) {<br>
+selected_elements.addClass('is-selected');<br>
+}</p>
+<p>function hide_not_selected_items(gallery_containers, filter) {<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: … != filter ) {
+'>.each(gallery\_containers, function(key, value){
+if ( key != filter ) {
+</span>(this).removeClass('is-visible is-selected').addClass('is-hidden');</p>
+<p>} else {<br>
+$(this).addClass('is-visible').removeClass('is-hidden is-selected');<br>
+}<br>
+});<br>
+}<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412061646.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141206697.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1448">
+                                <h3 class="post-title">
+                                    jQuery和css3简单实用的FAQ问答页面模板
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

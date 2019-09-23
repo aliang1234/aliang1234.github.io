@@ -1,0 +1,455 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery实现Mac Lion OS滚动条效果插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery实现Mac Lion OS滚动条效果插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502082032.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502082032.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502081348.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>nanoScrollerJS是一款使用简单方式实现 Mac OS X Lion 系统滚动条效果的jQuery插件。该滚动条插件利用原生的滚动条可以工作在 iPad、iPhone 和一些 Android Tablets上。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>nanoScrollerJS是一款使用简单方式实现 Mac OS X Lion 系统滚动条效果的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。该滚动条插件使用最小的HTML结构<code>.nano &gt; .nano-content</code>。其它的滚动条元素<code>.pane &gt; .nano-slider</code>是在插件运行时动态加载的。该滚动条插件利用原生的滚动条可以工作在 iPad、iPhone 和一些 Android Tablets上。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>下面是该滚动条插件工作所必须的HTML结构：</p>
+<pre class="brush:html">
+&lt;div id="about" class="nano"&gt;
+&lt;div class="nano-content"&gt; ... content here ...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p><code>nano</code>和<code>nano-content</code>的class名称可以通过插件参数来改变（改变后插件的CSS文件也要相应的改变）。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在HTML<code>&lt;header&gt;</code>中引入<code>nanoscroller.css</code>文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="nanoscroller.css"&gt;
+</pre>
+<p>你必须为容器指定一个宽度和高度，并为你的滚动条定制一些基本样式，例如：</p>
+<pre class="brush:css">
+.nano { background: #bba; width: 500px; height: 500px; }
+.nano &gt; .nano-content { padding: 10px; }
+.nano &gt; .nano-pane { background: #888; }
+.nano &gt; .nano-pane &gt; .nano-slider { background: #111; }
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>在页面中引入<code>jquery.nanoscroller.js</code>文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery.nanoscroller.js"&gt;&lt;/script&gt;
+</pre>
+<p>然后使用下面的方法调用该滚动条插件，HTML中所有带有<code>.nano</code>的DOM元素都会被应用上该方法：</p>
+<pre class="brush:js">
+$(".nano").nanoScroller();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 高级方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> scroll</h5>
+<ul>
+<li>滚动到顶部：
+<pre class="brush:js">
+$(".nano").nanoScroller({ scroll: 'top' });
+</pre>
+</li>
+<li>滚动到底部：
+<pre class="brush:js">
+$(".nano").nanoScroller({ scroll: 'bottom' });
+</pre>
+</li>
+<li>滚动到顶部并带个偏移值：
+<pre class="brush:js">
+$(".nano").nanoScroller({ scrollTop: value });
+</pre>
+</li>
+<li>滚动到底部并带个偏移值：
+<pre class="brush:js">
+$(".nano").nanoScroller({ scrollBottom: value });
+</pre>
+</li>
+<li>滚动一个元素：
+<pre class="brush:js">
+$(".nano").nanoScroller({ scrollTo: $('#a\_node') });
+</pre>
+</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> stop</h5>
+<p>停止滚动操作。这个选项将会使滚动条插件的所有绑定事件无效，并在UI上隐藏滚动条。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ stop: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> destroy</h5>
+<p>销毁nanoScroller滚动条并将滚动条重置为浏览器原生滚动条：</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ destroy: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> flash</h5>
+<p>设置滚动条闪动，闪动时间由参数来设置（默认1.5秒）。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ flash: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> nanoScroller();</h5>
+<p>刷新滚动条。该操作会简单的重新计算滚动条的位置和高度：</p>
+<pre class="brush:js">
+$(".nano").nanoScroller();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 自定义事件</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> scrollend</h5>
+<p>一个自定义的<code>scrollend</code>事件会在每次滚动条滚动到容器底部时触发。（当滚动条已经到达容器底部，用户再次滚动时不会触发该事件）</p>
+<pre class="brush:js">
+$(".nano").bind("scrollend", function(e){
+console.log("current HTMLDivElement", e.currentTarget);
+});
+</pre>
+<p>有些浏览器会在同一时间多次触发该事件，所以应该使用jQuery <code>.bind</code>或<code>.on</code>来绑定该事件。你可以使用<a href="https://github.com/OhaiBBQ/jquery-debounce" target="\_blank">jquery-debounce</a>插件来使浏览器每隔100毫秒才触发一次该事件：</p>
+<pre class="brush:js">
+$(".nano").debounce("scrollend", function() {
+alert("The end");
+}, 100);
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> scrolltop</h5>
+<p>和<code>scrollend</code>事件相同，它是每次用户滚动到容器的顶部时触发。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> update</h5>
+<p>和<code>scrollend</code>事件和<code>scrolltop</code>事件相同，它在用户每次滚动时触发。该事件附带滚动条当前位置、最大高度和方向（<code>up</code>或<code>down</code>）的js对象参数:</p>
+<pre class="brush:js">
+$(".nano").on("update", function(event, values){ 
+console.debug( values );
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>该滚动条插件中有一组参数可以使用：</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> iOSNativeScrolling</h5>
+<p>如果你希望在 iOS 5+ 中使用原生的滚动条，可以设置为<code>true</code>。在 iOS 5+ 中原生的滚动条会工作的更好。</p>
+<p>注意当<code>iOSNativeScrolling</code>设置为<code>true</code>时，<code>.pane</code>和<code>.slider</code>不会被设备生成/添加来支持原生的滚动条。</p>
+<p><span class="m">默认值</span>：false。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ iOSNativeScrolling: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> sliderMinHeight</h5>
+<p>设置滚动元素的最小高度：</p>
+<p><span class="m">默认值</span>：20。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ sliderMinHeight: 40 })
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> sliderMaxHeight</h5>
+<p>设置滚动元素的最大高度：</p>
+<p><span class="m">默认值</span>：null。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ sliderMaxHeight: 200 });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> preventPageScrolling</h5>
+<p>设置为<code>true</code>时可以在容器内容滚动到顶部或底部时阻止页面滚动：</p>
+<p><span class="m">默认值</span>：false。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ preventPageScrolling: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> disableResize</h5>
+<p>设置为<code>true</code>阻止nanoscroller改变大小。如果你设置该选项为<code>true</code>，记住要调用reset方法，否则会产生奇怪的问题：</p>
+<p><span class="m">默认值</span>：false。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ disableResize: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> alwaysVisible</h5>
+<p>设置为<code>true</code>关闭滚动条停止时自动隐藏功能：</p>
+<p><span class="m">默认值</span>：false。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ alwaysVisible: true });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> flashDelay</h5>
+<p>在你开启<code>flash</code>选项时，该选项用于指定闪动的延时：</p>
+<p><span class="m">默认值</span>：1500。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ flashDelay: 1000 });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> paneClass</h5>
+<p>滚动条track元素的class名称。如果你修改了它，需要在CSS文件中做相应的修改：</p>
+<p><span class="m">默认值</span>： 'nano-pane'。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ sliderClass: 'scrollSlider' });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> contentClass</h5>
+<p>滚动条容器div的class名称。如果你修改了它，需要在CSS文件中做相应的修改：</p>
+<p><span class="m">默认值</span>： 'nano-content'。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ contentClass: 'sliderContent' });
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> tabIndex</h5>
+<p>设置可滚动内容的顺序，设置为-1时使用tab键会跳过该内容：</p>
+<p><span class="m">默认值</span>：0。</p>
+<pre class="brush:js">
+$(".nano").nanoScroller({ tabIndex: 0 });
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<p>桌面设备</p>
+<ul>
+<li>IE7+</li>
+<li>Firefox 3+</li>
+<li>Chrome</li>
+<li>Safari 4+</li>
+<li>Opera 11.60+</li>
+</ul>
+<p>移动设备</p>
+<ul>
+<li>iOS 5+ (iPhone, iPad 和 iPod Touch)</li>
+<li>iOS 4 (附带一个插件)</li>
+<li>Android Firefox</li>
+<li>Android 2.2/2.3 native browser (附带一个插件)</li>
+<li>Android Opera 11.6 (附带一个插件)</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 通过插件在移动设备浏览器更好的运行nanoScroller</h5>
+<p>你可以通过<a href="https://github.com/filamentgroup/Overthrow/" target="\_blank">overthrow.js</a>来使nanoScroller 在移动浏览器上更好的工作。它会在移动设备上模拟CSS的overflow（<code>overflow: auto;/overflow: scroll;</code>）。</p>
+<p>要使用overthrow，在页面中引入overthrow.js：</p>
+<pre class="brush:html">
+&lt;script src="overthrow.js"&gt;&lt;/script&gt;
+</pre>
+<p>然后在你的滚动条内容<code>div</code>中添加<code>overthrow</code> class：</p>
+<pre class="brush:html">
+&lt;div id="about" class="nano"&gt;
+&lt;div class="overthrow nano-content"&gt; ... content here ...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502082032.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502081348.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1394">
+                                <h3 class="post-title">
+                                    jQuery炫酷时尚彩色条纹进度条插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

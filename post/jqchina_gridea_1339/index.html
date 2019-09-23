@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Bootstrap的jQuery隐藏滑动侧边栏特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Bootstrap的jQuery隐藏滑动侧边栏特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_1">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502281535.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502281535.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502281433.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Bootstrap Offcanvas是一款非常简单的jQuery隐藏滑动侧边栏插件。该jQuery插件使用Bootstrap的样式和标签来创建隐藏的滑动侧边栏，在大屏幕上会显示正常的导航菜单，当屏幕尺寸缩小到一定尺寸时该滑动侧边栏才会出现。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Bootstrap Offcanvas是一款非常简单的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>隐藏滑动侧边栏插件。该<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>使用Bootstrap的样式和标签来创建隐藏的滑动侧边栏，样式虽然有些单调，但可以通过修改CSS样式来使其更加美观。而且它的工作性能是一流的。下图演示了该隐藏滑动按钮的工作过程。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1502/bootstrup-offcanvas.gif" alt="Bootstrap隐藏滑动侧边栏特效" width="314" height="478"></p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过Bower来安装该插件：</p>
+<pre class="brush:html">
+bower install bootstrap-offcanvas
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>要使用该Bootstrap隐藏侧边栏插件，首先要在页面中引入<code>bootstrap.offcanvas.css</code>和jquery、<code>bootstrap.offcanvas.js</code>文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/bootstrap.offcanvas.min.css"/&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.offcanvas.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>HTML结构上你需要一个按钮或其它元素来触发侧边栏菜单。可以是任何的HTML元素。</p>
+<pre class="brush:html">
+&lt;button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+<p>侧边栏菜单的代码如下，你需要注意两个地方：</p>
+<ul>
+<li>
+<code>navbar-offcanvas</code> class</li>
+<li>在按钮的<code>data-target</code>指定的选择器要指向侧边栏菜单。例如像上边一样使用ID选择器。注意：该选择器可以使用任何元素的class或属性来充当。</li>
+</ul>
+<pre class="brush:html">
+&lt;nav class="navbar navbar-default navbar-offcanvas" role="navigation" id="js-bootstrap-offcanvas"&gt;
+...
+&lt;/nav&gt;
+</pre>
+<p>你可以通过设置下面的class来改变滑动侧边栏的位置：</p>
+<pre class="brush:html">
+navbar-offcanvas-right
+</pre>
+<p>该插件支持下拉菜单，使用的是标准的Bootstrap代码。唯一区别是它不需要<code>data-toggle</code>属性。</p>
+<pre class="brush:html">
+&lt;li class="dropdown"&gt;
+&lt;a href="#" class="dropdown-toggle"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu" role="menu"&gt;
+&lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+&lt;li class="divider"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;li class="divider"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+</pre>
+<p>你也可以在页面中添加另外的按钮来触发隐藏滑动菜单的滑入和滑出。</p>
+<p class="text-danger">注意，该插件不知道你会使用哪个按钮来作为触发事件的主按钮，它会使用第一个找到的按钮来作为主按钮。</p>
+<pre class="brush:html">
+&lt;button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt;
+&lt;/button&gt;
+</pre>
+<p>下面是一个使用图标的内置版本的主菜单按钮代码：</p>
+<pre class="brush:html">
+&lt;button type="button" class="navbar-toggle offcanvas-toggle offcanvas-toggle-close" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas"&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> Transitions</h5>
+<p>通过使用下面的class，可以制作淡入淡出的滑动效果。注意：这个class也可以在触摸屏事件上工作。</p>
+<pre class="brush:html">
+navbar-offcanvas-fade
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 触摸屏事件</h5>
+<p>通过添加下面的class，可以增加触摸屏的触摸事件，从而可以通过触摸菜单按钮来展开或隐藏侧边栏。</p>
+<pre class="brush:html">
+navbar-offcanvas-touch
+</pre>
+<p class="text-danger">注意：虽然可以在触摸屏上使用多个侧边栏菜单，但必须保证它们不同时在一个侧边上。如果两个侧边栏同时在一个侧边上，该滑动侧边栏插件将不能正常工作。</p>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>有4个事件可以出发侧边栏的滑入和滑出。它们的语法和Bootstrap官方的js语法相同。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>事件类型</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show.bs.offcanvas</td>
+<td>隐藏滑动菜单显示前触发</td>
+</tr>
+<tr>
+<td>shown.bs.offcanvas</td>
+<td>隐藏滑动菜单显示后触发</td>
+</tr>
+<tr>
+<td>hide.bs.offcanvas</td>
+<td>隐藏滑动菜单隐藏前触发</td>
+</tr>
+<tr>
+<td>hidden.bs.offcanvas</td>
+<td>隐藏滑动菜单隐藏后触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 定制</h3>
+<p>你可以通过SASS文件来定制该滑动侧边栏的样式。</p>
+<p>你可以在下载包中找到SASS文件，这个SASS文件只使用了少量的变量，如：</p>
+<pre class="brush:css">
+$offcanvas-width: 250px !default; // The width of the offcanvas menu
+$offcanvas-animation-time: 0.15s !default; // Transition time to pull/hide menu
+$offcanvas-toggle-background: #f8f8f8 !default; // Background colour for toggle
+$offcanvas-toggle-bars-color: #000 !default; // Colour for icon bars in toggle
+</pre>
+<p>插件中只有一个<code>media query</code>，它使用Bootstrap的<code>$screen-sm</code>变量，如果它不存在，宽度的breakpoint被设置为<code>768px</code>。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502281535.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502281433.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_134">
+                                <h3 class="post-title">
+                                    带视觉差效果的超酷js轮播图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

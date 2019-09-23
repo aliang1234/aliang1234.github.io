@@ -1,0 +1,342 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery简单实用的轻量级进度条插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery简单实用的轻量级进度条插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504131539.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504131539.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504131672.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jQMeter是一款简单实用的轻量级进度条jQuery插件，它可以显示为水平或垂直进度条，进度条加载时带有动画特效，你只需要简单的传入一些参数到jQMeter对象的构造函数中就可以完成你想要的进度条效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jQMeter是一款简单实用的轻量级进度条<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>，它可以显示为水平或垂直进度条，进度条加载时带有动画特效，你只需要简单的传入一些参数到jQMeter对象的构造函数中就可以完成你想要的进度条效果。</p>
+<p>该进度条插件的构造函数中允许你定义进度条的宽度、高度、背景色、进度条颜色等等参数，通过这些参数你可以构造自己的进度条样式。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用这个进度条插件必须先引入jQuery和<code>jqmeter.min.js</code>文件。</p>
+<pre class="brush:html">
+&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jqmeter.min.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该进度条插件的HTML结构使用一个空的<code>&lt;div&gt;</code>即可。</p>
+<pre class="brush:html">
+&lt;div id="jqmeter-container"&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面加载完毕之后，可以通过下面的方法来调用该进度条插件。</p>
+<pre class="brush:js">
+$(document).ready(function(){
+$('#jqmeter-container').jQMeter();
+}); 
+</pre>
+<p>注意：该进度条插件有两个必填的参数：<code>goal</code>和<code>raised</code>。此外还有一些可用的参数，其中一些参数也可以使用css来实现，如颜色参数。</p>
+<pre class="brush:js">
+$('#jqmeter-container').jQMeter({
+goal:'$1,000',
+raised:'$200',
+orientation:'vertical',
+width:'50px',
+height:'200px'
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>goal</td>
+<td>string</td>
+<td>无默认值，必填参数</td>
+<td>进度条的总长度。可以设置为字符串，如"$9000"，或整数，如:"9000"</td>
+</tr>
+<tr>
+<td>raised</td>
+<td>string</td>
+<td>无默认值，必填参数</td>
+<td>进度条的当前进度。可以设置为字符串，如"$5000"，或整数，如:"5000"</td>
+</tr>
+<tr>
+<td>width</td>
+<td>string</td>
+<td>100\%-水平宽度。（在水平进度条中必须设置）</td>
+<td>设置进度条的水平宽度。可以设置为百分比或像素值</td>
+</tr>
+<tr>
+<td>height</td>
+<td>string</td>
+<td>50px。（在垂直进度条中必须设置）</td>
+<td>设置进度条的垂直高度。可以设置为百分比或像素值</td>
+</tr>
+<tr>
+<td>bgColor</td>
+<td>string</td>
+<td>#444</td>
+<td>进度条的背景颜色。支持hex、rgba和颜色关键字。</td>
+</tr>
+<tr>
+<td>barColor</td>
+<td>string</td>
+<td>#bfd255</td>
+<td>进度条的颜色。支持hex、rgba和颜色关键字。</td>
+</tr>
+<tr>
+<td>orientation</td>
+<td>string</td>
+<td>horizontal</td>
+<td>进度条的方向，可设置为： 'horizontal' 或 'vertical'。如果设置为垂直进度条，该参数必须设置。</td>
+</tr>
+<tr>
+<td>displayTotal</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否显示进度条完成的百分比数。</td>
+</tr>
+<tr>
+<td>animationSpeed</td>
+<td>integer</td>
+<td>2000</td>
+<td>进度条动画时间，单位毫秒</td>
+</tr>
+<tr>
+<td>counterSpeed</td>
+<td>integer</td>
+<td>2000</td>
+<td>进度条计数的时间，单位毫秒</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504131539.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504131672.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1294">
+                                <h3 class="post-title">
+                                    纯js轻量级高性能点击元素动画特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

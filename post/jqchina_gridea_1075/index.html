@@ -1,0 +1,306 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯javascript简单实用的仪表盘插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯javascript简单实用的仪表盘插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508242000.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508242000.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508242468.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>justgage是一款简单实用的纯javascript仪表盘插件。该仪表盘插件基于Raphaël库来绘制矢量图形。理论上可以工作在任何支持SVG的浏览器中，但实际上它可以在IE6以上的浏览器中正常工作。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>justgage是一款简单实用的纯javascript仪表盘插件。该仪表盘插件基于Raphaël库来绘制矢量图形。理论上可以工作在任何支持<a href="http://www.htmleaf.com/html5/SVG/" target="\_blank">SVG</a>的浏览器中，但实际上它可以在IE6以上的浏览器中正常工作。</p>
+<p>该仪表盘插件已经在 Chrome 20, Firefox 12, IE6, 7, 8, 9, Opera 12, Safari 5.1.2, Android 4.0等浏览器中进行过测试。对于低版本的Safari和IE浏览器，由于它们不支持SVG filters,在效果上会有一些折扣。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该仪表盘插件需要引入raphael.2.1.0.min.js和justgage-1.0.1.js文件。</p>
+<pre class="brush:html">
+&lt;script src="raphael.2.1.0.min.js"&gt;&lt;/script&gt;
+&lt;script src="justgage.1.0.1.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>使用一个空的<code>&lt;div&gt;</code>做为仪表盘的容器即可。需要给这个容器设置一个ID号，以及设置它的宽度和高度。</p>
+<pre class="brush:html">
+&lt;div id="gauge" class="200x160px"&gt;&lt;/div&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>可以通过下面的方法来初始化该仪表盘插件。</p>
+<pre class="brush:js">
+&lt;script&gt;
+var g = new JustGage({
+id: "gauge",
+value: 67,
+min: 0,
+max: 100,
+title: "Visitors"
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>下面是该仪表盘插件的一些可用配置参数。</p>
+<ul>
+<li>
+<code>id</code>：类型：String。仪表盘容器的ID。</li>
+<li>
+<code>title</code>：类型：String。仪表盘标题的文本。</li>
+<li>
+<code>titleFontColor</code>：类型：String。文本的颜色。</li>
+<li>
+<code>value </code>：类型：int。仪表盘显示的数值。</li>
+<li>
+<code>valueFontColor</code>：类型：String。数值的颜色。</li>
+<li>
+<code>min</code>：类型：int。最小值。</li>
+<li>
+<code>max</code>：类型：int。最大值。</li>
+<li>
+<code>showMinMax</code>：类型：boolean。显示还是隐藏最大和最小值。</li>
+<li>
+<code>gaugeWidthScale</code>：类型：float。仪表盘的宽度。</li>
+<li>
+<code>gaugeColor</code>：类型：String。仪表盘的背景颜色。</li>
+<li>
+<code>label</code>：类型：String。在数值下面显示的文本。</li>
+<li>
+<code>showInnerShadow</code>：类型：boolean。是否显示内阴影。</li>
+<li>
+<code>shadowOpacity</code>：类型：float。阴影的透明度，值0-1之间。</li>
+<li>
+<code>shadowSize</code>：类型：int。内阴影的尺寸。</li>
+<li>
+<code>shadowVerticalOffset</code>：类型：int。阴影距离上部的偏移。</li>
+<li>
+<code>levelColors</code>：类型：array of strings。指示器的颜色，低值和高值显示不同的颜色，使用hex颜色格式。</li>
+<li>
+<code>levelColorsGradient</code>：类型：boolean。use gradual or sector-based color change。</li>
+<li>
+<code>labelFontColor</code>：类型：String。数值下面标题的颜色。</li>
+<li>
+<code>startAnimationTime</code>：类型：int。初始化加载动画的指示器数值。</li>
+<li>
+<code>startAnimationType</code>：类型：String。动画的类型：linear, &gt;, &lt;, &lt;&gt;, bounce</li>
+<li>
+<code>refreshAnimationTime</code>：类型：int。刷新后指示器的数值。</li>
+<li>
+<code>refreshAnimationType</code>：类型：String。刷新后的动画类型：linear, &gt;, &lt;, &lt;&gt;, bounce</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508242000.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508242468.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1076">
+                                <h3 class="post-title">
+                                    简单的jQuery响应式手风琴特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

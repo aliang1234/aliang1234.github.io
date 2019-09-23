@@ -1,0 +1,1506 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_993">
+                        仿windows资源管理器风格的jQuery复选框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_993" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509291719.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+folderselect.js是一款仿windows资源管理器风格的jQuery复选框美化插件。它能够以文件夹的形式来显示分层的数据结构，它还支持AJAX数据调用，事件回调，数据头等。
+内容：
+
+
+简要教程
+
+
+folderselect.js是一款仿windows资源管理器风格的jQuery复选框美化插件。它能够以文件夹的形式来显示分层的数据结构，它还支持AJAX数据调用，事件回调，数据头等。
+
+ 使用方法
+
+ 初始化插件
+可以通过下面的方法来初始化该美化复选框插件。
+
+$(&#34;#element&#34;).folderselect({
+data:my\_json\_hierarchical\_data,
+headers: [],
+url: false,
+icon\_item: &#34;item.png&#34;,
+icon\_folder: &#34;folder.png&#34;,
+icon\_home: &#34;home.png&#34;,
+spinner\_gif: &#34;ajax-loader.gif&#34;,
+item\_selected\_callback:function(item) {},
+item\_removed\_callback: function(item) {},
+folder\_entered\_callback: function(folder) {}
+}); 
+
+
+ 获取被选择的项
+你可以在初始化jQuery对象上调用folderselect(&#39;selected&#39;)方法来获取被选择的复选框元素。你所得到的数据和你在初始化的时候放入的数据是相同的。
+
+var selected\_items = $(&#34;#element&#34;).folderselect(&#39;selected&#39;);
+
+
+ 配置参数
+除了data参数，所有的其他参数都是可选的。
+
+
+headers：该字符串数组将转换为每个文件夹的headers。
+
+url：如果用户尝试打开一个空的文件夹（content = []），将使用该URL发送一个POST请求来获取文件夹的内容。
+
+icon\_folder / icon\_item / icon\_home：不同图标的URL地址。
+
+item\_selected\_callback：当某项被选择时调用。
+
+item\_removed\_callback：当某项取消选择时被调用。
+
+folder\_entered\_callback：当文件夹打开时被调用。
+
+data：参考下面。
+
+
+ DATA参数
+data参数是一个包含分层数据的json对象。它可能只是一个基本的树结构，然后在用户点击的时候通过ajax来调用子节点的数据。
+data参数包含2种类型的对象：items和folders。它们有相同点和不同点。
+适用于Folder和item
+
+
+type：可取值为&#39;folder&#39;或&#39;item&#39;。
+
+icon：使用的item/folder图标的URL地址。
+
+cells：字符串数组。第一个字符串标识folder/icon的名称。如果使用headers，cells的数量将等于headers的数量。
+
+payload：一个任意的json对象。
+
+仅适用于Folder
+
+
+content：在该文件夹中可以找到的item/folder对象数组。
+
+headers：在文件夹中显示的Headers的数组。
+
+openable：设置为true是文件夹可以打开，false则不能。如果一个ajax请求为一个文件夹得到了空的数据，那么它就会被设置为false。
+
+open：如果设置为true，则文件夹默认打开。默认只有一个文件夹是打开的。
+
+仅适用于Item
+
+
+selectable：如果设置为true，则item可以被选择。
+
+selected：如果设置为true，则item默认被选择。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_993">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_994">
+                        支持移动手机的简洁jQuery图片LightBox插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_994" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510262012.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款支持移动触摸设备的简洁jQuery图片Lightbox插件。该LightBox插件可以在移动手机和桌面设备中运行，它具有响应式，预加载图片，键盘支持等特点，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一款支持移动触摸设备的简洁jQuery图片Lightbox插件。该LightBox插件可以在移动手机和桌面设备中运行，它具有响应式，预加载图片，键盘支持等特点，非常实用。它的特点还有：
+
+响应式设计
+支持滑动触摸
+易于安装使用
+众多参数设置
+支持预加载图片
+支持Android, iOs 和 Windows phone
+在旧的浏览器中对CSS3过渡效果进行回退
+可以使用jQuery1.x或2.x
+支持键盘控制
+
+
+ 安装
+可以通过npm或bower来安装该插件。
+
+npm install simplelightbox
+bower install simplelightbox
+
+或下载插件的压缩包，在页面中引入以下文件：
+
+&amp;lt;link href=&#39;dist/simplelightbox.min.css&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/simple-lightbox.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用方法
+
+ HTML结构
+该lightbox插件的基本HTML结构如下：
+
+&amp;lt;div class=&#34;gallery&#34;&amp;gt; 
+&amp;lt;a href=&#34;images/image1.jpg&#34; class=&#34;big&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb1.jpg&#34; alt=&#34;&#34; title=&#34;Image&#34; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image2.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb2.jpg&#34; alt=&#34;&#34; title=&#34;&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image3.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb3.jpg&#34; alt=&#34;&#34; title=&#34;Beautiful Image&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image4.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb4.jpg&#34; alt=&#34;&#34; title=&#34;&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;a href=&amp;quot;images/image5.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb5.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image6.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb6.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image7.jpg&amp;quot; class=&amp;quot;big&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb7.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image8.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb8.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;a href=&amp;quot;images/image9.jpg&amp;quot; class=&amp;quot;big&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb9.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image10.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb10.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image11.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb11.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image12.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb12.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该Lightbox插件。
+
+var lightbox = $(&#39;.gallery a&#39;).simpleLightbox(options); 
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+overlay
+true
+bool
+是否显示遮罩层
+
+
+spinner
+true
+bool
+是否显示加载指示器
+
+
+nav
+true
+bool
+是否显示左右导航箭头
+
+
+navText
+[←‘,’→‘]
+array
+导航箭头文字或HTML标签
+
+
+captions
+true
+bool
+是否显示标题
+
+
+captionSelector
+&#39;img&#39;
+string
+如何获取标题，可以在 attr, data 或 text之间选择
+
+
+captionType
+&#39;attr&#39;
+string
+是否显示标题
+
+
+captionsData
+title
+string
+从给定的属性或data-title获取标题
+
+
+close
+true
+bool
+是否显示关闭按钮
+
+
+closeText
+&#39;X&#39;
+string
+关闭按钮上的文本
+
+
+showCounter
+true
+bool
+是否显示当前图片的序号
+
+
+fileExt
+png|jpg|jpeg|gif
+regexp
+图片文件类型扩展名的正则表达式
+
+
+animationSpeed
+250
+int
+幻灯片模式中slide的动画速度
+
+
+preloading
+true
+bool
+是否预加载前一张和下一张图片
+
+
+enableKeyboard
+true
+bool
+是否允许键盘导航和使用ESC键关闭
+
+
+loop
+true
+bool
+是否循环图片
+
+
+docClose
+true
+bool
+是否在点击lightbox之外的区域时关闭它
+
+
+swipeTolerance
+50
+int
+swipe多少像素才显示下一张图片
+
+
+className
+&#39;simple-lightbox&#39;
+string
+包裹容器的class名称
+
+
+widthRatio
+0.8
+float
+图片宽度和屏幕宽度的比例
+
+
+heightRatio
+0.9
+float
+图片高度和屏幕高度的比例
+
+
+
+
+
+ 事件
+
+
+
+
+事件名称
+描述
+
+
+
+
+open.simplelightbox
+该事件在lightbox打开之前触发
+
+
+opened.simplelightbox
+该事件在lightbox打开之后触发
+
+
+close.simplelightbox
+该事件在lightbox关闭之前触发
+
+
+closed.simplelightbox
+该事件在lightbox关闭之后触发
+
+
+
+
+示例代码
+
+$(&#39;.gallery a&#39;).on(&#39;open.simplelightbox&#39;, function () {
+// do something…
+});
+
+
+ 公共方法
+
+
+
+
+名称
+描述
+
+
+
+
+open
+通过给定的JQuery元素打开lightbox
+
+
+close
+表格当前打开的Lightbox
+
+
+next
+跳转到下一张图片
+
+
+prev
+跳转到前一张图片
+
+
+destroy
+销毁lightbox实例对象
+
+
+
+
+示例代码：
+
+var gallery = $(&#39;.gallery a&#39;).simpleLightbox();
+gallery.next(); // Next Image
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_994">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_995">
+                        简单实用且功能齐全的jQuery分页插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_995" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511201735.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Pagination.js是一款简单实用且功能齐全的jQuery分页插件。该jQuery分页插件提供多种数据源方式，众多的配置参数，回调函数，显示控制等，还提供了5套内置的分页条皮肤。
+内容：
+
+
+简要教程
+
+
+Pagination.js是一款简单实用且功能齐全的jQuery分页插件。该jQuery分页插件提供多种数据源方式，众多的配置参数，回调函数，显示控制等，还提供了5套内置的分页条皮肤。
+
+ 使用方法
+
+ 数据源
+数据源是最终提供给分页组件的是一个数组。Pagination.js支持4最后数据源格式：
+
+dataSource array | string | object | function
+
+1、数组格式：直接提供一个数组，例如：
+
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]
+
+2、Object：提供一个对象，里面要包含数组，可以通过locator: &#39;data&#39;指定这个数组
+
+{
+data: [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]
+} 
+
+3、Function：提供一个自定义函数，根据自己的业务逻辑返回数组，自定义程度很高，可以实现上面2种方式可以动态组装数据，使用done返回数据，如：
+
+dataSource: function(done){
+var result = [];
+for(var i = 1; i &amp;lt; 196; i++){
+result.push(i);
+}
+done(result);
+}
+
+也可以发送请求获取数据，使用done异步返回数据。
+
+dataSource: function(done){
+$.ajax({
+type: &#39;GET&#39;,
+url: &#39;/test.json&#39;,
+success: function(response){
+done(response);
+}
+});
+}
+
+4、URL：提供一个URL，通过Ajax返回数据，适用于异步分页，每次请求返回一页的数据，返回的数据也可以通过locator查找。
+如果URL为file、http或https协议，会用jsonp发送请求，否则为Ajax。
+
+/test.json
+
+每次分页发起请求时，会附加两个参数pageNumber和pageSize，也可使用alias来指定参数名。
+
+/test.json?pageNumber=2&amp;amp;pageSize=10
+
+
+ 配置参数
+
+
+locator string | function：这个参数与dataSource相关，一般情况下，dataSource是一个数组，可以直接传给分页组件处理。但如果返回的是Object，那么就需要指定那个数组，默认为data。指定locator可定位到数据源的位置，支持2种方式：
+1、String
+
+{
+data: [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]
+}
+
+指定locator: &#39;data&#39;之后，最终传给分页组件的就是[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]。此外，还支持多层定位，如果dataSource是下面代码的样子，则可用locator: &#39;a.b&#39;：
+
+{
+a: {b: [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]}
+}
+
+2、Function：提供一个自定义函数，找到数组的位置，并返回。
+
+locator: function(){
+// find data and return
+return &#39;a.b&#39;;
+}
+
+通过Ajax获取的数据同样会应用此规则。
+
+
+totalNumber：类型：number，默认值：1。条目总数，异步分页时必填，模拟分页时为数组的长度
+
+pageNumber ：类型：number，默认值：1。指定初始化时加载哪一页的数据
+
+pageSize：类型：number，默认值：10。每页的条目数
+
+pageRange：类型：number，默认值：2。可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为2，则页码条显示为&#39;1...4 5 6 7 8&#39;
+
+callback function(data, pagination)：每次翻页时的回调，callback会传入两个参数：
+
+callback: function(data, pagination){ ... }
+
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+data
+array
+当页数据
+
+
+pagination
+object
+包含当页配置信息的对象
+
+
+
+
+pagination对象包含以下属性值：
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+pageNumber
+number
+当前页码
+
+
+pageRange
+number
+页码范围
+
+
+pageSize
+number
+每页条目数
+
+
+totalPage
+number
+总页数
+
+
+totalNumber
+number
+总条目数
+
+
+el
+jQueryObject
+分页实例的容器
+
+
+direction
+number
+分页方向，往前翻页时值为-1，往后翻为1，初始化时为0
+
+
+
+
+
+
+alias ：类型：Object。请求的参数别名，用于异步分页，默认为空。例如：
+
+alias: {
+pageNumber: &#39;pageNum&#39;,
+pageSize: &#39;limit&#39;
+}
+
+那么通过Ajax发起请求时，会替换默认的pageNumber和pageSize。
+/test.json?pageNum=2&amp;amp;limit=10 
+
+
+
+ 显示控制
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+showPrevious
+boolean
+true
+是否显示 &#39;上一页&#39;
+
+
+showNext
+boolean
+true
+是否显示 &#39;下一页&#39;
+
+
+showPageNumbers
+boolean
+true
+是否显示 &#39;页码&#39;
+
+
+showNavigator 
+boolean
+false
+是否显示导航器
+
+
+showGoInput
+boolean
+false
+是否显示跳转输入框
+
+
+showGoButton
+boolean
+false
+是否显示跳转按钮
+
+
+showFirstOnEllipsisShow
+boolean
+true
+是否在有省略号时显示开始页码showBeginingOnOmit: false,pageRange: 1,totalNumber: 100,pageSize: 10像上面这样设置，分页会显示为：分页条会显示成这样 &#39;... 4 5 6 ... 10&#39;
+
+
+showLastOnEllipsisShow
+boolean
+true
+是否在有省略号时显示结束页码showEndingOnOmit: false,pageRange: 1,totalNumber: 100,pageSize: 10像上面这样设置，分页会显示为：分页条会显示成这样 &#39;1 ... 4 5 6 ...&#39;
+
+
+autoHidePrevious
+boolean
+false
+是否在当前显示为第一页时隐藏 &#39;上一页&#39; 按钮
+
+
+autoHideNext
+boolean
+false
+是否在当前显示为最后一页时隐藏 &#39;下一页&#39; 按钮
+
+
+
+
+
+ 分页样式
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+classPrefix
+string
+&#39;pagination&#39;
+样式前缀
+
+
+className
+string
+&#39;&#39;
+附加给分页容器的额外样式类
+
+
+activeClassName
+string
+&#39;active&#39;
+选中页码的样式类
+
+
+disableClassName
+string
+&#39;disabled&#39;
+不可用页码的样式类
+
+
+ulClassName
+string
+&#39;&#39;
+附加给分页容器下的 &#39;ul&#39; 元素的样式类
+
+
+
+
+
+ 定制样式
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+prevText
+string
+
+«，即符号«
+&#39;上一页&#39; 的文本
+
+
+nextText
+string
+
+»，即符号»
+&#39;下一页&#39; 的文本
+
+
+ellipsisText
+string
+&#39;...&#39;
+省略号文本
+
+
+goButtonText
+string
+&#39;Go&#39;
+跳转按钮文本
+
+
+formatNavigator
+string | function
+&amp;lt;\%= currentPage \%&amp;gt; / &amp;lt;\%= totalPage \%&amp;gt;，也可提供一个自定义函数，返回一个这样的字符串
+导航器格式化模板。提供 3 个模板变量：currentPage：当前页码totalPage：总页数totalNumber：总条目数
+
+
+formatGoInput
+string | function
+&amp;lt;\%= input \%&amp;gt;
+跳转输入框格式化模板，默认为 &amp;lt;\%= input \%&amp;gt;，也可提供一个自定义函数，返回一个这样的字符串。
+&amp;lt;\%= input \%&amp;gt; 相当于 &amp;lt;input type=&#34;text&#34; class=&#34;J-paginationjs-go-pagenumber&#34;&amp;gt; 的一个包装，所以，也可自定义一个输入框标签元素，只需要确保带有 J-paginationjs-go-pagenumber 这个class即可。提供 4 个模板变量：input：输入框currentPage：当前页码totalPage：总页数totalNumber：总条目数
+
+
+formatGoButton
+string | function
+&amp;lt;\%= button \%&amp;gt;
+跳转按钮格式化模板，默认为 &amp;lt;\%= button \%&amp;gt;，也可提供一个自定义函数，返回一个这样的字符串。&amp;lt;\%= button \%&amp;gt; 相当于 &amp;lt;input type=&#34;button&#34; class=&#34;J-paginationjs-go-button&#34;&amp;gt;，所以，也可自定义一个跳转按钮的标签元素，只需要确保带有 J-paginationjs-go-button 这个class即可。提供 4 个模板变量：button：按钮currentPage：当前页码totalPage：总页数totalNumber：总条目数
+
+
+header
+string | function
+null
+自定义头部内容。提供 3 个模板变量：currentPage：当前页码totalPage：总页数totalNumber：总条目数
+
+
+footer
+string | function
+null
+自定义尾部内容。提供 3 个模板变量：currentPage：当前页码totalPage：总页数totalNumber：总条目数
+
+
+pageLink
+string
+null
+分页的链接
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 方法
+分页初始化之后，可以使用下面列出的方法来改变分页的行为。
+
+var container = $(&#39;#example1&#39;);
+container.pagination({ ... });
+container.pagination(&#39;previous&#39;);
+
+
+
+previous：触发上一页。
+
+next：触发下一页。
+
+go：跳转到指定页，有以下 2 种使用方式。
+
+container.pagination(&#39;go&#39;, 8)
+container.pagination(8)
+
+也支持自定义回调函数，例如：
+
+container.pagination(&#39;go&#39;, 8, function(data, pagination){
+// template method of yourself
+})
+
+注意，设置自定义函数后，就不会再调用分页的回调函数callback了。
+
+
+disable：禁用分页，执行后分页不可用，要重新恢复可用需要调用解锁事件container.pagination(&#39;enable&#39;)。每次异步翻页发出请求前，会自动调用此方法，请求成功之后会自动调用enable解锁。
+
+enable：解锁分页，执行后分页恢复可用。
+
+show：显示分页。
+
+hide：隐藏分页。
+
+destroy：销毁分页实例。
+
+getSelectedPageNum：number，获取当前页码。
+
+getTotalPage：number，获取总页数。
+
+getSelectedPageData：array，获取当前页码的数据。
+
+isDisabled：function，当前是否正处在禁用状态。
+
+
+ 事件
+分页事件的功能接口有 2 种使用方式，分别是回调函数和插件钩子。
+使用回调函数：
+
+var container = $(&#39;#example1&#39;);
+container.pagination({
+afterRender: function(){
+// function body
+}
+}); 
+
+使用插件钩子：
+
+var container = $(&#39;#example2&#39;);
+container.pagination({
+dataSource: [1, 2, 3],
+pageSize: 1
+});
+container.addHook(&#39;afterRender&#39;, function(){
+// function body
+});
+
+注意，钩子可以在分页初始化之前定义，也可以在初始化之后定义。
+
+
+beforeInit：分页实例初始化之前调用，返回false将阻止初始化。
+
+beforeRender：每次分页时会重新渲染分页条，渲染之前调用。
+
+beforePaging：分页之前调用。
+
+beforeDestroy：分页实例销毁之前调用。
+
+beforeDisable：禁用之前调用。
+
+beforeEnable：解锁之前调用。
+
+beforePreviousOnClick：点击上一页之前调用。
+
+beforePageOnClick：点击页码之前调用。
+
+beforeNextOnClick：点击下一页之前调用。
+
+beforeGoInputOnEnter：分页输入框回车之前调用。
+
+beforeGoButtonOnClick：分页跳转按钮点击之前调用。
+
+afterInit：分页实例初始化创建完成之后调用。
+
+afterRender：每次分页时会重新渲染分页条，渲染之后调用。
+
+afterPaging：分页之后调用。
+
+afterDestroy：分页实例销毁之后调用。
+
+afterDisable：禁用之后调用。
+
+afterEnable：解锁之后调用。
+
+afterPreviousOnClick：点击上一页之后调用。
+
+afterPageOnClick：点击页码之后调用。
+
+afterNextOnClick：点击下一页之后调用。
+
+afterGoInputOnEnter：分页输入框回车之后调用。
+
+afterGoButtonOnClick：分页跳转按钮点击之后调用。
+
+afterIsFirstPage：当前是第一页时调用。
+
+afterIsLastPage：当前是最后一页时调用。
+
+
+ 皮肤
+分页组件自带了 5 套默认皮肤，但你完全可以定制你自己的皮肤。
+例如蓝色皮肤，可以这样使用：
+
+className: &#39;paginationjs-theme-blue&#39;
+
+小号蓝色皮肤：
+
+className: &#39;paginationjs-theme-blue paginationjs-small&#39;
+
+大号蓝色皮肤：
+
+className: &#39;paginationjs-theme-blue paginationjs-big&#39;
+
+如果需要自定义样式，则可以增加CSS类custom-paginationjs。
+
+ 配置默认值
+Pagination.js分页可通过$.fn.pagination.defaults对象来修改默认配置，修改后，将影响所有之后创建的实例。例如：
+
+$.extend($.fn.pagination.defaults, {
+pageSize: 20
+})
+
+之后所有新建的分页实例，每页条数都是20。
+Pagination.js插件的github地址是：https://github.com/superRaytin/paginationjs
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_995">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_998">
+                        多用途响应式jQuery视频和图片画廊插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_998" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509042050.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Unite Gallery是一款功能强大的多用途响应式视频和图片画廊jQuery插件。它使用模块化技术，使用简单，易于定制。你可以通过CSS来改变画廊的皮肤，甚至可以自定义主题样式。它还支持移动触摸，支持图片缩放等。
+内容：
+
+
+简要教程
+
+
+Unite Gallery是一款功能强大的多用途响应式视频和图片画廊jQuery插件。它使用模块化技术，使用简单，易于定制。你可以通过CSS来改变画廊的皮肤，甚至可以自定义主题样式。它还支持移动触摸，支持图片缩放等。它的特点还有：
+
+可以在画廊中播放视频和音频文件。
+响应式-自动适配任何屏幕和容器，自动调整比例。
+可通过单独的CSS文件来更换画廊皮肤。
+多种主题-画廊提供了多种主题，每一种主题都有各自的特点。
+支持图片缩放-画廊中的大图可以进行缩放。
+提供各种功能按钮，移动设备中也能使用。
+画廊可以通过键盘的方向键进行控制。
+丰富的配置参数。
+强大的API支持。
+
+
+ 使用方法
+使用该图片画廊至少需要移入下面的文件。
+
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;unitegallery/js/unitegallery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;unitegallery/css/unite-gallery.css&#39; type=&#39;text/css&#39; /&amp;gt;
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;unitegallery/themes/default/ug-theme-default.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;unitegallery/themes/default/ug-theme-default.css&#39; type=&#39;text/css&#39; /&amp;gt;
+
+
+ HTML结构
+该图片画廊使用一个&amp;lt;div&amp;gt;元素来作为包裹元素，里面放置一组图片。
+
+&amp;lt;div id=&#34;gallery&#34; style=&#34;display:none;&#34;&amp;gt;
+&amp;lt;img alt=&#34;Image 1 Title&#34; src=&#34;thumbs/image1.jpg&#34;
+data-image=&#34;images/image1.jpg&#34;
+data-description=&#34;Image 1 Description&#34;&amp;gt;
+&amp;lt;img alt=&amp;quot;Image 2 Title&amp;quot; src=&amp;quot;thumbs/image2.jpg&amp;quot;
+data-image=&amp;quot;images/image02.jpg&amp;quot;
+data-description=&amp;quot;Image 2 Description&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+如果是视频和音频文件，可以使用下面的HTML格式：
+
+&amp;lt;!--带图片预览的Youtube视频--&amp;gt;
+&amp;lt;img alt=&#34;Youtube With Images&#34;
+ data-type=&#34;youtube&#34;
+ src=&#34;thumbs/youtube\_thumb.jpg&#34;
+ data-image=&#34;images/youtube\_image.jpg&#34; 
+ data-videoid=&#34;A3PDXmYoF5U&#34;
+ data-description=&#34;Youtube video description&#34;&amp;gt;
+&amp;lt;!--不带图片预览的Youtube视频--&amp;gt;
+&amp;lt;img alt=&amp;quot;Youtube Without Images&amp;quot;
+data-type=&amp;quot;youtube&amp;quot;
+data-videoid=&amp;quot;A3PDXmYoF5U&amp;quot;
+data-description=&amp;quot;Youtube video description&amp;quot;&amp;gt;
+&amp;lt;!--Vimeo视频--&amp;gt;
+&amp;lt;img alt=&amp;quot;Vimeo Video&amp;quot;
+data-type=&amp;quot;vimeo&amp;quot;
+src=&amp;quot;thumbs/vimeo_thumb.jpg&amp;quot;
+data-image=&amp;quot;images/vimeo_image.jpg&amp;quot;
+data-videoid=&amp;quot;73234449&amp;quot;
+data-description=&amp;quot;Vimeo Video Description&amp;quot;&amp;gt;
+&amp;lt;!--HTML5视频--&amp;gt;
+&amp;lt;img alt=&amp;quot;Html5 Video&amp;quot;
+src=&amp;quot;thumbs/html5_video_thumb.png&amp;quot;
+data-type=&amp;quot;html5video&amp;quot;
+data-image=&amp;quot;thumbs/html5_video_image.png&amp;quot;
+data-videoogv=&amp;quot;http://video-js.zencoder.com/oceans-clip.ogv&amp;quot;
+data-videowebm=&amp;quot;http://video-js.zencoder.com/oceans-clip.webm&amp;quot;
+data-videomp4=&amp;quot;http://video-js.zencoder.com/oceans-clip.mp4&amp;quot;
+data-description=&amp;quot;Html5 Video Description&amp;quot;&amp;gt;
+&amp;lt;!--Wistia视频--&amp;gt;
+&amp;lt;img alt=&amp;quot;Wistia Video&amp;quot;
+src=&amp;quot;thumbs/wistia_thumb.jpg&amp;quot;
+data-image=&amp;quot;images/wistia_image.jpg&amp;quot;
+data-videoid=&amp;quot;9oedgxuciv&amp;quot;
+data-description=&amp;quot;Wistia video description!&amp;quot;&amp;gt;
+&amp;lt;!--音频--&amp;gt;
+&amp;lt;img alt=&amp;quot;Sound Cloud Track&amp;quot;
+src=&amp;quot;thumbs/sound_cloud_thumb.jpg&amp;quot;
+data-type=&amp;quot;soundcloud&amp;quot;
+data-image=&amp;quot;images/sound_cloud_image.jpg&amp;quot;
+data-trackid=&amp;quot;8390970&amp;quot;
+data-description=&amp;quot;SoundCloud track description&amp;quot;&amp;gt;
+
+在图片&amp;lt;img&amp;gt;元素中，各个属性代表的含义如下：
+
+
+alt：图片的标题（可选）。
+
+src：缩略图的URL地址。
+
+data-image：大图的URL地址。
+
+data-description：图片的描述信息（可选）。
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该图片画廊插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt; 
+jQuery(document).ready(function(){ 
+jQuery(&#34;#gallery&#34;).unitegallery(); 
+}); 
+&amp;lt;/script&amp;gt;
+
+
+ 修改画廊的皮肤
+要改变画廊的皮肤非常简单。首先你需要引入相应的皮肤CSS文件（在skins文件夹中），例如需要引入“alexis”皮肤，你可以在页面中引入它：
+
+&amp;lt;link rel=&#39;stylesheet&#39;href=&#39;unitegallery/skins/alexis/alexis.css&#39; type=&#39;text/css&#39; /&amp;gt;
+
+然后你需要修改全局皮肤参数（gallery\_skin）。你还可以局部修改皮肤，例如要修改幻灯片的按钮，可以通过设置slider\_bullets\_skin参数来实现：
+
+jQuery(&#34;gallery&#34;).unitegallery({
+gallery\_skin:&#34;alexis&#34; //it&#39;s the default skin
+slider\_bullets\_skin: &#34;alexis&#34; //example how to change only skin for slider bullets
+});
+
+
+ 修改主题
+图片画廊的主题在 unitegallery / themes 文件夹中。要改变主题，你需要在页面中引入相应的主题js文件。
+
+&amp;lt;script type=&#39;text/javascript&#39; src=&#39;unitegallery/themes/compact/ug-theme-compact.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后你可以通过配置参数gallery\_theme:&#34;theme name&#34; 来应用相应的主题。“theme name”是该主题文件夹的名称。
+
+jQuery(&#34;gallery&#34;).unitegallery({
+gallery\_theme:&#34;compact&#34; //example how to change skin to &#34;compact&#34;
+});
+
+需要注意的是，某些主题有它自己的一些图片文件，例如“default theme”，你不可以改变它们，只能够通过“slider”选项来禁用或添加它们。例如“default”主题中的slider播放按钮和全屏模式按钮。它们有主题的参数进行控制，而不是通过slider的参数进行控制。
+如果你在一个页面中只引入了一个主题文件，你不必使用gallery\_theme参数来指明它，插件会自动调用。
+
+ API
+要使用这个图片画廊的API非常简单。首先，你可以创建一个API变量，注意这个变量要在ready()函数之外定义。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+var api;
+jQuery(document).ready(function(){
+api = jQuery(&#34;#gallery&#34;).unitegallery();
+});
+&amp;lt;/script&amp;gt;
+
+然后你就可以使用这个api变量来操作画廊了。下面列出了一些可用的api调用方法：
+
+api.play()//start play mode
+api.stop()//stop play mode
+api.togglePlay()//toggle play mode
+api.enterFullscreen() //enter fullscreen
+api.exitFullscreen()//exit fullscreen 
+api.toggleFullscreen()//toggle fullscreen
+api.zoomIn()//zoom in current image
+api.zoomOut() //zoom out current image
+api.resetZoom() //reset zoom to fit zoom mode
+api.nextItem()//next item
+api.prevItem()//previous item
+api.selectItem(numItem) //go to some item by index (0-numItems)
+api.resize(width, height) //resize the gallery to some width. Height is optionary.
+api.getItem(numItem)//get data object of the item by some index.
+api.getNumItems() //get number of items in the gallery
+
+下面是一些可用的api事件：
+
+api.on(&#34;item\_change&#34;,function(num, data){ //on item change, get item number and item data
+//do something
+});
+api.on(&amp;quot;resize&amp;quot;,function(){ //on gallery resize
+//do something
+});
+api.on(&amp;quot;enter_fullscreen&amp;quot;,function(){ //on enter fullscreen
+//do something
+});
+api.on(&amp;quot;exit_fullscreen&amp;quot;,function(){//on exit fulscreen
+//do something
+});
+api.on(&amp;quot;play&amp;quot;,function(){ //on start playing
+//do something
+});
+api.on(&amp;quot;stop&amp;quot;,function(){ //on stop playing
+//do something
+});
+api.on(&amp;quot;pause&amp;quot;,function(){//on pause playing
+//do something
+});
+api.on(&amp;quot;continue&amp;quot;,function(){ //on continue playing
+//do something
+});
+
+在某些api事件和方法中有一个data对象，注意，你可以添加自定义的data-*属性，例如：&amp;lt;img src=&#34;thumbs/thumb1.jpg&#34; data-yourfield=&#34;yourvalue&#34; ...&amp;gt;，然后你可以像获取其他data属性的值一样来获取自定义data属性的值：
+
+data.index 
+data.title 
+data.description
+data.urlImage
+data.urlThumb
+//that taken from &amp;lt;img... data-custom=&amp;quot;value&amp;quot; ... &amp;gt; from gallery markup
+data.custom //item custom field passed.
+
+关于该图片响应式画廊更详细的介绍请参考：http://unitegallery.net/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_998">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_999">
+                        实用输入域表情符号选择器jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_999" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508311534.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Emoji Picker是一款非常实用的输入域表情符号选择器jQuery插件。该插件可以在输入框或文本域中生成一个表情选择器，用户可以可视化的选择各种表情符号，效果类似于各种聊天软件的输入窗口的选择表情功能。
+内容：
+
+
+简要教程
+
+
+Emoji Picker是一款非常实用的输入域表情符号选择器jQuery插件。该插件可以在输入框或文本域中生成一个表情选择器，用户可以可视化的选择各种表情符号，效果类似于各种聊天软件的输入窗口的选择表情功能。
+通过该插件可以实现下面的功能：
+
+将一个输入域转换为带表情符号选择器的可编辑的富文本域。
+在每一个输入域的右上角都有一个“笑脸”的符号，它是表情选择器面板的切换开关。
+每个面板中带有多种类型的表情符号，可以通过最上方的菜单按钮来切换。
+文本域中的值可以非常容易的在Unicode和HTML之间进行转换。
+
+当你调用new EmojiPicker().discover()方法的时候，插件会找到所有带data-emojiable=&#34;true&#34;的data属性的元素，然后在这些元素上创建可编辑的DIV元素，原来的输入域会被隐藏起来。
+在这个可编辑的DIV中输入的文字是普通的文本，选择的表情符号实际上是&amp;lt;img&amp;gt;元素。
+要获取可编辑的DIV中的内容，可以在隐藏的输入域上调用element.val()方法。表情符号的&amp;lt;img&amp;gt;元素将会被转换为Unicode文本。
+
+
+ 使用方法
+在输入框中使用表情符号的HTML结构：
+
+&amp;lt;input type=&#34;email&#34; class=&#34;form-control&#34; placeholder=&#34;Input field&#34; data-emojiable=&#34;true&#34;&amp;gt;
+
+在文本域中使用表情符号的HTML结构：
+
+&amp;lt;textarea class=&#34;form-control textarea-control&#34; rows=&#34;3&#34; placeholder=&#34;Textarea&#34; data-emojiable=&#34;true&#34;&amp;gt;&amp;lt;/textarea&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后可以通过下面的方法来初始化该表情符号插件。
+
+window.emojiPicker = new EmojiPicker({
+emojiable\_selector: &#39;[data-emojiable=true]&#39;,
+assetsPath: &#39;lib/img/&#39;,
+popupButtonClasses: &#39;fa fa-smile-o&#39;
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_999">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/113/" class="page-btn btn">上一页</a>
+            
+                
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

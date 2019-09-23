@@ -1,0 +1,359 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3全屏切开页面效果幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3全屏切开页面效果幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411261649.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411261649.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141126601.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常酷炫的jQuery和css3全屏切开页面效果幻灯片插件。该幻灯片插件通过参数设置可以自动播放。在切换幻灯片时页面被从中间切开，分成两半向两侧运动，下一张幻灯片从下方显示出来。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款炫酷的jQuery和css3全屏切开页面效果幻灯片插件。插件中使用了<a href="http://benalman.com/projects/jquery-cond-plugin/" target="\_blank">jQuery cond</a>。jQuery cond是Ben Alman写的，它是一个“if-then-else”链式结构的jQuery插件。插件中那些可以动画的图标来自于<a href="http://www.dafont.com/animals.font" target="\_blank">Alan Carr</a>。</p>
+<h3>HTML</h3>
+<p>包裹div给它一个class为<code>sl-slide-wrapper</code>，每一个slide都带有class为<code>sl-slide</code>。demo中有两种类型的导航按钮：箭头和圆点。</p>
+<pre class="brush:html">
+&lt;div id="slider" class="sl-slider-wrapper"&gt;
+&lt;div class="sl-slider"&gt;
+&lt;div class="sl-slide bg-1"&gt;
+&lt;div class="sl-slide-inner"&gt;
+&lt;div class="deco" data-icon="H"&gt;&lt;/div&gt;
+&lt;h2&gt;A bene placito&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have just dined...&lt;/p&gt;
+&lt;cite&gt;Ralph Waldo Emerson&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sl-slide bg-2"&gt;
+&lt;div class="sl-slide-inner"&gt;
+&lt;div class="deco" data-icon="q"&gt;&lt;/div&gt;
+&lt;h2&gt;Regula aurea&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Until he extends the circle...&lt;/p&gt;
+&lt;cite&gt;Albert Schweitzer&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sl-slide bg-2"&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;nav id="nav-arrows" class="nav-arrows"&gt;
+&lt;span class="nav-arrow-prev"&gt;Previous&lt;/span&gt;
+&lt;span class="nav-arrow-next"&gt;Next&lt;/span&gt;
+&lt;/nav&gt;
+&lt;nav id="nav-dots" class="nav-dots"&gt;
+&lt;span class="nav-dot-current"&gt;&lt;/span&gt;
+&lt;span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;/span&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+</pre>
+<p>每一个slide都有一些自己的data-attributes，它们用于控制各自不同的效果，如旋转角度、缩放等等。下面列出所有的data-attributes：</p>
+<pre class="brush:html">
+data-orientation
+data-slice1-rotation
+data-slice2-rotation
+data-slice1-scale 
+data-slice2-scale
+</pre>
+<p>data-orientation可以设置为 “vertical” 或 “horizontal” 。data-slice1-rotation和data-slice2-rotation是设置旋转角度的。data-slice1-scale和data-slice2-scale用于设置缩放值。</p>
+<p>所以，第一个slide的html结构如下：</p>
+<pre class="brush:html">
+&lt;div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2"&gt;
+</pre>
+<p>上面的html结构是一个基本结构，为了能产生动画效果，我们需要使用javascript在运行时将结构改变为如下：</p>
+<pre class="brush:html">
+&lt;div id="slider" class="sl-slider-wrapper"&gt;
+&lt;div class="sl-slider"&gt; 
+&lt;div class="sl-slides-wrapper"&gt;
+&lt;div class="sl-slide bg-1 sl-slide-horizontal"&gt;
+&lt;div class="sl-content-wrapper"&gt;
+&lt;div class="sl-content"&gt;
+&lt;!-- the content --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt; 
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- navs --&gt; 
+&lt;/div&gt;
+</pre>
+<p>页面中的所有内容将被放到<code>sl-slide-inner</code>中。</p>
+<p>在这时候，当我们点击下一个幻灯片或前一个幻灯片时，我们将以当前的幻灯片的内容来做页面切割：</p>
+<pre class="brush:xml">
+&lt;div class="sl-slide sl-slide-horizontal" &gt;
+&lt;div class="sl-content-slice"&gt;
+&lt;div class="sl-content-wrapper"&gt;
+&lt;div class="sl-content"&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sl-content-slice"&gt;
+&lt;div class="sl-content-wrapper"&gt;
+&lt;div class="sl-content"&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h3>可用参数</h3>
+<p>下面是一些可用的参数：</p>
+<pre class="brush:xml">
+$.Slitslider.defaults = {
+// transitions speed
+speed : 800,
+// if true the item's slices will also animate the opacity value
+optOpacity : false,
+// amount (\%) to translate both slices - adjust as necessary
+translateFactor : 230,
+// maximum possible angle
+maxAngle : 25,
+// maximum possible scale
+maxScale : 2,
+// slideshow on / off(自动播放，默认关闭)
+autoplay : false,
+// keyboard navigation(键盘导航，默认开启)
+keyboard : true,
+// time between transitions
+interval : 4000,
+// callbacks
+onBeforeChange : function( slide, idx ) { return false; },
+onAfterChange : function( slide, idx ) { return false; }
+};
+</pre>
+<p>CSS代码请参考下载文件。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411261649.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141126601.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1479">
+                                <h3 class="post-title">
+                                    jQuery网页背景视觉差滚动效果
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

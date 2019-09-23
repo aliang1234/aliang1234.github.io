@@ -1,0 +1,358 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于SVG带日期和地区提示的jQuery世界地图 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于SVG带日期和地区提示的jQuery世界地图
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1807/201807011427.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807011427.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807025205.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于SVG带日期和地区提示的jQuery世界地图。该jQuery世界地图使用SVG来制作地图，在鼠标hover地区上的区域时，会显示该地区的名称和当前时间。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于SVG带日期和地区提示的jQuery世界地图。该jQuery世界地图使用SVG来制作地图，在鼠标hover地区上的区域时，会显示该地区的名称和当前时间。</p>
+<p>
+</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap相关文件，以及jquery.jclock.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="path/to/bootstrap.min.css"&gt;
+&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/jquery.jclock.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>在页面中通过svg引入世界地图。</p>
+<pre class="brush:html">
+&lt;input type="hidden" class="jclock" /&gt;
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+<p>&lt;svg<br>
+xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;<br>
+xmlns:cc=&quot;http://creativecommons.org/ns#&quot;<br>
+xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;<br>
+xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;<br>
+xmlns=&quot;http://www.w3.org/2000/svg&quot;<br>
+xmlns:sodipodi=&quot;http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd&quot;<br>
+xmlns:inkscape=&quot;http://www.inkscape.org/namespaces/inkscape&quot;<br>
+enable_background=&quot;new 0 0 2000 1001&quot;<br>
+height=&quot;100%&quot;<br>
+pretty_print=&quot;False&quot;<br>
+style=&quot;stroke-linejoin: round; stroke:#000; fill: none;&quot;<br>
+version=&quot;1.1&quot;<br>
+viewBox=&quot;0 0 2000 1001&quot;<br>
+width=&quot;100%&quot;<br>
+id=&quot;svg2&quot;<br>
+inkscape:version=&quot;0.48.4 r9939&quot;<br>
+sodipodi:docname=&quot;world.svg&quot;&gt;<br>
+&lt;sodipodi:namedview<br>
+pagecolor=&quot;#ffffff&quot;<br>
+bordercolor=&quot;#666666&quot;<br>
+borderopacity=&quot;1&quot;<br>
+objecttolerance=&quot;10&quot;<br>
+&lt;a href=&quot;https://www.jqueryscript.net/tags.php?/grid/&quot;&gt;grid&lt;/a&gt;tolerance=&quot;10&quot;<br>
+guidetolerance=&quot;10&quot;<br>
+inkscape:pageopacity=&quot;0&quot;<br>
+inkscape:pageshadow=&quot;2&quot;<br>
+inkscape:window-width=&quot;1920&quot;<br>
+inkscape:window-height=&quot;1137&quot;<br>
+id=&quot;namedview231&quot;<br>
+showgrid=&quot;false&quot;<br>
+inkscape:zoom=&quot;1.144&quot;<br>
+inkscape:cx=&quot;593.00732&quot;<br>
+inkscape:cy=&quot;460.46398&quot;<br>
+inkscape:window-x=&quot;1192&quot;<br>
+inkscape:window-y=&quot;118&quot;<br>
+inkscape:window-maximized=&quot;1&quot;<br>
+inkscape:current-layer=&quot;svg2&quot; /&gt;<br>
+&lt;defs id=&quot;defs4&quot;&gt;<br>
+&lt;/defs&gt;<br>
+&lt;metadata<br>
+id=&quot;metadata8&quot;&gt;<br>
+&lt;views<br>
+id=&quot;views10&quot;&gt;<br>
+&lt;view<br>
+h=&quot;1001&quot;<br>
+padding=&quot;0&quot;<br>
+w=&quot;2000&quot;<br>
+id=&quot;view12&quot;&gt;<br>
+&lt;proj<br>
+flip=&quot;auto&quot;<br>
+id=&quot;robinson&quot;<br>
+lon0=&quot;100.0&quot; /&gt;<br>
+&lt;bbox<br>
+h=&quot;2233.1&quot;<br>
+w=&quot;5271.17&quot;<br>
+x=&quot;-2635.59&quot;<br>
+y=&quot;-1308.06&quot;<br>
+id=&quot;bbox15&quot; /&gt;<br>
+&lt;/view&gt;<br>
+&lt;/views&gt;<br>
+&lt;rdf:RDF&gt;<br>
+&lt;cc:Work<br>
+rdf:about=&quot;&quot;&gt;<br>
+&lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;<br>
+&lt;dc:type<br>
+rdf:resource=&quot;http://purl.org/dc/dcmitype/StillImage&quot; /&gt;<br>
+&lt;dc:title /&gt;<br>
+&lt;/cc:Work&gt;<br>
+&lt;/rdf:RDF&gt;<br>
+&lt;/metadata&gt;<br>
+&lt;a class=&quot;country&quot; id=&quot;+4.30&quot; data-toggle=&quot;popover&quot; data-container=&quot;body&quot; title=&quot;Afghanistan&quot; data-content=&quot;Some content inside the popover&quot; data-placement=&quot;top&quot;&gt;<br>
+&lt;path<br>
+inkscape:connector-curvature=&quot;0&quot;<br>
+id=&quot;AF&quot;<br>
+data-name=&quot;Afghanistan&quot;<br>
+data-id=&quot;AF&quot;<br>
+d=&quot;m 1369.9,333.8 -5.4,0 -3.8,-0.5 -2.5,2.9 -2.1,0.7 -1.5,1.3 -2.6,-2.1 -1,-5.4 -1.6,-0.3 0,-2 -3.2,-1.5 -1.7,2.3 0.2,2.6 -0.6,0.9 -3.2,-0.1 -0.9,3 -2.1,-1.3 -3.3,2.1 -1.8,-0.8 -4.3,-1.4 -2.9,0 -1.6,-0.2 -2.9,-1.7 -0.3,2.3 -4.1,1.2 0.1,5.2 -2.5,2 -4,0.9 -0.4,3 -3.9,0.8 -5.9,-2.4 -0.5,8 -0.5,4.7 2.5,0.9 -1.6,3.5 2.7,5.1 1.1,4 4.3,1.1 1.1,4 -3.9,5.8 9.6,3.2 5.3,-0.9 3.3,0.8 0.9,-1.4 3.8,0.5 6.6,-2.6 -0.8,-5.4 2.3,-3.6 4,0 0.2,-1.7 4,-0.9 2.1,0.6 1.7,-1.8 -1.1,-3.8 1.5,-3.8 3,-1.6 -3,-4.2 5.1,0.2 0.9,-2.3 -0.8,-2.5 2,-2.7 -1.4,-3.2 -1.9,-2.8 2.4,-2.8 5.3,-1.3 5.8,-0.8 2.4,-1.2 2.8,-0.7 -1.4,-1.9 z&quot;<br>
+/&gt;<br>
+&lt;/a&gt;<br>
+......<br>
+&lt;/svg&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕，通过下面的方法来初始化该jQuery世界地图特效。</p>
+<pre class="brush:js">
+$(document).ready(function(){
+<p>$(&quot;.country&quot;).hover(function(){</p>
+<p>var gmt_country = <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;&amp;&#039; at position 68: …ns = {
+format:&#039;&amp;̲lt;span class=\…'>(this).attr(&quot;id&quot;);
+// alert(gmt\_country);
+var options = {
+format:&#039;&amp;lt;span class=\&quot;dt\&quot;&amp;gt;\%A, \%d \%B \%I:\%M:\%S \%P&amp;lt;/span&amp;gt;&#039;,
+timeNotation: &#039;12h&#039;,
+am\_pm: true,
+utc:true,
+utc\_offset: gmt\_country
+};
+</span>('.jclock').jclock(options);</p>
+<p>var country_time = $(&quot;.jclock&quot;).text();</p>
+<p>$(this).attr(&quot;data-content&quot;, country_time);</p>
+<p>});</p>
+<p>$('[data-toggle=&quot;popover&quot;]').popover({ trigger: &quot;hover&quot; });</p>
+<p>});</p>
+</pre>
+<p><i class="fa fa-github"></i> 该jQuery世界地图特效的github地址为：<a href="https://github.com/hakikz/jquery-map-with-time-on-hover" target="\_blank">https://github.com/hakikz/jquery-map-with-time-on-hover</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807011427.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807025205.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_226">
+                                <h3 class="post-title">
+                                    js和CSS3鼠标悬停超链接展示图片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

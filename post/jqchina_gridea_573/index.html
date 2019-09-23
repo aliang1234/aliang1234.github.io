@@ -1,0 +1,415 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于jquery ui可自由拖拽的弹性圆形菜单效果 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于jquery ui可自由拖拽的弹性圆形菜单效果
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1701/201701151446.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1701/201701151446.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201701154322.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于jquery ui的可自由拖拽的弹性圆形菜单效果。该圆形菜单可以通过点击一个圆形按钮来弹出4个子菜单按钮。弹性效果由anime.js来制作，效果非常炫酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于jquery ui的可自由拖拽的弹性圆形菜单效果。该圆形菜单可以通过点击一个圆形按钮来弹出4个子菜单按钮。弹性效果由<a href="http://anime-js.com/" target="\_blank">anime.js</a>来制作，效果非常炫酷。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和jqueryui文件，以及anime.js和需要的样式文件style.css。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/anime.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>圆形菜单的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="center menu"&gt;
+&lt;div id="myMenu"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，通过下面的js代码来完成圆形菜单的拖拽功能，以及弹性效果。</p>
+<pre class="brush:js">
+var timeOut;
+<p>class Item {<br>
+constructor(icon, backgroundColor) {<br>
+this.$element = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>E</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>d</mi><mi>i</mi><mi>v</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo>)</mo><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>i</mi><mi>c</mi><mi>o</mi><mi>n</mi><mo>=</mo><mi>i</mi><mi>c</mi><mi>o</mi><mi>n</mi><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(document.createElement(&quot;div&quot;));
+this.icon = icon;
+this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>element.addClass(&quot;item&quot;);<br>
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>b</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>g</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi>b</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>g</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mi>C</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mo>)</mo><mo separator="true">;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mi>i</mi><mo>=</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>E</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>i</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">element.css(&quot;background-color&quot;, backgroundColor);
+var i = document.createElement(&quot;i&quot;);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">i</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>(i).addClass(&quot;fi-&quot; + icon);<br>
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo>(</mo><mi>i</mi><mo>)</mo><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mo>=</mo><mi>n</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>n</mi><mi>e</mi><mi>x</mi><mi>t</mi><mo>=</mo><mi>n</mi><mi>u</mi><mi>l</mi><mi>l</mi><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>i</mi><mi>s</mi><mi>M</mi><mi>o</mi><mi>v</mi><mi>i</mi><mi>n</mi><mi>g</mi><mo>=</mo><mi>f</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>e</mi><mo separator="true">;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>=</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo separator="true">;</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element.append(i);
+this.prev = null;
+this.next = null;
+this.isMoving = false;
+var element = this;
+this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>element.on(&quot;mousemove&quot;, function() {<br>
+clearTimeout(timeOut);<br>
+timeOut = setTimeout(function() {<br>
+if (element.next &amp;&amp; element.isMoving) {<br>
+element.next.moveTo(element);<br>
+}<br>
+}, 10);<br>
+});<br>
+}</p>
+<p>moveTo(item) {<br>
+anime({<br>
+targets: this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>[</mo><mn>0</mn><mo>]</mo><mo separator="true">,</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>:</mo><mi>i</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element[0],
+left: item.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>element.css(&quot;left&quot;),<br>
+top: item.$element.css(&quot;top&quot;),<br>
+duration: 700,<br>
+elasticity: 500<br>
+});<br>
+if (this.next) {<br>
+this.next.moveTo(item);<br>
+}<br>
+}</p>
+<p>updatePosition() {<br>
+anime({<br>
+targets: this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>[</mo><mn>0</mn><mo>]</mo><mo separator="true">,</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>:</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element[0],
+left: this.prev.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord">.</span></span></span></span>element.css(&quot;left&quot;),<br>
+top: this.prev.$element.css(&quot;top&quot;),<br>
+duration: 200<br>
+});</p>
+<p>if (this.next) {<br>
+this.next.updatePosition();<br>
+}<br>
+}<br>
+}</p>
+<p>class Menu {<br>
+constructor(menu) {<br>
+this.$element = $(menu);<br>
+this.size = 0;<br>
+this.first = null;<br>
+this.last = null;<br>
+this.timeOut = null;<br>
+this.hasMoved = false;<br>
+this.status = &quot;closed&quot;;<br>
+}</p>
+<p>add(item) {<br>
+var menu = this;<br>
+if (this.first == null) {<br>
+this.first = item;<br>
+this.last = item;<br>
+this.first.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>m</mi><mi>o</mi><mi>u</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>p</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>(</mo><mo>)</mo><mrow><mi>i</mi><mi>f</mi><mo>(</mo><mi>m</mi><mi>e</mi><mi>n</mi><mi>u</mi><mi mathvariant="normal">.</mi><mi>f</mi><mi>i</mi><mi>r</mi><mi>s</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>i</mi><mi>s</mi><mi>M</mi><mi>o</mi><mi>v</mi><mi>i</mi><mi>n</mi><mi>g</mi><mo>)</mo><mrow><mi>m</mi><mi>e</mi><mi>n</mi><mi>u</mi><mi mathvariant="normal">.</mi><mi>f</mi><mi>i</mi><mi>r</mi><mi>s</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>i</mi><mi>s</mi><mi>M</mi><mi>o</mi><mi>v</mi><mi>i</mi><mi>n</mi><mi>g</mi><mo>=</mo><mi>f</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>e</mi><mo separator="true">;</mo></mrow><mi>e</mi><mi>l</mi><mi>s</mi><mi>e</mi><mrow><mi>m</mi><mi>e</mi><mi>n</mi><mi>u</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>k</mi><mo>(</mo><mo>)</mo><mo separator="true">;</mo></mrow></mrow><mo>)</mo><mo separator="true">;</mo><mi>i</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element.on(&quot;mouseup&quot;, function() {
+if (menu.first.isMoving) {
+menu.first.isMoving = false;
+} else {
+menu.click();
+}
+}); 
+item.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">u</span><span class="mord mathdefault">p</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mpunct">;</span></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord"><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">;</span></span></span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>element.draggable(<br>
+{<br>
+start: function() {<br>
+menu.close();<br>
+item.isMoving = true;<br>
+}<br>
+},<br>
+{<br>
+drag: function() {<br>
+if (item.next) {<br>
+item.next.updatePosition();<br>
+}<br>
+}<br>
+},<br>
+{<br>
+stop: function() {<br>
+item.isMoving = false;<br>
+item.next.moveTo(item);<br>
+}<br>
+}<br>
+);<br>
+} else {<br>
+this.last.next = item;<br>
+item.prev = this.last;<br>
+this.last = item;<br>
+}<br>
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>(</mo><mi>i</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element.after(item.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>element);</p>
+<p>}</p>
+<p>open() {<br>
+this.status = &quot;open&quot;;<br>
+var current = this.first.next;<br>
+var iterator = 1;<br>
+var head = this.first;<br>
+var sens = head.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 21: …nt.css(&quot;left&quot;) &amp;̲lt; head.'>element.css(&quot;left&quot;) &amp;lt; head.</span>element.css(&quot;right&quot;) ? 1 : -1;<br>
+while (current != null) {<br>
+anime({<br>
+targets: current.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>[</mo><mn>0</mn><mo>]</mo><mo separator="true">,</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>:</mo><mi>p</mi><mi>a</mi><mi>r</mi><mi>s</mi><mi>e</mi><mi>I</mi><mi>n</mi><mi>t</mi><mo>(</mo><mi>h</mi><mi>e</mi><mi>a</mi><mi>d</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element[0],
+left: parseInt(head.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord">.</span></span></span></span>element.css(&quot;left&quot;), 10) + (sens * (iterator * 50)),<br>
+top: head.$element.css(&quot;top&quot;),<br>
+duration: 500<br>
+});<br>
+iterator++;<br>
+current = current.next;<br>
+}<br>
+}</p>
+<p>close() {<br>
+this.status = &quot;closed&quot;;<br>
+var current = this.first.next;<br>
+var head = this.first;<br>
+var iterator = 1;<br>
+while (current != null) {<br>
+anime({<br>
+targets: current.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>[</mo><mn>0</mn><mo>]</mo><mo separator="true">,</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>:</mo><mi>h</mi><mi>e</mi><mi>a</mi><mi>d</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">element[0],
+left: head.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord">0</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord">.</span></span></span></span>element.css(&quot;left&quot;),<br>
+top: head.$element.css(&quot;top&quot;),<br>
+duration: 500<br>
+});<br>
+iterator++;<br>
+current = current.next;<br>
+}<br>
+}</p>
+<p>click() {<br>
+if (this.status == &quot;closed&quot;) {<br>
+this.open();<br>
+} else {<br>
+this.close();<br>
+}<br>
+}</p>
+<p>}</p>
+<p>var menu = new Menu(&quot;#myMenu&quot;);<br>
+var item1 = new Item(&quot;list&quot;);<br>
+var item2 = new Item(&quot;torso&quot;, &quot;#FF5C5C&quot;);<br>
+var item3 = new Item(&quot;social-facebook&quot;, &quot;#5CD1FF&quot;);<br>
+var item4 = new Item(&quot;paypal&quot;, &quot;#FFF15C&quot;);<br>
+var item5 = new Item(&quot;link&quot;, &quot;#64F592&quot;);</p>
+<p>menu.add(item1);<br>
+menu.add(item2);<br>
+menu.add(item3);<br>
+menu.add(item4);<br>
+menu.add(item5);<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …pen();
+next();
+'>(document).delay(50).queue(function(next) {
+menu.open();
+next();
+</span>(document).delay(1000).queue(function(next) {<br>
+menu.close();<br>
+next();<br>
+});<br>
+});<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1701/201701151446.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201701154322.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_574">
+                                <h3 class="post-title">
+                                    支持ajax的jquery自动完成插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

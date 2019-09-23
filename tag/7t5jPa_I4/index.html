@@ -7,7 +7,7 @@
 <title>
     bootstrap | JQ下载中国
 </title>
-<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569205408361">
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -27,7 +27,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://hao12306.github.io">
-                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569205408361" alt="">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -104,22 +104,22 @@
         
             <article class="post i-card">
                 <h2 class="post-title">
-                    <a href="https://hao12306.github.io/post/jqchina_gridea_32">
-                        基于Bootstrap4的material design风格表单插件
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1016">
+                        基于Bootstrap3的响应式Offcanvas菜单界面布局
                     </a>
                 </h2>
                 <div class="post-info">
                     <time class="post-time">2019-09-20</time>
                     
                         <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-other_3">
             #bootstrap
         </a>
                         
                 </div>
                 <div class="post-article">
                     
-                        <a href="https://hao12306.github.io/post/jqchina_gridea_32" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1909/201909062931.jpg) ">
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1016" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508072010.jpg) ">
                         </a>
                         
                             <div class="post-content">
@@ -128,59 +128,354 @@
                                             下载预览
 文件下载 | 在线预览
 简介：
-这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。
+这是一款基于Bootstrap3.x的响应式Offcanvas菜单界面布局特效。该界面布局在大屏幕设备上，菜单显示为正常的顶部菜单。在小屏幕设备中，菜单会收缩为下拉菜单，在点击主菜单按钮后，菜单面板从屏幕左边被推出来，效果非常的炫。
 内容：
 
 
 简要教程
 
 
-这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。
+这是一款基于Bootstrap3.x的响应式Offcanvas菜单界面布局特效。该界面布局在大屏幕设备上，菜单显示为正常的顶部菜单。在小屏幕设备中，菜单会收缩为下拉菜单，在点击主菜单按钮后，菜单面板从屏幕左边被推出来，效果非常的炫。
 
  使用方法
-在HTML文件中引入。
+原生的Bootstrap为小屏幕设备的导航菜单使用.navbar-toggle来制作Offcanvas菜单。该插件为.navbar-collapse.collapse默认设置决定定位，然后在小屏幕中将其修改为相对定位。当用户切换.navbar-toggle的时候，插件简单的添加.in class，并且left css属性是被调整过的。
+在屏幕尺寸大于768像素的时候，插件会将.in class移除。
 
-&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;../src/input-material.css&#34;&amp;gt;
-&amp;lt;script type=&#34;text/javascript&#34; src=&#34;../src/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
-&amp;lt;script type=&#34;text/javascript&#34; src=&#34;../src/boostrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
-&amp;lt;script type=&#34;text/javascript&#34; src=&#34;../src/input-material.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+$(&#39;document&#39;).ready(function () {
+$(&#39;.navbar-toggle&#39;).on(&#39;click&#39;, function () {
+$(&#39;.collapse, #mainContainer&#39;).toggleClass(&#39;in&#39;);
+});
+});
+(window).resize(function () {
+if ((window).width() &amp;gt; 768) {
+$(&#39;.collapse, #mainContainer&#39;).removeClass(&#39;in&#39;);
+};
+});
+
+
+
+ CSS样式
+下面的菜单的默认样式，但添加了.in class的时候，可以使用CSS3的transition属性来使它产生动画。
+
+.navbar-collapse.collapse {
+border: none;
+display: block;
+background: #151515;
+position: absolute;
+left: -100\%;
+top: 70px;
+width: 80\%;
+max-height: none;
+-webkit-transition: left 0.5s ease;
+-moz-transition: left 0.5s ease;
+-o-transition: left 0.5s ease;
+transition:left 0.5s ease;
+}
+.navbar-collapse.collapse.in {
+left: 15px;
+}
+
+下面是该菜单的媒体查询样式。
+
+@media (min-width: 768px) { 
+.navbar-collapse.collapse {
+width: auto;
+background: none;
+position: relative;
+left: auto;
+top: auto;
+padding: 0px;
+margin: 25px 0 35px 50px;
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1016">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1030">
+                        基于Bootstrap的网格式jQuery文本编辑器
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1030" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508132045.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+grid-editor是一款基于Bootstrap网格系统的网格式所见即所得的jQuery文本编辑器插件。它可以通过Bootstrap排版来生成各种复杂的网格布局，每个网格中可以生成一个编辑器。
+内容：
+
+
+简要教程
+
+
+grid-editor是一款基于Bootstrap网格系统的网格式所见即所得的jQuery文本编辑器插件。它可以通过Bootstrap排版来生成各种复杂的网格布局，每个网格中可以生成一个编辑器。
+
+ 使用方法
+该文本编辑器依赖于jQuery，jQueryUI和Bootstrap，这些相关文本必须引入。如果你想集成使用tincyMCE，则需要引入tinymce.min.js和jquery.tinymce.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;dist/grideditor.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://code.jquery.com/ui/1.11.2/jquery-ui.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://tinymce.cachefly.net/4.0/tinymce.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://tinymce.cachefly.net/4.0/jquery.tinymce.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/jquery.grideditor.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
 
 
  HTML结构
+按照Bootstrap的标准布局进行网格排版，你可以在网格中嵌套网格，下面是Demo中的网格布局。
 
-&amp;lt;form id=&#34;contact-form&#34;&amp;gt;
-&amp;lt;div class=&#34;form-group input-material&#34;&amp;gt;
-&amp;lt;input type=&#34;text&#34; class=&#34;form-control&#34; id=&#34;name-field&#34; required&amp;gt;
-&amp;lt;label for=&#34;name-field&#34;&amp;gt;Name&amp;lt;/label&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div id=&#34;myGrid&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-12&#34;&amp;gt;
+&amp;lt;h1&amp;gt;...&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;div class=&#34;form-group input-material&#34;&amp;gt;
-&amp;lt;input type=&#34;email&#34; class=&#34;form-control&#34; id=&#34;email-field&#34; required&amp;gt;
-&amp;lt;label for=&#34;email-field&#34;&amp;gt;Email&amp;lt;/label&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;div class=&#34;form-group input-material&#34;&amp;gt;
-&amp;lt;textarea class=&#34;form-control&#34; id=&#34;textarea-field&#34; rows=&#34;3&#34; required&amp;gt;&amp;lt;/textarea&amp;gt;
-&amp;lt;label for=&#34;textarea-field&#34;&amp;gt;Your Message&amp;lt;/label&amp;gt;
+&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-4&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;...&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;div class=&#34;text-center&#34;&amp;gt;
-&amp;lt;button type=&#34;submit&#34; class=&#34;btn btn-primary&#34;&amp;gt;Send&amp;lt;/button&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-4&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;...&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/form&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-4&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;...&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-8&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;....&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-6&amp;quot;&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-6&amp;quot;&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-4&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;...&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- /#myGrid --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- /.container --&amp;gt;
 
 
- javascript
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该文本编辑器插件。
 
-$(&#39;document&#39;).ready(function(){
-// enable material-style inputs in entire body
-$(&#39;body&#39;).materializeInputs();
+$(&#39;#myGrid&#39;).gridEditor({
+new\_row\_layouts: [[12], [6,6], [9,3]],
+content\_types: [&#39;tinymce&#39;],
+}); 
+
+
+ 配置参数
+
+
+new\_row\_layouts：设置在编辑器顶部“new row”按钮上显示的列布局。
+
+$(&#39;#myGrid&#39;).gridEditor({
+new\_row\_layouts: [[12], [6,6], [9,3]],
 });
 
-或者你也可以为某个表单元素设置浮动标签效果。
 
-$(&#39;document&#39;).ready(function(){
-$(&#39;form&#39;).materializeInputs(&amp;quot;.input-material input-1, .input-material input-2&amp;quot;);
+
+row\_classes：设置在设置按钮下一行可以设置的切换行的class名称。
+
+$(&#39;#myGrid&#39;).gridEditor({
+row\_classes: [{&#39;Example class&#39;, cssClass: &#39;example-class&#39;}],
 });
 
- 该基于Bootstrap4的material design风格表单插件的github网址为：https://github.com/RalphvK/bootstrap-material-input
+
+
+col\_classe：和row\_classes属性相同，但是是设置列。
+
+row\_tools：在行工具栏上添加额外的按钮。
+
+$(&#39;#myGrid&#39;).gridEditor({
+row\_tools: [{
+title: &#39;Set background image&#39;,
+iconClass: &#39;glyphicon-picture&#39;,
+on: { 
+click: function() {
+$(this).closest(&#39;.row&#39;).css(&#39;background-image&#39;, &#39;url(...)&#39;);
+}
+}
+}]
+});
+
+
+
+col\_tools：和code&amp;gt;row\_tools相同，但是是设置列。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1030">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1033">
+                        基于Bootstrap的响应式可伸展的网格布局系统
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-info">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1033" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509171555.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+gridex是一款基于Bootstrap的响应式可伸展的网格布局系统插件。它通过简单设置，就可以制作出像谷歌图片画廊那样的扩展效果。同时它具有响应式的特点，非常的实用。
+内容：
+
+
+简要教程
+
+
+gridex是一款基于Bootstrap的响应式可伸展的网格布局系统插件。它通过简单设置，就可以制作出像谷歌图片画廊那样的扩展效果。同时它具有响应式的特点，非常的实用。
+
+ 使用方法
+使用该网格系统插件需要引入jQuery(1.9.1+)，bootstrap-gridex.min.js和gridex.css文件。
+
+ HTML结构
+该可扩展的网格布局使用无序列表作为HTML结构。使用时需要在&amp;lt;ul&amp;gt;元素上添加class thumbnails和gridex。然后可以为触发扩展面板的超链接添加class thumbnail，而扩展面板需要添加class gd-expander。
+
+&amp;lt;ul class=&#34;thumbnails gridex&#34;&amp;gt;
+&amp;lt;li class=&#34;span3 clearfix&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;thumbnail&#34;&amp;gt; &amp;lt;img alt=&#34;270x170&#34; src=&#34;http://placehold.it/270x170&#34; /&amp;gt; &amp;lt;/a&amp;gt;
+&amp;lt;!-- gd-expander required --&amp;gt;
+&amp;lt;div class=&#34;gd-expander&#34;&amp;gt;
+&amp;lt;!-- gd-inner optional --&amp;gt;
+&amp;lt;div class=&#34;gd-inner&#34;&amp;gt;
+&amp;lt;div class=&#34;row-fluid&#34;&amp;gt;
+&amp;lt;div class=&#34;span6 text-center&#34;&amp;gt;
+&amp;lt;img alt=&#34;270x170&#34; class=&#34;img-polaroid&#34; src=&#34;http://placehold.it/370x270&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;span6&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Heading text 1&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;
+ ......
+&amp;lt;/p&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;btn btn-success&#34;&amp;gt;Visit Website&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+
+
+ CSS样式
+gridex.css文件提供了扩展面板的基本样式，这些样式都非常简单，如果想做的更好看，可以自定义这些样式。
+
+.gridex {
+position: relative;
+}
+.gd-expander {
+position: absolute;
+overflow: hidden;
+height: 500px;
+margin-top: 20px;
+max-width: 100%;
+left: 30px; /* standar row margin is 30px */
+}
+.gd-inner {
+padding: 50px;
+background: #ccc;
+}
+/* 扩展面板顶部箭头样式*/
+.gridex &amp;gt; li &amp;gt; a {
+position: relative;
+}
+.gridex &amp;gt; .gd-expanded &amp;gt; a::after {
+top: auto;
+border: solid transparent;
+content: &amp;quot; &amp;quot;;
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-bottom-color: #ccc;
+border-width: 25px;
+left: 50%;
+margin: -25px 0 0 -25px;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该扩展网格布局插件。
+
+$(function() {
+$(&#39;.gridex&#39;).gridex();
+}) 
+
+该网格系统在旧的浏览器中会使用jQuery标准的animate动画来制作过渡效果。
 
 
 下载预览
@@ -188,13 +483,1224 @@ $(&#39;form&#39;).materializeInputs(&amp;quot;.input-material input-1, .input-ma
 
                                         </div>
                                         
-                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_32">Read More ~</a>
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1033">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1044">
+                        基于Bootstrap3的轻量级大型导航菜单
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1044" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509161607.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+yamm3是一款基于Twitter Bootstrap3的轻量级大型导航菜单插件。该大型菜单使用Bootstrap3标准的导航菜单标签和流式网格系统来制作。它具有顶部固定和响应式等特点，适合用于制作复杂的网站导航菜单。
+内容：
+
+
+简要教程
+
+
+yamm3是一款基于Twitter Bootstrap3的轻量级大型导航菜单插件。该大型菜单使用Bootstrap3标准的导航菜单标签和流式网格系统来制作。它具有顶部固定和响应式等特点，适合用于制作复杂的网站导航菜单。
+
+ 安装
+可以通过bower来安装该Bootstrap3大型菜单插件。
+
+bower install yamm3 --save 
+
+
+ 使用方法
+
+ HTML结构
+在标准的Bootstrap3导航菜单的&amp;lt;nav&amp;gt;标签的class中添加.yammclass。然后将你的菜单添加到ul.dropdown-menu中。你可以通过.yamm-content来使用带padding的包裹元素。例如：
+
+&amp;lt;nav class=&#34;navbar yamm navbar-default &#34; role=&#34;navigation&#34;&amp;gt;
+...
+&amp;lt;ul class=&#34;nav navbar-nav&#34;&amp;gt;
+&amp;lt;li class=&#34;dropdown&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;dropdown-toggle&#34; data-toggle=&#34;dropdown&#34;&amp;gt;Dropdown&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;dropdown-menu&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;yamm-content&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt; 
+...
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+...
+&amp;lt;/nav&amp;gt;
+
+
+ 全屏宽度
+默认情况下大型下拉菜单是根据内容的尺寸来设置大小，你可以为它添加.yamm-fw class来设置它为全屏宽度。
+
+&amp;lt;nav class=&#34;navbar yamm navbar-default &#34; role=&#34;navigation&#34;&amp;gt;
+...
+ &amp;lt;ul class=&#34;nav navbar-nav&#34;&amp;gt;
+ &amp;lt;li class=&#34;dropdown yamm-fw&#34;&amp;gt;
+ ...
+ &amp;lt;/li&amp;gt;
+ &amp;lt;/ul&amp;gt;
+...
+&amp;lt;/nav&amp;gt;
+
+
+ CSS样式
+下面是该Bootstrap3大型导航菜单的必要CSS样式：
+
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+position: static;
+}
+.yamm .container {
+position: relative;
+}
+.yamm .dropdown-menu {
+left: auto;
+}
+.yamm .yamm-content {
+padding: 20px 30px;
+}
+.yamm .dropdown.yamm-fw .dropdown-menu {
+left: 0;
+right: 0;
+}
+
+
+ Javascript
+在使用一些手风琴元素和表单元素的时候，如果你不希望它们被折叠，可以使用下面的js代码。
+
+$(document).on(&#39;click&#39;, &#39;.yamm .dropdown-menu&#39;, function(e) {
+ e.stopPropagation()
+})
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1044">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1054">
+                        基于Bootstrap网格系统的可折叠侧边栏特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-primary">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1054" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508251733.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bootstrap-collapsible-sidebar是一款基于Bootstrap网格系统的可折叠侧边栏特效。该特效通过Bootstrap网格系统，少量的CSS和jQuery代码来完成类似侧边栏面板的折叠效果。
+内容：
+
+
+简要教程
+
+
+bootstrap-collapsible-sidebar是一款基于Bootstrap网格系统的可折叠侧边栏特效。该特效通过Bootstrap网格系统，少量的CSS和jQuery代码来完成类似侧边栏面板的折叠效果。
+
+ 使用方法
+
+ 左侧边栏折叠效果
+Bootstrap 3使用12列的响应式网格系统。下面的例子中侧边栏占3列，内容部分占9列。在使用中你需要根据实际情况来完成你的布局。
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34; id=&#34;row-main&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-3&#34; id=&#34;sidebar&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;col-md-9&#34; id=&#34;content&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+在侧边栏折叠的时候将会发生下面的情况：
+
+侧边栏被隐藏
+内容部分占据侧边栏的位置
+
+在这个例子中，内容部分将有9列变为12列。
+对于如何隐藏侧边栏，可以通过2种方式来实现：
+
+对于大屏幕设备，使用负的margin（和侧边栏宽度相同）和过渡动画来隐藏它。
+对于小屏幕设备，需要做的事情仅仅是在折叠的隐藏侧边栏。
+
+
+.collapsed {
+display: none; /* hide it for small displays */
+}
+@media (min-width: 992px) {
+.collapsed {
+display: block;
+margin-left: -25\%; /* same width as sidebar */
+}
+}
+
+注意上面的媒体查询代码，这里使用min-width: 992px来匹配中等宽度的列（.col-md-）。
+由于使用了负的margin-left值，侧边栏会被推到屏幕之外。为了将它隐藏，所有要在容器上设置overflow:hidden;。
+
+#row-main {
+overflow-x: hidden; /* necessary to hide collapsed sidebar */
+}
+
+最后要处理的事情是侧边栏的动画效果。
+
+#content {
+-webkit-transition: width 0.3s ease;
+-moz-transition: width 0.3s ease;
+-o-transition: width 0.3s ease;
+transition: width 0.3s ease;
+}
+#sidebar {
+-webkit-transition: margin 0.3s ease;
+-moz-transition: margin 0.3s ease;
+-o-transition: margin 0.3s ease;
+transition: margin 0.3s ease;
+}
+
+当我们需要切换侧边栏的时候，只需要更换是的的class名称即可。
+
+$(&#34;#sidebar&#34;).toggleClass(&#34;collapsed&#34;);
+$(&#34;#content&#34;).toggleClass(&#34;col-md-12 col-md-9&#34;);
+
+
+ 右侧边栏折叠效果
+又侧边栏折叠效果的制作方法和左侧边栏的基本相同。HTML结构如下：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34; id=&#34;row-main&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-9&#34; id=&#34;content&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;col-md-3&#34; id=&#34;sidebar&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+唯一不同的是要使用margin-right属性来隐藏侧边栏。
+
+@media (min-width: 992px) {
+.collapsed {
+display: block;
+margin-right: -25\%; /* same width as sidebar */
+}
+}
+
+其它具体代码请参考下载文件或demo。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1054">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1056">
+                        基于Bootstrap的轻量级弹出提示框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-primary">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1056" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507161554.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+webui-popover是一款基于Bootstrap的轻量级弹出提示框Tooltip插件。该提示框插件可以和Bootstrap完美结合，但是并不一定需要和Bootstrap一起使用。它支持IE8以上的浏览器。
+内容：
+
+
+简要教程
+
+
+webui-popover是一款基于Bootstrap的轻量级弹出提示框Tooltip插件。该提示框插件可以和Bootstrap完美结合，但是并不一定需要和Bootstrap一起使用。它支持IE8以上的浏览器。它的特点有：
+
+运行速度快，轻量级。
+支持多种定位方式。
+能自动计算提示框位置。
+在提示框中提供关闭按钮。
+同一个页面支持多个提示框实例。
+支持不同的样式。
+支持使用url和iframe。
+支持异步加载模式。
+
+
+ 使用方法
+使用这个提示框插件首先需要引入jQuery和jquery.webui-popover.js,jquery.webui-popover.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;jquery.webui-popover.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.webui-popover.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 调用插件
+可以使用下面的方法来调用一个提示框。
+
+$(&#39;a&#39;).webuiPopover(options); 
+
+
+ 配置参数
+下面是该提示框插件的默认配置参数：
+
+{
+placement:&#39;auto&#39;,//values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-top,auto-right,auto-bottom,auto-left
+width:&#39;auto&#39;,//can be set withnumber
+height:&#39;auto&#39;,//can be set withnumber
+trigger:&#39;click&#39;,//values:click,hover,manual
+style:&#39;&#39;,//values:&#39;&#39;,inverse
+constrains:null, // constrains the direction when placement isauto,values: horizontal,vertical
+animation:null, //pop with animation,values: pop,fade (only take effect in the browser which support css3 transition)
+delay: {//show and hide delay time of the popover, works only when trigger is &#39;hover&#39;,the value can be number or object
+show: null,
+hide: 300
+},
+async: {
+before: function(that, xhr) {},//executed before ajax request
+success: function(that, data) {}//executed after successful ajax request
+},
+cache:true,//if cache is set to false,popover will destroy and recreate
+multi:false,//allow other popovers in page at same time
+arrow:true,//show arrow or not
+title:&#39;&#39;,//the popover title ,if title is set to empty string,title bar will auto hide
+content:&#39;&#39;,//content of the popover,content can be function
+closeable:false,//display close button or not
+padding:true,//content padding
+type:&#39;html&#39;,//content type, values:&#39;html&#39;,&#39;iframe&#39;,&#39;async&#39;
+url:&#39;&#39;,//if not empty ,plugin will load content by url
+backdrop:false,//if backdrop is set to true, popover will use backdrop on open
+dismissible:true // if popover can be dismissed byoutside click or escape key
+}
+
+
+ 应用举例
+创建一个简单提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;});
+
+通过DOM元素的data-*首先来创建提示框：
+
+&amp;lt;a href=&#34;#&#34; data-title=&#34;Title&#34; data-content=&#34;Contents...&#34; data-placement=&#34;right&#34;&amp;gt;&amp;lt;/a&amp;gt;
+
+
+$(&#39;a&#39;).webuiPopover();
+
+在元素的下方插件一个提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,placement:&#39;bottom&#39;});
+
+在鼠标滑过元素时弹出一个提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,trigger:&#39;hover&#39;});
+
+创建一个inverse样式的提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,style:&#39;inverse&#39;});
+
+创建一个固定宽度和高度的提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,width:300,height:200});
+
+创建一个带关闭按钮的提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,closeable:true});
+
+创建一个带动画效果的提示框：
+
+$(&#39;a&#39;).webuiPopover({title:&#39;Title&#39;,content:&#39;Content&#39;,animation:&#39;pop&#39;});
+
+创建一个内容使用iframe的提示框：
+
+$(&#39;a&#39;).webuiPopover({type:&#39;iframe&#39;,url:&#39;https://www.baidu.com&#39;});
+
+通过异步模式插件一个提示框：
+
+$(&#39;a&#39;).webuiPopover({ 
+type:&#39;async&#39;,
+url:&#39;https://api.github.com/&#39;,
+content:function(data){
+var html = &#39;&amp;lt;ul&amp;gt;&#39;;
+for(var key in data){html+=&#39;&amp;lt;li&amp;gt;&#39;+data[key]+&#39;&amp;lt;/li&amp;gt;&#39;;}
+html+=&#39;&amp;lt;/ul&amp;gt;&#39;;
+return html;
+} 
+});
+
+创建一个提示框，并通过手动方式来触发它：
+
+//Initailize 
+ $(&#39;a&#39;).webuiPopover({trigger:&#39;manual&#39;});
+...
+//Show it
+$(&#39;a&#39;).webuiPopover(&#39;show&#39;);
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1056">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1089">
+                        基于Bootstrap 3的精美jQuery计算器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-banana">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1089" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507141536.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+SimpleCalculadora是一款基于Bootstrap 3的简单精美的jQuery计算器插件。该计算器插件的按钮使用3D按钮，整体设计简洁大方，可以完成加减乘除的4则运算。并且可以通过参数来设置按键的颜色和位置。
+内容：
+
+
+简要教程
+
+
+SimpleCalculadora是一款基于Bootstrap 3的简单精美的jQuery计算器插件。该计算器插件的按钮使用3D按钮，整体设计简洁大方，可以完成加减乘除的4则运算。并且可以通过参数来设置按键的颜色和位置。
+
+ 使用方法
+使用该计算器插件需要引入Bootstap3依赖文件，以及jQuery和SimpleCalculadorajQuery.css文件，SimpleCalculadorajQuery.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;bootstrap.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery-2.1.4.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;SimpleCalculadorajQuery.css&#34;&amp;gt;
+&amp;lt;script src=&#34;SimpleCalculadorajQuery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该计算器插件的HTML结构使用一个空的&amp;lt;div&amp;gt;即可。
+
+&amp;lt;div id=&#34;demo&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过Calculadora()方法来初始化该计算器插件。
+
+$(&#34;#demo&#34;).Calculadora();
+
+
+ 配置参数
+该计算器插件有下面的一些可用配置参数。
+
+// custom header html
+TituloHTML:&#39;Calculadora&#39;,
+// buttons
+Botones:[&amp;quot;7&amp;quot;,&amp;quot;8&amp;quot;,&amp;quot;9&amp;quot;,&amp;quot;+&amp;quot;,&amp;quot;4&amp;quot;,&amp;quot;5&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;-&amp;quot;,&amp;quot;3&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;.&amp;quot;,&amp;quot;=&amp;quot;,&amp;quot;/&amp;quot;], / Order Numbers*/,
+// Arithmetic operators
+Signos:[&amp;quot;+&amp;quot;, &amp;quot;-&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;/&amp;quot;], /Simbols/,
+// CSS Classes
+ClaseBtns1: &#39;primary&#39;, /* Color Numbers*/
+ClaseBtns2: &#39;success&#39;, /* Color Operators*/
+ClaseBtns3: &#39;warning&#39;, /* Color Clear*/
+ClaseColumnas:&#39;col-md-3 mbottom&#39;,
+ClaseBotones:&#39;btn3d btn-lg btn-block btn btn-&#39;,
+txtSalida:idInstancia+&#39;txtResultado&#39;, /* Ouput Result*/
+ClasetxtSalida:&#39;form-control txtr&#39;,
+InputBorrar:idInstancia+&#39;Borrar&#39;, /* Ouput Clear*/
+ClaseInputBorrar:&#39;btn3d btn btn-danger btn-lg btn-block&#39;,
+EtiquetaBorrar:&#39;Borrar&#39; /* Label Ouput Result*/
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1089">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1101">
+                        基于Bootstrap仿Github样式下拉列表框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_3">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1101" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507081603.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bootstrap-dropselect是一款基于Bootstrap的仿Github样式实用下拉列表框插件。该下拉列表的插件功能类似于Github上的下拉列表框。它使用原生的Bootstrap dropdown改造而成，非常的实用和美观。
+内容：
+
+
+简要教程
+
+
+bootstrap-dropselect是一款基于Bootstrap的仿Github样式实用下拉列表框插件。该下拉列表的插件功能类似于Github上的下拉列表框。它使用原生的Bootstrap dropdown改造而成，非常的实用和美观。
+
+ 使用方法
+
+ HTML结构
+该下拉列表框插件的HTML结构采用标准的Bootstrap dropdownHTML结构。
+
+&amp;lt;div class=&#34;dropdown&#34;&amp;gt;
+&amp;lt;button class=&#34;btn btn-default dropdown-toggle&#34; type=&#34;button&#34; data-toggle=&#34;dropdown&#34;&amp;gt;
+Dropdown
+&amp;lt;span class=&#34;caret&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;ul id=&#34;dropselect-demo1&#34; class=&#34;dropdown-menu&#34;&amp;gt;
+&amp;lt;li data-value=&#34;action\_value&#34;&amp;gt;&amp;lt;a role=&#34;menuitem&#34; tabindex=&#34;-1&#34; href=&#34;#&#34;&amp;gt;Action&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;another\_action&#34;&amp;gt;&amp;lt;a role=&#34;menuitem&#34; tabindex=&#34;-1&#34; href=&#34;#&#34;&amp;gt;Another action&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li data-selected=&#34;true&#34;&amp;gt;&amp;lt;a role=&#34;menuitem&#34; tabindex=&#34;-1&#34; href=&#34;#&#34;&amp;gt;Something else here&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;divider&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a role=&#34;menuitem&#34; tabindex=&#34;-1&#34; href=&#34;#&#34;&amp;gt;Separated link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过jQuery获取&amp;lt;ul&amp;gt;元素，然后在它上面调用dropselect()方法。
+
+$(function() {
+$(&#39;#dropselect-demo1&#39;).dropselect();
+})
+
+
+ 配置参数
+下面是该下拉列表框的可用参数。
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+multiselect
+boolean
+false
+如果设置为true可以进行多选
+
+
+clear
+mixed
+{ show: true, label: &#39;Clear selected&#39; }
+可选项，允许清除项目。也可以传入布尔值true来使用它
+
+
+filter
+mixed
+{ show: true, placeholder: &#39;Search&#39;, casesensitive: false, noresult: &#39;No results found&#39; }
+可选项，使过滤文本框可用。也可以传入布尔值true来使用它
+
+
+onclear
+callback
+
+
+clear事件触发时的回调函数
+
+
+onselect
+callback
+
+
+select事件触发时的回调函数
+
+
+onunselect
+callback
+
+
+unselect事件触发时的回调函数
+
+
+ontoggle
+callback
+
+
+toggle事件触发时的回调函数
+
+
+onchange
+callback
+
+
+change事件触发时的回调函数
+
+
+icons
+boolean
+true
+是否显示check图标
+
+
+width
+mixed
+300
+下拉列表框的宽度
+
+
+items
+mixed
+&#34;markup&#34;
+默认的列表项
+
+
+
+
+
+ 事件
+
+
+
+
+事件
+回调参数
+描述
+
+
+
+
+select
+
+object项
+在选择一个列表项后触发
+
+
+unselect
+
+object项
+在取消选择一个列表项后触发
+
+
+clear
+
+在清除列表项后触发
+
+
+toggle
+
+object项或boolean
+
+当列表项切换时触发
+
+
+change
+
+当雷波县的状态改变时触发
+
+
+
+
+
+ 方法
+
+
+
+
+方法
+参数
+描述
+
+
+
+
+toggle(index)
+基于0开始的index
+切换一个列表项的选择状态
+
+
+clear
+
+清空所有的选择项
+
+
+select(index)
+基于0开始的index
+手动选择指定index的列表项
+
+
+unselect(index)
+基于0开始的index
+手动取消选择指定index的列表项
+
+
+showLoading
+
+显示loading指示器
+
+
+hideLoading
+
+隐藏loading指示器
+
+
+hide
+
+完全隐藏下拉列表框
+
+
+item
+基于0开始的index
+通过index获取列表项object对象。返回{ item: ITEM\_VALUE, text: ITEM\_TEXT, icon: DEFAULT\_ITEM\_ICON, $element: LI\_ELEMENT }
+
+
+
+destroy
+
+销毁下拉列表框对象实例
+
+
+
+
+
+ 应用举例
+
+$(function() {
+var mydropselect = $(&#39;#my-dropselect&#39;).dropselect({
+filter: {
+show: true,
+placeholder: &#39;Search for an item&#39;
+},
+multiselect: true
+});
+mydropselect.on(&#39;select&#39;, function(e, item) {
+console.log(item);
+console.log(e.selectedItem);
+// use e.selectedItems to get an array of selected items (useful for multiselect)
+});
+$(&#39;#clear-button&#39;).on(&#39;click&#39;, function() {
+mydropselect.dropselect(&#39;clear&#39;);
+})
+$(&#39;#toggle-item-3&#39;).on(&#39;click&#39;, function() {
+mydropselect.dropselect(&#39;showLoading&#39;);
+mydropselect.dropselect(&#39;toggle&#39;, 3);
+})
+})
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1101">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1115">
+                        基于Bootstrap 2的大型导航菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-info">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1115" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507281714.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于Bootstrap 2.x的jQuery大型下拉菜单特效。该菜单可以制作出鼠标滑过菜单项时，显示带图片和链接的下拉菜单。可以显示多幅图片和多个链接，非常适合用于制作复杂的网站导航菜单。
+内容：
+
+
+简要教程
+
+
+这是一款基于Bootstrap 2.x的jQuery大型下拉菜单特效。该菜单可以制作出鼠标滑过菜单项时，显示带图片和链接的下拉菜单。可以显示多幅图片和多个链接，非常适合用于制作复杂的网站导航菜单。
+
+ 制作方法
+该菜单依赖于Bootstrap2.x，使用时需要引入相关依赖文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;css/bootstrap/2.3.2/css/bootstrap.min.css&#39;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;js/bootstrap/2.3.2/js/bootstrap.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该大型菜单的基本HTML结构如下：
+
+&amp;lt;header class=&#34;navbar navbar-fixed-top&#34;&amp;gt;
+&amp;lt;div class=&#34;navbar-inner&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;btn btn-navbar&#34; data-toggle=&#34;collapse&#34; data-target=&#34;.nav-collapse&#34;&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;/button&amp;gt;
+&amp;lt;a class=&#34;brand&#34; href=&#34;#&#34;&amp;gt;&amp;lt;b&amp;gt;LOGO&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;nav class=&amp;quot;nav-collapse collapse&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#top&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;dropdown&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;dropdown-toggle&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot;&amp;gt;Mega
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Menu&amp;lt;/a&amp;gt;
+&amp;lt;b class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/b&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;dropdown-menu mega-menu&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;mega-menu-column&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&amp;quot;nav-header&amp;quot;&amp;gt;Mega menu 1&amp;lt;/li&amp;gt;
+&amp;lt;img src=&amp;quot;1.jpg&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+
+
+ CSS样式
+需要为该botstrap大型菜单添加下面的一些CSS样式。
+
+.mega-menu {
+padding: 10px 0px ! important;
+width: 540px;
+border-radius: 0;
+margin-top: 0px;
+}
+.mega-menu li {
+display: inline-block;
+float: left;
+font-size: 0.94rem;
+padding: 3px 0px;
+}
+.mega-menu li.mega-menu-column {
+margin-right: 20px;
+width: 150px;
+}
+.mega-menu .nav-header {
+padding: 0 !important;
+margin-bottom: 10px;
+display: inline-block;
+width: 100%;
+border-bottom: 1px solid #ddd;
+}
+.mega-menu img { padding-bottom: 10px; }
+/* Dropdown Toggle on style /
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle,
+.navbar .nav li.dropdown.active &amp;gt; .dropdown-toggle,
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle {
+background: inherit; / Set to inherit when using mouse hover to open dropdown */
+color: inherit;
+}
+/* Toggle off style */
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle,
+.navbar .nav &amp;gt; li.dropdown &amp;gt; a:focus {
+background: inherit;
+color: inherit;
+}
+/* Toggle hover */
+.navbar .nav li.dropdown &amp;gt; .dropdown-toggle:hover,
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle:hover { background-color: #DDDDDD; }
+/* Toggle caret*/
+.navbar .nav li.dropdown &amp;gt; .dropdown-toggle .caret { border-bottom-color:;
+border-top-color:;
+}
+/* Toggle caret hover */
+.navbar .nav li.dropdown &amp;gt; a:hover .caret,
+.navbar .nav li.dropdown &amp;gt; a:focus .caret {
+border-bottom-color: #333;
+border-top-color: #333;
+}
+/* Toggle caret active */
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active &amp;gt; .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle .caret {
+border-bottom-color: #333;
+border-top-color: #333;
+}
+/* Hover style /
+.navbar .nav &amp;gt; li &amp;gt; a,
+.mega-menu a {
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+/ -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/
+-webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+-webkit-transform: translateZ(0);
+}
+
+
+ JAVASCRIPT
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该bootstrap大型菜单。
+
+jQuery(document).ready(function(){
+$(&#34;.dropdown&#34;).hover(
+function() { $(&#39;.dropdown-menu&#39;, this).fadeIn(&#34;fast&#34;);
+},
+function() { $(&#39;.dropdown-menu&#39;, this).fadeOut(&#34;fast&#34;);
+});
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1115">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_112">
+                        基于bootstrap4封装的消息对话框组件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-success">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_112" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1906/201906135428.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于bootstrap4封装的消息对话框组件。该消息组件包括dialog,alert,confirm,input,success,error,notice。并且对话框支持鼠标或手指触摸拖拽。
+内容：
+
+
+简要教程
+
+
+这是一款基于bootstrap4封装的消息对话框组件。该消息组件包括dialog,alert,confirm,input,success,error,notice。并且对话框支持鼠标或手指触摸拖拽。
+
+ 使用方法
+在页面中引入下面的文件。
+
+lt;link rel=&#34;stylesheet&#34; href=&#34;bootstrap-4.0.0-dist/css/bootstrap.css&#34;gt;
+lt;link rel=&#34;stylesheet&#34; href=&#34;./css/bs4.pop.css&#34;gt;
+lt;script src=&#34;js/jquery-2.1.1.min.js&#34; type=&#34;text/javascript&#34;gt;lt;/scriptgt;
+lt;script src=&#34;bootstrap-4.0.0-dist/js/bootstrap.js&#34;gt;lt;/scriptgt;
+lt;script src=&#34;./js/bs4.pop.js&#34;gt;lt;/scriptgt;
+
+
+ alert
+
+bs4pop.alert(&#39;Alert Dialog&#39;, function(){ 
+console.log(&#39;You Just Clicked Okay Button&#39;);
+},{
+// options settings here
+title: &#39;Alert Dialog&#39;,
+hideRemove: true,
+width: 500,
+btns: [
+{
+label: &#39;Okay&#39;,
+onClick(){
+if(cb){
+return cb();
+}
+}
+}
+]
+});
+
+
+ confirm 
+
+bs4pop.confirm(&#39;Are You Sure?&#39;, function(sure){ 
+console.log(&#39;Are You Sure:&#39;, sure);
+},{
+title: &#39;Confirmation Dialog&#39;,
+hideRemove: true,
+btns: [
+{
+label: &#39;Confirm&#39;,
+onClick(){
+if(cb){
+return cb(true);
+}
+}
+},
+{
+label: &#39;Cancel&#39;,
+className: &#39;btn-default&#39;,
+onClick(){
+if(cb){
+return cb(false);
+}
+}
+}
+]
+});
+
+
+ prompt 
+
+bs4pop.prompt(&#39;Username:&#39;, &#39;Input Placeholder&#39;, function(sure, value){ 
+console.log(&#39;I am:&#39;, value);
+},{
+title: &#39;Prompt Dialog&#39;,
+hideRemove: true,
+width: 500,
+btns: [
+{
+label: &#39;Okay&#39;,
+onClick(){
+if(cb){
+return cb(true, $input.val());
+}
+}
+},
+{
+label: &#39;Cancel&#39;,
+className: &#39;btn-default&#39;,
+onClick(){
+if(cb){
+return cb(false, $input.val());
+}
+}
+}
+]
+});
+
+
+ notice 
+
+var myNofitication = bs4pop.notice(&#39;Notification Message&#39;, {
+// primary, secondary, success, danger, warning, info, light, dark
+type: &#39;primary&#39;,
+// topleft, topcenter, topright, bottomleft, bottomcenter, bottonright, center
+position: &#39;topcenter&#39;,
+// append, prepend
+appendType: &#39;append&#39;,
+// shows close button
+closeBtn: false,
+// auto dismisses after 2 seconds
+autoClose: 2000,
+// CSS class
+className: &#39;&#39;
+})
+
+
+ dialog 
+
+var myDialog = bs4pop.dialog({
+// dialog title
+id: &#39;&#39;,
+// dialog title
+title: &#39;&#39;,
+// dialog content: string, element, jQuery object
+content: &#39;&#39;,
+// custom CSS class
+className: &#39;&#39;,
+// width/height
+width: 500,
+height: &#39;&#39;,
+// parent container
+target: &#39;body&#39;,
+// shows close button
+closeBtn: true,
+// removes the dialog from the DOM after hidden
+hideRemove: true,
+// closes the dialog by pressing ESC key
+escape: true,
+// sets focus to the dialog on init
+autoFocus: true,
+// shows the dialog on init
+show: true,
+// shows backdrop
+// true, false, static
+backdrop: true,
+// custom action buttons
+// [{label: &#39;Button&#39;, className: &#39;btn-primary&#39;,onClick(cb){}}]
+btns: [],
+// enables draggable
+drag: true,
+// callback functions
+onShowStart: function(){
+// console.log(&#39;onShowStart&#39;);
+},
+onShowEnd: function(){
+// console.log(&#39;onShowEnd&#39;);
+},
+onHideStart: function(){
+// console.log(&#39;onHideStart&#39;);
+},
+onHideEnd: function(){
+// console.log(&#39;onHideEnd&#39;);
+},
+onDragStart: function(){
+console.log(&#39;onDragStart&#39;);
+},
+onDragEnd: function(){
+// console.log(&#39;onDragEnd&#39;);
+},
+onDrag: function(){
+console.log(&#39;onDrag&#39;);
+}
+});
+
+ 该基于bootstrap4封装的消息对话框组件的github网址为：https://github.com/aiv367/bootstrap4.pop
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_112">Read More ~</a>
                             </div>
                 </div>
             </article>
             
                 <!-- 翻页 -->
                 
+    <div class="pagination-container">
+        
+                
+                    <a href="https://hao12306.github.io/tag/7t5jPa_I4//page/2/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
                 </div>
                 <!--  -->
                 <div class="main-container-middle"></div>
@@ -204,7 +1710,7 @@ $(&#39;form&#39;).materializeInputs(&amp;quot;.input-material input-1, .input-ma
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569205408361)">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
         </div>
         <h1 class="id_card-title">
             JQ下载中国

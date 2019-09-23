@@ -1,0 +1,1619 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1090">
+                        内置36种DOM元素动画的jQuery响应式布局插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1090" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507081720.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+magic_layout是一款可以将页面中所有DOM元素都制作出动画效果的jQuery响应式布局插件。它内置了36种不同的CSS3动画效果。它是响应式设计，完全适用于移动手机设备。
+内容：
+
+
+简要教程
+
+
+magic\_layout是一款可以将页面中所有DOM元素都制作出动画效果的jQuery响应式布局插件。它内置了36种不同的CSS3动画效果。它是响应式设计，完全适用于移动手机设备。
+
+ 使用方法
+首先需要引入必要的js和css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;core/animate.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;core/magicLayout.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+在该布局的HTML结构中，你可以通过layer class来指定层，还可以使用一些data-*属性，这些属性的描述如下：
+
+
+data-show-effect：显示的动画效果。
+
+data-show-dela：动画的延迟时间，单位毫秒。
+
+data-time：动画的时间，单位毫秒。
+
+如下面是一个简单布局结构：
+
+&amp;lt;div id=&#34;english\_portfolio&#34; class=&#34;dt\_container dt\_container\_columns3 projects&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; target=&#34;blank&#34; class=&#34;dt\_container\_item demo\_stas\_project layer&#34; data-show-effect=&#34;zoomIn&#34; data-show-delay=&#34;400&#34;&amp;gt;
+&amp;lt;h3 class=&#34;project\_item&#34;&amp;gt;Responsive modal window&amp;lt;/h3&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; target=&#34;blank&#34; class=&#34;dt\_container\_item demo\_stas\_project layer&#34; data-show-effect=&#34;zoomIn&#34; data-show-delay=&#34;600&#34;&amp;gt;
+&amp;lt;h3 class=&#34;demo\_stas\_project\_item&#34;&amp;gt;Responsive modal window&amp;lt;/h3&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; target=&#34;blank&#34; class=&#34;dt\_container\_item demo\_stas\_project layer&#34; data-show-effect=&#34;zoomIn&#34; data-show-delay=&#34;800&#34;&amp;gt;
+&amp;lt;h3 class=&#34;demo\_stas\_project\_item&#34;&amp;gt;Responsive modal window&amp;lt;/h3&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过animationLayout()方法来初始化该布局插件。
+
+(function($){
+$(this).animationLayout({
+container: $(&#39;#action\_layout&#39;)
+});
+})(jQuery);
+
+
+ 36种动画效果
+下面列出了所有可用的动画效果。
+
+
+
+
+动画效果的class名称
+
+
+
+
+jump
+shine
+impulse
+elastic
+
+
+jitter
+shine
+jump
+jumpIn
+
+
+jumpInDown
+jumpInLeft
+jumpInRight
+jumpInUp
+
+
+jump
+fadeIn
+fadeInDown
+fadeInDownBig
+
+
+fadeInLeft
+fadeInLeftBig
+fadeInRight
+fadeInRightBig
+
+
+fadeInUp
+fadeInUpBig
+flipInX
+flipInY
+
+
+lightSpeedIn
+rotateIn
+rotateInDownLeft
+rotateInDownRight
+
+
+rotateInUpLeft
+rotateInUpRight
+rollIn
+zoomIn
+
+
+zoomInDown
+zoomInLeft
+zoomInRight
+zoomInUp
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1090">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1091">
+                        可生成自动滚动背景图像的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1091" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507251542.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery.AutoBackgroundScroll.js是一款可以生成自动滚动背景图像的轻量级jQuery插件。该插件可以使背景图片连续无缝的滚动，你可以控制背景图片滚动的方向，滚动速度等参数。
+内容：
+
+
+简要教程
+
+
+jQuery.AutoBackgroundScroll.js是一款可以生成自动滚动背景图像的轻量级jQuery插件。该插件可以使背景图片连续无缝的滚动，你可以控制背景图片滚动的方向，滚动速度等参数。
+
+ 使用方法
+使用该背景图片滚动插件需要引入jQuery和autoBackgroundScroll.js文件。
+
+&amp;lt;script src=&#34;jquery-1.11.3.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/autoBackgroundScroll.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ CSS样式
+你需要为你的页面添加一个背景图片。
+
+body {
+background-image: url(bg.jpg);
+background-position: 0px 0px;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完成之后，可以通过下面的方法来初始化该插件。
+
+$(&#39;body&#39;).autoBackgroundScroll(OPTIONS);
+
+
+ 配置参数
+下面是该背景图片滚动插件的一些可用配置参数。
+
+
+duration：动画的持续时间，默认值为1秒。
+
+speed：动画的速度，默认值为0.5秒。
+
+direction1：背景图片滚动的方向。可选值有：&#39;right&#39;, &#39;left&#39;, &#39;top&#39;, &#39;bottom&#39;。默认值为：&#39;right&#39;。
+
+direction2：如果想制作斜线方向的滚动可指定该参数。可选值有：&#39;right&#39;, &#39;left&#39;, &#39;top&#39;, &#39;bottom&#39;。如果该参数与direction1参数值相同，该参数无效。
+
+imageWidth：背景图片的水平宽度。
+
+imageHeight：背景图片的垂直高度。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1091">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1092">
+                        6种炫酷的鼠标滑过图片显示遮罩层特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1092" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508031811.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的炫酷的鼠标滑过图片显示遮罩层特效。该图片制作层特效共6种不同的效果，使用一些简单的jQuery代码和CSS3过渡效果来完成，简单实用，可以为网站图片添加非常不错的效果。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3制作的炫酷的鼠标滑过图片显示遮罩层特效。该图片制作层特效共6种不同的效果，使用一些简单的jQuery代码和CSS3过渡效果来完成，简单实用，可以为网站图片添加非常不错的效果。
+
+ 制作方法
+
+ HTML结构
+该图片遮罩效果的基本HTML结构如下：
+
+&amp;lt;div id=&#34;effect-1&#34; class=&#34;effects clearfix&#34;&amp;gt;
+&amp;lt;div class=&#34;img&#34;&amp;gt;
+&amp;lt;img src=&#34;img/jpg/1.jpg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;expand&#34;&amp;gt;+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;close-overlay hidden&#34;&amp;gt;x&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt; 
+
+在上面的.close-overlay标签是一个关闭按钮，它用于在移动触摸设备中关闭遮罩层，在大屏幕显示器中你不会看到它。
+
+ CSS样式
+该图片遮罩层效果的通用CSS样式如下：
+
+.effects {
+padding-left: 15px;
+}
+.effects .img {
+position: relative;
+float: left;
+margin-bottom: 5px;
+width: 25\%;
+overflow: hidden;
+}
+.effects .img:nth-child(n) {
+margin-right: 5px;
+}
+.effects .img:first-child {
+margin-left: -15px;
+}
+.effects .img:last-child {
+margin-right: 0;
+}
+.effects .img img {
+display: block;
+margin: 0;
+padding: 0;
+max-width: 100\%;
+height: auto;
+}
+.overlay {
+display: block;
+position: absolute;
+z-index: 20;
+background: rgba(0, 0, 0, 0.8);
+overflow: hidden;
+transition: all 0.5s;
+}
+a.close-overlay {
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+z-index: 100;
+width: 45px;
+height: 45px;
+font-size: 20px;
+font-weight: 700;
+color: #fff;
+line-height: 45px;
+text-align: center;
+background-color: #000;
+cursor: pointer;
+}
+a.close-overlay.hidden {
+display: none;
+}
+a.expand {
+display: block;
+position: absolute;
+z-index: 100;
+width: 60px;
+height: 60px;
+border: solid 5px #fff;
+text-align: center;
+color: #fff;
+line-height: 50px;
+font-weight: 700;
+font-size: 30px;
+border-radius: 30px;
+}
+
+通过上面的通用CSS样式，已经为遮罩层，链接按钮和关闭按钮提供了必要的样式。下面是效果1的图片遮罩层样式：
+
+/* ============================================================
+EFFECT 1 - SLIDE IN BOTTOM
+============================================================ */
+#effect-1 .overlay {
+bottom: 0;
+left: 0;
+right: 0;
+width: 100\%;
+height: 0;
+}
+#effect-1 .overlay a.expand {
+left: 0;
+right: 0;
+bottom: 50\%;
+margin: 0 auto -30px auto;
+}
+#effect-1 .img.hover .overlay {
+height: 100\%;
+}
+
+
+ JAVASCRIPT
+该图片遮罩层特效使用Modernizr来检测浏览器，并在相应的事件中为图片添加和移除相应的CLASS。
+
+$(document).ready(function(){
+if (Modernizr.touch) {
+// show the close overlay button
+$(&#34;.close-overlay&#34;).removeClass(&#34;hidden&#34;);
+// handle the adding of hover class when clicked
+$(&#34;.img&#34;).click(function(e){
+if (!$(this).hasClass(&#34;hover&#34;)) {
+$(this).addClass(&#34;hover&#34;);
+}
+});
+// handle the closing of the overlay
+$(&#34;.close-overlay&#34;).click(function(e){
+e.preventDefault();
+e.stopPropagation();
+if ($(this).closest(&#34;.img&#34;).hasClass(&#34;hover&#34;)) {
+$(this).closest(&#34;.img&#34;).removeClass(&#34;hover&#34;);
+}
+});
+} else {
+// handle the mouseenter functionality
+$(&#34;.img&#34;).mouseenter(function(){
+$(this).addClass(&#34;hover&#34;);
+})
+// handle the mouseleave functionality
+.mouseleave(function(){
+$(this).removeClass(&#34;hover&#34;);
+});
+}
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1092">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1093">
+                        jQuery和CSS3简单的3D旋转木马插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1093" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507201515.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+cubeSlider是一款非常简单的jQuery和CSS3 3D旋转木马特效插件。该插件会根据HTML结构中li元素的数量来创建相应面数的旋转木马。使用上非常简单，效果也十分不错。
+内容：
+
+
+简要教程
+
+
+cubeSlider是一款非常简单的jQuery和CSS3 3D旋转木马特效插件。该插件会根据HTML结构中li元素的数量来创建相应面数的旋转木马。使用上非常简单，效果也十分不错。
+
+ 使用方法
+使用该旋转木马插件需要引入jQuery和jquery.cubeSlider.js文件。
+
+&amp;lt;script src=&#34;js/jquery-2.1.4.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.cubeSlider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该旋转木马使用无序列表来制作，在每一个&amp;lt;li&amp;gt;元素中放置一个&amp;lt;div&amp;gt;作为显示的面。
+
+&amp;lt;ul class=&#34;demo&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div&amp;gt;1&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div&amp;gt;2&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div&amp;gt;3&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div&amp;gt;4&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; 
+
+
+ CSS样式
+需要为该旋转木马特效添加下面的样式：
+
+* {
+margin: 0;
+padding: 0;
+}
+.demo &amp;gt; li {
+float: left;
+list-style-type: none;
+position: absolute;
+opacity: 0.6;
+transition-property: all;
+transition-duration: 1s;
+transition-timing-function: ease-in-out;
+text-align: center;
+color: #fff;
+font-size: 70px;
+cursor: pointer;
+}
+.demo {
+width: 100px;
+height: 100px;
+margin: 100px auto;
+-webkit-transform: rotateY(-10deg) rotateX(-20deg);
+-webkit-transform-style: preserve-3d;
+-webkit-perspective: 400px;
+position: relative;
+}
+.demo &amp;gt; li &amp;gt; div {
+background: #F44336;
+position: absolute;
+top: 10px;
+right: 10px;
+left: 10px;
+bottom: 10px;
+}
+
+
+ 初始化插件
+在页面加载完毕之后，可以通过下面的方法来初始化该旋转木马插件。
+
+$(&#39;.demo&#39;).polygon(OPTIONS);
+
+
+ 配置参数
+该旋转木马插件有三个配置参数。
+
+
+width：旋转木马的宽度。
+
+height：旋转木马的高度。
+
+timer：自动播放的时间，设置为false表示不自动播放。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1093">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1094">
+                        简单的跑马灯式滚动新闻jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1094" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507291718.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Smart Marquee是一款简单实用的跑马灯式滚动新闻jQuery插件。该插件可以在水平或垂直方向上滚动一个列表中的内容，制作类似跑马灯的效果。并可以设置循环模式，鼠标移动到列表项时会暂停新闻列表的滚动。
+内容：
+
+
+简要教程
+
+
+Smart Marquee是一款简单实用的跑马灯式滚动新闻jQuery插件。该插件可以在水平或垂直方向上滚动一个列表中的内容，制作类似跑马灯的效果。并可以设置循环模式，鼠标移动到列表项时会暂停新闻列表的滚动。
+这个插件适用于制作滚动新闻，滚动文字，滚动图片等效果。
+
+ 使用方法
+使用该滚动新闻插件需要引入jQuery和jquery.smartmarquee.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.smartmarquee.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该滚动新闻的HTML结构使用一个&amp;lt;div&amp;gt;作为包裹元素，里面放置一个无序列表。
+
+&amp;lt;div class=&#34;smartmarquee example&#34;&amp;gt;
+&amp;lt;ul class=&#34;container&#34;&amp;gt;
+&amp;lt;li&amp;gt; Item 1 &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; Item 2 &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; Item 3 &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; Item 4 &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; Item 5 &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; Item 6 &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+需要为该滚动新闻添加一些必要的CSS样式。
+
+.smartmarquee {
+position: relative;
+overflow: hidden;
+}
+.smartmarquee .container { position: absolute; }
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过smartmarquee()方法来初始化该滚动新闻插件。
+
+$(document).ready(function () {
+$(&#34;.example&#34;).smartmarquee();
+});
+
+
+ 配置参数
+下面是该滚动新闻插件的可用配置参数。
+
+
+duration：滚动动画的持续时间，单位毫秒，默认值为1000。
+
+loop：是否循环显示，默认值为true。
+
+interval：滚动的间隔时间，单位毫秒，默认值2000。
+
+axis：滚动的方向，可选值有：&#39;vertical&#39; 或 &#39;horizontal&#39;。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1094">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1095">
+                        jQuery实用LED样式计时器|倒计数器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1095" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508081632.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ClassyLED是一款非常实用的LED样式计时器|倒计数器jQuery插件。你可以实用该插件来制作各种倒计数效果，倒计时效果，电子时钟效果，或制作LED样式的随机数字。使用该插件来制作LED效果非常容易，并且效果非常不错。
+内容：
+
+
+简要教程
+
+
+ClassyLED是一款非常实用的LED样式计时器|倒计数器jQuery插件。你可以实用该插件来制作各种倒计数效果，倒计时效果，电子时钟效果，或制作LED样式的随机数字。使用该插件来制作LED效果非常容易，并且效果非常不错。
+
+ 使用方法
+该LED效果的动画依赖于raphael.js-一个矢量图形动画库插件。使用时要将其引入。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.classyled.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用一个空的&amp;lt;div&amp;gt;来制作该LED数字效果。
+
+&amp;lt;div class=&#34;led&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过ClassyLED()方法来初始化该插件。
+
+$(&#39;.led&#39;).ClassyLED({
+type: &#39;countdown&#39;,
+format: &#39;ddd:hh:mm:ss&#39;,
+color: &#39;#eee&#39;,
+backgroundColor &#39;#000&#39;,
+size: 16
+});
+
+
+ 配置参数
+
+
+type：LED显示的类型，可以是：countdown，random，number 和time。默认为time。
+
+format：LED的时间格式，例如：hh:mm:ss。默认为hh:mm。
+
+value：如果LED的类型是number，可以通过该参数来指定值。
+
+color：LED数字的十六进制颜色，默认是#fff。
+
+bgcolor：背景的的十六进制颜色，默认是#000。
+
+size：LED数字的尺寸，单位像素，默认值12。
+
+rounded：LED数字的圆角，默认值为1。
+
+spacing：两个数字之间的距离，默认为1。
+
+fontType：LED数字的字体类型，取值1-3，默认为1。
+
+hourFormat：小时的格式，可以是12或24。默认为24。
+
+countTo：如果是倒计时器，该参数设置要倒计时到的时间。格式为yyyy:mm:dd，例如：2015:12:25，默认为当前年的最后一天。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1095">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1096">
+                        Dynamics.js-可创建物理运动动画效果的js库插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1096" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506221552.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Dynamics.js是一款可以创建物理运动动画效果的js库插件。你可以使用它来制作任何DOM元素的CSS属性动画，也可以制作SVG属性动画和任何JAVASCRIPT对象动画。
+内容：
+
+
+简要教程
+
+
+Dynamics.js是一款可以创建物理运动动画效果的js库插件。你可以使用它来制作任何DOM元素的CSS属性动画，也可以制作SVG属性动画和任何JAVASCRIPT对象动画。
+
+ 安装
+可以使用bower或nmp来安装Dynamics.js插件。
+
+bower install dynamics.js
+npm install dynamics.js 
+
+在页面中引入dynamics.js文件。
+
+&amp;lt;script src=&#34;dynamics.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用方法
+你可以制作任何HTML DOM元素的CSS属性动画：
+
+var el = document.getElementById(&#34;logo&#34;)
+dynamics.animate(el, {
+translateX: 350,
+scale: 2,
+opacity: 0.5
+}, {
+type: dynamics.spring,
+frequency: 200,
+friction: 200,
+duration: 1500
+})
+
+你也可以制作SVG属性动画：
+
+var path = document.querySelector(&#34;path&#34;)
+dynamics.animate(path, {
+d: &#34;M0,0 L0,100 L100,50 L0,0 Z&#34;,
+fill: &#34;#FF0000&#34;,
+rotateZ: 45,
+// rotateCX 和 rotateCY 是旋转的中心点
+rotateCX: 100,
+rotateCY: 100
+}, {
+friction: 800
+})
+
+你还可以制作任何javascript对象的动画：
+
+var o = {
+number: 10,
+color: &#34;#FFFFFF&#34;,
+string: &#34;10deg&#34;,
+array: [ 1, 10 ]
+}
+dynamics.animate(o, {
+number: 20,
+color: &#34;#000000&#34;,
+string: &#34;90deg&#34;,
+array: [-9, 99 ]
+})
+
+
+ API
+
+ dynamics.animate(el, properties, options)
+通过动画参数来动画一个元素到指定的状态。
+
+
+el：一个DOM元素，一个JavaScript对象或一个元素数组。
+
+properties：你想动画的对象的属性/值。
+
+options：代表动画的对象。
+
+
+type：动画的类型。如dynamics.spring，dynamics.easeInOut等，默认值为dynamics.easeInOut。
+
+frequency,friction,bounciness：指定你想使用的动画类型。
+
+duration：动画持续时间，单位毫秒，默认值1000。
+
+delay：动画的延迟时间，单位毫秒，默认值0。
+
+complete：可选值，动画结束后的回调函数。
+
+change：可选择，每一次改变时的回调函数。
+
+
+
+
+ dynamics.stop(el)
+停止在元素上应用的动画。
+
+ dynamics.css(el, properties)
+为动画元素指定当前浏览器前缀的CSS属性。
+
+
+el：DOM元素。
+
+properties：一个CSS属性的对象。
+
+
+ dynamics.setTimeout(fn, delay)
+Dynamics.js有自己的setTimeout。因为requestAnimationFrame和setTimeout在不同的浏览器中表现不一致。
+
+
+fn：回调函数。
+
+delay：单位毫秒。
+
+返回唯一的ID号。
+
+ dynamics.clearTimeout(id)
+清除前定义的timeout。
+
+ Dynamics and properties
+dynamics.spring
+
+
+frequency：默认值300。
+
+friction：默认值200。
+
+anticipationSize：可选项。
+
+anticipationStrength：可选项。
+
+dynamics.bounce
+
+
+frequency：默认值300。
+
+friction：默认值200。
+
+dynamics.forceWithGravity 和 dynamics.gravity
+
+
+bounciness：默认值400。
+
+elasticity：默认值200。
+
+dynamics.easeInOut, dynamics.easeIn 和 dynamics.easeOut
+
+
+friction：默认值500。
+
+dynamics.linear
+没有属性。
+dynamics.bezier
+
+
+points：点和控制点的数组。
+
+
+ 浏览器兼容
+
+Safari 7+
+Firefox 35+
+Chrome 34+
+IE10+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1096">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1097">
+                        jQuery和CSS3微软Xbox One样式的消息框特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1097" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506171732.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款仿照微软Xbox One样式的消息框制作的jQuery和CSS3通知消息框特效。该消息框分为三个部分，每个部分在消息框被激活时将依次打开，再依次关闭，效果非常的酷。
+内容：
+
+
+简要教程
+
+
+这是一款仿照微软Xbox One样式的消息框制作的jQuery和CSS3通知消息框特效。该消息框分为三个部分，每个部分在消息框被激活时将依次打开，再依次关闭，效果非常的酷。
+
+ 制作方法
+
+ HTML结构
+该消息框的HTML结构如下，主要结构分为三个部分：div.impact，div.message-container和一个&amp;lt;h1&amp;gt;标签。
+
+&amp;lt;div class=&#34;pull&#34;&amp;gt;
+&amp;lt;div class=&#34;notification positive&#34;&amp;gt;
+&amp;lt;div class=&#34;flex-container&#34;&amp;gt;
+&amp;lt;div class=&#34;impact&#34;&amp;gt;
+&amp;lt;div class=&#34;icon&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-gamepad&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;message-container&#34;&amp;gt;
+&amp;lt;div class=&#34;message&#34;&amp;gt;
+&amp;lt;strong&amp;gt;jQueryScript is online&amp;lt;/strong&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Hold &amp;lt;img src=&#34;xbox.png&#34; alt=&#34;&#34; class=&#34;xbox-logo&#34;&amp;gt; to launch&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+该消息框的包裹容器被制作为3D空间。
+
+.pull {
+position: fixed;
+bottom: 0;
+width: 100\%;
+-webkit-perspective: 250px;
+perspective: 250px;
+-webkit-perspective-origin: right center;
+perspective-origin: right center;
+-webkit-transition: -webkit-perspective .1s ease;
+transition: perspective .1s ease;
+}
+.pull.open {
+-webkit-perspective: 500px;
+perspective: 500px;
+}
+
+消息框的布局采用flexbox的布局方式。
+
+.notification .flex-container {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+-webkit-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+-webkit-flex-wrap: no-wrap;
+-ms-flex-wrap: no-wrap;
+flex-wrap: no-wrap;
+-webkit-box-align: stretch;
+-webkit-align-items: stretch;
+-ms-flex-align: stretch;
+align-items: stretch;
+-webkit-transition: -webkit-transform .35s ease;
+transition: transform .35s ease;
+-webkit-transform: translate3d(0, 45px, 0);
+transform: translate3d(0, 45px, 0);
+}
+.notification .flex-container.drop-down {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+
+其中transform: translate3d(0, 0, 0);用于性能优化，开启GPU。
+
+ JAVASCRIPT
+核心的jQuery代码如下，有两个函数：openNotification()和closeNotification()分别用于打开和关闭消息框：
+
+$(function () {
+$(&#39;.notification&#39;).addClass(&#39;notification-hidden&#39;);
+openNotification(&#39;positive&#39;);
+setTimeout(closeNotification, 10000);
+});
+$(&#39;.again&#39;).click(function () {
+openNotification(&#39;positive&#39;);
+setTimeout(closeNotification, 10000);
+});
+function openNotification(whichNotification) {
+var thisNotification = $(&#39;.notification.&#39; + whichNotification);
+thisNotification.removeClass(&#39;notification-hidden&#39;);
+setTimeout(function () {
+thisNotification.addClass(&#39;open&#39;);
+var openNotification = $(&#39;.notification.open&#39;);
+$(&#39;.pull&#39;).addClass(&#39;open&#39;);
+openNotification.addClass(&#39;show&#39;).addClass(&#39;open--rot&#39;);
+setTimeout(function () {
+openNotification.addClass(&#39;open--width&#39;);
+}, 1250);
+setTimeout(function () {
+openNotification.find(&#39;.flex-container&#39;).addClass(&#39;drop-down&#39;);
+}, 3000);
+$(&#39;body&#39;).append(&#39;&amp;lt;div class=&#34;overlay&#34;&amp;gt;&amp;lt;/div&amp;gt;&#39;);
+}, 50);
+}
+function closeNotification() {
+var type = $(&#39;.notification.open&#39;);
+type.find(&#39;.drop-down&#39;).removeClass(&#39;drop-down&#39;);
+setTimeout(function () {
+type.removeClass(&#39;open--width&#39;);
+}, 400);
+setTimeout(function () {
+type.removeClass(&#39;open--rot&#39;);
+}, 700);
+setTimeout(function () {
+type.removeClass(&#39;show&#39;);
+}, 900);
+setTimeout(function () {
+$(&#39;.overlay&#39;).remove();
+type.removeClass(&#39;open&#39;);
+}, 1000);
+setTimeout(function () {
+type.addClass(&#39;notification-hidden&#39;);
+}, 1050);
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1097">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1098">
+                        jQuery和CSS3超炫查找质数3D动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1098" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507031751.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和CSS3超炫查找质数动画特效。该特效会在屏幕中间显示当前正在查找的数字，并在页面中显示已经查找过的数字，如果是质数中间的数字会以3D动画的方式显示该质数，同时在质数墙中高亮显示该质数。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery和CSS3超炫查找质数动画特效。该特效会在屏幕中间显示当前正在查找的数字，并在页面中显示已经查找过的数字，如果是质数中间的数字会以3D淡出动画的方式显示该质数，同时在质数墙中高亮显示该质数。
+
+ 制作方法
+
+ HTML结构
+该查找质数特效的HTML结构分为三个部分：section.output是用于显示已经查找过的数字，即质数墙。section.display是当前正在查找的数字，也就是屏幕中间的数字动画。还有一个&amp;lt;button&amp;gt;元素，它位于屏幕的右上角，可以暂停当前的质数查找。
+
+&amp;lt;section class=&#34;output&#34;&amp;gt;
+&amp;lt;/section&amp;gt;
+&amp;lt;section class=&amp;quot;display&amp;quot;&amp;gt;
+&amp;lt;/section&amp;gt;
+&amp;lt;button class=&amp;quot;control&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;play&amp;quot;&amp;gt;►&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;pause&amp;quot;&amp;gt;∎&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+
+
+ CSS样式
+该查找质数动画的CSS样式非常简单。它分别为c0-c5的不同class的质数设置不同的颜色。然后当前正在动画的数字使用translate3d()函数来制作质数的3D动画效果。这里使用了多个不同的translate3d()函数，用以制作不同的3D动画效果。
+
+.display.prime {
+color: #62efab;
+opacity: 0.7;
+}
+.display.prime.c0 {
+color: #d781f9;
+}
+.display.prime.c1 {
+color: #80e3f7;
+}
+.display.prime.c2 {
+color: #ffe868;
+}
+.display.prime.c3 {
+color: #ef7658;
+}
+.display.prime.c4 {
+color: #f26395;
+}
+.display.prime.c5 {
+color: #62efab;
+}
+.display.out {
+opacity: 0;
+}
+.display.out.lb {
+-webkit-transform: translate3d(-2em, 1em, 0em);
+transform: translate3d(-2em, 1em, 0em);
+}
+.display.out.l {
+-webkit-transform: translate3d(-2em, 0em, 0em);
+transform: translate3d(-2em, 0em, 0em);
+}
+.display.out.lt {
+-webkit-transform: translate3d(-2em, -1em, 0em);
+transform: translate3d(-2em, -1em, 0em);
+}
+.display.out.t {
+-webkit-transform: translate3d(0em, -1em, 0em);
+transform: translate3d(0em, -1em, 0em);
+}
+.display.out.rt {
+-webkit-transform: translate3d(2em, -1em, 0em);
+transform: translate3d(2em, -1em, 0em);
+}
+.display.out.r {
+-webkit-transform: translate3d(2em, 0em, 0em);
+transform: translate3d(2em, 0em, 0em);
+}
+.display.out.rb {
+-webkit-transform: translate3d(2em, 1em, 0em);
+transform: translate3d(2em, 1em, 0em);
+}
+.display.out.b {
+-webkit-transform: translate3d(0em, 1em, 0em);
+transform: translate3d(0em, 1em, 0em);
+} 
+
+
+ JAVASCRIPT
+质数的查找和显示都是在jQuery代码中完成的。isPrime()函数用于判断一个数是不是质数。outputPrime()和outputNormal()函数分别用于输出质数和非质数。display()方法则用于查找质数的动画。具体代码请参考下载文件。
+
+function isPrime(n) {
+var i = 2, n = n || 1;
+if ( n === 1 ) { return false; }
+if ( n &amp;lt; 4 ) { return true; }
+while( i &amp;lt; n ) {
+if ( n \% i === 0 ) { return false; }
+i++;
+}
+return true;
+}
+function outputPrime(n, c) {
+if(n) {
+$output.append(&#34;&amp;lt;i class=&#39;prime&#34; + c + &#34;&#39;&amp;gt;&#34; + n + &#34;&amp;lt;/i&amp;gt;&#34;);
+}
+}
+function outputNormal(n) {
+if(n) {
+$output.append(&#34;&amp;lt;i&amp;gt;&#34; + n + &#34;&amp;lt;/i&amp;gt;&#34;);
+}
+}
+function display(n, prime, c) { 
+var $temp, pos;
+if(n) {
+$display.text(n);
+console.log(arguments);
+if(prime) {
+pos = Math.floor(Math.random()*coord.length);
+$temp = $display
+.clone()
+.addClass(&#34;prime c&#34; + c)
+.insertAfter( $display );
+setTimeout(function() {
+$temp
+.addClass(&#34;out&#34;)
+.addClass(coord[pos]);
+}, 10); 
+setTimeout(function() {
+$temp.remove();
+}, 1200);
+}
+}
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1098">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1099">
+                        jQuery响应式水平滚动旋转木马插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1099" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506281642.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Carousel.js是一款非常实用的jQuery响应式水平滚动旋转木马插件。它使用简单，样式可以完全自定义，并且会随屏幕的大小自适应容器的宽度和高度。
+内容：
+
+
+简要教程
+
+
+Carousel.js是一款非常实用的jQuery响应式水平滚动旋转木马插件。它使用简单，样式可以完全自定义，并且会随屏幕的大小自适应容器的宽度和高度。
+
+ 使用方法
+使用该旋转木马插件要引入jQuery和jquery-carousel.js文件。
+
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery-carousel.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该旋转木马的基本HTML结构如下：
+
+&amp;lt;div id=&#34;slider-carousel&#34;&amp;gt;
+&amp;lt;div class=&#34;wrapper-setas&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;seta-dir setaDir&#34;&amp;gt;
+&amp;lt;em class=&#34;sprite seta-pag-dir-md&#34;&amp;gt;&amp;lt;/em&amp;gt;
+&amp;lt;/a&amp;gt; 
+&amp;lt;a href=&#34;#&#34; class=&#34;seta-esq setaEsq&#34;&amp;gt;
+&amp;lt;em class=&#34;sprite seta-pag-esq-md&#34;&amp;gt;&amp;lt;/em&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- Slider content --&amp;gt;
+&amp;lt;div id=&amp;quot;container-slider-carousel&amp;quot; class=&amp;quot;container&amp;quot;&amp;gt;
+&amp;lt;div id=&amp;quot;content-silder-carousel&amp;quot; class=&amp;quot;content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;wrapper-itens&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;img src=&amp;quot;l.jpg&amp;quot; alt=&amp;quot;&amp;quot; class=&amp;quot;img-responsive&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;img src=&amp;quot;2.jpg&amp;quot; alt=&amp;quot;&amp;quot; class=&amp;quot;img-responsive&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;img src=&amp;quot;3.jpg&amp;quot; alt=&amp;quot;&amp;quot; class=&amp;quot;img-responsive&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;img src=&amp;quot;4.jpg&amp;quot; alt=&amp;quot;&amp;quot; class=&amp;quot;img-responsive&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+需要为该旋转木马插件添加下面的必要的CSS样式，其他的CSS样式可以根据需要自定义。
+
+.clear {
+clear: both !important;
+float: none !important;
+margin: 0px !important;
+padding: 0px !important;
+height: 0px !important;
+width: 0px !important
+}
+.img-responsive {
+height: auto;
+width: 100%;
+}
+#slider-carousel {
+position: relative;
+width: 100%;
+padding: 10px 0 0 0;
+margin-bottom: 5px;
+}
+#container-slider-carousel {
+width: 620px;
+position: relative;
+overflow: hidden;
+height: auto;
+}
+#content-silder-carousel {
+width: 5000px;
+position: relative;
+left: 0;
+}
+#content-silder-carousel .item {
+width: 200px;
+float: left;
+background-color: #CCC;
+margin-right: 10px;
+}
+#slider-carousel .wrapper-setas { margin: 0 0 10px 0; }
+#slider-carousel .wrapper-setas a {
+float: right;
+margin-left: 10px;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该旋转木马插件。
+
+$(&#34;#slider-carousel&#34;).carousel({
+// 回调函数
+activate: function(){},
+// 动画的速度
+timerAnimSlide:400,
+// 无限循环模式
+infinite:true,
+// 点击左右箭头导航按钮时移动的旋转木马项的数量
+itensMove:1,
+// 旋转木马项的宽度
+resizeItem:{width:50},
+// 旋转木马的最小宽度
+responsive:{minWidth:645}
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1099">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/10/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/12/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

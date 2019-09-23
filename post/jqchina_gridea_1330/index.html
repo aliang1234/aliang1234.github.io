@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery网格式多方向图片幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery网格式多方向图片幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502211440.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502211440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502211402.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>gridSlide是一款很酷的jQuery网格式多方向图片幻灯片插件。该幻灯片插件适用于显示多图片的场合，它会根据缩略图的位置在显示幻灯片时做相应的方向运动。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>gridSlide是一款很酷的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>网格式多方向图片幻灯片插件。该幻灯片插件适用于显示多图片的场合，它会根据缩略图的位置在显示幻灯片时做相应的方向运动。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片插件的每一组图片都使用一个无序列表来包装，所有的图片都包裹在一个class为<code>slider</code>的<code>div</code>中。<code>#slider-nav</code>是用于放置缩略图的容器。</p>
+<pre class="brush:html">
+&lt;div class="slider"&gt;
+&lt;ul data-title="Row 1"&gt;
+&lt;li&gt;&lt;img src="img/img1-1.jpg" alt="image"&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+&lt;ul data-title="Row 2"&gt;
+&lt;li&gt;&lt;img src="img/img2-1.jpg" alt="image"&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+&lt;ul data-title="Row 3"&gt;
+&lt;li&gt;&lt;img src="img/img3-1.jpg" alt="image"&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="slider-nav"&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 调用插件</h5>
+<pre class="brush:js">
+$(window).load(function() {
+$('.slider').gridSlide();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 可用参数</h3>
+<p>该幻灯片插件有几个可用的参数：</p>
+<pre class="brush:js">
+nav: '#slider-nav',
+menu: 'grid',
+title: false,
+imgGrid: false,
+speed: 300
+</pre>
+<ul>
+<li>
+<span class="m">nav</span>：用于显示到后缩略图的容器。该参数接受一个选择权字符串。
+<pre class="brush:js">
+$('.slider').gridslide({
+nav: '.another-div'
+});
+</pre>
+</li>
+<li>
+<span class="m">menu</span>：该参数可以设置为"grid"或"nav"。"grid"设置导航缩略图为网格缩略图的形式；"nav"设置导航为上下左右四个方向的控制图。</li>
+<li>
+<span class="m">title</span>：该选项允许你在使用导航缩略图"grid"模式时，指定每行缩略图的标题。你也可以在每个<code>ul</code>元素上使用<code>data-title</code>属性来指定标题。插件会在每行缩略图中添加一个<code>h3</code>标题。</li>
+<li>
+<span class="m">imgGrid</span>：imgGrid further extends the grid menu option by making the grid feature the images that you've included in the slider。</li>
+<li>
+<span class="m">speed</span>：切换幻灯片的速度。可以设置为Slow, Fast 或一个毫秒数。</li>
+</ul>
+<p>更多关于该幻灯片插件的信息可以参考：<a href="http://www.dpurdy.me/plugins/gridslide" target="\_blank">www.dpurdy.me/plugins/gridslide</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502211440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502211402.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1331">
+                                <h3 class="post-title">
+                                    jQuery和CSS3超逼真的图片放大镜特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

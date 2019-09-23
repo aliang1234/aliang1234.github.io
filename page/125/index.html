@@ -1,0 +1,1829 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_677">
+                        iziModal-时尚炫酷的jQuery模态窗口插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_677" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607101635.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+iziModal是一款时尚炫酷的jQuery模态窗口插件。该模态窗口插件提供基本的打开模态窗口动画特效，并且可以调用iframe内容，Ajax加载，制作alert效果，加载超大内容等。
+内容：
+
+
+简要教程
+
+
+iziModal是一款时尚炫酷的jQuery模态窗口插件。该模态窗口插件提供基本的打开模态窗口动画特效，并且可以调用iframe内容，Ajax加载，制作alert效果，加载超大内容等。
+
+ 使用方法
+在页面中引入iziModal.min.css和jquery、iziModal.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;iziModal.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;iziModal.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以通过按钮或&amp;lt;a&amp;gt;元素来触发一个模态窗口。
+
+&amp;lt;!-- Trigger to open Modal --&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;trigger&#34;&amp;gt;打开模态窗口&amp;lt;/a&amp;gt;
+&amp;lt;!-- 模态窗口 --&amp;gt;
+&amp;lt;div id=&#34;modal&#34;&amp;gt;
+&amp;lt;!-- 模态窗口的内容 --&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过iziModal()方法来初始化该模态窗口插件。
+
+$(&#34;#modal&#34;).iziModal();
+
+或者也可以通过jqurey事件来打开模态窗口。
+
+$(document).on(&#39;click&#39;, &#39;.trigger&#39;, function (event) {
+event.preventDefault();
+$(&#39;#modal&#39;).iziModal(&#39;open&#39;, this); // 需要带上 &#34;this&#34;
+});
+
+
+ Iframe
+要在模态窗口中使用iframe功能，结构如下：
+
+&amp;lt;a href=&#34;http://www.htmleaf.com&#34; class=&#34;trigger&#34;&amp;gt;打开模态窗口&amp;lt;/a&amp;gt;
+
+初始化：
+
+$(&#34;#modal&#34;).iziModal({
+iframe: true,
+iframeHeight: 800,
+iframeURL: &#34;http://www.htmleaf.com&#34;
+});
+
+或者也可以通过jquery事件来打开模态窗口。
+
+$(document).on(&#39;click&#39;, &#39;.trigger&#39;, function (event) {
+event.preventDefault();
+$(&#39;#modal&#39;).iziModal(&#39;open&#39;, this); // 需要带上 &#34;this&#34;
+});
+
+
+ Ajax
+iziModal模态窗口插件配置有Ajax功能。
+
+$(&#34;#modal&#34;).iziModal(&#39;open&#39;, function(modal){
+modal.startLoading();
+.get(&amp;#039;/path/to/file&amp;#039;, function(data) {
+(&amp;quot;#modal .iziModal-content&amp;quot;).html(data);
+modal.stopLoading();
+});
+});
+
+
+ 配置参数
+iziModal模态窗口插件的默认配置参数如下：
+
+$(&#34;#modal&#34;).iziModal({
+title: &#34;&#34;,
+subtitle: &#34;&#34;,
+theme: &#34;&#34;,
+headerColor: &#34;#88A0B9&#34;,
+overlayColor: &#34;rgba(0, 0, 0, 0.4)&#34;,
+iconColor: &#34;&#34;,
+iconClass: null,
+width: 600,
+padding: 0,
+iframe: false,
+iframeHeight: 400,
+iframeURL: null,
+overlayClose: true,
+closeOnEscape: true,
+bodyOverflow: false,
+focusInput: true,
+autoOpen: false,
+transitionInModal: &#39;transitionIn&#39;,
+transitionOutModal: &#39;transitionOut&#39;,
+transitionInOverlay: &#39;fadeIn&#39;,
+transitionOutOverlay: &#39;fadeOut&#39;,
+onOpening: function() {},
+onOpened: function() {},
+onClosing: function() {},
+onClosed: function() {}
+});
+
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+title
+&#34;&#34;
+模态窗口的标题。
+
+
+subtitle
+&#34;&#34;
+模态窗口的子标题。
+
+
+theme
+&#34;&#34;
+模态窗口的主题，可以是空或&#34;light&#34;。
+
+
+headerColor
+#6d7d8d
+模态窗口的头部颜色。
+
+
+overlayColor
+rgba(0,0,0,0.4)
+遮罩层的颜色。
+
+
+iconColor
+&#34;&#34;
+头部图标的颜色。
+
+
+iconClass
+null
+图标图标的class（你使用的字体图标的class名称）
+
+
+width
+600
+模态窗口的固定宽度。你可以使用\%, px, em 或 cm。如果不带单位，默认为像素。
+
+
+padding
+0
+模态窗口的内边距。
+
+
+iframe
+false
+是否在模态窗口中启用iframe功能。
+
+
+iframeHeight
+null
+iframe的高度。
+
+
+iframeURL
+null
+iframe加载内容的URL地址。如果没有设置，可以使用超链接的地址来作为URL地址。
+
+
+overlayClose
+true
+是否允许点击模态窗口的外部来关闭模态窗口。
+
+
+closeOnEscape
+true
+是否允许通过点击ESC键来关闭模态窗口。
+
+
+bodyOverflow
+false
+强制在打开模态窗口时超出文档的内容被隐藏。
+
+
+focusInput
+true
+设置为true时，当打开模态窗口时，第一个可见的表单域将被激活。
+
+
+autoOpen
+false
+是否自动打开模态窗口。
+
+
+transitionInModal
+transitionIn
+打开模态窗口的默认过渡动画。
+
+
+transitionOutModal
+transitionOut
+关闭模态窗口的默认过渡动画。
+
+
+transitionInOverlay
+fadeIn
+遮罩层打开时的过渡动画。
+
+
+transitionOutOverlay
+fadeOut
+遮罩层关闭时的过渡动画。
+
+
+onOpening
+function() {}
+模态窗口打开时的回调函数。
+
+
+onOpened
+function() {}
+模态窗口打开后的回调函数。
+
+
+onClosing
+function() {}
+模态窗口关闭时的回调函数。
+
+
+onClosed
+function() {}
+模态窗口关闭后的回调函数。
+
+
+
+
+
+ 方法
+
+
+$(&#39;#modal&#39;).iziModal();：初始化模态窗口。
+
+$(&#39;#modal&#39;).iziModal(&#39;open&#39;);：打开模态窗口。
+
+$(&#39;#modal&#39;).iziModal(&#39;close&#39;);：关闭模态窗口。
+
+$(&#39;#modal&#39;).iziModal(&#39;getState&#39;);：获取模态窗口的状态，返回：{&#39;closed&#39;|&#39;closing&#39;|&#39;opened&#39;|&#39;opening&#39;}。
+
+$(&#39;#modal&#39;).iziModal(&#39;startLoading&#39;);：开启模态窗口中的加载进度指示器。
+
+$(&#39;#modal&#39;).iziModal(&#39;stopLoading&#39;);：关闭模态窗口中的加载进度指示器。
+
+$(&#39;#modal&#39;).iziModal(&#39;destroy&#39;);：销毁模态窗口。
+
+$(&#39;#modal&#39;).iziModal(&#39;setHeaderColor&#39;, &#39;color&#39;);：设置模态窗口头部的背景颜色。
+
+$(&#39;#modal&#39;).iziModal(&#39;setTitle&#39;, &#39;Title&#39;);：设置模态窗口的标题。
+
+$(&#39;#modal&#39;).iziModal(&#39;setSubtitle&#39;, &#39;Subtitle&#39;);：设置模态窗口的子标题。
+
+$(&#39;#modal&#39;).iziModal(&#39;setIconClass&#39;, &#39;iconClass&#39;);：设置模态窗口的图标。
+
+$(&#39;#modal&#39;).iziModal(&#39;recalculateLayout&#39;);：重新计算模态窗口的尺寸和位置。
+
+
+ 事件
+
+
+Opening：在模态窗口打开时触发。
+
+$(document).on(&#39;opening&#39;, &#39;#modal&#39;, function (e) {
+//console.log(&#39;Modal is opening&#39;);
+});
+
+
+
+Opened：在模态窗口打开之后触发。
+
+$(document).on(&#39;opened&#39;, &#39;#modal&#39;, function (e) {
+//console.log(&#39;Modal is opened&#39;);
+});
+
+
+
+Closing：在模态窗口关闭时触发。
+
+$(document).on(&#39;closing&#39;, &#39;#modal&#39;, function (e) {
+//console.log(&#39;Modal is closing&#39;);
+});
+
+
+
+Closed：在模态窗口关闭之后触发。
+
+$(document).on(&#39;closed&#39;, &#39;#modal&#39;, function (e) {
+// console.log(&#39;Modal is closed&#39;);
+});
+
+
+
+iziModal模态窗口插件的github地址为：https://github.com/dolce/iziModal。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_677">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_678">
+                        可拖拽和带预览图的jQuery文件上传插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_678" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607031619.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ssi-uploader是一款带预览图并且可以拖拽文件的jQuery ajax文件上传插件。该文件上传插件支持AJAX，支持多文件上传，可控制上的文件格式和文件大小，提供各种回调函数，使用非常方便。
+内容：
+
+
+简要教程
+
+
+ssi-uploader是一款带预览图并且可以拖拽文件的jQuery ajax文件上传插件。该文件上传插件支持AJAX，支持多文件上传，可控制上的文件格式和文件大小，提供各种回调函数，使用非常方便。
+
+ 安装
+可以通过bower或npm来安装ssi-uploader文件上传插件。
+
+bower install ssi-uploader
+npm install ssi-uploader 
+
+
+ 使用方法
+在页面中引入ssi-uploader.css和ssi-uploader.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/ssi-uploader.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/ssi-uploader.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+最基本的文件上传HTML结构是使用一个&amp;lt;input&amp;gt;元素，类型为file，并指定一个id。
+
+&amp;lt;input type=&#34;file&#34; multiple id=&#34;ssi-upload&#34;/&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过ssi\_uploader方法来初始化该文件上传插件。
+
+$(&#39;#ssi-upload&#39;).ssi\_uploader({
+url: &#39;path/to/upload.php&#39;
+}); 
+
+
+ 配置参数
+ssi\_uploader文件上传插件的可用配置参数如下：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+url
+{String}
+null
+接收ajax请求的地址。必须填写。
+
+
+data
+{Object}
+null
+发送请求的额外数据。例如$(&#39;input&#39;).ssi-uploader({url:&#39;upload.php&#39;,data:{&#34;name&#34;:&#34;myDragon&#34;}})
+
+
+
+ajaxOptions
+{Object}
+{type:&#39;DELETE&#39;}
+扩展默认的$.ajax函数的选项。
+
+
+locale
+{String}
+&#34;en&#34;
+使用的本地化语言。
+
+
+preview
+{boolean}
+true
+是否启用文件预览图效果。
+
+
+maxNumberOfFiles
+{Number}
+null
+每次允许上传多少个文件。
+
+
+maxFileSize
+{Number}
+null
+允许上传的最大文件尺寸。
+
+
+allowed
+{Array}
+[&#39;jpg&#39;, &#39;jpeg&#39;, &#39;png&#39;, &#39;bmp&#39;, &#39;gif&#39;]
+允许上传的文件类型。
+
+
+errorHandler
+{Object}
+
+用于处理错误信息的方法。
+
+
+beforeUpload
+{Function}
+
+文件上传前执行的回调函数。
+
+
+beforeEachUpload
+{Function}
+
+每一个单独的文件上传前执行的回调函数。
+
+
+onUpload
+{Function}
+
+文件上传后执行的回调函数。
+
+
+onEachUpload
+{Function}
+
+每一个单独的文件上传后执行的回调函数。
+
+
+responseValidation
+{Object||false}
+
+设置错误校验，插件将显示设置的信息。可以可以是：{ type:&#34;error&#34;,result:&#34;Already exists&#34; }或{ error:&#34;Already exists.&#34; }。
+
+
+
+
+其中，errorHandler参数带有一个errorHandler.method函数，该函数错误信息和类型。
+
+function(msg,type){alert(msg);}
+
+responseValidation对象的可用属性有：
+
+
+validationKey：类型{String||Object}，设置验证信息。
+
+resultKey：类型{String||Object}，设置返回验证信息。
+
+success：类型{String}，设置成功信息。
+
+error：类型{String}，设置错误信息。
+
+例如：
+
+//structure 1
+$(&#39;#ss-uploader&#39;).ssi\_uploader({
+responseValidation:{
+validationKey: &#39;type&#39;,
+resultKey: &#39;data&#39;,
+success: &#39;success&#39;,
+error: &#39;error&#39;
+}
+});
+//result
+/*
+{
+type:&#39;error&#39;,
+data:&#39;Already Exists.&#39;
+}
+*/
+//structure 2
+$(&#39;#ss-uploader&#39;).ssi_uploader({
+responseValidation:{
+validationKey: {
+success: &#39;success&#39;,
+error: &#39;error&#39;
+},
+resultKey: &#39;validationKey&#39;
+}
+})
+//result
+/*
+{
+error:&#39;Already Exists.&#39;
+}
+*/
+
+
+ 回调函数
+ssi-uploader文件生成插件支持4种回调函数：beforeUpload、beforeEachUpload、onUpload和onEachUpload。
+
+ beforeUpload
+beforeUpload回调函数在文件上传前执行的回调函数。
+
+$(&#39;input&#39;).ssi\_uploader({url:&#39;uploadAction.php&#39;,beforeUpload:function(){
+ console.log(&#39;文件上传准备就绪！&#39;);
+}})
+$(&#39;input&#39;).on(&#39;beforeUpload.ssi-uploader&#39;,function(){console.log(&#39;一个文件准备上传。&#39;)});
+
+
+ beforeEachUpload
+beforeEachUpload回调函数在每一个单独的文件上传前执行的回调函数。该函数访问每个文件的信息和xhr对象。如果终止了某个文件，你可以设置一个字符串，提示取消的原因，并显示的错误信息中。
+
+$(&#39;input&#39;).ssi\_uploader({url:&#39;uploadAction.php&#39;,beforeEachUpload:function(fileInfo,xhr){
+ console.log(fileInfo.name+&#39; &#39;+fileInfo.type+&#39; &#39;+fileInfo.size);
+ if(fileInfo.size &amp;gt; 1){ xhr.abort(); }
+ return &#39;文件尺寸太大！&#39;;
+}});
+$(&#39;input&#39;).on(&#39;beforeEachUpload.ssi-uploader&#39;,function(){console.log(&#39;A file is going for uploading.&#39;)});
+
+
+ onUpload
+beforeUpload回调函数在文件上传后执行的回调函数。
+
+$(&#39;input&#39;).ssi\_uploader({url:&#39;uploadAction.php&#39;,onUpload:function(){
+ console.log(&#39;文件上传完毕！&#39;);
+}})
+$(&#39;input&#39;).on(&#39;onUpload.ssi-uploader&#39;,function(){console.log(&#39;文件上传完毕！&#39;)});
+
+
+ onEachUpload
+beforeUpload回调函数在每一个单独的文件上传后执行的回调函数。
+
+$(&#39;input&#39;).ssi\_uploader({url:&#39;uploadAction.php&#39;,onEachUpload:function(fileInfo){
+ console.log(fileInfo.uploadStatus+&#39; &#39;fileInfo.name+&#39; &#39;+fileInfo.type+&#39; &#39;+fileInfo.size+&#39; &#39;+fileInfo.uploadStatus);
+}});
+$(&#39;input&#39;).on(&#39;onEachUpload.ssi-uploader&#39;,function(){console.log(&#39;A file uploaded.&#39;)});
+
+ssi-uploader文件上传插件的github地址为：https://github.com/ssbeefeater/ssi-uploader。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_678">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_679">
+                        带炫酷CSS3过渡动画的jQuery模态窗口插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_679" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607251526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带19种炫酷CSS3过渡动画的jQuery模态窗口插件。该插件基于Codrops的ModalWindowEffects来制作，通过jQuery插件的方式来统一管理各种打开模态窗口的效果。
+内容：
+
+
+简要教程
+
+
+这是一款带19种炫酷CSS3过渡动画的jQuery模态窗口插件。该插件基于Codrops的ModalWindowEffects来制作，通过jQuery插件的方式来统一管理各种打开模态窗口的效果。
+
+ 安装
+可以通过bower来安装该模态窗口插件。
+
+bower install foxythemes-niftymodals 
+
+
+ 使用方法
+在页面中引入jquery.niftymodals.css和jquery、jquery.niftymodals.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/jquery.niftymodals.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/js/jquery.niftymodals.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+模态窗口的基本HTML结构如下：
+
+&amp;lt;div class=&#34;md-dialog md-effect-1 md-show&#34; id=&#34;your-modal-id&#34;&amp;gt;
+&amp;lt;div class=&#34;md-content&#34;&amp;gt;
+&amp;lt;!-- your content --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;md-overlay&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过在按钮或超链接上绑定niftyModal()方法来打开模态窗口。
+
+$(&#39;#button-id&#39;).on(&#39;click&#39;,function(){
+$(&#39;#modal-id&#39;).niftyModal();
+}); 
+
+
+ 配置参数
+在对模态窗口初始化时，可以以对象的方式传入一些配置参数：
+
+$(&#39;#modal-id&#39;).niftyModal({
+overlaySelector: &#39;.md-overlay&#39;,//模态窗口遮罩层的class类
+closeSelector: &#39;.md-close&#39;,//模态窗口关闭按钮元素的class类
+classAddAfterOpen: &#39;md-show&#39;,//Body control class
+//This object will be available in the modal events
+data: {
+some\_data: &#39;&#39;
+},
+//This option allow to attach a callback to a button with the class &#39;md-close&#39;
+buttons: [
+{
+class: &#39;btn-ok&#39;,
+callback: function ( btn, modal, event ) {
+//You can cancel the modal hide event by returning false
+alert(&#34;You need to check your info!&#34;);
+return false;
+}
+},
+{
+class: &#39;btn-cancel&#39;,
+callback: function ( btn, modal, event ) {
+//You can access to the mocal data here
+var modal\_data = modal.data.some\_data;
+}
+}
+],
+beforeOpen: function( modal ){
+//You can cancel the modal show event by returning false
+},
+afterOpen: function( modal ){
+//Executed after show event
+},
+beforeClose: function( modal ){
+//You can cancel the hide event by returning false
+},
+afterClose: function( modal ){
+//Executed after hide event
+}
+});
+
+或者你可以通过下面的方法来设置默认的配置参数：
+
+$.fn.niftyModal(&#39;setDefaults&#39;,{
+overlaySelector: &#39;.modal-overlay&#39;,
+closeSelector: &#39;.modal-close&#39;,
+classAddAfterOpen: &#39;modal-show&#39;,
+});
+
+
+ 与Bootstrap结合使用
+该插件可以和Bootstrap结合使用，你只需要引入jquery.niftymodals.bootstrap.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;[your path]/dist/jquery.niftymodals.bootstrap.css&#34;&amp;gt;
+
+这个css样式表包含了对原生Bootstrap模态窗口组件的一些重写样式，例如：modal-header、modal-content和modal-footer等。
+jquery-niftymodals模态窗口插件的github地址为：https://github.com/foxythemes/jquery-niftymodals。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_679">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_68">
+                        带图标的jQuery自定义下拉框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_68" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808251455.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带图标的jQuery自定义下拉框插件。该jquery插件可以动js代码中动态渲染下拉框的选项，生成带图标的下拉框选项，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一款带图标的jQuery自定义下拉框插件。该jquery插件可以动js代码中动态渲染下拉框的选项，生成带图标的下拉框选项，非常实用。
+
+ 使用方法
+在页面中引入customSelect.jquery.css、jquery和customSelect.jquery.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;customSelect.jquery.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/customSelect.jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+实用&amp;lt;input&amp;gt;元素来作为下拉框的容器。
+
+&amp;lt;input type=&#34;hidden&#34; id=&#34;countrySelecter&#34; value=&#34;&#34;&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加完毕之后，通过下面的方法来初始化插件。
+
+var myOptions = [
+[&#39;ct&#39;, &#39;ct.png&#39;, &#39;Catalonia&#39;],
+[&#39;es&#39;, &#39;es.png&#39;, &#39;Spain&#39;],
+[&#39;gb&#39;, &#39;gb.png&#39;, &#39;Great Britain&#39;],
+[&#39;de&#39;, &#39;de.png&#39;, &#39;Germany&#39;],
+[&#39;it&#39;, &#39;it.png&#39;, &#39;Italy&#39;],
+[&#39;fi&#39;, &#39;fi.png&#39;, &#39;Finland&#39;],
+[&#39;fr&#39;, &#39;fr.png&#39;, &#39;France&#39;]
+],
+var myTemplate = &amp;quot;&amp;lt;div class=&#39;jqcs_option&#39; data-select-value=&#39;$0&#39; style=&#39;background-image:url(example_icons/$1);&#39;&amp;gt;$2&amp;lt;/div&amp;gt;&amp;quot;
+
+
+ 配置参数
+该jQuery自定义下拉框插件的可用配置参数有：
+
+$.customSelect({
+identifier: &#39;demo&#39;,
+selector: &#39;#countrySelect&#39;,
+placeholder: &#39;Select your country&#39;,
+options: myOptions,
+template: myTemplate
+});
+
+ 该jQuery自定义下拉框插件的github地址为：https://github.com/BanNsS1/jquery.customSelect
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_68">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_680">
+                        可伸展的jQuery侧边栏固定浮动菜单
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_680" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607171559.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-dice-menu是一款非常实用的jQuery侧边栏固定浮动菜单。该浮动菜单开始时只显示一个按钮，点击按钮时可以垂直展开所有的菜单项。该浮动菜单可以制作站内锚链接，也可以链接到外网，非常实用。
+内容：
+
+
+简要教程
+
+
+jquery-dice-menu是一款非常实用的jQuery侧边栏固定浮动菜单。该浮动菜单开始时只显示一个按钮，点击按钮时可以垂直展开所有的菜单项。该浮动菜单可以制作站内锚链接，也可以链接到外网，非常实用。
+
+ 使用方法
+在页面中引入jquery和dice-menu.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/dice-menu.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该浮动菜单以无序列表作为HTML结构。在列表项中放置&amp;lt;a&amp;gt;元素，如果要指定页面锚链接，超链接的href属性设置为指定的ID即可。
+
+&amp;lt;ul class=&#34;dice-menu&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-circle-o-notch&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-comment-o&#34; href=&#34;#para2&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-envelope&#34; href=&#34;#para3&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-qq&#34; href=&#34;#&#34; target=&#34;\_blank&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-weibo&#34; href=&#34;#&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-weixin&#34; href=&#34;#&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span class=&#34;fa fa-paw&#34; href=&#34;#&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span href=&#34;#&#34;&amp;gt;12&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;span href=&#34;#&#34;&amp;gt;34&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ CSS样式
+为该浮动菜单添加下面的简单的CSS样式，你也么一自定义它的样式。
+
+.dice-menu {
+padding: 0;
+display: block;
+position: fixed;
+top: 25\%;
+right: 0;
+}
+.dice-menu li {
+display: block;
+border-width: 0;
+padding: 15px;
+overflow: hidden;
+background-color: #e84c3d;
+color: #fff;
+opacity: 0;
+cursor: pointer;
+}
+.dice-menu li:first-child {
+opacity: .8;
+}
+
+jquery-dice-menu浮动菜单的github地址为：https://github.com/ssmak/jquery-dice-menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_680">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_681">
+                        基于JSON数据的简单jQuery幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_681" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608091600.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-slider是一款基于JSON格式数据的jQuery幻灯片插件。该幻灯片通过JSON数据来提供图片地址和描述信息等，你可以通过更换JSON数据来动态切换不同的图片。
+内容：
+
+
+简要教程
+
+
+jquery-slider是一款基于JSON格式数据的jQuery幻灯片插件。该幻灯片通过JSON数据来提供图片地址和描述信息等，你可以通过更换JSON数据来动态切换不同的图片。
+
+ 使用方法
+在页面中引入jquery和slider.js文件和font-awesome字体图标文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css&#39;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/slider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;作为幻灯片的容器，里面放置作为前后导航按钮的&amp;lt;button&amp;gt;元素。
+
+&amp;lt;div class=&#34;slider&#34; id=&#34;slider&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;button button-prev&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-chevron-left&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;button button-next&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-chevron-right&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为幻灯片设置下面的CSS样式。
+
+.slider {
+width: 100\%;
+overflow: hidden;
+height: 500px;
+position: relative;
+}
+.sliderList {
+position: absolute;
+top: 0;
+width: 300\%;
+height: 100\%;
+list-style: none;
+}
+.sliderList li {
+position: absolute;
+top: 0;
+bottom: 0;
+overflow: hidden;
+width: 33.333333\%;
+height: 100\%;
+padding: 0;
+margin: 0;
+}
+.sliderList li img {
+width: 100\%;
+min-height: 100\%;
+border: none;
+}
+.bulletList {
+position: absolute;
+bottom: 15px;
+width: 100\%;
+margin: 0 auto;
+list-style: none;
+}
+.bulletList li {
+display: inline-block;
+width: 12px;
+height: 12px;
+margin: 0 5px;
+-webkit-border-radius: 50\%;
+-moz-border-radius: 50\%;
+-ms-border-radius: 50\%;
+border-radius: 50\%;
+background-color: #fff;
+cursor: pointer;
+}
+.bulletList .bulletActive { background-color: #0b0d18; }
+.content {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.3);
+font-size: 48px;
+color: #fff;
+}
+.button {
+position: absolute;
+bottom: 15px;
+z-index: 2;
+display: block;
+width: 40px;
+height: 40px;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: none;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+background-color: rgba(5, 0, 36, 0.6);
+color: #fff;
+}
+.button-prev { left: 15px; }
+.button-next { right: 15px; }
+
+
+ JSON数据
+该幻灯片的图片和图片描述信息有JSON数据来提供，格式如下：
+
+sliderJSON = [
+{
+&#34;imagePath&#34;: &#34;1.jpg&#34;,
+&#34;order&#34;: &#34;2&#34;,
+&#34;url&#34;: &#34;#&#34;,
+&#34;slideText&#34;: &#34;图片描述&#34;
+},
+{
+&#34;imagePath&#34;: &#34;2.jpg&#34;,
+&#34;order&#34;: &#34;3&#34;,
+&#34;url&#34;: &#34;#&#34;,
+&#34;slideText&#34;: &#34;图片描述&#34;
+}, 
+{
+&#34;imagePath&#34;: &#34;3.jpg&#34;,
+&#34;order&#34;: &#34;1&#34;,
+&#34;url&#34;: &#34;#&#34;,
+&#34;slideText&#34;: &#34;图片描述&#34;
+},
+{
+&#34;imagePath&#34;: &#34;4.jpg&#34;,
+&#34;order&#34;: &#34;4&#34;,
+&#34;url&#34;: &#34;#&#34;,
+&#34;slideText&#34;: &#34;图片描述&#34;
+}
+
+jquery-slider幻灯片插件的github地址为：https://github.com/eryasov/jquery-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_681">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_682">
+                        简单实用的Bootstrap右键上下文菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_682" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607311503.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-contextify是一款基于Bootstrap的jQuery右键上下文菜单插件。该右键菜单使用Bootstrap的下拉菜单组件来制作，通过简单的配置即可在指定元素上生成右键菜单。
+内容：
+
+
+简要教程
+
+
+jquery-contextify是一款基于Bootstrap的jQuery右键上下文菜单插件。该右键菜单使用Bootstrap的下拉菜单组件来制作，通过简单的配置即可在指定元素上生成右键菜单。 
+
+ 安装
+可以通过bower来安装jquery-contextify右键菜单插件。
+
+$ bower install jquery-contextify 
+
+
+ 使用方法
+在页面中引入Bootstrap相关文件，jQuery和jquery.contextify.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;bootstrap/css/bootstrap.min.css&#34;/&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.contextify.min.js.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+以一个超链接为例，右键点击这个超链接可以生成右键菜单。
+
+&amp;lt;a class=&#34;foo&#34; href=&#34;#&#34; data-name=&#34;John&#34;&amp;gt;右键点击这里&amp;lt;/a&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该右键菜单插件。
+
+var options = {items:[
+{header: &#39;Options&#39;},
+{text: &#39;First Link&#39;, href: &#39;#&#39;},
+{text: &#39;Second Link&#39;, onclick: function(e) {
+alert(&#39;Hello &#39; + e.data.name);
+}},
+{divider: true},
+{text: &#39;Stuff&#39;, href: &#39;#&#39;}
+]}
+$(&#39;.foo&#39;).contextify(options); 
+
+
+ 配置参数
+jquery-contextify右键菜单插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+items
+array
+[]
+右键菜单项数组对象
+
+
+action
+string
+contextmenu
+显示右键菜单的条件，可以是：contextmenu，click或mouseover。
+
+
+menuId
+string
+contextify-menu
+右键菜单的ID属性
+
+
+menuClass
+string
+dropdown-menu
+右键菜单的class属性
+
+
+headerClass
+string
+dropdown-header
+右键菜单头部的class属性
+
+
+dividerClass
+string
+divider
+右键菜单分割线的class属性
+
+
+
+
+jquery-contextify右键菜单的github地址为：https://github.com/abeMedia/jquery-contextify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_682">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_683">
+                        可将网页内容导出到Word文档的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_683" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608261523.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery Word Export是一款可以将网页中的文字导出到微软Word文档中的jQuery插件。它通过FileSaver.js文件来在客户端使用HTML5 localStorage来存储文件。
+内容：
+
+
+简要教程
+
+
+jQuery Word Export是一款可以将网页中的文字导出到微软Word文档中的jQuery插件。它通过FileSaver.js文件来在客户端使用HTML5 localStorage来存储文件。
+
+ 使用方法
+该插件依赖于jQuery和FileSaver.js，需要在页面中引入这些文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/FileSaver.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.wordexport.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+ 
+
+ HTML结构
+将你需要导出的内容包裹在一个容器中。
+
+&amp;lt;div id=&#34;export-content&#34;&amp;gt;
+这里是你要导出的内容...
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 导出按钮 --&amp;gt;
+&amp;lt;a class=&#34;btn jquery-word-export&#34; href=&#34;javascript:void(0)&#34;&amp;gt;导出为.doc文档&amp;lt;/a&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过wordExport()方法来初始化该插件。
+
+jQuery(document).ready(function($) {
+$(&#34;a.jquery-word-export&#34;).click(function(event) {
+$(&#34;#pagecontent&#34;).wordExport();
+});
+});
+
+jquery.wordexport.js插件的github地址为：https://github.com/markswindoll/jQuery-Word-Export
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_683">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_684">
+                        基于slick插件的jQuery幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_684" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608191549.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于slick旋转木马插件来制作的jQuery幻灯片特效。该幻灯片特效使用缩放和淡入淡出的过渡动画效果，它支持移动触摸设备，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款基于slick旋转木马插件来制作的jQuery幻灯片特效。该幻灯片特效使用缩放和淡入淡出的过渡动画效果，它支持移动触摸设备，效果非常炫酷。
+slick是一款支持移动设备的旋转木马插件。slick功能强大，它提供众多的参数，使你能够轻松的制作出各种旋转木马和幻灯片特效。
+
+ 使用方法
+在页面中引入slick插件的相关文件。
+
+&amp;lt;link rel=&#39;stylesheet prefetch&#39; href=&#39;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css&#39;&amp;gt;
+&amp;lt;link rel=&#39;stylesheet prefetch&#39; href=&#39;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css&#39;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该幻灯片的HTML结构如下：
+
+&amp;lt;div class=&#34;slideshow&#34;&amp;gt;
+&amp;lt;div class=&#34;slider&#34;&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;img src=&#34;1.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;img src=&#34;2.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;img src=&#34;3.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;img src=&#34;4.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+为幻灯片添加下面的必要CSS样式：幻灯片的过渡动画使用自定义的贝兹曲线函数。另外图片默认被放大1.2倍，当前激活的图片会被添加.slick-active class，此时图片被缩放会原来的大小。
+
+.slideshow {
+position: relative;
+z-index: 1;
+height: 100\%;
+max-width: 700px;
+margin: 50px auto;
+}
+.slideshow * {
+outline: none;
+}
+.slideshow .slider {
+box-shadow: 0 20px 50px -25px black;
+}
+.slideshow .slider-track {
+-webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.slideshow .item {
+height: 100\%;
+position: relative;
+z-index: 1;
+}
+.slideshow .item img {
+width: 100\%;
+-webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+.slideshow .item.slick-active img {
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化slick插件。
+
+$(&#39;.slider&#39;).slick({
+autoplay:true,
+autoplaySpeed:3000,
+draggable: true,
+arrows: false,
+dots: true,
+fade: true,
+speed: 900,
+infinite: true,
+cssEase: &#39;cubic-bezier(0.7, 0, 0.3, 1)&#39;,
+touchThreshold: 100
+})
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_684">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_685">
+                        中国风古典云纹返回顶部jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_685" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609081459.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的中国风古典云纹返回顶部jQuery插件。该返回顶部插件使用中国古典云纹元素，通过jquery和GSAP，以及CSS3来制作返回顶部特效。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的中国风古典云纹返回顶部jQuery插件。该返回顶部插件使用中国古典云纹元素，通过jquery和GSAP，以及CSS3来制作返回顶部特效。
+古典云纹返回顶部插件由清萍工作室提供。插件中的素材是在网上找的云纹边框素材，然后再找的流苏，用Adobe Photoshop合成后，再用Adobe After Effects做飘动动画，最后导出为png，用css帧动画运用在网页中。该动画的CSS悬停用的是CSS滤镜变色。
+
+ 使用方法
+在页面中引入jquery、TweenMax.min.js和ScrollToPlugin.min.js文件。
+
+&amp;lt;script src=&#34;dist/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/js/TweenMax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/js/ScrollToPlugin.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+古典云纹返回顶部的HTML结构如下：
+
+&amp;lt;div id=&#34;shangxia&#34;&amp;gt;
+&amp;lt;div id=&#34;shang&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- 
+如果你是博客，这里需要加php判断。
+是首页则跳转到留言板，是内页则跳转到评论框。 
+--&amp;gt;
+&amp;lt;div id=&#34;comt&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;xia&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+为返回顶部特效添加下面的CSS样式：
+
+/* --------- 返回顶部代码 --------- */
+#shangxia {
+position: fixed;
+right: 50\%;
+margin-right: -670px;
+top: 63\%;
+z-index: 9993;
+-webkit-animation: dh\_ffdb 2s steps(24) infinite;
+-o-animation: dh\_ffdb 2s steps(24) infinite;
+animation: dh\_ffdb 2s steps(24) infinite;
+background: url(img/gotop.png) no-repeat;
+width: 54px;
+height: 300px;
+transition: 1s;
+}
+/* 悬停变为青绿色滤镜动画 */
+#shangxia:hover {
+-webkit-filter: hue-rotate(-227deg);
+filter: hue-rotate(-227deg);
+}
+#shang, #comt, #xia {
+width: 33px;
+position:absolute;
+z-index: 9996;
+cursor: pointer;
+}
+/* png序列的关键帧动画 */
+@keyframes dh_ffdb{
+100% {background-position:-1296px 0;}
+}
+#comt {
+height: 33px;
+top: 71px;
+left: 10px;
+}
+#shang {
+height: 32px;
+top: 37px;
+left: 10px;
+}
+#xia {
+height: 33px;
+top: 106px;
+left: 10px;
+}
+/* 返回顶部代码完 */
+
+
+ 初始化插件
+该返回顶部插件可以实现返回页面的上中下部分的三个功能。具体效果请查看演示页面。返回页面顶部的实现代码如下：
+
+// 返回顶部js
+jQuery(document).ready(function(a) {
+$body = window.opera ? document.compatMode == &#34;CSS1Compat&#34; ? a(&#34;html&#34;) :a(&#34;body&#34;) :a(&#34;html,body&#34;);
+a(&#34;#shang&#34;).mouseover(function() {
+up();
+}).mouseout(function() {
+clearTimeout(fq);
+}).click(function() {
+TweenMax.to(window, 1.5, {
+scrollTo:0,
+ease:Expo.easeInOut,
+y:0
+});
+});
+
+滚动到页面底部的实现代码如下：
+
+/*
+*点击返回顶部的“下”字时，以1秒是速度滚动到id为#footerbar处。
+* window, 1 为1秒，这里可以随意设置。
+* ease:Expo.easeInOut为速度的曲线缓动，这里支持jquery的ease函数。
+*/
+a(&#34;#xia&#34;).mouseover(function() {
+dn();
+}).mouseout(function() {
+clearTimeout(fq);
+}).click(function() {
+TweenMax.to(window, 1, {
+scrollTo:&#34;#footerbar&#34;,
+ease:Expo.easeInOut
+});
+});
+
+返回到页面中间的实现代码如下：
+
+/*
+*绑定返回顶部的“评”字的id&#34;#comt&#34;，以1.5秒的速度滚动到“#pinglun”评论区域。这里可以绑定多个id。
+* window, 1.5 为1.5秒，这里可以随意设置。
+* offsetY:30 为30像素的偏移量。
+*/
+$(&#34;#comt&#34;).click(function() {
+TweenMax.to(window, 1.5, {
+scrollTo:{
+y:&#34;#pinglun&#34;,
+offsetY:30
+},
+ease:Back.easeOut.config(1.9),
+y:0
+});
+});
+});
+
+代码中使用的两个函数up()和dn()代码如下：
+
+// 下面的 &#34;up()&#34;, 20是鼠标悬停时的位移速度，如需更慢，则设置为40或更高。
+function up() {
+$wd = $(window);
+$wd.scrollTop($wd.scrollTop() - 1);
+fq = setTimeout(&#34;up()&#34;, 20);
+}
+function dn() {
+$wd = (window);(window);
+(window);wd.scrollTop($wd.scrollTop() + 1);
+fq = setTimeout(&amp;quot;dn()&amp;quot;, 20);
+}
+
+中国风古典云纹返回顶部jQuery插件由清萍工作室提供，官方演示地址为：www.emlog.vip。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_685">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/124/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/126/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery制作DOM元素倾斜特效插件Skew.js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery制作DOM元素倾斜特效插件Skew.js
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1808/201808111421.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1808/201808111421.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201808115273.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Skew.js是一款能够制作DOM元素倾斜特效的jQuery插件。你可以控制元素在x和y轴上多少像素进行倾斜，还能够控制在屏幕尺寸改变时，更新元素的倾斜效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Skew.js是一款能够制作DOM元素倾斜特效的jQuery插件。你可以控制元素在x和y轴上多少像素进行倾斜，还能够控制在屏幕尺寸改变时，更新元素的倾斜效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入skew.min.js文件，jQuery不是必须的，如果比想将它作为jQuery插件来使用，就引入jQuery。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="skew.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>作为jQuery插件来使用：</p>
+<pre class="brush:js">
+$(function() {
+$('selector').skew({x: 50});
+});
+</pre>
+<p>作为js插件来使用：</p>
+<pre class="brush:js">
+window.onload = function() {
+var Skew = new Skew('selector', {x: 50});
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 插件调用语法</h5>
+<p>JavaScript</p>
+<pre class="brush:js">
+var skewObj = new Skew('selector', {option: value});
+//example
+var skewObj = new Skew('.skew', {x: 50, y: 100, breakpoints: [{break: 768, x: 30}]});
+<p>skewObject.method(argument);<br>
+//example<br>
+skewObj.update({x: 30, breakpoints: [{break: 768, x: 15}]});<br>
+</pre></p>
+<p>jQuery</p>
+<pre class="brush:js">
+$('selector').skew({option: value});
+//example
+$('.skew').skew({x: 50, y: 100, breakpoints: [{break: 768, x: 30}]});
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>s</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>o</mi><msup><mi>r</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mi mathvariant="normal">.</mi><mi>s</mi><mi>k</mi><mi>e</mi><mi>w</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>m</mi><mi>e</mi><mi>t</mi><mi>h</mi><mi>o</mi><msup><mi>d</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>e</mi><mi>x</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">(&#x27;selector&#x27;).skew(&#x27;method&#x27;, argument);
+//example
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span></span></span></span>('.skew').skew('update', {x: 30, breakpoints: [{break: 768, x: 15}]});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>int</td>
+<td>0</td>
+<td>元素在x轴多少像素进行倾斜</td>
+</tr>
+<tr>
+<td>y</td>
+<td>int</td>
+<td>0</td>
+<td>元素在y轴多少像素进行倾斜</td>
+</tr>
+<tr>
+<td>unskewContent</td>
+<td>bool/string</td>
+<td>false</td>
+<td>元素中不想进行倾斜的元素</td>
+</tr>
+<tr>
+<td>breakpoints</td>
+<td>array</td>
+<td>[]</td>
+<td>屏幕分辨率断点对象。</td>
+</tr>
+<tr>
+<td>debounce</td>
+<td>boolean</td>
+<td>true</td>
+<td>在屏幕尺寸改变时消除抖动</td>
+</tr>
+<tr>
+<td>debounceTime</td>
+<td>int</td>
+<td>50</td>
+<td>消抖的时间，单位毫秒</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><i class="fa fa-github"></i> 该jQuery制作DOM元素倾斜特效插件的github地址为：<a href="https://github.com/wiserim/Skew" target="\_blank">https://github.com/wiserim/Skew</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1808/201808111421.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201808115273.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_274">
+                                <h3 class="post-title">
+                                    Bootstrap 4 仿Mac Growl样式toast消息框插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1904 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_768">
+                        简单实用的jQuery计时器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_768" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606161722.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+timer.jquery是一款简单实用的jQuery计时器插件。该插件可以任何HTML元素中插入计时器，并对计时器进行开始，暂停，恢复和移除操作。
+内容：
+
+
+简要教程
+
+
+timer.jquery是一款简单实用的jQuery计时器插件。该插件可以任何HTML元素中插入计时器，并对计时器进行开始，暂停，恢复和移除操作。该计时器插件的特点还有： 
+
+轻量级插件。
+可对计时器进行开始，暂停，恢复和移除操作。
+完成计时后可执行相应的回调函数。
+在计时器运行时可以点击和编辑。
+同一个页面中可以有多个计时器实例。
+
+
+ 安装
+可以通过bower来安装该定时器插件。
+
+bower install timer.jquery
+
+
+ 使用方法
+使用时需要引入jquery和timer.jquery.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/timer.jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+可以使用任何元素作为计时器的容器：
+
+&amp;lt;div id=&#34;example&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过timer()方法来初始化该定时器插件。
+
+//start a timer
+$(&#34;#div-id&#34;).timer();
+
+
+ 配置参数
+该定时器插件可用的配置参数如下：
+
+$(&#34;#div-id&#34;).timer({
+seconds:{Int},// The number of seconds to start the timer from
+duration: {String}, // The time to countdown from. `seconds` and `duration` are mutually exclusive
+callback: {Function}, // If duration is set, this function is called after `duration` has elapsed
+repeat: {Bool}, // If duration is set, `callback` will be called repeatedly
+format: {String}, // Format to show time in
+countdown: {Bool}
+});
+
+
+
+seconds：定时器开始的秒数。
+
+duration：定时器的定时时间。
+
+callback：定时结束后的回调函数。
+
+repeat：如果设置了duration参数，回调函数将被重复调用。
+
+format：显示的时间格式。
+
+countdown：是否作为倒计时器来使用。
+
+
+ 方法
+暂停定时器：
+
+$(&#34;#div-id&#34;).timer(&#39;pause&#39;);
+
+恢复被暂停的定时器：
+
+$(&#34;#div-id&#34;).timer(&#39;resume&#39;);
+
+移除指定的定时器：
+
+$(&#34;#div-id&#34;).timer(&#39;remove&#39;);
+
+获取已经过的时间：
+
+$(&#34;#div-id&#34;).data(&#39;seconds&#39;);
+
+
+ 事件
+开始一个定时器，并在指定的时间之后执行回调函数：
+
+// 5分30秒之后执行回调函数
+$(&#39;#div-id&#39;).timer({
+duration: &#39;5m30s&#39;,
+callback: function() {
+alert(&#39;计时时间到！&#39;);
+}
+});
+
+在指定的时间间隔内重复执行回调函数：
+
+// 每隔2分钟执行一次回调函数
+$(&#39;#div-id&#39;).timer({
+duration: &#39;2m&#39;,
+callback: function() {
+console.log(&#39;Why, Hello there&#39;);//you could have a ajax call here instead
+},
+repeat: true //repeatedly calls the callback you specify
+});
+
+在指定的时间之后重置定时器，重新开始计时：
+
+// 2分钟之后重置定时器，并重新开始计时
+$(&#39;#div-id&#39;).timer({
+duration: &#39;2m&#39;,
+callback: function() {
+$(&#39;#div-id&#39;).timer(&#39;reset&#39;);
+},
+repeat: true //repeatedly calls the callback you specify
+}); 
+
+
+ 计时器状态
+你可以通过计时器data()对象的state属性来获取计时器的当前状态。
+
+$(&#39;#div-id&#39;).data(&#39;state&#39;); // running | paused | stopped
+
+
+ 计时时间语法
+计时时间h代表小时，m代表分钟，s代表秒。
+
+&#39;3h15m&#39; // 3 hours, 15 minutes
+&#39;15m&#39; // 15 minutes
+&#39;30s&#39; // 30 seconds
+&#39;2m30s&#39; // 2 minutes 30 seconds
+&#39;2h15m30s&#39;// 2 hours 15 minutes and 30 seconds
+
+默认情况下，计时器会以最大的单位作为单位来显示，例如：
+
+seconds: 50 将显示为 50 sec
+seconds: 63 将显示为 1:03 min
+seconds: 3663 将显示为 1:01:03 
+
+如果你项自定义显示的时间格式，可以使用下表的格式：
+
+
+
+
+格式
+描述
+示例
+
+
+
+
+\%h
+不带前缀0的小时格式
+\%h hours gives 3 hours
+
+
+\%m
+除非数值大于60，否则显示不带前缀0的分钟
+\%h:\%m minutes gives 0:6 minutes or 1:06 minutes
+
+
+\%g
+以分钟来表示时间
+\%g minutes gives 75 minutes or 6 minutes
+
+
+\%s
+除非数值大于60，否则显示不带前缀0的秒数
+\%h:\%m:\%s gives 0:0:6 or 0:1:06 or 1:01:06
+
+
+\%t
+以秒数来表示时间
+\%t gives 3660 or &#39;9
+
+
+\%H
+带前缀0的小时格式
+\%H hours gives 03 hours
+
+
+\%M
+带前缀0的分钟
+\%H:\%M minutes gives 00:06 minutes
+
+
+\%G
+前导带0的以分钟来表示时间
+\%G minutes gives 75 minutes
+
+
+\%S
+带前缀0的秒数
+\%H:\%M:\%S gives 00:00:06
+
+
+\%T
+前导带0的以秒数来表示时间
+\%T gives 3660
+
+
+
+
+timer.jquery计时器插件的github地址为：https://github.com/walmik/timer.jquery。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_768">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_769">
+                        aos.js-超赞页面滚动元素动画jQuery动画库
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_769" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606091536.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+aos.js是一款效果超赞的页面滚动元素动画jQuery动画库插件。该动画库可以在页面滚动时提供28种不同的元素动画效果，以及多种easing效果。在页面往回滚动时，元素会恢复到原来的状态。
+内容：
+
+
+简要教程
+
+
+aos.js是一款效果超赞的页面滚动元素动画jQuery动画库插件。该动画库可以在页面滚动时提供28种不同的元素动画效果，以及多种easing效果。在页面往回滚动时，元素会恢复到原来的状态。
+
+ 安装
+可以通过bower来安装aos动画库插件。
+
+bower install aos --save
+
+
+ 使用方法
+在页面中引入aos.css文件,jquery和aos.js文件
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/aos.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/aos.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+要使用aos动画库，你需要做的就是在需要动画的元素上添加aos属性，例如：
+
+&amp;lt;div aos=&#34;animation\_name&#34;&amp;gt;
+
+aos脚本将会在页面滚动时，在该元素上触发相应的动画。
+在元素上还可以添加以下一些属性：
+
+
+
+
+属性
+描述
+示例值
+默认值
+
+
+
+
+aos-offset
+是立刻触发动画还是在指定时间之后触发动画
+200
+120
+
+
+aos-duration
+动画持续时间
+600
+400
+
+
+aos-easing
+动画的easing动画效果
+ease-in-sine
+ease
+
+
+aos-delay
+动画的延迟时间
+300
+0
+
+
+aos-anchor
+锚元素。使用它的偏移来取代实际元素的偏移来触发动画
+#selector
+null
+
+
+aos-anchor-placement
+锚位置，触发动画时元素位于屏幕的位置
+top-center
+top-bottom
+
+
+aos-once
+动画是否只会触发一次，或者每次上下滚动都会触发
+true
+false
+
+
+
+
+注意，aos-duration的动画持续时间的范围从50-3000毫秒，如果你想设置更大的值，可以在页面中添加下面的CSS代码：
+
+body[aos-duration=&#39;4000&#39;] [aos], [aos][aos][aos-duration=&#39;4000&#39;]{
+transition-duration: 4000ms;
+}
+
+上面的代码将动画的持续时间修改为4000毫秒。
+示例代码：
+
+&amp;lt;div aos=&#34;fade-zoom-in&#34; aos-offset=&#34;200&#34; aos-easing=&#34;ease-in-sine&#34; aos-duration=&#34;600&#34;&amp;gt;
+&amp;lt;div aos=&#34;flip-left&#34; aos-delay=&#34;100&#34; aos-anchor=&#34;.example-selector&#34;&amp;gt;
+&amp;lt;div aos=&#34;fade-up&#34; aos-anchor-placement=&#34;top-center&#34;&amp;gt;
+
+如果你担心HTML5校验的问题，可以为上面的属性添加data-前缀。
+
+&amp;lt;div data-aos=&#34;animation\_name&#34; data-aos-offset=&#34;200&#34; data-aos-easing=&#34;ease-in-sine&#34;&amp;gt;
+
+
+ 全局配置
+如果你不想单独每个元素做一个动画配置，你可以通过init()方法来统一配置所有元素的动画效果。
+
+AOS.init({
+offset: 200,
+duration: 600,
+easing: &#39;ease-in-sine&#39;,
+delay: 100,
+});
+
+
+ 额外配置
+AOS提供了2个额外的配置方法，这些方法只能够在初始化时使用。
+
+
+
+
+配置
+描述
+示例值
+默认值
+
+
+
+
+disable
+AOS被禁用的条件
+mobile
+false
+
+
+startEvent
+AOS被初始化的事件名称
+exampleEvent
+DOMContentLoaded
+
+
+
+
+禁用AOS：
+如果你项在小屏幕设备中禁用AOS，可以：
+
+AOS.init({
+disable: &#39;mobile&#39;
+});
+
+你可以传入3种设备的类型：mobile、phone或tablet。
+你也可以设置自己的禁用条件，例如在屏幕小于1024像素时禁用AOS：
+
+disable: window.innerWidth &amp;lt; 1024
+
+或者传入一个函数，返回true或false。
+
+disable: function () {
+var maxWidth = 1024;
+return window.innerWidth &amp;lt; maxWidth;
+} 
+
+开始动画的事件：
+如果你不想滚动动画从页面加载（DOMContentLoaded）后就开始执行，可以使用startEvent来设置自己的事件，AOS会在document上监听这个事件：
+
+AOS.init({
+startEvent: &#39;someCoolEvent&#39;
+});
+
+
+ API
+AOS对象有2个可用的方法：
+
+init
+refresh
+
+
+AOS.refresh();
+
+上面的代码会重新计算元素的位置和偏移。
+
+ 动画和锚位置
+
+ 动画
+淡入淡出动画：
+
+fade-up
+fade-down
+fade-left
+fade-right
+fade-up-right
+fade-up-left
+fade-down-right
+fade-down-left
+
+翻转动画：
+
+flip-up
+flip-down
+flip-left
+flip-right
+
+滑动动画：
+
+slide-up
+slide-down
+slide-left
+slide-right
+
+缩放动画：
+
+zoom-in
+zoom-in-up
+zoom-in-down
+zoom-in-left
+zoom-in-right
+zoom-out
+zoom-out-up
+zoom-out-down
+zoom-out-left
+zoom-out-right
+
+
+ 锚位置
+
+top-bottom
+top-center
+top-top
+center-bottom
+center-center
+center-top
+bottom-bottom
+bottom-center
+bottom-top
+
+
+ easing动画
+你可以使用以下的一些easing动画效果：
+
+linear
+ease
+ease-in
+ease-out
+ease-in-out
+ease-in-back
+ease-out-back
+ease-in-out-back
+ease-in-sine
+ease-out-sine
+ease-in-out-sine
+ease-in-quad
+ease-out-quad
+ease-in-out-quad
+ease-in-cubic
+ease-out-cubic
+ease-in-out-cubic
+ease-in-quart
+ease-out-quart
+ease-in-out-quart
+
+aos动画库的github地址为：https://github.com/michalsnik/aos。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_769">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_77">
+                        jQuery和CSS3堆叠式轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_77" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1908/201908286565.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3堆叠式轮播图特效。该轮播图通过css将图片堆叠到一起，然后通过jquery代码来控制在切换时，不断的显示下一张图片。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3堆叠式轮播图特效。该轮播图通过css将图片堆叠到一起，然后通过jquery代码来控制在切换时，不断的显示下一张图片。
+
+ 使用方法
+在头部引入style.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;./css/style.css&#34;&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;card-stack&#34;&amp;gt;
+&amp;lt;a class=&#34;buttons prev&#34; href=&#34;#&#34;&amp;gt;&amp;lt;&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;card-list&#34;&amp;gt;
+&amp;lt;li class=&#34;card&#34; style=&#34;background: #c31432;/* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+&#34;&amp;gt;
+&amp;lt;img src=&#34;https://svgshare.com/i/E90.svg&#34; alt=&#34;Sun&#34; class=&#34;card-list\_\_image&#34;&amp;gt;
+&amp;lt;h3 class=&amp;quot;card-list__text&amp;quot;&amp;gt;Watch your way toward success as you excel above your competitors.&amp;lt;/h3&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;card&amp;quot; style=&amp;quot;background: #00416A;
+background: -webkit-linear-gradient(to right, #FFE000, #799F0C, #00416A);
+background: linear-gradient(to right, #FFE000, #799F0C, #00416A);
+&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://svgshare.com/i/E9H.svg&amp;quot; alt=&amp;quot;Sun&amp;quot; class=&amp;quot;card-list__image&amp;quot;&amp;gt;
+&amp;lt;h3 class=&amp;quot;card-list__text&amp;quot;&amp;gt;Relax and chill, we&#39;ve got you covered :) &amp;lt;/h3&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;card&amp;quot; style=&amp;quot;background: #1e3c72;
+background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);
+background: linear-gradient(to right, #2a5298, #1e3c72);
+&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://svgshare.com/i/E86.svg&amp;quot; alt=&amp;quot;Sun&amp;quot; class=&amp;quot;card-list__image&amp;quot;&amp;gt;
+&amp;lt;h3 class=&amp;quot;card-list__text&amp;quot;&amp;gt;Boost your social networking presence&amp;lt;/h3&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;card&amp;quot; style=&amp;quot;background: #2C3E50;
+background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);
+background: linear-gradient(to right, #FD746C, #2C3E50);
+&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://svgshare.com/i/E8Y.svg&amp;quot; alt=&amp;quot;Sun&amp;quot; class=&amp;quot;card-list__image&amp;quot;&amp;gt;
+&amp;lt;h3 class=&amp;quot;card-list__text&amp;quot;&amp;gt;Be at the top of your competitors&amp;lt;/h3&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;card&amp;quot; style=&amp;quot;background: #373B44;
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+background: linear-gradient(to right, #4286f4, #373B44);
+&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;https://svgshare.com/i/E9z.svg&amp;quot; alt=&amp;quot;Sun&amp;quot; class=&amp;quot;card-list__image&amp;quot;&amp;gt;
+&amp;lt;h3 class=&amp;quot;card-list__text&amp;quot;&amp;gt;Create contents for your online courses&amp;lt;/h3&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;a class=&amp;quot;buttons next&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ javascript
+
+var $card = $(&#39;.card&#39;);
+var lastCard = $(&#34;.card-list .card&#34;).length - 1;
+$(&#39;.next&#39;).click(function(){
+var prependList = function() {
+if( $(&#39;.card&#39;).hasClass(&#39;activeNow&#39;) ) {
+var $slicedCard = (′.card′).slice(lastCard).removeClass(′transformThisactiveNow′);(&amp;#x27;.card&amp;#x27;).slice(lastCard).removeClass(&amp;#x27;transformThis activeNow&amp;#x27;);
+(′.card′).slice(lastCard).removeClass(′transformThisactiveNow′);(&#39;ul&#39;).prepend(slicedCard);
+}
+}
+(&#39;li&#39;).last().removeClass(&#39;transformPrev&#39;).addClass(&#39;transformThis&#39;).prev().addClass(&#39;activeNow&#39;);
+setTimeout(function(){prependList(); }, 150);
+});
+$(&#39;.prev&#39;).click(function() {
+var appendToList = function() {
+if( $(&#39;.card&#39;).hasClass(&#39;activeNow&#39;) ) {
+var $slicedCard = (′.card′).slice(0,1).addClass(′transformPrev′);(&amp;#x27;.card&amp;#x27;).slice(0, 1).addClass(&amp;#x27;transformPrev&amp;#x27;);
+(′.card′).slice(0,1).addClass(′transformPrev′);(&#39;.card-list&#39;).append($slicedCard);
+}}
+$(&#39;li&#39;).removeClass(&#39;transformPrev&#39;).last().addClass(&#39;activeNow&#39;).prevAll().removeClass(&#39;activeNow&#39;);
+setTimeout(function(){appendToList();}, 150);
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_77">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_770">
+                        jQuery动态响应式网格布局插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_770" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604141757.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+brickfolio是一款jQuery动态响应式网格布局插件。通过该插件可以动态生成响应式的网格布局，可以制作8种显示网格卡片的动画效果，可以对网格内容进行过滤，还可以设置不显示无效的图片内容。
+内容：
+
+
+简要教程
+
+
+brickfolio是一款jQuery动态响应式网格布局插件。通过该插件可以动态生成响应式的网格布局，可以制作8种显示网格卡片的动画效果，可以对网格内容进行过滤，还可以设置不显示无效的图片内容。
+
+ 安装
+可以通过bower来安装该网格布局插件。
+
+bower install brickfolio
+
+
+ 使用方法
+使用该网格布局插件需要在页面中引入jquery和jquery.brickfolio.min.js，以及jquery.brickfolio.min.css文件。
+
+&amp;lt;link href=&#34;dist/jquery.brickfolio.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;src/js/jquery.brickfolio.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该网格布局插件的基本HTML结构如下：
+
+&amp;lt;div class=&#34;brickfolio&#34;&amp;gt;
+&amp;lt;div class=&#34;bf-item&#34;&amp;gt;
+&amp;lt;img data-src=&#34;image1.png&#34;&amp;gt;
+&amp;lt;h4&amp;gt;Lorem ipsum dolor sit&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bf-item&#34;&amp;gt;
+&amp;lt;img data-src=&#34;image2.png&#34;&amp;gt;
+&amp;lt;h4&amp;gt;Quare attende, quaeso&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过brickfolio()方法来初始化该插件。
+
+jQuery(function($){
+$(&#39;.brickfolio&#39;).brickfolio();
+});
+
+
+ 配置参数
+brickfolio网格布局插件的可用配置参数有：
+
+
+animation：是否在显示网格卡片时执行动画效果。可用的动画效果有：drop|fade-in|flip|fly|pop-up|scale-up|slide-up|swing-down。
+
+itemSelector：网格项的jQuery选择器。默认为&#39;.bf-item&#39;。
+
+imageSelector：网格中的大图。默认为：&#39;img:first&#39;。
+
+filter：过滤选项的选择器。
+
+gutter：网格之间的间隙。默认为40像素。
+
+responseTime：当浏览器窗口尺寸改变时重新绘制布局的时间。默认为100毫秒。
+
+hideErrors：是否自动隐藏图片加载错误的网格项。默认为false。
+
+classes：各种容器和状态的class类：
+ 
+
+container：&#39;brickfolio&#39;。容器的class类。
+
+loaded：&#39;bf-loaded&#39;。当网格项被加载之后添加到容器的class。
+
+animated：&#39;bf-animated&#39;。添加到容器表示动画可以被执行的class类。
+
+item：&#39;bf-item&#39;。添加到网格项的class类。
+
+error：&#39;bf-error&#39;。有无法加载的图片的网格项的class类。
+
+filtered：&#39;bf-filtered&#39;。添加到过滤项上的class类。
+
+
+
+brickfolio插件的github地址为：https://github.com/fooplugins/brickfolio
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_770">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_771">
+                        basictable.js-jQuery响应式表格插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_771" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603271705.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+basictable.js是一款简单实用的jQuery响应式表格插件。你可以设置breakpoint来定制自己的响应式断点。该表格能适应台式电脑、平板和手机的需求，响应式效果非常好。
+内容：
+
+
+简要教程
+
+
+basictable.js是一款简单实用的jQuery响应式表格插件。你可以设置breakpoint来定制自己的响应式断点。该表格能适应台式电脑、平板和手机的需求，响应式效果非常好。
+
+ 使用方法
+使用该响应式表格插件需要在页面中引入jquery、jquery.basictable.min.js和basictable.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/basictable.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.basictable.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+表格的HTML结构使用标准的表格HTML结构。
+
+&amp;lt;table id=&#34;table&#34;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Gender&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Height&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Province&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Sport&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;Jill Smith&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;25&amp;lt;/td&amp;gt; 
+&amp;lt;td&amp;gt;Female&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;5&#39;4&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;British Columbia&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Volleyball&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+......
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过basictable()方法来初始化该表格。
+
+$(&#39;#table&#39;).basictable(); 
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+breakpoint
+integer
+568
+定义表格进入响应式模式的断点（视口宽度）
+
+
+contentWrap
+boolean
+true
+是否将单元格中的内容包裹进class为.bt-content的&amp;lt;span&amp;gt;元素中
+
+
+forceResponsive
+boolean
+true
+插件会在到达响应式断点时强制表格进入响应式模式。如果该参数设置为false，那么表格即使大于它的直接父元素的宽度时页不会进入响应式模式
+
+
+noResize
+boolean
+false
+是否禁止表格通过JS来修改尺寸。除非使用媒体查询或其它的外部修改尺寸的方法，表格不会进入响应式模式
+
+
+tableWrap
+boolean
+false
+当插件初始化之后，会使用一个带.bt-wrapper class的&amp;lt;div&amp;gt;元素来包裹表格。包裹div会在表格模式改变时切换激活的class
+
+
+showEmptyCells
+boolean
+false
+如果设置为true，那么空的单元格都会被显示
+
+
+
+
+
+ 方法
+
+
+start：使表格进入响应式模式。该方法只有在插件初始化之后才能使用。
+
+$(&#39;table&#39;).basictable(&#39;start&#39;);
+
+
+
+stop：将响应式表格切换会普通模式，移除响应式外观。该方法不会销毁插件的数据和包裹元素。表格在达到响应式断点时任然会正常工作。
+
+$(&#39;table&#39;).basictable(&#39;stop&#39;);
+
+
+
+destroy：销毁响应式表格插件。
+
+$(&#39;table&#39;).basictable(&#39;destroy&#39;);
+
+
+
+basictable.js响应式表格插件的github地址为：https://github.com/jerrylow/basictable
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_771">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_772">
+                        带过滤功能的Material Design风格手风琴列表特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_772" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605021512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带搜索过滤功能的Material Design风格垂直手风琴列表特效。该手风琴特效采用扁平设计风格，点击列表项时带有点击波效果，并且可以通过顶部的搜索框来搜索过滤需要的列表项。
+内容：
+
+
+简要教程
+
+
+这是一款带搜索过滤功能的Material Design风格垂直手风琴列表特效。该手风琴特效采用扁平设计风格，点击列表项时带有点击波效果，并且可以通过顶部的搜索框来搜索过滤需要的列表项。
+
+ 使用方法
+使用该手风琴特效需要在页面中引入jquery-accordion-menu.css文件，jquery和jquery-accordion-menu.js文件，另外特效中使用了font-awesome字体图标，需要引入相应的CSS文件。
+
+&amp;lt;link href=&#34;css/jquery-accordion-menu.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#39;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css&#39;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/jquery-accordion-menu.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该Material Design风格垂直手风琴的基本HTML结构如下：
+
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div id=&#34;jquery-accordion-menu&#34; class=&#34;jquery-accordion-menu red&#34;&amp;gt;
+&amp;lt;div class=&#34;jquery-accordion-menu-header&#34; id=&#34;form&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;ul id=&#34;demo-list&#34;&amp;gt;
+ &amp;lt;li class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-home&#34;&amp;gt;&amp;lt;/i&amp;gt;Home &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-glass&#34;&amp;gt;&amp;lt;/i&amp;gt;Events &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-file-image-o&#34;&amp;gt;&amp;lt;/i&amp;gt;Gallery &amp;lt;/a&amp;gt;
+&amp;lt;span class=&#34;jquery-accordion-menu-label&#34;&amp;gt;12 &amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-cog&#34;&amp;gt;&amp;lt;/i&amp;gt;Services &amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;submenu&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Web Design &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Hosting &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Design &amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;submenu&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Graphics &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Vectors &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Photoshop &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Fonts &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Consulting &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-home&#34;&amp;gt;&amp;lt;/i&amp;gt;System &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-suitcase&#34;&amp;gt;&amp;lt;/i&amp;gt;Portfolio &amp;lt;/a&amp;gt;
+&amp;lt;ul class=&#34;submenu&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Web Design &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Graphics &amp;lt;/a&amp;gt;
+&amp;lt;span class=&#34;jquery-accordion-menu-label&#34;&amp;gt;10 &amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Photoshop &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Programming &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-user&#34;&amp;gt;&amp;lt;/i&amp;gt;About &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-envelope&#34;&amp;gt;&amp;lt;/i&amp;gt;Contact &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div class=&#34;jquery-accordion-menu-footer&#34;&amp;gt;
+Footer
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+在这个手风琴特效中，搜索框是通过jQuery动态的添加到列表的头部的，jquery-accordion-menu.css文件中提供的是手风琴列表的样式，并没有搜索框的样式，可以为搜索框添加以下的以下CSS样式：
+
+.filterinput{
+background-color:rgba(249, 244, 244, 0);
+border-radius:15px;
+width:90\%;
+height:30px;
+border:thin solid #FFF;
+text-indent:0.5em;
+font-weight:bold;
+color:#FFF;
+}
+
+该手风琴特效提供了多种手风琴的颜色主题，有红色，蓝色，绿色，白色和黑色。要使用不同的颜色，只需要修改父容器的class即可，例如要使用绿色的皮肤，可以将父元素的red class修改为green。
+
+&amp;lt;div id=&#34;jquery-accordion-menu&#34; class=&#34;jquery-accordion-menu green&#34;&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+
+
+ JavaScript
+jquery-accordion-menu.js文件用于处理标准的垂直手风琴下拉事件。可以在页面DOM元素加载完毕之后通过jqueryAccordionMenu()方法来初始化手风琴特效。
+
+jQuery(document).ready(function () {
+jQuery(&#34;#jquery-accordion-menu&#34;).jqueryAccordionMenu();
+});
+
+该特效使用jQuery代码来动态为手风琴列表添加一个搜索框，代码如下：
+
+(function($) {
+function filterList(header, list) {
+//@header 头部元素
+//@list 无序列表
+//创建一个搜素表单
+var form = $(&#34;&amp;lt;form&amp;gt;&#34;).attr({
+&#34;class&#34;:&#34;filterform&#34;,
+action:&#34;#&#34;
+}), input = $(&#34;&amp;lt;input&amp;gt;&#34;).attr({
+&#34;class&#34;:&#34;filterinput&#34;,
+type:&#34;text&#34;
+});
+$(form).append(input).appendTo(header);
+$(input).change(function() {
+var filter = $(this).val();
+if (filter) {
+$matches = $(list).find(&#34;a:Contains(&#34; + filter + &#34;)&#34;).parent();
+$(&#34;li&#34;, list).not($matches).slideUp();
+$matches.slideDown();
+} else {
+$(list).find(&#34;li&#34;).slideDown();
+}
+return false;
+}).keyup(function() {
+$(this).change();
+});
+}
+$(function() {
+filterList($(&#34;#form&#34;), $(&#34;#demo-list&#34;));
+});
+})(jQuery);
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_772">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_773">
+                        force-js | 实用的页面滚动和元素动画JavaScript库插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_773" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604051803.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+force.js是一款可以制作各种平滑页面滚动过渡效果和元素动画效果的JavaScript插件。该插件可以和jQuery结合使用，也可以单独通过JS来使用。通过它可以制作出31种动画的平滑过渡效果。
+内容：
+
+
+简要教程
+
+
+force.js是一款可以制作各种平滑页面滚动过渡效果和元素动画效果的JavaScript插件。该插件可以和jQuery结合使用，也可以单独通过JS来使用。通过它可以制作出31种动画的平滑过渡效果。
+
+ 安装
+可以通过bower来安装该插件。
+
+bower install force-js 
+
+
+ 使用方法
+使用该插件需要在页面中引入force.js文件。
+
+&amp;lt;script src=&#34;force.js.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 与jQuery结合使用
+Force.js会自动检测页面是否加载了jQuery，并使jQuery对象继承force.move()和force.jump()函数。你可以像下面这样来移动元素：
+
+$(&#39;#ball&#39;).move({left: 100px, top: 50px}, 1000);
+
+
+ 页面平滑滚动
+如果要自动检测页面中的hash链接，可以调用force.bindHashes()方法：
+
+force.bindHashes();
+
+如果你想手动设置，那么使用force.jump()方法：
+
+var element = document.getElementBy(&#39;element-id&#39;);
+// jump by object
+force.jump(element);
+// jump by selector
+force.jump(&#39;#element-id&#39;);
+
+你也可以使用一额外的配置参数：
+
+force.jump(target);
+var options = {
+setHash: false
+// if set to TRUE, it sets the hash/id value of the element in the URL
+duration: 500,
+done: function() {},
+easing: &#39;easeInQuad&#39;,
+};
+force.jump(target, options);
+
+或者使用jQuery：
+
+$(&#39;#ball&#39;).jump();
+//$(&#39;#ball&#39;).jump(options);
+
+
+ 元素平滑过渡动画
+使用force.move()方法可以制作元素的平滑过渡动画效果。
+
+var element = document.getElementBy(&#39;element-id&#39;);
+// jump by object
+force.move(element, {left: 100px, top: 50px}, 1000);
+// jump by selector
+force.move(&#39;#element-id&#39;, {left: 100px, top: 50px}, 1000);
+
+也可以在调用函数时设置一些配置参数：
+
+force.move(target, properties, duration, doneCallback);
+var options = {
+properties: {
+left: &#39;100px&#39;
+},
+duration: 500,
+done: function() {},
+easing: &#39;easeInQuad&#39;
+};
+force.move(target, options);
+
+或者使用jQuery：
+
+$(&#39;#ball&#39;).move({left: 100px, top: 50px}, 1000);
+// $(&#39;#ball&#39;).move(options, duration, doneCallback);
+
+
+ 配置参数
+在force.js中你可以修改任何你想修改的东西。
+
+// 修改单个选项
+force.opt.cacheScrolling = true;
+// 或者使用配置函数并传入一个对象来覆盖旧的配置
+force.config( { cacheScrolling: true } );
+
+hashLinkPattern: &#39;a[href*=&#34;#&#34;]:not([href=&#34;#&#34;])&#39;
+通过执行force.bindHashes()函数来发现页面中的hash链接的选择器。
+frames: 60
+默认force.js的动画速度为60fps。你可以通过这个参数来自定义动画速度。
+moveDuration: 1000 AND jumpDuration: 1000
+force.move()和force.jump()函数的默认动画持续时间为1000毫秒。你可以在函数中传入duration配置参数来修改动画持续时间。
+moveEasing: &#39;swing&#39; AND jumpEasing: &#39;swing&#39;
+默认的动画easing函数是swing，可用的easing效果有：
+
+swing
+easeInQuad
+easeOutQuad
+easeInOutQuad
+easeInCubic
+easeOutCubic
+easeInOutCubic
+easeInQuart
+easeOutQuart
+easeInOutQuart
+easeInQuint
+easeOutQuint
+easeInOutQuint
+easeInSine
+easeOutSine
+easeInOutSine
+easeInExpo
+easeOutExpo
+easeInOutExpo
+easeInCirc
+easeOutCirc
+easeInOutCirc
+easeInElastic*
+easeOutElastic*
+easeInOutElastic*
+easeInBack*
+easeOutBack*
+easeInOutBack*
+easeInBounce*
+easeOutBounce*
+easeInOutBounce*
+
+带*号的easing效果不CSS动画过渡，只能使用原生的javascript。
+cacheJumps: true
+页面跳转默认会被缓存，这意味着下一场跳转只有在上一次跳转结束后才会有动画效果。设置这个参数为false会离开停止当前的跳转，并开始新的跳转。
+cssTransitions: true
+默认情况下，force.js在浏览器支持的情况下使用CSS动画过渡效果。建议将该选项设置为true，如果浏览器不支持CSS动画过渡，插件会自动转换为JS动画过渡。
+force-js插件的github地址为：https://github.com/gravmatt/force-js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_773">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_774">
+                        3种基于Bootstrap的超酷Tabs选项卡UI设计
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_3">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_774" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605271628.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是3种基于Bootstrap的超酷tabs选项卡UI设计效果。这3款选项卡都是使用原生的Bootstrap网格系统和Tabs组件来制作，通过自定义CSS样式来生成不同的选项卡效果。
+内容：
+
+
+简要教程
+
+
+这是3种基于Bootstrap的超酷tabs选项卡UI设计效果。这3款选项卡都是使用原生的Bootstrap网格系统和Tabs组件来制作，通过自定义CSS样式来生成不同的选项卡效果。
+
+ 使用方法
+
+ HTML结构
+下面是每一种选项卡的HTML结构和它们对应的效果演示图。
+选项卡1：
+
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row text-center&#34;&amp;gt;
+&amp;lt;h1 class=&#34;white&#34;&amp;gt;Tab选项卡-1&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-offset-2 col-md-8 mt30&#34;&amp;gt;
+&amp;lt;div class=&#34;tab&#34; role=&#34;tabpanel&#34;&amp;gt;
+&amp;lt;!-- 选项卡的分页导航 --&amp;gt;
+&amp;lt;ul class=&#34;nav nav-tabs&#34; role=&#34;tablist&#34;&amp;gt;
+&amp;lt;li role=&#34;presentation&#34; class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;#Section1&#34; aria-controls=&#34;home&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section2&#34; aria-controls=&#34;profile&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section3&#34; aria-controls=&#34;messages&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section4&#34; aria-controls=&#34;settings&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- 选项卡Tab内容 --&amp;gt;
+&amp;lt;div class=&#34;tab-content&#34;&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane active&#34; id=&#34;Section1&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 1&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;Section2&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 2&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;Section3&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 3&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;Section4&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Section 4&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+.......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+选项卡2：
+
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row text-center&#34;&amp;gt;
+&amp;lt;h1 class=&#34;white&#34;&amp;gt;Tab选项卡-2&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-offset-3 col-md-6&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;tab&amp;quot; role=&amp;quot;tabpanel&amp;quot;&amp;gt;
+&amp;lt;!-- Nav tabs --&amp;gt;
+&amp;lt;ul class=&amp;quot;nav nav-tabs&amp;quot; role=&amp;quot;tablist&amp;quot;&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot; class=&amp;quot;active&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section1&amp;quot; aria-controls=&amp;quot;home&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-envelope-o&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 1&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section2&amp;quot; aria-controls=&amp;quot;profile&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-cubes&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 2&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section3&amp;quot; aria-controls=&amp;quot;messages&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-comments&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 3&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- Tab panes --&amp;gt;
+&amp;lt;div class=&amp;quot;tab-content&amp;quot;&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade in active&amp;quot; id=&amp;quot;Section1&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section2&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section3&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;...... &amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+选项卡3：
+
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row text-center&#34;&amp;gt;
+&amp;lt;h1 class=&#34;white&#34;&amp;gt;Tab选项卡-3&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;col-md-offset-2 col-md-8&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;tab&amp;quot; role=&amp;quot;tabpanel&amp;quot;&amp;gt;
+&amp;lt;!-- Nav tabs --&amp;gt;
+&amp;lt;ul class=&amp;quot;nav nav-tabs&amp;quot; role=&amp;quot;tablist&amp;quot;&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot; class=&amp;quot;active&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section1&amp;quot; aria-controls=&amp;quot;home&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-envelope-o&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 1&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section2&amp;quot; aria-controls=&amp;quot;profile&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-cube&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 2&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#Section3&amp;quot; aria-controls=&amp;quot;settings&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-comment&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Section 3&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- Tab panes --&amp;gt;
+&amp;lt;div class=&amp;quot;tab-content&amp;quot;&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade in active&amp;quot; id=&amp;quot;Section1&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;Section 1&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section2&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;Section 2&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section3&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;Section 3&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+各种选项卡的CSS样式请参考下载文件。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_774">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_775">
+                        None
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_775" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604231609.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+face-cursor.js是一款可以根据鼠标位置变化的jQuery和CSS3 3D卡片视觉差特效。该特效以卡片的形式对元素进行布局，在页面中移动鼠标时，插件就会根据鼠标的位置对卡片应用transform: rotate3d()进行3D转换。
+内容：
+
+
+简要教程
+
+
+face-cursor.js是一款可以根据鼠标位置变化的jQuery和CSS3 3D卡片视觉差特效。该特效以卡片的形式对元素进行布局，在页面中移动鼠标时，插件就会根据鼠标的位置对卡片应用transform: rotate3d()进行3D转换。
+
+ 安装
+可以通过npm来安装该视觉差特效插件。
+
+npm install face-cursor --save
+
+
+ 使用方法
+使用该视觉差特效需要在页面中引入jquery和face-cursor.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;face-cursor.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素作为容器，里面使用放置需要的内容，可以是图片，也可以是文字。
+
+&amp;lt;div class=&#34;card&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Content&amp;lt;/h2&amp;gt;
+&amp;lt;img src=&#34;img/27.jpg&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;card&#34;&amp;gt;
+&amp;lt;h2&amp;gt;More content&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过faceCursor()方法来初始化该视觉差插件。
+
+$(&#34;.card&#34;).faceCursor({
+// 配置参数
+}); 
+
+
+ 配置参数
+face-cursor.js插件可用的配置参数有：
+
+
+avertCursor：元素是面向鼠标，还是朝向鼠标。
+
+perspective：CSS 3D transform的透视度。
+
+cacheElementData：是否缓存元素的宽度、高度和偏移值，而不是每一帧都去计算。如果元素是来回移动的，或者你希望在浏览器尺寸改变时效果持续不变，设置该参数为false。
+
+
+ 销毁插件
+可以通过下面的方法来销毁指定的插件实例。
+
+$elements.data(&#34;plugin\_faceCursor&#34;).destroy();
+
+或通过下面的方法来销毁所有的实例。
+
+$(&#34;*&#34;).filter(function() {
+return $(this).data(&#34;plugin\_faceCursor&#34;) !== undefined
+}).each(function() {
+$(this).data(&#34;plugin\_faceCursor&#34;).destroy()
+});
+
+face-cursor.js插件的github地址为：https://github.com/matthias-vogt/face-cursor.js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_775">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_776">
+                        超酷多彩jQuery Tabs选项卡插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_776" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606031633.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+colorfulTab是一款简单实用的超酷多彩jQuery Tabs选项卡插件。该选项卡插件提供多种颜色主题，可以制作背景图片动画，甚至可以自定义你自己的颜色主题。非常实用。
+内容：
+
+
+简要教程
+
+
+colorfulTab是一款简单实用的超酷多彩jQuery Tabs选项卡插件。该选项卡插件提供多种颜色主题，可以制作背景图片动画，甚至可以自定义你自己的颜色主题。非常实用。
+
+ 使用方法
+实用该Tabs选项卡插件需要在页面中引入colorfulTab.min.css文件，jquery和colorfulTab.min.js文件。
+
+&amp;lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;css/colorfulTab.min.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/colorfulTab.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该Tabs选项卡的基本HTML结构如下：
+
+&amp;lt;div class=&#34;colorful-tab-wrapper&#34; id=&#34;examplaTab&#34;&amp;gt;
+&amp;lt;!-- Tab Menu --&amp;gt;
+&amp;lt;ul class=&amp;quot;colorful-tab-menu&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;colorful-tab-menu-item active&amp;quot; data-color=&amp;quot;#000&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#tab1&amp;quot;&amp;gt;Tab 1&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;colorful-tab-menu-item&amp;quot; data-color=&amp;quot;#353535&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#tab2&amp;quot;&amp;gt;Tab 2&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;colorful-tab-menu-item&amp;quot; data-color=&amp;quot;#d5d5d5&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#tab3&amp;quot;&amp;gt;Tab 3&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- Tab Content --&amp;gt;
+&amp;lt;div class=&amp;quot;colorful-tab-container&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;colorful-tab-content active&amp;quot; id=&amp;quot;tab1&amp;quot;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;colorful-tab-content&amp;quot; id=&amp;quot;tab2&amp;quot;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;colorful-tab-content&amp;quot; id=&amp;quot;tab3&amp;quot;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过colorfulTab()方法来初始化该选项卡插件。
+
+$(&#34;#examplaTab&#34;).colorfulTab(); 
+
+
+ 配置参数
+
+$(&#34;#examplaTab&#34;).colorfulTab({
+theme:&#34;flatline&#34;,
+backgroundImage:&#34;true&#34;,
+overlayColor: &#34;#002F68&#34;,
+overlayOpacity: &#34;0.8&#34;
+}); 
+
+
+
+theme：选项卡的主题。可取值有：&#39;elliptic&#39;，&#39;flatline&#39;。
+
+backgroundImage：是否实用背景图片动画。
+
+overlayColor：遮罩层颜色。
+
+overlayOpacity：遮罩层透明度。
+
+使用backgroundImage参数时需要为每一个Tab通过data-background属性指定背景图片。
+
+&amp;lt;ul class=&#34;colorful-tab-menu&#34;&amp;gt;
+&amp;lt;li class=&#34;colorful-tab-menu-item&#34; data-background=&#34;image.jpg&#34;&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+
+
+ 自定义主题
+你可以自定义自己的主题：在SCSS文件中编写自己的主题样式代码：
+
+.custom-theme{
+.colorful-tab-menu{
+/* custom style */
+}
+.colorful-tab-menu-item{
+/* custom style */
+}
+.colorful-tab-container{
+/* custom style */
+}
+.colorful-tab-content{
+/* custom style */
+}
+}
+
+然后在初始化插件时通过theme参数来调用主题：
+
+$(&#34;#exampleTab&#34;).colorfulTab({
+theme:&#34;custom-theme&#34;
+});
+
+colorfulTab选项卡插件的github地址为：https://github.com/knyttneve/colorfulTab。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_776">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/134/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/136/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

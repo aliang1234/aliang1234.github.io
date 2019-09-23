@@ -1,0 +1,307 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery创意响应式两栏滚动幻灯片特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery创意响应式两栏滚动幻灯片特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1506/201506261555.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1506/201506261555.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201506262109.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款非常有创意的jQuery和CSS3两栏滚动幻灯片特效。该幻灯片特效将图片分为两半，在图片滚动切换时一半向上滚动，一半向下滚动，就像图片被切割开一样，效果很酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款非常有创意的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>两栏滚动<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片特效</a>。该幻灯片特效将图片分为两半，在图片滚动切换时一半向上滚动，一半向下滚动，就像图片被切割开一样，效果很酷。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>每一幅幻灯片分为3个部分，第一部分是<code>div.img-cont.left</code>，这是图片的左半部分，第二部分是<code>div.img-cont.right</code>，这是图片的右半部分。最后是<code>div.content</code>，它是点击图片后进入的全屏图片的内容。</p>
+<pre class="brush:html">
+&lt;div class="img-cont left cont-2" data-helper="-1" data-blocks="2"&gt;&lt;/div&gt;
+&lt;div class="img-cont right cont-2" data-helper="1" data-blocks="2"&gt;&lt;/div&gt;
+&lt;div class="content cont-2"&gt;
+&lt;h2 class="title"&gt;Page 2 Content&lt;/h2&gt;
+&lt;p class="content-text"&gt;.....&lt;/p&gt;
+&lt;span class="close"&gt;+&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在CSS样式中，所有图片依次排列，左边的图片依次向下减少100vh，右边的图片依次向上增加100vh。座用于制作左右图片的滚动效果，具体的滚动效果实现代码是在js中完成的。</p>
+<pre class="brush:css">
+.img-cont.cont-2.left {
+margin-top: -100vh;
+}
+.img-cont.cont-2.right {
+margin-top: 100vh;
+}
+.img-cont.cont-3.left {
+margin-top: -200vh;
+}
+.img-cont.cont-3.right {
+margin-top: 200vh;
+}
+......
+</pre>
+<p>全屏图片的内容开始时是不可见的，在点击了左边或右边的缩略图之后，它被添加<code>visible</code>class，内容变为可见状态。</p>
+<pre class="brush:css">
+.content {
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+height: 100\%;
+display: none;
+background: rgba(0, 0, 0, 0.5);
+padding: 2rem;
+overflow-x: hidden;
+overflow-y: auto;
+color: #f9bdbb;
+z-index: 2000;
+}
+.content.visible {
+opacity: 1;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>在jQuery代码中，为了实现左右滚动效果，在HTML标签中使用<code>data-helper</code>实现来标记每一幅图片需要滚动的屏数。<code>data-helper="-1"</code>表示要向下滚动一屏，<code>data-helper="1"</code>表示要向上滚动一屏。然后，在jQuery代码中通过解析<code>data-helper</code>的值，用这个值乘以100vh来作为<code>margin-top</code>属性的值，实现滚动效果。</p>
+<pre class="brush:js">
+function doMargins(paramPage) {
+scrolling = true;
+var \_page = paramPage || curPage;
+$left.each(function () {
+var marginMult = parseInt($(this).attr('data-helper'), 10) + \_page - 1;
+$(this).attr('style', 'margin-top: ' + marginMult * 100 + 'vh');
+});
+$right.each(function () {
+var marginMult = parseInt($(this).attr('data-helper'), 10) - \_page + 1;
+$(this).attr('style', 'margin-top: ' + marginMult * 100 + 'vh');
+});
+setTimeout(function () {
+scrolling = false;
+}, 1000);
+} 
+</pre>
+<p>其它实现代码请参考下载文件。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1506/201506261555.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201506262109.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1144">
+                                <h3 class="post-title">
+                                    实现Bootstrap下拉列表框鼠标滑过时打开的jQuery插
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

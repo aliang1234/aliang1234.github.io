@@ -1,0 +1,920 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        js</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_222">
+                        带排序功能的js masonry瀑布流插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_222" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808011428.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+sortableJs是一款带排序功能的js masonry瀑布流插件。sortableJs能够使元素以卡片形式显示，并以masonry瀑布流方式进行布局，通过点击分类按钮，可以将卡片按指定的方式动态排序。
+内容：
+
+
+简要教程
+
+
+sortableJs是一款带排序功能的js masonry瀑布流插件。sortableJs能够使元素以卡片形式显示，并以masonry瀑布流方式进行布局，通过点击分类按钮，可以将卡片按指定的方式动态排序。
+
+
+
+ 使用方法
+在页面中引入sortable.min.css和sortable.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/sortable.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/sortable.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用sortableJs的基本HTML结构如下：
+
+&amp;lt;!-- 1st step --&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a data-sjslink=&#34;food&#34;&amp;gt; [...] &amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a data-sjslink=&#34;development&#34;&amp;gt; [...] &amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- 3st step --&amp;gt;
+&amp;lt;div id=&amp;quot;sortable&amp;quot; class=&amp;quot;sjs-default&amp;quot;&amp;gt;
+&amp;lt;!-- 2nd step --&amp;gt;
+&amp;lt;div data-sjsel=&amp;quot;food&amp;quot;&amp;gt; [...] &amp;lt;/div&amp;gt;
+&amp;lt;div data-sjsel=&amp;quot;development&amp;quot;&amp;gt; [...] &amp;lt;/div&amp;gt;
+&amp;lt;div data-sjsel=&amp;quot;development&amp;quot;&amp;gt; [...] &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+1、使用无序列表插件一组元素，每个链接都添加一个data-sjslink属性，指向要操作的分类元素。
+2、将同一种类的元素包裹在data-sjsel属性的块级元素中。
+3、将所有的块级元包裹子啊sjs-default容器中，并指定一个id。
+
+ JavaScript
+最后，在页面DOM元素加载完毕之后，通过sortablejs()方法来初始化插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+document.querySelector(&#39;#sortable&#39;).sortablejs()
+&amp;lt;/script&amp;gt;
+
+ 该带排序功能的js masonry瀑布流插件的github地址为：https://github.com/TristanBlg/sortableJs
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_222">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_226">
+                        js和CSS3鼠标悬停超链接展示图片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_226" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811291532.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3鼠标悬停超链接展示图片特效。该特效中，当鼠标悬停到超链接上面时，会在超链接下面显示一张设定好的图片。该特效中提供了10种打开图片时的炫酷动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3鼠标悬停超链接展示图片特效。该特效中，当鼠标悬停到超链接上面时，会在超链接下面显示一张设定好的图片。该特效中提供了10种打开图片时的炫酷动画效果。
+该js和CSS3鼠标悬停超链接展示图片特效使用TweenMax来制作动画，并使用了一些新的CSS3特性，请在支持这些CSS3特性的浏览器中查看效果。
+下面是该js和CSS3鼠标悬停超链接展示图片特效的一些gif动图效果。
+
+
+
+ 该js和CSS3鼠标悬停超链接展示图片特效的github网址为：https://github.com/codrops/ImageRevealHover/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_226">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_229">
+                         jQuery多功能滑块插件r-slider.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_229" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810101455.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+r-slider.js是一款jQuery多功能滑块插件。使用该插件，可以制作出滑块、开关按钮、进度条、向导步骤等多种效果。
+内容：
+
+
+简要教程
+
+
+r-slider.js是一款jQuery多功能滑块插件。使用该插件，可以制作出滑块、开关按钮、进度条、向导步骤等多种效果。
+
+ 使用方法
+在页面中引入jquery和r-slider.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/r-slider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML
+使用一个div作为滑块的容器。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为滑块添加下面的CSS样式。
+
+#container .r-slider-line {
+background: #4b5459;
+border-radius: 4px;
+}
+#container .r-slider-fill {
+background: #4b5459;
+}
+#container .r-slider-button {
+box-shadow: inset 0 0 0 4px #c4c8cc;
+border-radius: 100%;
+text-align: center;
+}
+#container .r-slider-label {
+position: relative;
+top: 13px;
+font-size: 20px;
+color: #c4c8cc;
+z-index: 1000;
+}
+#container .r-slider-label:before {
+content: &amp;quot;&amp;quot;;
+position: absolute;
+top: -13px;
+left: 5px;
+width: 30px;
+height: 30px;
+background: #4b5459;
+border-radius: 100%;
+z-index: -1;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该滑块插件。
+
+var mySlider = new slider({
+// container element
+container: &amp;quot;#container&amp;quot;,
+// start/end values
+start: -100,
+end: 100,
+// custom step
+step: 1,
+// initial value
+value: 0
+});
+
+
+ 配置参数
+该滑块插件的可用配置参数有：
+
+var mySlider = new slider({
+// container element
+container: &amp;quot;#container&amp;quot;,
+// start/end values
+start: -100,
+end: 100,
+// min/max values
+min: -50,
+max: 80,
+// custom step
+step: 1,
+// initial value
+value: 0,
+// shows value on drag
+showValue: true,
+// always shows value
+fixValue: true,
+// shows labels
+pinStep: 10,
+// custom label step
+labelStep: 40,
+// disables drag
+changable: false,
+// custom styles
+style: {
+line_width: 0
+},
+// for toggle switch
+text: [&amp;quot;ON&amp;quot;, &amp;quot;OFF&amp;quot;],
+// callback
+ondrag: function(){}
+});
+
+ 该滑块插件的github地址为：https://github.com/mohammadFeiz/r-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_229">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_234">
+                        基于CSS grid的炫酷js轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_234" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1901/201901281438.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于CSS grid的炫酷js轮播图特效。该轮播图使用CSS grid进行布局，并通过TweenMax，在鼠标移动时，制作两个图层间的视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于CSS grid的炫酷js轮播图特效。该轮播图使用CSS grid进行布局，并通过TweenMax，在鼠标移动时，制作两个图层间的视觉差效果。
+下面是该特效的一些屏幕截图效果：
+
+
+
+
+ 该基于CSS grid的炫酷js轮播图特效的github网址为：https://github.com/codrops/LayerMotionSlideshow/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_234">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_235">
+                        js和CSS3自定义鼠标特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_235" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1902/201902275982.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3自定义鼠标特效。该特效中，使用一个DIV元素来自定义鼠标，通过CSS代码来构建鼠标的形状，并通过js代码来驱动鼠标的动画。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3自定义鼠标特效。该特效中，使用一个DIV元素来自定义鼠标，通过CSS代码来构建鼠标的形状，并通过js代码来驱动鼠标的动画。
+
+ 使用方法
+
+ HTML结构
+基本的HTML结构如下。
+
+&amp;lt;!--鼠标形状元素--&amp;gt;
+&amp;lt;div id=&#34;cursorBlob&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!--页面内容--&amp;gt;
+&amp;lt;div class=&#34;wrap&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为鼠标元素添加一些基础的CSS样式。
+
+#cursorBlob {
+width: 50px;
+height: 50px;
+background: linear-gradient(120deg, #FF1744, #E040FB, #2979FF, #00E5FF, #76FF03);
+background-size: 1600\% 1600\%;
+position: absolute;
+mix-blend-mode: difference;
+pointer-events: none;
+z-index: 1;
+transition: 0.15s linear;
+animation: blobRadius 5s ease infinite, blobBackground 15s ease infinite;
+}
+@keyframes blobRadius {
+0%, 100% {
+border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+}
+20% {
+border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+}
+40% {
+border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+}
+60% {
+border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+}
+80% {
+border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+}
+}
+@keyframes blobBackground {
+0%, 100% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+}
+
+
+ Javascript
+最后通过下面的JS代码来在鼠标移动时，将制定的鼠标形状元素跟随鼠标一起移动。
+
+const blobCursor = (() =&amp;gt; {
+const CURSOR = document.querySelector(&#39;#cursorBlob&#39;);
+const LINKS = document.querySelectorAll(&#39;.nav\_\_link&#39;);
+const setCursorPos = e =&amp;gt; {
+const { pageX: posX, pageY: posY } = e;
+CURSOR.style.top = `${posY - CURSOR.offsetHeight / 2}px`;
+CURSOR.style.left = `${posX - CURSOR.offsetWidth / 2}px`;
+};
+document.addEventListener(&#39;mousemove&#39;, setCursorPos);
+const setCursorHover = () =&amp;gt; CURSOR.style.transform = &#39;scale(2.5)&#39;;
+const removeCursorHover = () =&amp;gt; CURSOR.style.transform = &#39;&#39;;
+LINKS.forEach(link =&amp;gt; link.addEventListener(&#39;mouseover&#39;, setCursorHover));
+LINKS.forEach(link =&amp;gt; link.addEventListener(&#39;mouseleave&#39;, removeCursorHover));
+})();
+
+ 该js和CSS3自定义鼠标特效的codepen网址为：https://codepen.io/hiMRK/pen/ErMoKO
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_235">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_236">
+                        5种炫酷js鼠标跟随动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_236" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1904/201904057356.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款炫酷js鼠标跟随动画特效插件。该js插件提供了5种鼠标跟随的动画特效，使用非常简单，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款炫酷js鼠标跟随动画特效插件。该js插件提供了5种鼠标跟随的动画特效，使用非常简单，效果非常炫酷。
+
+ 使用方法
+在页面中引入相应的鼠标跟随文件即可。
+
+&amp;lt;script src=&#34;js/fairyDustCursor.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/emojiCursor.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bubbleCursor.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/batsCursor.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/snowflakeCursor.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+下面是该特效的一些屏幕截图效果。
+
+
+
+
+
+  该炫酷js鼠标跟随动画特效插件的github网址为：https://github.com/tholman/cursor-effects
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_236">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_240">
+                        带视觉特效的js密码强度检测特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_240" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1804/201804241457.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带视觉特效的js密码强度检测特效。该特效在用户输入密码的时候，随着密码强度的增强，旁边的图像会越来越清晰或越来越模糊，通过图像的变化来提示用户密码的强度。
+内容：
+
+
+简要教程
+
+
+这是一款带视觉特效的js密码强度检测特效。该特效在用户输入密码的时候，随着密码强度的增强，旁边的图像会越来越清晰或越来越模糊，通过图像的变化来提示用户密码的强度。
+由于该js密码强度检测特效的编写使用了CSS变量，所以不是所以浏览器都支持该特效，请使用支持CSS变量的浏览器来查看演示效果。
+下面是该js密码强度检测特效的gif动态效果图。
+
+ 该js密码强度检测特效的github地址为：https://github.com/codrops/PasswordStrengthVisualization/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_240">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_242">
+                        jQuery图片放大镜插件lightzoom.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_242" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1805/201805211453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+lightzoom.js是一款jQuery图片放大镜插件。lightzoom.js图片放大镜的特点是使用CSS来放大图片，这样不会去加载大图片。该图片放大镜甚至能放大gif动态图片。
+内容：
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_242">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_243">
+                        js和CSS3缩略图全屏展开特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_243" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806161415.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3缩略图全屏展开特效。在该特效中，缩略图排列在页面的底部，当用户点击缩略图之后，所有缩略图会向上移动，被点击图片的大图会被展示出来。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3缩略图全屏展开特效。在该特效中，缩略图排列在页面的底部，当用户点击缩略图之后，所有缩略图会向上移动，被点击图片的大图会被展示出来。
+该特效使用TweenMax.js来制作动画效果。另外，该特效中使用了CSS变量，所以在查看demo时，请使用支持CSS变量的浏览器来进行查看。
+下面是该特效的一些屏幕截图效果。
+缩略图界面的截图效果如下：
+
+当点击缩略图之后，缩略图向上移动，在页面中会全屏展示出被点击的缩略图的大图。
+
+  该js和CSS3缩略图全屏展开特效的github地址为：https://github.com/codrops/FullImageReveal/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_243">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_244">
+                        通过js编程方式实现多种鼠标hover特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_244" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1805/201805081525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款通过js编程方式实现多种鼠标hover特效。该特效的目的是通过js代码来模拟鼠标移动接近某个目标元素时，在特定的元素上产生动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款通过js编程方式实现多种鼠标hover特效。该特效的目的是通过js代码来模拟鼠标移动接近某个目标元素时，在特定的元素上产生动画效果。
+由于是通过鼠标来进行操作，所以只能在桌面浏览器中查看效果。
+另外由于该特效使用了CSS变量，所以请使用支持CSS变量的浏览器来查看示例。
+在第一个示例中，当鼠标接近“注册”按钮时，如果表单中的必填字段为空时，这些字段会以红色边框闪烁标示。
+
+第二个示例是一个图片画廊示例，当鼠标接近“+”图标，或移动到前一张/下一张图片上时，会产生动画效果。
+第三个示例当鼠标接近右上角的搜索符号时，搜索框会展示出来，并且带有文字动效果。
+
+第四个示例中，页面上有多个元素，其中当鼠标接近红心图标时，该图标会执行放大缩小动画。
+
+ 该Bootstrap tagsinput自定义标签插件的github地址为：https://github.com/Nodws/bootstrap4-tagsinput
+整个特效共有7个示例，具体效果请查看DEMO。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_244">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/bNF36zwcF//page/10/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/bNF36zwcF//page/12/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带视觉差和子幻灯片特效的jQuery幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带视觉差和子幻灯片特效的jQuery幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1603/201603241540.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603241540.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603243256.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>pignose.parallaxslider.js是一款带视觉差和子幻灯片特效的jQuery幻灯片插件。该幻灯片在每一个slide中都可以带一个子幻灯片，两重幻灯片在运行的过程中会产生不错的视觉差效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>pignose.parallaxslider.js是一款带视觉差和子幻灯片特效的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>幻灯片插件。该幻灯片在每一个slide中都可以带一个子幻灯片，两重幻灯片在运行的过程中会产生不错的视觉差效果。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower或npm来安装pignose.parallaxslider.js插件。</p>
+<pre class="brush:html">
+bower install pg-parallaxslider
+npm install pg-parallaxslider 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery(建议大于jquery1.11.x)、<a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="\_blank">jquery.easing.js</a>、pignose.parallaxslider.min.js和pignose.parallaxslider.min.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="dist/css/pignose.parallaxslider.min.css" /&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.easing.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="dist/js/pignose.parallaxslider.min.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="visual"&gt;
+&lt;div class="slide-visual"&gt;
+&lt;!-- 幻灯片区域 (1000 x 424) --&gt;
+&lt;ul class="slide-group"&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide01.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide02.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide03.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide04.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide05.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="assets/img/visual\_slide06.jpg" alt="slider image" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+<p>&lt;!-- 子幻灯片区域 (316 x 328) --&gt;<br>
+&lt;div class=&quot;script-wrap&quot;&gt;<br>
+&lt;ul class=&quot;script-group&quot;&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;3.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;4.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;5.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;div class=&quot;inner-script&quot;&gt;&lt;img src=&quot;6.jpg&quot; alt=&quot;thumbnail slider image&quot; /&gt;&lt;/div&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;div class=&quot;slide-controller&quot;&gt;<br>
+&lt;a href=&quot;#&quot; class=&quot;btn-prev&quot;&gt;&lt;img src=&quot;assets/img/btn_prev.png&quot; alt=&quot;prev slide&quot; /&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; class=&quot;btn-play&quot;&gt;&lt;img src=&quot;assets/img/btn_play.png&quot; alt=&quot;start slide&quot; /&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; class=&quot;btn-pause&quot;&gt;&lt;img src=&quot;assets/img/btn_pause.png&quot; alt=&quot;pause slide&quot; /&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot; class=&quot;btn-next&quot;&gt;&lt;img src=&quot;assets/img/btn_next.png&quot; alt=&quot;next slide&quot; /&gt;&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>pignoseParallaxSlider()</code>方法来初始化该幻灯片插件。</p>
+<pre class="brush:js">
+$(window).load(function() {
+$('#visual').pignoseParallaxSlider({
+play: '.btn-play',
+pause : '.btn-pause',
+next: '.btn-next',
+prev: '.btn-prev'
+});
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>该幻灯片可用的配置参数有：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>名称</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>number</td>
+<td>1200</td>
+<td>幻灯片的动画速度，单位毫秒</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>number</td>
+<td>3000</td>
+<td>幻灯片播放的间隔时间，单位毫秒</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td>right</td>
+<td>幻灯片动画的方向</td>
+</tr>
+<tr>
+<td>diffTime</td>
+<td>number</td>
+<td>300</td>
+<td>主幻灯片和子幻灯片的视觉差时间，单位毫秒</td>
+</tr>
+<tr>
+<td>controlAnim</td>
+<td>boolean</td>
+<td>true</td>
+<td>如果该参数设置为false，插件会忽略动画队列的状态</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否显示分页圆点按钮</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否自动开始播放幻灯片</td>
+</tr>
+<tr>
+<td>isLocal</td>
+<td>boolean</td>
+<td>true</td>
+<td>该属性设置控制按钮（播放、暂停、next、prev）是否属于当前的容器</td>
+</tr>
+<tr>
+<td>play</td>
+<td>jQuery object</td>
+<td>null</td>
+<td>播放按钮</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>jQuery object</td>
+<td>null</td>
+<td>暂停按钮</td>
+</tr>
+<tr>
+<td>next</td>
+<td>jQuery object</td>
+<td>null</td>
+<td>next按钮</td>
+</tr>
+<tr>
+<td>prev</td>
+<td>jQuery object</td>
+<td>null</td>
+<td>prev按钮</td>
+</tr>
+<tr>
+<td>afterMove</td>
+<td>callback</td>
+<td>null</td>
+<td>幻灯片移动之后的回调函数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>PIGNOSE-ParallaxSlider幻灯片的github地址为：<a href="https://github.com/KennethanCeyer/PIGNOSE-ParallaxSlider" target="\_blank">https://github.com/KennethanCeyer/PIGNOSE-ParallaxSlider</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603241540.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603243256.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_819">
+                                <h3 class="post-title">
+                                    可以和鼠标互动的多背景层jQuery视觉差插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

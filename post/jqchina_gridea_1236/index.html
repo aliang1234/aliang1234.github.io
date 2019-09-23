@@ -1,0 +1,363 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jBooklet-jQuery简单的翻书特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jBooklet-jQuery简单的翻书特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504041657.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504041657.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504041624.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jBooklet是一款简单的网页翻书jQuery特效插件。该jquery翻书特效插件实现了左右翻页的基本功能，并提供了一个默认的样式。你可以通过CSS文件来修改默认样式，生成更加好看的翻页效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jBooklet是一款简单的网页翻书<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery特效</a>插件。该翻书特效插件实现了左右翻页的基本功能，并提供了一个默认的样式。你可以通过CSS文件来修改默认样式，生成更加好看的翻页效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该插件依赖于jQuery，jQuery UI为可选项，还依赖于<code>jquery.easing</code>插件，使用时要先引入必须的依赖文件。</p>
+<pre class="brush:html">
+&lt;link href="booklet/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" /&gt;
+&lt;!-- jQuery --&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt; window.jQuery || document.write('&lt;script src="booklet/jquery-2.1.0.min.js"&gt;&lt;\/script&gt;') &lt;/script&gt;
+&lt;!-- jQuery UI (optional) --&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script&gt; window.jQuery.ui || document.write('&lt;script src="booklet/jquery-ui-1.10.4.custom.min.js"&gt;&lt;\/script&gt;') &lt;/script&gt;
+&lt;!-- Booklet --&gt;
+&lt;script src="booklet/jquery.easing.1.3.js"&gt;&lt;/script&gt;
+&lt;script src="booklet/jquery.booklet.latest.min.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该翻书特效的HTML结构使用的是嵌套<code>div</code>的结构。包裹<code>div</code>上要设置一个ID或class，在包裹<code>div</code>下的直接子元素会被插件识别为一个页面，在它里面可以放置页面的内容：</p>
+<pre class="brush:html">
+&lt;div id="mybook"&gt;
+&lt;div&gt;
+&lt;h3&gt;Yay, Page 1!&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3&gt;Yay, Page 2!&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3&gt;Yay, Page 3!&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3&gt;Yay, Page 4!&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在完成上面的步骤之后，就可以在页面加载完成之后调用该翻书特效插件。你可以使用相同的class或选择器来初始化多个booklet实例对象：</p>
+<pre class="brush:js">
+$(function() {
+//single book
+$('#mybook').booklet();
+<p>//multiple books with ID's<br>
+$('#mybook1, #mybook2').booklet();</p>
+<p>//multiple books with a class<br>
+$('.mycustombooks').booklet();<br>
+});</p>
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 定制CSS样式</h5>
+<p>当booklet被创建之后，会生成以下的基本HTML结构，每个<code>div</code>中都带有特定的class，通过修改这些class的内容，你可以自定义出自己的翻书效果样式。</p>
+<pre class="brush:html">
+&lt;div class="booklet" id="mybook"&gt;
+&lt;div class="b-page b-page-0 b-p1"&gt;
+&lt;div class="b-wrap b-wrap-left"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="b-page b-page-1 b-p2"&gt;
+&lt;div class="b-wrap b-wrap-right"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="b-page b-page-2 b-p3"&gt;
+&lt;div class="b-wrap b-wrap-left"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="b-page b-page-3 b-p4"&gt;
+&lt;div class="b-wrap b-wrap-right"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="b-controls"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>所有的class都可以在<code>jquery.jbooklet.css</code>文件中找到。</p>
+<ul>
+<li>
+<span class="m">.booklet</span>：booklet的包裹元素。这个class会被添加到你指定的booklet元素上。</li>
+<li>
+<span class="m">.b-page</span>：每一个页面的包裹元素。<code>.b-page-0</code>指定页面的序号，从0开始计数。其它的class(<code>.b-pN, .b-p0, .b-p1, .b-p2, .b-p3, .b-p4</code>)用于翻页动画。</li>
+<li>
+<span class="m">.b-wrap</span>：每一个页面的内部容器。<code>.b-wrap-left</code>或<code>.b-wrap-right</code>用于指定页面是在左边还是右边。</li>
+<li>
+<span class="m">.b-page-cover</span>：书的封面。当使用<code>closed</code>和<code>covers</code>选项时，该class会被添加到第一页和最后一页的<code>.b-wrap</code>上。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>General</p>
+<ul>
+<li>
+<span class="m">name</span>：类型：<code>string</code>，默认值：null。显示在浏览器标题上的booklet名称。</li>
+<li>
+<span class="m">width</span>：类型：<code>Number, String</code>。默认值：600。booklet的宽度，可以是一个数值，或一个CSS字符串("600px")，或一个百分比字符串（“50\%”）。</li>
+<li>
+<span class="m">height</span>：类型：<code>Number, String</code>。默认值：400。booklet的高度，规则同上。</li>
+<li>
+<span class="m">speed</span>：类型：<code>Number</code>。默认值：1000。书本翻页的速度。单位毫秒。</li>
+<li>
+<span class="m">direction</span>：类型：<code>String</code>。默认值："LTR"。书本翻页的方向。可以设置为“RTL”。</li>
+<li>
+<span class="m">startingPage</span>：类型：<code>Number</code>。默认值：0。书本页面的序号，从0开始。</li>
+<li>
+<span class="m">easing</span>：类型：<code>String</code>。默认值："easeInOutQuad"。用于完成翻页效果的easing方法名称。easing参数可以参考<a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="\_blank">Easing Plugin</a>。</li>
+<li>
+<span class="m">easeIn</span>：类型：<code>String</code>。默认值："easeInQuad"。页面前半部过渡动画的easing方法。</li>
+<li>
+<span class="m">easeOut</span>：类型：<code>String</code>。默认值："easeOutQuad"。页面后半部过渡动画的easing方法。</li>
+</ul>
+<p>Closed / Covers</p>
+<ul>
+<li>
+<span class="m">closed</span>：类型：<code>Boolean</code>。默认值：false。书本关闭是的外观。会添加带class <code>.b-page-empty</code>的空页到书本的第一页和最后一页。</li>
+<li>
+<span class="m">closedFrontTitle</span>：类型：<code>String</code>。默认值："Beginning"。Used with closed, menu and pageSelector options. Determines title of blank starting page。</li>
+<li>
+<span class="m">closedFrontChapter</span>：类型：<code>String</code>。默认值："Beginning of Book"。Used with closed, menu and chapterSelector options. Determines chapter name of blank starting page.</li>
+<li>
+<span class="m">closedBackTitle</span>：类型：<code>String</code>。默认值："End"。用于closed、menu和pageSelector参数。确定空白结束页标题。</li>
+<li>
+<span class="m">closedBackChapter</span>：类型：<code>String</code>。默认值："End of Book"。用于closed、menu和pageSelector参数。确定章节的名称。</li>
+<li>
+<span class="m">covers</span>：类型：<code>Boolean</code>。默认值：false。用于closed参数。将第一页和最后一页作为封面，并为页面内容添加class<code> .b-page-cover</code>。</li>
+<li>
+<span class="m">autoCenter</span>：类型：<code>Boolean</code>。默认值：false。用于closed参数。当booklet关闭时使它居中定位。</li>
+</ul>
+<p>该翻书效果的更多参数和方法及事件请参看：<a href="http://builtbywill.com/code/booklet/documentation" target="\_blank">http://builtbywill.com/code/booklet/documentation</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504041657.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504041624.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1237">
+                                <h3 class="post-title">
+                                    jQuery超酷扁平风格元素3D翻转动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

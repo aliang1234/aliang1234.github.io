@@ -1,0 +1,318 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3视觉差幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3视觉差幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-banana">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411101625.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411101625.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141110441.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款仿kendo UI网站使用jQuery和css3 animations制作的视觉差幻灯片插件。这款视觉差幻灯片插件通过CSS animations和jQuery控制幻灯片中的每个动画元素，并使幻灯片背景产生视觉差效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这款插件使用CSS animations来控制幻灯片中的各个动画元素，并使幻灯片的背景产生视觉差效果。</p>
+<p>这个效果的灵感来自于<a href="http://www.kendoui.com/" target="\_blank">Kendo UI</a>主页上的幻灯片效果。</p>
+<h3>HTML</h3>
+<p>这个视觉差幻灯片插件的html结构是使用一个容器div包含许多动画元素div <code>da-slide</code>。每一个动画元素div包含一个h2标题、一个用于描述的p元素、一个链接和一个包含图片的div。</p>
+<pre class="brush:html">
+&lt;div id="da-slider" class="da-slider"&gt;
+&lt;div class="da-slide"&gt;
+&lt;h2&gt;Some headline&lt;/h2&gt;
+&lt;p&gt;Some description&lt;/p&gt;
+&lt;a href="http://www.htmleaf.com/" class="da-link"&gt;Read more&lt;/a&gt;
+&lt;div class="da-img"&gt;
+&lt;img src="images/1.png" alt="image01" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="da-slide"&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;
+&lt;!-- ... --&gt; 
+&lt;nav class="da-arrows"&gt;
+&lt;span class="da-arrows-prev"&gt;&lt;/span&gt;
+&lt;span class="da-arrows-next"&gt;&lt;/span&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+</pre>
+<p>这个插件的核心是要使每一个元素都有动画效果。我们通过给每个元素一个“direction class”来控制它们的行为。例如：如果想控制当前元素向右运动，那么给它一个class <code>da-slide-toright”</code>，下面列出了4个方向的class：</p>
+<ul>
+<li>.da-slide-fromright</li>
+<li>.da-slide-fromleft</li>
+<li>.da-slide-toright</li>
+<li>.da-slide-toleft</li>
+</ul>
+<p>上面给定的class通过css来控制它们的运动。</p>
+<pre class="brush:css">
+/* Slide in from the right*/
+.da-slide-fromright h2{
+animation: fromRightAnim1 0.6s ease-in 0.8s both;
+}
+.da-slide-fromright p{
+animation: fromRightAnim2 0.6s ease-in 0.8s both;
+}
+.da-slide-fromright .da-link{
+animation: fromRightAnim3 0.4s ease-in 1.2s both;
+}
+.da-slide-fromright .da-img{
+animation: fromRightAnim4 0.6s ease-in 0.8s both;
+}
+<p>/* Adjust animations for different behavior of each element: */<br>
+@keyframes fromRightAnim1{<br>
+0%{ left: 110%; opacity: 0; }<br>
+100%{ left: 10%; opacity: 1; }<br>
+}<br>
+@keyframes fromRightAnim2{<br>
+0%{ left: 110%; opacity: 0; }<br>
+100%{ left: 10%; opacity: 1; }<br>
+}<br>
+@keyframes fromRightAnim3{<br>
+0%{ left: 110%; opacity: 0; }<br>
+1%{ left: 10%; opacity: 0; }<br>
+100%{ left: 10%; opacity: 1; }<br>
+}<br>
+@keyframes fromRightAnim4{<br>
+0%{ left: 110%; opacity: 0; }<br>
+100%{ left: 60%; opacity: 1; }<br>
+}<br>
+</pre></p>
+<h3>可用参数</h3>
+<p>下面是可用的参数选项：</p>
+<pre class="brush:js">
+$('#da-slider').cslider({
+current : 0,
+// index of current slide
+bgincrement : 50, 
+// increment the background position 
+// (parallax effect) when sliding
+autoplay: false,
+// slideshow on / off
+interval: 4000
+// time between transitions
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411101625.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141110441.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_152">
+                                <h3 class="post-title">
+                                    jQuery和CSS3图片展示动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持ajax的jquery自动完成插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持ajax的jquery自动完成插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1701/201701031452.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1701/201701031452.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201701034300.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款轻量级的jquery自动完成插件。该jquery自动完成插件支持ajax。用户在输入框中输入内容时，插件会自动搜索指定的数组对象，或json对象，完成自动补全。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款轻量级的<strong>jquery自动完成插件</strong>。该jquery自动完成插件支持ajax。用户在输入框中输入内容时，插件会自动搜索指定的数组对象，或json对象，完成自动补全。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery，void\_autocomplete.js和样式文件void\_autocomplete.css。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="css/void\_autocomplete.css"&gt;
+&lt;script src="path/to/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="path/to/void\_autocomplete.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本使用方法</h5>
+<p>该jquery自动完成插件最基本的使用方法如下：</p>
+<pre class="brush:js">
+//如果你不使用ajax，你需要在数组中放入以组需要自动完成的选项对象
+var celestial\_bodies = [
+{title:"Earth", id:"1"},
+{title:"Moon", id:"2"},
+{title:"Sun", id:"3"}
+];
+<p>var myAutocomplete = $(&quot;input&quot;).void_autocomplete({<br>
+list: celestial_bodies,<br>
+onItemSelect: function(){console.log(item);}<br>
+});<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 通过ajax调用</h5>
+<p>通过这种方法，当输入框中的内容改变的时候，会产生一个ajax调用，并接收用户的输入，通过json文件来查找相应的内容。</p>
+<pre class="brush:js">
+var ajax\_url = "json/list.json";
+<p>var myAutocomplete = $(&quot;input&quot;).void_autocomplete({<br>
+ajax: ajax_url,<br>
+onItemSelect: autocompleteCallback,<br>
+maxResults: 10<br>
+});</p>
+<p>// This function is called whenever<br>
+// an option is selected in the autocomplete</p>
+<p>function autocompleteCallback(selected){<br>
+console.log(selected);<br>
+}<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>该jquery自动完成插件的可用配置参数有：</p>
+<ul>
+<li>
+<code>min</code>：产生自动完成的最小字符数。默认值为1。</li>
+<li>
+<code>selections</code>：0表示允许多个选项，1表示只允许一个选项。默认为0。</li>
+<li>
+<code>openUp</code>：如果为<code>true</code>，打开的列表向上，覆盖输入框。否则列表向下。默认为<code>false</code>。</li>
+<li>
+<code>list</code>：一个数组，包含要自动完成的列表对象。</li>
+<li>
+<code>caseSensitive</code>：是否大小写敏感。默认为<code>false</code>。</li>
+<li>
+<code>maxResults</code>：列表中显示的最大项目数量。默认为10个。</li>
+<li>
+<code>sortKey</code>：列表中字符串的排序方式。默认为<code>false</code>。</li>
+<li>
+<code>ajax</code>：是否使用ajax调用。默认为<code>false</code>。</li>
+<li>
+<code>onItemSelect</code>：列表中的选项被选择时的回调函数。</li>
+</ul>
+<pre class="brush:js">
+var myAutocomplete = $("input").void\_autocomplete({
+min: 1,
+selections: 0,
+openUp: false,
+list: [],
+caseSensitive: false,
+maxResults: 10,
+sortKey: false,
+ajax: false,
+onItemSelect: function(){}
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<ul>
+<li>
+<code>forceItem</code>：强制插入一个新的列表项，并触发回调函数。</li>
+<li>
+<code>recoverItem</code>：取消先前选择的项目并触发回调。</li>
+</ul>
+<pre class="brush:js">
+var myAutocomplete = $("input").void\_autocomplete({
+selections: 1,
+list: celestial\_bodies
+});
+<p>var pluto = {<br>
+title:&quot;Pluto&quot;,<br>
+id:&quot;11&quot;<br>
+};</p>
+<p>myAutocomplete.forceItem(pluto);<br>
+</pre></p>
+<p>advanced-autocomplete.jquery自动完成插件的github地址为：<a href="https://github.com/alotropico/advanced-autocomplete.jquery" target="\_blank">https://github.com/alotropico/advanced-autocomplete.jquery</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1701/201701031452.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201701034300.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_575">
+                                <h3 class="post-title">
+                                    带倒影效果的jquery轮播图插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

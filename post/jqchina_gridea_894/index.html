@@ -1,0 +1,326 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Clipboard.js-实现复制文本到剪贴板功能的JavaScrip | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Clipboard.js-实现复制文本到剪贴板功能的JavaScrip
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601301753.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601301753.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601303088.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>clipboard.js是一款轻量级的实现复制文本到剪贴板功能的JavaScript插件。通过该插件可以将输入框，文本域，DIV元素中的文本等文本内容复制到剪贴板中。它不依赖flash，使用非常简单。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>clipboard.js是一款轻量级的实现复制文本到剪贴板功能的JavaScript插件。通过该插件可以将输入框，文本域，DIV元素中的文本等文本内容复制到剪贴板中。它不依赖flash，使用非常简单。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm或bower来安装clipboard.js插件。</p>
+<pre class="brush:html">
+npm install clipboard --save
+bower install clipboard --save 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>或者下载压缩包，在页面中引入clipboard.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/clipboard.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 复制文本</h5>
+<p>你可以在触发元素上添加<code>data-clipboard-target</code>属性，该属性指向要进行复制的目标元素的ID，例如下面的代码：</p>
+<pre class="brush:html">
+&lt;!-- 目标元素 --&gt;
+&lt;input id="foo" value="要复制的文本"&gt;
+<p>&lt;!-- 触发元素 --&gt;<br>
+&lt;button class=&quot;btn&quot; data-clipboard-target=&quot;#foo&quot;&gt;<br>
+&lt;img src=&quot;assets/clippy.svg&quot; alt=&quot;复制到剪贴板&quot;&gt;<br>
+&lt;/button&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 剪切文本</h5>
+<p>你可以通过<code>data-clipboard-action</code>属性来指明你是想要“复制”，还是要“剪切”。如果没有指明该属性，默认为进行复制操作。</p>
+<pre class="brush:html">
+&lt;!-- 目标元素 --&gt;
+&lt;textarea id="bar"&gt;要剪切的内容&lt;/textarea&gt;
+<p>&lt;!-- 触发元素 --&gt;<br>
+&lt;button class=&quot;btn&quot; data-clipboard-action=&quot;cut&quot; data-clipboard-target=&quot;#bar&quot;&gt;<br>
+剪切到剪贴板<br>
+&lt;/button&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 从属性中复制</h5>
+<p>你可以在目标元素上设置<code>data-clipboard-text</code>属性，点击触发元素后会将该属性的内容复制到剪贴板中。</p>
+<pre class="brush:html">
+&lt;button class="btn" data-clipboard-text="这里的内容会被复制"&gt;
+复制到剪贴板
+&lt;/button&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>在执行复制操作之后，会触发<code>success</code>和<code>error</code>回调函数。</p>
+<pre class="brush:js">
+var clipboard = new Clipboard('.btn');
+<p>clipboard.on('success', function(e) {<br>
+console.info('Action:', e.action);<br>
+console.info('Text:', e.text);<br>
+console.info('Trigger:', e.trigger);</p>
+<p>e.clearSelection();<br>
+});</p>
+<p>clipboard.on('error', function(e) {<br>
+console.error('Action:', e.action);<br>
+console.error('Trigger:', e.trigger);<br>
+});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 高级参数</h3>
+<p>如果你不想修改你的HTML代码，可以通过下面的参数来执行复制操作。</p>
+<p>如果你想动态的设置一个<code>target</code>目标元素，你可以像下面这样做。</p>
+<pre class="brush:js">
+new Clipboard('.btn', {
+target: function(trigger) {
+return trigger.nextElementSibling;
+}
+});
+</pre>
+<p>如果你想动态的设置文本，可以：</p>
+<pre class="brush:js">
+new Clipboard('.btn', {
+text: function(trigger) {
+return trigger.getAttribute('aria-label');
+}
+});
+</pre>
+<p>销毁clipboard.js插件的方法如下：</p>
+<pre class="brush:js">
+var clipboard = new Clipboard('.btn');
+clipboard.destroy();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<ul>
+<li>chrome42+</li>
+<li>Firefox41+</li>
+<li>IE9+</li>
+<li>Opera29+</li>
+</ul>
+<p>clipboard.js插件的github地址为：<a href="https://github.com/zenorocha/clipboard.js" target="\_blank">https://github.com/zenorocha/clipboard.js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601301753.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601303088.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_895">
+                                <h3 class="post-title">
+                                    None
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery.scrollex-可制作炫酷页面滚动效果的jQuery事件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery.scrollex-可制作炫酷页面滚动效果的jQuery事件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1602/201602281643.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1602/201602281643.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201602283160.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery.scrollex.js是一款可制作炫酷页面滚动效果的jQuery事件插件。该插件中包含有一组预置的jQuery事件，通过这些事件，可以在页面滚动时为指定元素制作相应的动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery.scrollex.js是一款可制作炫酷页面滚动效果的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>事件插件。该插件中包含有一组预置的jQuery事件，通过这些事件，可以在页面滚动时为指定元素制作相应的动画效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>要使用这个jQuery插件，需要在页面中引入jquery(1.11+)和jquery.scrollex.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.scrollex.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 调用插件</h5>
+<p>在页面DOM元素加载完毕之后，你可以通过<code>scrollex()</code>方法来初始化插件。例如，在指定元素上制作进入视口和离开视口的效果：</p>
+<pre class="brush:js">
+$(function() {
+$('#foobar').scrollex({
+enter: function() {
+// Set #foobar's background color to green when we scroll into it.
+$(this).css('background-color', 'green');
+},
+leave: function() {
+// Reset #foobar's background color when we scroll out of it.
+$(this).css('background-color', '');
+}
+});
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>jquery.scrollex.js插件支持以下一些事件。</p>
+<ul>
+<li>
+<code>enter</code>：当指定元素进入视口时触发。可以通过<code>mode</code>, <code>top</code>和<code>bottom</code>参数来调整它的行为。</li>
+<li>
+<code>leave</code>：当指定元素离开视口时触发。可以通过<code>mode</code>, <code>top</code>和<code>bottom</code>参数来调整它的行为。</li>
+<li>
+<code>initialize</code>：当<code>scrollex()</code>方法在某个元素上调用时触发。</li>
+<li>
+<code>terminate</code>：当<code>unscrollex()</code>方法在某个元素上调用时触发，它的作用是撤销前一个<code>scrollex()</code>调用。</li>
+<li>
+<code>scroll</code>：在某个元素滚动通过视口时触发。例如：
+<pre class="brush:js">
+$(function() {
+$('#foobar').scrollex({
+scroll: function(progress) {
+<p>// Progressively increase #foobar's opacity as we scroll through it.<br>
+$(this).css('opacity', Math.max(0, Math.min(1, progress)));</p>
+<p>}<br>
+});<br>
+});<br>
+</pre></p>
+</li>
+</ul>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> mode, top和bottom</h5>
+<p>元素在视口中的位置可以通过<code>mode</code>, <code>top</code>和<code>bottom</code>参数来做进一步的调整。</p>
+<p style="font-weight: 600">mode</p>
+<p>用于决定元素和视口的接触面积，判断一个元素是否在视口之内。可以是下面的一些取值：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>取值</td>
+<td>行为</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>元素和视口的接触面积在视口之内。</td>
+</tr>
+<tr>
+<td>top</td>
+<td>顶部视口边缘在元素之内。</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部视口边缘在元素之内。</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>顶部或底部视口边缘在元素的中间。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-weight: 600">top和bottom</p>
+<p>通过<code>top</code>和<code>bottom</code>参数可以移动元素和视口的接触面积，可以使用像素值，百分比值，或视口的百分比值(如<code>20vh</code>)。正值向视口内部移动，负值向视口外部移动。例如：</p>
+<pre class="brush:js">
+$(function() {
+$('#foobar').scrollex({
+top: '-20\%',
+bottom: '-20\%',
+enter: function() {
+$(this).css('background-color', 'green');
+<p>},<br>
+leave: function() {<br>
+$(this).css('background-color', '');<br>
+}<br>
+});<br>
+});<br>
+</pre></p>
+<p>jquery.scrollex.js插件的github地址为：<a href="https://github.com/n33/jquery.scrollex" target="\_blank">https://github.com/n33/jquery.scrollex</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1602/201602281643.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201602283160.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_852">
+                                <h3 class="post-title">
+                                    jQuery鼠标跟随星星特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

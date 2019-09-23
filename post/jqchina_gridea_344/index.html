@@ -1,0 +1,434 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Bootstrap的Typeahead自动补全插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Bootstrap的Typeahead自动补全插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1804/201804091625.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1804/201804091625.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201804095065.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Bootstrap-Typeahead是一款基于Bootstrap的Typeahead自动补全插件。该插件用来完成输入框的自动完成、模糊搜索和建议提示的功能，同时支持bootstrap3和bootstrap4。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Bootstrap-Typeahead是一款基于Bootstrap的Typeahead自动补全插件。该插件用来完成输入框的自动完成、模糊搜索和建议提示的功能，同时支持bootstrap3和bootstrap4。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap文件，以及bootstrap3-typeahead.js。</p>
+<pre class="brush:html">
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap3-typeahead.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本使用</h5>
+<p>Bootstrap-Typeahead的使用方式有两种：通过数据属性字段的方式和通过Javascript加载的方式。</p>
+<p>1、 通过属性字段的方式：</p>
+<pre class="brush:html">
+&lt;input type="text" data-provide="typeahead" autocomplete="off"&gt;
+</pre>
+<p>其中，<code>data-provide="typeahead"</code>属性字段表示使用typeahead扩展插件。<code>autocomplete="off"</code>表示关闭浏览器自带的自动完成功能。</p>
+<p>2、通过Javascript加载的方式：</p>
+<pre class="brush:js">
+$('.typeahead').typeahead(); 
+</pre>
+<p><img src="http://img.htmleaf.com/1804/typeaheadv4.png" width="251" height="207" alt="Bootstrap-Typeahead自动补全插件" style="max-width: 100\%;"></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 数据源</h5>
+<p>Bootstrap-Typeahead用于完成自动补全的数据源有两种方式：通过<code>source</code>属性来设置数据源，或者通过json数据来提供数据源。</p>
+<p>1、通过<code>source</code>属性来设置数据源：</p>
+<pre class="brush:js">
+$(".typeahead").typeahead({
+source: [
+{id: "id1", name: "jQuery"},
+{id: "id2", name: "Script"},
+{id: "id3", name: "Net"}
+]
+});
+</pre>
+<p>2、通过json数据来提供数据源</p>
+<pre class="brush:js">
+$.get("data.json", function(data){
+$(".typeahead").typeahead({ 
+source:data 
+});
+},'json');
+//data.json的格式如下：
+["jQuery","Script",".Net","Python","java","javascript","C++","CSS","HTML5"] 
+</pre>
+<p>另外，你也可以使用使用json对象来代替简单的字符串。</p>
+<pre class="brush:js">
+var $input = $(".typeahead");
+$input.typeahead({
+source: [
+{id: "someId1", name: "Display name 1"},
+{id: "someId2", name: "Display name 2"}
+],
+autoSelect: true
+});
+$input.change(function() {
+var current = $input.typeahead("getActive");
+if (current) {
+// Some item from your model is active!
+if (current.name == $input.val()) {
+// This means the exact match is found. Use toLowerCase() if you want case insensitive match.
+} else {
+// This means it is only a partial match, you can either add a new item
+// or take the active if you don't want new items
+}
+} else {
+// Nothing is active so it is a new value (or maybe empty value)
+}
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>配置参数可以通过<code>data-*</code>属性来设置，也可以在初始化是通过js来设置。需要注意的是，使用<code>data-*</code>属性来设置时，需要将驼峰格式的属性转换为连字符形式，例如，<code>data-minLength</code>需要写成<code>data-min-length</code>。</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>数组或函数</td>
+<td>[]</td>
+<td>提供查询的数据源，可以是一个字符串数组或者一个方法，该方法有两个参数：query 输入值和process回调函数，回调函数可以在返回数据源的时候调用，以将数据处理成typeahead能识别的标准数据源。</td>
+</tr>
+<tr>
+<td>items</td>
+<td>数值</td>
+<td>8</td>
+<td>显示在下拉菜单中的匹配数量的最大值。也可以设置为<code>'all'</code>。</td>
+</tr>
+<tr>
+<td>minLength</td>
+<td>数值</td>
+<td>1</td>
+<td>触发自动补全功能所需的最少输入字符个数。</td>
+</tr>
+<tr>
+<td>showHintOnFocus</td>
+<td>boolean 或 <code>'all'</code>
+</td>
+<td>false</td>
+<td>是否在输入框聚焦时显示提示数据。如果设置为<code>true</code>，所有匹配项会被显示。如果设置为<code>'all'</code>，则会显示所有的选项。</td>
+</tr>
+<tr>
+<td>scrollHeight</td>
+<td>数值或函数</td>
+<td>0</td>
+<td>Number of pixels the scrollable parent container scrolled down。</td>
+</tr>
+<tr>
+<td>matcher</td>
+<td>函数</td>
+<td>不区分大小写</td>
+<td>决定查询是否匹配条目。带有一个单一的参数，即要测试查询的条目。当前查询通过this.query访问。返回一个布尔值true，表示查询匹配。数据类型是 function。默认情况下是大小写不敏感的。</td>
+</tr>
+<tr>
+<td>sorter</td>
+<td>函数</td>
+<td>exact match, case sensitive, case insensitive</td>
+<td>该方法用于给数据源排序。带有一个单一的参数，即具有 typeahead 实例范围的条目。当前查询通过this.query访问。数据类型是function。默认值是精确匹配的，其他的值还可以是大小写敏感、大小写不敏感。</td>
+</tr>
+<tr>
+<td>updater</td>
+<td>函数</td>
+<td>返回选择的项</td>
+<td>该方法用于返回选择的搜索项，有一个入参item，表示typeahead数据源中返回的单个实例。</td>
+</tr>
+<tr>
+<td>highlighter</td>
+<td>函数</td>
+<td>highlights all default matches</td>
+<td>用于自动高亮突出显示结果。带有一个单一的参数，即具有typeahead实例范围的条目。数据类型是function。默认情况下是高亮突出显示所有默认的匹配项。</td>
+</tr>
+<tr>
+<td>displayText</td>
+<td>函数</td>
+<td>item.name || item</td>
+<td>该方法获取源项的文本表示的方法。</td>
+</tr>
+<tr>
+<td>autoSelect</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否自动选择第一个匹配项。</td>
+</tr>
+<tr>
+<td>afterSelect</td>
+<td>函数</td>
+<td><code>$.noop()</code></td>
+<td>在选择一个匹配项之后的回调函数。</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>整数</td>
+<td>0</td>
+<td>在每次查找之间添加一定的延迟时间。</td>
+</tr>
+<tr>
+<td>appendTo</td>
+<td>jquery对象</td>
+<td>null</td>
+<td>默认情况下，匹配项菜单会被添加到输入框下面。你可以通过该参数，将匹配项菜单添加到其它地方，例如添加到另外一个div中。</td>
+</tr>
+<tr>
+<td>fitToElement</td>
+<td>boolean</td>
+<td>false</td>
+<td>设置为<code>true</code>时，将匹配项菜单的宽度和输入框的宽度一致。</td>
+</tr>
+<tr>
+<td>addItem</td>
+<td>JSON对象</td>
+<td>false</td>
+<td>在列表项之后添加新的项。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>Bootstrap-Typeahead的可用方法有：</p>
+<ul>
+<li>
+<code>.typeahead(options)</code>：初始化方法。</li>
+<li>
+<code>.lookup</code>：从外部触发查询方法。</li>
+<li>
+<code>.getActive</code>：获取当前的匹配项。获取到的数据可能是JSON或字符串，取决于你初始化时数据源的格式。</li>
+</ul>
+<p>通过<code>destroy</code>可以销毁该插件。</p>
+<pre class="brush:js">
+$('.typeahead').typeahead('destroy')
+</pre>
+<p><i class="fa fa-github"></i> Bootstrap-Typeahead自动补全插件的github地址为：<a href="https://github.com/bassjobsen/Bootstrap-3-Typeahead" target="\_blank">https://github.com/bassjobsen/Bootstrap-3-Typeahead</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1804/201804091625.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201804095065.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_345">
+                                <h3 class="post-title">
+                                    基于Bootstrap的jquery动态数据表格插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

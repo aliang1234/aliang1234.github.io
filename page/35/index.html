@@ -1,0 +1,1584 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1309">
+                        jQuery可智能缓存响应数据的ajax调用插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1309" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503181537.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Smartjax是一款可以将ajax请求的内容进行智能缓存的jQuery插件。Smartjax.ajax()可以将ajax的回调内容缓存在浏览器中，再次进行相同url的ajax调用时，不会在向服务器发送请求，而是读取本地的缓存。
+内容：
+
+
+简要教程
+
+
+Smartjax是一款可以将ajax请求的内容进行智能缓存的jQuery插件。作为原生jQuery的$.ajax()方法的替代，Smartjax.ajax()可以将ajax的回调内容缓存在浏览器中，再次进行相同url的ajax调用时，不会在向服务器发送请求，而是读取本地的缓存。你还可以强制发送ajax请求，或清除指定或所有的ajax缓存内容。
+Smartjax的特点有：
+
+Smartjax.js是一个轻量级的插件。
+Smartjax的语法和原生jQuery $.ajax()的语法十分相似，你只需要注意一些额外的参数即可。
+减少服务器端的http请求可以大大提升你的网站性能。
+
+如上面所述，Smartjax会缓存ajax响应信息，并且不会对同一个url发生两次ajax请求。举个例子来说明：例如你要在你的网站的右上方显示用户登录状态和用户信息，如果你每一个页面都要显示这个信息，那么每一个页面都会向服务器发送相同的ajax请求来获取该用户的信息，或者是通过服务器端程序来完成这个功能。如果使用smartjax，那么它会在第一次获取用户信息后，将信息缓存在浏览器中，以后每个页面的用户信息都会从浏览器缓存中提取。
+
+ 使用方法
+smartjax的使用方法非常简单，下面是它和原生jQuery ajax的比较：
+
+ 原生jQuery Ajax
+
+$.ajax({
+url:&#39;http://httpbin.org/post&#39;,
+type: &#39;POST&#39;,
+data:{
+a:1,b:2
+}
+});
+
+
+ Smartjax
+
+Smartjax.ajax({
+url:&#39;http://httpbin.org/post&#39;,
+type: &#39;POST&#39;,
+data:{
+a:1,b:2
+}
+}); 
+
+
+ 如果控制ajax数据
+通过Smartjax.ajax()的一些参数和方法，你可以控制ajax响应数据的缓存方式，以及清除缓存和保存数据的方式。
+
+
+Smartjax：在你引入smartjax.js文件之后，会创建一个全局的变量Smartjax，该变量包含一个方法,ajax()。
+
+force：如果在某个ajax调用中设置force属性为true，smartjax会强制执行ajax调用并更新缓存的内容。
+
+Smartjax.ajax({
+url:&#39;http://httpbin.org/post&#39;,
+type: &#39;POST&#39;,
+data:{
+a:1,b:2
+},
+force:true
+});
+
+该参数默认值为false。
+
+
+store：如果在某个ajax调用中设置store属性为false，那么响应的信息不回被缓存。
+
+Smartjax.ajax({
+url:&#39;http://httpbin.org/post&#39;,
+type: &#39;POST&#39;,
+data:{
+a:1,b:2
+},
+store:false
+});
+
+
+
+group：你可以使用group参数来对ajax调用进行分组。在清除响应缓存的时候，组是非常有用的。
+
+Smartjax.ajax({
+url:&#39;http://httpbin.org/post&#39;,
+type: &#39;POST&#39;,
+data:{
+a:1,b:2
+},
+group:&#34;group1&#34;
+});
+
+
+
+cleanStore(param)：该方法用于清除ajax的缓存数据。可以使用组参数来清除某一个组的缓存数据。
+
+Smartjax.cleanStore({groups:[&#34;g1&#34;]});
+
+
+
+cleanAll()：该方法没有参数，作用是清除所有的ajax缓存数据。
+
+Smartjax.cleanAll();
+
+
+
+setDefaults(param)：该方法接收一个对象作为参数。默认的调用方式是get方式，你可以进行修改，其它两个参数和force和store相同。
+
+Smartjax.setDefaults({
+defaultMethod: &#39;get&#39;,
+alwaysForce: false,
+alwaysStore: true
+});
+
+
+
+
+ Pipelined features
+
+support of ID. It will make saving data and retrieving faster.
+Record and Mock services, which will help you to develop UI even if your api is not ready.
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1309">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_131">
+                        js 3D旋转木马特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_131" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1907/201907226463.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js 3D旋转木马特效插件。该插件通过CSS3和纯js来完成，可在中以3D旋转的方式来展示一组图片。
+内容：
+
+
+简要教程
+
+
+这是一款js 3D旋转木马特效插件。该插件通过CSS3和纯js来完成，可在中以3D旋转的方式来展示一组图片。
+
+ 使用方法
+
+ HTML结构
+
+&amp;lt;div id=&#34;drag-container&#34;&amp;gt;
+&amp;lt;div id=&#34;spin-container&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-206395.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-1391498.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-1382731.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-1758144.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-1382734.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;img src=&#34;images/pexels-photo-1462636.jpeg&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;images/pexels-photo-139829.jpeg&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;images/pexels-photo-139829.jpeg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;video controls autoplay=&amp;quot;autoplay&amp;quot; loop&amp;gt;
+&amp;lt;source src=&amp;quot;&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
+&amp;lt;/video&amp;gt;
+&amp;lt;p&amp;gt;3D Tiktok Carousel&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;ground&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;music-container&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+
+* {
+margin: 0;
+padding: 0;
+}
+html,
+body {
+height: 100%;
+}
+body {
+overflow: hidden;
+display: flex;
+background: #111;
+perspective: 1000px;
+transform-style: preserve-3d;
+}
+#drag-container, #spin-container {
+position: relative;
+display: flex;
+margin: auto;
+transform-style: preserve-3d;
+transform: rotateX(-10deg);
+}
+#drag-container img, #drag-container video {
+transform-style: preserve-3d;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+line-height: 200px;
+font-size: 50px;
+text-align: center;
+box-shadow: 0 0 8px #fff;
+-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+}
+#drag-container img:hover, #drag-container video:hover {
+box-shadow: 0 0 15px #fffd;
+-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+#drag-container p {
+font-family: Serif;
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translate(-50%,-50%) rotateX(90deg);
+color: #fff;
+}
+#ground {
+width: 900px;
+height: 900px;
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translate(-50%,-50%) rotateX(90deg);
+background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+}
+#music-container {
+position: absolute;
+top: 0;
+left: 0;
+}
+#carousel-container {
+width: 100%;
+height: 100%;
+}
+@keyframes spin {
+from{
+transform: rotateY(0deg);
+} to{
+transform: rotateY(360deg);
+}
+}
+@keyframes spinRevert {
+from{
+transform: rotateY(360deg);
+} to{
+transform: rotateY(0deg);
+}
+}
+
+
+ JavaScript
+
+var radius = 240; 
+var autoRotate = true; 
+var rotateSpeed = -60; 
+var imgWidth = 120; 
+var imgHeight = 170; 
+var bgMusicURL = &#39;&#39;;
+var bgMusicControls = true;
+// ===================== start =======================
+setTimeout(init, 100);
+var obox = document.getElementById(&#39;drag-container&#39;);
+var ospin = document.getElementById(&#39;spin-container&#39;);
+var aImg = ospin.getElementsByTagName(&#39;img&#39;);
+var aVid = ospin.getElementsByTagName(&#39;video&#39;);
+var aEle = [...aImg, ...aVid];
+ospin.style.width = imgWidth + &amp;quot;px&amp;quot;;
+ospin.style.height = imgHeight + &amp;quot;px&amp;quot;;
+var ground = document.getElementById(&#39;ground&#39;);
+ground.style.width = radius * 3 + &amp;quot;px&amp;quot;;
+ground.style.height = radius * 3 + &amp;quot;px&amp;quot;;
+function init(delayTime) {
+for (var i = 0; i &amp;lt; aEle.length; i++) {
+aEle[i].style.transform = &amp;quot;rotateY(&amp;quot; + (i * (360 / aEle.length)) + &amp;quot;deg) translateZ(&amp;quot; + radius + &amp;quot;px)&amp;quot;;
+aEle[i].style.transition = &amp;quot;transform 1s&amp;quot;;
+aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + &amp;quot;s&amp;quot;;
+}
+}
+function applyTranform(obj) {
+if(tY &amp;gt; 180) tY = 180;
+if(tY &amp;lt; 0) tY = 0;
+obj.style.transform = &amp;quot;rotateX(&amp;quot; + (-tY) + &amp;quot;deg) rotateY(&amp;quot; + (tX) + &amp;quot;deg)&amp;quot;;
+}
+function playSpin(yes) {
+ospin.style.animationPlayState = (yes?&#39;running&#39;:&#39;paused&#39;);
+}
+var sX, sY, nX, nY, desX = 0,
+desY = 0,
+tX = 0,
+tY = 10;
+if (autoRotate) {
+var animationName = (rotateSpeed &amp;gt; 0 ? &#39;spin&#39; : &#39;spinRevert&#39;);
+ospin.style.animation = ${animationName} ${Math.abs(rotateSpeed)}s infinite linear;
+}
+if (bgMusicURL) {
+document.getElementById(&#39;music-container&#39;).innerHTML += &amp;amp;lt;audio src=&amp;quot;${bgMusicURL}&amp;quot; ${bgMusicControls? &#39;controls&#39;: &#39;&#39;} autoplay loop&amp;amp;gt; &amp;amp;lt;p&amp;amp;gt;If you are reading this, it is because your browser does not support the audio element.&amp;amp;lt;/p&amp;amp;gt; &amp;amp;lt;/audio&amp;amp;gt;;
+}
+if (mobilecheck()) {
+// ==================== Touch Events ====================
+document.ontouchstart = function(e) {
+clearInterval(obox.timer);
+e = e || window.event;
+var sX = e.touches[0].clientX,
+sY = e.touches[0].clientY;
+this.ontouchmove = function(e) {
+e = e || window.event;
+var nX = e.touches[0].clientX,
+nY = e.touches[0].clientY;
+desX = nX - sX;
+desY = nY - sY;
+tX += desX * 0.1;
+tY += desY * 0.1;
+applyTranform(obox);
+sX = nX;
+sY = nY;
+}
+this.ontouchend = function(e) {
+this.ontouchmove = this.ontouchend = null;
+obox.timer = setInterval(function() {
+desX *= 0.95;
+desY *= 0.95;
+tX += desX * 0.1;
+tY += desY * 0.1;
+applyTranform(obox);
+playSpin(false);
+if (Math.abs(desX) &amp;lt; 0.5 &amp;amp;&amp;amp; Math.abs(desY) &amp;lt; 0.5) {
+clearInterval(obox.timer);
+playSpin(true);
+}
+}, 17);
+}
+// return false;
+}
+} else {
+// ==================== Mouse Events ====================
+document.onmousedown = function(e) {
+clearInterval(obox.timer);
+e = e || window.event;
+var sX = e.clientX,
+sY = e.clientY;
+this.onmousemove = function(e) {
+e = e || window.event;
+var nX = e.clientX,
+nY = e.clientY;
+desX = nX - sX;
+desY = nY - sY;
+tX += desX * 0.1;
+tY += desY * 0.1;
+applyTranform(obox);
+sX = nX;
+sY = nY;
+}
+this.onmouseup = function(e) {
+this.onmousemove = this.onmouseup = null;
+obox.timer = setInterval(function() {
+desX *= 0.95;
+desY *= 0.95;
+tX += desX * 0.1;
+tY += desY * 0.1;
+applyTranform(obox);
+playSpin(false);
+if (Math.abs(desX) &amp;lt; 0.5 &amp;amp;&amp;amp; Math.abs(desY) &amp;lt; 0.5) {
+clearInterval(obox.timer);
+playSpin(true);
+}
+}, 13);
+}
+return false;
+}
+document.onmousewheel = function(e) {
+e = e || window.event;
+var d = e.wheelDelta / 20 || -e.detail;
+radius += d;
+init(1);
+};
+}
+
+ 该js 3D旋转木马特效插件的codepen网址为：https://codepen.io/hoanghien0410/pen/MMPaqm
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_131">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1310">
+                        jQuery轻量级模块化select下拉列表框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1310" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503131612.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+select3是一款基于jQuery或Zepto.js的轻量级模块化select下拉列表框插件。select3下拉列表框可以进行单选、以tag的形式进行多选、可以指定输入类型格式、可以进行分组选择、还可以ajax进行远程调用。
+内容：
+
+
+简要教程
+
+
+select3是一款基于jQuery或Zepto.js的轻量级模块化select下拉列表框插件。select3下拉列表框可以进行单选、以tag的形式进行多选、可以指定输入类型格式、可以进行分组选择、还可以ajax进行远程调用。select3的特点有：
+
+丰富的UI：Select3制作的下拉列表框有丰富的功能，可以很容易被定制。
+模块化：Select3的模块化方法可以让你非常容易的创建出自定义的组件，并且可以很容易的于默认组件相交换。
+轻量级：Select3是一个小巧灵活的下拉列表框插件，即使你使用全部的功能也非常的“轻”。
+兼容性：Select3可以和jQuery和Zepto.js完美结合使用。
+
+
+ 安装
+可以通过Bower来安装select3：
+
+$ bower install select3
+
+手动安装：在HTML的头部引入select3-full.js和select3-full.css文件。
+
+&amp;lt;head&amp;gt;
+...
+&amp;lt;link href=&#34;font-awesome.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;select3-full.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+...
+&amp;lt;script src=&#34;jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;select3-full.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+...
+&amp;lt;/head&amp;gt;
+
+注意：默认的模板需要引入FontAwesome才能使用图标。
+select3是内置模块化，使用Gulp来作为构建系统来构建文件。要安装必要的依赖，请运行：
+
+$ npm install -g gulp
+$ npm install
+
+然后你可以生成新的发行版文件：
+
+$ npm run build
+
+
+ 自定义模块
+如果你想创建只包含你需要的模块的Select3库，你可以使用下面的命令：
+
+$ gulp --modules=&amp;lt;comma-separated-module-list&amp;gt;
+
+下面是可用的模块：
+
+
+
+
+模块名称
+描述
+
+
+
+
+ajax
+用于创建ajax请求的模块。所有传递给ajax对象的参数都由该模块提供。
+
+
+async
+Blocks the query function from calling its callback functions if another query has been issued since. This prevents out-of-order replies from remote sources to display incorrect results. This module is only needed if you use the query function and call its callbacks asynchronously.
+
+
+backdrop
+该模块为下拉列表框提供背景。backdrop用于确保下拉列表框打开时，用户点击下拉列表框的外面时下拉列表框被关闭。如果忽略该模块，插件会使用一个简单的替代方案来执行列表框的关闭动作，但是如果用户点击在一个带点击事件的元素上时，该元素的点击事件将被阻止。
+
+
+base
+Select3的基本模块。
+
+
+diacritics
+Diacritics support. This will make sure that &#34;Łódź&#34; will match when the user searches for &#34;Lodz&#34;, for example. However, if you always query a server when searching for results, you may want to solve matching of diacritics server-side, in which case this module can be ommitted.
+
+
+dropdown
+实现dropdown功能的模块。
+
+
+email
+实现输入类型为&#34;Email&#34;的模块。这是一个特殊的列表框，可以多重选择、没有下拉列表。它使用专业的标记来识别电子邮件格式是否正确。
+
+
+keyboard
+提供下拉列表框的键盘支持。如果你不使用下拉框或只在手机上使用，可以不需要该模块。
+
+
+locale
+默认模板的内容本地化模块。你可以自行决定是否在你的自定义模块中使用该模块。它也可以本地化ajax模块的信息。
+
+
+multiple
+实现多选下拉列表框的模块。
+
+
+single
+实现单选下拉列表框的模块。
+
+
+submenu
+继承默认的dropdown，实现多级下拉列表功能。
+
+
+templates
+Select3默认的模板。
+
+
+tokenizer
+默认的tokenizer实现。该模块用于支持tokenSeparators选项。Support for tokenizers themselves is already included in the &#34;multiple&#34; module, so you can omit this module if you don&#39;t want to use any tokenizers or want to specify your own tokenizer.
+
+
+traditional
+该模块允许你将一个HTML5 &amp;lt;select&amp;gt;表单元素转换为一个Select3实例。items将使用&amp;lt;option&amp;gt;和&amp;lt;optgroup&amp;gt;来初始化。
+
+
+
+
+注意：构建系统会自动解决各个模块之间的依赖问题，所以你不用特别指定base模块，例如：
+
+$ gulp --modules=multiple,dropdown
+
+上面的代码会创建多重选择和下拉列表的select3文件。文件会存储在dist/select3-custom.js中。dropdown没有backdrop特性，没有diacritics的支持，你还要提供自定义的带本地化内容的模板，并且你不能使用该文件来创建单选下拉列表框。
+跟多详细信息请参考：https://github.com/arendjr/select3
+select3的参数、事件及使用方法请查看DEMO。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1310">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1311">
+                        jQuery炫酷插入和移动元素动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1311" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503062024.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Magic Move是一款效果非常棒的jQuery炫酷插入和移动元素动画特效插件。这款插件可以以非常平滑的方式在指定元素之前插入其它元素，并且当最右边的元素超出容器时会自动下移插入到下一行的第一个位置。
+内容：
+
+
+简要教程
+
+
+Magic Move是一款效果非常棒的jQuery炫酷插入和移动元素动画特效插件。元素的动画和过渡效果在如今的页面设计中对用户的体验至关重要。这款插件可以以非常平滑的方式在指定元素之前插入其它元素，并且当最右边的元素超出容器时会自动下移插入到下一行的第一个位置，整体效果非常不错。
+
+ 使用方法
+
+$(&#39;.containers&#39;).magicMove({
+easing: &#39;ease&#39;,
+duration: 300
+},
+function(){
+var $el = $(&#39;&amp;lt;section&amp;gt;Third&amp;lt;/section&amp;gt;&#39;);
+$(this).find(&#39;.second&#39;).after($el);
+}
+);
+
+$.fn.magicMove的第二个参数是一个回调函数，它用于执行你要插入和制作过渡动画的元素。该插入和移动元素插件的原理非常简单，通过操纵DOM元素来简单的隐藏和显示元素，添加或移除class，在这个过程中，过渡动画效果将被执行。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1311">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1312">
+                        jQuery超酷3D翻页式电子时钟特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1312" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503311725.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+FlipClock.js是一款实现翻页式效果的jQuery计时器插件。该计时器插件可以实现时分秒的计时，12小时制的计时，24小时制的计时，各种计数器效果，倒计数效果等等。
+内容：
+
+
+简要教程
+
+
+FlipClock.js是一款实现翻页式效果的jQuery计时器插件。该计时器插件可以实现时分秒的计时，12小时制的计时，24小时制的计时，各种计数器效果，倒计数效果等等。
+它的效果和jQuery和CSS3超酷3D翻牌式倒计数特效类似，但功能更加强大。
+现在有各种版本的计时器和计数器插件，但是它们大部分都是只实现了某个特定方面的内容。而FlipClock充分适应了各种需求，既可以做计数器，也可以做计时器。以下是FlipClock的一些应用场景和它的一些特点：
+
+作为时钟使用。
+作为计时器使用。
+作为倒计数器使用。
+FlipClock的样式使用纯CSS定制。
+语法干净整洁。
+所有的东西都抽象到一个可复用的对象上。
+提供完整的API来创建“Clock Faces”。
+
+
+ 使用方法
+该计时器插件需要jQuery 1.7.x+的支持。使用时要先引入jQuery和flipclock.js以及flipclock.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/flipclock.css&#34;&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;js/flipclock.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该计时器插件使用一个空的&amp;lt;div&amp;gt;即可。
+
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/assets/css/flipclock.css&#34;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div class=&#34;your-clock&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;quot;/assets/js/libs/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;/assets/js/flipclock/flipclock.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ JAVASCRIPT
+FlipClock需要jQuery来管理页面上的DOM元素。它是典型的jQuery插件，但是它返回的不是jQuery对象，而是一个FlipClock对象。
+
+var clock = $(&#39;.your-clock&#39;).FlipClock({
+// ... your options here
+});
+
+
+var clock = new FlipClock($(&#39;.your-clock&#39;), {
+// ... your options here
+});
+
+
+ 配置参数
+
+
+autoStart：类型：boolean。如果设置为false，时钟不会自动开始运行。默认值为true。
+
+countdown：类型：boolean。如果设置为true，时钟会以向上翻页的形式执行计时动画。默认值为false。
+
+callbacks：类型：object。在各种时间事件被触发后返回的一个对象回调函数。
+
+classes：类型：object。用于添加到DOM元素上的CSS类的对象。
+
+clockFace：类型：string。用于创建所显示时钟的名称。默认值为HourlyCounter。
+
+defaultClockFace：类型：string。如果 clock face 没哟丠定义，使用该参数来作为默认的 clock face 。默认值为HourlyCounter。
+
+defaultLanguage：类型：string。默认使用的语言。默认值是english。
+
+
+ 方法
+下面的方法属于 FlipClock.Factory 类的方法。
+
+
+start()：在FlipClock对象是上调用该方法会使时钟开始动画。
+
+clock.start(function() {
+// this (optional) callback will fire each time the clock flips
+});
+
+
+
+stop()：该方法会将时钟动画停止。
+
+clock.stop(function() {
+// this (optional) callback will fire after the clock stops
+});
+
+
+
+setTime()：该方法会在初始化后设置时钟的时间。
+
+clock.setTime(3600);
+
+
+
+setCountdown()：该方法会改变计数器的计数方式，向上或向下计数。
+
+clock.setCountdown(true);
+
+
+
+getTime()：在初始化后获取时钟的时间。
+var time= clock.getTime(); // Returns the FlipClock.Time object
+
+
+
+ Callbacks
+
+
+destroy：当timer被销毁的时候触发。
+
+create：当 clock face 创建的时候触发。
+
+init：当FlipClock对象初始化的时候被触发。
+
+interval：在timer的每次时间间隔触发。
+
+start：当时钟开始动画的时候触发。
+
+stop：当时钟停止动画的时候触发。
+
+reset：当timer被重置的时候触发。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1312">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1313">
+                        可通过拖动鼠标进行页面滚动的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1313" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503251625.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+dragscroll是一款非常小巧的可通过拖动来进行滚动的js插件。该拖动滚动插件的min版本只有410个字节。通过该插件你可以将整个页面或某个div转换为可用鼠标拖动来滚动的元素。这对于某些场合的展示效果是非常有用的。
+内容：
+
+
+简要教程
+
+
+dragscroll是一款非常小巧的可通过拖动来进行滚动的js插件。该拖动滚动插件的min版本只有410个字节。通过该插件你可以将整个页面或某个div转换为可用鼠标拖动来滚动的元素。这对于某些场合的展示效果是非常有用的。
+dragscroll的最小版本dragscroll\_micro.js大小为410个字节，仅支持基本的拖放滚动功能。
+dragscroll的完整版本dragscroll.js大小有741个字节，它比最小版本多了一些额外的功能：
+
+添加了一个UMD模块。
+可以在页面加载后才被调用，插件会自动查找带有dragscroll class的元素，并将这些元素进行转换。最小化版本不能再页面初始化之后再加载，必须写在页面的&amp;lt;head&amp;gt;中。
+可以动态的添加或删除带有dragscroll class的元素。如果你执行了这些操作，要使用dragscroll.reset()方法来更新元素。
+
+
+ 使用方法
+要使用该鼠标拖动滚动元素js插件，先要在页面中引入dragscroll\_micro.js或dragscroll.js文件。
+
+&amp;lt;script src=&#34;dragscroll.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后在你需要进行拖动滚动的元素上添加class dragscroll。
+
+&amp;lt;div class=&#34;dragscroll&#34;&amp;gt;
+Big text goes here...
+&amp;lt;/div&amp;gt;
+
+就这么简单，现在这个元素就可以进行鼠标拖动滚动了。你也可以在&amp;lt;body&amp;gt;元素上添加dragscroll，使整个页面都可以进行鼠标拖动滚动。
+注意：在使用这个插件之后，你将不可以对已经转换为拖动滚动的区域用鼠标来选择文本，所以你可以设置cursor: default;CSS样式来提醒用户该区域不能被选择。如果内容不是文本，你也可以设置为：cursor: grab;。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1313">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1314">
+                        jQuery炫酷图片3d背景视觉差特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1314" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504051520.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Smart3D是一款效果非常炫酷的jQuery图片背景视觉差特效插件。该插件将图片以层的形式排放，当鼠标滑过图片的时候，每一层的图片的运动速度各不相同，从而形成强烈的视觉差效果。
+内容：
+
+
+简要教程
+
+
+Smart3D是一款效果非常炫酷的jQuery图片背景视觉差特效插件。该插件将图片以层的形式排放，当鼠标滑过图片的时候，每一层的图片的运动速度各不相同，从而形成强烈的视觉差效果。
+
+ 使用方法
+
+ HTML结构
+该图片背景视觉差特效使用无序列表来组织各个图层，每一个&amp;lt;li&amp;gt;元素是一个图片层。
+
+&amp;lt;ul id=&#34;smartdemo1&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/1.png&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/2.png&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/3.png&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/4.png&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/5.png&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ CSS样式
+CSS设置只需要为&amp;lt;ul&amp;gt;和&amp;lt;li&amp;gt;分别设置一个宽度和高度即可。
+
+#mindscape {
+width: 720px;
+height: 170px;
+overflow: hidden;
+border:2px solid #444444;
+}
+#mindscape li{
+width: 844px;
+height: 170px;
+} 
+
+
+ JAVASCRIPT
+在页面加载完毕后，可用下面的方法调用该视觉差插件。
+
+$(function() {
+$(&#39;#mindscape&#39;).smart3d();
+});
+
+
+ 可用参数
+以下是该视觉差特效的一些可用参数。
+
+
+frameWidth：类型：integer。可选项，设置宽度（可以在CSS中设置）。
+
+frameHeight：类型：integer。可选项，设置高度（可以在CSS中设置）。
+
+horizontal：类型：boolean。可选项，是否是水平视觉差效果。默认值：true。
+
+vertical：类型：boolean。可选项，是否是垂直视觉差效果。默认值：true。
+
+firstStatic：类型：boolean。可选项，第一个图片是否静止。默认值：true。
+
+lastStatic：类型：boolean。可选项，最后一个图片是否静止。默认值：true。
+
+invertHorizontal：类型：boolean。可选项，水平反转。默认值：false。
+
+invertVertical：类型：boolean。可选项，垂直反转。默认值：false。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1314">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1315">
+                        基于animate.css的jQuery文字动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1315" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502011812.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Morphext是一款简单、高性能和跨浏览器的jQuery文字动画插件。该文字动画jQuery插件基于Animate.css。你可以设置使用多个不同的句子，Morphext会以你指定的CSS3动画方式轮流显示它们。
+内容：
+
+
+简要教程
+
+
+Morphext是一款简单、高性能和跨浏览器的jQuery文字动画插件。该插件基于 Animate.css 。你可以设置使用多个不同的句子，Morphext会以你指定的CSS动画方式轮流显示它们。Morphext所做的事情是隐藏前一个文本短句，然后使用下一个来替换它。插件中已经为跨浏览器处理好了所有浏览器厂商的前缀问题，它可以为我们提供非常酷的文字动画效果。
+使用方法
+首先要在页面中引入jQuery文件和 Animate.css 文件以及 morphext.min.js和morphext.css文件。
+将你想要动画的文字句子封装到一个元素中，并且用逗号隔开每一个句子。
+
+I am a So Simple, Very Doge, Much Wow, Such Cool Text Rotator
+
+然后可以在元素上调用Morphext()方法来启用插件：
+
+$(&#34;#js-rotating&#34;).Morphext();
+
+可用参数
+
+
+animation：类型：string，CSS动画的类型，可以是 Animate.css 中任何一种可用的动画类型。默认值：bounceIn。
+
+separator：类型：string，用于分割句子字符串的符号。可以改变这个符号，例如使用&#34;|&#34;： So Simple | Very Doge | Much Wow | Such Cool。默认值：, 
+
+speed：类型：int，文字动画的时间间隔，单位毫秒，默认值2000。
+
+下面是一个例子：
+
+$(&#34;#js-rotating&#34;).Morphext({
+animation: &#34;fadeIn&#34;, // Overrides default &#34;bounceIn&#34;
+separator: &#34;|&#34;, // Overrides default &#34;,&#34;
+speed: 3000 // Overrides default 2000
+});
+
+该文字动画插件在很大程度上依赖于Animate.css来制作两个句子之间的平滑高质量的过渡动画。默认的动画速度可以通过CSS来修改：
+
+#yourElement, .yourClass {
+/* Overrides Animate.css 1s duration */
+-vendor-animation-duration: 3s;
+}
+
+一些问题
+Animate.css的一些动画效果如&#34;up&#34;或&#34;down&#34;可能会超出窗口，这不是一个bug，解决的方法是在其父元素中使用overflow: hidden;。
+插件中需要使用js来添加或移除Animate.css的class来执行相应的动画效果，如果浏览器不支持js，那么将看不到任何效果。
+Animate.css依赖于CSS3 animations和transformations。如果浏览器不支持CSS3，该插件仍然会进行句子转换，但是没有动画效果，插件中没有提供回退的方法，如果你需要回退，可以使用Modernizr来编写回退的方法。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1315">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1316">
+                        基于bootstrap的jQuery多功能模态对话框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_3">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1316" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502141559.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的基于bootstrap的jQuery多功能模态对话框插件。该bootstrap jQuery模态对话框集警告框、确认框和对话框于一体。是一款不可多得的多功能、多用途的模态对话框插件。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的基于bootstrap的jQuery多功能模态对话框插件。该jQuery模态对话框集警告框、确认框和对话框于一体。是一款不可多得的多功能、多用途的模态对话框插件。它的主要特点有：
+
+可以通过AJAX直接将调用内容到对话框中。
+可以在指定的时间后自动关闭对话框。
+可以设置为点击模态背景不关闭对话框。
+拥有丰富的回调函数。
+
+
+ 使用方法
+
+ 插件依赖
+该jQuery模态对话框插件有俩个外部依赖：
+
+Bootstrap by Twitter &amp;gt; v2
+jQuery library &amp;gt; v1.8
+
+在页面中引入jQuery和jquery-confirm.js以及jquery-confirm.css文件，同时引入bootstrap依赖文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;demo/libs/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;demo/libs/bootstrap-theme.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery-confirm.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;demo/libs/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery-confirm.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 基本使用
+显示对话框：
+
+$.alert({
+title: &#39;Alert!&#39;,
+content: &#39;Alert! alert! alert!&#39;,
+confirm: function(){
+alert(&#39;the user clicked yes&#39;);
+}
+});
+
+显示确认框
+
+$.confrim({
+title: &#39;Confirm!&#39;,
+content: &#39;Confirm! Confirm! Confirm!&#39;,
+confirm: function(){
+alert(&#39;the user clicked confirm&#39;);
+},
+cancel: function(){
+alert(&#39;the user clicked cancel&#39;)
+}
+});
+
+注意：$.confirm()和$.alert()方法都是jconfirm()方法的别名。
+
+ 全局默认参数
+
+jconfirm.pluginDefaults = {
+title: &#39;Hello&#39;,
+content: &#39;Are you sure to continue?&#39;,
+icon: &#39;&#39;,
+confirmButton: &#39;Okay&#39;,
+cancelButton: &#39;Cancel&#39;,
+confirmButtonClass: &#39;btn-default&#39;,
+cancelButtonClass: &#39;btn-default&#39;,
+theme: &#39;white&#39;,
+animation: &#39;scale&#39;,
+animationSpeed: 400,
+confirm: function () {
+},
+cancel: function () {
+},
+backgroundDismiss: true,
+autoClose: false,
+closeIcon: true
+};
+
+
+ 配置参数
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+title
+String
+&#39;Hello&#39;
+模态对话框的标题
+
+
+content
+String
+&#39;Are you sure to continue?&#39;
+模态对话框的的内容
+
+
+icon
+String
+&#39;&#39;
+模态对话框标题前的小图标
+
+
+
+confrimButton
+String
+&#39;Okay&#39;
+模态对话框确认按钮的文本
+
+
+cancelButton
+String
+&#39;Cancel&#39;
+模态对话框取消按钮的文本
+
+
+confirmButtonClass
+String
+&#39;btn-default&#39;
+模态对话框确认按钮的class
+
+
+cancelButtonClass
+String
+&#39;btn-default&#39;
+模态对话框取消按钮的class
+
+
+theme
+String
+&#39;white&#39;
+模态对话框的颜色主题。
+可用选项有 &#39;white&#39; &amp;amp; &#39;black&#39;
+
+
+
+animation
+String
+&#39;scale&#39;
+
+模态对话框的打开/关闭动画
+可用选项有 &#39;scale&#39;, &#39;top&#39;, &#39;bottom&#39;, &#39;left&#39;, &#39;right&#39;, &#39;zoom&#39;, &#39;opacity&#39;, &#39;none&#39;, &#39;rotate&#39;, &#39;rotatex&#39;, &#39;rotatey&#39;, &#39;scalex&#39;, &#39;scaley&#39;, &#39;blur&#39;.
+
+
+
+animationSpeed
+Number
+400
+模态对话框动画的持续时间，单位毫秒。
+
+
+confirm
+Function
+function(){}
+当用户点击模态对话框的确认按钮后的回调函数。
+
+
+
+cancel
+Function
+function(){}
+当用户点击模态对话框的取消按钮后的回调函数。
+
+
+
+backgroundDismiss
+Boolean
+true
+是否允许用户点击模态对话框以外的区域来改变模态对话框。
+
+
+autoClose
+String
+false
+
+如果用户无操作，在指定的时间后关闭模态对话框。
+possible option &#39;confirm|400&#39; 
+
+字符串通过 &#39;|&#39;来分割, 前面的部分指定触发的按钮, &#39;confirm&#39; 或者 &#39;cancel&#39;。 后面的部分指定等待的时间，单位毫秒。
+
+
+
+
+closeIcon
+Boolean
+true
+
+如果所有的按钮都不可用，关闭模态窗口的小图标变为一张图片（dialog模式）。
+你可以通过设置icon的值为false来移除它。
+
+
+
+
+
+ 方法
+
+ close()
+在调用$.alert或$.confirm方法时，它们返回一个引用对象，你可以使用该对象来操作模态对话框。
+
+var obj = $.alert({
+title: &#39;Closing this in 2 seconds.&#39;,
+content: &#39;Closing me via SetTimeout for demonstration.&#39;
+})
+setTimeout(function(){
+// some point in future.
+obj.close();
+},2000); 
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1316">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1317">
+                        jQuery滚动元素固定位置插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1317" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503011449.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery-sticky-elements是一款可以将元素位置固定的jQuery插件。使用该插件你需要做的是设置div元素的位置，然后通过该插件的参数可以控制页面滚动时该元素是隐藏还是位置固定不动。
+内容：
+
+
+简要教程
+
+
+jQuery-sticky-elements是一款可以将元素位置固定的jQuery插件。使用该插件你需要做的是设置&amp;lt;div&amp;gt;元素的位置，然后通过该插件的参数可以控制页面滚动时该元素是隐藏还是固定位置不动。
+
+ 使用方法
+使用该jQuery固定位置插件，首先要引入jQuery和jquery.sticky.elements.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;../js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;../js/jquery.sticky.elements.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后使用下面方法调用该jquery固定位置插件：
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(&#34;#grid5&#34;).stikify({rate: 3.4, cieling: -100});
+&amp;lt;/script&amp;gt;
+
+
+ 可用参数
+
+$(&#34;#grid4&#34;).stikify({floor: 100, rate: 1.6, cieling: -100, trans: true, rate: 3.4});
+
+
+
+floor：设置元素不低于指定的高度，单位像素。
+
+rate：小于正常滚动速度多少倍。
+
+cieling:距离顶部100多少像素时隐藏。
+
+trans:元素滚动时是否执行动画效果。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1317">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/34/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/36/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

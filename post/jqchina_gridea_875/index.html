@@ -1,0 +1,492 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于jQuery UI的多项选择下拉列表框组件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于jQuery UI的多项选择下拉列表框组件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1603/201603171707.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603171707.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603173227.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery.multiselect.js是一款基于jQuery UI的多项选择下拉列表框组件。该下拉列表功能强大，可以实现多选和单选，可制作打开和关闭下拉框时的炫酷动画效果，提供丰富的回调函数和其它方法。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery.multiselect.js是一款基于<a href="http://www.htmleaf.com/jQuery/">jQuery</a> UI的多项选择下拉列表框组件。该下拉列表功能强大，可以实现多选和单选，可制作打开和关闭下拉框时的炫酷动画效果，提供丰富的回调函数和其它方法。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该多选下拉列表框插件需要在页面中引入jQuery UI相关文件，jQuery以及插件本身需要的jquery.multiselect.css和jquery.multiselect.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="css/jquery.multiselect.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="http://libs.useso.com/js/jqueryui/1.10.4/css/jquery-ui.min.css" /&gt;
+&lt;script type="text/javascript" src="src/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://libs.useso.com/js/jqueryui/1.10.4/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="src/jquery.multiselect.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span>HTML结构</h5>
+<p>该下拉列表框的HTML结构为标准的下拉列表框结构，同时需要为它添加<code>multiple</code>属性。</p>
+<pre class="brush:html">
+&lt;select id="example" name="example" multiple="multiple"&gt;
+&lt;option value="1"&gt;Option 1&lt;/option&gt;
+&lt;option value="2"&gt;Option 2&lt;/option&gt;
+&lt;option value="3"&gt;Option 3&lt;/option&gt;
+&lt;option value="4"&gt;Option 4&lt;/option&gt;
+&lt;option value="5"&gt;Option 5&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span>初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>multiselect()</code>方法来初始化该下拉列表框插件。</p>
+<pre class="brush:js">
+$(document).ready(function(){
+ $("#example").multiselect();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>可以在初始化插件的时候以对象的方式传入需要的参数：</p>
+<pre class="brush:js">
+$("select").multiselect({
+ header: "请选择一个选项！"
+});
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>true</td>
+<td>是否显示下拉列表框的头部，如果传入的是一个字符串，默认的"check all", "uncheck all" 和 "close"超链接将被字符串替换</td>
+</tr>
+<tr>
+<td>height</td>
+<td>175</td>
+<td>checkbox容器区域（滚动区域）的高度，如果设置为“auto”，会自动根据选项的多少来进行计算</td>
+</tr>
+<tr>
+<td>minWidth</td>
+<td>225</td>
+<td>整个组件的最小宽度，设置为“auto”将禁用该属性</td>
+</tr>
+<tr>
+<td>checkAllText</td>
+<td>Check all</td>
+<td>默认的“Check all”文本</td>
+</tr>
+<tr>
+<td>uncheckAllText</td>
+<td>Uncheck All</td>
+<td>默认的“Uncheck All”文本</td>
+</tr>
+<tr>
+<td>noneSelectedText</td>
+<td>Select options</td>
+<td>选项被选择时select box的默认文本</td>
+</tr>
+<tr>
+<td>selectedText</td>
+<td># selected</td>
+<td>选项被选择时显示在select box中的文本（如果<code>selectedList</code>设置为false）。<code>#</code>会被自动替换为被选择的选项的序号。如果使用2个<code>#</code>，那么第二个会被看做是可选选项的总数，例如<code># of # checked</code>。该选项还可以接收一个带3个参数的匿名函数：被选择选项的序号，可用选项的总数和被选择的checkbox的DOM元素</td>
+</tr>
+<tr>
+<td>selectedList</td>
+<td>false</td>
+<td>被选择选项的列表，如果设置为false表示禁用该功能。</td>
+</tr>
+<tr>
+<td>show</td>
+<td>空字符串</td>
+<td>下拉列表打开时的动画效果，要控制动画的速度，可以传入一个数组：<code>['slide', 500]</code>
+</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>空字符串</td>
+<td>下拉列表关闭时的动画效果，要控制动画的速度，可以传入一个数组：<code>['slide', 500]</code>
+</td>
+</tr>
+<tr>
+<td>autoOpen</td>
+<td>false</td>
+<td>下拉列表是否在初始化后自动展开</td>
+</tr>
+<tr>
+<td>multiple</td>
+<td>true</td>
+<td>如果设置为false，组件将使用单选按钮代替多选按钮，此时只可以进行单选</td>
+</tr>
+<tr>
+<td>classes</td>
+<td>空字符串</td>
+<td>自定义的class类。可以通过它对选项进行分隔。你需要自定义按钮和下拉列表的CSS样式：<br><code>/* button */ .ui-multiselect.myClass {}</code><br><code>/* menu */ .ui-multiselect-menu.myClass {}</code>
+</td>
+</tr>
+<tr>
+<td>position</td>
+<td>空对象</td>
+<td>该选项可以将下拉菜单放置在相对于下拉按钮的任何地方：entered, above, below（默认）等。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>该下拉列表框调用方法的方式如下：</p>
+<pre class="brush:js">
+// 绑定事件
+$("#multiselect").bind("multiselectopen", function(event, ui){
+// 事件处理
+});
+<p>// 在初始化时传入事件处理函数<br>
+$(&quot;#multiselect&quot;).multiselect({<br>
+open: function(event, ui){<br>
+// 事件处理<br>
+}<br>
+});<br>
+</pre></p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>事件</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create</td>
+<td>组件第一次被创建时触发</td>
+</tr>
+<tr>
+<td>beforeopen</td>
+<td>下拉菜单被打开前触发，返回false可以阻止下拉菜单的打开</td>
+</tr>
+<tr>
+<td>open</td>
+<td>下拉菜单被打开后触发</td>
+</tr>
+<tr>
+<td>beforeclose</td>
+<td>下拉菜单被关闭前触发，返回false可以阻止下拉菜单的关闭</td>
+</tr>
+<tr>
+<td>close</td>
+<td>下拉菜单被关闭后触发</td>
+</tr>
+<tr>
+<td>checkall</td>
+<td>所有选项被选择或点击头部的“全部选择”按钮时触发</td>
+</tr>
+<tr>
+<td>uncheckall</td>
+<td>所有选项都不被选择或点击头部的“全部不选择”按钮时触发</td>
+</tr>
+<tr>
+<td>optgrouptoggle</td>
+<td>当<code>optgroup</code>标签被点击时触发。该事件接收原始事件对象作为参数</td>
+</tr>
+<tr>
+<td>click</td>
+<td>当checkbox被选择或取消选择时触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>当插件被初始化为一个实例之后，可以通过方法名称来调用方法。</p>
+<pre class="brush:js">
+$("#multiselect").multiselect("method\_name");
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>方法</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open</td>
+<td>打开下拉菜单</td>
+</tr>
+<tr>
+<td>close</td>
+<td>关闭下拉菜单</td>
+</tr>
+<tr>
+<td>refresh</td>
+<td>重新加载下拉列表。如果你通过Ajax或操作DOM元素的方法来动态的添加和删除了列表选项，可以通过<code>refresh</code>方法来刷新列表</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>禁用下拉列表</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>启用下拉列表</td>
+</tr>
+<tr>
+<td>checkAll</td>
+<td>全部选择</td>
+</tr>
+<tr>
+<td>uncheckAll</td>
+<td>全部不选</td>
+</tr>
+<tr>
+<td>isOpen</td>
+<td>返回代表当前下拉列表是否打开的布尔值</td>
+</tr>
+<tr>
+<td>getChecked</td>
+<td>返回当前被选择的选项的数组</td>
+</tr>
+<tr>
+<td>getButton</td>
+<td>返回按钮元素</td>
+</tr>
+<tr>
+<td>widget</td>
+<td>返回下拉列表容器元素</td>
+</tr>
+<tr>
+<td>option</td>
+<td>在插件初始化之后设置或获取一个选项。如果修改了选项，它会立刻生效</td>
+</tr>
+<tr>
+<td>destroy</td>
+<td>销毁实例</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>jQuery UI MultiSelect Widget插件的github地址为：<a href="https://github.com/ehynds/jquery-ui-multiselect-widget" target="\_blank">https://github.com/ehynds/jquery-ui-multiselect-widget</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603171707.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603173227.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_876">
+                                <h3 class="post-title">
+                                    Zebra_Dialog-简单实用的jQuery模态对话框插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

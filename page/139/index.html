@@ -1,0 +1,1923 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_804">
+                        实用的jQuery列表和表格过滤搜索插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_804" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604121638.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery-easySearch是一款可以实现对列表和表格内容进行过滤搜索的jQuery插件。
+内容：
+
+
+简要教程
+
+
+jQuery-easySearch是一款可以实现对列表和表格内容进行过滤搜索的jQuery插件。
+
+ 使用方法
+使用该过滤搜索插件需要在页面中引入jquery和jquery.easysearch.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;src/jquery.easysearch.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+需要使用一个&amp;lt;input&amp;gt;元素来作为搜索框。
+
+&amp;lt;input type=&#34;text&#34; placeholder=&#34;Search...&#34;&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过jSearch()方法来初始化该过滤搜索插件，在参数中指定搜索的父元素和子元素。
+
+$(&#39;input&#39;).jSearch({ 
+selector: &#39;ul&#39;,
+child : &#39;li&#39;
+});
+
+例如在列表中进行搜索：
+
+$(&#39;input&#39;).jSearch({ 
+selector: &#39;ul&#39;,
+child : &#39;li div.header&#39;,
+minValLength: 0,
+Found : function(elem){
+$(elem).parent().parent().show();
+},
+NotFound : function(elem){
+$(elem).parent().parent().hide();
+},
+After : function(t){
+if (!t.val().length) $(&#39;ul li&#39;).show();
+}
+});
+
+在表格中进行搜索：
+
+$(&#39;input&#39;).jSearch({ 
+selector: &#39;table&#39;,
+child : &#39;tr &amp;gt; td&#39;,
+minValLength: 0,
+Before: function(){
+$(&#39;table tr&#39;).data(&#39;find&#39;,&#39;&#39;);
+},
+Found : function(elem){
+$(elem).parent().data(&#39;find&#39;,&#39;true&#39;);
+$(elem).parent().show();
+},
+NotFound : function(elem){
+if (!$(elem).parent().data(&#39;find&#39;));
+$(elem).parent().hide();
+},
+After : function(t){
+if (!t.val().length) $(&#39;table tr&#39;).show();
+}
+}); 
+
+
+ 配置参数
+可用的配置参数有：
+
+
+selector：要进行过滤搜索的父元素。
+
+child：要进行过滤搜索的子元素。
+
+minValLength：输入几个文字时触发搜索。
+
+onFound：如果搜索匹配时触发该回调函数。
+
+onNotFound：如果没有任何搜索匹配时触发该回调函数。
+
+onBefore：在搜索前触发。
+
+onAfter：在搜索后触发。
+
+jQuery-easySearch过滤搜索插件的github地址为：https://github.com/Archakov06/jQuery-easySearch
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_804">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_805">
+                        响应快速且易于使用的jQuery Tabs选项卡插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_805" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603241702.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+pignose.tab.js是一款响应快速且易于使用的jQuery Tabs选项卡插件。该选项卡插件支持多种样式的选项卡：普通选项卡，带子选项的选项卡，扁平风格的选项卡，响应式选项卡和手机选项卡等。
+内容：
+
+
+简要教程
+
+
+pignose.tab.js是一款响应快速且易于使用的jQuery Tabs选项卡插件。该选项卡插件支持多种样式的选项卡：普通选项卡，带子选项的选项卡，扁平风格的选项卡，响应式选项卡和手机选项卡等。
+
+ 安装
+可以通过bower或npm来安装该选项卡插件。
+
+bower install pg-tab
+npm install pg-tab 
+
+
+ 使用方法
+在页面中引入jquery、pignose.tab.min.js和pignose.tab.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/pignose.tab.min.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/js/pignose.tab.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该选项卡的基本HTML结构如下：
+
+&amp;lt;div class=&#34;tab&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;TAB-1&amp;lt;/a&amp;gt;
+&amp;lt;div&amp;gt;
+Hello i am normal tab!&amp;lt;br /&amp;gt;
+This usage so easy and simple.
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;TAB-2&amp;lt;/a&amp;gt;
+&amp;lt;div&amp;gt;
+Content2
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;TAB-3&amp;lt;/a&amp;gt;
+&amp;lt;div&amp;gt;
+Content3
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过pignoseTab()方法来初始化该选项卡插件。
+
+$(function() {
+$(&#39;.tab&#39;).pignoseTab({
+animation: true,
+children: &#39;.tab&#39;
+});
+});
+
+
+ 配置参数
+该Tabs选项卡可用的配置参数有：
+
+
+
+
+参数
+名称
+默认值
+描述
+
+
+
+
+callback
+null
+function
+当Tabs选项卡按钮被点击时触发的回调函数
+
+
+animation
+static
+static, true, false
+该选项用于开启和关闭动画，false相当于static
+
+
+children
+string
+.sub-tab
+如果使用子选项卡，你需要选择子选项卡的class名称
+
+
+animationTime
+300
+毫秒时间
+动画的时间
+
+
+animationEasing
+easeInOutCubic
+Easing的名称
+动画的 jQuery animation easing 名称
+
+
+
+
+PIGNOSE-Tab选项卡插件的github地址为：https://github.com/KennethanCeyer/PIGNOSE-Tab
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_805">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_806">
+                        Swiper-强大的移动手机端幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_806" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604292005.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Swiper是一款支持硬件加速过渡动画的移动手机幻灯片插件。该幻灯片可以很好的在iOS，Android，Windows Phone 8和桌面浏览器中工作。Swiper提供了大量参数和api，功能非常强大。
+内容：
+
+
+简要教程
+
+
+Swiper是一款支持硬件加速过渡动画的移动手机幻灯片插件。该幻灯片可以很好的在iOS，Android，Windows Phone 8和桌面浏览器中工作。Swiper提供了大量参数和api，功能非常强大。
+
+ 安装
+可以通过bower来安装该幻灯片插件。
+
+$ bower install swiper
+
+
+ 使用方法
+使用该幻灯片插件需要引入swiper.css和swiper.js，你可以通过cdn加速来引入这些文件：
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/css/swiper.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/css/swiper.min.css&#34;&amp;gt;
+&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该幻灯片的基本HTML结构如下：
+
+&amp;lt;!-- 幻灯片的容器 --&amp;gt;
+&amp;lt;div class=&#34;swiper-container&#34;&amp;gt;
+&amp;lt;!-- Additional required wrapper --&amp;gt;
+&amp;lt;div class=&#34;swiper-wrapper&#34;&amp;gt;
+&amp;lt;!-- Slides --&amp;gt;
+&amp;lt;div class=&#34;swiper-slide&#34;&amp;gt;Slide 1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;swiper-slide&#34;&amp;gt;Slide 2&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;swiper-slide&#34;&amp;gt;Slide 3&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 分页 --&amp;gt;
+&amp;lt;div class=&#34;swiper-pagination&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- 导航按钮 --&amp;gt;
+&amp;lt;div class=&amp;quot;swiper-button-prev&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;swiper-button-next&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!-- 滚动条 --&amp;gt;
+&amp;lt;div class=&amp;quot;swiper-scrollbar&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+你需要为幻灯片的容器设置一个宽度和高度：
+
+.swiper-container {
+width: 600px;
+height: 300px;
+}
+
+
+ 初始化插件
+可以通过下面的方法来初始化该幻灯片插件。
+
+var mySwiper = new Swiper (&#39;.swiper-container&#39;, {
+// Optional parameters
+direction: &#39;vertical&#39;,
+loop: true,
+// If we need pagination
+pagination: &#39;.swiper-pagination&#39;,
+// Navigation arrows
+nextButton: &#39;.swiper-button-next&#39;,
+prevButton: &#39;.swiper-button-prev&#39;,
+// And if we need scrollbar
+scrollbar: &#39;.swiper-scrollbar&#39;,
+})
+
+如果你使用jQuery或Zepto，可以使用下面的方法来初始化插件。
+
+$(document).ready(function () {
+//initialize swiper when document ready
+var mySwiper = new Swiper (&#39;.swiper-container&#39;, {
+// Optional parameters
+direction: &#39;vertical&#39;,
+loop: true
+})
+});
+
+
+ 配置参数
+Swiper幻灯片的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+initialSlide
+number
+0
+初始化的slide的序号
+
+
+direction
+string
+&#39;horizontal&#39;
+幻灯片的方向，可以是&#39;horizontal&#39; 或 &#39;vertical&#39;
+
+
+speed
+number
+300
+幻灯片的过渡动画速度
+
+
+setWrapperSize
+boolean
+false
+设置为true时，幻灯片会将容器的宽度和高度设置为slide的宽度和高度
+
+
+virtualTranslate
+boolean
+false
+Enabled this option and swiper will be operated as usual except it will not move, real translate values on wrapper will not be set. Useful when you may need to create custom slide transition
+
+
+width
+number
+
+幻灯片的宽度
+
+
+height
+number
+
+幻灯片的高度
+
+
+autoHeight
+boolean
+false
+设置为true时幻灯片自动适应每一个slide的高度
+
+
+roundLengths
+boolean
+false
+设置为true可以防止模糊文字的出现
+
+
+nested
+boolean
+false
+嵌套幻灯片，水平和垂直幻灯片相互嵌套
+
+
+autoplay
+number
+
+自动播放的延迟时间，如果为设置将不自动播放
+
+
+autoplayStopOnLast
+boolean
+false
+是否到达最后一个slide时停止自动播放
+
+
+autoplayDisableOnInteraction
+boolean
+true
+设置为false时，用户滑动幻灯片后不会停止自动播放
+
+
+watchSlidesProgress
+boolean
+false
+是否计算每个slide的进度
+
+
+watchSlidesVisibility
+boolean
+false
+启用该选项时在视口中的slide将被添加额外的class
+
+
+freeMode
+boolean
+false
+如果设置为true，幻灯片将不会有固定的位置
+
+
+freeModeMomentum
+boolean
+true
+如果设置为true，幻灯片在滑动后会有一些惯性
+
+
+freeModeMomentumRatio
+number
+1
+值越大惯性越大
+
+
+freeModeMomentumBounce
+boolean
+true
+如果不想要惯性效果设置为false
+
+
+freeModeMomentumBounceRatio
+number
+1
+值越大弹性效果越强
+
+
+freeModeMinimumVelocity
+number
+0.02
+free mode的最小手指触摸速度
+
+
+effect
+string
+&#39;slide&#39;
+可以是&#34;slide&#34;, &#34;fade&#34;, &#34;cube&#34;, &#34;coverflow&#34; 或 &#34;flip&#34;
+
+
+fade
+object
+fade: {
+crossFade: false
+}
+fade效果参数
+
+
+cube
+object
+cube: {
+slideShadows: true,
+shadow: true,
+shadowOffset: 20,
+shadowScale: 0.94
+}
+立方体效果参数
+
+
+coverflow
+object
+coverflow: {
+rotate: 50,
+stretch: 0,
+depth: 100,
+modifier: 1,
+slideShadows : true
+}
+coverflow效果参数
+
+
+flip
+object
+flip: {
+slideShadows : true
+limitRotation: true
+}
+flip效果参数
+
+
+parallax
+boolean
+false
+设置为true时可以制作视觉差效果
+
+
+spaceBetween
+number
+0
+幻灯片slide之间的距离
+
+
+slidesPerView
+number 或 &#39;auto&#39;
+1
+幻灯片每一个视图的数量
+
+
+slidesPerColumn
+number
+1
+幻灯片每一列的数量
+
+
+slidesPerColumnFill
+string
+&#39;column&#39;
+幻灯片如何填充行和列，可以是column&#39; 或 &#39;row&#39;
+
+
+slidesPerGroup
+number
+1
+幻灯片分组
+
+
+centeredSlides
+boolean
+false
+设置为true时，当前激活的幻灯片居中显示
+
+
+slidesOffsetBefore
+number
+0
+在容器中第一个幻灯片slide之前添加一些空白的像素，单位像素
+
+
+slidesOffsetAfter
+number
+0
+在容器中最后一个幻灯片slide之后添加一些空白的像素，单位像素
+
+
+grabCursor
+boolean
+false
+在桌面设备中设置为true，鼠标光标变为grab形状
+
+
+touchEventsTarget
+string
+&#39;container&#39;
+touch事件监听的目标元素
+
+
+touchRatio
+number
+1
+Touch ration
+
+
+touchAngle
+number
+45
+移触摸的触发角度
+
+
+simulateTouch
+boolean
+true
+是否接收鼠标事件
+
+
+shortSwipes
+boolean
+true
+设置为false禁止short swipes
+
+
+longSwipes
+boolean
+true
+设置为false禁止long swipes
+
+
+longSwipesRatio
+number
+0.5
+在long swipes中触发next/previous滑动的比例
+
+
+longSwipesMs
+number
+300
+在long swipes中触发next/previous滑动最小持续时间（毫秒）
+
+
+followFinger
+boolean
+true
+如设置为false，幻灯片只有在手指释放时才动画
+
+
+onlyExternal
+boolean
+false
+如果设置为true，那么只有通过API来切换幻灯片
+
+
+threshold
+number
+0
+阈值，单位像素
+
+
+touchMoveStopPropagation
+boolean
+true
+设置为true时，分页的“touchmove”被禁止
+
+
+iOSEdgeSwipeDetection
+boolean
+false
+Enable to release Swiper events for swipe-to-go-back work in iOS UIWebView
+
+
+iOSEdgeSwipeThreshold
+number
+20
+Area (in px) from left edge of the screen to release touch events for swipe-to-go-back in iOS UIWebView
+
+
+
+
+完整的配置参数，回调函数级API请参考：Swiper API
+Swiper幻灯片插件的github地址为：https://github.com/nolimits4web/Swiper
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_806">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_807">
+                        animateSprite-可控制雪碧图（sprites）动画的jQuery插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_807" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604031533.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.animateSprite是一款可控制雪碧图（sprites）制作动画效果的jQuery插件。通过该插件可以控制雪碧图播放、暂停、反向播放和更改播放动画速度等。
+内容：
+
+
+简要教程
+
+
+jquery.animateSprite是一款可控制雪碧图（sprites）制作动画效果的jQuery插件。通过该插件可以控制雪碧图播放、暂停、反向播放和更改播放动画速度等。
+
+ 安装
+可以通过npm或bower来安装animateSprite插件。
+
+bower install animatesprite
+
+
+ 使用方法
+使用该插件需要引入jQuery和jquery.animateSprite.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.animateSprite.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用一个&amp;lt;div&amp;gt;元素来作为雪碧图的容器。
+
+&amp;lt;div class=&#34;animation animation-2&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+将雪碧图作为容器的背景图像，并为容器设置合适的高度和宽度。
+
+.animation-2 {
+background: url(../img/ramonaflowers\_multiple.png);
+width: 125px;
+height: 157px;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该jQuery插件。
+
+$(&#39;.animation&#39;).animateSprite({
+fps: 12,
+loop: true,
+animations: {
+walk: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+run: [14, 13, 12, 11, 10, 9]
+},
+complete: function(){
+alert(&#39;Sprite animation complete!&#39;);
+}
+})
+
+
+ 配置参数
+
+
+columns：雪碧图分为多少列，默认为10。
+
+fps：定义动画的速度。
+
+duration：动画的持续时间，单位毫秒。
+
+complete：动画执行完毕之后的回调函数。（如果是无限循环动画不会被调用）
+
+loop：是否是无限循环动画
+
+autoplay：是否自动播放。
+
+animations：包含多个动画的键值对对象。键是动画的名称，值是一个包含帧的数组。
+
+
+ 方法
+
+
+play：播放指定的动画。
+
+$(&#39;object&#39;).animateSprite(&#39;play&#39;, &#39;animation name&#39;)
+
+
+
+stop：停止播放指定的动画。
+
+$(&#39;object&#39;).animateSprite(&#39;stop&#39;)
+
+
+
+resume：恢复动画的播放。
+
+$(&#39;object&#39;).animateSprite(&#39;resume&#39;)
+
+
+
+restart：重新开始播放动画。
+
+$(&#39;object&#39;).animateSprite(&#39;restart&#39;)
+
+
+
+frame：播放第n帧动画。
+
+$(&#39;object&#39;).animateSprite(&#39;frame&#39;, n) 
+
+
+
+fps：将动画的速度调整为n帧每秒。
+
+$(&#39;object&#39;).animateSprite(&#39;fps&#39;, n)
+
+
+
+jquery.animateSprite插件的github地址为：https://github.com/blaiprat/jquery.animateSprite
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_807">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_808">
+                        HTML表格数据导出为CSV|XLS|TXT|SQL格式的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-other_3">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_808" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605261528.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery-tableExport是一款可以将普通HTML表格内容导出为CSV、XLS、TXT或SQL格式的jQuery插件。
+内容：
+
+
+简要教程
+
+
+jQuery-tableExport是一款可以将普通HTML表格内容导出为CSV、XLS、TXT或SQL格式的jQuery插件。
+
+ 使用方法
+使用该导出表格内容插件需要在页面中引入jquery和tableExport.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/tableExporter.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+表格可以是普通的HTML表格，或bootstrap的表格。
+
+&amp;lt;div class=&#34;table-responsive&#34;&amp;gt;
+&amp;lt;table id=&#34;firm\_table&#34; class=&#34;table table-striped table-bordered table-hover&#34;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;#&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;First Name&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Last Name&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;E-Mail&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Number&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Delpha&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;siliciophite&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;circumflex@masterwork.net&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;997300858&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+......
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过tableExport()方法来初始化该插件。
+
+$(&#39;.table&#39;).tableExport({
+filename: &#39;table&#39;,
+format: &#39;csv&#39;
+});
+
+或者在初始化时传入配置参数：
+
+$(&#39;.table&#39;).tableExport({
+// 导出文件的名称
+filename: &#39;table\_\%DD\%-\%MM\%-\%YY\%&#39;,
+// 导出文件的格式：csv, xls, txt, sql
+format: &#39;xls&#39;,
+// 导出指定的表格列
+cols: &#39;2,3,4&#39;
+});
+
+
+ 配置参数
+日期格式：
+
+\%DD\% — day
+\%MM\% — month
+\%YY\% — year
+\%hh\% — hours
+\%mm\% — minutes
+\%ss\% — seconds
+
+配置参数：
+
+
+filename：导出文件的名称。
+
+format：导出文件的格式。
+
+cols：指定导出的表格列。
+
+head\_delimiter：导出时分离标题。
+
+column\_delimiter：导出时隔离的列。
+
+before(this)：回调函数。
+
+onafter(this)：回调函数。
+
+jQuery-tableExport插件的github地址为：https://github.com/Archakov06/jQuery-tableExport
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_808">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_809">
+                        jQuery液态融合（gooey）样式导航菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_809" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604201545.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+gooey-menu是一款基于SVG过滤器的液态融合（gooey）样式导航菜单jQuery插件。通过该插件你可以非常轻松的制作出各种gooey样式的环形菜单特效。
+内容：
+
+
+简要教程
+
+
+gooey-menu是一款基于SVG过滤器的液态融合（gooey）样式导航菜单jQuery插件。通过该插件你可以非常轻松的制作出各种gooey样式的环形菜单特效。
+
+ 使用方法
+使用该导航菜单插件需要在页面中引入gooey.min.css文件，jquery和gooey.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;gooey.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/gooey.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+gooey样式的环形菜单的基本HTML结构是创建一个汉堡包图标，当用户点击汉堡包图标时打开菜单。
+
+&amp;lt;nav id=&#34;gooey-upper&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; class=&#34;menu-open&#34; name=&#34;menu-open1&#34; id=&#34;menu-open1&#34;/&amp;gt;
+&amp;lt;!-- 汉堡包图标 --&amp;gt;
+&amp;lt;label class=&#34;open-button&#34; for=&#34;menu-open1&#34;&amp;gt;
+&amp;lt;span class=&#34;burger burger-1&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;burger burger-2&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;burger burger-3&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/label&amp;gt;
+&amp;lt;!--环形菜单--&amp;gt;
+&amp;lt;a href=&amp;quot;#features&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Features&amp;quot; class=&amp;quot;fa fa-cog fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#h-spaced-menu&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Horizontal Menu&amp;quot; class=&amp;quot;fa fa-arrows-h fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#menu-v-example&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Vertical Menu&amp;quot; class=&amp;quot;fa fa-arrows-v fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#docs&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Docs&amp;quot; class=&amp;quot;fa fa-book fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#event-api&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Event API&amp;quot; class=&amp;quot;fa fa-code fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#round&amp;quot; class=&amp;quot;gooey-menu-item&amp;quot;&amp;gt;
+&amp;lt;i title=&amp;quot;Round Menu&amp;quot; class=&amp;quot;fa fa-circle fa-2x&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过gooeymenu()方法来初始化该菜单插件。
+
+$(&#34;#gooey-demo&#34;).gooeymenu({
+// 配置参数
+});
+
+
+ 配置参数
+该gooey样式的环形菜单的默认配置参数如下：
+
+$(&#34;#gooey-demo&#34;).gooeymenu({
+// &#39;horizontal&#39;, &#39;circle&#39; or &#39;vertical&#39;
+style: &amp;quot;horizontal&amp;quot;,
+size: 70,
+margin: &amp;quot;medium&amp;quot;,
+bgColor: &amp;quot;steelblue&amp;quot;,
+contentColor: &amp;quot;white&amp;quot;,
+transitionStep: 100,
+bounce: false,
+bounceLength: &amp;quot;medium&amp;quot;,
+hover: &amp;quot;white&amp;quot;,
+circle: {
+radius: 80
+},
+horizontal: {
+menuItemPosition: &amp;quot;glue&amp;quot;
+},
+vertical: {
+menuItemPosition: &amp;quot;spaced&amp;quot;,
+direction: &amp;quot;up&amp;quot;
+}
+});
+
+
+
+style：gooey菜单的样式，可用值有：&#34;horizontal&#34;,&#34;vertical&#34;,&#34;circle&#34;。
+
+size：菜单项的尺寸，单位像素。
+
+margin：菜单项之间的margin值。只有在&#34;horizontal&#34; 或 &#34;vertical&#34;参数设置为&#34;spaced&#34;时才有效。可用值有：&#34;small&#34;,&#34;medium&#34; 和 &#34;large&#34;。
+
+bgColor：设置菜单项的背景颜色。
+
+contentColor：设置菜单项的字体颜色。
+
+transitionStep：设置菜单项打开的速度，单位毫秒。
+
+bounce：是否打开&#34;bounce&#34;效果。
+
+bounceLength：如果打开了&#34;bounce&#34;效果，设置bounce的长度。可用值有：&#34;small&#34;, &#34;medium&#34; 和 &#34;large&#34;。
+
+hover：设置鼠标滑过菜单项时的颜色。
+
+circle：设置菜单打开时圆形的半径。
+
+horizontal：menuItemPosition：设置为&#34;Spaced&#34;表示要指定菜单项之间的margin值。设置为&#34;Glue&#34;表示菜单项堆叠在一起。
+
+vertical：menuItemPosition：设置为&#34;Spaced&#34;表示要指定菜单项之间的margin值。设置为&#34;Glue&#34;表示菜单项堆叠在一起。
+
+vertical：direction：菜单的垂直展开方向，可用值有：&#34;up&#34; 或 &#34;down&#34;。
+
+
+ 回调函数
+
+
+open:function(){}：菜单打开是触发。
+
+close:function() {}：菜单关闭时触发。
+
+gooey-menu导航菜单插件的github地址为：https://github.com/dominicdomu/gooey-menu
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_809">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_81">
+                        基于CSS3混合模式的jquery轮播图特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_81" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1812/201812111436.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于CSS3混合模式的jquery轮播图特效。该特效使用CSS3 的mix-blend-mode来制作混合图片特效，制作出非常炫酷的多图层动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于CSS3混合模式的jquery轮播图特效。该特效使用CSS3 的mix-blend-mode来制作混合图片特效，制作出非常炫酷的多图层动画效果。
+IE和Edge系列浏览器不支持mix-blend-mode属性，请使用-webkit-内涵的浏览器来查看效果。
+
+ 使用方法
+在页面中引入style.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34; /&amp;gt;
+
+
+ HTML结构
+在页面中添加下面的DOM元素。
+
+&amp;lt;div class=&#34;changer&#34;&amp;gt;
+&amp;lt;div class=&#34;sub&#34;&amp;gt;Playing with&amp;lt;/div&amp;gt;
+&amp;lt;h1&amp;gt;Color Blend Modes&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&#34;demos&#34;&amp;gt;
+&amp;lt;a data-go=&#34;1&#34;&amp;gt;cloudsuit&amp;lt;/a&amp;gt;
+&amp;lt;a data-go=&#34;2&#34;&amp;gt;urbansky&amp;lt;/a&amp;gt;
+&amp;lt;a data-go=&#34;3&#34;&amp;gt;knowledge&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该基于CSS3混合模式的jquery轮播图特效。
+
+var demos = [];
+var cloudsuit = {
+one: {
+bg: &#34;images/ZnkfwAR.jpg&#34;,
+bm: &#34;none&#34; },
+two: {
+bg: &amp;quot;images/ONBXKkS.jpg&amp;quot;,
+bm: &amp;quot;lighten&amp;quot; },
+three: {
+bg: &amp;quot;images/qKNpn9G.png&amp;quot;,
+bm: &amp;quot;multiply&amp;quot; } };
+demos.push(cloudsuit);
+var urbansky = {
+one: {
+bg: &amp;quot;images/l1MS7kk.jpg&amp;quot;,
+bm: &amp;quot;none&amp;quot; },
+two: {
+bg: &amp;quot;images/6QBLNy6.jpg&amp;quot;,
+bm: &amp;quot;multiply&amp;quot; },
+three: {
+bg: &amp;quot;images/bmnzJRs.png&amp;quot;,
+bm: &amp;quot;none&amp;quot; } };
+demos.push(urbansky);
+var knowledge = {
+one: {
+bg: &amp;quot;images/YpTSfYD.jpg&amp;quot;,
+bm: &amp;quot;none&amp;quot; },
+two: {
+bg: &amp;quot;images/ziAdjNM.jpg&amp;quot;,
+bm: &amp;quot;multiply&amp;quot; },
+three: {
+bg: &amp;quot;images/dnfONso.png&amp;quot;,
+bm: &amp;quot;none&amp;quot; } };
+demos.push(knowledge);
+var container = document.getElementById(&amp;quot;container&amp;quot;);
+var active;
+var applyDemo = function (number) {
+console.log(number);
+var go = demos[number - 1];
+container.innerHTML = &amp;quot;&amp;quot;;
+var f1 = document.createElement(&amp;quot;div&amp;quot;);
+f1.setAttribute(&amp;quot;id&amp;quot;, &amp;quot;f1&amp;quot;);
+var style = &amp;quot;background-image: url(&amp;quot; + go.one.bg + &amp;quot;); mix-blend-mode: &amp;quot; + go.one.bm + &amp;quot;;&amp;quot;;
+f1.setAttribute(&amp;quot;style&amp;quot;, style);
+container.appendChild(f1);
+var f2 = document.createElement(&amp;quot;div&amp;quot;);
+f2.setAttribute(&amp;quot;id&amp;quot;, &amp;quot;f2&amp;quot;);
+var style = &amp;quot;background-image: url(&amp;quot; + go.two.bg + &amp;quot;); mix-blend-mode: &amp;quot; + go.two.bm + &amp;quot;;&amp;quot;;
+f2.setAttribute(&amp;quot;style&amp;quot;, style);
+container.appendChild(f2);
+var f3 = document.createElement(&amp;quot;div&amp;quot;);
+f3.setAttribute(&amp;quot;id&amp;quot;, &amp;quot;f3&amp;quot;);
+var style = &amp;quot;background-image: url(&amp;quot; + go.three.bg + &amp;quot;); mix-blend-mode: &amp;quot; + go.three.bm + &amp;quot;;&amp;quot;;
+f3.setAttribute(&amp;quot;style&amp;quot;, style);
+container.appendChild(f3);
+active = number;
+document.body.setAttribute(&amp;quot;data-demo&amp;quot;, number);
+};
+applyDemo(1);
+$(&#39;.demos&#39;).on(&#39;click&#39;, &#39;a&#39;, function (event) {
+event.preventDefault();
+var t = this;
+if (active == t.getAttribute(&amp;quot;data-go&amp;quot;)) return;
+(container).fadeOut({
+duration: 1000,
+complete: function () {
+applyDemo(t.getAttribute(&amp;quot;data-go&amp;quot;));
+(container).fadeIn(1000);
+} });
+});
+
+ 该基于CSS3混合模式的jquery轮播图特效的codepen网址为：https://codepen.io/caraujo/pen/RWRbXQ 
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_81">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_810">
+                        基于owl-carousel的人物信息展示jQuery幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_810" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606011644.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于owl-carousel幻灯片插件的人物信息展示jQuery幻灯片特效。这个特效中有2个DEMO，它们通过Bootstrap的网格系统来布局，制作无限循环的人物自动展示效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于owl-carousel幻灯片插件的人物信息展示jQuery幻灯片特效。这个特效中有2个DEMO，它们通过Bootstrap的网格系统来布局，制作无限循环的人物自动展示效果。
+owl-carousel是一款功能强大的支持触摸屏的响应式jQuery旋转木马插件，它可以让你创建漂亮的响应式旋转木马的jQuery插件，它支持移动触摸屏，有丰富的参数设置，甚至可以嵌入视频，功能十分强大。
+
+ 使用方法
+在页面中引入owl-carousel的相关文件，Bootstrap的相关文件,jquery和font-awesome字体图标文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+DEMO1的HTML结构如下：
+
+&amp;lt;div class=&#34;container &#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div id=&#34;testimonial-slider&#34; class=&#34;owl-carousel&#34;&amp;gt;
+&amp;lt;div class=&#34;testimonial&#34;&amp;gt;
+&amp;lt;div class=&#34;pic&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;testimonial-review&amp;quot;&amp;gt;
+&amp;lt;h4 class=&amp;quot;testimonial-title&amp;quot;&amp;gt;
+Williamson
+&amp;lt;small&amp;gt;Web Developer&amp;lt;/small&amp;gt;
+&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+DEMO2的HTML结构如下：
+
+&amp;lt;div class=&#34;container &#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div id=&#34;testimonial-slider&#34; class=&#34;owl-carousel&#34;&amp;gt;
+&amp;lt;div class=&#34;testimonial&#34;&amp;gt;
+&amp;lt;div class=&#34;testimonial-profile&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;testimonial-content&#34;&amp;gt;
+&amp;lt;h3 class=&#34;testimonial-title&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Williamson&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;span class=&#34;testimonial-post&#34;&amp;gt;Web Designer&amp;lt;/span&amp;gt;
+&amp;lt;p class=&#34;testimonial-description&#34;&amp;gt;
+......
+&amp;lt;/p&amp;gt;
+&amp;lt;ul class=&#34;social-links&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34; class=&#34;fa fa-instagram&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34; class=&#34;fa fa-twitter&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34; class=&#34;fa fa-pinterest&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34; class=&#34;fa fa-linkedin&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为幻灯片设置一些基本的CSS样式，下面是DEMO1的CSS样式：
+
+.testimonial{
+background-color: #f3f3f3;
+border-radius: 5px;
+padding: 30px;
+margin: 0 15px;
+}
+.testimonial .pic{
+width: 90px;
+height: 90px;
+margin: 0 30px 15px 0;
+float: left;
+}
+.testimonial .pic img{
+width: 100\%;
+height: auto;
+border-radius: 50\%;
+}
+.testimonial .testimonial-title{
+color: #000000;
+font-size: 16px;
+margin-top: 5px;
+font-weight: 800;
+text-transform: capitalize;
+}
+.testimonial .testimonial-title small{
+display: block;
+color: #dc005a;
+font-size: 14px;
+font-weight: 800;
+margin-top: 10px;
+}
+.testimonial .testimonial-review p{
+color: #888888;
+font-size: 15px;
+font-style: italic;
+line-height: 19px;
+margin-bottom: 0;
+}
+.owl-theme .owl-controls{
+margin-top: 20px;
+}
+.owl-theme .owl-controls .owl-page span{
+width: 10px;
+height: 10px;
+background:#fff;
+opacity: 1;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+background: #fff;
+border: 1px solid #cdcdcd;
+}
+.owl-pagination{
+margin-top: 40px;
+}
+.owl-theme .owl-controls .owl-page.active span, 
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+background:#3F4144;
+border:3px solid #fff;
+}
+@media screen and (max-width: 990px){
+.testimonial-parallax h2{
+margin-bottom: 40px;
+}
+.testimonial{
+margin: 0;
+}
+}
+
+
+ JavaScript
+最后在页面DOM元素加载完毕之后，通过owlCarousel()方法来初始化幻灯片实例。
+
+/* DEMO1 */
+$(document).ready(function(){
+$(&#34;#testimonial-slider&#34;).owlCarousel({
+items:2,
+itemsDesktop:[1000,1],
+itemsDesktopSmall:[979,1],
+itemsTablet:[768,1],
+pagination: true,
+autoPlay:true
+});
+});
+/* DEMO2 */
+(document).ready(function(){
+(&amp;quot;#testimonial-slider&amp;quot;).owlCarousel({
+items:2,
+itemsDesktop:[1000,2],
+itemsDesktopSmall:[979,2],
+itemsTablet:[767,1],
+pagination: true,
+autoPlay:true
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_810">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_811">
+                        animatescroll.js-实用的动画滚动jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_811" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605161742.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+animatescroll.js是一款非常实用的动画滚动jQuery插件。你可以使用该插件制作返回顶部效果，平滑滚动到某个指定元素等。它支持30+种不同的easing过渡动画，并且兼容IE8浏览器。
+内容：
+
+
+简要教程
+
+
+animatescroll.js是一款非常实用的动画滚动jQuery插件。你可以使用该插件制作返回顶部效果，平滑滚动到某个指定元素等。它支持30+种不同的easing过渡动画，并且兼容IE8浏览器。
+
+ 安装
+可以通过bower来安装该动画滚动插件。
+
+bower install animatescroll
+
+
+ 使用方法
+使用该动画滚动插件需要在页面中引入jquery和animatescroll.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/animatescroll.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该动画滚动的基本HTML结构如下：
+
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/animatescroll.js&#34;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;div id=&#34;section-1&#34;&amp;gt;这里是你需要滚动到的元素&amp;lt;div&amp;gt;
+/*
+
+你可以像下面这样来调用插件，但是最好是通过事件监听来调用
+*/
+&amp;lt;a onclick=&amp;quot;$(&#39;[jquery selector]&#39;).animatescroll([options]);&amp;quot;&amp;gt;Go to Element&amp;lt;/a&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+
+ 初始化插件
+处理上面的onclick方法调用之外，你可以在页面DOM元素加载完毕之后，可以通过animatescroll()方法来初始化该插件。
+
+$(&#39;body&#39;).animatescroll();
+//自定义参数
+$(&#39;body&#39;).animatescroll({scrollSpeed:2000,easing:&#39;easeInOutBack&#39;});
+
+
+ 配置参数
+该动画滚动插件有6个可用的配置参数：
+
+
+easing：滚动的easing效果，支持的easing效果可以参考easings.net
+
+
+scrollSpeed：滚动的速度。
+
+padding：调整滚动的上下间距。
+
+element：你想滚动到的元素。默认为body。
+
+onScrollStart：回调函数，在开始滚动时触发。
+
+$(&#39;#target-element&#39;).animatescroll({onScrollStart:function(){alert(&#39;scroll started&#39;)}});
+
+
+
+onScrollEnd：回调函数，在结束滚动时触发。
+
+$(&#39;#target-element&#39;).animatescroll({onScrollEnd:function(){alert(&#39;scroll ended&#39;)}});
+
+
+
+animatescroll.js动画滚动插件的github地址为：https://github.com/ramswaroop/animatescroll.js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_811">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_812">
+                        4种超酷Tabs选项卡设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_812" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605071530.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一组非常实用的Tabs选项卡设计效果。这组选项卡同4之后效果，分别为基本选项卡，彩色带图标的选项卡，下划线样式选项卡和垂直选项卡。这些选项卡样式简洁大方，兼容IE8，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一组非常实用的Tabs选项卡设计效果。这组选项卡同4之后效果，分别为基本选项卡，彩色带图标的选项卡，下划线样式选项卡和垂直选项卡。这些选项卡样式简洁大方，兼容IE8，非常实用。
+
+ 使用方法
+每一个选项卡都对应一个单独的样式文件，需要那种类型的选项卡就引入对应的CSS文件。另外特效中使用jQuery来控制用户和选项卡的交互动作。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/tabs-basic.css&#34;&amp;gt; 
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/tabs-colorful.css&#34;&amp;gt; 
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/tabs-underlined.css&#34;&amp;gt; 
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/tabs-vertical.css&#34;&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;src/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+这些选项卡的HTML结构基本类似：使用一个&amp;lt;div&amp;gt;作为容器，选项卡的分页使用无序列表来制作，内容页则使用嵌套的&amp;lt;div&amp;gt;元素来制作。
+
+&amp;lt;div class=&#34;tabs-basic&#34;&amp;gt;
+&amp;lt;-- 分页标签 --&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a class=&#34;tab-active&#34; data-index=&#34;0&#34; href=&#34;#&#34;&amp;gt;First tab&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a data-index=&#34;1&#34; href=&#34;#&#34;&amp;gt;Second tab&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a data-index=&#34;2&#34; href=&#34;#&#34;&amp;gt;Third tab&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- 内容页 --&amp;gt;
+&amp;lt;div class=&#34;tabs-content-placeholder&#34;&amp;gt;
+&amp;lt;div class=&amp;quot;tab-content-active&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;img src=&amp;quot;assets/images/1.jpg&amp;quot; alt=&amp;quot;Banhoff&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;img src=&amp;quot;assets/images/2.jpg&amp;quot; alt=&amp;quot;Colosseum&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;img src=&amp;quot;assets/images/3.jpg&amp;quot; alt=&amp;quot;Sands of Life&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ JavaScript
+这些Tabs选项卡使用jQuery来完成用户的交互动作，实现方法非常简单，只是在用户点击相应的Tabs分页时为内容页添加和移除相应的class。
+
+$(document).ready(function() {
+var widget = $(&#39;.tabs-basic&#39;);
+var tabs = widget.find(&#39;ul a&#39;),
+content = widget.find(&#39;.tabs-content-placeholder &amp;gt; div&#39;);
+tabs.on(&#39;click&#39;, function (e) {
+e.preventDefault();
+var index = $(this).data(&#39;index&#39;);
+tabs.removeClass(&#39;tab-active&#39;);
+content.removeClass(&#39;tab-content-active&#39;);
+$(this).addClass(&#39;tab-active&#39;);
+content.eq(index).addClass(&#39;tab-content-active&#39;);
+});
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_812">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/138/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/140/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Bootstrap popover功能扩展jquery插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Bootstrap popover功能扩展jquery插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1709/201709081504.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709081504.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709084729.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款Bootstrap popover功能扩展jquery插件。该jquery插件在原生Bootstrap popover功能的基础上，添加了一些新的功能，例如自动定位，支持情景模式等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款Bootstrap popover功能扩展jquery插件。该jquery插件在原生Bootstrap popover功能的基础上，添加了一些新的功能，例如自动定位，支持情景模式等。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap相关文件，以及bootstrap-popover-x.css和bootstrap-popover-x.js文件。</p>
+<pre class="brush:html">
+&lt;link href="path/to/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link href="path/to/bootstrap-popover-x.css" rel="stylesheet"&gt;
+<p>&lt;script src=&quot;path/to/jquery.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;path/to/bootstrap.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;path/to/bootstrap-popover-x.js&quot;&gt;&lt;/script&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>一个Bootstrap Popover的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="myPopover" class="popover popover-default"&gt;
+&lt;div class="arrow"&gt;&lt;/div&gt;
+&lt;h3 class="popover-title"&gt;
+&lt;span class="close pull-right" data-dismiss="popover-x"&gt;×&lt;/span&gt;
+Title here
+&lt;/h3&gt;
+&lt;div class="popover-content"&gt;
+Popover content goes here
+&lt;/div&gt;
+&lt;div class="popover-footer"&gt;
+Footer here
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>然后可以通过一个按钮来触发Popover。</p>
+<pre class="brush:html">
+&lt;button class="btn btn-primary btn-lg" data-toggle="popover-x" 
+data-target="#myPopover" 
+data-placement="top"&gt;Top&lt;/button&gt;
+</pre>
+<p>插件为Popover内置了6种情景模式。</p>
+<ul>
+<li>popover-default</li>
+<li>popover-primary</li>
+<li>popover-info</li>
+<li>popover-success</li>
+<li>popover-danger</li>
+<li>popover-warning</li>
+</ul>
+<pre class="brush:html">
+&lt;div id="myPopover" class="popover popover-danger"&gt;
+...
+&lt;/div&gt;
+</pre>
+<p>你还可以指定Popover出现的位置。</p>
+<ul>
+<li>right</li>
+<li>left</li>
+<li>top</li>
+<li>bottom</li>
+<li>top top-left</li>
+<li>top top-right</li>
+<li>bottom bottom-left</li>
+<li>bottom bottom-right</li>
+<li>left left-top</li>
+<li>left left-bottom</li>
+<li>right right-top</li>
+<li>right right-bottom</li>
+<li>auto</li>
+<li>auto-top</li>
+<li>auto-right</li>
+<li>auto-bottom</li>
+<li>auto-left</li>
+<li>horizontal</li>
+<li>vertical</li>
+</ul>
+<pre class="brush:html">
+&lt;button data-toggle="popover-x" 
+data-target="#myPopover"
+data-placement="top"&gt;
+Click me
+&lt;/button&gt;
+</pre>
+<p>最后还可以指定鼠标hover或聚焦按钮是打开Bootstrap Popover。</p>
+<pre class="brush:html">
+&lt;button data-toggle="popover-x" 
+data-target="#myPopover"
+data-trigger="hover focus"&gt;
+Click me
+&lt;/button&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>也可以通过js代码来初始化Bootstrap Popover。</p>
+<pre class="brush:js">
+&lt;-- 例如下面的按钮使用上面相同的popover内容标签 --&gt;
+&lt;button id="#btn1" class="btn btn-primary btn-lg"&gt;Top&lt;/button&gt;
+&lt;script&gt;
+$(document).on('ready', function() {
+// initialize popover on click of `#btn1`
+$('#btn1').popoverButton({
+target: '#myPopover1'
+});
+// or alternatively initialize popover on hover of `#btn1`
+$('#btn1').popoverButton({
+target: '#myPopover1',
+trigger: 'hover focus'
+});
+});
+&lt;/script&gt; 
+</pre>
+<p>该Bootstrap popover功能扩展jquery插件的github地址为：<a href="https://github.com/kartik-v/bootstrap-popover-x" target="\_blank">https://github.com/kartik-v/bootstrap-popover-x</a></p>
+<!--简要教程-->
+<div class="alert alert-warning mt25" role="alert">
+本文版权属于jQuery之家，转载请注明出处：<a href="http://www.htmleaf.com/jQuery/Tooltips/201709084728.html">http://www.htmleaf.com/jQuery/Tooltips/201709084728.html</a>
+</div>
+<div class="leaf-page-nav pt50minh50 clearfix">
+<div class="pull-left">上一篇：<a href="http://www.htmleaf.com/jQuery/Tooltips/201706274597.html">HTML5 tooltips工具提示jquery插件</a> </div>
+<div class="pull-right">下一篇：<a href="http://www.htmleaf.com/jQuery/Tooltips/201801204941.html">纯js超酷消息提示框插件notice.js</a> </div>
+</div>
+<!--相关插件-->
+<div class="leaf-box mt45">
+<div class="leaf-tp leaf-like">
+<h3>
+相关插件 
+</h3>
+</div>
+<div class="row pt30 pb30 minh150">
+<div class="mt30 col-md-12 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201809185332.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1809/201809181446.jpg" alt="js炫酷消息通知插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201809185332.html"><h5>js炫酷消息通知插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201803195028.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1803/201803191535.jpg" alt="基于bootstrap的jquery弹出层确认框插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201803195028.html"><h5>基于bootstrap的jquery弹出层确认框插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Tooltips/201801204941.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1801/201801201430.jpg" alt="纯js超酷消息提示框插件notice.js"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Tooltips/201801204941.html"><h5>纯js超酷消息提示框插件notice.js</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201701114313.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1701/201701111447.jpg" alt="基于velocity.js过渡动画效果的Bootstrap模态窗口和Popover"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201701114313.html"><h5>基于velocity.js过渡动画效果的Bootstrap模态窗口和Popover</h5></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--相关插件结束-->
+<!--网友评论-->
+<!-- <div class="leaf-box mt45">
+<div class="leaf-tp leaf-pinglun">
+<h3>
+网友评论 
+</h3>
+</div>
+<div class="leaf-changyan">
+<div id="SOHUCS"></div>
+</div>
+</div> -->
+<!--网友评论结束-->
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709081504.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709084729.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_456">
+                                <h3 class="post-title">
+                                    控制台打印文字效果js插件-typed.js
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

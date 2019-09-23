@@ -1,0 +1,1393 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_713">
+                        移动端优先且支持jQuery和Zepto的模态对话框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_713" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606081517.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+dialog.js是一款移动端优先且同时支持jQuery和Zepto的模态对话框插件。它支持三种类型的弹出对话框，支持自定义按钮，文字等，并支持事件监听。
+内容：
+
+
+简要教程
+
+
+dialog.js是一款移动端优先且同时支持jQuery和Zepto的模态对话框插件。它支持三种类型的弹出对话框，支持自定义按钮，文字等，并支持事件监听。它的特点还有：
+
+支持三种类型的弹出对话框：alert、confirm、info。
+可以自定义按钮的文字、样式、回调函数。
+支持 jQuery 和 Zepto。
+支持4个状态事件，用来监听状态改变。
+对话框默认样式主要针对移动端展示做优化。
+
+
+ 使用方法
+使用该模态对话框插件需要在页面中引入dialog.css，jquery或zepto，以及dialog.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/dialog.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- 或者 --&amp;gt;
+&amp;lt;script src=&#34;js/zepto.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/dialog.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+可以通过下面的方法来初始化一个对话框。
+
+$.dialog({
+contentHtml : &#39;弹出对话框的内容部分&#39;
+}); 
+
+
+ 配置参数
+可用的配置参数如下：
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+type
+&#39;alert&#39;
+对话框的种类（alert-确定； confirm-确定/取消； info）
+
+
+titleText
+&#39;信息提示&#39;
+标题文字
+
+
+showTitle
+true
+是否显示标题。值为：true、false
+
+
+contentHtml
+&#39;&#39;
+主体部分的HTML内容。默认值为空
+
+
+dialogClass
+&#39;&#39;
+对话框自定义的 class。默认值为空
+
+
+autoClose
+0
+自动关闭的延时时间（单位：毫秒）。为0时表示不自动关闭；大于0时，表示自动关闭对话框
+
+
+overlayClose
+fasle
+是否可点击遮罩层关闭对话框。值为：true、false
+
+
+buttonText
+
+ {
+    ok : &#39;确定&#39;, 
+    cancel : &#39;取消&#39;
+}
+
+按钮的文字
+
+
+buttonClass
+
+ {
+    ok : &#39;&#39;, 
+    cancel : &#39;&#39;
+}
+
+按钮的自定义 class
+
+
+infoText
+&#39;&#39;
+info 类型对话框的提示文字
+
+
+infoIcon
+&#39;&#39;
+info 类型对话框的提示图标。值为图标的路径
+
+
+onClickOk
+function(){}
+回调函数，点击“确定”按钮时执行
+
+
+onClickCancel
+function(){}
+回调函数，点击“取消”按钮时执行
+
+
+onBeforeShow
+function(){}
+回调函数，对话框显示前时执行
+
+
+onShow
+function(){}
+回调函数，对话框显示后时执行
+
+
+onBeforeClosed
+function(){}
+回调函数，对话框关闭前时执行
+
+
+onClosed
+function(){}
+回调函数，对话框关闭后时执行
+
+
+
+
+
+ 浏览器兼容
+dialog 已经在 Internet Explorer 9+、Firefox 22+、Opera 9+、Google Chrome 和 Safari 浏览器上被验证过，并且应该可以再更多浏览器上工作。
+移动浏览器（例如：Chrome mobile、 Safari mobile 和其它浏览器）也被支持。已经在 iOS (iPad、 iPhone、 iPod)、Android 设备上进行了测试。其他基于 Chrome 内核的移动浏览器也基本上支持。
+dialog.js插件作者：方雨\_Yu。
+dialog.js插件的github地址为：https://github.com/sufangyu/dialog.js。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_713">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_714">
+                        switchPage.js-简单的jQuery全屏滚动翻页插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_714" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605211553.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+switchPage.js是一款小巧的jQuery全屏滚动翻页插件。通过它可以快速创建水平或垂直的全屏滚动翻页效果。该插件支持使用鼠标或键盘来进行翻页。
+内容：
+
+
+简要教程
+
+
+switchPage.js是一款小巧的jQuery全屏滚动翻页插件。通过它可以快速创建水平或垂直的全屏滚动翻页效果。该插件支持使用鼠标或键盘来进行翻页。它的特点还有：
+
+支持水平和垂直翻页。
+页面无限循环，滚动到最后一夜后会跳转会第一页。
+自动生成圆点导航按钮。
+可以自定义页面的过渡动画效果。
+
+
+ 使用方法
+使该插件需要在页面中引入jquery和switchPage.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/switchPage.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该全屏翻页滚动效果使用嵌套的HTML结构。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;section active&#34;&amp;gt;
+Section One
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;
+Section Two 
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section2&#34;&amp;gt;
+Section Three
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为每一个分段页面设置100\%的高度和宽度。
+
+* {
+padding: 0;
+margin: 0;
+}
+html, body {
+height: 100%;
+overflow: hidden;
+}
+#container, .section {
+height: 100%;
+position: relative;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过switchPage()方法来初始化该全屏翻页滚动插件。
+
+$(function(){
+$(&#34;#container&#34;).switchPage({
+// 配置参数
+});
+});
+
+
+ 配置参数
+bespoke-fx幻灯片插件的配置参数如下：
+
+
+&#39;container&#39;：顶级容器。默认值为&#39;#container&#39;。
+
+&#39;sections&#39;：分段容器。默认值为&#39;.section&#39;。
+
+&#39;easing&#39;：动画过渡效果，默认值为&#39;ease&#39;，可用值有：ease-in,ease-out,ease,linear。
+
+&#39;duration&#39;：动画的持续时间。默认值为1000毫秒。
+
+&#39;pagination&#39;：是否显示圆点导航按钮，默认为true。
+
+&#39;loop&#39;：是否支持无限循环，默认值为false。
+
+&#39;keyboard&#39;：是否支持键盘控制，默认值为true。
+
+&#39;direction&#39;：页面滚动的方向，默认值为&#39;vertical&#39;，可用值有：vertical 或 horizontal。
+
+&#39;onpageSwitch&#39;：回调函数。默认为function(pagenum) {}。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_714">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_715">
+                        CsvToTable-CSV格式文件转HTML表格js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_715" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606211521.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+CsvToTable是一款可以使用JavaScript解析本地CSV格式文件转换为HTML表格的js插件。它使用简单，可以将任意CSV格式文件转换为HTML表格，并显示在页面中。
+内容：
+
+
+简要教程
+
+
+CsvToTable是一款可以使用JavaScript解析本地CSV格式文件转换为HTML表格的js插件。它使用简单，可以将任意CSV格式文件转换为HTML表格，并显示在页面中。 
+CSV（Comma-Separated Values）格式是逗号分隔值的简写。其文件以纯文本形式存储表格数据(数字和文本)。CSV文件由任意数目的记录组成，记录间以某种换行符分隔;每条记录由字段组成，字段间的分隔符是其它字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。
+CSV文件的格式类似下面的样子：
+
+姓名,居住城市,国家
+张小明,北京,中国
+史蒂夫,纽约,美国
+......
+
+
+ 使用方法
+使用CsvToTable插件需要在页面中引入CsvToTable.js文件。
+
+&amp;lt;script src=&#34;path/to/CsvToTable.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 解析CSV文件
+使用CsvToTable()构造方法创建一个对象实例，然后通过该对象实例的run()方法来执行CSV格式的转换。
+
+&amp;lt;script&amp;gt;
+var csvtotable = new CsvToTable({
+csvFile: &#39;path/to/你的CSV文件&#39; 
+});
+csvtotable.run();
+&amp;lt;/script&amp;gt;
+
+CsvToTable插件的github地址为：https://github.com/yasharma/CsvToTable。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_715">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_716">
+                        纯JS和CSS3超酷3D翻转式幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_716" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607061633.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+3D-Flip-Slider是一款纯JS和CSS3超酷3D翻转式幻灯片插件。该幻灯片在点击前后按钮时，图片或幻灯片内容以3D翻转的方式进行切换。
+内容：
+
+
+简要教程
+
+
+3D-Flip-Slider是一款纯JS和CSS3超酷3D翻转式幻灯片插件。该幻灯片在点击前后按钮时，图片或幻灯片内容以3D翻转的方式进行切换。该3D翻转幻灯片的特点还有：
+
+纯JavaScript，不依赖jQuery库。
+轻量级，压缩版本只有2.5kb。
+支持图片和任何HTML内容。
+性能优化，支持IE10+浏览器。
+可通过外部元素来触发前后导航事件。
+
+
+ 使用方法
+在页面中引入flipslide.js和flipslide.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/flipslide.css&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/flipslide.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该3D翻转幻灯片的基本HTML结构如下：
+
+&amp;lt;div class=&#34;flip-slider&#34;&amp;gt;
+&amp;lt;div class=&#34;flip-frame&#34;&amp;gt;
+&amp;lt;div class=&#34;flip&#34;&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/2.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/3.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/4.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/5.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide color&#34;&amp;gt;
+&amp;lt;h1&amp;gt;Slide Title&amp;lt;/h1&amp;gt;
+&amp;lt;b&amp;gt;HTML Page&amp;lt;/b&amp;gt; &amp;lt;i&amp;gt;Content&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;nav&#34;&amp;gt;
+&amp;lt;button class=&#34;prev&#34;&amp;gt;Previous&amp;lt;/button&amp;gt;
+&amp;lt;button class=&#34;next&#34;&amp;gt;Next&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+可以通过new FlipSlider()来实例化幻灯片对象。
+
+var flip1 = new FlipSlider({
+startIndex: 3,
+container: document.querySelector(&#34;.flip-slider&#34;)
+});
+//或者
+var flip2 = new FlipSlider({
+container: document.getElementById(&#34;#flipSlider2&#34;)
+});
+
+
+ 绑定触发事件
+方法一：在元素上绑定事件。
+
+// Binding Previous Event
+document.querySelector(&#34;#flipPrevious&#34;).onclick = flip1.prevFlip;
+// Binding Next Event
+document.querySelector(&#34;#flipNext&#34;).onclick = flip1.nextFlip; 
+
+方法二：通过JS来触发事件。
+
+flip1.prevFlip(); // Trigger Previous Event
+flip1.nextFlip(); // Trigger Next Event
+
+方法三：在标签上通过内联的方式来绑定事件：
+
+&amp;lt;p&amp;gt;&amp;lt;b onclick=&#34;flip1.prevFlip();&#34;&amp;gt;Click here&amp;lt;/b&amp;gt; to flip Previous the slider&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;b onclick=&#34;flip1.nextFlip();&#34;&amp;gt;Click here&amp;lt;/b&amp;gt; to flip next the slider&amp;lt;/p&amp;gt;
+
+3D-Flip-Slider幻灯片插件的github地址为：https://github.com/ashishkumar-ui/3D-Flip-Slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_716">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_717">
+                        jQuery和CSS3带轮播效果的游戏人物卡片设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_717" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606131735.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和CSS3带轮播效果的游戏人物卡片设计效果。该游戏人物卡片通过背景图片的切换来显示不同的人物效果，轮播效果通过slick幻灯片插件来制作。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery和CSS3带轮播效果的游戏人物卡片设计效果。该游戏人物卡片通过背景图片的切换来显示不同的人物效果，轮播效果通过slick幻灯片插件来制作。 
+
+ 使用方法
+使用该游戏人物卡片需要引入slick幻灯片插件的相关文件。
+
+&amp;lt;link rel=&#39;stylesheet prefetch&#39; href=&#39;https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css&#39;&amp;gt;
+&amp;lt;link rel=&#39;stylesheet prefetch&#39; href=&#39;https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css&#39;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+每一张游戏卡片都使用下面的HTML结构来制作，不同的卡片使用不同的图片。
+
+&amp;lt;div class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;clash-card barbarian&#34;&amp;gt;
+&amp;lt;div class=&#34;clash-card\_\_image clash-card\_\_image--barbarian&#34;&amp;gt;
+&amp;lt;img src=&#34;img/barbarian.png&#34; alt=&#34;barbarian&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;clash-card\_\_level clash-card\_\_level--barbarian&#34;&amp;gt;Level 4&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;clash-card\_\_unit-name&#34;&amp;gt;The Barbarian&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;clash-card\_\_unit-description&#34;&amp;gt;
+&amp;lt;!-- 描述文本 --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;clash-card__unit-stats clash-card__unit-stats--barbarian clearfix&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;one-third&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;stat&amp;quot;&amp;gt;20&amp;lt;sup&amp;gt;S&amp;lt;/sup&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;stat-value&amp;quot;&amp;gt;Training&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;one-third&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;stat&amp;quot;&amp;gt;16&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;stat-value&amp;quot;&amp;gt;Speed&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;one-third no-border&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;stat&amp;quot;&amp;gt;150&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;stat-value&amp;quot;&amp;gt;Cost&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- end clash-card barbarian--&amp;gt;
+
+卡片的效果截图如下：
+
+
+ JavaScript
+在页面加载完毕之后，通过slick()方法来初始化slick幻灯片插件。然后在幻灯片切换的时候，对.slide-container容器做事件监听，并显示和隐藏相应的图片。
+
+(function() {
+var slideContainer = $(&#39;.slide-container&#39;);
+slideContainer.slick();
+(′.clash−card__imageimg′).hide();(&amp;#x27;.clash-card\_\_image img&amp;#x27;).hide();
+(′.clash−card__imageimg′).hide();(&#39;.slick-active&#39;).find(&#39;.clash-card img&#39;).fadeIn(200);
+// On before slide change
+slideContainer.on(&#39;beforeChange&#39;, function(event, slick, currentSlide, nextSlide) {
+$(&#39;.slick-active&#39;).find(&#39;.clash-card img&#39;).fadeOut(1000);
+});
+// On after slide change
+slideContainer.on(&#39;afterChange&#39;, function(event, slick, currentSlide) {
+$(&#39;.slick-active&#39;).find(&#39;.clash-card img&#39;).fadeIn(200);
+});
+})();
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_717">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_718">
+                        jQuery和CSS3创意添加到购物车动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-banana">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_718" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606291615.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的创意添加到购物车动画特效。该特效在用户点击“添加到购物车”按钮时，在屏幕右下角显示一个购物车图标及购物数量。当用户点击该购物车图标后，会展示出用户购物的明细。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3制作的创意添加到购物车动画特效。该特效在用户点击“添加到购物车”按钮时，在屏幕右下角显示一个购物车图标级购物数量。当用户点击该购物车图标后，会展示出用户购物的明细。
+
+ 使用方法
+
+ HTML结构
+该添加到购物车特效的HTML结构分为2部分：.cd-cart-trigger是添加到购物车按钮，.cd-cart是购物车的明细。
+
+&amp;lt;div class=&#34;cd-cart-container empty&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34; class=&#34;cd-cart-trigger&#34;&amp;gt;
+Cart
+&amp;lt;ul class=&#34;count&#34;&amp;gt; &amp;lt;!-- cart items count --&amp;gt;
+&amp;lt;li&amp;gt;0&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;0&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- .count --&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;cd-cart&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;h2&amp;gt;Cart&amp;lt;/h2&amp;gt;
+&amp;lt;span class=&amp;quot;undo&amp;quot;&amp;gt;Item removed. &amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Undo&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;div class=&amp;quot;body&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;!-- products added to the cart will be inserted here using JavaScript --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;footer&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;checkout btn&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Checkout - $&amp;lt;span&amp;gt;0&amp;lt;/span&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/footer&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-cart --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-cart-container --&amp;gt;
+
+div.body中的列表内容默认是空的，当某个商品被添加到购物车之后，通过JavaScript将其添加到列表中。
+
+&amp;lt;div class=&#34;body&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;product&#34;&amp;gt;
+&amp;lt;div class=&#34;product-image&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34;&amp;gt;&amp;lt;img src=&#34;img/thumb.jpg&#34; alt=&#34;placeholder&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;product-details&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Product Name&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;span class=&amp;quot;price&amp;quot;&amp;gt;$25.99&amp;lt;/span&amp;gt;
+&amp;lt;div class=&amp;quot;actions&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;delete-item&amp;quot;&amp;gt;Delete&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;quantity&amp;quot;&amp;gt;
+&amp;lt;label for=&amp;quot;cd-product-&#39;+ productId +&#39;&amp;quot;&amp;gt;Qty&amp;lt;/label&amp;gt;
+&amp;lt;span class=&amp;quot;select&amp;quot;&amp;gt;
+&amp;lt;select id=&amp;quot;cd-product-&#39;+ productId +&#39;&amp;quot; name=&amp;quot;quantity&amp;quot;&amp;gt;
+&amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;2&amp;quot;&amp;gt;2&amp;lt;/option&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/select&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- 添加到购物车的其它内容 --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+.cd-cart和.cd-cart-trigger元素的定位方式使用固定定位，默认被移动到视口之外。当某个商品被添加到购物车之后，.cd-cart-container元素上的.emptyclass会被移除，购物车被显示出来。
+
+.cd-cart-trigger,
+.cd-cart {
+position: fixed;
+bottom: 20px;
+right: 5\%;
+transition: transform .2s;
+}
+.empty .cd-cart-trigger, 
+.empty .cd-cart {
+/* 隐藏购物车*/
+transform: translateY(150px);
+}
+
+在制作购物车动画的时候，div.wrapper元素被设置了固定的宽度和高度，它的尺寸和a.cd-cart-trigger尺寸相同。当购物车打开的时候，使用.cart-open class来对宽度和高度进行动画。
+
+.cd-cart .wrapper {
+position: absolute;
+bottom: 0;
+right: 0;
+z-index: 2;
+overflow: hidden;
+height: 72px;
+width: 72px;
+border-radius: 6px;
+transition: height .4s .1s, width.4s .1s, box-shadow .3s;
+transition-timing-function: cubic-bezier(0.67, 0.17, 0.32, 0.95);
+background: #ffffff;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.17);
+}
+.cart-open .cd-cart .wrapper {
+height: 100%;
+width: 100%;
+transition-delay: 0s;
+}
+
+.deleted class用于从购物车中移除商品。被移除的商品使用绝对定位，并使用cd-item-slide-out class来为它们制作滑出动画效果。
+
+.cd-cart .body li.deleted {
+/* this class is added to an item when it is removed form the cart */
+position: absolute;
+left: 1.4em;
+width: calc(100\% - 2.8em);
+opacity: 0;
+animation: cd-item-slide-out .3s forwards;
+}
+@keyframes cd-item-slide-out {
+0% {
+transform: translateX(0);
+opacity: 1;
+}
+100% {
+transform: translateX(80px);
+opacity: 0;
+}
+}
+
+如果用户点击了“Undo”按钮，.deleted class类会被移除，商品会被重新传入到列表中。
+
+ JAVASCRIPT
+当用户点击了“添加到购物车”按钮，在Js代码中通过addProduct()方法将一个新的商品添加到.body &amp;gt; ul元素中。
+
+function addProduct() {
+//this is just a product placeholder
+var productAdded = $(&#39;&amp;lt;li class=&#34;product&#34;&amp;gt;&amp;lt;div class=&#34;product-image&#34;&amp;gt;&amp;lt;a href=&#34;#0&#34;&amp;gt;&amp;lt;img src=&#34;img/product-preview.png&#34; alt=&#34;placeholder&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&#34;product-details&#34;&amp;gt;&amp;lt;h3&amp;gt;&amp;lt;a href=&#34;#0&#34;&amp;gt;Product Name&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;span class=&#34;price&#34;&amp;gt;$25.99&amp;lt;/span&amp;gt;&amp;lt;div class=&#34;actions&#34;&amp;gt;&amp;lt;a href=&#34;#0&#34; class=&#34;delete-item&#34;&amp;gt;Delete&amp;lt;/a&amp;gt;&amp;lt;div class=&#34;quantity&#34;&amp;gt;&amp;lt;label for=&#34;cd-product-&#39;+ productId +&#39;&#34;&amp;gt;Qty&amp;lt;/label&amp;gt;&amp;lt;span class=&#34;select&#34;&amp;gt;&amp;lt;select id=&#34;cd-product-&#39;+ productId +&#39;&#34; name=&#34;quantity&#34;&amp;gt;&amp;lt;option value=&#34;1&#34;&amp;gt;1&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;2&#34;&amp;gt;2&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;3&#34;&amp;gt;3&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;4&#34;&amp;gt;4&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;5&#34;&amp;gt;5&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;6&#34;&amp;gt;6&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;7&#34;&amp;gt;7&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;8&#34;&amp;gt;8&amp;lt;/option&amp;gt;&amp;lt;option value=&#34;9&#34;&amp;gt;9&amp;lt;/option&amp;gt;&amp;lt;/select&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;&#39;);
+cartList.prepend(productAdded);
+}
+
+另外，updateCartCount()函数用于更新购物车的购物数量。updateCartTotal()函数用于统计购物总数。在添加和移除商品时它们会被动态执行。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_718">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_719">
+                        纯js轻量级图片放大显示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_719" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607201705.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+lightense-images是一款可以将缩略图片在屏幕中间放大显示的纯js插件。该图片放大插件的效果类似于Medium.com上的图片放大预览效果。
+内容：
+
+
+简要教程
+
+
+lightense-images是一款可以将缩略图片在屏幕中间放大显示的纯js插件。该图片放大插件的效果类似于Medium.com上的图片放大预览效果。它的特点有：
+
+轻量级，压缩后的版本仅2KB。
+点击缩略图后，以lightbox的方式来显示放大图片。
+可以自定义背景遮罩层的颜色和透明度。
+在页面滚动时自动将大图恢复为缩略图。
+
+
+ 使用方法
+在页面中引入lightense.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/lightense.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+可以使用下面的方法来初始化该图片放大插件。
+
+window.addEventListener(&#39;load&#39;, function () {
+var el = document.querySelectorAll(&#39;img.lightense&#39;);
+Lightense(el);
+}, false); 
+
+你可以为图片&amp;lt;img&amp;gt;元素设置data-background属性来修改背景遮罩层的颜色和透明度。
+
+&amp;lt;img src=&#34;demo.png&#34; data-background=&#34;rgba(0, 10, 45, .6)&#34; class=&#34;lightense&#34;&amp;gt; 
+
+得到的效果类型下图：
+
+你也可以在超链接元素中通过data-image属性来指定要打开的图片。
+
+&amp;lt;a class=&#34;lightense&#34; data-image=&#34;demo.png&#34;&amp;gt;点击打开图片&amp;lt;/a&amp;gt;
+
+lightense-images图片放大插件的github地址为：https://github.com/sparanoid/lightense-images
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_719">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_72">
+                        ES6炫酷开关按钮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_72" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1902/201902217492.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用ES6编写的iOS样式开关按钮插件。该开关按钮切换状态时带炫酷的动画特效，支持npm安装，支持插槽和自定义样式，使用非常方便。
+内容：
+
+
+简要教程
+
+
+这是一款使用ES6编写的iOS样式开关按钮插件。该开关按钮切换状态时带炫酷的动画特效，支持npm安装，支持插槽和自定义样式，使用非常方便。
+
+
+ 使用方法
+通过npm来安装。
+
+npm i jelly-switch 
+
+或在页面中直接引入。
+
+&amp;lt;script src =&#34;https://unpkg.com/jelly-switch@0.2.3/lib/index.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用模块导入
+
+import { JellySwitch } from &#34;jelly-switch&#34;
+
+
+ HTML结构
+在html页面中使用
+
+&amp;lt;jelly-switch id=&#34;js1&#34;&amp;gt;&amp;lt;/jelly-switch&amp;gt;
+
+
+ 使用插槽
+
+&amp;lt;jelly-switch id=&#34;js1&#34;&amp;gt;
+&amp;lt;p slot=&#34;content-left&#34;&amp;gt;On/Off&amp;lt;/p&amp;gt;
+&amp;lt;/jelly-switch&amp;gt;
+
+
+ API
+checked
+
+&amp;lt;jelly-switch id=&#34;js1&#34; checked&amp;gt;&amp;lt;/jelly-switch&amp;gt;
+
+或者
+
+js1.checked = true
+
+disabled
+
+&amp;lt;jelly-switch id=&#34;js1&#34; disabled&amp;gt;&amp;lt;/jelly-switch&amp;gt;
+
+或者
+
+js1.disabled = true
+
+ 该ES6 iOS样式开关按钮插件的github网址为：https://github.com/akhil0001/jellySwitch
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_72">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_720">
+                        简单的网页背景滚动视觉差特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_720" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607131617.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单的网页背景滚动视觉差特效。该背景视觉差特效使用几句简单javascript语句即可完成，在页面滚动时，背景图片和网页元素可以形成滚动视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款简单的网页背景滚动视觉差特效。该背景视觉差特效使用几句简单javascript语句即可完成，在页面滚动时，背景图片和网页元素可以形成滚动视觉差效果。
+
+ 使用方法
+
+ HTML结构
+在&amp;lt;body&amp;gt;中放置你需要的HTML元素。
+
+&amp;lt;body&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;!--可以是任何内容--&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+ CSS样式
+将&amp;lt;body&amp;gt;元素的高度设置为2倍，背景图片的background-size属性设置为cover，background-attachment属性设置为固定fixed。
+
+body {
+font-family: &#39;Ubuntu Mono&#39;, sans-serif;
+height: 200\%;
+width: 100\%;
+background-image: url(&#39;img/bg.jpg&#39;);
+background-attachment: fixed;
+background-size: cover;
+}
+
+页面中的块级元素使用绝对定位。
+
+div {
+position: absolute;
+top: 40\%;
+left: 20\%;
+color: white;
+font-size: 1.2em;
+text-shadow: #000 1px 1px 1px;
+width: 1000px;
+height: 200px;
+padding: 20px;
+background-color: rgba(0, 0, 0, 0.7);
+border-radius: 6px;
+}
+
+
+ javaScript
+制作页面背景视觉差效果的javascript代码非常简单：通过监听window对象的onscroll事件，在页面滚动时修改body元素的backgroundPosition样式。
+
+function parallax() {
+window.onscroll = function() {
+var speed = 5.0;
+document.body.style.backgroundPosition = (-window.pageXOffset/speed)+&#34;px &#34;
+ +(-window.pageYOffset/speed)+&#34;px&#34;;
+}
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_720">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_721">
+                        超酷模糊背景同步jQuery旋转木马特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_721" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607271645.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于slick-carousel插件制作的超酷模糊背景同步jQuery旋转木马特效。该特效使用两组相同的图片作为前后两组旋转木马。背景旋转木马使用CSS滤镜将其模糊，两组旋转木马可以同步进行运动。
+内容：
+
+
+简要教程
+
+
+这是一款基于slick-carousel插件制作的超酷模糊背景同步jQuery旋转木马特效。该特效使用两组相同的图片作为前后两组旋转木马。背景旋转木马使用CSS滤镜将其模糊，两组旋转木马可以同步进行运动。
+slick旋转木马插件兼容IE8+浏览器，但是IE浏览器不支持CSS滤镜效果，所以在IE中可以使用该旋转木马的功能，但是没有模糊效果。
+
+ 使用方法
+在页面中引入jquery，slick.min.js和slick.min.css文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css&#39;&amp;gt;
+&amp;lt;script src=&#39;path/to/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;容器作为包裹元素，里面放置两个旋转木马组件。div.project-strip用于制作带模糊效果的背景旋转木马。div.project-screen是前景旋转木马。其中div.screen-frame是浏览器模型图片层。
+
+&amp;lt;div class=&#34;project-carousel&#34;&amp;gt;
+&amp;lt;div class=&#34;project-strip&#34;&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/1.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/2.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/3.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/4.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/5.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/6.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/7.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/8.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/9.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project-screen&#34;&amp;gt;
+&amp;lt;div class=&#34;project-detail&#34;&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/1.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/2.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/3.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/4.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/5.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/6.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/7.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/8.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;project&#34;&amp;gt;&amp;lt;img src=&#34;img/9.jpg&#34; alt=&#34;&#34;/&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;screen-frame&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+包裹容器div.project-carousel使用相对定位，并设置一定的padding值。
+
+.project-carousel {
+position: relative;
+padding: 50px 0;
+}
+
+背景旋转木马层div.project-strip上下外边距设置为150像素，并通过CSS滤镜filter将图片进行模糊处理。
+
+.project-strip {
+margin: 150px 0 150px;
+-webkit-filter: blur(10px);
+filter: blur(10px);
+}
+
+前景旋转木马层设置了固定的宽度和高度，定位方式使用绝对定位。div.screen-frame是用于美化的显示器模型层，它的宽度和高度和父容器相等，背景图片使用一张透明的MAC显示器图片。
+
+.project-screen .screen-frame {
+content: &#34; &#34;;
+width: 768px;
+height: 451px;
+position: absolute;
+background-image: url(&#34;../img/macbook.png&#34;);
+background-repeat: no-repeat;
+}
+
+div.project-detail用于放置前景的旋转木马，使用绝对定位，设置固定的宽度和高度，并居中显示。
+
+.project-screen .project-detail {
+position: absolute;
+left: 0;
+right: 0;
+width: 578px;
+height: 361px;
+margin: 32px auto 0;
+z-index: 1;
+background-color: #333;
+}
+
+
+ JavaScript
+在页面DOM元素加载完毕之后，通过下面的方法来初始化这两组旋转木马。关于slick旋转木马插件的详细介绍可以参考这里。
+
+$(&#34;.project-detail&#34;).slick({
+slidesToShow: 1,
+arrows: false,
+asNavFor: &#39;.project-strip&#39;,
+autoplay: true,
+autoplaySpeed: 3000
+});
+$(&amp;quot;.project-strip&amp;quot;).slick({
+slidesToShow: 5,
+slidesToScroll: 1,
+arrows: false,
+asNavFor: &#39;.project-detail&#39;,
+dots: false,
+infinite: true,
+centerMode: true,
+focusOnSelect: true
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_721">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/128/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/130/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

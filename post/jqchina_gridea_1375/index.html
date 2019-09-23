@@ -1,0 +1,349 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery超酷响应式自适应模态窗口特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery超酷响应式自适应模态窗口特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412231554.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412231554.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141223965.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的jQuery响应式自适应模态窗口特效插件，该模态窗口插件共有5种特效，当点击特定链接后，模态窗口会后逐渐放大、翻转的动画效果，非常的酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常炫酷的jQuery响应式自适应<strong>模态窗口</strong>特效插件。当某个特定的链接被触发时，模态窗口被旋转放大到指定位置。看似很简单，但实际上有很多细节问题需要处理。</p>
+<p>在这里使用克隆元素的方法来制作模态窗口，当模态窗口关闭时，插件将销毁克隆元素，然后将原来的元素显示出来。</p>
+<h3>HTML结构</h3>
+<p>html结构中使用html5的自定义data属性，不需要调用任何的JavaScript，模态窗口插件将自动侦测所有元素，当发现<span class="m">data-toggle</span>的值为<span class="m">adaptive-modal</span>时，将自动为其创建一个模态窗口。<span class="m">data-title</span>中的内容将被用于模态窗口的内容描述。<span class="m">data-title</span>支持使用html标签。</p>
+<pre class="brush:html">
+&lt;body&gt;
+..
+&lt;a href="#" data-toggle="adaptive-modal" data-title="..."&gt;...&lt;/a&gt;
+..
+&lt;/body&gt;
+</pre>
+<h3>高级应用</h3>
+<p>在实际应用中，可以通过各种定制来生成不同的模态窗口。下面是几个不同模态窗口的例子：</p>
+<h5>显示已经存在的内容</h5>
+<p>通过a标签的<span class="m">href</span>实现指向特定的ID，你能够在模态窗口中显示特定内容，而不是<span class="m">data-title</span>中的内容。</p>
+<pre class="brush:html">
+&lt;body&gt;
+..
+&lt;a href="#form" data-toggle="adaptive-modal"&gt;...&lt;/a&gt;
+&lt;form id="form"&gt;
+..
+&lt;/form&gt;
+..
+&lt;/body&gt;
+</pre>
+<h5>显示远程内容</h5>
+<p>该模态窗口插件支持AJAX远程调用，你不需要编写javascript关于ajax的代码，你需要做的仅仅是在<span class="m">href</span>中指定AJAX远程调用的URL地址和设置<span class="m">data-remote</span>属性为true。</p>
+<pre class="brush:html">
+&lt;body&gt;
+..
+&lt;a href="http://www.remote-ajax-url.com" data-type=".." data-datatype=".." data-remote="true" data-toggle="adaptive-modal"&gt;...&lt;/a&gt;
+..
+&lt;/body&gt;
+</pre>
+<p>你也可以通过<span class="m">data-type</span>和<span class="m">data-datatype</span>实现来设置你自己的AJAX类型和datatype。类型默认为GET，datatype默认为HTML。</p>
+<h5>为每个模态窗口定义class名称</h5>
+<p>你也可以通过<span class="m">data-am-custom-class</span>自定义模态窗口的class名称，以便于修改模态窗口的CLASS样式。</p>
+<pre class="brush:html">
+&lt;body&gt;
+..
+&lt;a href="#" data-toggle="adaptive-modal" data-title="..." data-am-custom-class="custom-class-name"&gt;...&lt;/a&gt;
+..
+&lt;/body&gt;
+</pre>
+<h5>自定义模态窗口的背景颜色</h5>
+<p>你可以通过<span class="m">data-am-custom-bgcolor</span>属性来定义模态窗口的背景颜色。</p>
+<pre class="brush:html">
+&lt;body&gt;
+..
+&lt;a href="#" data-toggle="adaptive-modal" data-title="..." data-am-custom-bgcolor="#000"&gt;...&lt;/a&gt;
+..
+&lt;/body&gt;
+</pre>
+<h3>更多可选参数</h3>
+<p>下面让我们通过JavaScript的调用来说明更多的可用参数。如果你想定义一个全局选项，而不是依靠HTML标记，你可以通过jQuery初始化插件来完成：</p>
+<pre class="brush:js">
+$(".am-remote-link").adaptiveModal({
+ elementAnimateTime: 100, 
+ customBgColor: "#333", 
+ remoteUrl: false,
+ elementAnimateIn: "scaleShow",
+ elementAnimateOut: "scaleHide",
+ beforeAnimate: function(el, status) {}, 
+ afterAnimate: function(el, status) {}, 
+<p>// Deafult Ajax Parameters.<br>
+type: &quot;GET&quot;,<br>
+async: true,<br>
+complete: function(xhr, text) {},<br>
+cache: true,<br>
+error: function(xhr, text, e) {},<br>
+global: true,<br>
+headers: {},<br>
+statusCode: {},<br>
+success: function(data, text, xhr) {},<br>
+dataType: &quot;html&quot;<br>
+})<br>
+</pre></p>
+<p><span class="m">elementAnimateTime</span>：这个参数定义模态窗口打开或关闭的时间，单位毫秒，默认值为100。</p>
+<p><span class="m">customBgColor</span>：这个参数和<span class="m">data-am-custom-bgcolor</span>属性的功能一样，用于定义背景颜色。这个参数可以是HEX, RGB, RGBA。默认值为#333333。 </p>
+<p><span class="m">remoteUrl</span>：这个参数定义远程调用的URL并设置它为true，默认值为FALSE。</p>
+<p><span class="m">elementAnimateIn</span>：要使用这个参数，你需啊哟在head引入一个CSS3 animation库，如<a href="http://daneden.github.io/animate.css/" target="\_blank">Animate.css</a>。通过Animate.css的class名称，你可以为模态窗口定义各种动画类型。默认值是内置的scaleShow。</p>
+<p><span class="m">beforeAnimate</span>：这个参数是模态窗口动画开始前的一个回调函数。可用参数是<span class="m">el</span>返回一个jQuery对象和动画状态。例如：当模态窗口打开时将返回“open”。</p>
+<p><span class="m">afterAnimate</span>：这个参数是模态窗口动画结束时的一个回调函数。可用参数是<span class="m">el</span>返回一个jQuery对象和动画状态。例如：当模态窗口关闭时将返回“close”。</p>
+<p>其它的type, async, cache, complete, error, global, headers, statusCode, success, 和 dataType和默认的jQuery AJAX参数是一致的，你可以在这里得到<a href="http://api.jquery.com/jquery.ajax/" target="\_blank">更多关于它们的信息</a>。</p>
+<h3>回调(Callbacks)</h3>
+<p>我们在插件中添加了一些回调函数，以便于你能在自己的项目中扩展它们。下面列举了一些回调函数：</p>
+<h5>beforeAnimate: function(el, status)</h5>
+<p>这个回调函数在模态窗口动画开始前被调用。el参数返回一个jQuery对象和动画的当前状态。例如：模态窗口打开时返回“open”，模态窗口关闭时返回“close”。</p>
+<pre class="brush:js">
+$(".am-remote-link").adaptiveModal({
+beforeAnimate: function(el, status) {
+...
+}
+});
+</pre>
+<h5>afterAnimation: function(el,status)</h5>
+<p>这个回调函数在模态窗口动画结束被调用。el参数返回一个jQuery对象和动画的当前状态。例如：模态窗口打开时返回“open”，模态窗口关闭时返回“close”。</p>
+<pre class="brush:js">
+$(".am-remote-link").adaptiveModal({
+afterAnimate: function(el, status) {
+...
+}
+});
+</pre>
+<h3>公共方法(Public Methods)</h3>
+<p>你也可以通过公共方法来触发模态窗口的动画。</p>
+<h5>$.fn.openModal()</h5>
+<p>你可以通过这个方法来打开模态窗口：</p>
+<pre class="brush:js">
+$(".am-remote-link").openModal()
+</pre>
+<h5>$.fn.closeModal()</h5>
+<p>你可以通过这个方法来关闭模态窗口：</p>
+<pre class="brush:js">
+$(".am-remote-link").closeModal()
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412231554.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141223965.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1376">
+                                <h3 class="post-title">
+                                    jQuery仿Youtube网站ajax加载进度条特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

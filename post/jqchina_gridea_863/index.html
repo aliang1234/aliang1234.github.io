@@ -1,0 +1,411 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Chocolat-jQuery响应式LightBox插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Chocolat-jQuery响应式LightBox插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1604/201604071810.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604071810.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604073313.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Chocolat是一款实用的响应式jQuery LightBox插件。该LightBox插件可以设置两种图像的显示方式：contain和cover。lightbox中的图像可以放大和平移，还可以全屏显示。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Chocolat是一款实用的响应式<a href="http://www.htmleaf.com/jQuery/">jQuery</a> LightBox插件。该LightBox插件可以设置两种图像的显示方式：contain和cover。lightbox中的图像可以放大和平移，还可以全屏显示。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower方法来安装该LightBox插件。</p>
+<pre class="brush:html">
+$ bower install chocolat
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该lightbox插件需要在页面中引入chocolat.css、jquery和jquery.chocolat.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/chocolat.css" /&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.chocolat.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该Lightbox的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="example1" data-chocolat-title="Set title"&gt;
+&lt;a class="chocolat-image" href="img/a.jpg" title="image caption a"&gt;
+A &lt;!-- you can display a thumbnail here : &lt;img src="thumb/a.jpg" /&gt; --&gt;
+&lt;/a&gt;
+&lt;a class="chocolat-image" href="img/b.jpg" title="image caption b"&gt;
+B &lt;!-- you can display a thumbnail here : &lt;img src="thumb/b.jpg" /&gt; --&gt;
+&lt;/a&gt;
+&lt;/div&gt; 
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>Chocolat()</code>方法来初始化该lightbox插件。</p>
+<pre class="brush:js">
+$(document).ready(function(){
+$('#example1').Chocolat();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>container</td>
+<td>window</td>
+<td>设置默认是在整个页面还是一个容器中打开lightbox。可以是window, 选择器, jQuery元素或一个节点。</td>
+</tr>
+<tr>
+<td>imageSelector</td>
+<td>'.chocolat-image'</td>
+<td>在父元素中图片的选择器。</td>
+</tr>
+<tr>
+<td>linkImages</td>
+<td>true</td>
+<td>设置是否可以切换图片。</td>
+</tr>
+<tr>
+<td>setTitle</td>
+<td>''</td>
+<td>设置标题。也可以通过data-chocolat-title属性来设置。</td>
+</tr>
+<tr>
+<td>className</td>
+<td>''</td>
+<td>为lightbox父元素设置一个CSS类。</td>
+</tr>
+<tr>
+<td>imageSize</td>
+<td>'default'</td>
+<td>可以是：<code>'default'</code>, <code>'contain'</code>, <code>'native'</code>,<code>'cover'</code>。<br><code>'default'</code>：表示如果图片尺寸大于window则调整图片尺寸适合窗口尺寸，小则不改变。<br><code>'contain'</code>：表示如果图片尺寸大于window则调整图片尺寸适合窗口尺寸，如果图片尺寸小则改变图片比例来填充窗口。<code>'native'</code>：图片从不改变其尺寸。<br><code>'cover'</code>：图片覆盖窗口，不留任何白边。</td>
+</tr>
+<tr>
+<td>fullScreen</td>
+<td>false</td>
+<td>是否允许进入全屏模式。</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>false</td>
+<td>是否循环播放。</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>300</td>
+<td>动画持续时间。</td>
+</tr>
+<tr>
+<td>firstImage</td>
+<td>0</td>
+<td>第一张图片。</td>
+</tr>
+<tr>
+<td>lastImage</td>
+<td>0</td>
+<td>最后一张图片。</td>
+</tr>
+<tr>
+<td>separator2</td>
+<td>'/'</td>
+<td>图片数量标识之间的分隔符号。</td>
+</tr>
+<tr>
+<td>images</td>
+<td>[]</td>
+<td>图片数组。</td>
+</tr>
+<tr>
+<td>enableZoom</td>
+<td>true</td>
+<td>是否允许缩放。</td>
+</tr>
+<tr>
+<td>setIndex</td>
+<td>0</td>
+<td>设置index</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> API方法</h3>
+<p>像下面这样调用chocolat插件：</p>
+<pre class="brush:js">
+$(document).ready(function(){
+var instance = $('#example1').Chocolat().data('chocolat');
+});
+</pre>
+<p>然后通过链式结构调用API：</p>
+<pre class="brush:js">
+instance.api().open(); 
+</pre>
+<p>可用的API方法有：</p>
+<ul>
+<li>
+<code>open</code>：参数可选。参数：<code>i</code>。在lightbox中打开index为i的图片。默认打开第一张图片（i=0）。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>close</code>：关闭lightbox。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>prev</code>：跳转到前一张图片。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>next</code>：跳转到下一张图片。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>goto(i)</code>：跳转到第i张图片。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>place</code>：使图片位于父元素居中。返回<code>$.Deferred</code>对象。</li>
+<li>
+<code>destroy</code>：销毁当前插件实例。</li>
+<li>
+<code>set(property, value)</code>：设置class。</li>
+<li>
+<code>get(property, value)</code>：获取class。</li>
+<li>
+<code>getElem(name)</code>：返回构成lightbox的某个jquery对象。</li>
+<li>
+<code>current</code>：返回当前图片的index。</li>
+</ul>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> CSS类</h5>
+<ul>
+<li>
+<code>.chocolat-open</code>：lightbox打开时容器的class。</li>
+<li>
+<code>.chocolat-in-container</code>：当不是以window方式打开时容器的class类。</li>
+<li>
+<code>.chocolat-cover</code>：当<code>imageSize</code>设置为<code>'cover'</code>时容器的class类。</li>
+<li>
+<code>.chocolat-zoomable</code>：当lightbox可以进行缩放时容器的class类。</li>
+<li>
+<code>.chocolat-zoomed</code>：当lightbox可以正在进行缩放时容器的class类。</li>
+</ul>
+<p>Chocolat插件的github地址为：<a href="https://github.com/nicolas-t/Chocolat" target="\_blank">https://github.com/nicolas-t/Chocolat</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604071810.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604073313.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_864">
+                                <h3 class="post-title">
+                                    superplaceholder.js-功能强大的超级输入框占位符插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

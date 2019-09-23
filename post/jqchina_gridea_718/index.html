@@ -1,0 +1,373 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和CSS3创意添加到购物车动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和CSS3创意添加到购物车动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1606/201606291615.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606291615.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606293666.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和CSS3制作的创意添加到购物车动画特效。该特效在用户点击“添加到购物车”按钮时，在屏幕右下角显示一个购物车图标及购物数量。当用户点击该购物车图标后，会展示出用户购物的明细。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用<a href="http://www.htmleaf.com/jQuery/">jQuery</a>和<a href="http://www.htmleaf.com/css3/">CSS3</a>制作的创意添加到购物车动画特效。该特效在用户点击“添加到购物车”按钮时，在屏幕右下角显示一个购物车图标级购物数量。当用户点击该购物车图标后，会展示出用户购物的明细。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该添加到购物车特效的HTML结构分为2部分：<code>.cd-cart-trigger</code>是添加到购物车按钮，<code>.cd-cart</code>是购物车的明细。</p>
+<pre class="brush:html">
+&lt;div class="cd-cart-container empty"&gt;
+&lt;a href="#0" class="cd-cart-trigger"&gt;
+Cart
+&lt;ul class="count"&gt; &lt;!-- cart items count --&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;li&gt;0&lt;/li&gt;
+&lt;/ul&gt; &lt;!-- .count --&gt;
+&lt;/a&gt;
+<p>&lt;div class=&quot;cd-cart&quot;&gt;<br>
+&lt;div class=&quot;wrapper&quot;&gt;<br>
+&lt;header&gt;<br>
+&lt;h2&gt;Cart&lt;/h2&gt;<br>
+&lt;span class=&quot;undo&quot;&gt;Item removed. &lt;a href=&quot;#0&quot;&gt;Undo&lt;/a&gt;&lt;/span&gt;<br>
+&lt;/header&gt;</p>
+<p>&lt;div class=&quot;body&quot;&gt;<br>
+&lt;ul&gt;<br>
+&lt;!-- products added to the cart will be inserted here using JavaScript --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;footer&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;checkout btn&quot;&gt;&lt;em&gt;Checkout - $&lt;span&gt;0&lt;/span&gt;&lt;/em&gt;&lt;/a&gt;<br>
+&lt;/footer&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-cart --&gt;<br>
+&lt;/div&gt; &lt;!-- cd-cart-container --&gt;<br>
+</pre></p>
+<p><code>div.body</code>中的列表内容默认是空的，当某个商品被添加到购物车之后，通过JavaScript将其添加到列表中。</p>
+<pre class="brush:html">
+&lt;div class="body"&gt;
+&lt;ul&gt;
+&lt;li class="product"&gt;
+&lt;div class="product-image"&gt;
+&lt;a href="#0"&gt;&lt;img src="img/thumb.jpg" alt="placeholder"&gt;&lt;/a&gt;
+&lt;/div&gt;
+<p>&lt;div class=&quot;product-details&quot;&gt;<br>
+&lt;h3&gt;&lt;a href=&quot;#0&quot;&gt;Product Name&lt;/a&gt;&lt;/h3&gt;</p>
+<p>&lt;span class=&quot;price&quot;&gt;$25.99&lt;/span&gt;</p>
+<p>&lt;div class=&quot;actions&quot;&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;delete-item&quot;&gt;Delete&lt;/a&gt;</p>
+<p>&lt;div class=&quot;quantity&quot;&gt;<br>
+&lt;label for=&quot;cd-product-'+ productId +'&quot;&gt;Qty&lt;/label&gt;<br>
+&lt;span class=&quot;select&quot;&gt;<br>
+&lt;select id=&quot;cd-product-'+ productId +'&quot; name=&quot;quantity&quot;&gt;<br>
+&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;<br>
+&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;<br>
+&lt;!-- ... --&gt;<br>
+&lt;/select&gt;<br>
+&lt;/span&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;!-- 添加到购物车的其它内容 --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p><code>.cd-cart</code>和<code>.cd-cart-trigger</code>元素的<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/position.html">定位方式</a>使用固定定位，默认被移动到视口之外。当某个商品被添加到购物车之后，<code>.cd-cart-container</code>元素上的<code>.empty</code>class会被移除，购物车被显示出来。</p>
+<pre class="brush:css">
+.cd-cart-trigger,
+.cd-cart {
+position: fixed;
+bottom: 20px;
+right: 5\%;
+transition: transform .2s;
+}
+.empty .cd-cart-trigger, 
+.empty .cd-cart {
+/* 隐藏购物车*/
+transform: translateY(150px);
+}
+</pre>
+<p>在制作购物车动画的时候，<code>div.wrapper</code>元素被设置了固定的宽度和高度，它的尺寸和<code>a.cd-cart-trigger</code>尺寸相同。当购物车打开的时候，使用<code>.cart-open</code> class来对宽度和高度进行动画。</p>
+<pre class="brush:css">
+.cd-cart .wrapper {
+position: absolute;
+bottom: 0;
+right: 0;
+z-index: 2;
+overflow: hidden;
+height: 72px;
+width: 72px;
+border-radius: 6px;
+transition: height .4s .1s, width.4s .1s, box-shadow .3s;
+transition-timing-function: cubic-bezier(0.67, 0.17, 0.32, 0.95);
+background: #ffffff;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.17);
+}
+<p>.cart-open .cd-cart .wrapper {<br>
+height: 100%;<br>
+width: 100%;<br>
+transition-delay: 0s;<br>
+}<br>
+</pre></p>
+<p><code>.deleted</code> class用于从购物车中移除商品。被移除的商品使用绝对定位，并使用<code>cd-item-slide-out</code> class来为它们制作滑出动画效果。</p>
+<pre class="brush:css">
+.cd-cart .body li.deleted {
+/* this class is added to an item when it is removed form the cart */
+position: absolute;
+left: 1.4em;
+width: calc(100\% - 2.8em);
+opacity: 0;
+animation: cd-item-slide-out .3s forwards;
+}
+<p>@keyframes cd-item-slide-out {<br>
+0% {<br>
+transform: translateX(0);<br>
+opacity: 1;<br>
+}<br>
+100% {<br>
+transform: translateX(80px);<br>
+opacity: 0;<br>
+}<br>
+}<br>
+</pre></p>
+<p>如果用户点击了“Undo”按钮，<code>.deleted</code> class类会被移除，商品会被重新传入到列表中。</p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>当用户点击了“添加到购物车”按钮，在Js代码中通过<code>addProduct()</code>方法将一个新的商品添加到<code>.body &gt; ul</code>元素中。</p>
+<pre class="brush:js">
+function addProduct() {
+//this is just a product placeholder
+var productAdded = $('&lt;li class="product"&gt;&lt;div class="product-image"&gt;&lt;a href="#0"&gt;&lt;img src="img/product-preview.png" alt="placeholder"&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class="product-details"&gt;&lt;h3&gt;&lt;a href="#0"&gt;Product Name&lt;/a&gt;&lt;/h3&gt;&lt;span class="price"&gt;$25.99&lt;/span&gt;&lt;div class="actions"&gt;&lt;a href="#0" class="delete-item"&gt;Delete&lt;/a&gt;&lt;div class="quantity"&gt;&lt;label for="cd-product-'+ productId +'"&gt;Qty&lt;/label&gt;&lt;span class="select"&gt;&lt;select id="cd-product-'+ productId +'" name="quantity"&gt;&lt;option value="1"&gt;1&lt;/option&gt;&lt;option value="2"&gt;2&lt;/option&gt;&lt;option value="3"&gt;3&lt;/option&gt;&lt;option value="4"&gt;4&lt;/option&gt;&lt;option value="5"&gt;5&lt;/option&gt;&lt;option value="6"&gt;6&lt;/option&gt;&lt;option value="7"&gt;7&lt;/option&gt;&lt;option value="8"&gt;8&lt;/option&gt;&lt;option value="9"&gt;9&lt;/option&gt;&lt;/select&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;');
+cartList.prepend(productAdded);
+}
+</pre>
+<p>另外，<code>updateCartCount()</code>函数用于更新购物车的购物数量。<code>updateCartTotal()</code>函数用于统计购物总数。在添加和移除商品时它们会被动态执行。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1606/201606291615.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201606293666.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_719">
+                                <h3 class="post-title">
+                                    纯js轻量级图片放大显示插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

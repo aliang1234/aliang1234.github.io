@@ -1,0 +1,2418 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1345">
+                        jQuery带遮罩无限循环loading加载动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1345" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501161740.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery带遮罩无限循环loading加载动画插件。它可以在任何元素上触发loading加载动画效果，你可以选择是否带上遮罩层。整个动画效果使用CSS3制作，形成一个圆环不断旋转，非常漂亮。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery带遮罩无限循环loading加载动画插件。通过该loading加载动画插件，你可以为任何元素通过切换class的方式来显示进度条，并且可以带有遮罩效果。遮罩效果是通过CSS来完成的。
+HTML结构
+使用不带遮罩效果的loading加载动画的html结构如下：
+
+&amp;lt;div id=&#34;target&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+使用带遮罩效果的loading加载动画的html结构如下： 
+
+&amp;lt;div id=&#34;target&#34; class=&#34;loading&#34;&amp;gt;
+&amp;lt;div class=&#34;loading-overlay&#34;&amp;gt;
+&amp;lt;p class=&#34;loading-spinner&#34;&amp;gt;
+&amp;lt;span class=&#34;loading-icon&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;loading-text&#34;&amp;gt;loading&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+JAVASCRIPT
+在页面中引入jQuery和loading-overlay.min.js文件，然后可以按下面方法调用插件：
+
+&amp;lt;script src=&#34;jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/loading-overlay.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+jQuery(function($) {
+// Calling the plugin
+// (prepends a div.loading to the target element)
+$(&#39;#target&#39;).loadingOverlay();
+// Removing the loading overlay
+$(&#39;#target&#39;).loadingOverlay(&#39;remove&#39;);
+});
+&amp;lt;/script&amp;gt;
+
+CSS样式
+该loading加载动画插件需要配合以下的CSS样式：
+
+@font-face {
+font-family: &#34;demo&#34;;
+src: url(&#39;fonts/icons.woff&#39;) format(&#34;woff&#34;), url(&#39;fonts/icons.ttf&#39;) format(&#34;truetype&#34;);
+}
+@keyframes loadingStart {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+@keyframes loading {
+0% {
+transform: rotate(0deg);
+}
+50% {
+transform: rotate(180deg);
+}
+100% {
+transform: rotate(360deg);
+}
+}
+.loading {
+position: relative;
+pointer-events: none;
+}
+#css-input:checked ~ .loading .loading-overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+-webkit-animation: loadingStart 3s 300ms linear 1 both;
+-moz-animation: loadingStart 3s 300ms linear 1 both;
+-o-animation: loadingStart 3s 300ms linear 1 both;
+animation: loadingStart 3s 300ms linear 1 both;
+background: rgba(255, 255, 255, 0.5);
+text-align: center;
+}
+#css-input:checked ~ .loading .loading-text {
+font-size: 0.875rem;
+line-height: 1.3125rem;
+text-shadow: white 0 0 1em, white 0 0 0.5em, white 0 0 0.25em;
+position: relative;
+display: block;
+text-transform: uppercase;
+font-weight: bold;
+}
+#css-input:checked ~ .loading .loading-text:after {
+content: &amp;quot;...&amp;quot;;
+}
+#css-input:checked ~ .loading .loading-spinner {
+position: absolute;
+top: 50%;
+bottom: 0;
+left: 0;
+right: 0;
+margin: -3.9375rem auto 0;
+color: #1a1d1d;
+text-align: center;
+}
+#css-input:checked ~ .loading .loading-icon {
+font-size: 4.8125rem;
+line-height: 5.25rem;
+text-shadow: rgba(255, 255, 255, 0.75) 0 0 0.5em;
+-webkit-animation: loading 1s steps(4) infinite;
+-moz-animation: loading 1s steps(4) infinite;
+-o-animation: loading 1s steps(4) infinite;
+animation: loading 1s steps(4) infinite;
+display: block;
+vertical-align: middle;
+}
+#css-input:checked ~ .loading .loading-icon:before {
+vertical-align: middle;
+content: &amp;quot;\e000&amp;quot;;
+font-family: &amp;quot;demo&amp;quot;;
+}
+
+可用参数
+下面是一些可用参数，不填写则使用这些为默认参数：
+
+$(&#39;#target&#39;).loadingOverlay({
+loadingClass: &#39;loading&#39;,// Class added to `target` while loading
+overlayClass: &#39;loading-overlay&#39;,// Class added to loading overlay (to be styled in CSS)
+spinnerClass: &#39;loading-spinner&#39;,// Class added to loading overlay spinner
+iconClass: &#39;loading-icon&#39;,// Class added to loading overlay spinner
+textClass: &#39;loading-text&#39;,// Class added to loading overlay spinner
+loadingText: &#39;loading&#39;// Text within loading overlay
+});
+
+注意：如果在初始化时设置了 loadingClass 和 overlayClass的值来加载遮罩效果，那么在在removing的时候必须写上相同的值：
+
+$(&#39;#target&#39;).loadingOverlay(&#39;remove&#39;, {
+loadingClass: &#39;loading&#39;,
+overlayClass: &#39;loading-overlay&#39;
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1345">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1346">
+                        jQuery经典响应式标题文字插件-FitText.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1346" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501121428.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+FitText.js是一款经典的jQuery响应式标题文字插件。FitText.js可以将标题文字自适应容器的大小，缩放容器时标题字体大小随之改变。FitText.js可用于桌面设备、手提电脑、平板电脑和手机等众多设备，非常强大。
+内容：
+
+
+简要教程
+
+
+FitText.js是一款非常经典的jQuery响应式标题文字插件。FitText可以灵活的动态改变 font-sizes 字体大小。可将这个插件用于响应式页面设计的标题文字。
+如何使用
+首先要在页面的头部引入jQuery和jquery.fittext.js文件。
+
+&amp;lt;script src=&#34;http://libs.useso.com/js/jquery/1.9.1/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.fittext.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后就可以调用插件使你需要的标题文字变为响应式文本。
+
+&amp;lt;script&amp;gt;
+jQuery(&#34;#responsive\_headline&#34;).fitText();
+&amp;lt;/script&amp;gt;
+
+经过上面的调用，标题文字变为响应式的，默认的字体大小是容器宽度的1/10。
+压缩系数
+如果你的标题文字在调用插件后不够大，你可以调整压缩系数来调整字体的大小。该系数默认值为1，系数越大字体越小。
+
+jQuery(&#34;#responsive\_headline&#34;).fitText(1.2); // Turn the compressor up (resizes more aggressively)
+jQuery(&#34;#responsive\_headline&#34;).fitText(0.8); // Turn the compressor down (resizes less aggressively)
+
+最小字体大小和最大字体大小
+FitText 允许你使用像素为单位为文字设置 minFontSize 和 maxFontSize。
+
+jQuery(&#34;#responsive\_headline&#34;).fitText(1.2, { minFontSize: &#39;20px&#39;, maxFontSize: &#39;40px&#39; });
+
+关于CSS样式
+
+
+要确保你的容器有一个宽度！
+
+
+display: inline的元素不要有宽度。display: block或display: inline-block的元素需要一个宽度。（例如：width: 100\%）
+
+position:absolute的元素需要一个宽度。
+
+
+可以不断调整CSS样式直至你满意为止。
+可以为标题文字大小设置一个No-JS回退的CSS代码。
+
+不使用jQuery版本的FitText
+FitText可以不作为jQuery插件使用：
+
+non-jQuery FitText
+Angular.js FitText.js
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1346">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1347">
+                        jQuery炫酷点击变形全屏放大的模态窗口
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1347" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501291813.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的点击变形全屏放大的jQuery模态窗口插件。该模态窗口插件当用户点击某个按钮时，按钮先变形缩小变为圆形，然后在由小圆到大圆全屏放大，效果非常酷。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的点击变形全屏放大的jQuery模态窗口插件。该模态窗口插件当用户点击某个按钮时，按钮先缩小变形为圆形，然后在由小圆到大圆全屏放大，效果非常酷。最后在生成模态窗口的时候的动画效果使用jQuery和Velocity以及CSS3 transition 和 transformations共同完成。
+HTML结构
+该模态窗口的HTML结构非常简单：使用 .cd-section 作为wrapper，.cd-modal-action是用于触发模态窗口的按钮，.cd-modal是模态窗口。.cd-modal-bg用于制作模态窗口的背景，模态窗口中的内容被包裹在 .cd-modal-content中。
+
+&amp;lt;section class=&#34;cd-section&#34;&amp;gt;
+&amp;lt;!-- section content here --&amp;gt;
+&amp;lt;div class=&amp;quot;cd-modal-action&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;btn&amp;quot; data-type=&amp;quot;modal-trigger&amp;quot;&amp;gt;Fire Modal Window&amp;lt;/a&amp;gt;
+&amp;lt;span class=&amp;quot;cd-modal-bg&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;cd-modal&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;cd-modal-content&amp;quot;&amp;gt;
+&amp;lt;!-- modal content here --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-modal-close&amp;quot;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;/section&amp;gt;
+
+CSS样式
+该模态窗口插件使用.cd-modal-bg来制作模态窗口的背景：开始的时候它是absolute定位，放置在.btn按钮的恩下吧，并用visibility: hidden来隐藏它。
+当用户点击了按钮，.btn按钮变形为一个圆形（使用.to-circle class），这时.cd-modal-bg变为可见状态，并开始增大覆盖整个窗口。缩放值依赖于窗口的大小，这个值使用js来获取。
+
+.cd-modal-action {
+position: relative;
+}
+.cd-modal-action .btn {
+width: 12.5em;
+height: 4em;
+background-color: #123758;
+border-radius: 5em;
+transition: color 0.2s 0.3s, width 0.3s 0s;
+}
+.cd-modal-action .btn.to-circle {
+width: 4em;
+color: transparent;
+transition: color 0.2s 0s, width 0.3s 0.2s;
+}
+.cd-modal-action .cd-modal-bg {
+position: absolute;
+top: 0;
+left: 50\%;
+transform: translateX(-2em);
+width: 4em;
+height: 4em;
+background-color: #123758;
+border-radius: 50\%;
+opacity: 0;
+visibility: hidden;
+transition: visibility 0s 0.5s;
+}
+.cd-modal-action .cd-modal-bg.is-visible {
+opacity: 1;
+visibility: visible;
+}
+
+在增长动画结束时，模态窗口变为可见（通过.modal-is-visible  class），模态窗口中的内容被显示出来。
+事件处理
+该模态窗口插件中使用jQuery来获取那些CSS不能获取的值：.cd-modal-bg背景的缩放值和它的左边和上边的位置。
+例如下面的代码是如何获取背景的缩放值：
+
+var btnRadius = $(&#39;.cd-modal-bg&#39;).width()/2,
+left = $(&#39;.cd-modal-bg&#39;).offset().left + btnRadius,
+top = $(&#39;.cd-modal-bg&#39;).offset().top + btnRadius - $(window).scrollTop(),
+scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
+var maxDistHor = ( leftValue &amp;gt; windowW/2) ? leftValue : (windowW - leftValue),
+maxDistVert = ( topValue &amp;gt; windowH/2) ? topValue : (windowH - topValue);
+return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
+}
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1347">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1348">
+                        jQuery和CSS3扁平化风格滑动面板
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1348" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501221505.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款时下最为流行的jQuery和CSS3扁平风格滑动面板插件。整个设计风格简洁大方，代码十分简单。当面板打开和关闭时还带有一定图标旋转动画的点缀。
+内容：
+
+
+简要教程
+
+
+这是一款时下最为流行的 jQuery 和 CSS3 扁平风格滑动面板插件。
+HTML结构
+该滑动面板使用无序列表制作，HTML结构非常简单。每个列表项中使用一个div .info-box-green作为整个滑动面板的wrapper。里面的h4标签是面板的标题，div.info-content是面板的内容。最后空的&amp;lt;span&amp;gt;是面板右边显示的&#34;+&#34;号。
+
+&amp;lt;ul class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;info-box-green&#34;&amp;gt;
+&amp;lt;h4 class=&#34;entypo-tools&#34;&amp;gt; Featured Services &amp;lt;/h4&amp;gt;
+&amp;lt;div class=&amp;quot;info-content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;text&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;entypo-plus&amp;quot; id=&amp;quot;expand-green&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+
+CSS样式
+该滑动面板使用CSS3来制作扁平化风格的样式。在面板打开时，面板右边的“+”号还有一个旋转动画，由CSS3 transform完成的。
+
+.info-box-green, .info-box-red, .info-box-sky {
+margin: 50px auto;
+padding: 0;
+width: 480px;
+-webkit-box-shadow: 0 8px 6px -6px black;
+ -moz-box-shadow: 0 8px 6px -6px black;
+box-shadow: 0 8px 6px -6px black;
+}
+.info-box-red h4 {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+margin-bottom: -10px;
+}
+.info-box-red &amp;gt; .info-content &amp;gt; .text {
+-webkit-border-radius: 0 0 10px 10px;
+border-radius: 0 0 10px 10px;
+}
+.info-box-green h4, .info-box-green &amp;gt; .info-content &amp;gt; .text {
+background-color: #00AB83;
+}
+.info-box-red h4, .info-box-red &amp;gt; .info-content &amp;gt; .text {
+background-color: #FF434C;
+}
+.info-box-sky h4, .info-box-sky &amp;gt; .info-content &amp;gt; .text {
+background-color: #00A5C3;
+}
+.info-box-green h4, .info-box-red h4, .info-box-sky h4 {
+padding: 25px;
+font-size: 1.125em;
+font-weight: 400;
+color: #FFF;
+}
+.info-box-green &amp;gt; .info-content &amp;gt; .text, .info-box-red &amp;gt; .info-content &amp;gt; .text, .info-box-sky &amp;gt; .info-content &amp;gt; .text {
+padding: 0px;
+font-size: 1em;
+line-height: 1.5em;
+height: 0;
+color: #FFF;
+overflow: hidden;
+-webkit-transition:height 200ms ease;
+-moz-transition:height 200ms ease;
+-o-transition:height 200ms ease;
+transition:height 200ms ease;
+}
+.info-box-green &amp;gt; .info-content &amp;gt; .text &amp;gt; p, .info-box-red &amp;gt; .info-content &amp;gt; .text &amp;gt; p, .info-box-sky &amp;gt; .info-content &amp;gt; .text &amp;gt; p {
+padding: 20px 20px 60px;
+}
+.info-box-sky &amp;gt; .info-content &amp;gt; .text {
+background-color: #FFF;
+color: #444;
+border-radius: 0;
+}
+.info-box-green &amp;gt; .info-content &amp;gt; .text.open-green, .info-box-red &amp;gt; .info-content &amp;gt; .text.open-red, .info-box-sky &amp;gt; .info-content &amp;gt; .text.open-sky {
+display: block;
+height: auto;
+}
+.info-box-green &amp;gt; .info-content &amp;gt; span.close-green, .info-box-red &amp;gt; .info-content &amp;gt; span.close-red, .info-box-sky &amp;gt; .info-content &amp;gt; span.close-sky {
+-webkit-transform:rotate(135deg);
+-moz-transform:rotate(135deg);
+-o-transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+}
+.info-box-green span, .info-box-red span, .info-box-sky span {
+display: inline-block;
+float: right;
+position: relative;
+bottom: 60px;
+right: 10px;
+margin: 0;
+padding: 10px;
+color: #FFF;
+font-size: 2em;
+cursor: pointer;
+/*Rotate &#39;+&#39; to &#39;X&#39; */
+-webkit-transition: all 600ms ease-in-out;
+-moz-transition: all 600ms ease-in-out;
+-o-transition: all 600ms ease-in-out;
+-ms-transition: all 600ms ease-in-out;
+transition: all 600ms ease-in-out;
+}
+.info-box-sky &amp;gt; .info-content &amp;gt; span.close-sky {
+color: #444;
+}
+.info-box-red span {
+position: relative;
+bottom: 50px;
+right: 10px;
+}
+
+JAVASCRIPT
+该滑动面板插件使用 jQuery 来切换样式完成面板的展开和收缩。
+
+&amp;lt;script&amp;gt;
+$(&#39;#expand-green&#39;).on(&#39;click&#39;, function () {
+$(this).toggleClass(&#39;close-green&#39;);
+$(&#39;.text&#39;).toggleClass(&#39;open-green&#39;).end();
+});
+$(&#39;#expand-red&#39;).on(&#39;click&#39;, function () {
+$(this).toggleClass(&#39;close-red&#39;);
+$(&#39;.text&#39;).toggleClass(&#39;open-red&#39;);
+});
+$(&#39;#expand-sky&#39;).on(&#39;click&#39;, function () {
+$(this).toggleClass(&#39;close-sky&#39;);
+$(&#39;.text&#39;).toggleClass(&#39;open-sky&#39;);
+});
+&amp;lt;/script&amp;gt;
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1348">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1349">
+                        适合移动设备的小巧jQuery颜色拾取器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1349" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502111549.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+tinyColorPicker是一款适合移动设备的小巧jQuery颜色拾取器。该jQuery颜色拾取器以移动手机为优先对象，它具有速度快、可扩展、高度灵活和可插拔等特点。该jQuery颜色拾取器大小仅4.7K，纯js，不需要图片和css代码。
+内容：
+
+
+简要教程
+
+
+tinyColorPicker是一款适合移动设备的小巧jQuery颜色拾取器。该jQuery颜色拾取器以移动手机为优先对象，它具有速度快、可扩展、高度灵活和可插拔等特点。该jQuery颜色拾取器大小仅4.7K，纯js，不需要图片和css代码。它基于colors.js制作而成，支持所有现代特性，如触摸屏和MS pointer。它使用GPU加速，使用requestanimationframe函数时电池工作时间更长（现代的桌面浏览器提供了requestanimationframe这一函数，基于性能和电池工作时间原因，这是一个更好的选择。），还为开发者提供了大量的hooks用于开发。
+
+该jQuery颜色拾取器支持rgb, hsv(b), hsl, HEX几种颜色模式。
+
+ 使用方法
+只需在页面中引入jqColorPicker.js，然后即可调用该颜色拾取器插件：
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jqColorPicker.min.js&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(&#39;.color&#39;).colorPicker(); // that&#39;s it
+&amp;lt;/script&amp;gt;
+
+
+ colors.js
+
+Colors({ // all options have a default value...
+color: &#39;rgba(204, 82, 37, 0.8)&#39;, // initial color (#RGB, RGB, #RRGGBB, RRGGBB, rgb(r, g, b), ...)
+grey: {r: 0.298954, g: 0.586434, b: 0.114612}, // CIE-XYZ 1931
+luminance: {r: 0.2126, g: 0.7152, b: 0.0722}, // W3C 2.0
+valueRanges: {rgb: {r: [0, 255], g: [0, 255], b: [0, 255]}, hsv:...}, // skip ranges if no conversion required
+customBG: &#39;#808080&#39; // the solid bgColor behind the chosen bgColor (saved color)
+convertCallback: function(colors, type){}, // callback function after color convertion for further calculations...
+});
+
+
+ 配置参数
+
+$(&#39;.color&#39;).colorPicker({
+color: ..., // see Colors...
+customBG: &#39;#FFF&#39; // see Colors...
+animationSpeed: 150, // toggle animation speed
+GPU: true, // use transform: translate3d
+doRender: true, // manipulate color ans bgColor of input field
+opacity: true, // enable / disable alpha slider
+renderCallback: function($elm, toggled) {}, // this === instance; $elm: the input field;toggle === true -&amp;gt; just appeared; false -&amp;gt; opposite; else -&amp;gt; is rendering on pointer move
+buidCallback: function($elm) {}, // this === instance; $elm: the UI
+css: &#39;&#39;, // replaces existing css
+cssAddon: &#39;&#39;, // adds css to existing
+margin: &#39;&#39;, // positioning margin (can also be set in cssAddon)
+scrollResize: true // toggle for reposition colorPicker on window.resize/scroll
+gap: 4 // gap to right and bottom edge of view port if repositioned to fit
+preventFocus: false // prevents default on focus of input fields,
+body: document.body // the element where the events are attached to (touchstart, mousedown, pointerdown, focus, click, change)
+});
+
+
+ 颜色模式和方法
+在初始化颜色拾取器之后你将获得一个干净的对象实例：
+
+myColors: {
+colors: { all kinds of color values...see later},
+options: { all the options you set or that are set as default... },
+\_\_proto\_\_: { // all methods Color uses
+setColor: function(newCol, type, alpha) {},
+setCustomBackground: function(col) {},
+saveAsBackground: function() {},
+}
+}
+
+colors.js在颜色转换和计算方面是相当方便的工具，它可以计算背景和前景之间的混合颜色，并使计算结果具有可读性（标准的WCAG 2.0格式）。
+
+myColorPicker: {
+$trigger: ... // jQuery object of active trigger or null if none active
+color: { // instance of Color inside colorPicker
+colors: { all kinds of color values... see later},
+options: { all the options you set or that are set as default... },
+\_\_proto\_\_: { all methods Color uses ... see above}
+},
+\_\_proto\_\_: { // all methods ColorPicker uses
+render: function() {},
+toggle: function(openClose) {} // openClose: true = open; false = close
+}
+}
+
+
+ 颜色模式
+
+HEX: // current color as HEX (upper case, 6 digits)
+rgb: // current RGB color as normalized values (0 - 1)
+r: // red
+g: // green
+b: // blue
+hsv: // current color values in normalized HSV (HSB) model
+h: // hue
+s: // saturation
+v: // value (brightness)
+hsl: // current color values in normalized HSL model
+h: // hue
+s: // saturation
+l: // lightness
+RND: // all above colors in their defined ranges
+rgb: // current RGB color, rounded between 0 and 255
+r: // red (0 - 255)
+g: // green (0 - 255)
+b: // blue (0 - 255)
+hsv: // see above
+h: // hue (0 - 360 degrees)
+s: // saturation (0 - 100 \%)
+v: // value (brightness) (0 - 100 \%)
+hsl: // see above
+h: // hue (0 - 360 degrees)
+s: // saturation (0 - 100 \%)
+l: // lightness (0 - 100 \%)
+background: // saved (background) color (saveAsBackground(){})
+rgb: // color in RGB model
+r: // red
+g: // green
+b: // blue
+RGB: // RGB color, rounded between 0 and 255
+r: // red (0 - 255)
+g: // green (0 - 255)
+b: // blue (0 - 255)
+alpha: // alpha or opacity value (0 - 1)
+equivalentGrey: // r = g = b = (0 - 255)
+rgbaMixBlack: // saved (background) color mixed with solid black color
+r: // red
+g: // green
+b: // blue
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+rgbaMixCustom: // saved (background) color mixed with custom (solid) color
+r: // red
+g: // green
+b: // blue
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+rgbaMixWhite: // saved (background) color mixed with solid white color
+r: // red
+g: // green
+b: // blue
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+alpha: // alpha or opacity value (0 - 1) of current color
+equivalentGrey: // r = g = b = (0 - 1)
+HUELuminance: // luminance of hue (in full brightnes and saturation) (0 - 1)
+RGBLuminance: // luminance of the current color
+hueRGB: // rounded integer value of current color in rgb model with full saturation and brightness
+r: // red (0 - 255)
+g: // green (0 - 255)
+b: // blue (0 - 255)
+saveColor: // &#39;&#39; or &#39;web smart&#39; or &#39;web save&#39;, if so.
+webSave: // closest web-save color
+r: // red (0 - 255)
+g: // green (0 - 255)
+b: // blue (0 - 255)
+webSmart: // closest web-smart color
+r: // red (0 - 255)
+g: // green (0 - 255)
+b: // blue (0 - 255)
+rgbaMixBG: // color mix result: current color above saved (background) color
+r: // red (0 - 1)
+g: // green (0 - 1)
+b: // blue (0 - 1)
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+rgbaMixBGMixCustom: // color mix result: current color above saved (background) color above solid custom color
+r: // red (0 - 1)
+g: // green (0 - 1)
+b: // blue (0 - 1)
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+luminanceDelta: // luminance difference between current color and resulting saved-custom mix (0 - 1)
+hueDelta: // hue difference between current color and resulting saved-custom mix (0 - 1)
+WCAG2Ratio: // readability vale (1 - 21, 1:1 to 21:1)
+rgbaMixBlack: // color mix result: current color above solid black
+r: // red (0 - 1)
+g: // green (0 - 1)
+b: // blue (0 - 1)
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+WCAG2Ratio: // readability vale (1 - 21, 1:1 to 21:1)
+rgbaMixWhite: // color mix result: current color above solid white
+r: // red (0 - 1)
+g: // green (0 - 1)
+b: // blue (0 - 1)
+a: // resulting alpha or opacity value (0 - 1)
+luminance: // luminance of resulting mix (0 - 1)
+WCAG2Ratio: // readability vale (1 - 21, 1:1 to 21:1)
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1349">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_135">
+                        tab在底部的jquery tabs选项卡插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_135" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1906/201906129627.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于bootstrap的选项卡。该选项卡的tab被设计在底部，通过简单的CSS代码来对其进行美化，效果非常不错。
+内容：
+
+
+简要教程
+
+
+这是一款基于bootstrap的选项卡。该选项卡的tab被设计在底部，通过简单的CSS代码来对其进行美化，效果非常不错。
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;bootstrap.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;amp;t;div class=&#34;container&#34;gt;
+&amp;amp;t;div class=&#34;row&#34;gt;
+&amp;amp;t;div class=&#34;col-md-6&#34;gt;
+&amp;amp;t;div class=&#34;tab&#34; role=&#34;tabpanel&#34;gt;
+&amp;amp;t;!-- Tab panes --gt;
+&amp;amp;t;div class=&#34;tab-content&#34;gt;
+&amp;amp;t;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade in active&#34; id=&#34;Section1&#34;gt;
+&amp;amp;t;pgt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... &amp;amp;t;/pgt;
+&amp;amp;t;h3gt;Web Development&amp;amp;t;/h3gt;
+&amp;amp;t;/divgt;
+&amp;amp;t;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section2&amp;quot;gt;
+&amp;amp;t;pgt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... &amp;amp;t;/pgt;
+&amp;amp;t;h3gt;Brand Building&amp;amp;t;/h3gt;
+&amp;amp;t;/divgt;
+&amp;amp;t;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section3&amp;quot;gt;
+&amp;amp;t;pgt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.... &amp;amp;t;/pgt;
+&amp;amp;t;h3gt;Responsive Design&amp;amp;t;/h3gt;
+&amp;amp;t;/divgt;
+&amp;amp;t;div role=&amp;quot;tabpanel&amp;quot; class=&amp;quot;tab-pane fade&amp;quot; id=&amp;quot;Section4&amp;quot;gt;
+&amp;amp;t;pgt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... &amp;amp;t;/pgt;
+&amp;amp;t;h3gt;Clean &amp;amp; Clear Design&amp;amp;t;/h3gt;
+&amp;amp;t;/divgt;
+&amp;amp;t;/divgt;
+&amp;amp;t;!-- Nav tabs --gt;
+&amp;amp;t;ul class=&amp;quot;nav nav-tabs&amp;quot; role=&amp;quot;tablist&amp;quot;gt;
+&amp;amp;t;li role=&amp;quot;presentation&amp;quot; class=&amp;quot;active&amp;quot;gt;&amp;amp;t;a href=&amp;quot;#Section1&amp;quot; aria-controls=&amp;quot;home&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;gt;Section 1&amp;amp;t;/agt;&amp;amp;t;/ligt;
+&amp;amp;t;li role=&amp;quot;presentation&amp;quot;gt;&amp;amp;t;a href=&amp;quot;#Section2&amp;quot; aria-controls=&amp;quot;profile&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;gt;Section 2&amp;amp;t;/agt;&amp;amp;t;/ligt;
+&amp;amp;t;li role=&amp;quot;presentation&amp;quot;gt;&amp;amp;t;a href=&amp;quot;#Section3&amp;quot; aria-controls=&amp;quot;messages&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;gt;Section 3&amp;amp;t;/agt;&amp;amp;t;/ligt;
+&amp;amp;t;li role=&amp;quot;presentation&amp;quot;gt;&amp;amp;t;a href=&amp;quot;#Section4&amp;quot; aria-controls=&amp;quot;settings&amp;quot; role=&amp;quot;tab&amp;quot; data-toggle=&amp;quot;tab&amp;quot;gt;Section 4&amp;amp;t;/agt;&amp;amp;t;/ligt;
+&amp;amp;t;/ulgt;
+&amp;amp;t;/divgt;
+&amp;amp;t;/divgt;
+&amp;amp;t;/divgt;
+&amp;amp;t;/divgt;
+
+
+ CSS样式
+
+a:hover,a:focus{
+outline: none;
+text-decoration: none;
+}
+.tab .nav-tabs{
+box-shadow: -1px 0 2px #6676ff;
+border-bottom: 0 none;
+}
+.tab .nav-tabs li{
+width: 25\%;
+}
+.tab .nav-tabs li a{
+display: block;
+font-size: 14px;
+color: #fff;
+text-align: center;
+border: none;
+padding: 18px;
+background: #272e38;
+border-radius: 0;
+margin: 0;
+position: relative;
+transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li a:hover{
+background: #6676ff;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover{
+border: none;
+background: #6676ff;
+color: #fff;
+transition: all 0.20s ease 0s;
+}
+.tab .nav-tabs li.active a:after{
+content: &#34;&#34;;
+position: absolute;
+top: -30px;
+left: 38\%;
+border: 15px solid transparent;
+border-bottom-color: #6676ff;
+}
+.tab .tab-content{
+font-size: 14px;
+color: #fff;
+background: #333;
+line-height: 25px;
+padding: 20px;
+}
+.tab .tab-content h3{
+font-size: 20px;
+color: #6676ff;
+}
+@media only screen and (max-width: 480px){
+.tab .nav-tabs li{
+width: 100\%;
+margin-bottom: 2px;
+}
+.tab .nav-tabs li.active a:after{
+border: none;
+}
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_135">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1350">
+                        jQuery和CSS3超酷二级下拉菜单特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1350" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502271541.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果很酷又简单实用的jQuery二级下拉菜单特效，该特效在点击触发按钮后，二级下拉菜单会向下滑动覆盖原来的主菜单，关闭后二级下拉菜单又向上滑动回去，二级菜单不占用多余的空间。
+内容：
+
+
+简要教程
+
+
+这是一款效果很酷又简单实用的 jQuery 和 CSS3 二级下拉菜单特效，该特效在点击触发按钮后，二级下拉菜单会向下滑动覆盖原来的主菜单，关闭后二级下拉菜单又向上滑动回去，二级菜单不占用多余的空间。
+这个菜单插件是替代标准的二级下拉菜单的好方法，特别是在你想显示更多的二级子菜单的时候。另外，你可以十分容易的自定义二级下拉菜单的样式，多添加一个搜索框或登录注册表单等等。
+
+ HTML结构
+该二级下拉菜单的HTML结构有两个主要部分：使用&amp;lt;header&amp;gt;元素来包裹导航菜单，使用&amp;lt;main&amp;gt;元素来放置页面的内容。
+主导航菜单由两个嵌套的无序列表组成，包裹在一个&amp;lt;nav&amp;gt;元素中：
+
+&amp;lt;header&amp;gt;
+&amp;lt;div class=&#34;cd-logo&#34;&amp;gt;&amp;lt;a href=&#34;#0&#34;&amp;gt;&amp;lt;img src=&#34;img/cd-logo.svg&#34; alt=&#34;Logo&#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;nav class=&amp;quot;cd-main-nav-wrapper&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-main-nav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other list items here --&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-subnav-trigger&amp;quot;&amp;gt;&amp;lt;span&amp;gt;Categories&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&amp;quot;go-back&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Menu&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Category 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other list items here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-nav-trigger&amp;quot;&amp;gt;Menu&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;main class=&amp;quot;cd-main-content&amp;quot;&amp;gt;
+&amp;lt;!-- main content here --&amp;gt;
+&amp;lt;/main&amp;gt;
+
+
+ CSS样式
+在小屏幕设备上，主导航菜单位于屏幕的右侧，默认是隐藏的。当用户点击了导航按钮，&amp;lt;main&amp;gt;元素和&amp;lt;header&amp;gt;元素会从右向左滑动出来（为其应用nav-is-visible class）。
+当用户点击.cd-subnav-trigger（一个导航小箭头图标）按钮，二级菜单会从右向左滑动出来覆盖主菜单。
+
+header.nav-is-visible {
+transform: translateX(-260px);
+}
+.cd-main-content.nav-is-visible {
+transform: translateX(-260px);
+}
+.cd-main-nav {
+position: fixed;
+top: 0;
+right: 0;
+width: 260px;
+visibility: hidden;
+}
+.cd-main-nav.nav-is-visible {
+visibility: visible;
+}
+.cd-main-nav li ul {
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+transform: translateX(260px);
+}
+.cd-main-nav.moves-out &amp;gt; li &amp;gt; a {
+/* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
+transform: translateX(-100\%);
+opacity: 0;
+}
+.cd-main-nav.moves-out &amp;gt; li &amp;gt; ul {
+/* reveal secondary nav */
+transform: translateX(0);
+}
+
+在桌面设备上（分辨率大于1024px），二级菜单位于header的上部（默认隐藏），当点击导航按钮后会从上往下滑动下来，覆盖主菜单。可以为.cd-logo（网站logo）和.cd-subnav-trigger（二级菜单触发按钮）设置一个较高的z-index，这样可以使它们显示在二级菜单之上。
+另外，可以为二级菜单设置和.cd-main-nav（主菜单）相同的padding，使它们尺寸相同，还可以在列表的最后插入一个.placeholder元素来制作和.cd-subnav-trigger（二级菜单触发按钮）相同的空间大小。
+
+@media only screen and (min-width: 1024px) {
+.cd-main-nav {
+height: 80px;
+/* padding left = logo size + logo left position*/
+padding: 0 5\% 0 calc(5\% + 124px);
+text-align: right;
+}
+.cd-main-nav li ul {
+height: 80px;
+background-color: #7e4d7e;
+/* padding left = logo size + logo left position*/
+padding: 0 5\% 0 calc(5\% + 124px);
+transform: translateY(-80px);
+transition: transform 0.3s 0.2s;
+}
+.cd-main-nav li ul li {
+opacity: 0;
+transform: translateY(-20px);
+transition: transform 0.3s 0s, opacity 0.3s 0s;
+}
+.cd-main-nav .placeholder {
+/* never visible or clickable- it is used to take up the same space as the .cd-subnav-trigger */
+display: block;
+visibility: hidden;
+opacity: 0;
+pointer-event: none;
+}
+.cd-main-nav.moves-out &amp;gt; li &amp;gt; ul {
+transition: transform 0.3s;
+transform: translateY(0);
+}
+.cd-main-nav.moves-out &amp;gt; li ul li {
+opacity: 1;
+transform: translateY(0);
+transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
+}
+}
+
+
+ JAVASCRIPT
+插件中使用jQuery来为元素添加和移除相应的class。
+唯一值得注意的事情是在HTML结构中单行菜单要位于&amp;lt;header&amp;gt;中。在移动设备上，我们希望导航菜单位于屏幕的侧边上，默认隐藏。这里使用jQuery来在移动设备上将导航菜单移出header之外。
+
+jQuery(document).ready(function($){
+//move nav element position according to window width
+moveNavigation();
+$(window).on(&#39;resize&#39;, function(){
+(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
+});
+//mobile version - open/close navigation
+(&amp;#039;.cd-nav-trigger&amp;#039;).on(&amp;#039;click&amp;#039;, function(event){
+event.preventDefault();
+if((&#39;header&#39;).hasClass(&#39;nav-is-visible&#39;)) $(&#39;.moves-out&#39;).removeClass(&#39;moves-out&#39;);
+(′header′).toggleClass(′nav−is−visible′);(&amp;#x27;header&amp;#x27;).toggleClass(&amp;#x27;nav-is-visible&amp;#x27;);
+(′header′).toggleClass(′nav−is−visible′);(&#39;.cd-main-nav&#39;).toggleClass(&#39;nav-is-visible&#39;);
+$(&#39;.cd-main-content&#39;).toggleClass(&#39;nav-is-visible&#39;);
+});
+//mobile version - go back to main navigation
+(&amp;#039;.go-back&amp;#039;).on(&amp;#039;click&amp;#039;, function(event){
+event.preventDefault();
+(&#39;.cd-main-nav&#39;).removeClass(&#39;moves-out&#39;);
+});
+//open sub-navigation
+(&amp;#039;.cd-subnav-trigger&amp;#039;).on(&amp;#039;click&amp;#039;, function(event){
+event.preventDefault();
+(&#39;.cd-main-nav&#39;).toggleClass(&#39;moves-out&#39;);
+});
+function moveNavigation(){
+var navigation = $(&#39;.cd-main-nav-wrapper&#39;);
+var screenSize = checkWindowWidth();
+if ( screenSize ) {
+//desktop screen - insert navigation inside header element
+navigation.detach();
+navigation.insertBefore(&#39;.cd-nav-trigger&#39;);
+} else {
+//mobile screen - insert navigation after .cd-main-content element
+navigation.detach();
+navigation.insertAfter(&#39;.cd-main-content&#39;);
+}
+}
+function checkWindowWidth() {
+var mq = window.getComputedStyle(document.querySelector(&#39;header&#39;), &#39;::before&#39;).getPropertyValue(&#39;content&#39;).replace(/&amp;quot;/g, &#39;&#39;);
+return ( mq == &#39;mobile&#39; ) ? false : true;
+}
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1350">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1351">
+                        基于Bootstrap的超酷jQuery开关按钮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1351" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502051651.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于bootstrap的超酷jQuery开关按钮插件。该bootstrap开关按钮插件可以将复选框和单选按钮转换为安卓样式的开关按钮。该插件可以设置开关按钮的颜色、是否可用、显示文本等属性，还可以将开关按钮放置到模态窗口中显示。
+内容：
+
+
+简要教程
+
+
+这是一款基于bootstrap的超酷jQuery开关按钮插件。该开关按钮插件可以将复选框和单选按钮转换为安卓样式的开关按钮。该插件可以设置开关按钮的颜色、是否可用、显示文本等属性，还可以将开关按钮放置到模态窗口中显示。
+
+ 使用方法
+首先要在页面中引入依赖文件： jquery、Bootstrap、Bootstrap Switch CSS和Bootstrap Switch JS。
+
+&amp;lt;link href=&#34;bootstrap.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;bootstrap-switch.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;bootstrap-switch.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后在中添加checkbox：
+
+&amp;lt;input type=&#34;checkbox&#34; name=&#34;my-checkbox&#34; checked&amp;gt;
+
+通过下面的代码来初始化该开关按钮插件：
+
+$(&#34;[name=&#39;my-checkbox&#39;]&#34;).bootstrapSwitch();
+
+
+ 配置参数(Bootstrap 3)
+
+
+
+参数名称
+属性
+类型
+描述
+参数值
+默认值
+
+
+
+
+state
+checked
+Boolean
+checkbox的状态
+true, false
+true
+
+
+size
+data-size
+String
+checkbox的尺寸大小
+null, &#39;mini&#39;, &#39;small&#39;, &#39;normal&#39;, &#39;large&#39;
+null
+
+
+animate
+data-animate
+Boolean
+开关按钮是否动画
+true, false
+true
+
+
+disabled
+disabled
+Boolean
+Disable状态
+true, false
+false
+
+
+readonly
+readonly
+Boolean
+只读状态
+true, false
+false
+
+
+indeterminate
+data-indeterminate
+Boolean
+不确定的状态
+true, false
+false
+
+
+inverse
+data-inverse
+Boolean
+反转开关按钮的方向
+true, false
+false
+
+
+radioAllOff
+data-radio-all-off
+Boolean
+允许用户使用该radio按钮执行unchecked操作
+true, false
+false
+
+
+onColor
+data-on-color
+String
+开关按钮左边的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+&#39;primary&#39;
+
+
+offColor
+data-off-color
+String
+开关按钮右边的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+&#39;default&#39;
+
+
+onText
+data-on-text
+String
+开关按钮左边的文字
+String
+&#39;ON&#39;
+
+
+offText
+data-off-text
+String
+开关按钮右边的文字
+String
+&#39;OFF&#39;
+
+
+labelText
+data-label-text
+String
+开关按钮中间的Label文本
+String
+&#39; &#39;
+
+
+handleWidth
+data-handle-width
+String | Number
+开关按钮左边和右边的宽度，单位像素
+&#39;auto&#39; or Number
+&#39;auto&#39;
+
+
+labelWidth
+data-label-width
+String | Number
+开关按钮Label文本的宽度，单位像素
+&#39;auto&#39; or Number
+&#39;auto&#39;
+
+
+baseClass
+data-base-class
+String
+全局class前缀
+String
+&#39;bootstrap-switch&#39;
+
+
+wrapperClass
+data-wrapper-class
+String | Array
+包裹开关按钮元素的class
+String | Array
+&#39;wrapper&#39;
+
+
+onInit
+
+Function
+开关按钮初始化后的回调函数
+Function
+
+function(event, state) {}
+
+
+
+onSwitchChange
+
+Function
+开关按钮状态发生改变时的回调函数
+Function
+
+function(event, state) {}
+
+
+
+
+
+ 全局默认值覆盖
+可以通过下面的方法来覆盖库中的默认参数配置：
+
+$.fn.bootstrapSwitch.defaults.size = &#39;large&#39;;
+$.fn.bootstrapSwitch.defaults.onColor = &#39;success&#39;;
+
+
+ 方法(Bootstrap 3)
+在Bootstrap Switch中，每一个配置参数都是一个方法。
+如果第二个参数被省略, 方法返回当前值。
+你可以按下面的方式调用方法：
+
+$(&#39;input[name=&#34;my-checkbox&#34;]&#39;).bootstrapSwitch(&#39;state&#39;, true, true);
+
+
+ 附加方法
+
+
+
+方法名称
+方法描述
+
+
+
+
+toggleState
+切换开关按钮的状态
+
+
+toggleAnimate
+切换动画的状态
+
+
+toggleDisabled
+切换disabled状态
+
+
+toggleReadonly
+切换readonly状态
+
+
+toggleIndeterminate
+切换indeterminate状态
+
+
+toggleInverse
+切换反向参数
+
+
+destroy
+销毁Bootstrap开关按钮
+
+
+
+
+ 特殊行为
+
+
+state方法的第三个参数为可选参数skip，如果为true，switchChange事件将不被执行，默认值为false。
+
+toggleState方法的第二个参数为可选参数skip，如果为true，switchChange事件将不被执行，默认值为false。
+
+wrapperClass方法可以在第二个参数接收一个false值，这样它将把class重置会默认。
+
+
+ 事件(Bootstrap 3)
+所有的事件都被添加到名称空间中，在你执行事件的时候需要追加.bootstrapSwitch。你可以像下面这样注册事件：
+
+$(&#39;input[name=&#34;my-checkbox&#34;]&#39;).on(&#39;switchChange.bootstrapSwitch&#39;, function(event, state) {
+console.log(this); // DOM element
+console.log(event); // jQuery event
+console.log(state); // true | false
+});
+
+
+
+
+事件名称
+事件描述
+参数
+
+
+
+
+init
+在初始化时触发。 &#39;this&#39;引用指向DOM元素。
+event (jQuery Event object)
+
+
+switchChange
+在开关按钮状态改变时触发。 &#39;this&#39;引用指向DOM元素。
+
+event (jQuery Event object),
+state (true | false)
+
+
+
+
+
+ 配置参数(Bootstrap 2.0.1)
+只有使用data-*属性的元素才能使用下面的参数。
+checked, disabled and readonly属性是例外的参数，它们可以在HTML input元素上直接使用。
+在初始化时不可以通过js来指定任何参数。
+
+
+
+名称
+类型
+描述
+参数值
+默认值
+
+
+
+
+state
+Boolean
+checkbox的状态
+true, false
+&#39;checked&#39; attribute or true
+
+
+size
+String
+checkbox的尺寸
+&#39;&#39;, &#39;mini&#39;, &#39;small&#39;, &#39;normal&#39;, &#39;large&#39;
+&#39;&#39;
+
+
+animate
+Boolean
+开关按钮动画
+true, false
+true
+
+
+disabled
+Boolean
+Disable状态
+true, false
+&#39;disabled&#39; attribute or false
+
+
+readonly
+Boolean
+Readonly状态
+true, false
+&#39;readonly&#39; attribute or false
+
+
+on
+String
+开关按钮左边的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+null
+
+
+off
+String
+开关按钮右边的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+null
+
+
+on-label
+String
+开关按钮左边的文字
+String
+&#39;ON&#39;
+
+
+off-label
+String
+开关按钮右边的文字
+String
+&#39;OFF&#39;
+
+
+text-label
+String
+开关按钮中间label的文本
+String
+&#39; &#39;
+
+
+label-icon
+String
+开关按钮中间的文本。用来添加外部的字体图标。
+String
+null
+
+
+
+
+ 方法(Bootstrap 2.0.1)
+
+
+
+方法名称
+方法描述
+接收值
+返回值
+
+
+
+
+state
+获取checkbox状态
+
+true, false
+
+
+setState
+设置checkbox状态
+(value: true, false)[, skip: true, false]
+jQuery Object (input element)
+
+
+toggleState
+切换checkbox状态
+[skip: true, false]
+jQuery Object (input element)
+
+
+toggleRadioState
+切换radio状态
+[skip: true, false]
+jQuery Object (input element)
+
+
+toggleRadioStateAllowUncheck
+切换开关按钮的radio状态允许radio设置为uncheck
+[uncheck: true, false | skip: true, false]
+jQuery Object (input element)
+
+
+setSizeClass
+设置开关按钮的尺寸
+&#39;&#39;, &#39;mini&#39;, &#39;small&#39;, &#39;normal&#39;, &#39;large&#39;
+jQuery Object (input element)
+
+
+setAnimated
+设置开关按钮的动画
+true, false
+jQuery Object (input element)
+
+
+isDisabled
+获取开关按钮的disabled状态
+
+true, false
+
+
+setDisabled
+设置开关按钮的disable状态
+true, false
+jQuery Object (input element)
+
+
+toggleDisabled
+切换开关按钮的disabled状态
+
+jQuery Object (input element)
+
+
+isReadOnly
+获取开关按钮的Readonly状态
+
+true, false
+
+
+setReadOnly
+设置开关按钮的Readonly状态
+true, false
+jQuery Object (input element)
+
+
+toggleReadOnly
+切换开关按钮的readonly状态
+
+jQuery Object (input element)
+
+
+setOnClass
+设置开关按钮左边文本的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+jQuery Object (input element)
+
+
+setOffClass
+设置开关按钮右边文本的颜色
+&#39;primary&#39;, &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;, &#39;default&#39;
+jQuery Object (input element)
+
+
+setOnLabel
+设置开关按钮左边文本
+String
+jQuery Object (input element)
+
+
+setOffLabel
+设置开关按钮右边文本
+String
+jQuery Object (input element)
+
+
+setTextLabel
+设置开关按钮中间的label文本
+String
+null
+
+
+setTextIcon
+设置开关按钮中间的label文本。用于添加外部的字体图标。
+String
+null
+
+
+destroy
+销毁Bootstrap开关按钮对象。
+
+jQuery Object (input element)
+
+
+
+
+ 事件(Bootstrap 2.0.1)
+只有switch-change事件可以触发。它返回两个参数：event 和
+data。data是一个包含el（input DOM元素）和value（input DOM元素状态）的对象。
+
+ 浏览器兼容
+兼容所有现代浏览器，包括IE9+。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1351">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1352">
+                        基于bootstrap的jQuery超酷hero幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_1">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1352" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502201342.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bpHS是一款基于bootstrap的炫酷jQuery hero幻灯片插件。该bootstrap幻灯片插件小巧实用，可以通过data属性来设置幻灯片的动画效果，还提供了许多参数用于控制幻灯片。
+内容：
+
+
+简要教程
+
+
+bpHS是一款基于bootstrap的炫酷jQuery hero幻灯片插件。该幻灯片插件小巧实用，可以通过data-属性来设置幻灯片的动画效果，还提供了许多参数用于控制幻灯片。
+
+ 使用方法
+
+ HTML结构
+
+&amp;lt;div class=&#34;bp-hs&#34;&amp;gt;
+&amp;lt;div class=&#34;bp-hs\_inner&#34;&amp;gt;
+&amp;lt;div class=&#34;bp-hs\_inner\_\_item&#34;&amp;gt;
+&amp;lt;img src=&#34;...&#34; alt=&#34;...&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 调用插件
+该幻灯片插件需要在最外层的&amp;lt;div&amp;gt;上设置一个id来用于js控制。
+
+$(&#39;.bp-hs&#39;).bpHS();
+
+
+ DATA属性
+默认的bp-hs\_inner\_\_item动画效果是不可见的，你可以通过data-*属性来控制幻灯片每一个item的动画。
+
+
+
+Data属性
+描述
+
+
+data-transform=&#34;scale&#34;
+Is used to scale elements. Add an addtional effect by using data-origin=&#34;top-(right | left)&#34; ordata-origin=&#34;bottom-(right | left)&#34;
+
+
+
+data-transform=&#34;rotate&#34;
+Is used to rotate elements from corners based on data-origin=&#34;top-(right | left)&#34; or data-origin=&#34;bottom-(right | left)&#34; (required*)
+
+
+
+
+
+ 配置参数
+下面是该幻灯片插件可用的参数：
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+activate
+Number
+0
+触发在bp-hs\_inner\_\_item的事件和添加code&amp;gt;is-active class使元素可见。
+
+
+touchSwipe
+Boolean
+true
+
+允许你在桌面设备上实用鼠标和在手机上使用滑动手势拖动幻灯片。这个选项需要TouchSwipe Jquery Plugin的支持。
+
+
+
+nextText
+String
+null
+
+在next控制按钮上显示的文字
+
+
+
+prevText
+String
+null
+
+在previous控制按钮上显示的文字
+
+
+
+showControls
+Boolean
+true
+
+显示或隐藏所有的控制按钮(next, prev and bullets)
+
+
+
+showButtons
+Boolean
+true
+
+显示或隐藏mext和prev按钮
+
+
+
+showBullets
+Boolean
+true
+
+显示或隐藏bullets
+
+
+
+arrowKeys
+Boolean
+false
+
+允许使用键盘来到后幻灯片
+
+
+
+
+
+
+
+autoPlay
+Boolean
+false
+
+自动播放幻灯片(paused on hover)。
+
+
+
+duration
+Number
+5000
+
+幻灯片自动播放的时间间隔。
+
+
+
+
+更多关于该幻灯片插件的信息请参看：https://github.com/boompx/bpHS
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1352">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1353">
+                        纯js可定制的跨浏览器日期时间选择器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1353" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503091613.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Rome是一款纯js可定制的跨浏览器日期时间选择器插件。该日期时间选择器不依赖于jQuery,但它依赖于moment.js。可以通过CSS文件来自定义该日期时间选择器的外观样式。
+内容：
+
+
+简要教程
+
+
+Rome是一款纯js可定制的跨浏览器日期时间选择器插件。该日期时间选择器不依赖于jQuery,但它依赖于moment.js。可以通过CSS文件来自定义该日期时间选择器的外观样式。
+
+ 安装
+可以通过Bower或nmp来安装该日期时间选择器插件。
+
+npm install --save rome
+bower install --save rome
+
+
+ 使用方法
+你可以使用自定义版本的moment.js文件，配合使用rome.standalone.js。
+
+&amp;lt;script src=&#39;moment.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;rome.standalone.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+你也可以直接使用rome.js文件，它里面包含了moment.js文件。
+
+&amp;lt;script src=&#39;rome.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+如果你想了解moment的国际化的信息，可以查看这里。你还可以点击这里查看moment的使用方法。
+
+ API
+rome的API中有一些可以使用的公共方法。
+
+rome.find(elem)
+
+返回关联elem的日期时间对象，或返回null。DOM元素只能有一个关联的日期时间对象。
+
+rome(elem, options={})
+
+这个方法创建一个日期对象实例，并使用elem元素来关联它。这个关联对象不能使用.destroy()方法销毁。在后面调用rome(elem)方法将调用这个关联对象，而不是创建一个新的实例。
+
+
+ 可用参数
+
+
+
+
+参数
+描述
+
+
+
+
+appendTo
+日期时间选择器的DOM元素被添加到何处。用&#39;parent&#39;作为父元素。
+
+
+autoClose
+设置为true时，日期时间选择器在选择了一个日期后将自动关闭，（或时间：要求time: true并且date: false）。只使用&#39;time&#39;一个值的时候，只会在时间被选择时改变选择器。
+
+
+autoHideOnBlur
+当焦点离开输入框时隐藏日期时间选择器。
+
+
+autoHideOnClick
+当点击后立刻隐藏日期时间选择器。
+
+
+date
+日期选择器显示天数，并运行在月之间切换。
+
+
+dateValidator
+校验给定的日期是否有效。接受一个Date参数。
+
+
+dayFormat
+日期选择器上的天数的格式。
+
+
+initialValue
+用于初始化日期时间选择器的值。可用String、Date或moment。
+
+
+inputFormat
+使用input字段来格式化日期字符串。
+
+
+invalidate
+确保在失去焦点时日期是有效的。
+
+
+strictParse
+以严格的方式比较inputFormat，只有部分匹配的被丢弃。
+
+
+max
+Disallow dates past max。可用String、Date或moment。
+
+
+min
+Disallow dates before min。可用String、Date或moment。
+
+
+monthFormat
+月和年的格式字符串。
+
+
+monthsInCalendar
+在日期选择器中渲染多少个月。
+
+
+required
+字段是否是必须的或不允许空值。
+
+
+styles
+日期时间选择器上的CSS样式的名称。
+
+
+time
+日期时间选取上显示的当前时间，并允许使用下拉列表来改变时间。
+
+
+timeFormat
+日期时间选择器上的时间字符串格式。
+
+
+timeInterval
+在下列列表中每个选项的时间间隔的秒数。
+
+
+timeValidator
+Function to validate that a given time is considered valid.Receives a native Date parameter.
+
+
+weekdayFormat
+Format used to display weekdays. Takes min (Mo), short (Mon), long (Monday), or an array with seven strings of your choosing.
+
+
+weekStart
+Day considered the first of the week. Range: Sunday 0 - Saturday 6
+
+
+
+
+
+ 默认参数
+
+{
+&#34;appendTo&#34;: document.body,
+&#34;autoClose&#34;: true,
+&#34;autoHideOnBlur&#34;: true,
+&#34;autoHideOnClick&#34;: true,
+&#34;date&#34;: true,
+&#34;dateValidator&#34;: Function.prototype,
+&#34;dayFormat&#34;: &#34;DD&#34;,
+&#34;initialValue&#34;: null,
+&#34;inputFormat&#34;: &#34;YYYY-MM-DD HH:mm&#34;,
+&#34;invalidate&#34;: true,
+&#34;max&#34;: null,
+&#34;min&#34;: null,
+&#34;monthFormat&#34;: &#34;MMMM YYYY&#34;,
+&#34;monthsInCalendar&#34;: 1,
+&#34;required&#34;: false,
+&#34;strictParse&#34;: false,
+&#34;styles&#34;: {
+&#34;back&#34;: &#34;rd-back&#34;,
+&#34;container&#34;: &#34;rd-container&#34;,
+&#34;date&#34;: &#34;rd-date&#34;,
+&#34;dayBody&#34;: &#34;rd-days-body&#34;,
+&#34;dayBodyElem&#34;: &#34;rd-day-body&#34;,
+&#34;dayConcealed&#34;: &#34;rd-day-concealed&#34;,
+&#34;dayDisabled&#34;: &#34;rd-day-disabled&#34;,
+&#34;dayHead&#34;: &#34;rd-days-head&#34;,
+&#34;dayHeadElem&#34;: &#34;rd-day-head&#34;,
+&#34;dayRow&#34;: &#34;rd-days-row&#34;,
+&#34;dayTable&#34;: &#34;rd-days&#34;,
+&#34;month&#34;: &#34;rd-month&#34;,
+&#34;next&#34;: &#34;rd-next&#34;,
+&#34;positioned&#34;: &#34;rd-container-attachment&#34;,
+&#34;selectedDay&#34;: &#34;rd-day-selected&#34;,
+&#34;selectedTime&#34;: &#34;rd-time-selected&#34;,
+&#34;time&#34;: &#34;rd-time&#34;,
+&#34;timeList&#34;: &#34;rd-time-list&#34;,
+&#34;timeOption&#34;: &#34;rd-time-option&#34;
+},
+&#34;time&#34;: true,
+&#34;timeFormat&#34;: &#34;HH:mm&#34;,
+&#34;timeInterval&#34;: 1800,
+&#34;timeValidator&#34;: Function.prototype,
+&#34;weekdayFormat&#34;: &#34;min&#34;,
+&#34;weekStart&#34;: moment().weekday(0).day()
+}
+
+
+ 方法
+当你使用rome(elem)方法创建了日期时间选择器后，你将获得一个cal对象实例。下面是一些可用的方法，大部分方法返回都返回日期时间对象，使之可以链式编程。
+
+
+.show()：显示日期时间选择器。如果是和input关联，日期时间选择器会绝对定位在它的下方。
+
+.hide()：隐藏日期时间选择器。
+
+.id：为Rome对象自动生成唯一的标识符。
+
+.container：包裹日期时间选择器的DOM元素。
+
+.associated：和日期时间选择器对象关联的DOM元素。它是你用于创建日期时间选择器的input元素或它的父元素。
+
+.getDate()：使用原生的Date对象返回当前的日期。当input元素是空的时候，如果required: false将获得null。
+
+.getDateString(format?)：返回日期时间选择器上定义的当前日期，并用options.inputFormat或你选择的格式来格式化该日期。当input元素是空的时候，如果required: false将获得null。
+
+.getMoment()：返回当前日期时间选择器的moment对象的一个副本。当input元素是空的时候，如果required: false将获得null。
+
+.destroy()：从DOM中移除日期时间选择器矢量，并移除所有的关联事件。 The only responsive API method becomes the .restore method described below, the rest of the API becomes no-op methods. After emitting the destroyed event, all event listeners are removed from the instance.
+
+.destroyed：如果日期时间选择器处于销毁状态返回true。
+
+.restore(options?)：使用提供的参数恢复日期时间选择器。关联的DOM元素不能被改变。
+
+.options(options?)：如果提供了一个options对象，它将销毁日期时间选择器对象，并用提供的options来重新初始化选择器。效果和在调用了.destroy()方法之后立刻调用.restore(options)方法。
+
+.options.reset()：重置默认的参数。 Effectively the same as calling .options({}) while preserving the appendTo option.
+
+.emitValues()：Emits all of the data events listed below. Mostly used internally, should be avoided in consumer-land.
+
+.setValue(value)：使用value来设置当前的日期时间。 Takes string, Date, or moment. Mostly used internally, and it doesn&#39;t emit any events.
+
+.refresh()：强制刷新日期时间选择器。This method will redraw the month and update the dates that can be selected in accordance with dateValidator and timeValidator.
+
+
+ 事件
+Rome日期时间选择器也提供了一些可用的事件。这些事件是通过一个事件源contra发布创建使用。
+
+
+
+
+事件
+参数
+描述
+
+
+
+
+ready
+[options]
+日期时间选择器已经被.restore。
+
+
+destroyed
+[]
+日期时间选择器已经被.destroy。
+
+
+data
+[value]
+可能被日期时间选择器更新的日期。值由.getDateString()提供。
+
+
+year
+[year]
+可能被日期时间选择器更新的年份。值由moment.year()提供。
+
+
+month
+[month]
+可能被日期时间选择器更新的月份。值由moment.month()提供。
+
+
+day
+[day]
+可能被日期时间选择器更新的天数。值由moment.date()提供。
+
+
+time
+[time]
+可能被日期时间选择器更新的时间。值由时间字符串提供。
+
+
+show
+[]
+日期时间选择器已经被显示。
+
+
+hide
+[]
+日期时间选择器已经被隐藏。
+
+
+
+
+关于该日期时间选择器的更多资料请参考：https://github.com/bevacqua/rome
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1353">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/38/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/40/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

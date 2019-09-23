@@ -1,0 +1,348 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    timeago.js-将datetime时间转化为模糊时间的js工具库 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            timeago.js-将datetime时间转化为模糊时间的js工具库
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1609/201609101450.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1609/201609101450.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201609103983.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>timeago.js是一个非常简洁、轻量级、不到 2kb 的很简洁的Javascript库，用来将datetime时间转化成类似于*** 时间前的描述字符串，例如：“3小时前”。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>timeago.js是一个非常简洁、轻量级、不到 2kb 的很简洁的Javascript库，用来将datetime时间转化成类似于*** 时间前的描述字符串，例如：“3小时前”。</p>
+<ul>
+<li>本地化支持，默认自带中文和英文语言，基本够用；</li>
+<li>之前 xxx 时间前、xxx 时间后；</li>
+<li>支持自动实时更新；</li>
+<li>支持npm方式和浏览器script方式；</li>
+<li>测试用例完善，执行良好；</li>
+</ul>
+<p>中文版的模糊时间的显示格式如下：</p>
+<pre class="brush:html">
+刚刚
+12秒前
+3分钟前
+2小时前
+4天前
+3周前
+6月前
+3年前
+<p>12秒后<br>
+3分钟后<br>
+2小时后<br>
+24天后<br>
+6月后<br>
+3年后<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm来安装timeago.js插件。</p>
+<pre class="brush:html">
+npm install timeago.js
+</pre>
+<p>使用import引入，然后可以得到一个全局变量: <code>timeago</code>。</p>
+<pre class="brush:js">
+import timeago from 'timeago.js';
+// 或者
+var timeago = require("timeago.js");
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入timeago.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="path/to/timeago.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>使用<code>timeago</code>类的方法如下：</p>
+<pre class="brush:js">
+var timeago = timeago();
+timeago.format('2016-09-10')
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 高级特性</h5>
+<p style="font-weight: 900">1. 设置相对日期</p>
+<p><code>timeago</code>默认是相对于当前事件的，当然也可以自己设置相对的时间，如下所示：</p>
+<pre class="brush:js">
+var timeago = timeago('2016-06-10 12:12:12'); // 在这里设置相对时间
+timeago.format('2016-06-12', 'zh\_CN');
+</pre>
+<p style="font-weight: 900">2. 格式化时间戳，字符串</p>
+<pre class="brush:js">
+timeago().format(new Date().getTime() - 11 * 1000 * 60 * 60); // will get '11 hours ago'
+</pre>
+<p style="font-weight: 900">3. 自动实时渲染</p>
+<p>HTML代码为：</p>
+<pre class="brush:html">
+&lt;div class="need\_to\_be\_rendered" data-timeago="2016-09-10 09:20:00"&gt;&lt;/div&gt;
+</pre>
+<p>Js代码为：</p>
+<pre class="brush:js">
+timeago().render(document.querySelectorAll('.need\_to\_be\_rendered'), 'zh\_CN');
+// 或者
+timeago().cancel() 
+</pre>
+<p>API方法<code>render</code>可以传入一个DOM节点或者数据，标示需要实时渲染这些节点。</p>
+<p>API方法<code>cancel</code>调用之后会清除所有的定时器方法，并且释放所有定时器资源。</p>
+<p>被渲染的节点必须要有<code>data-timeago</code>属性，属性值为日期格式的字符串。</p>
+<p style="font-weight: 900">4. 本地化</p>
+<p>默认的语言是英文<code>en</code>, 这个库自带语言有<code>en</code>和<code>zh\_CN</code>（英文和中文）。</p>
+<pre class="brush:js">
+var timeago = timeago();
+timeago.format('2016-06-12', 'zh\_CN');
+</pre>
+<p>可以在构造函数中传入默认语言，也可以调用<code>setLocale</code>方法。</p>
+<pre class="brush:js">
+var timeago = timeago(null, 'zh\_CN');
+// 或者
+timeago.setLocale('zh\_CN');
+</pre>
+<p style="font-weight: 900">5. 注册本地语言</p>
+<p>你可以自定义注册你的语言. 如下所示，所有的键值都必须存在，不然可能会出错。</p>
+<pre class="brush:js">
+// 本地化的字典样式
+var test\_local\_dict = function(number, index) {
+// number: xxx 时间前 / 后的数字;
+// index: 下面数组的索引号;
+return [
+['just now', 'a while'],
+['\%s seconds ago', 'in \%s seconds'],
+['1 minute ago', 'in 1 minute'],
+['\%s minutes ago', 'in \%s minutes'],
+['1 hour ago', 'in 1 hour'],
+['\%s hours ago', 'in \%s hours'],
+['1 day ago', 'in 1 day'],
+['\%s days ago', 'in \%s days'],
+['1 week ago', 'in 1 week'],
+['\%s weeks ago', 'in \%s weeks'],
+['1 month ago', 'in 1 month'],
+['\%s months ago', 'in \%s months'],
+['1 year ago', 'in 1 year'],
+['\%s years ago', 'in \%s years']
+][index];
+};
+<p>var timeago = timeago();<br>
+timeago.register('test_local', test_local_dict);</p>
+<p>timeago.format('2016-06-12', 'test_local');<br>
+</pre></p>
+<p>timeago.js模糊时间js插件的github地址为：<a href="https://github.com/hustcc/timeago.js" target="\_blank">https://github.com/hustcc/timeago.js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1609/201609101450.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201609103983.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_654">
+                                <h3 class="post-title">
+                                    图片内部缩放和平移jQuery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

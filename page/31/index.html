@@ -1,0 +1,1991 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1272">
+                        支持移动触摸设备的纯js元素拖放插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1272" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504171602.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。
+内容：
+
+
+简要教程
+
+
+Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。它的特点有：
+
+设置非常简单
+没有外部依赖
+可以自动对数据进行排序
+被移动项带有半透明的视觉效果
+支持移动触摸设备
+兼容性好，支持IE7+的所有现代浏览器
+
+
+ 安装
+可以通过bower或npm来安装该元素拖放插件。
+
+npm install dragula --save
+bower install dragula.js --save 
+
+
+ 使用方法
+该元素拖动插件提供了一个最简单的API来让你可以在页面中拖放元素。
+
+dragula(containers, options?)
+
+默认情况下，dragula允许用户在containers中拖动一个元素，并将元素放置到containers列表的其它容器中。如果元素被放置在containers列表元素之外，插件将取消revertOnSpill和removeOnSpill选项。
+注意：拖拽事件只会发生在用户鼠标左键点击的时候，并且没有meta键被按下。如果点击的是按钮或超链接元素，拖拽事件也会被忽略。
+下面的例子允许用户将元素从left容器拖放到right容器，或从right容器拖放到left容器中。
+
+dragula([left, right]);
+
+
+ 配置参数
+你也可以为它提供一些参数选项：
+
+dragula(containers, {
+moves: function (el, container) {
+return true; // elements are always draggable by default
+},
+accepts: function (el, target, source, sibling) {
+return true; // elements can be dropped in any of the `containers` by default
+},
+direction: &#39;vertical&#39;, // Y axis is considered when determining where an element would be dropped
+copy: false, // elements are moved by default, not copied
+revertOnSpill: false,// spilling will put the element back where it was dragged from, if this is true
+removeOnSpill: false // spilling will `.remove` the element, if this is true
+});
+
+
+
+options.moves：你可以定义一个moves方法，该方法在发生点击的时候通过(el, container)参数进行调用。如果该方法返回的是false，拖拽事件将不会开始，事件也不会被阻止。
+
+options.accepts：该方法确保一个来自source的元素el能够在sibling元素之前放入到target容器之中。sibling元素可以为null，这会使元素被放置到容器的最后一个位置。注意：如果options.copy设置为true，el元素会被设置为一个副本，替代原始的拖放元素。
+
+
+options.copy：如果copy设置为true，元素将被复制而不是拖动。注意下面的区别：
+
+
+
+
+Event
+Move
+Copy
+
+
+
+
+drag
+元素从source中隐藏
+Nothing happens
+
+
+drop
+元素将移动到target中
+元素会被克隆到target中
+
+
+remove
+元素会从DOM中移除
+Nothing happens
+
+
+cancel
+元素会停留在source中
+Nothing happens
+
+
+
+
+
+
+options.revertOnSpill：默认情况下，元素被拖放到容器之外会被放置到由 feedback shadow设定的投放点上。设置revertOnSpill为true将确保元素在拖放到容器之外时会被重新放置会拖放的开始位置。
+
+options.removeOnSpill：设置removeOnSpill为true会使任何拖放到容器之外的元素被从DOM中移除。注意：如果copy设置为true，remove事件将不会触发。
+
+options.direction：当元素被拖放到一个容器中，它将被放置到最接近鼠标位置的点上。如果direction设置为vertical，将会使用Y轴坐标作为参考带你，如果设置为horizontal会使用X轴坐标作为参考点。
+
+
+ 事件
+
+
+drake.end()：使用最后位置的预览阴影标记最为拖放的目的地拖放元素。相应的cancel或drop事件将被触发。
+
+drake.cancel(revert)：如果被drake管理的元素是当前被拖放的元素，这个方法会取消拖放事件。你也可以在该方法的调用级别中传入revert参数，效果与revertOnSpill设置为true相同。注意：一个&#34;cancellation&#34;将在下面的场景中会返回一个&#34;cancel&#34;事件：
+
+
+revertOnSpill设置为true
+
+放置的目标（半透明的预览图）在source容器中，并且元素被放置到相同的容器中。
+
+
+
+drake.remove()：如果被drake管理的元素是当前被拖放的元素，该方法会将元素从DOM中移除。
+
+drake.on (Events)：drake是一个事件发送器。下面的事件可以使用drake.on(type, listener)来跟踪。
+
+
+
+
+事件名称
+参数
+描述
+
+
+
+
+drag
+el, container
+
+el从container中被拖拽
+
+
+drop
+el, container, source
+
+el被放置到container中，它来自source
+
+
+
+cancel
+el, container
+
+el被拖动但仍在原处，并最终回到container
+
+
+
+remove
+el, container
+
+el被拖动但仍在原处，并最终被从DOM中移除。
+
+
+shadow
+el, container
+
+el是拖放目的地的半透明预览，它会移动到container中。
+
+
+
+
+
+
+drake.destroy()：移除所有的拖放事件。如果.destroy在一个元素被拖动时触发，拖动将不会有效果。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1272">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1273">
+                        jQuery简单且功能强大的图片剪裁插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1273" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504212053.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+cropper是一款使用简单且功能强大的图片剪裁jQuery插件。该图片剪裁插件支持图片放大缩小，支持图片旋转，支持触摸屏设备，支持canvas，并且支持跨浏览器使用。
+内容：
+
+
+简要教程
+
+
+cropper是一款使用简单且功能强大的图片剪裁jQuery插件。该图片剪裁插件支持图片放大缩小，支持鼠标滚轮操作，支持图片旋转，支持触摸屏设备，支持canvas，并且支持跨浏览器使用。
+cropper提供了大量的参数、方法和事件供图片的剪裁操作。
+
+ 安装
+可以通过Bower或NPM来安装该插件。
+
+bower install cropper
+npm install cropper
+
+
+ 使用方法
+使用该图片剪裁插件首先要引入必要的js和css文件。
+
+&amp;lt;script src=&#34;/path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- jQuery is required --&amp;gt;
+&amp;lt;linkhref=&#34;/path/to/cropper.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;/path/to/cropper.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以将图片或canvas直接包裹到一个块级元素中。
+
+&amp;lt;!-- Wrap the image or canvas with a block element --&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;img src=&#34;picture.jpg&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 调用插件
+可以使用$.fn.cropper方法来初始化该图片剪裁插件。
+
+$(&#39;.container &amp;gt; img&#39;).cropper({
+aspectRatio: 16 / 9,
+crop: function(data) {
+// Output the result data for cropping image.
+}
+});
+
+注意事项：
+
+注意：剪裁区域的尺寸继承自图片的父容器（包裹容器），所以要确保包裹图片的是一个可见的块级元素。
+输出的剪裁数据基于原始的图片尺寸，你可以使用这些数据直接剪裁图片。
+如果你要使用跨源图片来作为剪裁图片，请确保你的浏览器支持HTML5 CORS settings attributes，并且你的图片服务器支持Access-Control-Allow-Origin属性。
+
+
+ 配置参数
+你可以通过$().cropper(options)方法来设置参数。如果你想改变全局默认参数，可以使用$.fn.cropper.setDefaults(options)方法。
+
+
+aspectRatio：类型：Number，默认值NaN。设置剪裁容器的比例。
+
+crop：类型：Function，默认值null。当改变剪裁容器或图片时的事件函数。
+
+preview：类型：String(jQuery选择器)，默认值&#39;&#39;。添加额外的元素（容器）的预览。注意：
+
+最大宽度是剪裁容器的初始化宽度
+最大高度是剪裁容器的初始化高度
+如果你设置了aspectRatio参数，确保预览容器具有相同的比例
+
+
+
+strict：类型：Boolean，默认值true。在strict模式中，canvas不能小于容器，剪裁容器不能再canvas之外。
+
+responsive：类型：Boolean，默认值true。是否在窗口尺寸改变的时候重置cropper。
+
+checkImageOrigin：类型：Boolean，默认值true。默认情况下，插件会检测图片的源，如果是跨域图片，图片元素会被添加crossOrigin class，并会为图片的url添加一个时间戳来使getCroppedCanvas变为可用。添加时间戳会使图片重新加载，以使跨域图片能够使用getCroppedCanvas。在图片上添加crossOrigin class会阻止在图片url上添加时间戳，及图片的重新加载。
+
+background：类型：Boolean，默认值true。是否在容器上显示网格背景。
+
+modal：类型：Boolean，默认值true。是否在剪裁框上显示黑色的模态窗口。
+
+guides：类型：Boolean，默认值true。是否在剪裁框上显示虚线。
+
+highlight：类型：Boolean，默认值true。是否在剪裁框上显示白色的模态窗口。
+
+autoCrop：类型：Boolean，默认值true。是否在初始化时允许自动剪裁图片。
+
+autoCropArea：类型：Number，默认值0.8（图片的80\%）。0-1之间的数值，定义自动剪裁区域的大小。
+
+dragCrop：类型：Boolean，默认值true。是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域。
+
+movable：类型：Boolean，默认值true。是否允许移动剪裁框。
+
+resizable：类型：Boolean，默认值true。是否允许改变剪裁框的大小。
+
+zoomable：类型：Boolean，默认值true。是否允许放大缩小图片。
+
+mouseWheelZoom：类型：Boolean，默认值true。是否允许通过鼠标滚轮来缩放图片。
+
+touchDragZoom：类型：Boolean，默认值true。是否允许通过触摸移动来缩放图片。
+
+rotatable：类型：Boolean，默认值true。是否允许旋转图片。
+
+minContainerWidth：类型：Number，默认值200。容器的最小宽度。
+
+minContainerHeight：类型：Number，默认值100。容器的最小高度。
+
+minCanvasWidth：类型：Number，默认值0。canvas 的最小宽度（image wrapper）。
+
+minCanvasHeight：类型：Number，默认值0。canvas 的最小高度（image wrapper）。
+
+build：类型：Function，默认值null。build.cropper事件的简写方式。
+
+built：类型：Function，默认值null。built.cropper事件的简写方式。
+
+dragstart：类型：Function，默认值null。dragstart.cropper事件的简写方式。
+
+dragmove：类型：Function，默认值null。dragmove.cropper事件的简写方式。
+
+dragend：类型：Function，默认值null。dragend.cropper事件的简写方式。
+
+zoomin：类型：Function，默认值null。zoomin.cropper事件的简写方式。
+
+zoomout：类型：Function，默认值null。zoomout.cropper事件的简写方式。
+
+
+ 方法
+因为图片是异步加载的，所以你需要在built之后才能调用下面的方法，setAspectRatio、replace和destroy方法例外。
+
+$().cropper({
+built: function () {
+$().cropper(&#39;method&#39;, argument1, , argument2, ..., argumentN)
+}
+}
+
+
+
+move(offsetX, offsetY)：
+
+
+offsetX：类型：Number，水平方向上移动的大小，单位像素。
+
+offsetY：类型：Number，垂直方向上移动的大小，单位像素。
+ 
+移动一幅图片：
+
+$().cropper(&#39;move&#39;, 1, 0)
+$().cropper(&#39;move&#39;, 0, -1) 
+
+
+
+zoom(ratio)：
+ratio：
+
+类型：Number
+
+Zoom in：需要一个正数（ratio &amp;gt; 0）
+Zoom out：需要一个负数（ratio &amp;lt; 0）
+
+缩放一幅图片：
+
+$().cropper(&#39;zoom&#39;, 0.1)
+$().cropper(&#39;zoom&#39;, -0.1) 
+
+
+
+rotate(degree)：
+ratio：
+
+类型：Number
+
+Rotate right：需要一个正数（degree &amp;gt; 0）
+Rotate left：需要一个负数（degree &amp;lt; 0）
+
+旋转一幅图片，需要CSS3 Transforms3d的支持（IE10+）：
+
+$().cropper(&#39;rotate&#39;, 90)
+$().cropper(&#39;rotate&#39;, -90)
+
+
+
+enable()：使cropper可用。
+
+disable()：冻结cropper。
+
+reset()：重置剪裁区域的图片到初始状态。
+
+clear()：清空剪裁区域。
+
+replace(url)：
+url：
+
+类型：String
+
+一个新的图片URL
+
+替换图片的URL重建cropper。
+
+
+getData()：
+返回值：
+
+类型：Object
+
+属性：
+
+
+x：剪裁区域左侧的偏移。
+
+y：剪裁区域距上部的偏移。
+
+width：剪裁区域的宽度。
+
+height：剪裁区域的高度。
+
+rotate：图片的旋转角度。
+
+
+
+看下图演示从原始图片中返回的剪裁区域数据。
+
+
+
+getContainerData()：
+返回值：
+
+类型：Object
+
+属性：
+
+
+width：容器的当前宽度。
+
+height：容器的当前高度。
+
+
+
+输出容器尺寸数据。
+
+
+getImageData()：
+返回值：
+
+类型：Object
+
+属性：
+
+
+left：图片的左侧偏移。
+
+top：图片的上部偏移。
+
+width：图片的宽度。
+
+height：图片的高度。
+
+
+
+输出图片的位置和尺寸大小。
+
+
+getCanvasData()：
+返回值：
+
+类型：Object
+
+属性：
+
+
+left：canvas的左侧偏移。
+
+top：canvas的上部偏移。
+
+width：canvas的宽度。
+
+height：canvas的高度。
+
+
+
+输出canvas（图片容器）的位置和尺寸大小。
+
+
+setCanvasData(data)：
+返回值：
+
+类型：Object
+
+属性：
+
+
+left：canvas的距离左侧新的偏移。
+
+top：canvas的距离上部新的偏移。
+
+width：canvas新的宽度。
+
+height：canvas新的高度。
+
+
+
+改变canvas（图片容器）的位置和尺寸大小。
+
+
+getCropBoxData()：
+返回值：
+
+类型：Object
+
+属性：
+
+
+left：剪裁区域距离左侧的偏移。
+
+top：剪裁区域距离上部的偏移。
+
+width：剪裁区域的宽度。
+
+height：剪裁区域的高度。
+
+
+
+输出剪裁区域的位置和尺寸大小。
+
+
+setCropBoxData(data)：
+返回值：
+
+类型：Object
+
+属性：
+
+
+left：剪裁区域距离左侧新的偏移。
+
+top：剪裁区域距离上部新的偏移。
+
+width：剪裁区域新的宽度。
+
+height：剪裁区域新的高度。
+
+
+
+改变剪裁区域的位置和尺寸大小。
+
+
+getCroppedCanvas([options])：
+参数（默认值）：
+
+类型：Object
+
+属性：
+
+
+width：输出的canvas目标宽度。
+
+height：输出的canvas目标高度。
+
+fillColor：canvas中填充的颜色。
+
+
+
+返回值：
+
+类型：HTMLCanvasElement
+
+一个画有剪裁图片的canvas。
+
+浏览器支持：
+
+基本图像：需要Canvas的支持（IE9+）
+旋转图像：需要CSS3 animations Transforms3d的支持（IE10+）
+跨域图像：需要HTML5 CORS settings attributes的支持（IE11+）
+
+获取canvas绘制的剪裁图像。
+在这之后，你可以直接将canvas作为图片显示，或使用canvas.toDataURL方法获取图像的数据链接，或者使用canvas.toBlob方法获取一个blob，并通过FormData方法将它更新到服务器上（如果浏览器支持这些API）。
+
+$().cropper(&#39;getCroppedCanvas&#39;)
+$().cropper(&#39;getCroppedCanvas&#39;, {
+width: 160,
+height: 90
+});
+
+
+
+setAspectRatio(aspectRatio)：
+aspectRatio：
+
+类型：Number
+
+需要一个正整数。
+
+改变剪裁区域的比例。
+
+
+setDragMode([mode])：
+mode（可选项）：
+
+类型：String
+
+默认值：&#39;&#39;
+
+选项：&#39;crop&#39;或&#39;move&#39;
+
+
+改变拖拽模式。提示：你可以通过双击来改变&#34;crop&#34; 和 &#34;move&#34;模式。
+
+
+
+ 事件
+
+build.cropper：当cropper对象开始加载图片的时候触发该事件。
+
+built.cropper：当cropper对象构建完成时触发该事件。
+
+dragstart.cropper：
+event.dragType：
+
+
+&#34;crop&#34;：创建一个新的剪裁区域。
+
+&#34;move&#34;：移动canvas。
+
+&#34;zoom&#34;：通过触摸移动来缩放canvas。
+
+&#34;e&#34;：调整剪裁区域东边的尺寸大小。
+
+&#34;w&#34;：调整剪裁区域西边的尺寸大小。
+
+&#34;s&#34;：调整剪裁区域南边的尺寸大小。
+
+&#34;n&#34;：调整剪裁区域北边的尺寸大小。
+
+&#34;se&#34;：调整剪裁区域东南边的尺寸大小。
+
+&#34;sw&#34;：调整剪裁区域西南边的尺寸大小。
+
+&#34;ne&#34;：调整剪裁区域东北边的尺寸大小。
+
+&#34;nw&#34;：调整剪裁区域西北边的尺寸大小。
+
+&#34;all&#34;：移动剪裁区域。
+
+该事件在剪裁区域发生改变时触发。
+相关的原始事件：mousedown、touchstart。
+
+$(&#39;img&#39;).on(&#39;dragstart.cropper&#39;, function (e) {
+console.log(e.type); // dragstart
+console.log(e.namespace); // cropper
+console.log(e.dragType); // ...
+});
+
+
+
+dragmove.cropper：
+event.dragType：和dragstart.cropper相同。
+当剪裁区域发生改变时触发。
+相关的原始事件：mousemove、touchmove。
+
+
+dragend.cropper：
+event.dragType：和dragstart.cropper相同。
+当剪裁区域改变结束时触发。
+相关的原始事件：mouseup、mouseleave、touchend、touchleave和touchcancel。
+
+
+zoomin.cropper：当cropper对象开始放大canvas时触发。
+
+zoomout.cropper：当cropper对象开始缩小canvas时触发。
+
+No conflict：如果你使用了相同名称空间的其它插件，可以通过$.fn.cropper.noConflict方法来修改名称空间。
+
+&amp;lt;script src=&#34;other-plugin.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;cropper.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+$.fn.cropper.noConflict();
+// Code that uses other plugin&#39;s &#34;$().cropper&#34; can follow here.
+&amp;lt;/script&amp;gt;
+
+
+
+ 浏览器兼容
+
+Chrome 38+
+Firefox 33+
+Internet Explorer 8+
+Opera 25+
+Safari 5.1+
+
+作为jQuery插件，你还需要了解浏览器对jQuery的支持。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1273">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1274">
+                        Material Design风格定时器|秒表|闹钟jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1274" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1505/201505021812.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可以用于制作谷歌Material Design风格的定时器、秒表和闹钟的jQuery插件。该jQuery插件集合了Material Design的多种风格：点击波特效，扁平化风格和滑动按钮等。可用于制作定时器，秒表和闹钟等小工具。
+内容：
+
+
+简要教程
+
+
+这是一款可以用于制作谷歌Material Design风格的定时器、秒表和闹钟的jQuery插件。该jQuery插件集合了Material Design的多种风格：点击波特效，扁平化风格和滑动按钮等。可用于制作定时器，秒表和闹钟等小工具。
+该插件是响应式的，可以在移动手机设备上使用。你可以通过点击或在触摸屏上通过触摸来切换各种功能。该插件的具体功能包括：
+
+
+Alarm clock (闹钟)：设定一个在指定时间响铃的闹钟。该闹钟功能通过HTML5 audio来实现。
+
+Stopwatch (秒表)：可以显示从点击开始按钮到点击结束按钮的时间。你可以开始，暂停和重置计时时间。
+
+Timer (定时器)：设置以分钟为单位的定时时间，开始后时间倒计时，到0时铃声响起。
+
+上面的功能都基于 local storage 来实现，所以即使你的页面发生错误，重新打开时，app还能继续接着工作。
+注意：在移动手机上不会听到铃声。因为在Chrome 和 Safari版本的移动手机上，音频只能通过响应用户动作来发出声音，例如通过触摸某个按钮。而插件中的音频是在一个延时之后才开始播放，手机浏览器会忽略它。
+该插件使用Materialize框架，结合jQuery和jQuery Timepicker插件，并使用Hammer.js来控制移动触摸事件。Materialize可以将普通的HTML input输入框组件转换为安卓样式的滑动开关按钮和复选框。插件中还使用Waves.js来为元素的点击添加点击波效果。
+
+压缩包中的assets文件夹下的js文件夹中有4个js文件，其中alarm.js, stopwatch.js 和 timer.js分别对应定时器、秒表和闹钟的js代码。使用某种功能可单独引入其中一个文件。script.js文件时处理前台的一些按钮点击和元素切换的js代码。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1274">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1275">
+                        jQuery和CSS3炫酷滚动页面内容元素动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1275" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503021725.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-smoove是一款jQuery和CSS3炫酷滚动页面内容元素动画特效插件。该内容元素动画插件在页面滚动到指定位置时，该位置的HTML元素会执行指定的CSS3动画特效，如旋转、翻转、放大缩小等动画特效。
+内容：
+
+
+简要教程
+
+
+jquery-smoove是一款jQuery和CSS3炫酷滚动页面内容元素动画特效插件。该内容元素动画插件在页面滚动到指定位置时，该位置的HTML元素会执行指定的CSS3动画特效，如旋转、翻转、放大缩小等动画特效。使用Smoove页面滚动元素动画特效插件可以很轻松的制作出各种华丽的CSS3动画效果。
+
+ 安装
+可以使用CDN从cdnjs引入或Bower来安装jquery-smoove插件。
+
+&amp;lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.6/jquery.smoove.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+$ bower install jquery-smoove 
+
+或者简单的添加jquery-smoove到你的项目的bower.json文件中。
+
+&#34;dependencies&#34;: {
+&#34;jquery-smoove&#34;: &#34;latest&#34;
+}
+
+
+ 使用方法
+jquery-smoove的基本用法如下：
+
+$(&#39;.foo&#39;).smoove(options);
+
+上面的代码会在class为foo的元素上使用默认参数初始化 jQuery Smoove。你可以通过data-attributes属性来覆盖插件的默认参数，例如下面的例子：
+
+&amp;lt;div class=&#34;foo&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bar&#34; data-move-x=&#34;-200px&#34; data&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.6/jquery.smoove.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+&amp;lt;script&amp;gt;
+// Attach Smoove to elements and set default options
+$(&#34;.foo, .bar&#34;).smoove({
+offset: &#39;15\%&#39;,
+// moveX is overridden to -200px for &#34;.bar&#34; object
+moveX : &#39;100px&#39;,
+moveY : &#39;100px&#39;,
+});
+&amp;lt;/script&amp;gt;
+
+注意：在使用 data-attributes 属性时，要将属性的驼峰格式改为连字符格式，例如：moveX要改为data-move-x
+
+ 可用参数
+下面是该页面滚动元素动画特效插件的可用参数：
+
+
+
+
+名称
+类型
+默认值
+描述
+
+
+
+
+offset
+integer or string
+150
+当对象滑动进入屏幕之前距离屏幕底部的距离，例如：10\%。
+
+
+opacity
+integer (0-100)
+0
+当对象滑动进入屏幕之前的透明度。
+
+
+perspective
+integer
+1000
+对象的3D perspective，单位像素。
+
+
+transformOrigin
+string
+50\% 50\%
+对象transform的Origin,单位像素、百分比或默认关键字(left, right, top or bottom)
+
+
+skewY
+angle
+none
+沿Y轴的2D倾斜度。
+
+
+move
+string
+none
+沿X轴和Y轴2D移动的距离，例如：100px,50\%。
+
+
+move3d
+string
+none
+沿X轴、Y轴和Z轴3D移动的距离，例如：10px,10px,10px。
+
+
+moveX
+string
+none
+沿X轴移动对象，例如：10px or 10\%
+
+
+
+moveY
+string
+none
+沿Y轴移动对象，例如：10px or 10\%
+
+
+
+moveZ
+string
+none
+沿Z轴移动对象，例如：10px or 10\%
+
+
+
+rotate
+string
+none
+2D旋转，例如：90deg
+
+
+
+rotate3d
+string
+none
+沿X轴、Y轴和Z轴的3D旋转，例如：1,1,1,90deg
+
+
+
+rotateX
+string
+none
+沿X轴的3D旋转，例如：90deg
+
+
+
+rotateY
+string
+none
+沿Y轴的3D旋转，例如：90deg
+
+
+
+rotateZ
+string
+none
+沿Z轴的3D旋转，例如：90deg
+
+
+
+scale
+decimal or string
+none
+X轴和Y轴方向上的2D缩放 (x,y)，例如2.5或2,0.5
+
+
+
+scale3d
+string
+none
+沿X轴、Y轴和Z轴方向上的3D缩放 (x,y,z)，例如：2,3,0.5
+
+
+
+scaleX
+decimal
+none
+X轴方向上的缩放。
+
+
+scaleY
+decimal
+none
+Y轴方向上的缩放。
+
+
+skew
+angle
+none
+沿X轴和Y轴方向上的2D倾斜，例如：90deg,90deg
+
+
+
+skewX
+angle
+none
+沿X轴方向上的2D倾斜。
+
+
+skewY
+angle
+none
+沿Y轴方向上的2D倾斜。
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1275">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1276">
+                        jQuery和CSS3炫酷图片和按钮点击波特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1276" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503221628.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+rippler是一款效果非常炫酷的jQuery和CSS3图片和按钮点击波特效插件。点击波特效是指在按钮或图片上点击的时候，从点击的位置开始，会产生一种圆形光波向外辐射的炫酷效果。这款点击波特效同时支持桌面设备和移动触摸设备。
+内容：
+
+
+简要教程
+
+
+rippler是一款效果非常炫酷的jQuery和CSS3图片和按钮点击波特效插件。点击波特效是指在按钮或图片上点击的时候，从点击的位置开始，会产生一种圆形光波向外辐射的炫酷效果。这款点击波特效同时支持桌面设备和移动触摸设备。
+相同的效果还有：jQuery和CSS3炫酷按钮点击波特效。
+
+ 使用方法
+
+ 与Bootstrap结合使用
+该点击波特效可以完美的和Bootstrap 3结合，用于制作按钮和链接按钮的点击波特效：
+bootstrap按钮点击波效果：
+
+
+
+ 
+rippler-default
+
+bootstrap超链接按钮点击波效果：
+
+
+ 
+rippler-bs-danger
+
+
+ 在图片上使用点击波特效
+
+
+ 使用步骤
+
+在页面中引入必要的文件：
+
+&amp;lt;!-- If you want to use the buttons on the bootstrap --&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;!-- rippler CSS --&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./css/rippler.min.css&amp;quot;&amp;gt;
+&amp;lt;!-- vendor js --&amp;gt;
+&amp;lt;script src=&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- rippler js --&amp;gt;
+&amp;lt;script src=&amp;quot;./dist/js/jquery.rippler.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+该点击波特效的HTML结构如下：
+
+&amp;lt;body&amp;gt;
+&amp;lt;button class=&amp;quot;btn btn-primary rippler rippler-default&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;bootstrap button&amp;lt;/button&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+在页面加载完毕后调用该点击波插件：
+$(document).ready(function() {
+$(&#34;.rippler&#34;).rippler({
+effectClass:&#39;rippler-effect&#39;
+,effectSize:16// Default size (width &amp;amp; height)
+,addElement:&#39;div&#39; // e.g. &#39;svg&#39;(feature)
+,duration:400
+});
+});
+
+
+
+ 浏览器兼容
+该点击波特效需要CSS3的支持，可以运行在所有最新版的现代浏览器上。
+
+IE10+
+Safari
+Chrome
+Firefox
+Opera
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1276">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1277">
+                        imagesLoaded-检测图片是否正确加载的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/6R-m2UQuKe" class="post-tag i-tag
+                            i-tag-success">
+            #image
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1277" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503141735.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+imagesLoaded是一款用于检测页面中的图片是否被加载的js插件。imagesLoaded是非常有用的插件，当你的页面中某幅图片没有被加载时，默认会显示一个红叉或图片alt文本，imagesLoaded可以将未加载的图片替换为你设置的图片。
+内容：
+
+
+简要教程
+
+
+imagesLoaded是一款用于检测页面中的图片是否被加载的js插件。imagesLoaded是非常有用的插件，当你的页面中某幅图片没有被加载时，默认会显示一个红叉或图片alt文本，imagesLoaded可以将未加载的图片替换为你设置的图片。
+
+ 安装
+你可以通过Bower或npm来安装giantess分类过滤和排序插件。
+
+bower install imagesloaded
+npm install imagesloaded 
+
+或者直接使用下载包中的imagesloaded.pkgd.js文件及压缩版的imagesloaded.pkgd.min.js。在页面中将它引入即可。
+
+&amp;lt;script src=&#34;/path/to/isotope.pkgd.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用方法
+
+imagesLoaded( elem, callback )
+// you can use `new` if you like
+new imagesLoaded( elem, callback ) 
+
+
+
+elem：该参数是元素，节点列表，数组或选择器字符串。
+
+callback：图片被加载后的回调事件。
+
+使用callback回调函数和绑定always事件是一样的（看事件描述一节内容）。
+
+// 作为元素
+imagesLoaded( document.querySelector(&#39;#container&#39;), function( instance ) {
+console.log(&#39;all images are loaded&#39;);
+});
+// 作为选择器字符串
+imagesLoaded( &#39;#container&#39;, function() {...});
+// 多个元素
+var posts = document.querySelectorAll(&#39;.post&#39;);
+imagesLoaded( posts, function() {...});
+
+
+ 事件
+imagesLoaded是一个事件发射源，你可以为事件绑定事件监听。
+
+var imgLoad = imagesLoaded( elem );
+function onAlways( instance ) {
+console.log(&#39;all images are loaded&#39;);
+}
+// bind with .on()
+imgLoad.on( &#39;always&#39;, onAlways );
+// unbind with .off()
+imgLoad.off( &#39;always&#39;, onAlways );
+
+
+ always
+
+imgLoad.on( &#39;always&#39;, function( instance ) {
+console.log(&#39;ALWAYS - all images have been loaded&#39;);
+});
+
+在所有图片被加载或确认broken时触发。
+instance：imagesLoaded 实例对象。
+
+ done
+
+imgLoad.on( &#39;done&#39;, function( instance ) {
+console.log(&#39;DONE- all images have been successfully loaded&#39;);
+});
+
+在所有图片被成功加载没有broken图片的时候触发。
+
+ fail
+
+imgLoad.on( &#39;fail&#39;, function( instance ) {
+console.log(&#39;FAIL - all images loaded, at least one is broken&#39;);
+});
+
+在所有图片被加载至少有一幅图片是broken图片的时候触发。
+
+ progress
+
+imgLoad.on( &#39;progress&#39;, function( instance, image ) {
+var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
+});
+
+在每一幅图片都被加载之后触发。
+
+
+instance：imagesLoaded 实例对象。
+
+image：加载图片时的loading对象的实例对象。
+
+
+ 属性
+
+ LoadingImage.img
+img：img元素。
+
+ LoadingImage.isLoaded
+Boolean ：当图片被成功加载时为true。
+
+ imagesLoaded.images
+要检测的所有图片的LoadingImage实例对象。
+
+var imgLoad = imagesLoaded(&#39;#container&#39;);
+imgLoad.on( &#39;always&#39;, function() {
+console.log( imgLoad.images.length + &#39; images loaded&#39; );
+// detect which image is broken
+for ( var i = 0, len = imgLoad.images.length; i &amp;lt; len; i++ ) {
+var image = imgLoad.images[i];
+var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
+}
+});
+
+
+ 与jQuery结合使用
+如果你在页面中引入的jQuery，imagesLoaded 可以作为一个jQuery插件来使用。
+
+$(&#39;#container&#39;).imagesLoaded( function() {
+// images have loaded
+});
+
+
+ jQuery Deferred
+作为jQuery插件来使用时会返回一个jQuery Deferred object。你可以和前面使用事件的方法一样使用.always()、.done()、.fail()和.progress()。
+
+$(&#39;#container&#39;).imagesLoaded()
+.always( function( instance ) {
+console.log(&#39;all images loaded&#39;);
+})
+.done( function( instance ) {
+console.log(&#39;all images successfully loaded&#39;);
+})
+.fail( function() {
+console.log(&#39;all images loaded, at least one is broken&#39;);
+})
+.progress( function( instance, image ) {
+var result = image.isLoaded ? &#39;loaded&#39; : &#39;broken&#39;;
+console.log( &#39;image is &#39; + result + &#39; for &#39; + image.img.src );
+});
+
+
+ RequireJS
+imagesLoaded 可以和RequireJS一起工作。你可以require imagesloaded.pkgd.js。
+
+requirejs( [
+&#39;path/to/imagesloaded.pkgd.js&#39;,
+], function( imagesLoaded ) {
+imagesLoaded( &#39;#container&#39;, function() { ... });
+});
+
+或者可以通过Bower来管理依赖。将baseUrl设置为bower\_components，然后将路径设置为你的app工作路径。
+
+requirejs.config({
+baseUrl: &#39;bower\_components/&#39;,
+paths: { // path to your app
+app: &#39;../&#39;
+}
+});
+requirejs( [
+&#39;imagesloaded/imagesloaded&#39;,
+&#39;app/my-component.js&#39;
+], function( imagesLoaded, myComp ) {
+imagesLoaded( &#39;#container&#39;, function() { ... });
+});
+
+
+ Browserify
+imagesLoaded可以和Browserify一起工作。
+
+npm install imagesloaded --save
+
+
+var imagesLoaded = require(&#39;imagesloaded&#39;);
+imagesLoaded( elem, function() {...} );
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1277">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1278">
+                        js实用表单模糊搜索和自动提示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1278" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503081719.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+fuzzysearch是一款实用的表单模糊搜索和自动提示js插件。该js插件允许你只输入部分字符串，根据这部分字符串自动搜索和匹配，并给出自动替代选项。适用于各种数据的快速检索。
+内容：
+
+
+简要教程
+
+
+fuzzysearch是一款实用的表单模糊搜索和自动提示js插件。该js插件允许你只输入部分字符串，根据这部分字符串自动搜索和匹配，并给出自动替代选项。适用于各种数据的快速检索。
+
+ 安装
+可以使用npm来按钮该自动提示插件。
+
+npm install --save fuzzysearch
+
+
+ 使用方法
+
+fuzzysearch(needle, haystack)
+DEMO中的js文件时基于fuzzysearch.js来编写的。
+fuzzysearch.js提供一个fuzzysearch(needle, haystack)方法，它使用自己的算法检查needle和haystack，如果匹配则返回true。这个方法在needle中的每一个元素都存在于haystack中时才会返回true。例如：
+
+fuzzysearch(&#39;twl&#39;, &#39;cartwheel&#39;) // &amp;lt;- true
+fuzzysearch(&#39;cart&#39;, &#39;cartwheel&#39;) // &amp;lt;- true
+fuzzysearch(&#39;cw&#39;, &#39;cartwheel&#39;) // &amp;lt;- true
+fuzzysearch(&#39;ee&#39;, &#39;cartwheel&#39;) // &amp;lt;- true
+fuzzysearch(&#39;art&#39;, &#39;cartwheel&#39;) // &amp;lt;- true
+fuzzysearch(&#39;eeel&#39;, &#39;cartwheel&#39;) // &amp;lt;- false
+fuzzysearch(&#39;dog&#39;, &#39;cartwheel&#39;) // &amp;lt;- false 
+
+当前版本的fuzzysearch对正则表达式的支持还不够完美，使用正则表达式性能将会受到一些影响。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1278">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1279">
+                        jQuery轻量级响应式扁平风格tabs选项卡插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1279" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504021619.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+PWS Tabs是一款轻量级jQuery tabs选项卡插件。它可以创建响应式的、扁平风格的标签式选项卡，并且可以定制选项卡的标签颜色，并且tabs进行切换的时候还带有CSS3动画效果。
+内容：
+
+
+简要教程
+
+
+PWS Tabs是一款轻量级jQuery tabs选项卡插件。它可以创建响应式的、扁平风格的标签式选项卡，并且可以定制选项卡的标签颜色，并且tabs进行切换的时候还带有CSS3动画效果。
+你可以在tabs选项卡中嵌入视频、谷歌地图、图片和文本等内容，甚至可以将这些内容混合放置在一个选项卡页上。下图是它的响应式效果预览图：
+
+可以通过bower来安装这个tabs选项卡插件：
+
+$ bower install pwstabs
+
+
+ 使用方法
+使用这个tabs选项卡插件首先要引入必要的文件：
+
+&amp;lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;jquery.pwstabs.css&#34;&amp;gt;
+&amp;lt;script src=&#34;//code.jquery.com/jquery-1.11.2.min.js&#34;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.pwstabs-1.2.1.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该选项卡插件的html结构可以使用一个&amp;lt;div&amp;gt;作为包裹容器，里面的每一个子元素&amp;lt;div&amp;gt;是一个选项卡选项页，使用HTML5的data-pws-*首先来为每一个选项页指定它的ID和名称。
+
+&amp;lt;div class=&#34;hello\_world&#34;&amp;gt;
+ &amp;lt;div data-pws-tab=&#34;anynameyouwant1&#34; data-pws-tab-name=&#34;Tab Title 1&#34;&amp;gt;Our first tab&amp;lt;/div&amp;gt;
+ &amp;lt;div data-pws-tab=&#34;anynameyouwant2&#34; data-pws-tab-name=&#34;Tab Title 2&#34;&amp;gt;Our second tab&amp;lt;/div&amp;gt;
+ &amp;lt;div data-pws-tab=&#34;anynameyouwant3&#34; data-pws-tab-name=&#34;Tab Title 3&#34;&amp;gt;Our third tab&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+data-pws-tab属性用于指定ID和初始化tab。
+data-pws-tab-name属性用于tab上显示的名称。
+
+ JAVASCRIPT
+通过父元素选择器进行调用可以生成一个100\%父容器宽度和带缩放动画效果的基本tabs选项卡。
+
+jQuery(document).ready(function($){
+ $(&#39;.hello\_world&#39;).pwstabs();
+}); 
+
+下面是通过参数来调用插件的方式：
+
+jQuery(document).ready(function($){
+ $(&#39;.hello\_world&#39;).pwstabs({
+// scale / slideleft / slideright / slidetop / slidedown / none
+effect: &#39;scale&#39;,
+// The tab to be opened by default
+defaultTab: 1,
+// Set custom container width
+// Any size value (1,2,3.. / px,pt,em,%,cm..)
+containerWidth: &#39;100%&#39;,
+// Tabs position: horizontal / vertical
+tabsPosition: &#39;horizontal&#39;,
+// Tabs horizontal position: top / bottom
+horizontalPosition: &#39;top&#39;,
+// Tabs vertical position: left / right
+verticalPosition: &#39;left&#39;,
+// BETA: Make tabs container responsive: true / false (!!! BETA)
+responsive: false,
+// Themes available: default: &#39;&#39; / pws_theme_violet / pws_theme_green / pws_theme_yellow
+// pws_theme_gold / pws_theme_orange / pws_theme_red / pws_theme_purple / pws_theme_grey
+theme: &#39;&#39;,
+// Right to left support: true/ false
+rtl: false
+});
+});
+
+
+ CSS样式
+该tabs选项卡插件支持Font Awesome 4.2.0。
+要使用Font Awesome字体图标，首先要引入font-awesome.min.css文件：
+
+&amp;lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;../assets/font-awesome-4.2.0/css/font-awesome.min.css&#34;&amp;gt;
+
+然后可以使用data-pws-tab-icon首先来设置你想要的图标。你可以在这里找到你想要的Font Awesome字体图标的名称
+
+&amp;lt;div class=&#34;hello\_world&#34;&amp;gt;
+&amp;lt;div data-pws-tab=&#34;anynameyouwant1&#34; data-pws-tab-name=&#34;Tab Title 1&#34; data-pws-tab-icon=&#34;fa-heart&#34;&amp;gt;Our first tab&amp;lt;/div&amp;gt;;
+&amp;lt;div data-pws-tab=&#34;anynameyouwant2&#34; data-pws-tab-name=&#34;Tab Title 2&#34; data-pws-tab-icon=&#34;fa-star&#34;&amp;gt;Our second tab&amp;lt;/div&amp;gt;
+&amp;lt;div data-pws-tab=&#34;anynameyouwant3&#34; data-pws-tab-name=&#34;Tab Title 3&#34; data-pws-tab-icon=&#34;fa-map-marker&#34;&amp;gt;Our third tab&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 配置参数
+
+
+
+
+参数选项
+默认值
+描述
+可用值
+类型
+
+
+
+
+effect
+scale
+Transition effect
+scale / slideleft / slideright / slidetop / slidedown / none
+string
+
+
+defaultTab
+1
+默认选择哪一个tab
+Tab的ID号，从1开始。（1,2,3...）
+number
+
+
+containerWidth
+100\%
+选项卡容器的宽度
+可以是任何尺寸单位（px,pt,em,\%,cm...）
+string
+
+
+horizontalPosition
+top
+定义水平tabs的位置
+top / bottom
+string
+
+
+verticalPosition
+left
+定义垂直tabs的位置
+left / right
+string
+
+
+theme
+&#39;&#39;
+改变tabs选项卡的主题
+pws\_theme\_violet / pws\_theme\_green
+pws\_theme\_yellow / pws\_theme\_gold
+pws\_theme\_orange / pws\_theme\_red
+pws\_theme\_purple / pws\_theme\_grey
+string
+
+
+responsive
+false
+使tabs选项卡具有响应式效果（BETA功能）
+true / false
+boolean
+
+
+rtl
+false
+支持从右向左显示
+true / false
+boolean
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1279">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_128">
+                        jQuery和CSS3鼠标悬停超链接文字动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_128" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811011506.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3鼠标悬停超链接文字动画特效。该特效共6种特效，分别是在鼠标HOVER或悬停在超链接文字上面时，超链接产生炫酷动画特效。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3鼠标悬停超链接文字动画特效。该特效共6种特效，分别是在鼠标HOVER或悬停在超链接文字上面时，超链接产生炫酷动画特效。
+
+ 使用方法
+在页面中引入base.css、demo.css和jquery、anime.min.js文件。
+
+&amp;lt;link href=&#34;css/base.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/demo.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/anime.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+基本HTML结构如下：
+
+&amp;lt;section class=&#34;section section-1st&#34;&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;p&amp;gt;The people who are &amp;lt;a href=&#34;javascript:void(0)&#34; class=&#34;link example-1&#34;&amp;gt;crazy&amp;lt;/a&amp;gt; enough...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+
+
+
+ 该jQuery和CSS3鼠标悬停超链接文字动画特效的官方网址为：https://coidea.website/categories/challenges/amazing-link-hover-effects/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_128">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1280">
+                        jQuery超炫图片3D背景视觉差特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1280" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1504/201504262049.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫的jQuery图片3D背景视觉差特效插件。该图片视觉差插件使用CSS matrix3d transforms来创建一个3D空间，使你能够使用鼠标和3D空间中的图片做交互，在鼠标移动的过程中，各种图片形成很酷的视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫的jQuery图片3D背景视觉差特效插件。该图片视觉差插件使用CSS matrix3d transforms来创建一个3D空间，使你能够使用鼠标和3D空间中的图片做交互，在鼠标移动的过程中，各种图片形成很酷的视觉差效果。
+
+ 安装
+可以使用Bower来安装该插件。
+
+bower install logos-distort
+
+
+ 使用方法
+使用该jQuery图片视觉差特效插件首先要引入jQuery、jquery.logosDistort.min.js和perspectiveRules.css文件。
+
+&amp;lt;link href=&#34;assets/css/perspectiveRules.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/1.11.0/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/jquery.logosDistort.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该特效的HTML结构使用一个&amp;lt;div&amp;gt;来包裹需要制作视觉差效果的图片。
+
+&amp;lt;div id=&#34;demo1&#34;&amp;gt;
+&amp;lt;img alt=&#34;background&#34; src=&#34;assets/images/background.png&#34; /&amp;gt;
+&amp;lt;div id=&#34;particle-target&#34; &amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;img alt=&#34;logo&#34; src=&#34;assets/images/logo.png&#34; /&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+HTML结构中可以包含任何的HTML元素，目前该插件只支持可以全屏的元素。如果你想使用一个非全屏额元素来相应matrix transform，可以简单的将它放置到全屏元素之中。
+
+ 调用插件
+在页面加载完毕之后，可以通过下面的方法来初始化该图片视觉差插件。
+
+$(&#34;#demo1&#34;).logosDistort(); 
+
+
+ 配置参数
+你可以在插件初始化的时候定制一些参数，下面是该视觉差插件的所有可用参数。
+
+enable: true,
+effectWeight: 1,
+enableSmoothing: true,
+smoothingMultiplier: 1,
+activeOnlyInside: false,
+outerBuffer: 1.10,
+elementDepth: 140,
+directions: [1, 1, 1, 1, -1, -1, 1, 1],
+weights: [0.0000310, 0.0001800, 0.0000164, 0.0000019, 0.0001200],
+container: window,
+cssClasses: {
+smartContainer: &#34;ld-smart-container&#34;,
+overlapContainer: &#34;ld-overlap-container&#34;,
+parent3d: &#34;ld-3d-parent&#34;,
+transformTarget: &#34;ld-transform-target&#34;,
+active: &#34;ld-transform-active&#34;,
+object3d: &#34;ld-3d-object&#34;
+},
+onInit: function() {},
+onDestroy: function() {}
+
+
+更多信息可以参考：https://github.com/hellsan631/LogosDistort
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1280">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/30/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/32/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

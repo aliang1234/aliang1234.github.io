@@ -1,0 +1,323 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery 3d图片旋转轮播图插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery 3d图片旋转轮播图插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1410/201410221714.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410221714.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141022262.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>featureCarousel.js是一款能够进行3d图片旋转切换的轮播图插件。效果类似3d旋转木马，在轮播图进行图片切换的时候，后面的图片移动到前面，整体有3d视觉效果。d</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>为了使用featureCarousel，必须引入jQuery和featureCarousel.js文件。</p>
+<h3>引入必要的js文件</h3>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery-1.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.featureCarousel.js"&gt;&lt;/script&gt;
+</pre>
+<p>然后需要引入featureCarousel.css文件</p>
+<pre class="brush:html">
+&lt;linkrel="stylesheet" href="css/featureCarousel.css"charset="utf-8"&gt;
+</pre>
+<h3>HTML结构</h3>
+<p>html的结构如下，你需要为每个存放图片的<code>div</code>设置class为<code>feature</code>。并且给外围的<code>div</code>设定id为<code>featureCarousel</code>，修改这个结构可能会得到意想不到的结果。</p>
+<pre class="brush:html">
+&lt;div id="featureCarousel"&gt;
+&lt;div class="feature"&gt;
+&lt;img alt="Image Caption" src="image1.jpg"&gt;
+&lt;div&gt;
+&lt;p&gt;
+This is some information that can go along with an image.
+Anything can be placed here, including images.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="feature"&gt;
+&lt;img alt="Image Caption" src="image2.jpg"&gt;
+&lt;div&gt;
+&lt;p&gt;
+This is some information that can go along with an image.
+Anything can be placed here, including images.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="feature"&gt;
+&lt;img alt="Image Caption" src="image3.jpg"&gt;
+&lt;div&gt;
+&lt;p&gt;
+This is some information that can go along with an image.
+Anything can be placed here, including images.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ &lt;/div&gt;
+</pre>
+<h3>调用插件</h3>
+<p>以下是最基本的调用方式，参数全是默认值。</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt;
+$("#featureCarousel").featureCarousel({
+// include options like this:
+// (use quotes only for string values, and no trailing comma after last option)
+// option: value,
+// option: value
+});
+&lt;/script&gt;
+</pre>
+<h3>可用参数：</h3>
+<pre class="brush:js">
+// If zero, take original width and height of image
+// If between 0 and 1, multiply by original width and height (to get smaller size)
+// If greater than one, use in place of original pixel dimensions
+largeFeatureWidth : 0,
+largeFeatureHeight:0,
+smallFeatureWidth:.5,
+smallFeatureHeight:.5,
+// how much to pad the top of the carousel
+topPadding: 20,
+// spacing between the sides of the container (pixels)
+sidePadding:30,
+// the additional offset to pad the side features from the top of the carousel
+smallFeatureOffset:50,
+// indicates which feature to start the carousel at
+startingFeature:1,
+// speed in milliseconds it takes to rotate the carousel
+carouselSpeed:1000,
+// time in milliseconds to set interval to autorotate the carousel
+// set to zero to disable it, negative to go left
+autoPlay: 0,
+// set to true to enable the creation of blips to indicate how many
+// features there are
+counterStyle: 1,
+// true to preload all images in the carousel before displaying anything
+preload:true,
+// Will only display this many features in the carousel
+// set to zero to disable
+displayCutoff:0,
+// an easing can be specified for the animation of the carousel
+animationEasing:'swing'
+</pre>
+<p>通过上面的参数，你可以自定义轮播图的外观和css样式。</p>
+<p>轮播图中的3d阴影和高光是通过样式表提供的。要修改背景色，只需要修改<code>featureCarousel</code>的<code>background</code>。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1410/201410221714.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141022262.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1566">
+                                <h3 class="post-title">
+                                    jquery+css3类似电影开场字幕文字变换特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

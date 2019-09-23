@@ -1,0 +1,1658 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_459">
+                        基于jquery UI的拖拽摇摆效果插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_459" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704261454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+swingdrag是一款基于jquery UI的拖拽摇摆效果插件。它在原生jquery ui拖拽效果的基础上，使用CSS3的transitions 和 transforms来添加一些炫酷的摇摆效果。
+内容：
+
+
+简要教程
+
+
+swingdrag是一款基于jquery UI的拖拽摇摆效果插件。它在原生jquery ui拖拽效果的基础上，使用CSS3的transitions 和 transforms来添加一些炫酷的摇摆效果。
+
+ 安装
+可以通过npm来安装swingdrag插件。
+
+npm install swingdrag
+
+
+ 使用方法
+在页面中引入jquery和jquery-ui.min.js以及jquery.ui.swingdrag.min.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery-ui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery.ui.swingdrag.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+例如要拖动一个&amp;lt;div&amp;gt;元素，其HTML结构如下：
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;要拖动的DIV元素&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过swingdrag()方法来初始化swingdrag插件。
+
+$(&#34;#container&#34;).swingdrag(); 
+
+
+ 配置参数
+swingdrag插件的可用配置参数如下：
+
+$(&#34;#element&#34;).swingdrag({
+// The angle of rotation in degree.
+rotationAngleDeg: 3,
+// Indicates whether a pickup-/drop shadow should be shown.
+showShadow: true,
+// The pick up scale factor indicates the size change during dragging.
+pickUpScaleFactor: 1.1
+});
+
+ 
+ 
+rotationAngleDeg：旋转的角度，默认值为8。
+ 
+showShadow：是否显示阴影效果。默认为true。
+ 
+pickUpScaleFactor：拖拽是元素的缩放比例。默认为1.1。
+ 
+swingdrag拖拽元素插件的github地址为：https://github.com/waxalot/swingdrag
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_459">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_460">
+                        jquery和CSS3响应式轮播图插件jcSlider
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_460" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707201450.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jcSlider是一款jquery和CSS3响应式轮播图插件。jcSlider使用CSS3过渡动画，它可以和animate.css完美结合，生成60多种轮播图过渡动画效果。
+内容：
+
+
+简要教程
+
+
+jcSlider是一款jquery和CSS3响应式轮播图插件。jcSlider使用CSS3过渡动画，它可以和animate.css完美结合，生成60多种轮播图过渡动画效果。
+
+ 安装
+可以通过npm或bower来安装jcSlider插件。
+
+bower install jcslider --save 
+npm install jcslider --save
+
+
+ 使用方法
+在页面中引入jquery和jquery.jcslider.min.js文件，以及animate.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.jcslider.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+jcslider轮播图的HTML结构如下：
+
+&amp;lt;ul class=&#34;jc-slider&#34;&amp;gt;
+&amp;lt;li class=&#34;jc-animation&#34;&amp;gt;
+[...]
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;jc-animation&#34;&amp;gt;
+[...]
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过jcSlider()方法来初始化该jquery轮播图插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(document).ready(function(){
+$(&#39;.jc-slider&#39;).jcSlider();
+});
+&amp;lt;/script&amp;gt;
+
+jcSlider轮播图插件的可用配置参数如下：
+
+$(document).ready(function(){
+$(&#39;.jc-slider&#39;).jcSlider({
+animationIn : &#34;bounceInRight&#34;,
+animationOut: &#34;bounceOutLeft&#34;, 
+stopOnHover : false, // true by default
+loop: false // true by default
+});
+}); 
+
+jcSlider响应式jquery轮播图插件的github网址为：https://github.com/JoanClaret/jcSlider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_460">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_462">
+                        jquery侧边栏插件sideToggle
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_462" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707031510.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+sideToggle是一款简单的jquery侧边栏插件。它可以通过velocity.js来替代jQuery的animate()动画，提供动画效果。
+内容：
+
+
+简要教程
+
+
+sideToggle是一款简单的jquery侧边栏插件。它可以通过velocity.js来替代jQuery的animate()动画，提供动画效果。
+
+ 使用方法
+在页面中引入jquery和velocity.min.js，以及sideToggleExtended.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/velocity.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/sideToggleExtended.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该jquery侧边栏插件的HTML结构如下：
+
+&amp;lt;nav&amp;gt;
+&amp;lt;!--侧边栏按钮--&amp;gt;
+&amp;lt;div id=&#34;sideMenu&#34;&amp;gt;
+&amp;lt;span class=&#34;fa fa-navicon&#34; id=&#34;sideMenuClosed&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;!--侧边栏--&amp;gt;
+&amp;lt;div id=&amp;quot;sideMenuContainer&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;heading&amp;lt;/h2&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;new user guide&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-bolt&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;rules&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-exclamation-circle&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;setting&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-map&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;usergroups&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-info-circle&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;directory&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-users&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;claims&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-camera&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;summaries&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-commenting&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;requests&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-heart&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;unanswered&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-flag&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;faq / suggestions&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-question-circle&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; title=&amp;quot;chat&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;fa fa-glass&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过sideToggle()方法来初始化该插件。
+
+$(document).ready(function(){
+$(&#39;switch&#39;).sideToggle({
+moving: &#39;null&#39;,
+direction: &#39;null&#39;
+});
+});
+
+
+ 配置参数
+该jquery侧边栏插件的可用配置参数有：
+
+
+
+
+参数
+描述
+
+
+
+
+switch
+指定点击哪个元素时会触发侧边栏按钮。
+
+
+moving
+指定侧边栏元素。
+
+
+direction
+侧边栏出现的方向。可选值有left和right。
+
+
+
+
+该jquery侧边栏插件的github地址为：https://github.com/hjools/sideToggle
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_462">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_466">
+                        SweetDropdown-多用途jQuery下拉列表插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_466" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704131525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+SweetDropdown是一款多用途的下拉列表jQuery插件。你可以通过任何元素来触发SweetDropdown插件，它既可以作为下拉列表使用，也可以作为提示框来使用。
+内容：
+
+
+简要教程
+
+
+SweetDropdown是一款多用途的下拉列表jQuery插件。你可以通过任何元素来触发SweetDropdown插件，它既可以作为下拉列表使用，也可以作为提示框来使用。
+
+
+ 安装
+可以通过npm或bower来安装SweetDropdown插件。
+
+$ bower install sweet-dropdown
+$ npm install sweet-dropdown
+
+
+ 使用方法
+在页面中引入样式文件jquery.sweet-dropdown.min.css，jquery和jquery.sweet-dropdown.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/jquery.sweet-dropdown.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#39;path/to/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;path/to/jquery.sweet-dropdown.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+一个标准的SweetDropdown下拉列表的HTML结构如下：
+
+&amp;lt;div class=&#34;dropdown-menu dropdown-anchor-top-left dropdown-has-anchor&#34; id=&#34;dropdown-standard&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Item 1&amp;lt;/a&amp;gt;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Item 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;divider&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Item 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+可以通过一个按钮来触发下拉列表框。
+
+&amp;lt;button data-dropdown=&#34;#dropdown-standard&#34;&amp;gt;Try out!&amp;lt;/button&amp;gt;
+
+
+ 配置参数
+
+ 下拉列表
+下拉列表可用的参数有：
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+dropdown-has-anchor
+Class
+弹出的下拉列表是否有一个三角形的箭头。
+
+
+dropdown-anchor-{SIDE}-{POSITION}
+Class
+{SIDE}表示箭头出现的方向。如果指定为left，那么下拉列表出现在元素的右侧。可以区下面的一些值：top（默认）rightbottomleft{POSITION}表示箭头的位置，可以是下面的值：leftcenterright
+
+
+dropdown-disabled
+Class
+是否禁用下拉列表。
+
+
+data-add-x
+Atribute
+将下拉列表向右移动指定像素的距离。使用负数可以向左移动。
+
+
+data-add-y
+Atribute
+将下拉列表向上移动指定像素的距离。使用负数可以向下移动。
+
+
+
+
+
+ 触发元素
+在触发元素上可用的参数有：
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+dropdown-open
+Class
+表示下拉列表是否处于打开状态。
+
+
+dropdown-use-offset
+Class
+默认下拉列表在文档中使用绝对定位。你可以通过该参数来修改默认的定位方式。
+
+
+data-dropdown
+Atribute
+用于触发下拉菜单的CSS选择器。
+
+
+data-add-anchor-x
+Atribute
+将anchor向右移动指定的像素，使用负数可以向左移动。
+
+
+data-add-anchor-y
+Atribute
+将anchor向上移动指定的像素，使用负数可以向下移动。
+
+
+
+
+
+ 方法
+初始化所有的下拉列表。
+
+$.sweetDropdown.attachAll(); // Automatically called on page load
+
+隐藏所有的下拉列表。
+
+$.sweetDropdown.hideAll(); 
+
+将一个下拉列表绑定到一个触发元素上。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;attach&#39;, &#39;#dropdown-selector&#39;);
+
+一个触发元素上解绑下拉列表。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;detach&#39;);
+
+显示是一个下拉列表。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;show&#39;);
+
+隐藏是一个下拉列表。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;hide&#39;);
+
+启用一个下拉列表。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;enable&#39;);
+
+禁用一个下拉列表。
+
+$(&#39;.trigger&#39;).sweetDropdown(&#39;disable&#39;);
+
+SweetDropdown下拉列表插件的egithub地址为：https://github.com/adeptoas/sweet-dropdown
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_466">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_467">
+                        跨浏览器控制图片旋转jquery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_467" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1705/201705101650.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQueryRotate.js是一款跨浏览器控制图片旋转jquery插件。jQueryRotate.js旋转图片插件可以使用CSS3动画来对图片进行任意角度的旋转。对于不支持CSS3动画的浏览器，插件会自动使用canvas或VML（IE6）技术进行回退。
+内容：
+
+
+简要教程
+
+
+jQueryRotate.js是一款跨浏览器控制图片旋转jquery插件。jQueryRotate.js旋转图片插件可以使用CSS3动画来对图片进行任意角度的旋转。对于不支持CSS3动画的浏览器，插件会自动使用canvas或VML（IE6）技术进行回退。
+
+ 使用方法
+在页面
+
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/jQueryRotate.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ API
+jQueryRotate.js插件集成了4个用于图片旋转的方法，分别为：
+
+rotate(angle)
+rotate(parameters)
+getRotateAngle()
+stopRotate()
+
+一、rotate(angle)：简单的将图片旋转任意角度。
+
+$(&#34;#img&#34;).rotate(45);
+
+二、rotate(parameters)：通过配置参数来旋转图片。
+parameters参数包括：
+
+angle [Number] ：图片旋转角度，默认为0度。
+bind [Object] ： 绑定事件。
+animateTo [Number] ：图片旋转到指定的角度，默认为0。
+center [Array] ： 定义图片旋转的中心点。
+duration [Number] - 图片旋转的持续时间，默认为1000。
+step [Function] ：每一步动画后执行的回调函数。
+easing [Function] ：图片旋转的easing动画。
+callback[Function] ：图片旋转动画结束后的回调函数。
+
+三、getRotateAngle()：返回图片旋转的角度。
+
+$(&#34;#img&#34;).rotate({
+angle: 45,
+bind: {
+click : function(){
+alert($(this).getRotateAngle());
+}
+}
+});
+
+四、stopRotate()：停止图片旋转动画。
+
+$(&#34;#img&#34;).rotate({
+bind: {
+click: function(){
+$(&#34;#img&#34;).rotate({
+angle: 0,
+animateTo: 180,
+duration: 6000
+});
+setTimeout(function(){
+$(&#34;#img&#34;).stopRotate();
+}, 1000);
+}
+}
+}); 
+
+jQueryRotate.js控制图片旋转jquery插件的github地址为：https://github.com/wilq32/jqueryrotate
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_467">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_468">
+                        jQuery表格搜索过滤和单元格高亮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_468" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1703/201703241539.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery.FilterTable是一款表格搜索过滤和单元格高亮插件。该插件允许你对任意表格进行条件过滤，并且它会将搜索到的结果单元格高亮显示，非常实用和强大。
+内容：
+
+
+简要教程
+
+
+jQuery.FilterTable是一款表格搜索过滤和单元格高亮插件。该插件允许你对任意表格进行条件过滤，并且它会将搜索到的结果单元格高亮显示，非常实用和强大。
+
+ 使用方法
+在页面中引入jquery和jquery.filtertable文件。
+
+&amp;lt;script src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/js/jquery.filtertable.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ CSS样式
+需要手动为搜索的结果设置高亮样式：
+
+.filter-table .quick { margin-left: 0.5em; font-size: 0.8em; text-decoration: none; }
+.fitler-table .quick:hover { text-decoration: underline; }
+td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过filterTable()来初始化该表格过滤插件。
+
+$(&#39;table&#39;).filterTable(); 
+
+
+ 配置参数
+jQuery.FilterTable插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+autofocus
+boolean
+false
+过滤输入框是否自动后的焦点。
+
+
+callback
+function(term, table)
+null
+当一个搜索完成时的回调函数。
+
+
+containerClass
+string
+filter-table
+过滤输入框的css样式。
+
+
+containerTag
+string
+p
+过滤输入框父容器的标签名称。
+
+
+hideTFootOnFilter
+boolean
+false
+表格在过滤后脚部是否隐藏。
+
+
+highlightClass
+string
+alt
+被过滤选中的单元格的class名称。
+
+
+ignoreClass
+string
+&#39;&#39;
+在过滤时带该class的所有单元格将被忽略。
+
+
+ignoreColumns
+array
+[]
+数组中的列在过滤是将被忽略。
+
+
+inputSelector
+string
+null
+如果需要使用已经存在的input作为搜索输入框，使用该选择器来进行关联。
+
+
+inputName
+string
+filter-table
+搜索输入框的name名称。
+
+
+inputType
+string
+search
+搜索输入框的type类型。
+
+
+label
+string
+Filter:
+搜索输入框前面的标签。
+
+
+minChars
+integer
+1
+最小的搜索字符数。
+
+
+minRows
+integer
+8
+显示的最小搜索行数。
+
+
+placeholder
+string
+search this table
+搜索输入框的HTML5提示文本。
+
+
+preventReturnKey
+boolean
+true
+阻止默认的表单提交事件。
+
+
+quickList
+array
+[]
+使用快速搜索模式，通过可点击的文本来进行搜索，例如点击一个超链接。
+
+
+quickListClass
+string
+quick
+快速搜索列表项的class名称。
+
+
+quickListClear
+string
+&#39;&#39;
+Label for the clear filtering quick list item
+
+
+quickListGroupTag
+string
+&#39;&#39;
+Tag name surrounding quick list items
+
+
+quickListTag
+string
+a
+快速搜索列表项的标签名称。
+
+
+visibleClass
+string
+visible
+可见行的class名称。
+
+
+
+
+jQuery.FilterTable表格搜索过滤插件的github地址为：https://github.com/sunnywalker/jQuery.FilterTable
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_468">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_470">
+                        小巧的jquery轮播图插件xSlider
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_470" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704251459.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+xSlider.js是一款小巧的jquery轮播图插件。该jquery轮播图使用简单，代码简洁，运行速度快，兼容ie8浏览器。
+内容：
+
+
+简要教程
+
+
+xSlider.js是一款小巧的jquery轮播图插件。该jquery轮播图使用简单，代码简洁，运行速度快，兼容ie8浏览器。
+
+ 使用方法
+在页面中引入jquery和xSlider.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/xSlider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+xSlider轮播图的基本HTML结构如下：
+
+&amp;lt;div class=&#34;slider&#34;&amp;gt;
+&amp;lt;div class=&#34;slider-img&#34;&amp;gt;
+&amp;lt;ul class=&#34;slider-img-ul&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-5.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-1.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-2.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-3.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-4.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-5.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/slider-1.jpg&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为轮播图添加下面的必要的CSS样式：
+
+.slider {
+width: 1200px;
+margin: 50px auto;
+position: relative;
+}
+.slider:hover .slider-btn {
+color: #fff;
+text-shadow: 0 0 5px #666;
+}
+.slider .slider-img {
+width: 12000px;
+position: relative;
+}
+.slider .slider-img .slider-img-ul {
+position: absolute;
+left: 0;
+top: 0;
+overflow: hidden;
+}
+.slider .slider-img .slider-img-ul li {
+float: left;
+}
+.slider .slider-img .slider-img-ul li img {
+width: 1200px;
+height: 460px;
+}
+.slider .slider-dot ul {
+position: absolute;
+right: 50px;
+bottom: 30px;
+}
+.slider .slider-dot ul li {
+cursor: pointer;
+width: 10px;
+height: 10px;
+border-radius: 50\%;
+background: #ccc;
+border: 2px solid #fff;
+float: left;
+margin-left: 10px;
+}
+.slider .slider-dot ul li.active, .slider .slider-dot ul li:hover {
+background: #fff;
+}
+.slider .slider-btn {
+position: absolute;
+width: 50px;
+height: 100px;
+top: 50\%;
+line-height: 100px;
+text-align: center;
+color: #fff;
+font-size: 28px;
+text-decoration: none;
+font-family: &#39;黑体&#39;;
+color: rgba(255, 255, 255, 0);
+}
+.slider .slider-btn:hover {
+background: rgba(125, 125, 125, .3);
+}
+.slider .slider-btn.slider-btn-left {
+left: 0;
+margin-top: -50px;
+}
+.slider .slider-btn.slider-btn-right {
+right: 0;
+margin-top: -50px;
+} 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过xSlider()方法来初始化该轮播图插件。
+
+$(&#39;.slider&#39;).xSlider()
+
+
+ 配置参数
+xSlider轮播图插件的可用配置参数如下：
+
+$(&#39;.slider&#39;).xSlider({
+// slider width
+w: 1200,
+// current slide
+current: 0,
+// animation speed
+speed: 500,
+// autoplay interval
+intervalTime: 5000
+})
+
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+w
+.slider的宽度
+轮播图宽度
+
+
+current
+0
+默认显示第n张图（从0开始）
+
+
+speed
+500
+图片切换速度
+
+
+intervalTime
+5000
+自动切换时长
+
+
+
+
+xSlider.js轮播图插件的github地址为：https://github.com/codexu/xSlider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_470">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_471">
+                        jquery和CSS3图片排序过滤搜索插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_471" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707191528.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Filterizr是一款jquery和CSS3图片排序过滤插件。它可以对一组图片进行排序，按条件过滤和按关键字搜索。并在显示结果时使用指定的CSS3动画过渡效果。
+内容：
+
+
+简要教程
+
+
+Filterizr是一款jquery和CSS3图片排序过滤插件。它可以对一组图片进行排序，按条件过滤和按关键字搜索。并在显示结果时使用指定的CSS3动画过渡效果。Filterizr的特点还有：
+
+轻量级，压缩后的版本仅10.5k。
+响应式设计。
+支持移动设备，已为移动设备做了优化，显示更流畅。
+支持IE10+以上的所有现代浏览器。
+
+
+ 安装
+可以通过npm或bower来安装Filterizr插件。
+
+npm install filterizr
+bower install filterizr
+
+
+ 使用方法
+在页面中引入jquery和jquery.filterizr.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.filterizr.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+要使用Filterizr插件你必须有一个图片画廊。为每一张图片的容器添加filtr-item class类，用data-category属性来为图片进行分类，多个分类之间使用逗号分隔。如需要排序，需要添加data-sort属性。
+
+&amp;lt;div class=&#34;filtr-container&#34;&amp;gt;
+&amp;lt;div class=&#34;filtr-item&#34; data-category=&#34;1&#34; data-sort=&#34;value&#34;&amp;gt;
+&amp;lt;img src=&#34;img/sample.jpg&#34; alt=&#34;sample&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;filtr-item&#34; data-category=&#34;2, 1&#34; data-sort=&#34;value&#34;&amp;gt;
+&amp;lt;img src=&#34;img/sample.jpg&#34; alt=&#34;sample&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;filtr-item&#34; data-category=&#34;1, 3&#34; data-sort=&#34;value&#34;&amp;gt;
+&amp;lt;img src=&#34;img/sample.jpg&#34; alt=&#34;sample&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+然后你还需要设置一些控制按钮。
+
+&amp;lt;ul&amp;gt;
+&amp;lt;!-- For filtering controls add --&amp;gt;
+&amp;lt;li data-filter=&#34;all&#34;&amp;gt; All items &amp;lt;/li&amp;gt;
+&amp;lt;li data-filter=&#34;1&#34;&amp;gt; Category 1 &amp;lt;/li&amp;gt;
+&amp;lt;li data-filter=&#34;2&#34;&amp;gt; Category 2 &amp;lt;/li&amp;gt;
+&amp;lt;li data-filter=&#34;3&#34;&amp;gt; Category 3 &amp;lt;/li&amp;gt;
+&amp;lt;!-- For a shuffle control add --&amp;gt;
+&amp;lt;li data-shuffle&amp;gt; Shuffle items &amp;lt;/li&amp;gt;
+&amp;lt;!-- For sorting controls add --&amp;gt;
+&amp;lt;li data-sortAsc&amp;gt; Ascending &amp;lt;/li&amp;gt;
+&amp;lt;li data-sortDesc&amp;gt; Descending &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- To choose the value by which you want to sort add --&amp;gt;
+&amp;lt;select data-sortOrder&amp;gt;
+&amp;lt;option value=&#34;domIndex&#34;&amp;gt; Position &amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;sortData&#34;&amp;gt; Custom Data &amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过filterizr方法来初始化插件。
+
+var filterizd = $(&#39;.filtr-container&#39;).filterizr({
+   //配置参数
+}); 
+
+filterizr插件的可用配置参数如下：
+
+//Default options
+var options = {
+   animationDuration: 0.5, //in seconds
+   filter: &#39;all&#39;, //Initial filter
+   callbacks: { 
+      onFilteringStart: function() { },
+      onFilteringEnd: function() { },
+      onShufflingStart: function() { },
+      onShufflingEnd: function() { },
+      onSortingStart: function() { },
+      onSortingEnd: function() { }
+   },
+   delay: 0, //Transition delay in ms
+   delayMode: &#39;progressive&#39;, //&#39;progressive&#39; or &#39;alternate&#39;
+   easing: &#39;ease-out&#39;,
+   filterOutCss: { //Filtering out animation
+      opacity: 0,
+      transform: &#39;scale(0.5)&#39;
+   },
+   filterInCss: { //Filtering in animation
+      opacity: 0,
+      transform: &#39;scale(1)&#39;
+   },
+   layout: &#39;sameSize&#39;, //See layouts
+   selector: &#39;.filtr-container&#39;,
+   setupControls: true 
+} 
+//You can override any of these options and then call...
+var filterizd = $(&#39;.filtr-container&#39;).filterizr(options);
+//If you have already instantiated your Filterizr then call...
+filterizd.filterizr(&#39;setOptions&#39;, options);
+
+filterizr插件的github网址为：https://github.com/giotiskl/Filterizr
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_471">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_473">
+                        simsCheckbox无序列表转换jquery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_473" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707011549.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+simsCheckbox是一款可以将普通的html无序列表转换为bootstrap样式的checkbox列表的jquery插件。
+内容：
+
+
+简要教程
+
+
+simsCheckbox是一款可以将普通的html无序列表转换为bootstrap样式的checkbox列表的jquery插件。
+
+ 使用方法
+在页面中引入bootstrap样式文件，jquery和simsCheckbox.css，以及simsCheckbox.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap.min.css&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/simsCheckbox.css&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/simsCheckbox.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+无序列表的HTML结构如下：
+
+&amp;lt;ul class=&#34;sims-batch-students&#34;&amp;gt;
+&amp;lt;li&amp;gt;Jamie Blue&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Mike Tennis&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;checked&#34;&amp;gt;Quentin Hiker&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+可以通过设置disabled class来禁用某个列表项。
+
+&amp;lt;ul class=&#34;sims-batch-students&#34;&amp;gt;
+&amp;lt;li class=&#34;disabled&#34;&amp;gt;Jamie Blue&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Mike Tennis&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;checked&#34;&amp;gt;Quentin Hiker&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过simsCheckbox()方法来初始化该插件。
+
+$(document).ready(function (){
+$(&#34;.sims-batch-students&#34;).simsCheckbox();
+}); 
+
+无序列表转换前：
+
+无序列表转换后：
+
+
+ 配置参数
+simsCheckbox插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+btnStyle
+string
+&#39;checkbox&#39;
+列表是转换为checkbox还是radio。
+
+
+height
+string
+&#39;auto&#39;
+设置列表的高度。
+
+
+element
+string
+&#39;li&#39;
+设置要被转换的html元素。
+
+
+titleIcon
+string
+&#39;square-o&#39;
+设置checkbox的图标。它是Font Awesome字体图标的名称。可选值有：&#39;circle&#39;，&#39;circle-o&#39;，&#39;square&#39;，&#39;square-o&#39;。
+
+
+uncheckedClass
+string
+&#39;btn-default&#39;
+设置未选择的checkbox的class名称。可选值有：btn-default, btn-info, btn-warning, btn-danger, btn-primary。
+
+
+checkedClass
+string
+&#39;btn-warning&#39;
+设置选择后的checkbox的class名称。可选值有：btn-default, btn-info, btn-warning, btn-danger, btn-primary。
+
+
+selectAllBtn
+boolean
+false
+设置是否在列表底部添加 &#34;全选/全不选&#34; 复选框。
+
+
+selectAllText
+string
+&#39;Select/Unselect All&#39;
+设置&#34;全选/全不选&#34;的标题。
+
+
+ifChecked
+function
+null
+列表被选择后的回调函数。
+
+
+ifUnChecked
+function
+null
+列表被取消选择后的回调函数。
+
+
+ifToggled
+function
+null
+列表切换选择项时的回调函数。
+
+
+
+
+simsCheckbox插件的github地址为：https://github.com/simsek97/simsCheckbox
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_473">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_475">
+                        jquery输入框键入文字动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_475" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1708/201708031503.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款炫酷的jquery输入框键入文字动画特效。该文字特效在用户键入字母时，通过jquery代码来制作文字的动画效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款炫酷的jquery输入框键入文字动画特效。该文字特效在用户键入字母时，通过jquery代码来制作文字的动画效果，非常炫酷。
+
+ 使用方法
+在页面中引入style.css和jquery文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该输入框键入文字动画特效的基本HTML结果如下：
+
+&amp;lt;form&amp;gt;
+&amp;lt;div class=&#34;input\_wrap&#34;&amp;gt;
+&amp;lt;input type=&#34;text&#34; placeholder=&#34;Please type&#34; /&amp;gt;
+&amp;lt;div class=&#34;after&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ JavaScript
+下面是该文字动画的jquery插件代码。
+
+(function($) {
+function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+$.fn.animChars = function(options) {
+var params = $.extend(
+{
+duration: 1,
+upperLimit: 150,
+sizeInterval: [15, 80]
+},
+options
+);
+$(this).keypress(function(e) {
+console.log(this.selectionStart)
+var rand = getRandomInt(1, 9);
+var randP = Math.floor(Math.random() * 10);
+randP &amp;lt; 5 ? (randP = rand) : (randP = rand - rand * 2);
+var c = String.fromCharCode(e.which);
+$(this).parent().append(&amp;quot;&amp;lt;span class=&#39;cl&amp;quot; + rand + &amp;quot;&#39;&amp;gt;&amp;quot; + c + &amp;quot;&amp;lt;/span&amp;gt;&amp;quot;);
+(this)
+.parent()
+.find(&amp;quot;span.cl&amp;quot; + rand + &amp;quot;&amp;quot;)
+.css({
+left: getRandomInt(0, 90) + &amp;quot;\%&amp;quot;,
+&amp;quot;font-size&amp;quot;: getRandomInt(
+params.sizeInterval[0],
+params.sizeInterval[1]
+)
+})
+.fadeIn(100, function() {
+(this)
+.css({
+&amp;quot;margin-bottom&amp;quot;: getRandomInt(
+params.upperLimit - params.upperLimit / 2
+? params.upperLimit / 2
+: 0,
+params.upperLimit
+),
+&amp;quot;margin-left&amp;quot;: randP * 10
+})
+.fadeOut(params.duration * 1000, function() {
+$(this).remove();
+});
+});
+});
+};
+})(jQuery);
+
+最后在页面DOM元素加载完毕之后，通过下面的代码来初始化该文字动画插件。
+
+$(document).ready(function() {
+$(&#34;input&#34;).animChars({
+duration: 0.8,
+upperLimit: 200,
+sizeInterval: [15, 80]
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_475">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/75/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/77/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1733 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1318">
+                        jQuery轻量级扁平化单选按钮和复选框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1318" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502071803.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Labelauty是一款轻量级的jQuery单选按钮和复选框美化插件。该jquery美化插件允许你自定义每一个check状态的labels。也就是说选中和未选中状态的文字是动态变化的。Labelauty采用扁平化设计风格，非常时尚漂亮。
+内容：
+
+
+简要教程
+
+
+Labelauty是一款轻量级的jQuery单选按钮和复选框美化插件。该jquery美化插件允许你自定义每一个check状态的labels。也就是说选中和未选中状态的文字是动态变化的。Labelauty采用扁平化设计风格，非常时尚漂亮。如果你想插件一个用户体验良好的网站，该插件是不二的选择。例如很多网站都有remember me的单选框，它可以在选中时显示“记住我”，未选中时显示“不要记住我”。
+
+ 安装
+可以使用Bower来按钮该jquery美化插件：
+
+bower install labelauty
+
+
+ 使用方法
+
+ 基本使用方法
+引入必要的jquery和jquery-labelauty文件。然后在&amp;lt;body&amp;gt;标签添加单选按钮或多选按钮，然后使用labelauty()方法来调用该插件：
+
+&amp;lt;input type=&#34;checkbox&#34;/&amp;gt;
+
+
+$(document).ready(function(){
+$(&#34;:checkbox&#34;).labelauty();
+});
+
+
+ 高级使用方法
+上面的代码会生成一个默认的复选框，它的label为“Checked”和“Unchecked”。
+你可以改变默认的label文字，或者为每一个checkbox设置自定义的label。例如：
+
+&amp;lt;input type=&#34;checkbox&#34; data-labelauty=&#34;Don&#39;t synchronize files|Synchronize my files&#34;/&amp;gt;
+
+
+$(document).ready(function(){
+$(&#34;:checkbox&#34;).labelauty();
+});
+
+单选按钮和复选框的data-labelauty属性可以让你在选中和未选中状态时自定义label文本。它的格式是：unchecked|checked，中间通过&#34;|&#34;符号分割。这个符号也可以改变，往下看!
+data-labelauty属性有三种不同的使用方式：
+
+
+Unchecked|Checked：为选中和未选中状态调用label文字：
+
+&amp;lt;input type=&#34;checkbox&#34; data-labelauty=&#34;Don&#39;t synchronize files|Synchronize my files&#34;/&amp;gt;
+
+
+
+Message：如果没有&#34;|&#34;分割符，Message文字将是永久的，不会随着选中状态的改变而改变：
+
+&amp;lt;input type=&#34;checkbox&#34; data-labelauty=&#34;Synchronize my files&#34;/&amp;gt;
+
+
+
+Omitted：省略这个属性，将使用默认的label。
+
+&amp;lt;input type=&#34;checkbox&#34;/&amp;gt;
+
+
+
+
+ 配置参数
+
+设置一个class来在这些class的单选按钮和复选按钮上使用美化效果：
+
+$(&#34;:checkbox&#34;).labelauty({ class: &#34;myclass&#34; });
+
+
+如果label设置为false，那么只会显示输入框的图标：
+
+$(&#34;:checkbox&#34;).labelauty({ label: false });
+
+
+可以通过separator来改变data-labelauty属性中的分割符号：
+
+$(&#34;:checkbox&#34;).labelauty({ separator: &#34;-&#34; });
+
+
+可以在checked\_label和unchecked\_label中自定义默认的label：
+
+checked\_label: &#34;You selected this&#34;,
+unchecked\_label: &#34;You don&#39;t want it&#34;
+
+
+自定义的label文字有不同的宽度，你可以通过minimum-width来设置它的最小宽度：
+
+$(&#34;:checkbox&#34;).labelauty({ minimum\_width: &#34;170px&#34; });
+
+
+你还可以通过same\_width将label全部设置为相同的宽度：
+
+$(&#34;:checkbox&#34;).labelauty({ same\_width: true });
+
+
+
+
+ 浏览器兼容
+IE7和IE8不支持该jQuery单选按钮和复选框美化插件。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1318">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1319">
+                        jQuery超酷3d旋转木马特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1319" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502231451.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用TweenMax.js制作的jQuery超酷3D旋转木马特效。该旋转木马特效可以感应鼠标的位置而使旋转木马做出相应的变化，效果非常炫酷。
+内容：
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1319">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_132">
+                        js和CSS3漂亮的手风琴菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_132" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809041456.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用js和CSS3制作的漂亮的垂直手风琴菜单特效。该垂直手风琴特效使用无序列表进行布局，通过CSS3代码进行美化，最后通过js代码来进行点击交互。
+内容：
+
+
+简要教程
+
+
+这是一款使用js和CSS3制作的漂亮的垂直手风琴菜单特效。该垂直手风琴特效使用无序列表进行布局，通过CSS3代码进行美化，最后通过js代码来进行点击交互。
+
+ 使用方法
+在页面中引入样式文件style.css和字体图标文件font-awesome.css。
+
+&amp;lt;link href=&#34;css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34;&amp;gt;
+
+
+ HTML结构
+使用一个无序列表作为该垂直手风琴菜单的HTML结构。
+
+&amp;lt;ul class=&#34;menu&#34;&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 1 &amp;lt;/a&amp;gt; 
+&amp;lt;ul class=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt; Item 1-1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt; Item 1-2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt; Item 1-3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 2&amp;lt;/a&amp;gt; 
+&amp;lt;ul class=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 2-1 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 2-2 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 2-3 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 3&amp;lt;/a&amp;gt; 
+&amp;lt;ul class=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 3-1 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 3-2 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 3-2 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 4&amp;lt;/a&amp;gt; 
+&amp;lt;ul class=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-1 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-2 &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 4-1&amp;lt;/a&amp;gt; 
+&amp;lt;ulclass=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-1-1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-1-2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li class=&#34;list&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;List 4-2&amp;lt;/a&amp;gt; 
+&amp;lt;ulclass=&#34;items&#34;&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-2-1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34; &amp;gt; Item 4-2-2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+ &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该垂直手风琴特效。
+
+var list = document.querySelectorAll(&#39;.list&#39;);
+function accordion(e) {
+e.stopPropagation();
+if (this.classList.contains(&#39;active&#39;)) {
+this.classList.remove(&#39;active&#39;);
+} else
+if (this.parentElement.parentElement.classList.contains(&#39;active&#39;)) {
+this.classList.add(&#39;active&#39;);
+} else
+{
+for (i = 0; i &amp;lt; list.length; i++) {
+list[i].classList.remove(&#39;active&#39;);
+}
+this.classList.add(&#39;active&#39;);
+}
+}
+for (i = 0; i &amp;lt; list.length; i++) {
+list[i].addEventListener(&#39;click&#39;, accordion);
+}
+
+ 该垂直手风琴菜单特效的codepen地址为：https://codepen.io/ahmadbassamemran/pen/BPbVPe
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_132">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1320">
+                        Isotope-jQuery神奇的分类过滤和排序布局插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1320" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503171758.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Isotope是一款效果非常神奇的元素分类过滤和排序布局jQuery插件。Isotope是Masonry布局的作者David DeSandro的一款力作，该分类过滤和排序插件允许你以非常简单和炫酷的方式来隐藏和显示元素，以及对元素按照指定的规则进行排序。
+内容：
+
+
+简要教程
+
+
+Isotope是一款效果非常神奇的元素分类过滤和排序布局jQuery插件。Isotope是Masonry布局的作者David DeSandro的一款力作，该分类过滤和排序插件允许你以非常简单和炫酷的方式来隐藏和显示元素，以及对元素按照指定的规则进行排序。Isotope可以设置多种布局方式：masonry布局、水平布局、垂直布局、适合行布局、适合列布局等等。
+
+ 安装
+你可以通过Bower或npm来安装giantess分类过滤和排序插件。
+
+bower install isotope
+npm install isotope-layout
+
+或者直接使用下载包中的isotope.pkgd.js文件及压缩版的isotope.pkgd.min.js。在页面中将它引入即可。
+
+&amp;lt;script src=&#34;/path/to/isotope.pkgd.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 版权信息
+注意：Isotope不是完全免费的软件。用于商业用途时需要向作者购买。作为非商业用途使用时，在遵循 GPL v3 License 规范的前提下，你可以自由使用该插件。
+
+ 使用方法
+
+ HTML结构
+Isotope元素分类过滤和排序插件的HTML结构非常简单：使用一个包裹容器来包装一组用于分类过滤和排序的元素。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item w2&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+用于分类过滤和排序的items需要你手动添加CSS样式：
+
+.item { width: 25\%; }
+.item.w2 { width: 50\%; }
+
+
+ 初始化插件
+可以通过jQuery来初始化一个Isotope实例：
+
+$(&#39;#container&#39;).isotope()
+
+
+var $container = $(&#39;#container&#39;);
+// init
+$container.isotope({
+// options
+itemSelector: &#39;.item&#39;,
+layoutMode: &#39;fitRows&#39;
+}); 
+
+
+imagesLoaded
+如果在items中使用图片，而图片加载错误时Isotope的布局会发生错乱。解决这个问题的方法时使用imagesLoaded。imagesLoaded可以在所有的图片都被加载之后触发一个回调函数。
+
+// initialize Isotope after all images have loaded
+var $container = $(&#39;#container&#39;).imagesLoaded( function() {
+$container.isotope({
+// options
+});
+});
+
+
+// or with vanilla JS
+var container = document.querySelector(&#39;#container&#39;);
+var iso;
+// initialize Isotope after all images have loaded
+imagesLoaded( container, function() {
+iso = new Isotope( container, {
+// options
+});
+});
+
+或者先初始化Isotope，然后在图片加载完成之后再设置布局：
+
+// initialize Isotope
+var $container = $(&#39;#container&#39;).isotope({
+// options
+});
+// layout Isotope again after all images have loaded
+$container.imagesLoaded( function() {
+$container.isotope(&#39;layout&#39;);
+});
+
+
+// or with vanilla JS
+// initialize Isotope
+var iso = new Isotope( container, {
+// options
+});
+// layout Isotope again after all images have loaded
+imagesLoaded( container, function() {
+iso.layout();
+});
+
+
+ Vanilla JavaScript
+Isotope并不一定需要jQuery。你可以通过纯js来使用Isotope。
+可以通过new Isotope( element, options )方法来初始化一个Isotope对象实例。Isotope构造器接收两个参数：一个容器元素和一个参数选项对象。
+
+var container = document.querySelector(&#39;#container&#39;);
+// init
+var iso = new Isotope( container, {
+// options
+itemSelector: &#39;.item&#39;,
+layoutMode: &#39;fitRows&#39;
+});
+
+容器元素可以是一个选择器字符串或一个单独的元素：
+
+var iso = new Isotope( &#39;#container&#39;, {
+// options
+});
+
+
+ 使用HTML元素来初始化
+你可以直接在html中初始化Isotope，不用任何的javascript。在容器元素上添加class js-isotope。参数可以通过一个data-isotope-options属性来给定。
+
+&amp;lt;div id=&#34;container&#34; class=&#34;js-isotope&#34;
+data-isotope-options=&#39;{ &#34;columnWidth&#34;: 200, &#34;itemSelector&#34;: &#34;.item&#34; }&#39;&amp;gt;
+
+在HTML中设置的参数选项必须是可用的json格式数据，Keys需要双引号引起来，例如：&#34;itemSelector&#34;:。注意：外部的HTML属性值使用单引号引起来，json使用双引号。
+Isotope有大量的参数、方法及及事件，以及布局方式，请点击下面的链接查看详细的文档介绍。
+ Isotope在线文档
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1320">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1321">
+                        jQuery和CSS3超炫联系方式表单美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1321" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503121647.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常精美炫酷的jQuery和CSS3联系方式表单美化插件。大多数网站上都有让用户填写的联系方式表单，一个设计良好的表单能够大大的提升用户的体验度。该表单美化插件在原生HTML表单的基础上进行加工，并使用jQuery来制作label动画，使表单样式更加大方得体。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常精美炫酷的jQuery和CSS3联系方式表单美化插件。大多数网站上都有让用户填写的联系方式表单，一个设计良好的表单能够大大的提升用户的体验度。该表单美化插件在原生HTML表单的基础上进行加工，并使用jQuery来制作label动画，使表单样式更加大方得体。
+这个表单美化插件中包含了常用的表单元素：输入框、下拉框、单选按钮、复选框和文本框。
+
+ HTML结构
+该表单美化插件的HTML结构使用标准的表单&amp;lt;form&amp;gt;结构。&amp;lt;form&amp;gt;元素中包含两个&amp;lt;fieldset&amp;gt;元素，它将整个表单分割为两个部分。每一个表单元素（通常包含&amp;lt;label&amp;gt;+&amp;lt;input&amp;gt;）都包装在一个&amp;lt;div&amp;gt;元素中，这种格式可以让我们很容易的控制元素的边距。下面是HTML代码：
+
+&amp;lt;form class=&#34;cd-form floating-labels&#34;&amp;gt;
+&amp;lt;fieldset&amp;gt;
+&amp;lt;legend&amp;gt;Account Info&amp;lt;/legend&amp;gt;
+&amp;lt;div class=&amp;quot;error-message&amp;quot;&amp;gt;
+&amp;lt;p&amp;gt;Please enter a valid email address&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;icon&amp;quot;&amp;gt;
+&amp;lt;label class=&amp;quot;cd-label&amp;quot; for=&amp;quot;cd-name&amp;quot;&amp;gt;Name&amp;lt;/label&amp;gt;
+&amp;lt;input class=&amp;quot;user&amp;quot; type=&amp;quot;text&amp;quot; name=&amp;quot;cd-name&amp;quot; id=&amp;quot;cd-name&amp;quot; required&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/fieldset&amp;gt;
+&amp;lt;fieldset&amp;gt;
+&amp;lt;legend&amp;gt;Project Info&amp;lt;/legend&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h4&amp;gt;Budget&amp;lt;/h4&amp;gt;
+&amp;lt;p class=&amp;quot;cd-select icon&amp;quot;&amp;gt;
+&amp;lt;select class=&amp;quot;budget&amp;quot;&amp;gt;
+&amp;lt;option value=&amp;quot;0&amp;quot;&amp;gt;Select Budget&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;&amp;lt; $5000&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;2&amp;quot;&amp;gt;$5000 - $10000&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;3&amp;quot;&amp;gt;&amp;gt; $10000&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;h4&amp;gt;Project type&amp;lt;/h4&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-form-list&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;radio-button&amp;quot; id=&amp;quot;cd-radio-1&amp;quot; checked&amp;gt;
+&amp;lt;label for=&amp;quot;cd-radio-1&amp;quot;&amp;gt;Choice 1&amp;lt;/label&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;radio-button&amp;quot; id=&amp;quot;cd-radio-2&amp;quot;&amp;gt;
+&amp;lt;label for=&amp;quot;cd-radio-2&amp;quot;&amp;gt;Choice 2&amp;lt;/label&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;radio-button&amp;quot; id=&amp;quot;cd-radio-3&amp;quot;&amp;gt;
+&amp;lt;label for=&amp;quot;cd-radio-3&amp;quot;&amp;gt;Choice 3&amp;lt;/label&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;div class=&amp;quot;icon&amp;quot;&amp;gt;
+&amp;lt;label class=&amp;quot;cd-label&amp;quot; for=&amp;quot;cd-textarea&amp;quot;&amp;gt;Project description&amp;lt;/label&amp;gt;
+&amp;lt;textarea class=&amp;quot;message&amp;quot; name=&amp;quot;cd-textarea&amp;quot; id=&amp;quot;cd-textarea&amp;quot; required&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;Send Message&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/fieldset&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ CSS样式
+这个表单美化插件的CSS可以分为3个部分：1、Form；2、自定义icons；3、浮动的labels。第一部分是必不可少的部分。
+
+ 如何添加自定义icons？
+要在元素上添加自定义图标，你需要在你想要添加图标的元素（input/select/textarea）上添加特定的class，如用户头像添加.user。然后还要在其父元素上添加class .icon。最后，在CSS样式表文件中通过自定义background-images属性来自定义图标，例如下边代码所示：
+
+.cd-form .icon input, .cd-form .icon select, .cd-form .icon textarea {
+padding-left: 54px !important;
+}
+.cd-form .user {
+background: url(&#34;../img/cd-icon-user.svg&#34;) no-repeat 16px center;
+}
+.cd-form [required].user {
+background: url(&#34;../img/cd-icon-user.svg&#34;) no-repeat 16px center, 
+url(&#34;../img/cd-required.svg&#34;) no-repeat top right;
+} 
+
+
+ 浮动labels
+浮动的labels标签是通过在.cd-form元素上添加class .floating-labels来实现的。你是否听说过UX pattern？它是由Matt D. Smith首先提出的。向了解更多可以查看他写的这篇文章。在本例的表单美化插件中使用的是这样的一种UX方案：开始的时候它允许你设置labels为占位文本，然后在用户开始输入是，labels开始过渡动画到输入框的上边。
+在CSS文件中你会发现.floating-labels前面使用了.js class，这些class在浏览器支持javascript时由Modernizr自动添加。通过这种方式，如果浏览器不支持javascript，labels仍然能正常工作，只是.floating-labels会没有效果而已。
+对于表单中的一些必填字段，这里使用的是HTML5的新特性required。而error只是在表单元素上添加了一个class。
+
+.cd-form [required] {
+background: url(&#34;../img/cd-required.svg&#34;) no-repeat top right;
+}
+.cd-form .error {
+border-color: #e94b35 !important;
+}
+
+另外，该表单美化插件中还创建了自定义的单选按钮和复选框。你会发现他们的源文件其实非常简单。简单来说，插件中将单选按钮和复选框设置为position: absolute;和opacity: 0; ，然后使用&amp;lt;label&amp;gt;元素的自定义::before和::after伪元素来替换它们。
+
+ Javascript
+该表单美化插件使用javascript来制作labels浮动效果。如果DOM中存在一个.floating-labels元素，插件将初始化floatLabels()方法：该方法会获取表单的input字段并为keyup()事件绑定checkVal()方法来检测用户是否开始键入文字。
+
+if( $(&#39;.floating-labels&#39;).length &amp;gt; 0 ) floatLabels();
+function floatLabels() {
+var inputFields = $(&#39;.floating-labels .cd-label&#39;).next();
+inputFields.each(function(){
+var singleInput = $(this);
+singleInput.keyup(function(){
+checkVal(singleInput);
+});
+});
+}
+
+checkVal()函数会检测input输入框的值：如果它不为空，就会在它的前一个元素.cd-label添加float class，否则就移除它。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1321">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1322">
+                        jQuery带图片过滤功能的Masonry瀑布流图片画廊
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1322" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503052044.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery带图片过滤功能的Masonry瀑布流图片画廊特效插件。这个Masonry瀑布流图片画廊插件能够根据图片的类型来进行分类过滤，并且还提供了一个宽屏和窄屏切换的功能。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery带图片过滤功能的Masonry瀑布流图片画廊特效插件。这个Masonry瀑布流图片画廊插件能够根据图片的类型来进行分类过滤，并且还提供了一个宽屏和窄屏切换的功能。
+ 注意：这个Masonry瀑布流图片画廊插件需要在支持CSS3的浏览器中才能正常工作。
+
+ HTML结构
+该Masonry瀑布流图片画廊插件的HTML结构非常简单，真正的特效是在js中完成的。使用一个id为#galler的div作为整个包裹容器。
+
+&amp;lt;div id=&#34;gallery&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+在包裹容器中的#gallery-heade用于放置屏幕切换按钮和图片过滤按钮。
+
+&amp;lt;div id=&#34;gallery-header&#34;&amp;gt;
+&amp;lt;div id=&#34;gallery-header-center&#34;&amp;gt;
+&amp;lt;div id=&#34;gallery-header-center-left&#34;&amp;gt;
+&amp;lt;div id=&#34;gallery-header-center-left-icon&#34;&amp;gt;&amp;lt;span class=&#34;iconb&#34; data-icon=&#34;&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;gallery-header-center-left-title&#34;&amp;gt;All Galleries&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;gallery-header-center-right&#34;&amp;gt;
+&amp;lt;div class=&#34;gallery-header-center-right-links&#34; id=&#34;filter-all&#34;&amp;gt;All&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;gallery-header-center-right-links&#34; id=&#34;filter-studio&#34;&amp;gt;Studio&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;gallery-header-center-right-links&#34; id=&#34;filter-landscape&#34;&amp;gt;Landscapes&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+接下来是#gallery-content，它用于放置图片，里面在使用一个#gallery-content-cente的div来使内容居中。整个瀑布流插件是通过图片的class的关联来进行分类过滤的，可以为一张图片设置多个分类class，但是不能为同一张图片设置相同的class。
+
+&amp;lt;div id=&#34;gallery-content&#34;&amp;gt;
+&amp;lt;div id=&#34;gallery-content-center&#34;&amp;gt;
+&amp;lt;img src=&#34;\_assets/mm1.jpg&#34; class=&#34;all studio&#34;/&amp;gt;
+&amp;lt;img src=&#34;\_assets/landscape1.jpg&#34; class=&#34;all landscape&#34;&amp;gt;
+&amp;lt;img src=&#34;\_assets/mm2.jpg&#34; class=&#34;all studio&#34;/&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+该瀑布流插件首先要设置#gallery和#gallery-header元素为左浮动，并设置它们为100\%的宽度，
+
+#gallery{
+float: left;
+width: 100\%;
+}
+#gallery-header{
+height: 100px;
+width: 100\%;
+float: left;
+} 
+
+#gallery-header-center元素中的内容居中。在其下右两个div:#gallery-header-center-left和#gallery-header-center-right，它们一个浮动到左边，一个浮动到右边。
+
+#gallery-header-center{
+height: 100px;
+width: 950px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#gallery-header-center-left元素中包含切换屏幕的按钮和图标，图标按钮上添加了一些hover样式：
+
+#gallery-header-center-left{
+float: left;
+height: 35px;
+line-height: 35px;
+margin-top: 32px;
+}
+#gallery-header-center-left-icon{
+float: left;
+height: 35px;
+width: 35px;
+background-color: rgba(63,141,191,1);
+color: rgba(255,255,255,1);
+text-align: center;
+font-size: 20px;
+-webkit-transition: background 0.5s;
+-moz-transition: background 0.5s;
+-o-transition: background 0.5s;
+transition: background 0.5s;
+}
+#gallery-header-center-left-icon:hover {
+background-color: rgba(63,141,191,0.5);
+cursor: pointer;
+}
+#gallery-header-center-left-title{
+float: left;
+height: 35px;
+font-size: 25px;
+color: #3f8dbf;
+margin-left: 20px;
+}
+
+#gallery-header-center-right是瀑布流图片分类过滤按钮，它们有两个样式，一个是正常样式，一个是鼠标点击后的样式，鼠标点击后的样式通过js来动态添加。同时还为每个按钮添加鼠标滑过的样式。
+
+#gallery-header-center-right{
+float: right;
+height: 35px;
+margin-top: 32px;
+line-height: 35px;
+}
+.gallery-header-center-right-links {
+color: #333333;
+float: left;
+height: 35px;
+padding-right: 20px;
+padding-left: 20px;
+margin-left: 20px;
+font-size: 16px;
+font-weight: 400;
+-webkit-transition: background 0.5s;
+-moz-transition: background 0.5s;
+-o-transition: background 0.5s;
+transition: background 0.5s;
+}
+.gallery-header-center-right-links:hover {
+background-color: rgba(63,141,191,1);
+color: rgba(255,255,255,1);
+cursor: pointer;
+}
+.gallery-header-center-right-links-current {
+color: #FFFFFF;
+background-color: rgba(63,141,191,1);
+}
+.gallery-header-center-right-links-current:hover {
+background-color: rgba(63,141,191,0.5);
+}
+
+最后，为#gallery-content， #gallery-content-cente和#gallery-content-center img添加样式。由于有两种屏幕宽度，因此要分别设置两个class，一个为950像素宽，一个为100\%宽度。同时为图片添加transition来使它们在瀑布流图片分类切换时平滑过渡。
+
+#gallery-content{
+float: left;
+width: 100\%;
+}
+.gallery-content-center-normal {
+width: 950px;
+margin-right: auto;
+margin-left: auto;
+}
+.gallery-content-center-full {
+float: left;
+width: 100\%;
+}
+#gallery-content-center img {
+width: 300px;
+margin-bottom: 10px;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+margin-left: 10px;
+}
+
+
+ JAVASCRIPT
+插件的js文件中创建了一些变量，size和button变量用于跟踪resize按钮和过滤按钮是否被点击。button\_class变量用于当前被点击的过滤按钮添加样式。normal\_size\_class和full\_size\_clas用于宽屏和窄屏的切换class。
+当size变量的值为0的时候，#gallery-content-center被添加class.gallery-content-center-normal，同时移除class .gallery-content-center-full。插件中有三种分类过滤状态，所以button变量的值可以设置为1、2和3。$container变量用于保存图片容器的jquery选择器。
+
+var size = 0;
+var button = 1;
+var button\_class = &#34;gallery-header-center-right-links-current&#34;;
+var normal\_size\_class = &#34;gallery-content-center-normal&#34;;
+var full\_size\_class = &#34;gallery-content-center-full&#34;;
+var $container = $(&#39;#gallery-content-center&#39;);
+
+该瀑布流插件中使用了外部依赖插件isotope。这是Masonry作者David DeSandro的新作。（注意：isotope并不是免费的，使用时请请注意相关的协议！）。下面的代码是如何集成isotope：
+
+$container.isotope({itemSelector : &#39;img&#39;});
+
+该瀑布流插件中创建了两个函数：check\_button()和check\_size()。check\_button()函数用于添加和移除相应的class，check\_size()函数则用于全屏和窄屏之间的切换：
+
+function check\_button(){
+$(&#39;.gallery-header-center-right-links&#39;).removeClass(button\_class);
+if(button==1){
+$(&#34;#filter-all&#34;).addClass(button\_class);
+$(&#34;#gallery-header-center-left-title&#34;).html(&#39;All Galleries&#39;);
+}
+if(button==2){
+$(&#34;#filter-studio&#34;).addClass(button\_class);
+$(&#34;#gallery-header-center-left-title&#34;).html(&#39;Studio Gallery&#39;);
+}
+if(button==3){
+$(&#34;#filter-landscape&#34;).addClass(button\_class);
+$(&#34;#gallery-header-center-left-title&#34;).html(&#39;Landscape Gallery&#39;);
+} 
+}
+function check\_size(){
+$(&#34;#gallery-content-center&#34;).removeClass(normal\_size\_class).removeClass(full\_size\_class);
+if(size==0){
+$(&#34;#gallery-content-center&#34;).addClass(normal\_size\_class); 
+$(&#34;#gallery-header-center-left-icon&#34;).html(&#39;&#39;);
+}
+if(size==1){
+$(&#34;#gallery-content-center&#34;).addClass(full\_size\_class); 
+$(&#34;#gallery-header-center-left-icon&#34;).html(&#39;&#39;);
+}
+$container.isotope({itemSelector : &#39;img&#39;});
+}
+
+当resize按钮被点击的时候，瀑布流插件将检查size变量的值，如果为0则将它修改为1，为则修改为0。之后会激活check\_button()函数。
+
+$(&#34;#filter-all&#34;).click(function() { $container.isotope({ filter: &#39;.all&#39; }); button = 1; check\_button(); });
+$(&#34;#filter-studio&#34;).click(function() {$container.isotope({ filter: &#39;.studio&#39; }); button = 2; check\_button();});
+$(&#34;#filter-landscape&#34;).click(function() {$container.isotope({ filter: &#39;.landscape&#39; }); button = 3; check\_button();});
+$(&#34;#gallery-header-center-left-icon&#34;).click(function() { if(size==0){size=1;}else if(size==1){size=0;} check\_size(); });
+
+最后，在页面加载完毕后立刻启动这两个函数：
+
+check\_button();
+check\_size();
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1322">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1323">
+                        可以在浏览器控制台中执行源码字符动画的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1323" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503301700.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Dom Animator是一款非常神奇的可以在浏览器控制台中执行源码动画的js插件。你是否想别人在控制台上查看你的源码时让人感觉与众不同？该js插件可以帮助你将指定的ASCII字符组成的多幅图案制作为动画，在控制台中显示。
+内容：
+
+
+简要教程
+
+
+Dom Animator是一款非常神奇的可以在浏览器控制台中执行源码动画的js插件。当你写了一段HTML源码拿去发布的时候，是否想别人在控制台上查看你的源码时让人感觉与众不同？该js插件可以帮助你将指定的ASCII字符组成的多幅图案制作为动画，在控制台中显示。
+dom-animator.js是单独的js文件，没有任何jQuery等外部依赖。不需要写CSS样式和HTML标签，它会将生成的动画显示在源码顶部的注释里面。
+
+ 使用方法
+dom-animator.js动画可以非常简单，也可以非常复杂。取决于你想制作什么动画效果。首先你需要创建一个新的domAnimator对象实例（前提是你已经引入了dom-animator.js文件），然后可以通过addFrame()方法来创建字符动画。下面是一个非常简单的动画-眨眼动画效果。
+
+&amp;lt;script&amp;gt;
+var domAnimator = new DomAnimator();
+domAnimator.addFrame(&#39;o\_o&#39;);
+domAnimator.addFrame(&#39;-\_o&#39;);
+domAnimator.animate();
+&amp;lt;/script&amp;gt;
+
+上面的眨眼的字符动画效果会显示在同一行中。如果你想字符显示为多行，可以在addFrame方法中传入一系列的字符串，通过逗号隔开。
+
+&amp;lt;script&amp;gt;
+var domAnimator = new DomAnimator();
+domAnimator.addFrame([&#39;0\_0&#39;, &#39; | &#39;, &#39; | &#39;]);
+domAnimator.addFrame([&#39;0\_-&#39;, &#39; | &#39;, &#39; | &#39;]);
+domAnimator.animate();
+&amp;lt;/script&amp;gt;
+
+你也可以为所有的动画帧设置一个速度。默认的动画速度是500毫秒（这个速度是ASCII字符动画速度，而不是60fps）。
+
+&amp;lt;script&amp;gt;
+var domAnimator = new DomAnimator();
+domAnimator.addFrame(&#39;o\_o&#39;);
+domAnimator.addFrame(&#39;-\_o&#39;);
+domAnimator.animate(1000); //ms
+&amp;lt;/script&amp;gt;
+
+如果你想停止动画，可以调用stop方法。
+
+&amp;lt;script&amp;gt;
+// Setup
+var domAnimator = new DomAnimator();
+domAnimator.addFrame(&#39;o\_o&#39;);
+domAnimator.addFrame(&#39;-\_o&#39;);
+domAnimator.animate();
+// After 10 seconds.
+setTimeout(function() {
+domAnimator.stop(); // Stop the animation
+}, 10000);
+&amp;lt;/script&amp;gt;
+
+
+ 浏览器支持
+这个控制台源码字符动画插件已经在最新版本的Safari、Chrome 和 Firefox浏览器中进行了测试。在Chrome中动画效果最好，因为Chrome浏览器在控制台中支持新行。
+另外为大家分享一个大量ASII字符生成图像的网站：http://www.geocities.ws/SoHo/7373/zoo.html
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1323">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1324">
+                        58种jQuery模拟CSS3过渡页面切换特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1324" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1503/201503251447.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Animsition是一款使用jQuery来实现CSS3动画的页面切换动画特效插件。该页面切换动画特效插件共有58种效果，按大类别来分可以分为：淡入淡出效果、旋转、翻转和放大缩小效果。另外每种效果都对应一种遮罩模式。
+内容：
+
+
+简要教程
+
+
+Animsition是一款使用jQuery来实现CSS3动画的页面切换动画特效插件。该页面切换动画特效插件共有58种效果，按大类别来分可以分为：淡入淡出效果、旋转、翻转和放大缩小效果。另外每种效果都对应一种遮罩模式。通过Animsition你可以制作出各种炫酷的页面切换效果。
+
+ 浏览器兼容
+Animsition需要支持CSS3的浏览器才能正常工作。
+
+IE10+
+Chrome
+Safari
+Firefox
+
+
+ 使用方法
+要使用该页面切换动画特效插件首先要引入相关的依赖文件。
+
+&amp;lt;!-- animsition CSS --&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;./dist/css/animsition.min.css&#34;&amp;gt;
+&amp;lt;!-- vendor js --&amp;gt;
+&amp;lt;script src=&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- animsition js --&amp;gt;
+&amp;lt;script src=&amp;quot;./dist/js/jquery.animsition.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+如果所有页面都使用相同的切换过渡效果，当前页面用于显示切换效果的内容使用一个class为animsition的&amp;lt;div&amp;gt;进行包裹，使用带class为animsition-link的超链接或按钮来跳转页面。class名称可以修改，修改后后面的js代码也要做相应的修改。
+
+&amp;lt;body&amp;gt;
+&amp;lt;div class=&amp;quot;animsition&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;./page1&amp;quot; class=&amp;quot;animsition-link&amp;quot;&amp;gt;animsition link 1&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;./page2&amp;quot; class=&amp;quot;animsition-link&amp;quot;&amp;gt;animsition link 2&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+
+如果你希望每一个跳转页面的切换效果都不相同，可以使用下面的方法：
+
+&amp;lt;a
+href=&#34;./page1&#34;
+class=&#34;animsition-link&#34;
+data-animsition-out=&#34;fade-out-right&#34;
+data-animsition-out-duration=&#34;2000&#34;
+&amp;gt;
+animsition link 1
+&amp;lt;/a&amp;gt;
+&amp;lt;a
+href=&amp;quot;./page2&amp;quot;
+class=&amp;quot;animsition-link&amp;quot;
+data-animsition-out=&amp;quot;rotate-out&amp;quot;
+data-animsition-out-duration=&amp;quot;500&amp;quot;
+&amp;gt;
+animsition link 2
+&amp;lt;/a&amp;gt;
+
+如果你希望每一个页面都使用不同的动画效果，可以使用下面的方法：
+
+&amp;lt;div
+class=&#34;animsition&#34;
+data-animsition-in=&#34;fade-in&#34;
+data-animsition-in-duration=&#34;1000&#34;
+data-animsition-out=&#34;fade-out&#34;
+data-animsition-out-duration=&#34;800&#34;
+&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+
+
+ JAVASCRIPT
+在页面加载之后，可以使用下面的方法来调用该插件：
+
+$(document).ready(function() {
+$(&amp;quot;.animsition&amp;quot;).animsition({
+inClass : &#39;fade-in&#39;,
+outClass: &#39;fade-out&#39;,
+inDuration:1500,
+outDuration :800,
+linkElement : &#39;.animsition-link&#39;,
+// e.g. linkElement : &#39;a:not([target=&amp;quot;_blank&amp;quot;]):not([href^=#])&#39;
+loading :true,
+loadingParentElement: &#39;body&#39;, //animsition wrapper element
+loadingClass: &#39;animsition-loading&#39;,
+unSupportCss: [ &#39;animation-duration&#39;,
+&#39;-webkit-animation-duration&#39;,
+&#39;-o-animation-duration&#39;
+],
+//&amp;quot;unSupportCss&amp;quot; option allows you to disable the &amp;quot;animsition&amp;quot; in case the css property in the array is not supported by your browser.
+//The default setting is to disable the &amp;quot;animsition&amp;quot; in a browser that does not support &amp;quot;animation-duration&amp;quot;.
+overlay : false,
+overlayClass: &#39;animsition-overlay-slide&#39;,
+overlayParentElement: &#39;body&#39;
+});
+});
+
+上面的参数十分简单，看名称就可以知道它的意思。其中，inClass是进入时的页面动画方式，outClass是切换到其它页面时的动画方式。上面的代码是淡入淡出的进入和淡入淡出的切换到其它页面。要使用不同的效果，就更换这两个class。关于这些class共有58个，后面会一一列出。overlay是是否打开遮罩模式，如果设置为true，将会以遮罩的方式完成页面切换过渡。
+
+ 58种效果对应的class
+
+
+
+ Fade
+
+
+
+
+
+
+
+fade-in
+fade-out
+
+
+
+
+
+
+ Fade up
+
+
+
+
+
+
+
+fade-in-up-sm
+fade-in-up
+fade-in-up-lg
+fade-out-up-sm
+fade-out-up
+fade-out-up-lg
+
+
+ Fade down
+
+
+
+
+
+
+
+fade-in-down-sm
+fade-in-down
+fade-in-down-lg
+fade-out-down-sm
+fade-out-down
+fade-out-down-lg
+
+
+ Fade left
+
+
+
+
+
+
+
+fade-in-left-sm
+fade-in-left
+fade-in-left-lg
+fade-out-left-sm
+fade-out-left
+fade-out-left-lg
+
+
+ Fade right
+
+
+
+
+
+
+
+fade-in-right-sm
+fade-in-right
+fade-in-right-lg
+fade-out-right-sm
+fade-out-right
+fade-out-right-lg
+
+
+ Rotate
+
+
+
+
+
+
+
+rotate-in-sm
+rotate-in
+rotate-in-lg
+rotate-out-sm
+rotate-out
+rotate-out-lg
+
+
+ Flip X
+
+
+
+
+
+
+
+flip-in-x-fr
+flip-in-x
+flip-in-x-nr
+flip-out-x-fr
+flip-out-x
+flip-out-x-nr
+
+
+ Flip Y
+
+
+
+
+
+
+
+flip-in-y-fr
+flip-in-y
+flip-in-y-nr
+flip-out-fr
+flip-out-y
+flip-out-y-nr
+
+
+ Zoom
+
+
+
+
+
+
+
+zoom-in-sm
+zoom-in
+zoom-in-lg
+zoom-out-sm
+zoom-out
+zoom-out-lg
+
+
+
+另外，该页面切换过渡效果还有一组遮罩（Overlay）模式的class：
+
+overlay-slide-in-top
+overlay-slide-out-top
+overlay-slide-in-bottom
+overlay-slide-out-bottom
+overlay-slide-in-left
+overlay-slide-out-left
+overlay-slide-in-right
+overlay-slide-out-right
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1324">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1325">
+                        jQuery超实用文字和图片列表滚动插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1325" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201502011658.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可以使任何图片列表进行水平和垂直滚动的jQuery插件。该jquery列表滚动插件可以使用任何列表、任何尺寸和任何内容。它可以设置水平和垂直滚动，自动滚动和无限循环滚动，非常适用于滚动新闻的制作。
+内容：
+
+
+简要教程
+
+
+这是一款可以使任何文字和图片列表进行水平和垂直滚动的jQuery插件。该jquery图片滚动插件的特点和一些注意事项如下：
+
+使用非常简单。
+可以在任何形式的列表。
+列表中的元素可以是文字、图片等等。
+列表中的元素不能是固定定位，或者是相同的元素。
+列表元素可以水平或垂直滚动。
+可以使列表简单滚动或无限循环滚动。
+可以手动滚动列表，也可是设置为自动滚动。
+可以设置可见列表项的数量。
+可以设置每次滚动的步长。
+可以设置开始滚动的列表项。
+可以在同一个页面中重复使用该插件。
+可以设置滚动速度和滚动的&#34;easing&#34;效果。
+它支持触摸屏设备。
+
+使用方法
+工作原理
+先用一张图来描述该jQuery插件的工作原理。
+
+基本HTML结构
+在下面给出html结构中.als-container、.als-viewport、.als-wrapper和.als-item是必须的结构。.als-prev和.als-next是可选的。
+
+&amp;lt;!-- define a container with class &#34;als-container&#34;: this will be the object binded to ALS; we suggest to give it an ID
+to retrieve it easily during ALS inizialization --&amp;gt;
+&amp;lt;div class=&amp;quot;als-container&amp;quot; id=&amp;quot;my-als-list&amp;quot;&amp;gt;
+&amp;lt;!-- if you choose manual scrolling (which is set by default), insert &amp;lt;span&amp;gt; with class &amp;quot;als-prev&amp;quot;and &amp;quot;als-next&amp;quot;:
+they define the buttons &amp;quot;previous&amp;quot; and &amp;quot;next&amp;quot;; within the &amp;lt;span&amp;gt; you can use images or simple text --&amp;gt;
+&amp;lt;span class=&amp;quot;als-prev&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/prev.png&amp;quot; alt=&amp;quot;prev&amp;quot; title=&amp;quot;previous&amp;quot; /&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;!-- define a container with class &amp;quot;als-viewport&amp;quot;: this will be the viewport for the list visible elements --&amp;gt;
+&amp;lt;div class=&amp;quot;als-viewport&amp;quot;&amp;gt;
+&amp;lt;!-- define a container with class &amp;quot;als-wrapper&amp;quot;: this will be the wrapper for the list elements,
+it can be a classic &amp;lt;ul&amp;gt; element or even a &amp;lt;div&amp;gt; element --&amp;gt;
+&amp;lt;ul class=&amp;quot;als-wrapper&amp;quot;&amp;gt;
+&amp;lt;!-- define the list elements, each must have class &amp;quot;als-item&amp;quot;; they can be classic &amp;lt;li&amp;gt; elements
+or generic &amp;lt;div&amp;gt; elements and they can contain anything: text, images, ... --&amp;gt;
+&amp;lt;li class=&amp;quot;als-item&amp;quot;&amp;gt;orange&amp;lt;/li&amp;gt; &amp;lt;!-- text only --&amp;gt;
+&amp;lt;li class=&amp;quot;als-item&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/fruits/apple.png&amp;quot; alt=&amp;quot;apple&amp;quot; title=&amp;quot;apple&amp;quot; /&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;!-- image --&amp;gt;
+&amp;lt;li class=&amp;quot;als-item&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/fruits/banana.png&amp;quot; alt=&amp;quot;banana&amp;quot; title=&amp;quot;banana&amp;quot; /&amp;gt;banana&amp;lt;/li&amp;gt; &amp;lt;!-- image + text --&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- als-wrapper end --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- als-viewport end --&amp;gt;
+&amp;lt;span class=&amp;quot;als-next&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/next.png&amp;quot; alt=&amp;quot;next&amp;quot; title=&amp;quot;next&amp;quot; /&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;!-- &amp;quot;next&amp;quot; button --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- als-container end --&amp;gt;
+
+CSS样式
+建议使用下面的CSS样式作为该列表滚动jQuery插件的通用样式，然后再各种情况设置不同元素的样式。
+
+/*****************************************************
+ * generic styling for ALS elements: outer container
+ *****************************************************/
+.als-container {
+position: relative;
+width: 100\%;
+margin: 0px auto;
+z-index: 0;
+}
+/****************************************
+ * viewport styling
+ ***************************************/
+.als-viewport {
+position: relative;
+overflow: hidden;
+margin: 0px auto;
+}
+/***************************************************
+ * wrapper styling
+ **************************************************/
+.als-wrapper {
+position: relative;
+/* if you are using a list with 
+  */
+list-style: none;
+}
+/*************************************
+ * item: single list element
+ ************************************/
+.als-item {
+position: relative;
+display: block;
+text-align: center;
+cursor: pointer;
+float: left;
+}
+/***********************************************
+ * prev, next: buttons styling
+ **********************************************/
+.als-prev, .als-next {
+position: absolute;
+cursor: pointer;
+clear: both;
+}
+调用插件
+首先要引入必要的文件。
+
+&amp;lt;!-- basic ALS css --&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; media=&#34;screen&#34; href=&#34;path/css/als\_style.css&#34; /&amp;gt;
+&amp;lt;!-- your jQuery version --&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/js/jquery-last.min.js&#34; &amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- your ALS version --&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/js/jquery.als-1.6.min.js&#34; &amp;gt;&amp;lt;/script&amp;gt;
+
+然后可以按下面的方法调用该插件：
+
+
+
+$(document).ready(function(){
+$(&#34;#my-als-list&#34;).als();
+}); 
+
+
+可配置参数
+
+
+visible\_items (number)：列表中可见列表项的数量。接收整数值，默认值为3。
+
+scrolling\_items (number)：列表元素滚动的步长。接收整数值，默认值为1。
+
+orientation (string)：定义列表的方向。可以是水平或垂直。接收值： &#34;horizontal&#34; 和 &#34;vertical&#34;，默认值为：&#34;horizontal&#34;。
+
+circular (string)：定义列表滚动的类型：简单或无限循环。接收值： &#34;yes&#34; and &#34;no&#34;，默认值为：&#34;no&#34;。
+
+autoscroll (string)：定义列表滚动的状态：手动还是自动。接收值：&#34;yes&#34; and &#34;no&#34;，默认值为：&#34;no&#34;。
+
+interval (number)：定义当设置为自动模式时滚动间隔的时间。接收值：integers，默认值：5000。
+
+direction (string)：定义当设置为自动模式时的滚动方向。接收值：&#34;left&#34; 和 &#34;right&#34;（水平滚动）或 &#34;up&#34; 和 &#34;down&#34;（垂直滚动）。默认值： &#34;left&#34; (&#34;up&#34;)。
+
+start\_from (number) ：设置列表中的第一个可见元素。接收值：integers，如果该数字大于列表项总数和可见列表项之间的差值，将被置为0。默认值为0（第一个元素）。
+
+speed (number) ：设置滚动的速度。接收值：integers，默认值：600。
+
+easing (string)：设置滚动动画的easing效果。接收值： &#34;swing&#34; 和 &#34;linear&#34;。默认值： &#34;swing&#34;。
+
+多参数应用举例
+在这个例子中我们有4个可见列表元素，滚动步长为2，滚动方向为水平方向，无限循环滚动并且自动循环模式，时间间隔为6秒，滚动速度为400毫秒，easing效果为 &#34;linear&#34; ，列表从右向左滚动，开始列表项为第二个元素。
+
+$(&#34;#my-als-list&#34;).als({
+visible\_items: 4,
+scrolling\_items: 2,
+orientation: &#34;horizontal&#34;,
+circular: &#34;yes&#34;,
+autoscroll: &#34;yes&#34;,
+interval: 6000,
+speed: 400,
+easing: &#34;linear&#34;,
+direction: &#34;right&#34;,
+start\_from: 1
+});
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1325">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1326">
+                        jQuery简单带备忘录功能的日期选择器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1326" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501231436.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款带备忘录功能的简单的jQuery日期选择器插件。你可以为该日期选择器的某些日期设定设定一些信息，方便日常查询，就像现实生活中的备忘录一样。
+内容：
+
+
+简要教程
+
+
+jQuery.Simple-EventCalendar是一款带备忘录功能的jQuery日期选择器插件。你可以在某个日期上记录需要做的事情或已经做的事情，就像工作中的备忘录一样，十分方便。
+bower 安装
+
+bower install simpleeventcalendar
+
+HTML结构
+该日期选择器的html结构十分简单。下面是日期选择器的html结构，使用的是一个表格：
+
+&amp;lt;table&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;星期一&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期二&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期三&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期四&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期五&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期六&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;星期日&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td date-month=&#34;12&#34; date-day=&#34;1&#34;&amp;gt;1&amp;lt;/td&amp;gt;
+......
+&amp;lt;/tr&amp;gt;
+......
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+下面是备忘录的html结构：
+
+&amp;lt;div class=&#34;day-event&#34; date-month=&#34;12&#34; date-day=&#34;16&#34; data-number=&#34;1&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;close fontawesome-remove&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;h2 class=&#34;title&#34;&amp;gt;Lorem ipsum 3&amp;lt;/h2&amp;gt;
+&amp;lt;span class=&#34;date&#34;&amp;gt;2015-01-23&amp;lt;/span&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;button class=&#34;read-more&#34;&amp;gt;Read more&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+调用插件
+要调用该日期选择器插件需要在页面中引入jquery和simplecalendar.js，以及日期插件的样式style.css。
+
+&amp;lt;script src=&#34;http://code.jquery.com/jquery-latest.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;simplecalendar.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;style.css&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+在完成以上步骤后，该jQuery日期选择器插件在页面加载完毕后会自动加载。它使用.day-event div中的date-month属性和date-day属性来和日期表格中的相应属性进行匹配，并在有事件的单元格中添加相应的样式和点击事件。
+基本的备忘录日期插件
+
+带列表的备忘录日期插件
+
+更多关于该日期选择器的信息请参考：https://github.com/philipehsing/jQuery.Simple-Event-Calendar
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1326">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/35/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/37/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

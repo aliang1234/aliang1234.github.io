@@ -1,0 +1,435 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    多功能jquery图片预览放大镜插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            多功能jquery图片预览放大镜插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1703/201703171531.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1703/201703171531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201703174408.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>xZoom是一款多功能的jquery图片预览放大镜插件。它支持多种图片放大模式，可以和Fancy Box或Magnific Pop-up等插件结合使用，功能非常强大。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>xZoom是一款多功能的<strong>jquery图片预览放大镜插件</strong>。它支持多种图片放大模式，可以和Fancy Box或Magnific Pop-up等插件结合使用，功能非常强大。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和xzoom.css以及xzoom.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/xzoom.css"&gt;
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/xzoom.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>xZoom要求使用下面的基本HTML结构，你可以按自己的需求设置图片的数量。</p>
+<pre class="brush:html">
+&lt;img class="xzoom" src="path/to/preview\_image\_01.jpg" xoriginal="path/to/original\_image\_01.jpg" /&gt;
+<p>&lt;div class=&quot;xzoom-thumbs&quot;&gt;<br>
+&lt;a href=&quot;path/to/original_image_01.jpg&quot;&gt;<br>
+&lt;img class=&quot;xzoom-gallery&quot; width=&quot;80&quot; src=&quot;path/to/thumbs_image_01.jpg&quot;xpreview=&quot;path/to/preview_image_01.jpg&quot;&gt;<br>
+&lt;/a&gt;<br>
+&lt;a href=&quot;path/to/original_image_02.jpg&quot;&gt;<br>
+&lt;img class=&quot;xzoom-gallery&quot; width=&quot;80&quot; src=&quot;path/to/preview_image_02.jpg&quot;&gt;<br>
+&lt;/a&gt;<br>
+&lt;a href=&quot;path/to/original_image_03.jpg&quot;&gt;<br>
+&lt;img class=&quot;xzoom-gallery&quot; width=&quot;80&quot; src=&quot;path/to/preview_image_03.jpg&quot;&gt;<br>
+&lt;/a&gt;<br>
+&lt;a href=&quot;path/to/original_image_04.jpg&quot;&gt;<br>
+&lt;img class=&quot;xzoom-gallery&quot; width=&quot;80&quot; src=&quot;path/to/preview_image_04.jpg&quot;&gt;<br>
+&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化xZoom插件。</p>
+<pre class="brush:js">
+$(".xzoom").xzoom();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>xZoom图片放大镜插件的可用配置参数如下：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>属性</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>position</td>
+<td>right</td>
+<td>图片放大窗口的位置。可用值有："top", "left", "right", "bottom", "inside", "lens", "#ID"。</td>
+</tr>
+<tr>
+<td>rootOutput</td>
+<td>true</td>
+<td>该参数可以将输出的放大窗口设置在任何位置。</td>
+</tr>
+<tr>
+<td>Xoffset</td>
+<td>0</td>
+<td>图片放大窗口水平位置的偏移。</td>
+</tr>
+<tr>
+<td>Yoffset</td>
+<td>0</td>
+<td>图片放大窗口垂直位置的偏移。</td>
+</tr>
+<tr>
+<td>fadeIn</td>
+<td>true</td>
+<td>显示放大图片是否使用淡入效果。</td>
+</tr>
+<tr>
+<td>fadeTrans</td>
+<td>true</td>
+<td>淡入淡出效果的过渡时间。</td>
+</tr>
+<tr>
+<td>fadeOut</td>
+<td>false</td>
+<td>关闭放大图片是否使用淡出效果。</td>
+</tr>
+<tr>
+<td>smoothZoomMove</td>
+<td>3</td>
+<td>在大窗口中图片的平滑移动级别，数值越大越平滑。</td>
+</tr>
+<tr>
+<td>smoothLensMove</td>
+<td>1</td>
+<td>圆形镜片的平滑移动级别。</td>
+</tr>
+<tr>
+<td>smoothScale</td>
+<td>6</td>
+<td>放大缩小的平滑级别。</td>
+</tr>
+<tr>
+<td>defaultScale</td>
+<td>0</td>
+<td>放大图片打开时的默认放大级别。-1表示-100\%，1表示100\%。</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>true</td>
+<td>是否在滚动鼠标滚轮时放大缩小图片。</td>
+</tr>
+<tr>
+<td>tint</td>
+<td>false</td>
+<td>背景颜色。建议使用十六进制的颜色值。</td>
+</tr>
+<tr>
+<td>tintOpacity</td>
+<td>0.5</td>
+<td>背景的透明度，值在0-1之间。</td>
+</tr>
+<tr>
+<td>lens</td>
+<td>false</td>
+<td>放大镜的颜色，建议使用十六进制的颜色值。</td>
+</tr>
+<tr>
+<td>lensOpacity</td>
+<td>0.5</td>
+<td>放大镜的透明度。</td>
+</tr>
+<tr>
+<td>lensShape</td>
+<td>box</td>
+<td>放大镜的的形状，"box" 或 "circle"。</td>
+</tr>
+<tr>
+<td>zoomWidth</td>
+<td>auto</td>
+<td>放大镜的宽度，单位像素。</td>
+</tr>
+<tr>
+<td>zoomHeight</td>
+<td>auto</td>
+<td>放大镜的高度，单位像素。</td>
+</tr>
+<tr>
+<td>sourceClass</td>
+<td>xzoom-source</td>
+<td>原图div的class名称。</td>
+</tr>
+<tr>
+<td>loadingClass</td>
+<td>xzoom-loading</td>
+<td>预加载div的class名称。</td>
+</tr>
+<tr>
+<td>lensClass</td>
+<td>xzoom-lens</td>
+<td>放大镜div的class名称。</td>
+</tr>
+<tr>
+<td>zoomClass</td>
+<td>xzoom-preview</td>
+<td>放大窗口div的class名称。</td>
+</tr>
+<tr>
+<td>activeClass</td>
+<td>xactive</td>
+<td>当前缩略图的class名称。</td>
+</tr>
+<tr>
+<td>adaptive</td>
+<td>true</td>
+<td>是否开启自适应功能。</td>
+</tr>
+<tr>
+<td>lensReverse</td>
+<td>false</td>
+<td>当旋转内部放大镜并且该选项为true时，放大镜的移动和显示方向相反。</td>
+</tr>
+<tr>
+<td>adaptiveReverse</td>
+<td>false</td>
+<td>和lensReverse相同，但是只有在adaptive选项为true是有效。</td>
+</tr>
+<tr>
+<td>title</td>
+<td>false</td>
+<td>是否在输出窗口中显示图片标题。</td>
+</tr>
+<tr>
+<td>titleClass</td>
+<td>xzoom-caption</td>
+<td>图片标题div的class名称。</td>
+</tr>
+<tr>
+<td>bg</td>
+<td>false</td>
+<td>放大图片作为背景输出。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>xZoom图片放大镜插件的github地址为：<a href="https://github.com/payalord/xZoom" target="\_blank">https://github.com/payalord/xZoom</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1703/201703171531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201703174408.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_513">
+                                <h3 class="post-title">
+                                    带分页的多功能下拉选择框jquery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

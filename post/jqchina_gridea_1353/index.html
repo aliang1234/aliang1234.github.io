@@ -1,0 +1,519 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯js可定制的跨浏览器日期时间选择器插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯js可定制的跨浏览器日期时间选择器插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1503/201503091613.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503091613.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503091491.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Rome是一款纯js可定制的跨浏览器日期时间选择器插件。该日期时间选择器不依赖于jQuery,但它依赖于moment.js。可以通过CSS文件来自定义该日期时间选择器的外观样式。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Rome是一款纯js可定制的跨浏览器<a href="http://www.htmleaf.com/jQuery/Calendar-Date-Time-picker/" target="\_blank">日期时间选择器插件</a>。该日期时间选择器不依赖于<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>,但它依赖于<a href="http://momentjs.com/" target="\_blank">moment.js</a>。可以通过CSS文件来自定义该日期时间选择器的外观样式。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过Bower或nmp来安装该日期时间选择器插件。</p>
+<pre class="brush:html">
+npm install --save rome
+bower install --save rome
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>你可以使用自定义版本的<a href="http://momentjs.com/" target="\_blank">moment.js</a>文件，配合使用<code>rome.standalone.js</code>。</p>
+<pre class="brush:html">
+&lt;script src='moment.js'&gt;&lt;/script&gt;
+&lt;script src='rome.standalone.js'&gt;&lt;/script&gt;
+</pre>
+<p>你也可以直接使用<code>rome.js</code>文件，它里面包含了<a href="http://momentjs.com/" target="\_blank">moment.js</a>文件。</p>
+<pre class="brush:html">
+&lt;script src='rome.js'&gt;&lt;/script&gt;
+</pre>
+<p>如果你想了解<code>moment</code>的国际化的信息，可以<a href="http://momentjs.com/docs/#/i18n/" target="\_blank">查看这里</a>。你还可以点击这里查看<a href="http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/20141222962.html" target="\_blank">moment的使用方法</a>。</p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> API</h3>
+<p><code>rome</code>的API中有一些可以使用的公共方法。</p>
+<pre class="brush:js">
+rome.find(elem)
+</pre>
+<p>返回关联<code>elem</code>的日期时间对象，或返回<code>null</code>。DOM元素只能有一个关联的日期时间对象。</p>
+<pre class="brush:js">
+rome(elem, options={})
+</pre>
+<p>这个方法创建一个日期对象实例，并使用<code>elem</code>元素来关联它。这个关联对象不能使用<code>.destroy()</code>方法销毁。在后面调用<code>rome(elem)</code>方法将调用这个关联对象，而不是创建一个新的实例。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1503/387125ea-1c1c-11e4-974e-467984e4d1f0.png" alt="Rome日期时间选择器" width="650" height="735"></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 可用参数</h3>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appendTo</td>
+<td>日期时间选择器的DOM元素被添加到何处。用<code>'parent'</code>作为父元素。</td>
+</tr>
+<tr>
+<td>autoClose</td>
+<td>设置为<code>true</code>时，日期时间选择器在选择了一个日期后将自动关闭，（或时间：要求<code>time: true</code>并且<code>date: false</code>）。只使用<code>'time'</code>一个值的时候，只会在时间被选择时改变选择器。</td>
+</tr>
+<tr>
+<td>autoHideOnBlur</td>
+<td>当焦点离开输入框时隐藏日期时间选择器。</td>
+</tr>
+<tr>
+<td>autoHideOnClick</td>
+<td>当点击后立刻隐藏日期时间选择器。</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期选择器显示天数，并运行在月之间切换。</td>
+</tr>
+<tr>
+<td>dateValidator</td>
+<td>校验给定的日期是否有效。接受一个<code>Date</code>参数。</td>
+</tr>
+<tr>
+<td>dayFormat</td>
+<td>日期选择器上的天数的格式。</td>
+</tr>
+<tr>
+<td>initialValue</td>
+<td>用于初始化日期时间选择器的值。可用<code>String</code>、<code>Date</code>或<code>moment</code>。</td>
+</tr>
+<tr>
+<td>inputFormat</td>
+<td>使用input字段来格式化日期字符串。</td>
+</tr>
+<tr>
+<td>invalidate</td>
+<td>确保在失去焦点时日期是有效的。</td>
+</tr>
+<tr>
+<td>strictParse</td>
+<td>以严格的方式比较<code>inputFormat</code>，只有部分匹配的被丢弃。</td>
+</tr>
+<tr>
+<td>max</td>
+<td>Disallow dates past <code>max</code>。可用<code>String</code>、<code>Date</code>或<code>moment</code>。</td>
+</tr>
+<tr>
+<td>min</td>
+<td>Disallow dates before <code>min。</code>可用<code>String</code>、<code>Date</code>或<code>moment</code>。</td>
+</tr>
+<tr>
+<td>monthFormat</td>
+<td>月和年的格式字符串。</td>
+</tr>
+<tr>
+<td>monthsInCalendar</td>
+<td>在日期选择器中渲染多少个月。</td>
+</tr>
+<tr>
+<td>required</td>
+<td>字段是否是必须的或不允许空值。</td>
+</tr>
+<tr>
+<td>styles</td>
+<td>日期时间选择器上的CSS样式的名称。</td>
+</tr>
+<tr>
+<td>time</td>
+<td>日期时间选取上显示的当前时间，并允许使用下拉列表来改变时间。</td>
+</tr>
+<tr>
+<td>timeFormat</td>
+<td>日期时间选择器上的时间字符串格式。</td>
+</tr>
+<tr>
+<td>timeInterval</td>
+<td>在下列列表中每个选项的时间间隔的秒数。</td>
+</tr>
+<tr>
+<td>timeValidator</td>
+<td>Function to validate that a given time is considered valid.Receives a native <code>Date</code> parameter.</td>
+</tr>
+<tr>
+<td>weekdayFormat</td>
+<td>Format used to display weekdays. Takes min (Mo), short (Mon), long (Monday), or an array with seven strings of your choosing.</td>
+</tr>
+<tr>
+<td>weekStart</td>
+<td>Day considered the first of the week. Range: Sunday 0 - Saturday 6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 默认参数</h5>
+<pre class="brush:js">
+{
+"appendTo": document.body,
+"autoClose": true,
+"autoHideOnBlur": true,
+"autoHideOnClick": true,
+"date": true,
+"dateValidator": Function.prototype,
+"dayFormat": "DD",
+"initialValue": null,
+"inputFormat": "YYYY-MM-DD HH:mm",
+"invalidate": true,
+"max": null,
+"min": null,
+"monthFormat": "MMMM YYYY",
+"monthsInCalendar": 1,
+"required": false,
+"strictParse": false,
+"styles": {
+"back": "rd-back",
+"container": "rd-container",
+"date": "rd-date",
+"dayBody": "rd-days-body",
+"dayBodyElem": "rd-day-body",
+"dayConcealed": "rd-day-concealed",
+"dayDisabled": "rd-day-disabled",
+"dayHead": "rd-days-head",
+"dayHeadElem": "rd-day-head",
+"dayRow": "rd-days-row",
+"dayTable": "rd-days",
+"month": "rd-month",
+"next": "rd-next",
+"positioned": "rd-container-attachment",
+"selectedDay": "rd-day-selected",
+"selectedTime": "rd-time-selected",
+"time": "rd-time",
+"timeList": "rd-time-list",
+"timeOption": "rd-time-option"
+},
+"time": true,
+"timeFormat": "HH:mm",
+"timeInterval": 1800,
+"timeValidator": Function.prototype,
+"weekdayFormat": "min",
+"weekStart": moment().weekday(0).day()
+}
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>当你使用<code>rome(elem)</code>方法创建了日期时间选择器后，你将获得一个<code>cal</code>对象实例。下面是一些可用的方法，大部分方法返回都返回日期时间对象，使之可以链式编程。</p>
+<ul>
+<li>
+<span class="m">.show()</span>：显示日期时间选择器。如果是和<code>input</code>关联，日期时间选择器会绝对定位在它的下方。</li>
+<li>
+<span class="m">.hide()</span>：隐藏日期时间选择器。</li>
+<li>
+<span class="m">.id</span>：为<code>Rome</code>对象自动生成唯一的标识符。</li>
+<li>
+<span class="m">.container</span>：包裹日期时间选择器的DOM元素。</li>
+<li>
+<span class="m">.associated</span>：和日期时间选择器对象关联的DOM元素。它是你用于创建日期时间选择器的input元素或它的父元素。</li>
+<li>
+<span class="m">.getDate()</span>：使用原生的<code>Date</code>对象返回当前的日期。当input元素是空的时候，如果<code>required: false</code>将获得<code>null</code>。</li>
+<li>
+<span class="m">.getDateString(format?)</span>：返回日期时间选择器上定义的当前日期，并用<code>options.inputFormat</code>或你选择的格式来格式化该日期。当input元素是空的时候，如果<code>required: false</code>将获得<code>null</code>。</li>
+<li>
+<span class="m">.getMoment()</span>：返回当前日期时间选择器的<code>moment</code>对象的一个副本。当input元素是空的时候，如果<code>required: false</code>将获得<code>null</code>。</li>
+<li>
+<span class="m">.destroy()</span>：从DOM中移除日期时间选择器矢量，并移除所有的关联事件。 The only responsive API method becomes the <code>.restore</code> method described below, the rest of the API becomes no-op methods. After emitting the <code>destroyed</code> event, all event listeners are removed from the instance.</li>
+<li>
+<span class="m">.destroyed</span>：如果日期时间选择器处于销毁状态返回<code>true</code>。</li>
+<li>
+<span class="m">.restore(options?)</span>：使用提供的参数恢复日期时间选择器。关联的DOM元素不能被改变。</li>
+<li>
+<span class="m">.options(options?)</span>：如果提供了一个options对象，它将销毁日期时间选择器对象，并用提供的options来重新初始化选择器。效果和在调用了<code>.destroy()</code>方法之后立刻调用<code>.restore(options)</code>方法。</li>
+<li>
+<span class="m">.options.reset()</span>：重置默认的参数。 Effectively the same as calling <code>.options({})</code> while preserving the <code>appendTo</code> option.</li>
+<li>
+<span class="m">.emitValues()</span>：Emits all of the data events listed below. Mostly used internally, should be avoided in consumer-land.</li>
+<li>
+<span class="m">.setValue(value)</span>：使用<code>value</code>来设置当前的日期时间。 Takes string, Date, or moment. Mostly used internally, and it doesn't emit any events.</li>
+<li>
+<span class="m">.refresh()</span>：强制刷新日期时间选择器。This method will redraw the month and update the dates that can be selected in accordance with <code>dateValidator</code> and <code>timeValidator</code>.</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>Rome日期时间选择器也提供了一些可用的事件。这些事件是通过一个事件源<a href="https://github.com/bevacqua/contra" target="\_blank">contra</a>发布创建使用。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>事件</td>
+<td>参数</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ready</td>
+<td>[options]</td>
+<td>日期时间选择器已经被<code>.restore</code>。</td>
+</tr>
+<tr>
+<td>destroyed</td>
+<td>[]</td>
+<td>日期时间选择器已经被<code>.destroy</code>。</td>
+</tr>
+<tr>
+<td>data</td>
+<td>[value]</td>
+<td>可能被日期时间选择器更新的日期。值由<code>.getDateString()</code>提供。</td>
+</tr>
+<tr>
+<td>year</td>
+<td>[year]</td>
+<td>可能被日期时间选择器更新的年份。值由<code>moment.year()</code>提供。</td>
+</tr>
+<tr>
+<td>month</td>
+<td>[month]</td>
+<td>可能被日期时间选择器更新的月份。值由<code>moment.month()</code>提供。</td>
+</tr>
+<tr>
+<td>day</td>
+<td>[day]</td>
+<td>可能被日期时间选择器更新的天数。值由<code>moment.date()</code>提供。</td>
+</tr>
+<tr>
+<td>time</td>
+<td>[time]</td>
+<td>可能被日期时间选择器更新的时间。值由时间字符串提供。</td>
+</tr>
+<tr>
+<td>show</td>
+<td>[]</td>
+<td>日期时间选择器已经被显示。</td>
+</tr>
+<tr>
+<td>hide</td>
+<td>[]</td>
+<td>日期时间选择器已经被隐藏。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>关于该日期时间选择器的更多资料请参考：<a href="" target="\_blank">https://github.com/bevacqua/rome</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503091613.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503091491.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1354">
+                                <h3 class="post-title">
+                                    jQuery移动优先的炫酷环形气泡菜单特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery-confirm | 功能强大的jQuery对话框和确认框插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery-confirm | 功能强大的jQuery对话框和确认框插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1603/201603291747.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603291747.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603293277.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery-confirm是一款功能强大的jQuery对话框和确认框插件。它提供多种内置的主题效果，可以实现ajax远程加载内容，提供动画效果和丰富的配置参数等。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery-confirm是一款功能强大的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>对话框和确认框插件。它提供多种内置的主题效果，可以实现ajax远程加载内容，提供动画效果和丰富的配置参数等。它的特点还有：</p>
+<ul>
+<li>可以使用键盘控制对话框。</li>
+<li>通过ajax加载对话框的内容。</li>
+<li>可以在指定时间之后自动关闭对话框。</li>
+<li>提供丰富的参数和回调函数。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过Bower来安装该插件。</p>
+<pre class="brush:html">
+$ bower install craftpip/jquery-confirm 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本调用</h5>
+<pre class="brush:js">
+$.confirm({
+confirm: function(){
+console.log('the user clicked confirm');
+},
+cancel: function(){
+console.log('the user clicked cancel');
+}
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 全局默认参数</h5>
+<pre class="brush:js">
+jconfirm.defaults = {
+title: 'Hello',
+content: 'Are you sure to continue?',
+contentLoaded: function(){
+},
+icon: '',
+confirmButton: 'Okay',
+cancelButton: 'Close',
+confirmButtonClass: 'btn-default',
+cancelButtonClass: 'btn-default',
+theme: 'white',
+animation: 'zoom',
+closeAnimation: 'scale',
+animationSpeed: 500,
+animationBounce: 1.2,
+keyboardEnabled: false,
+rtl: false,
+confirmKeys: [13], // ENTER key
+cancelKeys: [27], // ESC key
+container: 'body',
+confirm: function () {
+},
+cancel: function () {
+},
+backgroundDismiss: false,
+autoClose: false,
+closeIcon: null,
+columnClass: 'col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1',
+onOpen: function(){
+},
+onClose: function(){
+},
+onAction: function(){
+}
+}; 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>jquery-confirm插件的可用配置参数有：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>'Hello'</td>
+<td>对话框的标题</td>
+</tr>
+<tr>
+<td>content</td>
+<td>String, Function</td>
+<td>'Are you sure to continue?'</td>
+<td>对话框的内容，也可以通过一个函数返回ajax内容</td>
+</tr>
+<tr>
+<td>contentLoaded</td>
+<td>function</td>
+<td>function(){}</td>
+<td>如果通过url前缀来调用内容，如<code>url:http://abc.com/xyz</code>，该参数将是回调函数</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>String</td>
+<td>''</td>
+<td>标题前面的图标</td>
+</tr>
+<tr>
+<td>confirmButton</td>
+<td>String</td>
+<td>'Okay'</td>
+<td>确认按钮的文本</td>
+</tr>
+<tr>
+<td>cancelButton</td>
+<td>String</td>
+<td>'Close'</td>
+<td>取消按钮的文本</td>
+</tr>
+<tr>
+<td>confirmButtonClass</td>
+<td>String</td>
+<td>'btn-default'</td>
+<td>确认按钮的的class</td>
+</tr>
+<tr>
+<td>cancelButtonClass</td>
+<td>String</td>
+<td>'btn-default'</td>
+<td>取消按钮的class</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>String</td>
+<td>'white'</td>
+<td>对话框的颜色主题，可选值有：'white', 'black', 'material' , 'bootstrap'</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>String</td>
+<td>'zoom'</td>
+<td>打开对话框时的动画效果。可选值有： right, left, bottom, top, rotate, none, opacity, scale, zoom, scaleY, scaleX, rotateY, rotateYR (reverse), rotateX, rotateXR (reverse)</td>
+</tr>
+<tr>
+<td>closeAnimation</td>
+<td>String</td>
+<td>'scale'</td>
+<td>关闭对话框时的动画，和animation参数的可选值相同</td>
+</tr>
+<tr>
+<td>animationSpeed</td>
+<td>Number</td>
+<td>500</td>
+<td>动画的持续时间，单位毫秒</td>
+</tr>
+<tr>
+<td>animationBounce</td>
+<td>Float</td>
+<td>1.2</td>
+<td>打开对话框时添加弹性效果，1=没有弹性效果</td>
+</tr>
+<tr>
+<td>keyboardEnabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>使用回车键来确认，使用Esc键来取消</td>
+</tr>
+<tr>
+<td>confirmKeys</td>
+<td>Array</td>
+<td>[13]</td>
+<td>当使用<code>keyboardEnabled</code>参数时，可以设置一组键来触发确认事件，默认为13</td>
+</tr>
+<tr>
+<td>cancelKeys</td>
+<td>Array</td>
+<td>[27]</td>
+<td>当使用<code>keyboardEnabled</code>参数时，可以设置一组键来触发取消事件，默认为27</td>
+</tr>
+<tr>
+<td>rtl</td>
+<td>Boolean</td>
+<td>false</td>
+<td>使用从右到左的布局</td>
+</tr>
+<tr>
+<td>container</td>
+<td>String</td>
+<td>'body'</td>
+<td>指定生成的对话框代码被添加到哪里</td>
+</tr>
+<tr>
+<td>confirm</td>
+<td>Function</td>
+<td>function(){}</td>
+<td>用户点击了确认按钮之后的回调函数</td>
+</tr>
+<tr>
+<td>cancel</td>
+<td>Function</td>
+<td>function(){}</td>
+<td>用户点击了取消按钮之后的回调函数</td>
+</tr>
+<tr>
+<td>backgroundDismiss</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否允许点击对话框之外的区域来关闭对话框</td>
+</tr>
+<tr>
+<td>autoClose</td>
+<td>String</td>
+<td>false</td>
+<td>在指定的时间之后如果用户没有响应则自动关闭对话框。取值：<code>'confirm|400'</code>
+</td>
+</tr>
+<tr>
+<td>closeIcon</td>
+<td>Boolean</td>
+<td>null</td>
+<td>在对话框没有按钮的情况下，关闭按钮是可见的。将该参数设置为true可看见关闭按钮</td>
+</tr>
+<tr>
+<td>closeIconClass</td>
+<td>String</td>
+<td>false</td>
+<td>默认使用'X'作为关闭按钮，你可以通过该参数来修改</td>
+</tr>
+<tr>
+<td>columnClass</td>
+<td>String</td>
+<td>'col-md-4 col-md-offset-4 <br>col-sm-6 col-sm-offset-3 <br>col-xs-10 col-xs-offset-1'</td>
+<td>使用Bootstrap网格系统来进行布局</td>
+</tr>
+<tr>
+<td>onOpen</td>
+<td>Function</td>
+<td>function(){}</td>
+<td>当对话框元素被渲染之后触发</td>
+</tr>
+<tr>
+<td>onClose</td>
+<td>Function</td>
+<td>function(){}</td>
+<td>当对话框被关闭时触发</td>
+</tr>
+<tr>
+<td>onAction</td>
+<td>Function</td>
+<td>function(){}</td>
+<td>当任何指令被执行后都会触发该回调函数</td>
+</tr>
+<tr>
+<td>watchInterval</td>
+<td>Number</td>
+<td>100</td>
+<td>Watch the modal for changes and gets centered on the screen</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> API</h3>
+<p>通过<code>var jc = $.confirm()</code>会返回一个对象实例的引用。通过<code>jc</code>引用可以打开对话框。</p>
+<pre class="brush:js">
+var jc = $.confirm({title: 'awesome'}); // jc will be used in the examples below
+</pre>
+<ul>
+<li>
+<code>jc.close()</code>：关闭对话框。
+<pre class="brush:js">
+var jc = $.confirm({
+...
+})
+jc.close(); // destroy.
+</pre>
+</li>
+<li>
+<code>jc.isClosed()</code>：返回对话框是否被关闭的布尔值。</li>
+<li>
+<code>jc.setTitle(string)</code>：设置标题。</li>
+<li>
+<code>jc.setContent(string)</code>：设置内容。</li>
+<li>
+<code>jc.setIcon(iconClass)</code>：设置按钮。</li>
+<li>
+<code>jc.setDialogCenter()</code>：将对话框居中显示。</li>
+<li>
+<code>jc.$body</code>：别名：<code>jc.$b</code>，模态窗口对象。</li>
+<li>
+<code>jc.$content</code>：别名：<code>jc.contentDiv</code>。可以通过该对象来访问对话框的内容。
+<pre class="brush:js">
+var jc = $.confirm({
+content: 'Yeah, this is awesome'
+})
+console.log(jc.$content.html()); // Yeah, this is awesom
+</pre>
+</li>
+<li>
+<code>jc.$title</code>：可访问标题的对象。</li>
+<li>
+<code>jc.$icon</code>：可访问图标的对象。</li>
+<li>
+<code>jc.$confirmButton</code>：可访问确认按钮的对象。</li>
+<li>
+<code>jc.$cancelButton</code>：可访问取消按钮的对象。</li>
+<li>
+<code>jc.$closeButton</code>：可访问关闭按钮的对象。</li>
+<li>
+<code>jc.$target</code>：可访问点击元素的对象。</li>
+</ul>
+<p>jquery-confirm插件的github地址为：<a href="https://github.com/craftpip/jquery-confirm" target="\_blank">https://github.com/craftpip/jquery-confirm</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1603/201603291747.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201603293277.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_855">
+                                <h3 class="post-title">
+                                    基于原生Bootstrap carousel扩展的实用jQuery旋转木马
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

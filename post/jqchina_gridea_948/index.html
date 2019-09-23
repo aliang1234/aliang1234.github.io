@@ -1,0 +1,466 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯JavaScript响应式图片幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯JavaScript响应式图片幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1511/201511101740.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511101740.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511102768.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Ideal-Image-Slider是一款纯JavaScript响应式图片幻灯片插件。该幻灯片的设计以简洁为目的，但是提供了扩展接口，可以扩展幻灯片的功能。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Ideal-Image-Slider是一款纯JavaScript响应式图片<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片插件</a>。该幻灯片的设计以简洁为目的，但是提供了扩展接口，可以扩展幻灯片的功能。该幻灯片的特点有：</p>
+<ul>
+<li>
+<a href="http://www.htmleaf.com/html5/">HTML5</a>（SEO优化）</li>
+<li>支持<a href="http://www.htmleaf.com/css3/">CSS3</a>过渡效果</li>
+<li>支持左右导航（包括移动手机的 touch/swipe ）</li>
+<li>响应式</li>
+<li>HiDPI（高分辨率图片）支持</li>
+<li>ARIA支持</li>
+<li>使用简单，没有任何外部依赖</li>
+<li>可扩展性强</li>
+<li>使用渐进增强</li>
+<li>开放源代码</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower来安装该幻灯片插件。</p>
+<pre class="brush:html">
+bower install ideal-image-slider --save
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该幻灯片插件需要引入ideal-image-slider.css，ideal-image-slider.js和默认主题文件default.css。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="/path/to/ideal-image-slider.css"&gt;
+&lt;link rel="stylesheet" href="/path/to/themes/default/default.css"&gt;
+&lt;script src="/path/to/ideal-image-slider.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片基本的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div id="slider"&gt;
+&lt;img src="img/1.jpg" alt="Minimum required attributes"&gt;
+&lt;img data-src="img/2.jpg" src="" alt="Use data-src for on-demand loading"&gt;
+&lt;img data-src="img/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Use data-src-2x for HiDPI devices"&gt;
+&lt;a href="#"&gt;&lt;img data-src="img/4.jpg" src="" alt="Links work too"&gt;&lt;/a&gt;
+...
+&lt;/div&gt; 
+</pre>
+<p>在上面的HTML结构中，需要注意下面几点：</p>
+<ul>
+<li>该幻灯片只支持图片，其它内容会被移除。</li>
+<li>
+<code>data-src</code>属性用于在需要时才加载相应的图片。</li>
+<li>第一张图片不必使用<code>data-src</code>属性。</li>
+<li>如果你指定了<code>data-src-2x</code>属性的图片，它会被用于支持HiDPI的设备上（例如苹果的retina设备）</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>然后可以使用下面的方法来创建幻灯片。</p>
+<pre class="brush:js">
+new IdealImageSlider.Slider('#slider');
+</pre>
+<p>也可以设置一些配置参数。</p>
+<pre class="brush:js">
+var slider = new IdealImageSlider.Slider({
+selector: '#slider',
+height: 400, // Required but can be set by CSS
+interval: 4000
+});
+slider.start();
+</pre>
+<p>注意：如果你没有在Javascript构造函数中设置<code>height</code>属性，就必须在CSS中设置这个属性。</p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td>''</td>
+<td>幻灯片的CSS选择器</td>
+</tr>
+<tr>
+<td>height</td>
+<td>'auto'</td>
+<td>幻灯片的高度。可以设置为<code>'auto'</code>（自动改变高度），或固定的像素，如<code>400</code>，或一个比例，如:<code>16:9</code>
+</td>
+</tr>
+<tr>
+<td>initialHeight</td>
+<td>400</td>
+<td>如果height设置为auto或一个比例，该参数则为初始时图片的高度</td>
+</tr>
+<tr>
+<td>maxHeight</td>
+<td>null</td>
+<td>如果height设置为auto或一个比例，该参数为一个可选的最大高度值</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>4000</td>
+<td>幻灯片移动到下一幅图片的延迟时间，单位毫秒</td>
+</tr>
+<tr>
+<td>transitionDuration</td>
+<td>700</td>
+<td>过渡动画的持续时间，单位毫秒</td>
+</tr>
+<tr>
+<td>effect</td>
+<td>'slide'</td>
+<td>动画过渡效果，默认为slide/fade</td>
+</tr>
+<tr>
+<td>disableNav</td>
+<td>false</td>
+<td>切换previous/next导航按钮（同时关闭touch和键盘导航）</td>
+</tr>
+<tr>
+<td>keyboardNav</td>
+<td>true</td>
+<td>切换键盘导航</td>
+</tr>
+<tr>
+<td>previousNavSelector</td>
+<td>''</td>
+<td>previous导航元素的选择器</td>
+</tr>
+<tr>
+<td>nextNavSelector</td>
+<td>''</td>
+<td>next 导航元素的选择器</td>
+</tr>
+<tr>
+<td>classes</td>
+<td>{...}</td>
+<td>幻灯片使用的一组class列表</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>可以在设置中传入事件回调函数。</p>
+<pre class="brush:js">
+new IdealImageSlider.Slider({
+selector: '#slider',
+onStart: function(){
+console.log('onStart');
+}
+});
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>事件</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onInit</td>
+<td>当幻灯片的第一张图片加载后触发</td>
+</tr>
+<tr>
+<td>onStart</td>
+<td>当幻灯片开始播放时触发</td>
+</tr>
+<tr>
+<td>onStop</td>
+<td>当幻灯片停止播放时触发</td>
+</tr>
+<tr>
+<td>onDestroy</td>
+<td>当幻灯片被销毁时触发</td>
+</tr>
+<tr>
+<td>beforeChange</td>
+<td>当幻灯片slide改变前触发</td>
+</tr>
+<tr>
+<td>afterChange</td>
+<td>当幻灯片slide改变后触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> API</h3>
+<p>要使用API方法，首先需要保存一个幻灯片的示例对象。</p>
+<pre class="brush:js">
+var slider = new IdealImageSlider.Slider('#slider');
+slider.start();
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>方法</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start()</td>
+<td>开始播放幻灯片。注意，幻灯片会在点击导航按钮后停止自动播放</td>
+</tr>
+<tr>
+<td>stop()</td>
+<td>停止幻灯片播放</td>
+</tr>
+<tr>
+<td>previousSlide()</td>
+<td>跳到前一个幻灯片slide</td>
+</tr>
+<tr>
+<td>nextSlide()</td>
+<td>跳到后一个幻灯片slide</td>
+</tr>
+<tr>
+<td>gotoSlide(index)</td>
+<td>跳到指定的幻灯片slide</td>
+</tr>
+<tr>
+<td>destroy()</td>
+<td>销毁幻灯片</td>
+</tr>
+<tr>
+<td>get(attribute)</td>
+<td>获取属性值</td>
+</tr>
+<tr>
+<td>set(attribute, value)</td>
+<td>设置属性值</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511101740.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511102768.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_949">
+                                <h3 class="post-title">
+                                    简单的多级垂直手风琴下拉列表菜单
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Bootstrap的垂直滚动新闻特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Bootstrap的垂直滚动新闻特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-banana">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1610/201610111450.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610111450.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610114092.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于Bootstrap的垂直滚动新闻特效。原生的Bootstrap只有水平的轮播图插件。该特效通过修改HTML结构和CSS样式来达到垂直滚动轮播的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于Bootstrap的垂直<strong>滚动新闻</strong>特效。原生的Bootstrap只有水平的轮播图插件。该特效通过修改HTML结构和CSS样式来达到垂直滚动轮播的效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap的相关文件。</p>
+<pre class="brush:html">
+&lt;link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'&gt;
+&lt;script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该垂直滚动新闻特效的基本HTML结构如下：</p>
+ <pre class="brush:html">
+&lt;div class="bg-demo"&gt;
+&lt;div class="container"&gt;
+&lt;div id="carousel-example-vertical" class="carousel vertical slide"&gt;
+&lt;div class="carousel-inner" role="listbox"&gt;
+&lt;div class="item active"&gt;
+&lt;p class="ticker-headline"&gt;
+&lt;a href="#"&gt;
+滚动新闻内容。。。
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+......
+&lt;/div&gt;
+&lt;!-- 上下箭头按钮 --&gt;
+&lt;a class="up carousel-control" href="#carousel-example-vertical" role="button" data-slide="prev"&gt;
+&lt;span class="glyphicon glyphicon-chevron-up" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+&lt;/a&gt;
+&lt;a class="down carousel-control" href="#carousel-example-vertical" role="button" data-slide="next"&gt;
+&lt;span class="glyphicon glyphicon-chevron-down" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="sr-only"&gt;Next&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt; 
+ </pre>
+ <h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为该垂直滚动新闻特效添加下面的CSS样式：</p>
+<pre class="brush:css">
+body {
+margin: 50px 0;
+}
+.bg-demo{
+background: #66677c;
+}
+.ticker-headline {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+padding: 25px 0;
+margin: 0;
+font-size: 18px;
+}
+<p>.carousel.vertical .carousel-inner {<br>
+height: 100%;<br>
+width: auto;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .item {<br>
+width: auto;<br>
+padding-right: 50px;<br>
+-webkit-transition: 0.6s ease-in-out top;<br>
+transition: 0.6s ease-in-out top;<br>
+}<br>
+@media all and (transform-3d), (-webkit-transform-3d) {<br>
+.carousel.vertical .carousel-inner &gt; .item {<br>
+-webkit-transition: 0.6s ease-in-out;<br>
+transition: 0.6s ease-in-out;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .item.next,<br>
+.carousel.vertical .carousel-inner &gt; .item.active.right {<br>
+-webkit-transform: translate3d(0, 100%, 0);<br>
+transform: translate3d(0, 100%, 0);<br>
+top: 0;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .item.prev,<br>
+.carousel.vertical .carousel-inner &gt; .item.active.left {<br>
+-webkit-transform: translate3d(0, -100%, 0);<br>
+transform: translate3d(0, -100%, 0);<br>
+top: 0;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .item.next.left,<br>
+.carousel.vertical .carousel-inner &gt; .item.prev.right,<br>
+.carousel.vertical .carousel-inner &gt; .item.active {<br>
+-webkit-transform: translate3d(0, 0, 0);<br>
+transform: translate3d(0, 0, 0);<br>
+top: 0;<br>
+}<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .active,<br>
+.carousel.vertical .carousel-inner &gt; .next,<br>
+.carousel.vertical .carousel-inner &gt; .prev {<br>
+display: block;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .active {<br>
+top: 0;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .next,<br>
+.carousel.vertical .carousel-inner &gt; .prev {<br>
+position: absolute;<br>
+top: 0;<br>
+width: 100%;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .next {<br>
+top: 100%;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .prev {<br>
+top: -100%;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .next.left,<br>
+.carousel.vertical .carousel-inner &gt; .prev.right {<br>
+top: 0;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .active.left {<br>
+top: -100%;<br>
+}<br>
+.carousel.vertical .carousel-inner &gt; .active.right {<br>
+top: 100%;<br>
+}</p>
+<p>.carousel.vertical .carousel-control {<br>
+left: auto;<br>
+width: 50px;<br>
+}<br>
+.carousel.vertical .carousel-control.up {<br>
+top: 0;<br>
+right: 0;<br>
+bottom: 50%;<br>
+}<br>
+.carousel.vertical .carousel-control.down {<br>
+top: 50%;<br>
+right: 0;<br>
+bottom: 0;<br>
+}<br>
+.carousel.vertical .carousel-control .icon-prev,<br>
+.carousel.vertical .carousel-control .icon-next,<br>
+.carousel.vertical .carousel-control .glyphicon-chevron-up,<br>
+.carousel.vertical .carousel-control .glyphicon-chevron-down {<br>
+position: absolute;<br>
+top: 50%;<br>
+z-index: 5;<br>
+display: inline-block;<br>
+}<br>
+.carousel.vertical .carousel-control .icon-prev,<br>
+.carousel.vertical .carousel-control .glyphicon-chevron-up {<br>
+left: 50%;<br>
+margin-left: -10px;<br>
+top: 50%;<br>
+margin-top: -10px;<br>
+}<br>
+.carousel.vertical .carousel-control .icon-next,<br>
+.carousel.vertical .carousel-control .glyphicon-chevron-down {<br>
+left: 50%;<br>
+margin-left: -10px;<br>
+top: 50%;<br>
+margin-top: -10px;<br>
+}<br>
+.carousel.vertical .carousel-control .icon-up,<br>
+.carousel.vertical .carousel-control .icon-down {<br>
+width: 20px;<br>
+height: 20px;<br>
+line-height: 1;<br>
+font-family: serif;<br>
+}<br>
+.carousel.vertical .carousel-control .icon-prev:before {<br>
+content: '\2039';<br>
+}<br>
+.carousel.vertical .carousel-control .icon-next:before {<br>
+content: '\203a';<br>
+}<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610111450.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610114092.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_567">
+                                <h3 class="post-title">
+                                    fallingsnow.js-jquery下雪动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

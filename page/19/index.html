@@ -1,0 +1,1807 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1163">
+                        jQuery和CSS3推拉式隐藏侧边栏网格图片画廊特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1163" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506151552.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和CSS3推拉式隐藏侧边栏网格图片画廊特效。这个图片画廊特效中所有缩略图以网格形式排列，当用户点击相应的缩略图后，整个缩略图面板被向左推，右侧显示大图及图片的文字说明。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery和CSS3推拉式隐藏侧边栏网格图片画廊特效。这个图片画廊特效中所有缩略图以网格形式排列，当用户点击相应的缩略图后，高清大图从右边滑出，整个缩略图面板被向左推，右侧显示大图及图片的文字说明。
+
+ 制作方法
+
+ HTML结构
+这个图片画廊使用无序列表来制作，外部使用&amp;lt;section&amp;gt;来包裹，最外层使用&amp;lt;main&amp;gt;元素。
+
+&amp;lt;main role=&#34;main&#34; id=&#34;main&#34;&amp;gt;
+&amp;lt;section class=&#34;tiles-a&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a class=&#34;gallery&#34; href=&#34;#&#34; style=&#34;background: url(&#39;http://i.imgur.com/J3gQPXH.jpg&#39;); background-size: cover;&#34; aria-controls=&#34;aside&#34; aria-expanded=&#34;false&#34;&amp;gt;
+&amp;lt;div class=&#34;details visually-hidden&#34;&amp;gt;
+&amp;lt;img src=&#34;http://i.imgur.com/t5Nd1jj.jpg&#34; alt=&#34;...&#34;&amp;gt;
+&amp;lt;div class=&#34;text-copy wrapper&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Name Here&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;/section&amp;gt;
+&amp;lt;/main&amp;gt; 
+
+右侧隐藏的滑动侧边栏使用的是&amp;lt;aside&amp;gt;元素，里面使用一个SVG来制作关闭按钮。
+
+&amp;lt;aside role=&#34;complementary&#34; id=&#34;aside&#34; 
+ aria-hidden=&#34;true&#34; 
+ aria-expanded=&#34;false&#34;&amp;gt; 
+&amp;lt;a href=&#34;#&#34; class=&#34;close&#34;&amp;gt;
+&amp;lt;img src=&#34;close.svg&#34; alt=&#34;Close button&#34;&amp;gt;
+&amp;lt;span class=&#34;visually-hidden&#34;&amp;gt;Return to main content
+&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;aside--details&#34; tabindex=&#34;0&#34; 
+ aria-live=&#34;polite&#34; 
+ aria-atomic=&#34;true&#34; 
+ aria-label=&#34;Image details&#34;&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;/aside&amp;gt;
+
+
+ CSS样式
+这个网格图片画廊的CSS样式比较简单，其中使用媒体查询来控制图片的网格布局。其它代码相对简单，请参考下载文件。
+
+@media (min-width: 640px) {
+.tiles-a li {
+float: left;
+width: 33.33\%;
+}
+} 
+
+
+ JAVASCRIPT
+这个网格图片画廊的js代码中，所有的功能块都封装成了函数，showAside()是显示隐藏侧边栏，killAside()是关闭侧边栏。loadTileData()是为侧边栏加载数据。
+
+// load data to aside
+function loadTileData(target){
+var $this = $(target),
+itemHtml = $this.find(&#34;.details&#34;).html();
+$asideTarget.html(itemHtml);
+showAside();
+}
+// show/hide aside
+function showAside(){
+if(!$(&#34;html&#34;).hasClass(slideClass)){
+$(&#34;html&#34;).toggleClass(slideClass);
+$aside.attr(&#34;aria-hidden&#34;,&#34;false&#34;);
+focusCloseButton();
+}
+}
+// kill aside
+function killAside(){
+if($(&#34;html&#34;).hasClass(slideClass)){
+$(&#34;html&#34;).removeClass(slideClass);
+sendFocusBack();
+$aside.attr(&#34;aria-hidden&#34;,&#34;true&#34;);
+$tiles.attr(&#34;aria-expanded&#34;,&#34;false&#34;);
+}
+}
+
+其它js代码请参考下载文件。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1163">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1164">
+                        非常实用的js全屏右键菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1164" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506291732.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的js全屏右键菜单插件。该右键菜单插件可以在页面的任何地方按右键弹出上下文菜单，而且可以制作为多级菜单。它由纯js制作，简单实用。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的js全屏右键菜单插件。该右键菜单插件可以在页面的任何地方按右键弹出上下文菜单，而且可以制作为多级菜单。它由纯js制作，简单实用。
+
+ 制作方法
+
+ HTML结构
+该右键菜单的HTML结构采用一个&amp;lt;menu&amp;gt;元素，里面的菜单项由&amp;lt;li&amp;gt;元素组成。在&amp;lt;li&amp;gt;元素中，实际点击的元素是一个&amp;lt;button&amp;gt;。可以在菜单项中使用font-awesome字体图标来作为小图标。
+
+&amp;lt;menu class=&#34;menu&#34;&amp;gt;
+&amp;lt;li class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;menu-btn&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-folder-open&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;span class=&#34;menu-text&#34;&amp;gt;Open&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;li class=&#34;menu-item submenu&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;menu-btn&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-users&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;span class=&#34;menu-text&#34;&amp;gt;Social&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;!--二级菜单--&amp;gt;
+&amp;lt;menu class=&#34;menu&#34;&amp;gt;
+&amp;lt;li class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;menu-btn&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-comment&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;span class=&#34;menu-text&#34;&amp;gt;Comment&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;menu-item submenu&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;menu-btn&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-share&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;span class=&#34;menu-text&#34;&amp;gt;Share&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;!--三级菜单--&amp;gt;
+&amp;lt;menu class=&#34;menu&#34;&amp;gt;
+&amp;lt;li class=&#34;menu-item&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;menu-btn&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-twitter&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;span class=&#34;menu-text&#34;&amp;gt;Twitter&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/li&amp;gt;
+....
+&amp;lt;/menu&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/menu&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/menu&amp;gt; 
+
+
+ CSS样式
+下面是该右键菜单特效的基本CSS样式。
+
+.menu {
+position: absolute;
+width: 200px;
+padding: 2px;
+margin: 0;
+border: 1px solid #bbb;
+background: #eee;
+background: -webkit-linear-gradient(to bottom, #fff 0\%, #e5e5e5 100px, #e5e5e5 100\%);
+background: linear-gradient(to bottom, #fff 0\%, #e5e5e5 100px, #e5e5e5 100\%);
+z-index: 100;
+border-radius: 3px;
+box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+opacity: 0;
+-webkit-transform: translate(0, 15px) scale(.95);
+transform: translate(0, 15px) scale(.95);
+transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+pointer-events: none;
+}
+.menu-item {
+display: block;
+position: relative;
+margin: 0;
+padding: 0;
+white-space: nowrap;
+}
+.menu-btn {
+background: none;
+line-height: normal;
+overflow: visible;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+display: block;
+width: 100%;
+color: #444;
+font-family: &#39;Roboto&#39;, sans-serif;
+font-size: 13px;
+text-align: left;
+cursor: pointer;
+border: 1px solid transparent;
+white-space: nowrap;
+padding: 6px 8px;
+border-radius: 3px;
+}
+.menu-btn::-moz-focus-inner,
+.menu-btn::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+.menu-text {
+margin-left: 25px;
+}
+.menu-btn .fa {
+position: absolute;
+left: 8px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.menu-item:hover &amp;gt; .menu-btn {
+color: #fff;
+outline: none;
+background-color: #2E3940;
+background: -webkit-linear-gradient(to bottom, #5D6D79, #2E3940);
+background: linear-gradient(to bottom, #5D6D79, #2E3940);
+border: 1px solid #2E3940;
+}
+.menu-item.disabled {
+opacity: .5;
+pointer-events: none;
+}
+.menu-item.disabled .menu-btn {
+cursor: default;
+}
+.menu-separator {
+display:block;
+margin: 7px 5px;
+height:1px;
+border-bottom: 1px solid #fff;
+background-color: #aaa;
+}
+.menu-item.submenu::after {
+content: &amp;quot;&amp;quot;;
+position: absolute;
+right: 6px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+border: 5px solid transparent;
+border-left-color: #808080;
+}
+.menu-item.submenu:hover::after {
+border-left-color: #fff;
+}
+.menu .menu {
+top: 4px;
+left: 99%;
+}
+.show-menu,
+.menu-item:hover &amp;gt; .menu {
+opacity: 1;
+-webkit-transform: translate(0, 0) scale(1);
+transform: translate(0, 0) scale(1);
+pointer-events: auto;
+}
+.menu-item:hover &amp;gt; .menu {
+-webkit-transition-delay: 100ms;
+transition-delay: 300ms;
+}
+
+
+ JAVASCRIPT
+该右键菜单插件使用javascript来监听鼠标点击事件。showMenu()和hideMenu()方法分别用于显示和隐藏右键菜单。onContextMenu()方法获取鼠标的当前位置，并添加mousedown事件监听。在onMouseDown()方法中，首先隐藏右键菜单，然后在文档中移除mousedown事件监听。
+
+var menu = document.querySelector(&#39;.menu&#39;);
+function showMenu(x, y){
+menu.style.left = x + &#39;px&#39;;
+menu.style.top = y + &#39;px&#39;;
+menu.classList.add(&#39;show-menu&#39;);
+}
+function hideMenu(){
+menu.classList.remove(&#39;show-menu&#39;);
+}
+function onContextMenu(e){
+e.preventDefault();
+showMenu(e.pageX, e.pageY);
+document.addEventListener(&#39;mousedown&#39;, onMouseDown, false);
+}
+function onMouseDown(e){
+hideMenu();
+document.removeEventListener(&#39;mousedown&#39;, onMouseDown);
+}
+document.addEventListener(&#39;contextmenu&#39;, onContextMenu, false);
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1164">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1165">
+                        jQuery和CSS3价格表和结账表单切换动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1165" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506251507.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的jQuery和CSS3价格表和结账表单切换动画特效。该特效先向用户展示各种价格表，当用户选择了一个价格表之后，价格表会变形为结账表单，效果非常的炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的jQuery和CSS3价格表和结账表单切换动画特效。该特效先向用户展示各种价格表，当用户选择了一个价格表之后，价格表会变形为结账表单，效果非常的炫酷。
+
+ 制作方法
+
+ HTML结构
+该特效的HTML结构分为2个部分：ul.cd-pricing是商品的价格表，div.cd-form是结账表单模态窗口。
+
+&amp;lt;ul class=&#34;cd-pricing&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;header class=&#34;cd-pricing-header&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Basic&amp;lt;/h2&amp;gt;
+&amp;lt;div class=&#34;cd-price&#34;&amp;gt;
+&amp;lt;span&amp;gt;$9.99&amp;lt;/span&amp;gt;
+&amp;lt;span&amp;gt;month&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt; &amp;lt;!-- .cd-pricing-header --&amp;gt;
+&amp;lt;div class=&#34;cd-pricing-features&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;available&#34;&amp;gt;&amp;lt;em&amp;gt;Feature 1&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;em&amp;gt;Feature 2&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;em&amp;gt;Feature 3&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;em&amp;gt;Feature 4&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-pricing-features --&amp;gt;
+&amp;lt;footer class=&#34;cd-pricing-footer&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34;&amp;gt;Select&amp;lt;/a&amp;gt;
+&amp;lt;/footer&amp;gt; &amp;lt;!-- .cd-pricing-footer --&amp;gt;
+&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt; &amp;lt;!-- .cd-pricing --&amp;gt;
+&amp;lt;div class=&#34;cd-form&#34;&amp;gt;
+&amp;lt;div class=&#34;cd-plan-info&#34;&amp;gt;
+&amp;lt;!-- content will be loaded using jQuery - according to the selected plan --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;cd-more-info&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Need help?&amp;lt;/h4&amp;gt;
+&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;form action=&#34;&#34;&amp;gt;
+&amp;lt;fieldset&amp;gt;
+&amp;lt;legend&amp;gt;Account Info&amp;lt;/legend&amp;gt;
+&amp;lt;div class=&#34;half-width&#34;&amp;gt;
+&amp;lt;label for=&#34;userName&#34;&amp;gt;Name&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; id=&#34;userName&#34; name=&#34;userName&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/fieldset&amp;gt;
+...
+&amp;lt;/form&amp;gt;
+&amp;lt;a href=&#34;#0&#34; class=&#34;cd-close&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-form --&amp;gt;
+&amp;lt;div class=&#34;cd-overlay&#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;!-- shadow layer --&amp;gt; 
+
+
+ CSS样式
+该特效的CSS样式十分简单。需要注意的是当表单可见的时候，.empty-boxclass被添加到.cd-pricing &amp;lt; li元素上。.empty-box还用于隐藏原来的列表项。
+
+.cd-pricing &amp;gt; li {
+position: relative;
+margin: 0 auto 2.5em;
+background-color: #ffffff;
+border-radius: .3em .3em .25em .25em;
+box-shadow: 0 2px 8px rgba(2, 4, 5, 0.5);
+}
+.cd-pricing &amp;gt; li.empty-box {
+box-shadow: none;
+}
+.cd-pricing &amp;gt; li.empty-box::after {
+/* placeholder visible when .cd-form is open - in this case same color of the background */
+content: &#39;&#39;;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #0f222b;
+}
+
+div.cd-form设置为固定定位，开始时不设置它的尺寸大小。当用户点击了选择按钮，表单变为可见状态，这时它的尺寸和价格表尺寸相同，然后再使它慢慢放大，制作变形动画效果。
+
+.cd-form {
+position: fixed;
+z-index: 2;
+background-color: #ffffff;
+border-radius: .25em;
+visibility: hidden;
+transition: visibility 0s 0.8s;
+/* Force Hardware Acceleration in WebKit */
+transform: translateZ(0);
+backface-visibility: hidden;
+}
+.cd-form.is-visible {
+/* form is visible */
+visibility: visible;
+transition: visibility 0s 0s;
+}
+
+另外，在桌面设备中，当表单变为可见状态的时候，价格表的绿色背景会变为结账表单选项列表的背景。这个动画效果是由.cd-form .cd-pricing-features::before元素使用scale来制作的。
+
+.cd-form .cd-pricing-features::before {
+/* this is the layer which covers the .cd-pricing-features when the form is open - visible only on desktop */
+content: &#39;&#39;;
+position: absolute;
+/* fix a bug while animating - 1px white space visible */
+top: -5px;
+left: 0;
+height: calc(100% + 5px);
+width: 100%;
+background-color: #95ac5f;
+will-change: transform;
+transform: scaleY(0);
+transform-origin: center top;
+transition: transform 0.6s 0.2s;
+}
+
+
+ JAVASCRIPT
+该特效中使用了Velocity.js来制作动画效果。
+animateForm()函数用于结账表单模态窗口的动画：当用户选择了一个价格表，该函数会评估被选择的价格表的大小和位置，并在.cd-form元素中使用这些参数来完成价格表到结账表单的变形动画。
+然后就开始了变形动画，.cd-form的宽度和高度从初始值过渡到最终值，并使它在屏幕上居中显示。
+
+//form is the .cd-form element
+form.velocity(
+{
+&#39;width&#39;: tableWidth+&#39;px&#39;, //pricing table item width
+&#39;height&#39;: tableHeight+&#39;px&#39;, //pricing table item height
+&#39;top&#39;: formTopValue, //final top value of the form 
+&#39;left&#39;: formLeftValue, //final top value of the form 
+&#39;translateX&#39;: formTranslateX+&#39;px&#39;, //difference between formLeftValue and pricing table item left value
+&#39;translateY&#39;: formTranslateY+&#39;px&#39;, //difference between formTopValue and pricing table item top value
+&#39;opacity&#39;: 1,
+}, 0, function(){
+//table is the pricing table item
+table.addClass(&#39;empty-box&#39;);
+form.velocity(
+{
+&#39;width&#39;: formFinalWidth+&#39;px&#39;, //form final width
+&#39;height&#39;: formFinalHeight+&#39;px&#39;, //form final height
+&#39;translateX&#39;: 0,
+&#39;translateY&#39;: 0,
+},
+//animation duration
+animationDuration,
+//spring easing
+[ 220, 20 ]).addClass(&#39;is-visible&#39;);
+});
+
+当用户关闭模态窗口的时候，表单被隐藏，反向动画开始执行。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1165">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1166">
+                        Bootstrap隐藏滑动侧边栏jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-primary">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1166" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1505/201505131752.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+BootSideMenu是一款基于Bootstrap的jQuery隐藏滑动侧边栏特效插件。该隐藏滑动侧边栏基于Bootstrap 3制作，简单实用。菜单面板可以从屏幕的左侧或右侧进行隐藏显示。
+内容：
+
+
+简要教程
+
+
+BootSideMenu是一款基于Bootstrap的jQuery隐藏滑动侧边栏特效插件。该隐藏滑动侧边栏基于Bootstrap 3制作，简单实用。菜单面板可以从屏幕的左侧或右侧进行隐藏显示。
+
+ 使用方法
+使用这个隐藏侧边栏插件要引入jQuery和BootSideMenu.js、BootSideMenu.css文件以及所需要的Bootstrap文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/BootSideMenu.css&#34;&amp;gt;
+&amp;lt;script src=&#34;//code.jquery.com/jquery-1.11.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/BootSideMenu.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该隐藏侧边栏特效使用嵌套&amp;lt;div&amp;gt;的结构：
+
+&amp;lt;div id=&#34;demo&#34;&amp;gt;
+&amp;lt;div class=&#34;list-group&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;list-group-item active&#34;&amp;gt;Item 1&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;list-group-item&#34;&amp;gt;Item 2&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;list-group-item&#34;&amp;gt;Item 3&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;list-group-item&#34;&amp;gt;Item 4&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;list-group-item&#34;&amp;gt;Item 5&amp;lt;/a&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面加载完毕之后，通过下面的方法来初始化该隐藏侧边栏插件。
+
+$(&#39;#demo&#39;).BootSideMenu(); 
+
+
+ 配置参数
+默认的配置参数如下：
+
+$(&#39;#demo&#39;).BootSideMenu({
+side:&#34;left&#34;, // left or right
+autoClose:true // auto close when page loads
+});
+
+
+
+side：侧边栏面板从屏幕的哪个方向滑出，可选：&#34;left&#34;和&#34;right&#34;。
+
+autoClose：侧边栏面板在初始化时是否为隐藏状态。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1166">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1167">
+                        高度可定制的jQuery瀑布流网格布局插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1167" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1505/201505221625.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+stackgrid.adem.js是一款简单且高度可定制的jQuery瀑布流网格布局插件。通过该瀑布流网格插件你可以动态添加和删除各种尺寸的图片，定义图片宽度，设置网格的列数，或使用流式布局方式，甚至还可以通过URL动态添加图片。
+内容：
+
+
+简要教程
+
+
+stackgrid.adem.js是一款简单且高度可定制的 jQuery 瀑布流网格布局插件。通过该瀑布流网格插件你可以动态添加和删除各种尺寸的图片，定义图片宽度，设置网格的列数，或使用流式布局方式，甚至还可以通过URL动态添加图片。
+
+ 使用方法
+使用该瀑布流布局插件之前要先引入jQuery和stackgrid.adem.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;stackgrid.adem.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该瀑布流网格布局插件使用的是嵌套&amp;lt;div&amp;gt;的HTML结构。
+
+&amp;lt;div id=&#34;grid-container&#34;&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;grid-item&#34;&amp;gt;...&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在确保所有内容都被加载之后，可以通过下面的方法来初始化该瀑布流网格布局插件。一定要确保所有的内容都被加载，这样可以使stackgrid计算出正确的高度。
+
+// Create a stackgrid object.
+var stackgrid = new $.stackgrid;
+var options = {
+column\_width: 320
+};
+// Wrap the initializer inside window on load to
+// make sure to wait until all the grid contents are loaded.
+var $window = (window);(window);
+(window);window.on(&#39;load&#39;, function(){
+// Initialize stackgrid!
+// The first two arguments are for the container selector and the item selector.
+stackgrid.initialize(&#39;#grid-container&#39;, &#39;.grid-item&#39;, options);
+});
+
+
+ 添加新的网格
+该瀑布流网格布局插件允许你动态的添加新的网格。并且这个过程不需要重新绘制所有的网格。
+
+// Create new grid-item.
+item = $(&#34;&amp;lt;div class=\&#34;grid-item\&#34;&amp;gt; I&#39;m a new grid item. &amp;lt;/div&amp;gt;&#34;);
+// Append it to the grid-container.
+item.appendTo(&#34;#grid-container&#34;);
+// *** If the new content has image(s), make sure it&#39;s loaded first before appending!
+// Append to stackgrid!
+stackgrid.append(item); 
+
+
+ 重新排列网格
+
+// Restack the grid to apply your config changes.
+stackgrid.config.is\_fluid = false;
+stackgrid.restack();
+// Certain changes require you to reset the grid.
+// These are changes that affect the dimensions of the grid-item or
+// if you remove any of the items.
+stackgrid.config.column_width = 400;
+stackgrid.reset();
+stackgrid.restack();
+
+
+ 配置参数
+下面是该瀑布流网格布局的可用配置参数。
+
+// The values shown here are the default ones.
+stackgrid.config = {
+// Your column width.
+column_width: 320,
+// Adjust spacing in-between grid-items.
+gutter: 20,
+// Set this as true to let stackgrid automatically
+// determine the number of columns based on the
+// viewport&#39;s width.
+is_fluid: true,
+// Set this as true to sort the grid in an vertically optimal way.
+is_optimized: true,
+// If is_fluid is false, it will
+// use this as the default number of columns.
+number_of_columns: 4,
+// Timeout delay to call the resize complete function.
+resize_delay: 300,
+// You can customize when and how each item is moved!
+// Make sure to use jQuery stop() function if you decide to
+// animate it.
+// Where you place the callback determines
+// when the next move operation is called.
+move: function(element, left, top, callback) {
+element.css({
+left: left,
+top: top
+)};
+callback();
+},
+// This function is used to scale the container containing
+// the grid-items.
+// The callback function starts the move operations.
+scale: function(element, width, height, callback) {
+element.css({
+height: height,
+width: width
+});
+callback();
+}
+};
+
+
+
+column\_width：网格的宽度。
+
+gutter：网格之间的间距。
+
+is\_fluid：是否设置为流式布局。流式布局会使网格自适应页面视区宽度。
+
+is\_optimized：该选项设置为true可以使垂直的网格优化排序。
+
+number\_of\_columns：如果is\_fluid选项设置为flase，则使用该选项的值为默认的网格列数。
+
+resize\_delay：改变尺寸后的延迟时间。
+
+move：自定义什么时候以及如何移动网格。
+
+scale：该函数用于缩放保存网格的容器。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1167">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1168">
+                        jQuery时尚Chrome浏览器样式Tabs选项卡特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1168" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1505/201505171801.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+chrome-tabs是一款效果非常时尚大方的仿谷歌Chrome浏览器样式的Tabs选项卡jQuery插件。该选项卡插件中的tab可以只有拖动，排序，可以关闭和新建某个tab，并提供了黑色和白色两种主题样式的Tabs选项卡。
+内容：
+
+
+简要教程
+
+
+chrome-tabs是一款效果非常时尚大方的仿谷歌Chrome浏览器样式的Tabs选项卡jQuery插件。该选项卡插件中的tab可以只有拖动，排序，可以关闭和新建某个tab，并提供了黑色和白色两种主题样式的Tabs选项卡。
+
+ 使用方法
+使用该Chrome浏览器样式的Tabs选项卡插件首先要引入jQuery和jQuery UI，以及chrome-tabs.js和chrome-tabs.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/chrome-tabs.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery-ui.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/chrome-tabs.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+这个Chrome浏览器样式的Tabs选项卡使用的是嵌套&amp;lt;div&amp;gt;的HTML结构。
+
+&amp;lt;div class=&#34;chrome-tabs-shell&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tabs&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tab&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-favicon&#34; style=&#34;background-image: url(&#39;1.ico&#39;)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-title&#34;&amp;gt;Google&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-close&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left-shadow&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left-highlight&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right-shadow&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right-highlight&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab chrome-tab-current&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-favicon&#34; style=&#34;background-image: url(&#39;2.ico&#39;)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-title&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Facebook&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-close&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves&#34;&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left-shadow&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left-highlight&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-left&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right-shadow&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right-highlight&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-tab-curves-right&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;chrome-shell-bottom-bar&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+
+var $chromeTabsExampleShell = $(&#39;.chrome-tabs-shell&#39;)
+chromeTabs.init({
+$shell: $chromeTabsExampleShell,
+minWidth: 45,
+maxWidth: 160
+});
+
+
+ 添加一个新的Tab
+可以使用下面的方法来添加一个新的选项卡Tab。在Demo中双击选项卡条的空白处可以添加新的Tab。
+
+chromeTabs.addNewTab($chromeTabsExampleShell, {
+favicon: &#39;3.ico&#39;,
+title: &#39;jQuery之家&#39;,
+data: {
+timeAdded: +new Date()
+}
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1168">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1169">
+                        强大的响应式jQuery消息通知框和信息提示框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1169" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506011729.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+lobibox是一款功能非常强大的jQuery消息通知框和信息提示框插件。这个插件分为两个部分：消息通知框和信息提示框。它能非常好的结合Bootstrap使用。
+内容：
+
+
+简要教程
+
+
+lobibox是一款功能非常强大的jQuery消息通知框和信息提示框插件。这个插件分为两个部分：消息通知框和信息提示框。它能非常好的结合Bootstrap使用。lobibox的消息通知框和信息提示框的特点分别是：
+
+ 信息提示框
+
+lobibox的信息提示框可以是模态窗口，也可以不是模态窗口。
+允许显示多条信息。
+允许使用任何可用的CSS动画(animate.css)来显示和隐藏信息提示框。
+信息提示框可以显示不同的颜色和图标。
+可以设置为确认信息提示框。
+可以设置为一行的prompt信息框。（可以使用任何HTML5的输入框类型来作为prompt）
+也可以设置为多重prompt信息框。
+可以在信息提示框上使用进度条。
+可以通过ajax调用来自定义信息提示框中的内容。
+每一条信息都是插件的一个实例对象。你可以非常容易的获取这些实例对象，并为它们附件事件会在对象中调用方法。
+
+
+ 消息通知框
+
+支持不同颜色的消息通知框。
+可以在窗口的任意角部为主显示消息通知框。
+可以显示消息通知框将要消失的时间进度条。
+可以在消息通知框上显示图片。
+可以在消息通知框显示时发出提示音。
+可以将消息通知框显示为不同的尺寸。
+
+
+ 使用方法
+lobibox只依赖于jQuery，Bootstrap是可选的。使用时要引入jQuery和lobibox.min.js以及lobibox.min.css文件。
+
+&amp;lt;script src=&#34;js/jquery-1.11.2.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/LobiBox.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/js/lobibox.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 创建信息提示框
+
+// Confirm
+Lobibox.confirm({
+... //Options
+});
+// Alert
+Lobibox.alert(
+&#39;error|success|warning|info&#39;, // Any of the following
+{
+... //Options
+}
+);
+// Prompt
+Lobibox.prompt(
+&#39;&#39;, // Any HTML5 input type is valid
+{
+//Options
+}
+);
+// Progress
+Lobibox.progress({
+//Options
+});
+// Window
+Lobibox.window({
+//Options
+});
+
+
+ 信息提示框的默认参数
+
+// If the messagebox is larger (in width) than window&#39;s width. 
+// The messagebox&#39;s width is reduced to window width - 2 * horizontalOffset
+horizontalOffset: 5, 
+width : 600,
+// Height is automatically given calculated by width
+height: &#39;auto&#39;,
+// Show close button or not
+closeButton : true,
+// Make messagebox draggable
+draggable : false,
+// Class for custom buttons
+customBtnClass: &#39;lobibox-btn-default&#39;,
+modal : true,
+debug : false,
+// Position where buttons should be aligned
+buttonsAlign: &#39;center&#39;,
+// Close messagebox on Esc press
+closeOnEsc: true,
+//Overriding default options
+Lobibox.base.DEFAULTS = $.extend({}, Lobibox.base.DEFAULTS, {
+//override any options from default options
+});
+
+
+ 信息提示框的可用参数
+
+Lobibox.base.OPTIONS = {
+// DO NOT change this value.
+// Some functionality is depended on it
+bodyClass : &#39;lobibox-open&#39;,
+// DO NOT change this object.
+// Some functionality is depended on it
+modalClasses : {
+&#39;error&#39; : &#39;lobibox-error&#39;,
+&#39;success&#39; : &#39;lobibox-success&#39;,
+&#39;info&#39;: &#39;lobibox-info&#39;,
+&#39;warning&#39; : &#39;lobibox-warning&#39;,
+&#39;confirm&#39; : &#39;lobibox-confirm&#39;,
+&#39;progress&#39;: &#39;lobibox-progress&#39;,
+&#39;prompt&#39;: &#39;lobibox-prompt&#39;,
+&#39;default&#39; : &#39;lobibox-default&#39;,
+&#39;window&#39;: &#39;lobibox-window&#39;
+},
+// This is option how buttons can be shown.
+// What are buttonsAlign option available values
+buttonsAlign: [&#39;left&#39;, &#39;center&#39;, &#39;right&#39;],
+// You can change the title or class of buttons from here or use the same structure object for button when creating messagebox
+// closeOnClick : true will close the messagebox when clicking this type of button.
+// Set it to false not to close messagebox when clicking on it
+buttons: {
+ok: {
+&#39;class&#39;: &#39;lobibox-btn lobibox-btn-default&#39;,
+text: &#39;OK&#39;,
+closeOnClick: true
+},
+cancel: {
+&#39;class&#39;: &#39;lobibox-btn lobibox-btn-cancel&#39;,
+text: &#39;Cancel&#39;,
+closeOnClick: true
+},
+yes: {
+&#39;class&#39;: &#39;lobibox-btn lobibox-btn-yes&#39;,
+text: &#39;Yes&#39;,
+closeOnClick: true
+},
+no: {
+&#39;class&#39;: &#39;lobibox-btn lobibox-btn-no&#39;,
+text: &#39;No&#39;,
+closeOnClick: true
+}
+}
+};
+//Overriding default options
+Lobibox.base.OPTIONS = $.extend({}, Lobibox.base.OPTIONS, {
+... //override any options except those above which is written &amp;quot;DO NOT change&amp;quot;
+});
+
+
+ 创建消息通知框
+
+Lobibox.notify(
+// &#39;warning&#39;, &#39;info&#39;, &#39;success&#39;, &#39;error&#39;
+&#39;warning&#39;,
+{
+...
+}
+);
+
+
+ 消息通知框的默认参数
+
+// Title of notification. 
+// Do not include it for default title or set custom string. 
+// Set this false to disable title
+title: true, 
+// normal, mini, large
+size: &#39;normal&#39;,
+// Show animation class. (Uses animate.css)
+showClass: &#39;flipInX&#39;,
+// Hide animation class (Uses animate.css)
+hideClass: &#39;zoomOutDown&#39;,
+// Icon of notification.
+// Leave as is for default icon or set custom string
+icon: true,
+// Message of notification
+msg: &#39;&#39;,
+// Image source string
+img: null,
+// Make notifications closable
+closable: true,
+// Hide notification after this time (in miliseconds)
+delay: 5000,
+// Show timer indicator
+delayIndicator: true,
+// Close notifications by clicking on them
+closeOnClick: true,
+// Width of notification box
+width: 400,
+// Sound of notification. Set this false to disable sound.
+// Leave as is for default sound or set custom soud path
+sound: true,
+// Place to show notification.
+// Available options: &amp;quot;top left&amp;quot;, &amp;quot;top right&amp;quot;, &amp;quot;bottom left&amp;quot;, &amp;quot;bottom right&amp;quot;
+position: &amp;quot;bottom right&amp;quot;
+// Overriding default options
+Lobibox.notify.DEFAULTS = $.extend({}, Lobibox.notify.DEFAULTS, {
+... //override any options from default options
+});
+
+
+ 消息通知框的可用参数
+
+Lobibox.notify.OPTIONS = {
+&#39;class&#39;: &#39;animated-fast&#39;,
+soundPath: &#39;src/sounds/&#39;,
+// 通过该参数修改消息通知框的尺寸
+large: {
+width: 500
+},
+// 设置为最小尺寸的消息通知框
+mini: {
+&#39;class&#39;: &#39;notify-mini&#39;
+},
+// Default options of different style notifications
+success: {
+&#39;class&#39;: &#39;lobibox-notify-success&#39;,
+&#39;title&#39;: &#39;Success&#39;,
+&#39;icon&#39;: &#39;glyphicon glyphicon-ok-sign&#39;,
+sound: &#39;sound2.mp3&#39;
+},
+error: {
+&#39;class&#39;: &#39;lobibox-notify-error&#39;,
+&#39;title&#39;: &#39;Error&#39;,
+&#39;icon&#39;: &#39;glyphicon glyphicon-remove-sign&#39;,
+sound: &#39;sound4.mp3&#39;
+},
+warning: {
+&#39;class&#39;: &#39;lobibox-notify-warning&#39;,
+&#39;title&#39;: &#39;Warning&#39;,
+&#39;icon&#39;: &#39;glyphicon glyphicon-exclamation-sign&#39;,
+sound: &#39;sound5.mp3&#39;
+},
+info: {
+&#39;class&#39;: &#39;lobibox-notify-info&#39;,
+&#39;title&#39;: &#39;Information&#39;,
+&#39;icon&#39;: &#39;glyphicon glyphicon-info-sign&#39;,
+sound: &#39;sound6.mp3&#39;
+}
+};
+//Overriding default options
+Lobibox.notify.OPTIONS = $.extend({}, Lobibox.notify.OPTIONS, {
+... //override any options from default options
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1169">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_117">
+                        js打字机动画特效插件autotyperjs
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_117" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1907/201907029218.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+autotyperjs是一款打字机动画特效js插件js。使用autotyperjs可以轻松的实现控制台打字效果，配合CSS3动画，可以制作漂亮的自动打字动画特效。
+内容：
+
+
+简要教程
+
+
+autotyperjs是一款打字机动画特效js插件js。使用autotyperjs可以轻松的实现控制台打字效果，配合CSS3动画，可以制作漂亮的自动打字动画特效。
+
+ 安装
+NPM
+
+npm install autotyperjs --save
+
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link href=&#34;css/placeholder-loading.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;div&amp;gt;
+&amp;lt;h1 class=&#34;typer-target&#34;&amp;gt;
+AutoTyper&amp;lt;span&amp;gt;.js&amp;lt;/span&amp;gt;
+&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+
+var options = {
+selector: &#34;.content &amp;gt; h1&#34;,
+words: [&#34;hello&#34;, &#34;world&#34;]
+};
+// start auto typer
+var typer = new autoTyper(options);
+typer.start();
+
+停止打字动画。
+
+// stop autoTyper
+typer.stop();
+
+
+ 光标闪烁动画
+
+&amp;lt;div class=&#34;typerTarget&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+@-webkit-keyframes blink-caret {
+50\% {
+border-color: transparent;
+}
+}
+.typerTarget {
+border-right: 1px solid #404145;
+-webkit-animation: blink-caret 0.5s step-end infinite alternate;
+animation: blink-caret 0.5s step-end infinite alternate;
+}
+
+
+ 配置参数
+
+// available custom options
+var options = {
+selector: &#34;.typerTarget&#34;, // target element selector
+words: [], // words/sentences that will be auto typed
+charSpeed: 85, // letter typing animation speed
+delay: 2100, // word/sentence typing animation delay
+loop: true, // if loop is activated, autoTyper will start over
+flipflop: true // if flipflop is activated, letters which are typed animated will be removed ony by one animated
+}; 
+
+ autotyperjs插件的github网址为：https://github.com/hsynlms/autotyperjs
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_117">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1170">
+                        基于Bootstrap响应式所见即所得的jQuery编辑器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-primary">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1170" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1505/201505271649.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+LineControl Editor是一款基于Bootstrap的响应式、所见即所得的富文本编辑器jQuery插件。该富文本编辑器可以使用textarea元素或任何一个容器元素来生成，它拥有常见富文本编辑器的所有功能，使用快捷方便。
+内容：
+
+
+简要教程
+
+
+LineControl Editor是一款基于Bootstrap的响应式、所见即所得的富文本编辑器jQuery插件。该富文本编辑器可以使用textarea元素或任何一个容器元素来生成，它拥有常见富文本编辑器的所有功能，使用快捷方便。
+
+ 插件依赖
+该富文本编辑器插件依赖于jQuery2.1.0和Twitter Bootstrap以及 Font-Awesome 字体图标
+
+Jquery (2.1.0)
+Twitter Bootstrap (3.1.1)
+Font-Awesome (4.0.3)
+
+
+ 使用方法
+使用该富文本编辑器要在页面中引入jQuery，bootstrap和font-awesome字体图标样式文件，以及editor.css和editor.js文件。
+
+&amp;lt;link href=&#34;http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link href=&#34;editor.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&amp;gt;
+&amp;lt;script src=&#34;editor.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用一个&amp;lt;div&amp;gt;来作为该富文本编辑器的容器。
+
+&amp;lt;div id=&#34;txtEditor&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面加载完毕之后可以通过下面的方法来初始化该富文本编辑器。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+$(document).ready( function() {
+$(&#34;#txtEditor&#34;).Editor();
+});
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+你可以在初始化插件的时候添加一些配置参数。
+
+editor(&#39;createMenuItem&#39;, 
+{&#34;text&#34;: &#34;TouchGlasses&#34;, //Text replaces icon if its not available
+ &#34;icon&#34;:&#34;fa fa-glass&#34;, //This is a Font-Awesome Icon 
+&#34;tooltip&#34;: &#34;Touch Glasses&#34;,
+&#34;custom&#34;: function(button, parameters){ 
+ //Your Custom Function.
+ alert(&#34;Cheers!!!&#34;);
+ },
+ &#34;params&#34;: {&#39;option1&#39;:&#34;value1&#34;} //Any custom parameters you want to pass
+ //to your custom function.
+ });
+
+下面是该文本编辑器的默认配置：
+
+&#39;texteffects&#39;:true,
+&#39;aligneffects&#39;:true,
+&#39;textformats&#39;:true,
+&#39;fonteffects&#39;:true,
+&#39;actions&#39; : true,
+&#39;insertoptions&#39; : true,
+&#39;extraeffects&#39; : true,
+&#39;advancedoptions&#39; : true,
+&#39;screeneffects&#39;:true,
+&#39;bold&#39;: true,
+&#39;italics&#39;: true,
+&#39;underline&#39;:true,
+&#39;ol&#39;:true,
+&#39;ul&#39;:true,
+&#39;undo&#39;:true,
+&#39;redo&#39;:true,
+&#39;l\_align&#39;:true,
+&#39;r\_align&#39;:true,
+&#39;c\_align&#39;:true,
+&#39;justify&#39;:true,
+&#39;insert\_link&#39;:true,
+&#39;unlink&#39;:true,
+&#39;insert\_img&#39;:true,
+&#39;hr\_line&#39;:true,
+&#39;block\_quote&#39;:true,
+&#39;source&#39;:true,
+&#39;strikeout&#39;:true,
+&#39;indent&#39;:true,
+&#39;outdent&#39;:true,
+&#39;fonts&#39;:fonts,
+&#39;styles&#39;:styles,
+&#39;print&#39;:true,
+&#39;rm\_format&#39;:true,
+&#39;status\_bar&#39;:true,
+&#39;font\_size&#39;:fontsizes,
+&#39;color&#39;:colors,
+&#39;splchars&#39;:specialchars,
+&#39;insert\_table&#39;:true,
+&#39;select\_all&#39;:true,
+&#39;togglescreen&#39;:true
+
+更多关于该富文本编辑器的信息请参考：https://github.com/suyati/line-control
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1170">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1171">
+                        jQuery和CSS3炫酷全屏垂直滚动切换幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1171" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506101914.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷jQuery和CSS3炫酷全屏垂直滚动切换幻灯片特效。该幻灯片特效采用全屏背景图片，使用鼠标滚动上下切换。鼠标放在屏幕左侧时，会打开所有图片的缩略图，点击可以直接跳转到相应的图片上。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷jQuery和CSS3炫酷全屏垂直滚动切换幻灯片特效。该幻灯片特效采用全屏背景图片，使用鼠标滚动上下切换。鼠标放在屏幕左侧时，会打开所有图片的缩略图，点击可以直接跳转到相应的图片上。
+
+ 制作方法
+
+ HTML结构
+该幻灯片的HTML结构采用嵌套&amp;lt;div&amp;gt;的结构，.sections中的每一个.section都是一副幻灯片图片。为了制作百叶窗效果，每一个.section中都带有多个.bg-part的空div。.sidebar-real是图片的缩略图，也就是鼠标滑过屏幕左侧时显示的一行垂直的缩略图。
+
+&amp;lt;div class=&#34;main&#34;&amp;gt;
+&amp;lt;div class=&#34;sidebar-hover&#34;&amp;gt;
+&amp;lt;p class=&#34;pagination&#34;&amp;gt;
+&amp;lt;span class=&#34;page&#34;&amp;gt;01&amp;lt;/span&amp;gt; / &amp;lt;span class=&#34;total-pages&#34;&amp;gt;08&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;sidebar-real&#34;&amp;gt;
+&amp;lt;div data-page=&#34;1&#34; class=&#34;nav-elem nav-1 active&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div data-page=&#34;2&#34; class=&#34;nav-elem nav-2&#34;&amp;gt;&amp;lt;/div&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;sections&#34;&amp;gt;
+&amp;lt;div class=&#34;section section-1&#34;&amp;gt;
+&amp;lt;div class=&#34;left-part&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div class=&#34;bg-part&#34;&amp;gt;&amp;lt;/div&amp;gt;
+...
+&amp;lt;h2 class=&#34;section-heading&#34;&amp;gt;Fancy heading #1&amp;lt;/h2&amp;gt;
+&amp;lt;p class=&#34;additional-text&#34;&amp;gt;Some cool info or hashtags #1&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;h2 class=&#34;scroll-down&#34;&amp;gt;Scroll down&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+具体的CSS和JS实现代码请参考下载文件。
+
+
+本文版权属于jQuery之家，转载请注明出处：http://www.htmleaf.com/jQuery/Slideshow-Scroller/201506102009.html
+
+
+上一篇：jQuery炫酷蜂巢式六角形图片画廊特效 
+下一篇：jQuery和CSS3超酷全屏视觉差幻灯片特效 
+
+
+
+
+
+相关插件 
+
+
+
+
+
+
+
+
+
+带网格图片预览的横向拖动式菜单布局
+
+
+
+
+
+
+
+基于threejs的炫酷缩略图到全屏放大动画特效
+
+
+
+
+
+
+
+jQuery响应式全屏3D旋转查看图片特效
+
+
+
+
+
+
+
+jquery的全屏轮播插件jquery-fsscroll
+
+
+
+
+
+
+
+
+
+
+
+
+网友评论 
+
+
+
+
+
+ --&gt;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1171">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/18/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/20/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

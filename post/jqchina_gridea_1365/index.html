@@ -1,0 +1,342 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery仿Google Play多级导航菜单特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery仿Google Play多级导航菜单特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412311718.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412311718.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201412311049.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款仿Google Play的多级导航菜单特效插件。该多级导航菜单特效在鼠标点击菜单项时，子项在当前面板滑出，当鼠标滑过菜单子项的导航箭头时，上级菜单项又显示出来，效果十分不错。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果十分不错的jQuery仿Google Play多级导航菜单特效插件。插件中使用了<a href="http://press.codes/downloads/elusive-icons-webfont/" target="\_blank">ELUSIVE-ICONS</a>WEB字体。</p>
+<h3>HTML结构</h3>
+<p>使用该进度条插件，首先要在页面中引入<a href="http://jquery.com/download/" target="\_blank">jquery</a>和上面的WEB字体。</p>
+<pre class="brush:html">
+&lt;nav class="navigation"&gt;
+&lt;a href="#" class="active home"&gt;
+&lt;span class="icon"&gt;&lt;i class="icon-home"&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class="content"&gt;Home&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="#app\_nav" class="green"&gt;
+&lt;span class="icon"&gt;&lt;i class="icon-website"&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class="content"&gt;Apps&lt;/span&gt;
+&lt;/a&gt;
+&lt;div class="hide second\_level" id="app\_nav"&gt;
+&lt;a href="#" class="back"&gt;
+&lt;i class="icon-chevron-left"&gt;&lt;/i&gt;
+&lt;/a&gt;
+&lt;div class="content"&gt;
+&lt;a href="http://www.google.com"&gt;
+ &lt;span class="content"&gt;Popular Apps&lt;/span&gt;
+&lt;/a&gt;
+….
+ &lt;/div&gt;
+&lt;/div&gt;
+….
+&lt;/nav&gt;
+</pre>
+<p>class为<span class="m">Home</span>的链接用于返回顶级菜单。后面的链接是二级菜单。和它相邻的div标签是隐藏的二级菜单的内容。当用户顶级二级菜单时，div中的内容将显示。在隐藏的div中，有一个空的链接<span class="m">back</span>。通过它用户可以查看上一级菜单的内容。</p>
+<h3>JAVASCRIPT</h3>
+<p>通过下面的语句来调用该多级菜单插件。</p>
+<pre class="brush:js">
+$(window).load(function () {
+$(".navigation &gt; a").click(function() {
+if (!$(this).hasClass("active")) {
+$(".navigation").unbind('mouseleave');
+$(".navigation .second\_level").hide();
+var el = $(this);
+el.addClass("hover");
+$(".navigation &gt; a.active").fadeOut("fast", function() {
+var prev = $(this)
+prev.removeClass('active');
+container\_pos = $(".navigation").offset()
+button\_pos = el.offset()
+el.animate({ top: container\_pos.top - button\_pos.top }, 500, function() {
+el.addClass("active").removeClass("hover").css("top", 0);
+if (el.attr("href").length &gt; 1 &amp;&amp; el.attr("href") != "#") {
+$(".navigation &gt; a:not(.active)").hide();
+$(el.attr("href")).slideDown("slow");
+} else {
+prev.fadeIn("fast");
+}
+});
+});
+} 
+ });
+ $(".navigation .back").hover(
+function () {
+var el = $(this)
+$(".navigation .second\_level").hide();
+$(".navigation &gt; a").show();
+$(".navigation").hover(function() {}, function() {
+$(this).unbind('mouseleave');
+$(".navigation &gt; a:visible:not(.active)").hide();
+el.closest(".second\_level").show();
+});
+<p>});<br>
+});<br>
+</pre></p>
+<p>JS代码有一点复杂。所有的链接都被绑定click事件。当我们点击链接时，将当前链接的内容移动顶部，隐藏顶级链接内容。</p>
+<p>第二部分的JS代码用于从二级菜单返回。当鼠标滑过返回按钮，顶级菜单出现在顶部，覆盖二级菜单。当鼠标离开，点击菜单消失，二级菜单出现。</p>
+<p>我们还可以集成<a href="http://daneden.github.io/animate.css/" target="\_blank">Animate.css</a>到我们的JS文件中，来制作各种有趣的动画效果。看下面的例子：</p>
+<p>在下面的例子中，你可以看到两种动画效果<span class="m">&lt;&lt;first-level-animation&gt;&gt;</span>和<span class="m">&lt;&lt;second-level-animation&gt;&gt;</span>。第一种动画时用户鼠标滑过返回按钮时的动画，第二种动画时用户点击第一级菜单，第二级菜单出现的动画。</p>
+<p>选择你需要的<a href="http://daneden.github.io/animate.css/" target="\_blank">Animate.css</a>动画效果，然后替换上部的代码。例如：如果你想要两种效果都是<span class="m">bounceIn</span>效果，那么，将<span class="m">&lt;&lt;first-level-animation&gt;&gt;</span>和<span class="m">&lt;&lt;second-level-animation&gt;&gt;</span>都替换为<span class="m">bounceIn</span>。</p>
+<pre class="brush:js">
+$(window).load(function () {
+$(".navigation &gt; a").click(function() {
+if (!$(this).hasClass("active")) {
+$(".navigation").unbind('mouseleave');
+$(".navigation .second\_level").removeClass("animated &lt;&lt;second-level-animation&gt;&gt;").hide(); 
+var el = $(this);
+el.addClass("hover");
+$(".navigation &gt; a.active").fadeOut("fast", function() {
+var prev = $(this)
+prev.removeClass('active');
+container\_pos = $(".navigation").offset()
+button\_pos = el.offset()
+el.animate({ top: container\_pos.top - button\_pos.top }, 500, function() {
+el.addClass("active").removeClass("hover").css("top", 0);
+if (el.attr("href").length &gt; 1 &amp;&amp; el.attr("href") != "#") {
+$(".navigation &gt; a:not(.active)").removeClass("&lt;&lt;first-level-animation&gt;&gt; animated").hide();
+$(el.attr("href")).addClass("&lt;&lt;second-level-animation&gt;&gt; animated").show();
+} else {
+prev.addClass("&lt;&lt;first-level-animation&gt;&gt; animated").fadeIn("fast");
+}
+});
+});
+}
+<p>});</p>
+<p>$(&quot;.navigation .back&quot;).hover(<br>
+function () {<br>
+var el = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(this)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span>(&quot;.navigation .second_level&quot;).removeClass(&quot;animated &lt;&lt;second-level-animation&gt;&gt;&quot;).hide();<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 15: (&quot;.navigation &amp;̲gt; a:not(.acti…'>(&quot;.navigation &amp;gt; a:not(.active)&quot;).addClass(&quot;&amp;lt;&amp;lt;first-level-animation&amp;gt;&amp;gt; animated&quot;).show()
+</span>(&quot;.navigation&quot;).hover(function() {}, function() {<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>u</mi><mi>n</mi><mi>b</mi><mi>i</mi><mi>n</mi><mi>d</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>m</mi><mi>o</mi><mi>u</mi><mi>s</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>a</mi><mi>v</mi><msup><mi>e</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(this).unbind(&#x27;mouseleave&#x27;);
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">b</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>(&quot;.navigation &gt; a:visible:not(.active)&quot;).hide().removeClass(&quot;&lt;&lt;first-level-animation&gt;&gt; animated&quot;);<br>
+el.closest(&quot;.second_level&quot;).addClass(&quot;animated &lt;&lt;second-level-animation&gt;&gt;&quot;).show();<br>
+});<br>
+});<br>
+});</p>
+</pre>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412311718.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201412311049.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1366">
+                                <h3 class="post-title">
+                                    snabbt.js 强大的jQuery动画库插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

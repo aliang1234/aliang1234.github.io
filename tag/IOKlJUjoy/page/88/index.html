@@ -1,0 +1,1281 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_639">
+                        跨浏览器jQuery虚拟键盘插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_639" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608311500.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+softkey是一款轻量级、跨浏览器的jQuery虚拟键盘插件。该虚拟键盘插件允许用户自定义键盘的布局。它兼容IE8浏览器，使用灵活方便。
+内容：
+
+
+简要教程
+
+
+softkey是一款轻量级、跨浏览器的jQuery虚拟键盘插件。该虚拟键盘插件允许用户自定义键盘的布局。它兼容IE8浏览器，使用灵活方便。
+
+ 使用方法
+在页面中引入softkeys-0.0.1.css、jquery和softkeys-0.0.1.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/softkeys-0.0.1.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/softkeys-0.0.1.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素来作为虚拟键盘的占位元素。其中，使用data-target属性来指定和虚拟键盘绑定的表单域。
+
+&amp;lt;div class=&#34;softkeys&#34; data-target=&#34;input[name=&#39;code&#39;]&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该虚拟键盘插件。
+
+$(document).ready(function(){
+$(&#39;.softkeys&#39;).softkeys({
+target : $(&#39;.softkeys&#39;).data(&#39;target&#39;),
+layout : [
+[
+[&#39;`&#39;,&#39;~&#39;],
+[&#39;1&#39;,&#39;!&#39;],
+[&#39;2&#39;,&#39;@&#39;],
+[&#39;3&#39;,&#39;#&#39;],
+[&#39;4&#39;,&#39;$&#39;],
+[&#39;5&#39;,&#39;\%&#39;],
+[&#39;6&#39;,&#39;^&#39;],
+[&#39;7&#39;,&#39;&amp;amp;&#39;],
+[&#39;8&#39;,&#39;*&#39;],
+[&#39;9&#39;,&#39;(&#39;],
+[&#39;0&#39;,&#39;)&#39;],
+[&#39;-&#39;, &#39;\_&#39;],
+[&#39;=&#39;,&#39;+&#39;],
+&#39;delete&#39;
+],
+[
+&#39;q&#39;,&#39;w&#39;,&#39;e&#39;,&#39;r&#39;,&#39;t&#39;,&#39;y&#39;,&#39;u&#39;,&#39;i&#39;,&#39;o&#39;,&#39;p&#39;,
+[&#39;[&#39;,&#39;{&#39;],
+[&#39;]&#39;,&#39;}&#39;]
+],
+[
+&#39;capslock&#39;,
+&#39;a&#39;,&#39;s&#39;,&#39;d&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;j&#39;,&#39;k&#39;,&#39;l&#39;,
+[&#39;;&#39;,&#39;:&#39;],
+[&#34;&#39;&#34;,&#39;&#34;&#39;],
+[&#39;\\&#39;,&#39;|&#39;]
+],
+[
+&#39;shift&#39;,
+&#39;z&#39;,&#39;x&#39;,&#39;c&#39;,&#39;v&#39;,&#39;b&#39;,&#39;n&#39;,&#39;m&#39;,
+[&#39;,&#39;,&#39;&amp;lt;&#39;],
+[&#39;.&#39;,&#39;&amp;gt;&#39;],
+[&#39;/&#39;,&#39;?&#39;],
+[&#39;@&#39;]
+]
+]
+});
+});
+
+
+ 配置参数
+softkey虚拟键盘插件的可用配置参数有：
+
+
+target：虚拟键盘绑定的input域。
+
+layout：虚拟键盘的布局。
+
+rowSeperator：换行符。默认为br。
+
+buttonWrapper：按键容器。默认为li。
+
+softkey虚拟键盘插件的github地址为：https://github.com/cozyt/softkey
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_639">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_640">
+                        实用窗口顶部消息通知、提示和确认jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_640" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608231526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+overhang.js是一款非常实用的窗口顶部消息通知、提示和确认jQuery插件。实际上它可以在任何指定元素的顶部制作出消息通知框、消息提示框和消息确认框。
+内容：
+
+
+简要教程
+
+
+overhang.js是一款非常实用的窗口顶部消息通知、提示和确认jQuery插件。实际上它可以在任何指定元素的顶部制作出消息通知框、消息提示框和消息确认框。
+
+ 安装
+可以通过npm或bower来安装overhang.js插件。
+
+$ npm install overhang
+$ bower install overhang
+
+
+ 使用方法
+在页面中引入jQuery和jQuery UI文件，以及overhang.js相关文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery/2.1.4/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jqueryui/1.10.4/jquery-ui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;dist/overhang.min.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/overhang.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 通用配置参数
+overhang.js可以用来制作消息通知框、消息提示框和消息确认框。下面是一些通用的配置参数。
+
+
+type：消息通知框的类型。类型可以是：success，error，warn，info，prompt和confirm。
+如果你想自定义主题，可以将这个参数留空，然后按照下面的方法来定义主题：
+
+$(&#34;body&#34;).overhang({
+ custom: true, // Set custom to true
+ primary: &#34;#34495E&#34;, // 背景颜色
+ accent: &#34;#F4B350&#34; // 按钮边框的颜色
+});
+
+
+
+textColor：文本的颜色，默认为白色。
+
+message：提示框中的内容。
+
+duration：显示提示框的持续时间。默认为1.5秒。
+
+speed：提示框向下弹出或向上缩回的时间，默认为500毫秒。
+
+closeConfirm：是否自动关闭提示框，默认为false。
+
+upper：是否将内容全部转换为大写字母。默认为false。
+
+easing：JQuery UI的easing效果。默认为easeOutBounce。
+
+html：该参数设置message参数的内容是否为HTML。默认为false。
+
+一个基本的消息提示框的代码如下：
+
+// Some error notification
+$(&#34;body&#34;).overhang({
+ type: &#34;error&#34;,
+ message: &#34;You could not be logged in at this time.&#34;,
+ closeConfirm: &#34;true&#34;
+});
+
+一个基本的消息确认框的代码如下：
+
+// Some prompt notification
+$(&#34;body&#34;).overhang({
+ type: &#34;prompt&#34;,
+ message: &#34;What is your name&#34;
+});
+
+当使用消息确认框的时候，还可以使用下面的一些额外参数：
+
+
+yesMessage：确认按钮上的文本。默认为“YES”。
+
+noMessage：取消按钮上的文本。默认为“NO”。
+
+yesColor：确认按钮的颜色。默认为#2ECC71。
+
+noColor：取消按钮的颜色。默认为#E74C3C。
+
+例如下面的使用例子：
+
+// Some confirmation
+$(&#34;body&#34;).overhang({
+ type: &#34;confirm&#34;,
+ yesMessage: &#34;Yes please!&#34;,
+ noMessage: &#34;No thanks.&#34;
+});
+
+
+ 接收数据
+类型为prompt和confirm的消息框能够从用户输入中接收数据。要接收数据可以如下操作：
+
+// From a prompt
+alert($(&#34;target-element&#34;).data(&#34;overhangPrompt&#34;));
+// From a confirmation (either true or false)
+alert($(&amp;quot;target-element&amp;quot;).data(&amp;quot;overhangConfirm&amp;quot;));
+
+
+ 回调函数
+callback参数是回调函数，它在以下任何一种情况下会被触发：
+
+prompt点击确认时。
+confirmation点击确认时。
+带closeConfirm为true的消息提示框上的关闭按钮被点击时。
+消息提示框向上回缩时。
+
+示例代码：
+
+$(&#34;body&#34;).overhang({
+type: &#34;confirm&#34;,
+message: &#34;Are you sure?&#34;,
+// This code will run once an option is clicked.
+callback: function () {
+var selection = $(&amp;quot;body&amp;quot;).data(&amp;quot;overhangConfirm&amp;quot;);
+alert(&amp;quot;You made your selection of &amp;quot; + selection);
+}
+});
+
+overhang.js插件的github地址为：https://github.com/paulkr/overhang.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_640">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_642">
+                        Gif图片预览和播放jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_642" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609121502.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.gif.js是一款可以对Gif图片进行预览和播放的jQuery插件。该插件使用一张静态的图片作为GIF图片的预览图，然后在用户点击播放按钮时才开始GIF动画序列的播放。
+内容：
+
+
+简要教程
+
+
+jquery.gif.js是一款可以对Gif图片进行预览和播放的jQuery插件。该插件使用一张静态的图片作为GIF图片的预览图，然后在用户点击播放按钮时才开始GIF动画序列的播放。
+
+ 使用方法
+在页面中引入jquery.gif.min.js文件和样式文件jquery.gif.css。
+
+&amp;lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;css/jquery.gif.css&#39; /&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.gif.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用&amp;lt;img&amp;gt;元素来制作该效果。其中src属性指向一张静态的预览图片，data-gif属性指向GIF图片。
+
+&amp;lt;img src=&#34;img/1.jpg&#34; alt=&#34;GIF Loader&#34; data-gif=&#34;img/1.gif&#34; class=&#34;gif&#34;&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过gif()方法来初始化该插件。下面的代码对页面中所有class 为.gif的图片都进行初始化。
+
+$( document ).ready(function() {
+// swap all the gifs on the page.
+$(&#39;.gif&#39;).each(function() {
+$(this).gif();
+});
+});
+
+jQuery-GIF-loader插件的github地址为：https://github.com/screename/jQuery-GIF-loader
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_642">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_644">
+                        兼容IE8的jQuery旋转木马幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_644" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609211657.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Carousel.js是一款简单实用的jQuery旋转木马幻灯片插件。该旋转木马插件兼容IE8浏览器，可用于制作电影海报的3D旋转切换特效等。
+内容：
+
+
+简要教程
+
+
+Carousel.js是一款简单实用的jQuery旋转木马幻灯片插件。该旋转木马插件兼容IE8浏览器，可用于制作电影海报的3D旋转切换特效等。
+
+ 使用方法
+在页面中引入jquery和Carousel.js文件。
+
+&amp;lt;script src=&#34;js/jquery-1.9.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/Carousel.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+整个旋转木马的HTML结构如下：
+
+&amp;lt;div class=&#34;poster-main&#34; id=&#34;carousel&#34; data-setting=&#39;{
+&#34;width&#34;:1000,
+&#34;height&#34;:300,
+&#34;posterWidth&#34;:600,
+&#34;posterHeight&#34;:300,
+&#34;scale&#34;:0.8,
+&#34;speed&#34;:1000,
+&#34;autoPlay&#34;:true,
+&#34;delay&#34;:3000,
+&#34;verticalAlign&#34;:&#34;middle&#34;
+}&#39;&amp;gt; 
+ &amp;lt;div class=&#34;poster-btn poster-prev-btn&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+ &amp;lt;ul class=&#34;poster-list&#34;&amp;gt; 
+&amp;lt;li class=&#34;poster-item&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34; width=&#34;100\%&#34; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; 
+&amp;lt;li class=&#34;poster-item&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/2.jpg&#34; alt=&#34;&#34; width=&#34;100\%&#34; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; 
+&amp;lt;li class=&#34;poster-item&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/3.jpg&#34; alt=&#34;&#34; width=&#34;100\%&#34; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; 
+&amp;lt;li class=&#34;poster-item&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/4.jpg&#34; alt=&#34;&#34; width=&#34;100\%&#34; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; 
+&amp;lt;li class=&#34;poster-item&#34;&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;img src=&#34;images/5.jpg&#34; alt=&#34;&#34; width=&#34;100\%&#34; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; 
+ &amp;lt;/ul&amp;gt; 
+ &amp;lt;div class=&#34;poster-btn poster-next-btn&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该旋转木马插件。
+
+$(function(){
+Carousel.init($(&#34;#carousel&#34;));
+$(&#34;#carousel&#34;).init();
+});
+
+
+ 配置参数
+该旋转木马可用的配置参数如下（这些参数通过data-setting属性以对象的方式传入）：
+
+
+width：幻灯片宽度。
+
+height：幻灯片高度。
+
+posterWidth：当前帧宽度。
+
+posterHeight：当前帧高度。
+
+scale：图片比例大小。
+
+speed：播放速度。
+
+autoPlay：是否自动播放。
+
+delay：自动播放速度。
+
+verticalAlign：垂直对齐方式。
+
+Carousel.js旋转木马插件的github地址为：https://github.com/LikaiLee/Carousel
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_644">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_645">
+                        兼容ie8的响应式jquery轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_645" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610131519.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款兼容ie8的响应式jquery轮播图插件。该jquery轮播图插件使用简单，浏览器兼容性良好。
+内容：
+
+
+简要教程
+
+
+这是一款兼容ie8的响应式jquery轮播图插件。该jquery轮播图插件使用简单，浏览器兼容性良好。它的特点还有：
+
+支持横屏/竖屏滑动
+支持循环播放
+支持自动播放（鼠标悬停到导航按钮上可暂停）
+支持键盘方向键和鼠标滑轮切换
+
+
+ 使用方法
+在页面中引入pageSwitch.min.css，jquery和pageSwitch.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/pageSwitch.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/pageSwitch.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该轮播图的HTML结构如下：
+ 
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;sections&#34;&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section0&#34;&amp;gt;&amp;lt;h3&amp;gt;this is the page0&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section1&#34;&amp;gt;&amp;lt;h3&amp;gt;this is the page1&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section2&#34;&amp;gt;&amp;lt;h3&amp;gt;this is the page2&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section3&#34;&amp;gt;&amp;lt;h3&amp;gt;this is the page3&amp;lt;/h3&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+ 
+ 
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该轮播图插件。
+
+$(&#34;#container&#34;).PageSwitch({
+direction:&#39;horizontal&#39;,
+easing:&#39;ease-in&#39;,
+duration:1000,
+autoPlay:true,
+loop:&#39;false&#39;
+});
+ 
+ 
+ 配置参数
+ 
+selectors : {
+sections : &#34;.sections&#34;,// 容器
+section : &#34;.section&#34;, // 每一页
+pages : &#34;.pages&#34;, // 分页导航(小圆点)
+active : &#34;.active&#34; // 当前激活页
+},
+index : 0, // 开始位置
+easing :&#34;ease&#34;, // 动画函数
+duration : 500, // 毫秒
+loop : false, // 是否循环播放，自动播放时该属性为true，设置无效
+pagination : true, // 是否分页处理，是否显示小圆点
+keyboard : true, // 是否支持键盘上下左右切换
+direction : &#34;vertical&#34;, // 竖直或水平滑动
+autoPlay: true, // 自动播放
+interval: 3000, // 自动播放间隔
+callback :&#34;&#34; // 切换动画结束后回调函数 
+ 
+ 该jquery轮播图插件的github地址为：https://github.com/ParadeTo/page-switch
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_645">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_646">
+                        轻量级jQuery全屏翻页插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_646" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607261618.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+naiveScroll是一款轻量级的jQuery全屏翻页插件。通过该插件，可以在滚动鼠标或点击按钮时，以平滑过渡的方式垂直全屏翻页。
+内容：
+
+
+简要教程
+
+
+naiveScroll是一款轻量级的jQuery全屏翻页插件。通过该插件，可以在滚动鼠标或点击按钮时，以平滑过渡的方式垂直全屏翻页。该插件的特点还有：
+
+覆盖鼠标事件进行全屏翻页。
+不需要添加额外的HTML元素。
+不会产生多余的事件。
+提供API来手动上下翻页。
+轻量级，压缩后的版本小于1KB。
+
+
+ 使用方法
+在页面中引入jquery和naiveScroll.min.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;naiveScroll.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用&amp;lt;section&amp;gt;元素作为每一个分段页面的标签，不需要在添加额外的class类。你也可以修改js代码来使用其它标签作为分段标签。
+
+&amp;lt;body&amp;gt;
+&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+ CSS样式
+你可以为每一个&amp;lt;section&amp;gt;分段设置不同的背景颜色，同时为各个分段设置必要的top属性。
+
+&amp;lt;body&amp;gt;
+&amp;lt;section class=&#34;page1&#34;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section class=&#34;page2&#34;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;section class=&#34;page3&#34;&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+/* 使用背景颜色 */
+.page1 {
+top: 0;
+background-color: lightcoral;
+}
+/* 使用背景图像 */
+.page2 {
+top: 100%;
+background: url(&amp;quot;foo.jpg&amp;quot;) no-repeat center center;
+background-size: cover;
+}
+/* 注意top属性的使用 */
+.page3 {
+top: 200%;
+background-color: lightblue;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该全屏翻页插件。
+
+$(document).ready(function() {
+$(this).\_naiveScroll.init();
+});
+
+
+ 事件
+你可以通过按钮来触发页面的向上滚动或向下滚动。
+
+$(&#39;#upBtn&#39;).click(function () {
+$(this).\_naiveScroll.triggerScroll(100);
+});
+(&amp;#039;#downBtn&amp;#039;).click(function () {
+(this)._naiveScroll.triggerScroll(-100);
+});
+
+naiveScroll全屏滚动插件的github地址为：https://github.com/doodlewind/naiveScroll
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_646">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_648">
+                        基于jQuery UI的模拟windows窗口插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_648" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608121528.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-lwd是一款轻量级的基于jQuery UI的模拟windows窗口插件。该插件可以模拟windows窗口，对窗口进行最大化，最小化，拖动等操作。并提供windows2000经典主题效果。
+内容：
+
+
+简要教程
+
+
+jquery-lwd是一款轻量级的基于jQueryUI的模拟windows窗口插件。该插件可以模拟windows窗口，对窗口进行最大化，最小化，拖动等操作。并提供windows2000经典主题效果。它的特点有：
+
+通过HTML5 data属性来设置窗口的属性。
+高亮聚焦的窗口。
+最大化和恢复窗口尺寸。
+最小化和恢复窗口尺寸。
+任务栏显示当前打开的窗口。
+通过点击聚焦和恢复窗口。
+可以显示系统时间。
+可以显示开始按钮。
+提供windows2000主题。
+
+
+
+ 使用方法
+在页面中引入jquery和jquery ui相关文件，以及jquery-lwd.css和jquery-lwd.js文件。
+
+&amp;lt;link href=&#34;lib/jquery-ui/themes/default/jquery-ui.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;link href=&#34;src/jquery-lwd/themes/jquery-ui/jquery-lwd.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;lib/jquery-ui/jquery-ui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;src/jquery-lwd/jquery-lwd.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+创建一个窗口的基本HTML结构如下：
+
+&amp;lt;div class=&#34;window&#34;
+ data-autOpen=&#34;true&#34;
+ data-closable=&#34;true&#34;
+ data-closeOnEscape=&#34;false&#34;
+ data-closeText=&#34;CloseThis&#34;
+ data-dialogClass=&#34;window-dialog&#34;
+ data-draggable=&#34;true&#34;
+ data-height=&#34;350&#34;
+ data-hide=&#34;false&#34;
+ data-maxHeight=&#34;600&#34;
+ data-maxWidth=&#34;800&#34;
+ data-minHeight=&#34;320&#34;
+ data-minWidth=&#34;480&#34;
+ data-modal=&#34;false&#34;
+ data-positionX=&#34;100&#34;
+ data-positionY=&#34;100&#34;
+ data-resizable=&#34;true&#34;
+ data-show=&#34;true&#34;
+ data-width=&#34;400&#34;
+ data-title=&#34;窗口标题&#34;
+&amp;gt;
+ 
+&amp;lt;/div&amp;gt;
+
+jquery-lwd模拟windows窗口插件的github地址为：https://github.com/mstellmacher/jquery-lwd
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_648">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_65">
+                        jQuery响应式Tabs选项卡插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_65" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809281506.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery响应式Tabs选项卡插件。该tabs选项卡插件兼容ie8，当浏览器缩小到小于选项卡的宽度时，选项卡的菜单会以下拉菜单的方式来显示。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery响应式Tabs选项卡插件。该tabs选项卡插件兼容ie8，当浏览器缩小到小于选项卡的宽度时，选项卡的菜单会以下拉菜单的方式来显示。
+
+ 使用方法
+在页面中引入jquery和jquery.horizontalmenu.js、jquery.horizontalmenu.css文件。
+
+&amp;lt;link href=&#34;css/jquery.horizontalmenu.css&#34; rel=&#34;stylesheet&#34;&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.horizontalmenu.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML
+Tabs选项卡的基本HTML结构如下。
+
+&amp;lt;div class=&#34;ah-tab-wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;ah-tab&#34;&amp;gt;
+&amp;lt;a class=&#34;ah-tab-item&#34; data-ah-tab-active=&#34;true&#34; href=&#34;&#34;&amp;gt;菜单项1&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;ah-tab-item&#34; href=&#34;&#34;&amp;gt;菜单项2&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;ah-tab-item&#34; href=&#34;&#34;&amp;gt;菜单项3&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;ah-tab-item&#34; href=&#34;&#34;&amp;gt;菜单项4&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;ah-tab-item&#34; href=&#34;&#34;&amp;gt;菜单项5&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content-wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content&#34; data-ah-tab-active=&#34;true&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Personal data&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Contacts&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Tab item with a long name&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Password change&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ah-tab-content&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Tab item&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来使选项卡自适应屏幕宽度，在屏幕宽度小于选项卡宽度时，显示为下拉菜单。
+
+$(function () {
+$(&#39;.ah-tab-wrapper&#39;).horizontalmenu({
+itemClick : function(item) {
+$(&#39;.ah-tab-content-wrapper .ah-tab-content&#39;).removeAttr(&#39;data-ah-tab-active&#39;);
+$(&#39;.ah-tab-content-wrapper .ah-tab-content:eq(&#39; + $(item).index() + &#39;)&#39;).attr(&#39;data-ah-tab-active&#39;, &#39;true&#39;);
+return false; //if this finction return true then will be executed http request
+}
+});
+});
+
+ jQuery响应式Tabs选项卡插件的github地址为：https://github.com/romannovojilov/adaptive-horizontal-menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_65">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_650">
+                        带4种特效的轻量级jQuery模态对话框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_650" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608301507.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jDialog是一款轻量级的jQuery模态对话框插件。jDialog支持4轴弹出对话框特效：淡入淡出，顶部滑出，水平滑动和翻转动画。该对话框插件压缩后的版本仅1KB大小，非常的轻巧。
+内容：
+
+
+简要教程
+
+
+jDialog是一款轻量级的jQuery模态对话框插件。jDialog支持4轴弹出对话框特效：淡入淡出，顶部滑出，水平滑动和翻转动画。该对话框插件压缩后的版本仅1KB大小，非常的轻巧。
+
+ 使用方法
+在页面中引入jdialog.min.css和jquery、jdialog.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/jdialog.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;script&amp;gt;
+&amp;lt;script src=&#34;path/to/jdialog.min.js&#34;&amp;gt;&amp;lt;script&amp;gt;
+
+
+ HTML结构
+可以使用一个按钮&amp;lt;button&amp;gt;来触发模态对话框。
+
+&amp;lt;button data-toggle=&#34;JDialog&#34; data-target=&#34;dialog&#34;&amp;gt;CLICK ME&amp;lt;/button&amp;gt;
+
+对话框的基本HTML结构如下：
+
+&amp;lt;div class=&#34;jDialog&#34; id=&#34;dialog-1&#34;&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过jDialog()方法来初始化模态对话框插件。
+
+$(&#34;#dialog&#34;).jDialog({
+skinClassName: &#39;demo&#39;,
+allowOverlay: true,
+animationType: &#39;fade-in&#39;
+});
+
+
+ 配置参数
+JDialog对话框插件的可用配置参数如下：
+
+
+skinClassName：对话框的自定义class名称。
+
+allowOverlay：是否显示遮罩层。
+
+animationType：显示对话框时的动画，可以是：&#39;fade-in&#39;, &#39;sticky-up&#39;, &#39;slide-in&#39; 和 &#39;flip&#39;。
+
+JDialog模态对话框插件的github地址为：https://github.com/lancebiu/JDialog
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_650">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_652">
+                        Adapttext.js-jQuery响应式文字插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_652" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609291650.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+adapttext.js是一款简单实用的jQuery响应式文字插件。该插件通过计算文本的font-size来使文字适应它的父容器的宽度和高度。
+内容：
+
+
+简要教程
+
+
+adapttext.js是一款简单实用的jQuery响应式文字插件。该插件通过计算文本的font-size来使文字适应它的父容器的宽度和高度。
+
+ 安装
+可以通过npm和bower来安装adapttext.js插件。
+
+npm install adapttext.js --save-dev
+bower install adapttext.js --save-dev
+
+
+ 使用方法
+在页面中引入adapttext.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/gauge.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 不依赖jQuery
+adapttext.js可以不依赖于jQuery而单独使用，例如：
+
+&amp;lt;div id=&#34;mybox&#34;&amp;gt;
+&amp;lt;span&amp;gt;This is an example test...&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+
+添加样式：
+
+#mybox {
+width: 50\%;
+height: 30\%;
+}
+
+初始化插件：
+
+var el = document.getElementById(&#39;mybox&#39;);
+var adapt = new AdaptText(el);
+
+
+ 作为jQuery插件使用
+adapttext.js也可以作为jQuery插件来使用。例如：
+
+$(&#39;.mybox&#39;).adaptText(options);
+
+如果在稍后需要用到adapttext.js的实例对象，可以如下操作：
+
+var instance = $(&#39;.mybox&#39;).data(&#39;adaptText&#39;);
+instance.destroy();
+
+
+ 配置参数
+adapttext.js响应式字体插件的配置参数有：
+
+new AdaptText(el, {
+minFontSize: 10, //define in px the minimum font size possible
+maxFontSize: 200, //define in px the maximum font size possible
+tollerance: 10, //define a number of px of allowed exceed
+callback: function(newpx) {
+//this callback is called everytime a new font size is set
+//the first argument is the new font-size px value
+}
+});
+
+
+
+minFontSize：最小的字体大小，单位像素。
+
+maxFontSize：最大的字体大小，单位像素。
+
+tollerance：定义可以超出的像素范围。
+
+callback：回调函数。
+
+
+ 方法
+adapttext.js响应式字体插件的可用方法有：
+
+
+.destroy()：移除对窗口缩放事件的监听。
+
+.elaborate()：强制重新计算当前的字体大小。
+
+adapttext.js响应式字体插件的github地址为：https://github.com/luruke/adapttext.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_652">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/87/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/89/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

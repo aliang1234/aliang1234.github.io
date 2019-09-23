@@ -1,0 +1,299 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery仿腾讯视频鼠标滑过图片滑动动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery仿腾讯视频鼠标滑过图片滑动动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1611/201611151531.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1611/201611151531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201611154196.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jquery来模仿腾讯视频鼠标滑过图片滑动动画的特效。该特效使用jquery的animate动画函数来实现，可以在鼠标滑过指定的图片时，使对应的隐藏图片滑动展开，效果非常炫酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用jquery来模仿腾讯视频鼠标滑过图片滑动动画的特效。该特效使用jquery的animate动画函数来实现，可以在鼠标滑过指定的图片时，使对应的隐藏图片滑动展开，效果非常炫酷。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面底部，<code>&lt;body&gt;</code>标签结束之前，引入jquery文件。</p>
+<pre class="brush:html">
+&lt;script src="path/to/js/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该图片滑动动画特效的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="wamp"&gt;
+&lt;div class="box\_w"&gt;
+&lt;dl&gt;
+&lt;!--缩略图--&gt;
+&lt;dt&gt;&lt;a&gt;&lt;img src="img/1.jpg"/&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;!--隐藏的大图--&gt;
+&lt;dd&gt;&lt;a&gt;&lt;img src="img/6.jpg"/&gt;&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a&gt;&lt;img src="img/2.jpg"/&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a&gt;&lt;img src="img/7.jpg"/&gt;&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a&gt;&lt;img src="img/3.jpg"/&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a&gt;&lt;img src="img/9.jpg"/&gt;&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a&gt;&lt;img src="img/4.jpg"/&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a&gt;&lt;img src="img/8.jpg"/&gt;&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为该特效添加下面的CSS样式：</p>
+<pre class="brush:css">
+*{ margin:0px; padding:0px;}
+.wamp{ width:1000px; margin:50px auto; display:block; background:#fff; height:600px; 
+ position:relative; overflow:hidden;}
+.box\_w{ width:1000px;white-space:nowrap; font-size:0px; position:absolute; left:0px; top:0px;}
+.box\_w dl{ width:250px;white-space:nowrap;font-size:0px; overflow:hidden; 
+ display:inline-block; cursor:pointer;}
+.box\_w dt{ width:250px; height:105px;display:inline-block; }
+.box\_w dd{ width:744px; height:95px;display:inline-block; margin-top:10px;}
+.box\_w dd img{ width:100\%; height:95px; display:inline-block;}
+.box\_w a{ display:inline-block;}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>在页面DOM元素加载完毕之后，使用下面的方法来为容器绑定鼠标进入和离开事件，使鼠标进入时相应图片可以展开，离开时又收缩回去。</p>
+<pre class="brush:js">
+$(function(){
+$('.box\_w dl').mouseover(function(){
+var aa=$(this).index();
+var aac=-aa*250
+$(this).parent('.box\_w').stop().animate({left:aac},600)
+$(this).stop().animate({width:"1000px"},600).siblings('dl').stop().animate({width:"250px"},600);
+})
+$('.box\_w dl').mouseout(function(){
+$(this).parent('.box\_w').stop().animate({left:"0px"},600)
+$(this).stop().animate({width:"250px"},600)
+})
+})
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1611/201611151531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201611154196.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_594">
+                                <h3 class="post-title">
+                                    纯js带弹性动画的手风琴图片相册特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1875 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1109">
+                        jQuery和CSS3手机APP功能界面切换特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1109" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507022057.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的手机APP功能界面切换特效。该特效在点击用户头像上的编辑按钮之后，或弹出一个圆形的功能菜单，可以选择其中的某一项功能子菜单进入相应的界面。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3制作的手机APP功能界面切换特效。该特效在点击用户头像上的编辑按钮之后，或弹出一个圆形的功能菜单，可以选择其中的某一项功能子菜单进入相应的界面。
+
+ 制作方法
+
+ HTML结构
+该APP特效的最主要功能是界面的切换，其中圆形菜单的HTML结构如下：
+
+&amp;lt;div class=&#34;editable&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_circle&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater-item&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-camera&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater-item&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-comments&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater-item&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-video-camera&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater&#34;&amp;gt;
+&amp;lt;div class=&#34;editable\_\_rotater-item&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-user&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;editable\_\_cont&#34;&amp;gt;
+&amp;lt;img src=&#34;img/user.jpg&#34; class=&#34;editable\_\_cont-img&#34;&amp;gt;
+&amp;lt;span class=&#34;editable\_\_cont-edit js-edit&#34;&amp;gt;
+&amp;lt;i class=&#34;fa fa-pencil-square-o&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+具体的CSS代码请参考下载文件。
+高APP特效中使用jQuery来添加和删除相应的CLASS，以及处理一些菜单项的点击事件。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1109">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_111">
+                        可展开列的jQuery表格插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_111" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1905/201905045454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可展开列的jQuery表格插件。该插件首先在初始化时，所有的表格列采用简洁的显示方式，当用户点击表格列头时，该列被展开，显示详细信息。
+内容：
+
+
+简要教程
+
+
+这是一款可展开列的jQuery表格插件。该插件首先在初始化时，所有的表格列采用简洁的显示方式，当用户点击表格列头时，该列被展开，显示详细信息。
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;assets/css/demo.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/demo.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+
+&amp;lt;div class=&#34;loader&#34;&amp;gt;
+&amp;lt;div class=&#34;lds-ripple&#34;&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;aside class=&#34;sidebar&#34;&amp;gt;
+&amp;lt;div class=&#34;logo&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/aside&amp;gt;
+&amp;lt;section class=&amp;quot;table-wrapper&amp;quot;&amp;gt;
+&amp;lt;table&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Basic&amp;lt;/p&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Basic&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;plus&amp;lt;/span&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Standard&amp;lt;/p&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Standard&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;plus&amp;lt;/span&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Medium&amp;lt;/p&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Medium&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;plus&amp;lt;/span&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Large&amp;lt;/p&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Large&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;plus&amp;lt;/span&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Extended&amp;lt;/p&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;th class=&amp;quot;trigger&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Extended&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;plus&amp;lt;/span&amp;gt;&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Price&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$19&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$29&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$39&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$49&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$59&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$69&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$79&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$89&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$99&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;$129&amp;lt;/p&amp;gt; &amp;lt;span&amp;gt;Per Month&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Bandwidth&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Monthly&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;1GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;2GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;3GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;4GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;5GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;6GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;7GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;8GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;9GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;12GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Unlimited in first year&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Storage&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Free installation&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;1GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;2GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;3GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;4GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;5GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;6GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;7GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;8GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;9GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;12GB *&amp;lt;/p&amp;gt;&amp;lt;span&amp;gt;Free installation&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Add Ons&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Sub domains&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;1 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;2 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;3 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;4 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;5 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;6 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;7 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Sub domains&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Database&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Support&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;- *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;Without Sub domain&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;1 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Database - Without Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;2 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - Without Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;3 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - Without Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;4 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - With Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;5 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - With Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;6 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - With Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;p&amp;gt;7 *&amp;lt;/p&amp;gt;
+&amp;lt;span&amp;gt;MySQL Databases - With Support&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Backup&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Free (Yes/No)&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;No.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;No.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-close.png&amp;quot; class=&amp;quot;close&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;No.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;assets/img/icon-correct.png&amp;quot; class=&amp;quot;correct&amp;quot; alt=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;span&amp;gt;Yes.&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;/section&amp;gt;
+
+ 该可展开列的jQuery表格插件的github网址为：https://github.com/COIDEAwebsite/multipurpose-table-with-animated-collapsible-columns
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_111">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1110">
+                        7种HTML5 Figure图片字幕标题特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-info">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1110" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506281526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常酷的HTML5 Figure图片字幕标题特效插件。该插件可以将任何图片元素转换为带标题的HTML figure元素。它内置了7种不同的图片标题效果。当标题文字高于图片时，还会出现滚动条来显示多出的文字。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常酷的HTML5 Figure图片字幕标题特效jQuery插件。该插件可以将任何图片元素转换为带标题的HTML figure元素。它内置了7种不同的图片标题效果。当标题文字高于图片时，还会出现滚动条来显示多出的文字。
+该图片标题特效使用Greensock动画库来制作动画效果。该插件可以在所有的现代浏览器中工作，在IE8和IE9浏览器中部分效果会被回退。它也可以在移动触摸设备中工作，如iPad，当触摸图片时标题出现，触摸其它地方时标题被隐藏。
+
+ 使用方法
+
+ HTML结构
+该图片标题特效可以直接使用一个&amp;lt;img&amp;gt;元素来制作，也可以使用HTML5 &amp;lt;figure&amp;gt;元素来制作：
+
+&amp;lt;img id=&#34;eg1&#34; src=&#34;img/sunbreakthrough.jpg&#34; title=&#34;An awesome picture caption!&#34; /&amp;gt; 
+&amp;lt;figure id=&#34;eg6&#34;&amp;gt;
+&amp;lt;img src=&#34;img/sunbreakthrough.jpg&#34; alt=&#34;An awesome picture&#34;&amp;gt;
+&amp;lt;figcaption&amp;gt;An awesome picture caption!&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+
+
+ CSS样式
+该特效中给出了最基本的CSS样式，你可以根据需要对figurecaptions.css文件进行修改。
+
+figure, .figurefx{
+position: relative;
+overflow: hidden;
+display: inline-block;
+z-index: 2000; /* set this to highest z-index value on your page */
+margin: 0;
+padding: 0;
+}
+.figurefx img{
+position: relative;
+display: block;
+left: 0;
+top: 0;
+z-index: 98;
+}
+.figurefx div.veils{
+content: &#39;&#39;;
+width: 100%;
+height: 100%;
+display: block;
+background: black;
+position: absolute;
+opacity: 0.3;
+visibility: hidden;
+top: 0;
+left 0;
+z-index: 99;
+}
+.figurefx figcaption{
+position: absolute;
+left: 0;
+top: 50%; /* vertically center caption /
+transform: translateY(-50%); / vertically center caption */
+width: 100%;
+height: auto;
+background: #000;
+color: #fff;
+padding: 5px 10px;
+overflow: auto;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+opacity: 0;
+z-index: 100;
+}
+.figurefx figcaption a{
+text-decoration: none;
+}
+a#stickyhoverfixios{
+position: fixed;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+z-index: 1999;/* set this to 2nd highest z-index value on your page */
+display: none;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该图片标题插件。
+
+$(function(){ 
+ $(&#39;selector&#39;).addCaption({
+//comma separated options
+ })
+})
+
+
+ 配置参数
+
+
+
+
+参数
+描述
+
+
+
+
+
+fx: &#39;string&#39;默认值&#34;default&#34;
+图片上的标题效果，下面是7种可用的标题效果：
+
+
+&#34;default&#34;：遮罩层从上向下滑落，标题从左向后滑出。
+
+&#34;zoomin&#34;：当鼠标滑过时图片被放大。
+
+&#34;dualpanels&#34;：遮罩层分别从上面和下面向中间合拢，然后标题出现。
+
+&#34;dualpanels2&#34;：遮罩层分别从左边和右边向中间合拢，然后标题出现。
+
+&#34;pushup&#34;：图片被轻微的向上推，图片标题从下方出现。
+
+&#34;flipopen&#34;：图片翻转，标题在图片下方出现。
+
+&#34;flipreveal&#34;：图片绕X轴旋转180度，然后标题出现。
+
+
+
+
+
+caption: &#39;string|title&#39;默认值：null
+&#34;string&#34;参数表示图片的标题，可以带HTML标签。&#34;title&#34;参数表示使用图片的title标签来作为图片标题。
+
+
+
+duration: seconds默认值：0.5
+图片标题动画的持续时间，单位毫秒。
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1110">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1111">
+                        支持移动手机的多功能响应式jQuery幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1111" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507131635.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+zenith-slider是一款支持移动手机的多功能响应式jQuery幻灯片插件。该幻灯片插件不同于其它幻灯片的地方是使用不同的布局来提高网页或app的性能，你还可以在参数中通过CSS来自定义幻灯片的样式。
+内容：
+
+
+简要教程
+
+
+zenith-slider是一款支持移动手机的多功能响应式jQuery幻灯片插件。该幻灯片插件不同于其它幻灯片的地方是使用不同的布局来提高网页或app的性能，你还可以在参数中通过CSS来自定义幻灯片的样式。它的特点有：
+
+为不同的设备内置了4种不同的布局效果：default, hand, screen, slider
+响应式设计和完全支持移动触摸事件。
+使用基于animate.css的CSS3动画特效。
+支持自动播放模式，鼠标悬停时暂停播放。
+支持圆点导航，箭头导航和缩略图导航。
+提供大量的参数选项和回调函数。
+
+
+ 使用方法
+使用该幻灯片插件需要引入下面的一些依赖文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/font-awesome.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/animate.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery-min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/zenith.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+Default布局的HTML结构如下：
+
+&amp;lt;div id=&#34;demo&#34; class=&#34;tf\_slider&#34;&amp;gt; 
+&amp;lt;div class=&amp;quot;tf_container&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;tf_slide&amp;quot;&amp;gt;Item 1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;tf_slide&amp;quot;&amp;gt;Item 2&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;tf_slide&amp;quot;&amp;gt;Item 3&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;tf_slide&amp;quot;&amp;gt;Item 4&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;tf_slide&amp;quot;&amp;gt;Item 5&amp;lt;/div&amp;gt;
+...
+&amp;lt;span id=&amp;quot;left&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span id=&amp;quot;right&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;div id=&amp;quot;bullet-navs&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该幻灯片插件。
+
+$(&#39;#element&#39;).zenith();
+
+
+ 配置参数
+
+ 通用配置参数
+下面的参数适用于所有的幻灯片布局。其它每个布局的独有配置参数在后面列出。
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+layout
+&#39;default&#39;
+选择一种幻灯片的布局方式。可选值有：‘default’, ‘hand’, ‘screen’, ‘slider’
+
+
+direction
+&#39;horizontal&#39;
+幻灯片的运动方向。可选值有：‘horizontal’,‘vertical’
+
+
+Animation
+&#39;Slide&#39;
+幻灯片的过渡动画效果。可用的过渡动画效果有： ‘Slide’, ‘Bounce’, ‘Fade’, ‘RotateDown’, ‘RotateUp’, ‘Zoom’, ‘Flip’
+
+
+background
+
+幻灯片的背景颜色。可以使用任何合法的颜色值
+
+
+activeIndex
+0
+设置在页面加载完成后默认激活的幻灯片slide序号
+
+
+autoplay
+true
+设置是否自动播放幻灯片
+
+
+autoplayStop
+false
+在鼠标进入幻灯片区域时停止自动播放幻灯片。它不同于autoplayPause，该参数会立刻停止自动播放幻灯片
+
+
+autoplayPause
+true
+在鼠标进入幻灯片区域时暂停播放幻灯片，鼠标离开后继续播放幻灯片
+
+
+autoplaySpeed
+3000
+幻灯片两个slide之间的延迟时间
+
+
+slideSpeed
+500
+过渡动画的持续时间
+
+
+
+
+
+ Default布局和Hand布局配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+circleColor
+&#39;cornsilkblue&#39;
+在高亮图标周围圆形或方形的颜色
+
+
+iconColor
+&#39;#fffff0&#39;
+高亮图标的颜色
+
+
+activeColor
+&#39;crimson&#39;
+当前激活的高亮图标的颜色
+
+
+
+
+
+ Screen布局配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+bullets
+true
+是否显示圆点导航按钮
+
+
+bulletsColor
+&#39;#f7f7f7&#39;
+圆点导航按钮的颜色
+
+
+bulletsAC
+&#39;cornflowerblue&#39;
+当前激活的圆点导航按钮的颜色
+
+
+arrows
+true
+是否显示箭头导航按钮
+
+
+
+
+
+ Slider布局配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+bullets
+true
+是否显示圆点导航按钮
+
+
+bulletsColor
+&#39;#f7f7f7&#39;
+圆点导航按钮的颜色
+
+
+bulletsAC
+&#39;cornflowerblue&#39;
+当前激活的圆点导航按钮的颜色
+
+
+arrows
+true
+是否显示箭头导航按钮
+
+
+markup
+[&#39;.tf\_container&#39;,&#39;.tf\_slide&#39;]
+自定义的容器class或id，或slide的class或Id
+
+
+width
+&#39;65\%&#39;
+幻灯片的宽度，可以设置为px，em 或 \%
+
+
+height
+&#39;320px&#39;
+幻灯片的高度，可以设置为px，em 或 \%
+
+
+margin
+&#39;60px&#39;
+幻灯片和其它元素上下间距
+
+
+fullWidth
+false
+是否设置幻灯片为全屏宽度
+
+
+style
+&#39;shadow&#39;
+选择幻灯片容器的预定义样式。可选值有：‘shadow’, ‘border’, ‘frame’
+
+
+customStyle
+[]
+添加自定义样式
+
+
+customNavs
+[‘#bullet-navs’, ‘li’]
+该参数可以修改默认的圆点导航的HTML标签
+
+
+navPosition
+&#39;bottom&#39;
+圆点导航按钮的位置。水平幻灯片的可选值为：&#39;bottom&#39;, ‘top’。垂直幻灯片的可选值为：‘left’, ‘right’
+
+
+thumbsBG
+true
+是否显示缩略图的背景
+
+
+thumbsSize
+{
+xsmall: 45,
+small: 65, 
+medium: 92,
+large : 108,
+xlarge: 128
+}
+
+缩略图的尺寸。xsmall用于480px的屏幕中，small用于960像素的屏幕中， medium用于1200像素的屏幕中，large 用于1600像素的屏幕，xlarge用于1960像素的屏幕
+
+
+fixedThumbs
+true
+设置缩略图位置为固定位置
+
+
+
+
+
+ 事件
+下面是一些可用的回调函数。
+
+
+
+
+函数
+描述
+
+
+
+
+prevSlide
+在调用前一张幻灯片时触发
+
+
+nextSlide
+在调用下一张幻灯片时触发
+
+
+firstSlide
+在调用第一张幻灯片时触发
+
+
+lastSlide
+在调用最后一张幻灯片时触发
+
+
+animationEnd
+当前slide结束过渡动画时触发
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1111">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1112">
+                        实现逐字逐句显示文字的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1112" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507071631.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Letter-by-Letter-JS是一款可以实现逐字逐句显示文字的jQuery插件。通过该插件你可以将一个段落的文字内容一个字一个字的逐一显示。文字的显示可以是打印机效果，也可以设置为淡入淡出效果，同时还可以控制文字的显示速度。
+内容：
+
+
+简要教程
+
+
+Letter-by-Letter-JS是一款可以实现逐字逐句显示文字的jQuery插件。通过该插件你可以将一个段落的文字内容一个字一个字的逐一显示。文字的显示可以是打印机效果，也可以设置为淡入淡出效果，同时还可以控制文字的显示速度。
+
+ 使用方法
+首先需要引入jQuery和l-by-l.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery-1.11.3.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/l-by-l.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+你可以在任何HTML容器元素中调用该文字插件。可以是一个&amp;lt;div&amp;gt;，一个&amp;lt;span&amp;gt;或是一个段落&amp;lt;p&amp;gt;元素。
+
+&amp;lt;div class=&#34;example&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该文字插件。
+
+$(&#34;.example&#34;).lbyl({
+content: &#34;Lorem ipsum dolor sit amet...&#34;
+});
+
+注意，如果在初始化前，&amp;lt;div&amp;gt;元素中已经存在一些文字内容，它们会被清除，之后才逐字显示上面的内容。
+你也可以在初始化时传入一些参数：
+
+$(&#34;.example&#34;).lbyl({
+content: &#34;Lorem ipsum dolor sit amet...&#34;,
+speed: 10, //time between each new letter being added
+type: &#39;show&#39;, // &#39;show&#39; or &#39;fade&#39;
+fadeSpeed: 500, // Only relevant when the &#39;type&#39; is set to &#39;fade&#39;
+finished: function(){ console.log(&#39;finished&#39;) } // Finished Callback
+});
+
+如果你想在一个段落显示结束之后，在显示下一个段落，可以在finished方法中调用该插件的第二个实例来实现。
+
+jQuery(document).ready(function($){
+$(&amp;quot;.example-1&amp;quot;).lbyl({
+content: &amp;quot;first content...&amp;quot;,
+finished: function() {
+$(&amp;quot;.example-2&amp;quot;).lbyl({
+content: &amp;quot;second content...&amp;quot;
+});
+}
+});
+});
+
+
+ 移动手机兼容
+该插件在移动手机上使用可能会有一些性能上的问题，可以通过Modernizer来检测是否是手机设备来做相应的处理：
+
+jQuery(document).ready(function($){ 
+if ( $(&#39;html&#39;).hasClass(&#39;touch&#39;) ) {
+// Do Nothing 
+} else {
+$(&#34;.example-1&#34;).lbyl({
+content: &#34;Lorem ipsum dolor sit amet...&#34;
+})
+ }
+});
+
+或者可以使用Device.js来检测当前设备是手机，平板还是桌面设备，在做相应的处理：
+
+jQuery(document).ready(function($){
+if ( $(&#39;html&#39;).hasClass(&#39;desktop&#39;) ) {
+$(&#34;.example-1&#34;).lbyl({
+content: &#34;Lorem ipsum dolor sit amet...&#34;
+})
+} else {
+// Do Nothing 
+ }
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1112">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1113">
+                        多列网格样式下拉列表框美化jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1113" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507231756.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Multi-Column-Select是一款多列网格样式下拉列表框美化jQuery插件。通过该插件可以将下拉列表转换为多列的网格选项布局。它支持下拉列表的单选和多选，在鼠标滑过列表选项时还带有一些有趣的动画特效。
+内容：
+
+
+简要教程
+
+
+Multi-Column-Select是一款多列网格样式下拉列表框美化jQuery插件。通过该插件可以将下拉列表转换为多列的网格选项布局。它支持下拉列表的单选和多选，在鼠标滑过列表选项时还带有一些有趣的动画特效。
+
+ 使用方法
+
+ HTML结构
+该多列下拉列表的基本HTML结构如下：
+
+&amp;lt;form action=&#34;test.php&#34; method=&#34;GET&#34;&amp;gt;
+&amp;lt;div id=&#34;selectcontrol&#34;&amp;gt;
+&amp;lt;select name=&#34;car&#34;&amp;gt;
+&amp;lt;option value=&#34;Audi&#34;&amp;gt;Audi&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Bugatti&#34;&amp;gt;Bugatti&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Chrysler&#34;&amp;gt;Chrysler&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Daihatsu&#34;&amp;gt;Daihatsu&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Ford&#34;&amp;gt;Ford&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;GM&#34;&amp;gt;General Motors&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Honda&#34;&amp;gt;Honda&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Infiniti&#34;&amp;gt;Infiniti&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Jeep&#34;&amp;gt;Jeep&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;Kia&#34;&amp;gt;Kia&amp;lt;/option&amp;gt;
+ &amp;lt;/select&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&amp;gt;
+&amp;lt;/form&amp;gt; 
+
+
+ CSS样式
+下面的HTML标签是插件生成的，class和ID可以通过配置参数来更改。
+
+&amp;lt;div class=&#34;mcs-container&#34;&amp;gt;
+&amp;lt;a id=&#34;mcs-1&#34; data=&#34;Audi&#34; class=&#34;mcs-item active&#34;&amp;gt;Audi&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-2&#34; data=&#34;Bugatti&#34; class=&#34;mcs-item&#34;&amp;gt;Bugatti&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-3&#34; data=&#34;Chrysler&#34; class=&#34;mcs-item active&#34;&amp;gt;Chrysler&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-4&#34; data=&#34;Daihatsu&#34; class=&#34;mcs-item&#34;&amp;gt;Daihatsu&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-5&#34; data=&#34;Ford&#34; class=&#34;mcs-item&#34;&amp;gt;Ford&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-6&#34; data=&#34;GM&#34; class=&#34;mcs-item active&#34;&amp;gt;General Motors&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-7&#34; data=&#34;Honda&#34; class=&#34;mcs-item&#34;&amp;gt;Honda&amp;lt;/a&amp;gt;
+&amp;lt;a id=&#34;mcs-8&#34; data=&#34;Infiniti&#34; class=&#34;mcs-item&#34;&amp;gt;Infiniti&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+需要关注的CSS样式有下面这些：
+
+//toggle open /close button
+.mcs-open {
+}
+//container wrap for menu
+.mcs-container {
+overflow:hidden;
+display:none;
+}
+//menu items / option replacements
+.mcs-item {
+}
+
+
+ 调用插件
+
+$(&#34;#selectcontrol&#34;).MultiColumnSelect({
+multiple: false,// Single or Multiple Select- Default Single
+useOptionText : true, // Use text from option. Use false if you plan to use images
+hideselect :true, // Hide Original Select Control
+openmenuClass : &#39;mcs-open&#39;, // Toggle Open Button Class
+openmenuText :&#39;Choose An Option&#39;, // Text for button
+openclass : &#39;open&#39;, // Class added to Toggle button on open
+containerClass :&#39;mcs-container&#39;,// Class of parent container
+itemClass : &#39;mcs-item&#39;, // Class of menu items
+idprefix : null,// Assign as ID to items eg &#39;item-&#39; = #item-1, #item-2, #item-3...
+duration : 200, //Toggle Height duration
+onOpen : function(){},
+onClose : function(){},
+onItemSelect : function(){}
+});
+//Add item to selectbox
+$(&#39;#selectcontrol&#39;).MultiColumnSelectAddItem(OptionID,OptionValue,IDPrefix);
+//Destroy plugin
+$(&amp;quot;#selectcontrol&amp;quot;).MultiColumnSelectDestroy();
+
+
+ 配置参数
+
+
+multiple：单选还是多选，默认值false（单选）。
+
+useOptionText：在列表项中使用文本。如果要使用图片可设置为false。
+
+openmenuClass：默认值：&#39;mcs-open&#39;。切换打开按钮的class。
+
+openmenuText：默认值：&#39;Choose An Option&#39;。按钮上的文版。
+
+openclass：默认值：&#39;open&#39;在切换按钮打开时添加到按钮上的class。
+
+containerClass：默认值：&#39;mcs-container&#39;。父容器的class。
+
+itemClass：默认值：&#39;mcs-item&#39;。列表项的class。
+
+idprefix：默认值：null。为列表项分配ID。例如：&#39;item-&#39; = #item-1, #item-2, #item-3...
+
+duration：切换高度的持续时间。
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1113">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1114">
+                        可滑动触摸的jQuery隐藏侧边栏菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1114" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507191453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+slide-and-swipe-menu是一款支持移动手机滑动触摸的隐藏侧边栏菜单jQuery插件。该侧边栏菜单基于touchSwipe插件，可以通过按钮来触发打开侧边栏菜单，并通过滑动触摸来关闭菜单。
+内容：
+
+
+简要教程
+
+
+slide-and-swipe-menu是一款支持移动手机滑动触摸的隐藏侧边栏菜单jQuery插件。该侧边栏菜单基于touchSwipe插件，可以通过按钮来触发打开侧边栏菜单，并通过滑动触摸来关闭菜单。
+
+ 安装
+可以通过bower或nmp来安装该侧边栏菜单插件。
+
+bower install slide-and-swipe-menu --save
+npm install slide-and-swipe-menu --save
+
+
+ 使用方法
+使用该侧边栏菜单插件需要引入jQuery，jquery.touchSwipe.min.js和jquery.slideandswipe.js文件。
+
+&amp;lt;script src=&#34;jquery/1.8.2/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- touchSwipe library --&amp;gt;
+&amp;lt;script src=&amp;quot;http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- Sliding swipe menu javascript file --&amp;gt;
+&amp;lt;script src=&amp;quot;js/jquery.slideandswipe.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+或者直接使用Browserify：
+
+require(&#39;slideAndSwipe&#39;);
+
+
+ HTML结构
+下面是该侧边栏布局的基本HTML结构，侧边栏菜单放在&amp;lt;nav&amp;gt;元素中。
+
+&amp;lt;body&amp;gt;
+&amp;lt;nav&amp;gt;
+[...]
+&amp;lt;/nav&amp;gt;
+&amp;lt;main&amp;gt;
+[...]
+&amp;lt;a class=&#34;ssm-open-nav&#34; href=&#34;#&#34; title=&#34;Open / close&#34;&amp;gt;Open / close&amp;lt;/a&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;div class=&#34;ssm-overlay&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+
+
+ CSS样式
+需要为该侧边栏布局添加一些基本的CSS样式：
+
+/* 侧边栏菜单样式 */
+nav {
+height: 100\%;
+width: 280px;
+background-color: #0a4a3c;
+left: 0;
+top: 0;
+z-index: 2;
+position: fixed;
+overflow-y: auto;
+overflow-x: visible;
+transform: translate(-280px,0);
+}
+/* 遮罩层样式 */
+.ssm-overlay {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0,0,0,0.2);
+display: none;
+z-index: 1;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该侧边栏菜单插件。
+
+&amp;lt;script&amp;gt;
+$(document).ready(function() {
+$(&#39;nav&#39;).slideAndSwipe();
+});
+&amp;lt;/script&amp;gt;
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1114">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1115">
+                        基于Bootstrap 2的大型导航菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1115" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1507/201507281714.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于Bootstrap 2.x的jQuery大型下拉菜单特效。该菜单可以制作出鼠标滑过菜单项时，显示带图片和链接的下拉菜单。可以显示多幅图片和多个链接，非常适合用于制作复杂的网站导航菜单。
+内容：
+
+
+简要教程
+
+
+这是一款基于Bootstrap 2.x的jQuery大型下拉菜单特效。该菜单可以制作出鼠标滑过菜单项时，显示带图片和链接的下拉菜单。可以显示多幅图片和多个链接，非常适合用于制作复杂的网站导航菜单。
+
+ 制作方法
+该菜单依赖于Bootstrap2.x，使用时需要引入相关依赖文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;css/bootstrap/2.3.2/css/bootstrap.min.css&#39;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;js/bootstrap/2.3.2/js/bootstrap.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该大型菜单的基本HTML结构如下：
+
+&amp;lt;header class=&#34;navbar navbar-fixed-top&#34;&amp;gt;
+&amp;lt;div class=&#34;navbar-inner&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;button type=&#34;button&#34; class=&#34;btn btn-navbar&#34; data-toggle=&#34;collapse&#34; data-target=&#34;.nav-collapse&#34;&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;span class=&#34;icon-bar&#34;&amp;gt;&amp;lt;/span&amp;gt; 
+&amp;lt;/button&amp;gt;
+&amp;lt;a class=&#34;brand&#34; href=&#34;#&#34;&amp;gt;&amp;lt;b&amp;gt;LOGO&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;nav class=&amp;quot;nav-collapse collapse&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#top&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;dropdown&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;dropdown-toggle&amp;quot; data-toggle=&amp;quot;dropdown&amp;quot;&amp;gt;Mega
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Menu&amp;lt;/a&amp;gt;
+&amp;lt;b class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/b&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;dropdown-menu mega-menu&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;mega-menu-column&amp;quot;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&amp;quot;nav-header&amp;quot;&amp;gt;Mega menu 1&amp;lt;/li&amp;gt;
+&amp;lt;img src=&amp;quot;1.jpg&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Mega-menu link&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+......
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+
+
+ CSS样式
+需要为该botstrap大型菜单添加下面的一些CSS样式。
+
+.mega-menu {
+padding: 10px 0px ! important;
+width: 540px;
+border-radius: 0;
+margin-top: 0px;
+}
+.mega-menu li {
+display: inline-block;
+float: left;
+font-size: 0.94rem;
+padding: 3px 0px;
+}
+.mega-menu li.mega-menu-column {
+margin-right: 20px;
+width: 150px;
+}
+.mega-menu .nav-header {
+padding: 0 !important;
+margin-bottom: 10px;
+display: inline-block;
+width: 100%;
+border-bottom: 1px solid #ddd;
+}
+.mega-menu img { padding-bottom: 10px; }
+/* Dropdown Toggle on style /
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle,
+.navbar .nav li.dropdown.active &amp;gt; .dropdown-toggle,
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle {
+background: inherit; / Set to inherit when using mouse hover to open dropdown */
+color: inherit;
+}
+/* Toggle off style */
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle,
+.navbar .nav &amp;gt; li.dropdown &amp;gt; a:focus {
+background: inherit;
+color: inherit;
+}
+/* Toggle hover */
+.navbar .nav li.dropdown &amp;gt; .dropdown-toggle:hover,
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle:hover { background-color: #DDDDDD; }
+/* Toggle caret*/
+.navbar .nav li.dropdown &amp;gt; .dropdown-toggle .caret { border-bottom-color:;
+border-top-color:;
+}
+/* Toggle caret hover */
+.navbar .nav li.dropdown &amp;gt; a:hover .caret,
+.navbar .nav li.dropdown &amp;gt; a:focus .caret {
+border-bottom-color: #333;
+border-top-color: #333;
+}
+/* Toggle caret active */
+.navbar .nav li.dropdown.open &amp;gt; .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active &amp;gt; .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active &amp;gt; .dropdown-toggle .caret {
+border-bottom-color: #333;
+border-top-color: #333;
+}
+/* Hover style /
+.navbar .nav &amp;gt; li &amp;gt; a,
+.mega-menu a {
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+/ -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/
+-webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+-webkit-transform: translateZ(0);
+}
+
+
+ JAVASCRIPT
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该bootstrap大型菜单。
+
+jQuery(document).ready(function(){
+$(&#34;.dropdown&#34;).hover(
+function() { $(&#39;.dropdown-menu&#39;, this).fadeIn(&#34;fast&#34;);
+},
+function() { $(&#39;.dropdown-menu&#39;, this).fadeOut(&#34;fast&#34;);
+});
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1115">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1116">
+                        jQuery简单实用的tooltip插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1116" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506131713.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单实用的jQuery tooltip插件。该tooltip插件提供很多参数让你可以控制tooltip的位置、大小、内容和动画等属性，并且还可以设置tooltip的倒计时消失效果，既简单有非常的实用。
+内容：
+
+
+简要教程
+
+
+这是一款简单实用的jQuery tooltip插件。该tooltip插件提供很多参数让你可以控制tooltip的位置、大小、内容和动画等属性，并且还可以设置tooltip的倒计时消失效果，既简单有非常的实用。
+
+ 使用方法
+首先要在页面中引入jQuery、tooltip.js和tooltip.css文件。
+
+&amp;lt;script src=&#34;/path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- jQuery is required --&amp;gt;
+&amp;lt;linkhref=&#34;/path/to/tooltip.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;/path/to/tooltip.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+可以通过$.fn.tooltip方法来初始化该tooltip插件。
+
+// 带配置参数
+$(&#39;body&#39;).tooltip({
+autoshow: true,
+content: &#39;Hello, world!&#39;
+});
+// 方法
+$(&#39;body&#39;).tooltip(&#39;show&#39;, &#39;Hello, world!&#39;);
+
+
+ 配置参数
+
+// 设置tooltip的参数
+$().tooltip(options);
+// 修改全局默认参数
+$.fn.tooltip.setDefaults(options);
+
+
+
+autohide：类型：Boolean，默认值：true。在指定的时间后隐藏tooltip。必须设置duration选项。
+
+autoshow：类型：Boolean，默认值：true。在初始化的时候自动显示tooltip。content必须被设置。
+
+content：类型：String，默认值：&#39;&#39;。Tooltip的内容。
+
+countdown：类型：Boolean，默认值：false。是否显示倒计数。duration参数必须被设置。
+
+dismissible：类型：Boolean，默认值：false。是否允许在tooltip自动关闭前点击关闭按钮来关闭它。
+
+duration：类型：Number，默认值：3000。定义tooltip显示的时间。
+
+fixed：类型：Boolean，默认值：true。是否将tooltip设置为固定位置（仅在body元素中有效）。
+
+offset：类型：Number，默认值：10。tooltip相对于它的父元素的偏移。
+
+position：类型：String，默认值：center top。可选值有：&#39;left top&#39;、&#39;center top&#39;、&#39;right top&#39;、&#39;left middle&#39;、&#39;center middle&#39;、&#39;right middle&#39;、&#39;left bottom&#39;、&#39;center bottom&#39;、&#39;right bottom&#39;。tooltip的位置。
+
+style：类型：String，默认值：&#39;default&#39;。可选值：&#39;default&#39;、&#39;primary&#39;、&#39;success&#39;、&#39;info&#39;、&#39;warning&#39;、&#39;danger&#39;。tooltip的样式。
+
+zIndex：类型：Number，默认值：1024。tooltip的z-index。
+
+
+ 方法
+
+$().tooltip(&#39;method&#39;, argument1, , argument2, ..., argumentN)
+
+show([content[, options]])
+
+content (可选):类型Object，tooltip的内容。
+options (可选):类型String，tooltip的参数选项。
+
+使用新的内容来显示tooltip:
+
+$().tooltip(&#39;show&#39;, &#39;Hello, world!&#39;);
+$().tooltip(&#39;show&#39;, &#39;Hello, world!&#39;, {
+style: &#39;primary&#39;,
+zIndex: 2048
+});
+
+hide()
+隐藏tooltip。
+destroy()
+销毁tooltip对象。
+
+ 事件
+show.tooltip
+当show实例方法被调用的时候show.tooltip事件立刻被触发。
+shown.tooltip
+当tooltip可见时该事件被触发（会等到CSS transitions完成）。
+hide.tooltip
+当隐藏tooltip实例的方法被调用时会立刻触发该事件。
+hidden.tooltip
+当tooltip不可见时该事件被触发（会等到CSS transitions完成）。
+
+ No conflict
+如果你已经使用了具有相同命名空间的其它插件，可以使用$.fn.tooltip.noConflict方法来恢复它。
+
+&amp;lt;script src=&#34;other-plugin.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;tooltip.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+$.fn.tooltip.noConflict();
+// Code that uses other plugin&#39;s &#34;$().tooltip&#34; can follow here.
+&amp;lt;/script&amp;gt;
+
+
+ 浏览器兼容
+
+Chrome (latest 2)
+Firefox (latest 2)
+Internet Explorer 8+
+Opera (latest 2)
+Safari (latest 2)
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1116">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1117">
+                        jQuery高性能自定义滚动条美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1117" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1506/201506091613.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+malihu是一款高性能的滚动条美化jQuery插件。该滚动条美化插件支持水平和垂直滚动条，支持鼠标滚动，支持键盘滚动和支持移动触摸屏。并且它可以和jQuery UI和Bootatrap完美的结合，相当的强大。
+内容：
+
+
+简要教程
+
+
+malihu是一款高性能的滚动条美化jQuery插件。该滚动条美化插件支持水平和垂直滚动条，支持鼠标滚动，支持键盘滚动和支持移动触摸屏。并且它可以和jQuery UI和Bootatrap完美的结合，相当的强大。它的特点有：
+
+支持垂直和水平滚动条
+可调整滚动的动量
+支持鼠标滚轮、键盘和移动触摸来移动滚动条
+预定义主题，并且可以通过CSS来修改主题
+支持RTL方向
+提供大量参数来支持滚动条的美化和功能实现
+提供大量方法来控制滚动条
+用户自定义回调函数
+可选择和搜索内容
+
+
+ 安装
+可以通过Bower或nmp来安装该滚动条美化插件。
+
+bower install malihu-custom-scrollbar-plugin
+npm install malihu-custom-scrollbar-plugin
+
+
+ 使用方法
+使用该滚动条美化插件需要引入jQuery和jquery.mCustomScrollbar.concat.min.js以及jquery.mCustomScrollbar.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/path/to/jquery.mCustomScrollbar.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;jquery/1.11.1/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;/path/to/jquery.mCustomScrollbar.concat.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 通过js来初始化
+可以在页面加载完毕之后使用下面的方法来初始化该插件。
+
+&amp;lt;script&amp;gt;
+(function($){
+$(window).load(function(){
+$(&#34;.content&#34;).mCustomScrollbar();
+});
+})(jQuery);
+&amp;lt;/script&amp;gt;
+
+
+ 通过HTML来初始化
+也可以在HTML中直接初始化该滚动条插件。
+
+&amp;lt;div class=&#34;mCustomScrollbar&#34; data-mcs-theme=&#34;dark&#34;&amp;gt;
+&amp;lt;!-- your content --&amp;gt;
+&amp;lt;/div&amp;gt;
+
+另外可以通过data-mcs-axis属性来设置是水平还是垂直滚动条，取值为x或y。
+
+ 基本配置参数
+水平或垂直反向配置：
+默认情况下该滚动条是垂直方向的滚动条，你可以通过配置参数将它设置为水平滚动条或两个方向上滚动条。
+
+$(&#34;.content&#34;).mCustomScrollbar({
+axis:&#34;x&#34; // 水平滚动条
+});
+
+
+$(&#34;.content&#34;).mCustomScrollbar({
+axis:&#34;yx&#34; // 水平和垂直同时存在的滚动条
+});
+
+滚动条主题：
+你可以通过参数将滚动条的主题设置为任何预定义的主题。
+
+$(&#34;.content&#34;).mCustomScrollbar({
+theme:&#34;dark&#34;
+});
+
+
+ 浏览器兼容
+
+Internet Explorer 8+
+Firefox
+Chrome
+Opera
+Safari
+iOS
+Android
+Windows Phone
+
+更多关于该滚动条美化插件的信息请参考：http://manos.malihu.gr/jquery-custom-content-scroller
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1117">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/12/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/14/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

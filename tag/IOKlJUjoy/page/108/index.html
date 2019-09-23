@@ -1,0 +1,1578 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_91">
+                        jQuery移动端下拉刷新、上拉加载更多插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_91" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1905/201905272681.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+dropload.js是一款jQuery移动端下拉刷新、上拉加载更多插件。dropload.js可以依赖于jquery或Zepto，实现移动端常见的下拉刷新和上拉加载更多功能。
+内容：
+
+
+简要教程
+
+
+dropload.js是一款jQuery移动端下拉刷新、上拉加载更多插件。dropload.js可以依赖于jquery或Zepto，实现移动端常见的下拉刷新和上拉加载更多功能。
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;../dist/dropload.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;../dist/dropload.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div class=&#34;lists&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+下拉刷新：
+
+var page = 0;// 页数
+var size = 5;// 每页展示5个
+$(&#39;.content&#39;).dropload({
+scrollArea : window,
+loadDownFn : function(me){
+page++;
+// 拼接HTML
+var result = &#39;&#39;;
+$.ajax({
+type: &#39;GET&#39;,
+url: &#39;http://ons.me/tools/dropload/json.php?page=&#39;+page+&#39;&amp;amp;size=&#39;+size,
+dataType: &#39;json&#39;,
+success: function(data){
+var arrLen = data.length;
+if(arrLen &amp;gt; 0){
+for(var i=0; i&amp;lt;arrLen; i++){
+result += data[i].title;
+}
+// 如果没有数据
+}else{
+me.lock();// 锁定
+me.noData();// 无数据
+}
+// 为了测试，延迟1秒加载
+setTimeout(function(){
+$(&#39;.lists&#39;).append(result); // 插入数据到页面，放到最后面
+me.resetload(); // 每次数据插入，必须重置
+},1000);
+},
+error: function(xhr, type){
+alert(&#39;Ajax error!&#39;);
+me.resetload(); // 即使加载出错，也得重置
+}
+});
+}
+});
+
+上拉加载将loadUpFn换成loadDownFn即可。
+
+ 配置参数
+
+
+
+参数
+说明
+默认值
+可填值
+
+
+
+
+scrollArea
+滑动区域
+绑定元素自身
+window
+
+
+domUp
+上方DOM
+{domClass : &#39;dropload-up&#39;,domRefresh : &#39;&amp;lt;div class=&#34;dropload-refresh&#34;&amp;gt;↓下拉刷新&amp;lt;/div&amp;gt;&#39;,domUpdate: &#39;&amp;lt;div class=&#34;dropload-update&#34;&amp;gt;↑释放更新&amp;lt;/div&amp;gt;&#39;,domLoad : &#39;&amp;lt;div class=&#34;dropload-load&#34;&amp;gt;○加载中...&amp;lt;/div&amp;gt;&#39;}
+数组
+
+
+domDown
+下方DOM
+{domClass : &#39;dropload-down&#39;,domRefresh : &#39;&amp;lt;div class=&#34;dropload-refresh&#34;&amp;gt;↑上拉加载更多&amp;lt;/div&amp;gt;&#39;,domLoad : &#39;&amp;lt;div class=&#34;dropload-load&#34;&amp;gt;○加载中...&amp;lt;/div&amp;gt;&#39;,domNoData : &#39;&amp;lt;div class=&#34;dropload-noData&#34;&amp;gt;暂无数据&amp;lt;/div&amp;gt;&#39;}
+数组
+
+
+autoLoad
+自动加载
+true
+true和false
+
+
+distance
+拉动距离
+50
+数字
+
+
+threshold
+提前加载距离
+加载区高度2/3
+正整数
+
+
+loadUpFn
+上方function
+空
+function(me){//你的代码me.resetload();}
+
+
+loadDownFn
+下方function
+空
+function(me){//你的代码me.resetload();}
+
+
+
+
+ API
+lock() 锁定dropload
+
+
+lock()：智能锁定，锁定上一次加载的方向
+
+lock(&#39;up&#39;)：锁定上方
+
+lock(&#39;down&#39;)：锁定下方
+
+noData() 无数据
+
+
+noData()：无数据
+
+noData(false)：无数据
+
+noData(true)：有数据
+
+resetload() 重置。每次数据加载完，必须重置。
+由于部分Android中UC和QQ浏览器头部有地址栏，并且一开始滑动页面隐藏地址栏时，无法触发scroll和resize，所以会导致部分情况无法使用。解决方案1：增加distance距离，例如DEMO2中distance:50；解决方案2：加meta使之全屏显示：
+
+&amp;lt;meta name=&#34;full-screen&#34; content=&#34;yes&#34;&amp;gt;
+&amp;lt;meta name=&#34;x5-fullscreen&#34; content=&#34;true&#34;&amp;gt;
+
+ 该jQuery移动端下拉刷新、上拉加载更多插件的github网址为：https://github.com/ximan/dropload
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_91">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_910">
+                        ui-choose|列表选择jQuery美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_910" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512181515.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ui-choose是一款基于jquery的列表选择美化插件。ui-choose可用于选项不太多的select、radio、checkbox等，提升用户体验。
+内容：
+
+
+简要教程
+
+
+ui-choose是一款基于jQuery的列表选择美化插件。ui-choose可用于选项不太多的select、radio、checkbox等，提升用户体验。
+
+ 使用方法
+使用ui-choose列表美化插件需要引入jQuery、ui-choose.js和ui-choose.css文件。
+
+&amp;lt;link href=&#34;src/ui-choose.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;src/ui-choose.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+ui-choose可用于无序列表或下拉列表的美化。无序列表和下拉列表的HTML结构分别如下：
+
+&amp;lt;ul class=&#34;ui-choose&#34; multiple=&#34;multiple&#34; id=&#34;uc\_03&#34;&amp;gt;
+&amp;lt;li&amp;gt;html&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;css&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;javascript&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;php&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;nodejs&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;select class=&#34;ui-choose&#34; multiple=&#34;multiple&#34; id=&#34;uc\_04&#34;&amp;gt;
+&amp;lt;option value=&#34;a&#34;&amp;gt;html&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;b&#34;&amp;gt;php&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;c&#34;&amp;gt;css&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;d&#34;&amp;gt;javascript&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;e&#34;&amp;gt;nodejs&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法初始化ui-choose插件。
+将所有.ui-choose实例化
+
+// 将所有.ui-choose实例化
+$(&#39;.ui-choose&#39;).ui\_choose();
+
+无序列表单选：
+
+// 无序列表单选
+var uc\_01 = $(&#39;#uc\_01&#39;).data(&#39;ui-choose&#39;); // 取回已实例化的对象
+uc\_01.click = function(index, item) {
+console.log(&#39;click&#39;, index, item.text())
+}
+uc\_01.change = function(index, item) {
+console.log(&#39;change&#39;, index, item.text())
+} 
+
+下拉列表单选：
+
+// 下拉列表单选
+var uc\_02 = $(&#39;#uc\_02&#39;).data(&#39;ui-choose&#39;);
+uc\_02.click = function(value, item) {
+console.log(&#39;click&#39;, value);
+};
+uc\_02.change = function(value, item) {
+console.log(&#39;change&#39;, value);
+};
+
+无序列表多选：
+
+// 无序列表多选
+var uc\_03 = $(&#39;#uc\_03&#39;).data(&#39;ui-choose&#39;);
+uc\_03.click = function(index, item) {
+console.log(&#39;click&#39;, index);
+};
+uc\_03.change = function(index, item) {
+console.log(&#39;change&#39;, index);
+};
+
+下拉列表多选：
+
+// 下拉列表多选
+var uc\_04 = $(&#39;#uc\_04&#39;).ui\_choose();
+uc\_04.click = function(value, item) {
+console.log(&#39;click&#39;, value);
+};
+uc\_04.change = function(value, item) {
+console.log(&#39;change&#39;, value);
+};
+
+ui-choose列表美化插件的github地址为：https://github.com/wangxing218/ui-choose
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_910">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_911">
+                        ImageViewer-仿谷歌图片缩放和平移图片预览jQuery插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/6R-m2UQuKe" class="post-tag i-tag
+                            i-tag-other_3">
+            #image
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_911" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512311647.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ImageViewer是一款仿谷歌图片的图片缩放和平移特效jQuery插件。ImageViewer有3种图片查看模式：全屏模式、容器模式和图片模式。3种模式下都可以对图片进行缩放和平移来预览图片。
+内容：
+
+
+简要教程
+
+
+ImageViewer是一款仿谷歌图片的图片缩放和平移特效jQuery插件。ImageViewer有3种图片查看模式：全屏模式、容器模式和图片模式。3种模式下都可以对图片进行缩放和平移来预览图片。它的特点还有：
+
+可以平滑的拖动和平移图片。
+支持移动触摸设备。
+移动手机中2次触摸图片可以在图片放大和图片缩小之间进行切换。
+移动手机中可以使用手势来缩放图片。
+快速加载缩略图，并异步加载高质量大图。
+允许以API编程的方式控制缩放。
+
+
+ 使用方法
+使用该图片查看插件需要引入jQuery和imageviewer.min.js以及imageviewer.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;js/imageviewer.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/imageviewer.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 全屏模式
+全屏模式的HTML结构如下：
+
+&amp;lt;div id=&#34;image-gallery-1&#34; class=&#34;cf&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/1.jpg&#34; 
+ data-high-res-src=&#34;assets/images/image\_viewer/1\_big.jpg&#34; alt=&#34;&#34; class=&#34;gallery-items&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/2.jpg&#34; 
+ data-high-res-src=&#34;assets/images/image\_viewer/2\_big.jpg&#34; alt=&#34;&#34; class=&#34;gallery-items&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/3.jpg&#34; 
+ data-high-res-src=&#34;assets/images/image\_viewer/3\_big.jpg&#34; alt=&#34;&#34; class=&#34;gallery-items&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/4.jpg&#34; 
+ data-high-res-src=&#34;assets/images/image\_viewer/4\_big.jpg&#34; alt=&#34;&#34; class=&#34;gallery-items&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+初始化方法：
+
+$(function () {
+var viewer = ImageViewer();
+$(&#39;.gallery-items&#39;).click(function () {
+var imgSrc = this.src,
+highResolutionImage = $(this).data(&#39;high-res-img&#39;);
+viewer.show(imgSrc, highResolutionImage);
+});
+});
+
+
+ 容器模式
+
+&amp;lt;div id=&#34;image-gallery-2&#34;&amp;gt;
+&amp;lt;div class=&#34;image-container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;img src=&#34;assets/images/left.svg&#34; class=&#34;prev&#34;/&amp;gt;
+&amp;lt;img src=&#34;assets/images/right.svg&#34;class=&#34;next&#34;/&amp;gt;
+&amp;lt;div class=&#34;footer-info&#34;&amp;gt;
+&amp;lt;span class=&#34;current&#34;&amp;gt;&amp;lt;/span&amp;gt;/&amp;lt;span class=&#34;total&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+初始化方法：
+
+$(function () {
+var images = [{
+small : &#39;assets/images/image\_viewer/1.jpg&#39;,
+big : &#39;assets/images/image\_viewer/1\_big.jpg&#39;
+},{
+small : &#39;assets/images/image\_viewer/2.jpg&#39;,
+big : &#39;assets/images/image\_viewer/2\_big.jpg&#39;
+},{
+small : &#39;assets/images/image\_viewer/3.jpg&#39;,
+big : &#39;assets/images/image\_viewer/3\_big.jpg&#39;
+},{
+small : &#39;assets/images/image\_viewer/4.jpg&#39;,
+big : &#39;assets/images/image\_viewer/4\_big.jpg&#39;
+}];
+var curImageIdx = 1,
+total = images.length;
+var wrapper = $(&#39;#image-gallery-2&#39;),
+curSpan = wrapper.find(&#39;.current&#39;);
+var viewer = ImageViewer(wrapper.find(&#39;.image-container&#39;));
+//display total count
+wrapper.find(&#39;.total&#39;).html(total);
+function showImage(){
+var imgObj = images[curImageIdx - 1];
+viewer.load(imgObj.small, imgObj.big);
+curSpan.html(curImageIdx);
+}
+wrapper.find(&#39;.next&#39;).click(function(){
+curImageIdx++;
+if(curImageIdx &amp;gt; total) curImageIdx = 1;
+showImage();
+});
+wrapper.find(&#39;.prev&#39;).click(function(){
+curImageIdx--;
+if(curImageIdx &amp;lt; 0) curImageIdx = total;
+showImage();
+});
+//initially show image
+showImage();
+});
+
+
+ 图片模式
+
+&amp;lt;div id=&#34;image-gallery-3&#34; class=&#34;cf&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/1.jpg&#34; 
+data-high-res-src=&#34;assets/images/image\_viewer/1\_big.jpg&#34; alt=&#34;&#34; class=&#34;pannable-image&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/images/image\_viewer/2.jpg&#34; 
+data-high-res-src=&#34;assets/images/image\_viewer/2\_big.jpg&#34; alt=&#34;&#34; class=&#34;pannable-image&#34;&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+初始化方法：
+
+$(function () {
+$(&#39;.pannable-image&#39;).ImageViewer();
+});
+
+
+ 配置参数
+ImageViewer函数：
+
+// container 和 options都是可选参数
+var viewer = ImageViewer(container, options);
+
+container可以是选择器字符串，jQuery对象或DOM对象。ImageViewer会返回一个viewer实例对象，可以使用它来调用方法。
+传入参数的格式为：
+
+var viewer = ImageViewer(&#39;#container&#39;,{
+maxZoom : 400
+}); 
+
+可用的配置参数有：
+
+
+
+
+参数
+允许值
+默认值
+描述
+
+
+
+
+zoomValue
+百分比值
+100
+定义图片初始化是的百分比值
+
+
+maxZoom
+百分比值
+500
+图片最大可以缩放的百分比值
+
+
+snapView
+boolean
+true
+是否显示snap视图
+
+
+refreshOnResize
+boolean
+true
+在浏览器窗口大小改变的时候是否刷新viewer
+
+
+
+
+
+ 方法
+
+
+zoom(zoomValue,point)：通过代码来缩放图片。
+
+
+zoomValue：缩放的百分比值。
+
+point：缩放中心的点坐标{x,y}。如果没有定义使用容器的中心作为缩放的中心。
+
+
+viewer.zoom(300, {x:500, y: 500});
+
+
+
+resetZoom()：根据参数(Options)中给定的值来重置缩放值。
+
+viewer.resetZoom(); 
+
+
+
+refresh()：刷新viewer。
+
+viewer.refresh(); 
+
+
+
+show(imgSrc, highResImg)：显示全屏模式的图片预览。（只有插件使用全屏模式来初始化时才有效）
+
+
+imgSrc：小图的URL地址。
+
+highResImg：同一张图片的高质量版本。
+
+
+viewer.show(&#39;image1.png&#39;,&#39;hi-res-image1.png&#39;); 
+
+
+
+hide()：隐藏全屏模式viewer。（只有插件使用全屏模式来初始化时才有效）
+
+viewer.hide(); 
+
+
+
+load(imgSrc, highResImg)：在viewer中加载一张图片。在全屏模式和容器模式中都有效。
+
+
+imgSrc：小图的URL地址。
+
+highResImg：同一张图片的高质量版本。
+
+
+viewer.load(&#39;image1.png&#39;,&#39;hi-res-image1.png&#39;); 
+
+
+
+destroy()：销毁实例以及绑定的事件。
+
+viewer = viewer.destroy();
+
+
+
+ImageViewer插件的github地址为：https://github.com/s-yadav/ImageViewer
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_911">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_912">
+                        创意星球大战样式jQuery水平进度条插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_912" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512241608.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ProgressBarWars是一款以星球大战为主题的创意jQuery水平进度条插件。该进度条的样式使用彩色霓虹效果，仿造星球大战中的激光剑效果。
+内容：
+
+
+简要教程
+
+
+ProgressBarWars是一款以星球大战为主题的创意jQuery水平进度条插件。该进度条的样式使用彩色霓虹效果，仿造星球大战中的激光剑效果。
+最近随着《星球大战7：原力觉醒》的上映，欧美再次掀起了一股星球大战热。各种以星球大战为主题的js和CSS特效纷纷被星迷们制作和分享出来。这款水平进度条就是以星球大战的激光剑为样板而制作的。
+
+ 使用方法
+使用该水平进度条插件需要引入jQuery和ProgressBarWars.js、ProgressBarWars.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;ProgressBarWars.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt; &amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;ProgressBarWars.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该水平进度条的HTML结构使用一个空的&amp;lt;div&amp;gt;元素作为进度条的容器即可。
+
+&amp;lt;div id=&#34;example1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;example2&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;example3&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;example4&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过ProgressBarWars()方法来初始化该进度条插件。
+
+$(&#34;#example1&#34;).ProgressBarWars({porcentaje:80,estilo:&#34;vader&#34;,tiempo:5980});
+$(&#34;#example2&#34;).ProgressBarWars({porcentaje:40,estilo:&#34;yoda&#34;,tiempo:1000});
+$(&#34;#example3&#34;).ProgressBarWars({porcentaje:90,estilo:&#34;obi&#34;,tiempo:1800});
+$(&#34;#example4&#34;).ProgressBarWars({porcentaje:5,estilo:&#34;windu&#34;,tiempo:1900}); 
+
+
+ 配置参数
+你可以通过下面的格式来在初始化插件的时候传入一些配置参数：
+
+$(&#39;#example4&#39;).ProgressBarWars({
+option: value,
+option2: value2
+});
+
+可用的配置参数有：
+
+
+porcentaje：默认值：100，进度条的百分比值，从0-100。
+
+tiempo：默认值为：1000，动画的速度，单位毫秒。
+
+color：默认值：&#34;&#34;，进度条的颜色。
+
+estilo：默认值：&#34;yoda&#34;，进度条的样式，可选值有：&#34;yoda&#34;, &#34;vader&#34;,&#34;obi&#34;,&#34;windu&#34;。
+
+tamanio：默认值：&#34;30\%&#34;，进度条的宽度。值可以从0-100。
+
+alto：默认值：&#34;6px&#34;，进度条的高度。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_912">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_914">
+                        基于Bootstrap3的Checkbox元素美化jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_914" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601081733.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Simple-bt-checks是一款基于Bootstrap3的Checkbox元素美化jQuery插件。通过该插件可以轻松的制作各种尺寸、颜色的复选框按钮，并且可以自定义复选框选中时的图标，以及完全自定义复选框的样式。
+内容：
+
+
+简要教程
+
+
+Simple-bt-checks是一款基于Bootstrap3的Checkbox元素美化jQuery插件。通过该插件可以轻松的制作各种尺寸、颜色的复选框按钮，并且可以自定义复选框选中时的图标，以及完全自定义复选框的样式。
+
+ 使用方法
+
+ 复选框的尺寸
+要使用不同尺寸的复选框，可以使用下面的HTML结构来生成复选框。
+
+&amp;lt;p id=&#34;sizes-x&#34;&amp;gt;
+&amp;lt;span class=&#34;checkbox&#34; style=&#34;display: inline&#34;&amp;gt;
+&amp;lt;label&amp;gt; &amp;lt;input type=&#34;checkbox&#34;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;checkbox&#34; style=&#34;display: inline&#34;&amp;gt;
+&amp;lt;label&amp;gt; &amp;lt;input type=&#34;checkbox&#34; value=&#34;x&#34; checked=&#34;&#34;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+
+然后使用下面的jQuery代码来初始化，在size参数中设置不同的尺寸。
+
+$(&#39;#sizes-1 input[type=&#34;checkbox&#34;]&#39;).simpleBtChecks();//默认尺寸
+$(&#39;#sizes-2 input[type=&#34;checkbox&#34;]&#39;).simpleBtChecks({ size: &#34;x-2&#34; });
+$(&#39;#sizes-3 input[type=&#34;checkbox&#34;]&#39;).simpleBtChecks({ size: &#34;x-3&#34; });
+
+
+ 复选框的颜色
+可以通过class参数来设置不同的复选框颜色。
+
+$(&#39;.color\_1 input[type=&#34;checkbox&#34;]&#39;).simpleBtChecks({ size: &#34;x-2&#34; }); 
+// default bt class: &#39;btn btn-default&#39;
+(′.color_2input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−primary′);(&amp;#x27;.color\_2 input[type=&amp;quot;checkbox&amp;quot;]&amp;#x27;).simpleBtChecks({ 
+size: &amp;#x27;x-2&amp;#x27;,
+class : &amp;#x27;btn btn-primary&amp;#x27; 
+});
+(′.color_2input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−primary′);(&#39;.color_3 input[type=&amp;quot;checkbox&amp;quot;]&#39;).simpleBtChecks({
+size: &#39;x-2&#39;,
+class : &#39;btn btn-success&#39;
+});
+(′.color_4input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−info′);(&amp;#x27;.color\_4 input[type=&amp;quot;checkbox&amp;quot;]&amp;#x27;).simpleBtChecks({ 
+size: &amp;#x27;x-2&amp;#x27;,
+class : &amp;#x27;btn btn-info&amp;#x27; 
+});
+(′.color_4input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−info′);(&#39;.color_5 input[type=&amp;quot;checkbox&amp;quot;]&#39;).simpleBtChecks({
+size: &#39;x-2&#39;,
+class : &#39;btn btn-warning&#39;
+});
+(′.color_6input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−danger′);(&amp;#x27;.color\_6 input[type=&amp;quot;checkbox&amp;quot;]&amp;#x27;).simpleBtChecks({ 
+size: &amp;#x27;x-2&amp;#x27;,
+class : &amp;#x27;btn btn-danger&amp;#x27; 
+});
+(′.color_6input[type=&amp;quot;checkbox&amp;quot;]′).simpleBtChecks(size:′x−2′,class:′btnbtn−danger′);(&#39;.color_7 input[type=&amp;quot;checkbox&amp;quot;]&#39;).simpleBtChecks({
+size: &#39;x-2&#39;,
+class : &#39;btn btn-link&#39;
+});
+
+
+ 回调事件
+该复选框美化插件有3个可用的回调函数：
+
+
+onLoadSbtc：为每一个input都插件一个node节点。
+
+beforeChange：在复选框状态改变之前触发，返回一个布尔值和一个nodeElement元素。
+
+afterChange：在复选框状态改变之后触发，返回一个布尔值和一个nodeElement元素。
+
+
+ 自定义图标
+复选框选中状态的图标是可以自定义的，通过icon参数来自定义图标，例如下面的代码：
+
+$(&#39;input[type=&#34;checkbox&#34;]&#39;).simpleBtChecks
+({
+size: &#34;default&#34;,
+class: &#34;btn btn-default&#34;,
+icon : &#34;glyphicon glyphicon-heart-empty&#34;
+});
+
+Simple-bt-checks复选框美化插件的github地址为：https://github.com/joelthorner/Simple-bt-checks
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_914">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_918">
+                        letItSnow.js | 简单的网页飘雪特效jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_918" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512061609.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+letItSnow.js是一款非常简单的网页飘雪特效jQuery插件。该下雪插件可以设置雪花的颜色、大小、数量、风速和雪花下落的easing效果等，使用起来简单明了。
+内容：
+
+
+简要教程
+
+
+letItSnow.js是一款非常简单的网页飘雪特效jQuery插件。该下雪插件可以设置雪花的颜色、大小、数量、风速和雪花下落的easing效果等，使用起来简单明了。
+
+ 使用方法
+使用letItSnow.js插件需要引入jQuery2.x、jQuery-ui 1.11+和插件本身需要的js和css文件。
+
+&amp;lt;script src=&#34;lib/jquery.min.js&#34; charset=&#34;utf-8&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;lib/jquery-ui.min.js&#34; charset=&#34;utf-8&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;src/letItSnow.js&#34; charset=&#34;utf-8&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+letItSnow.js插件需要使用一个&amp;lt;div&amp;gt;作为下雪场景的容器。
+
+&amp;lt;div id=&#34;snowspawner&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该下雪插件。
+
+$(function() {
+$(&#39;#snowspawner&#39;).letItSnow({
+fall\_time:5000
+});
+})
+
+
+ 配置参数
+letItSnow.js插件的可用配置参数有：
+
+
+color：默认值：&#39;#fff&#39;，雪花的颜色。
+
+size\_min：默认值：1，雪花的最小尺寸。
+
+size\_max：默认值：51，雪花的最大尺寸。
+
+zindex：默认值：9999，下雪场景的深度。
+
+maxcount：默认值：100，雪花的数量。
+
+wind：默认值：250，风速，雪花水平移动的速度。
+
+easing\_x：默认值：&#39;easeInBack&#39;，风速的easing动画。
+
+easing\_y：默认值：&#39;easeInCubic&#39;，雪花下落的easing动画。
+
+fall\_time：默认值：10000，雪花下落的时间，单位毫秒。
+
+letItSnow.js插件的github地址为：https://github.com/M1nified/letItSnow.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_918">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_919">
+                        仿Instagram头部固定跟随滚动特效jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_919" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511281538.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Feedify是一款非常实用的仿Instagram头部固定跟随滚动特效jQuery插件。该jQuery插件可以在页面滚动的时候，将某段内容的头部固定在顶部，跟随页面滚动，然后到达新的段落时，该头部内容被弹回去，新的头部内容又固定在页面顶部。
+内容：
+
+
+简要教程
+
+
+Feedify是一款非常实用的仿Instagram头部固定跟随滚动特效jQuery插件。该jQuery插件可以在页面滚动的时候，将某段内容的头部固定在顶部，跟随页面滚动，然后到达新的段落时，该头部内容被弹回去，新的头部内容又固定在页面顶部。它的特点还有：
+
+响应式设计。
+跨平台，跨浏览器，支持移动手机。
+可选Bootstrap主题。
+轻量级，易于使用。
+
+
+ 使用方法
+要使用该插件需要在页面中引入jQuery和feedify.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/feedify.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+要使用该头部固定特效插件，在HTML结构中需要使用正确的class类，不论你的CSS样式如何编写，HTML结构和class类不能改变。
+
+&amp;lt;div class=&#34;feedify&#34;&amp;gt;
+&amp;lt;div class=&#34;feedify-item&#34;&amp;gt;
+ &amp;lt;div class=&#34;feedify-item-header&#34;&amp;gt;
+This is the header of my item.
+It will remain stuck to top while scrolling.
+ &amp;lt;/div&amp;gt;
+ &amp;lt;div class=&#34;feedify-item-body&#34;&amp;gt;
+This is the body of my item.
+I can put whatever I want in here.
+ &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+另外Feedify插件要滚动才有效果，所以确保你在页面中放入足够多的项。
+
+ CSS样式
+你可以使用或者不使用Feedify的主题，但是下面的一些CSS样式是必须的。下面的CSS样式都包含在feedify.min.css文件中。
+
+.feedify .feedify-item {
+position: relative;
+}
+.feedify .feedify-item .feedify-item-header {
+z-index: 100;
+}
+.feedify .feedify-item.fixed .feedify-item-header {
+position: fixed;
+top: 0;
+}
+.feedify .feedify-item.bottom .feedify-item-header {
+position: absolute;
+bottom: 0;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化Feedify插件。
+
+$(function() {
+$(&#39;.feedify&#39;).feedify();
+}); 
+
+
+ Feedify主题
+Feedify的主题使用的是Bootstrap。如果使用它，你要在页面中引入Bootstrap3.3.4+版本的Bootstrap文件。
+
+&amp;lt;link href=&#34;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/feedify.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/feedify-theme.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+
+演示页面使用的是Thinlines图标。
+Feedify插件github地址：https://github.com/sarahdayan/feedify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_919">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_920">
+                        section-scroll.js|可生成垂直整页滚动导航的jQuery插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_920" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601211549.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+section-scroll.js是一款可以自动生成垂直整页滚动导航的jQuery插件。通过点击圆点导航按钮可以在各个section之间平滑的滚动。该插件使用简单，非常实用。
+内容：
+
+
+简要教程
+
+
+section-scroll.js是一款可以自动生成垂直整页滚动导航的jQuery插件。通过点击圆点导航按钮可以在各个section之间平滑的滚动。该插件使用简单，非常实用。
+
+ 使用方法
+下载压缩包，在页面中引入jquery，jquery.section-scroll.js和section-scroll.css文件。如果你需要制作带easing效果的动画过渡效果，可以引入jquery.easing.1.3.js文件。
+
+&amp;lt;link href=&#34;css/section-scroll.css&#34; rel=&#34;stylesheet&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.easing.1.3.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/jquery.section-scroll.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该插件会将每一个&amp;lt;section&amp;gt;元素作为一个段落，每一个滚动导航按钮会对应一个段落。
+
+&amp;lt;div class=&#34;scrollable-section&#34; data-section-title=&#34;段落-1&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&#34;scrollable-section&#34; data-section-title=&#34;段落-2&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&#34;scrollable-section&#34; data-section-title=&#34;段落-3&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+其中，scrollable-section是你想要加入到滚动导航中的&amp;lt;section&amp;gt;。data-section-title插件会将该属性作为导航菜单项的标题。
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化section-scroll.js插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt; 
+$(document).ready(function () { 
+$(&#39;body&#39;).sectionScroll(); 
+}) 
+&amp;lt;/script&amp;gt; 
+
+
+ 配置参数
+section-scroll.js插件的默认配置参数是：
+
+bulletsClass: &#39;section-bullets&#39;,
+sectionsClass: &#39;scrollable-section&#39;,
+scrollDuration: 1000,
+titles: true,
+topOffset: 0,
+easing: &#39;&#39;
+
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+bulletsClass
+string
+设置圆点导航菜单的class类
+
+
+sectionsClass
+string
+默认插件会查找class为scrollable-section的&amp;lt;section&amp;gt;元素作为滚动的段落，通过该参数可以改变这个class
+
+
+scrollDuration
+int
+从一个section滚动到另一个section的持续时间
+
+
+titles
+boolean
+设置为false可以在导航中隐藏标题
+
+
+topOffset
+int
+例如设置该值为100会在滚动到section时，section距离页面顶部100像素
+
+
+easing
+string
+默认情况下该插件不提供easing效果，你可以引入http://gsgd.co.uk/sandbox/jquery/easing/插件之后在使用该参数来设置easing效果。easing的取值可以查看http://easings.net/
+
+
+
+
+
+
+ 事件
+
+
+section-reached：当每一个section滚动进入屏幕时都会触发该事件。
+
+
+$(&#39;body&#39;).on(&#39;section-reached&#39;, function(){ 
+console.log(&#39;section-reached&#39;); 
+})
+
+
+ 小技巧
+该插件也可以通过变量activeSection来访问被激活的section。例如：
+
+$(&#39;body&#39;).on(&#39;section-reached&#39;, function(){
+var section\_title = $(&#39;body&#39;).sectionScroll.activeSection.data(&#39;section-title&#39;);
+alert(section\_title);
+})
+
+再看下面的例子：
+
+&amp;lt;section class=&#34;scrollable-section&#34; data-short-description=&#34;We love coding&#34;&amp;gt;&amp;lt;/section&amp;gt;
+
+现在我们可以获取section的标题信息，打印在div中。
+
+$(&#39;body&#39;).on(&#39;section-reached&#39;, function(){
+var short\_description = $(&#39;.body&#39;).sectionScroll.activeSection.data(&#39;short-description&#39;);
+$(&#39;div&#39;).html(short\_description);
+// 我们还可以将激活section的背景色进行修改
+$(&#39;body&#39;).sectionScroll.activeSection.css(&#39;background-color&#39;, &#39;#000&#39;); 
+})
+
+section-scroll插件的github地址为：https://github.com/m-danish-iqbal/section-scroll
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_920">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_922">
+                        带提示音的jQuery消息提示框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_922" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512302020.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-notify是一款简单实用的jQuery消息提示插件，该消息提示插件的特点是可以在显示提示框的时候发出声音。它简单实用，用户体验非常好。
+内容：
+
+
+简要教程
+
+
+jquery-notify是一款简单实用的jQuery消息提示插件，该消息提示插件的特点是可以在显示提示框的时候发出声音。它简单实用，用户体验非常好。
+
+ 使用方法
+使用该消息提示框插件需要引入jQuery和jquery.notify.js以及jquery.notify.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;js/jquery.notify.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.notify.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该消息提示插件有两中使用方法：第一种可以将提示的信息以HTML标签的形式写在&amp;lt;body&amp;gt;标签中。
+
+&amp;lt;p class=&#34;notify&#34; data-notify-type=&#34;error&#34;&amp;gt;Error!&amp;lt;/p&amp;gt;
+&amp;lt;p class=&#34;notify&#34; data-notify-type=&#34;success sticky&#34;&amp;gt;Sticky Info&amp;lt;/p&amp;gt; 
+
+标签中必须带有notify class类，另外data-notify-type是消息提示的类型。
+另外一种使用方法是通过js来初始化消息提示框。
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过notify()方法来初始化该消息提示插件。
+
+$(&#39;.notify&#39;).notify();
+
+使用纯JS的方法初始化消息提示框的方法如下：
+
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify();
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify(&#39;error&#39;);
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify({sticky: true});
+
+jquery-notify消息提示插件的github地址为：https://github.com/yefei/jquery-notify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_922">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_924">
+                        jquery.pinBox-可将任何元素固定在容器中的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_924" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601141650.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.pinBox是一款可将任何元素固定在容器中的jQuery插件。通过该jQuery插件，你可以将元素固定在容器的某个位置，使它在页面滚动时跟随一起滚动。
+内容：
+
+
+简要教程
+
+
+jquery.pinBox是一款可将任何元素固定在容器中的jQuery插件。通过该jQuery插件，你可以将元素固定在容器的某个位置，使它在页面滚动时跟随一起滚动。
+该插件具有响应式的特点，你可以设定一个最小的视口宽度值，当屏幕小于这个宽度时，元素就不会再位置固定（例如可以在手机和平板上将元素占据满整列）。
+
+ 使用方法
+使用jquery.pinBox插件需要在页面中引入jquery1.7+和jquery.pinBox.min.js文件。
+
+&amp;lt;!--jQuery--&amp;gt;
+&amp;lt;script src=&#34;jquery-1.9.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!--Include pinBox plugin--&amp;gt;
+&amp;lt;script src=&#34;js/jquery.pinBox.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+你不需要进行任何特殊的设置，只需要将你需要滚动固定的元素放置在一个容器中，例如下面的代码中的#pinBoxContainer，通过为固定元素添加一个class，例如.pinBox。
+
+&amp;lt;!-- container with id --&amp;gt;
+&amp;lt;div class=&#34;container&#34; id=&#34;pinBoxContainer&#34;&amp;gt;
+&amp;lt;!--如果你不使用bootstrap.css，并且div的父元素是浮动（float）的，就要确保为其添加一个[position:relative]属性--&amp;gt;
+&amp;lt;div class=&#34;col-sm-4&#34;&amp;gt;
+&amp;lt;!-- box you want to pin inside [id=&#34;pinBoxContainer&#34;] have class or id --&amp;gt;
+&amp;lt;div class=&#34;pinBox&#34;&amp;gt;
+&amp;lt;h2 class=&#34;headColor&#34;&amp;gt;Example box&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;some text&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;col-sm-8&amp;quot;&amp;gt;
+&amp;lt;h2 class=&amp;quot;headColor&amp;quot;&amp;gt;Example box&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;some text&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面初始化完毕之后，可以通过下面的方法来初始化该插件。
+
+$(document).ready(function() {
+$(&#34;.pinBox&#34;).pinBox({
+Top : &#39;50px&#39;,
+Container : &#39;#pinBoxContainer&#39;,
+});
+});
+
+
+ 配置参数
+
+$(document).ready(function() {
+$(&#34;.pinBox&#34;).pinBox({
+//default 0px
+Top : &#39;50px&#39;,
+//default &#39;.container&#39; 
+Container : &#39;#pinBoxContainer&#39;,
+//default 20 
+ZIndex : 20,
+//default &#39;767px&#39; if you disable pinBox in mobile or tablet
+MinWidth : &#39;767px&#39;,
+//events if scrolled or window resized
+Events : function(e){
+console.log(e);
+// e.current =&amp;gt; current scroll top [number]
+// e.direction =&amp;gt; scroll down or up [up,down]
+// e.width =&amp;gt; window width [number]
+// e.active =&amp;gt; if pinBox active [true,false]
+// e.disabled =&amp;gt; if window width &amp;gt; MinWidth pinBox will disabled [true, false]
+}
+});
+});
+
+
+
+Top：元素固定时距离容器顶部的距离，默认为0。
+
+Container：容器的jQuery选择器，默认值为.container。
+
+ZIndex：元素的z-index属性，默认值为20。
+
+MinWidth：视口的最小宽度，当小于这个宽度时元素不再固定。默认值为767像素。
+
+Events：回调事件。
+
+jquery.pinBox官方网站地址为：http://nezamy.com/pinBox/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_924">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/107/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/109/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带多种CSS3过渡动画的jquery模态窗口插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带多种CSS3过渡动画的jquery模态窗口插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1708/201708291508.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1708/201708291508.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201708294711.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery.quick-modal.js是一款带多种CSS3过渡动画的jquery模态窗口插件。它的特点是使用简单，响应快速，并且内置了10种显示模态窗口的CSS3过渡动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery.quick-modal.js是一款带多种CSS3过渡动画的<strong>jquery模态窗口插件</strong>。它的特点是使用简单，响应快速，并且内置了10种显示模态窗口的CSS3过渡动画效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入quick-modal.min.css和jquery以及jquery.quick-modal.js文件。</p>
+<pre class="brush:html">
+&lt;link href="css/quick-modal.min.css" rel="stylesheet"&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.quick-modal.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>构建一个模态窗口所需的HTML代码如下：</p>
+<pre class="brush:html">
+&lt;a href="#" class="open-modal" data-modal-id="my-modal"&gt;点击这里弹出模态窗口&lt;/a&gt;
+&lt;div id="my-modal" class="qm-modal"&gt;
+&lt;h1&gt;标题&lt;/h1&gt;
+&lt;a href="#" class="qm-close-modal"&gt;关闭窗口&lt;/a&gt;
+&lt;/div&gt; 
+</pre>
+<p>其中，<code>open-modal</code>class用于触发模态窗口。<code>data-modal-id</code>用于指定模态窗口的ID，必须指定。<code>qm-modal</code> class用于指定模态窗口。<code>qm-close-modal</code>用于指定模态窗口的关闭按钮。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>quickModal()</code>方法来初始化该模态窗口插件。</p>
+<pre class="brush:js">
+$(document).ready(function() {
+$('.open-modal').quickModal();
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>该模态窗口插件的可用配置参数如下：</p>
+<pre class="brush:js">
+$(document).ready(function() {
+$('.open-modal').quickModal({ // Default values below
+animation: 'fade-zoom',
+speed: 250,
+timing: 'ease',
+closeModalSelector: '.qm-close-modal'
+enableEsc: true,
+enableClickAway: true,
+enableBodyScroll: false,
+appendBackgroundTo: 'body',
+prefix: 'qm',
+onOpen: function() {},
+onClose: function() {}
+});
+});
+</pre>
+<ul>
+<li>
+<code>animation</code>：打开和关闭模态窗口的动画类型，可用的动画类型有：<code>'fade'</code>，<code>'fade-up'</code>，<code>'fade-right'</code>，<code>'fade-down'</code>，<code>'fade-left'</code>，<code>'fade-zoom'</code>，<code>'fade-zoom-up'</code>，<code>'fade-zoom-right'</code>，<code>'fade-zoom-down'</code>，<code>'fade-zoom-left'</code>。</li>
+<li>
+<code>speed</code>：模态窗口过渡动画的时间。</li>
+<li>
+<code>timing</code>：模态窗口过渡动画的timing函数。可用的timing函数有：<code>'linear'</code>，<code>'ease'</code>，<code>'ease-in'</code>，<code>'ease-out'</code>，<code>'ease-in-out'</code>，<code>'cubic-bezier(n, n, n, n)'</code>。</li>
+<li>
+<code>closeModalSelector</code>：关闭模态窗口的jquery选择器。</li>
+<li>
+<code>enableEsc</code>：是否允许使用Esc键来关闭模态窗口。</li>
+<li>
+<code>enableClickAway</code>：是否允许点击模态窗口之外的地方来关闭模态窗口。</li>
+<li>
+<code>enableBodyScroll</code>：是否允许模态窗口的背景滚动。</li>
+<li>
+<code>appendBackgroundTo</code>：模态窗口背景的jquery选择器。</li>
+<li>
+<code>prefix</code>：添加一个空间前缀。</li>
+<li>
+<code>onOpen</code>：模态窗口打开时的回调函数。</li>
+<li>
+<code>onClose</code>：模态窗口关闭时的回调函数。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>可以使用下面的方法来手动触发模态窗口。</p>
+<pre class="brush:js">
+$(document).ready(function() {
+$('#my-modal').quickModal('open');
+<p>$('#my-modal').quickModal('open', {<br>
+animation: 'fade-zoom-down',<br>
+speed: 500,<br>
+timing: 'ease-in-out',<br>
+closeModalSelector: '.close-button'<br>
+});</p>
+<p>$('#my-modal').quickModal('close');</p>
+<p>$('#my-modal').quickModal('close', {<br>
+animation: 'fade-left',<br>
+speed: 750,<br>
+timing: 'linear'<br>
+});</p>
+<p>$('#modal-link').quickModal('trigger');</p>
+<p>$('#modal-link').quickModal('trigger', {<br>
+animation: 'fade',<br>
+timing: 'ease-out'<br>
+});<br>
+});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>该模态窗口提供两个可用的事件。</p>
+<pre class="brush:js">
+$(document).ready(function() {
+$('#my-modal').on('modalopen.qm', myAwesomeFunction);
+<p>$('#my-modal').on('modalclose', function() {<br>
+alert('The modal window has been closed!');<br>
+myAwesomeFunction();<br>
+});<br>
+});<br>
+</pre></p>
+<ul>
+<li>
+<code>'modalopen.qm'</code>：在模态窗口打开前触发。</li>
+<li>
+<code>'modalclose.qm'</code>：在模态窗口关闭后触发。</li>
+</ul>
+<p>jquery.quick-modal.js模态窗口插件的github地址为：<a href="https://github.com/kevinberonilla/jquery-quick-modal" target="\_blank">https://github.com/kevinberonilla/jquery-quick-modal</a></p>
+<!--简要教程-->
+<div class="alert alert-warning mt25" role="alert">
+本文版权属于jQuery之家，转载请注明出处：<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201708294710.html">http://www.htmleaf.com/jQuery/Lightbox-Dialog/201708294710.html</a>
+</div>
+<div class="leaf-page-nav pt50minh50 clearfix">
+<div class="pull-left">上一篇：<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201708244702.html">Material Design风格jquery toast插件</a> </div>
+<div class="pull-right">下一篇：<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201709024718.html">jQuery lightbox插件ViewBox</a> </div>
+</div>
+<!--相关插件-->
+<div class="leaf-box mt45">
+<div class="leaf-tp leaf-like">
+<h3>
+相关插件 
+</h3>
+</div>
+<div class="row pt30 pb30 minh150">
+<div class="mt30 col-md-12 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907255748.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1907/201907255487.jpg" alt="jQuery模态窗口插件vintage-popup"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907255748.html"><h5>jQuery模态窗口插件vintage-popup</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907175736.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1907/201907160658.jpg" alt="Bootstrap模态窗口扩展jquery插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907175736.html"><h5>Bootstrap模态窗口扩展jquery插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907105728.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1907/201907108899.jpg" alt="Bootstrap4 多步骤向导模态窗口插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201907105728.html"><h5>Bootstrap4 多步骤向导模态窗口插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/css3/ui-design/201905285666.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1905/201905286389.jpg" alt="Bootstrap自定义模态窗口样式"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/css3/ui-design/201905285666.html"><h5>Bootstrap自定义模态窗口样式</h5></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--相关插件结束-->
+<!--网友评论-->
+<!-- <div class="leaf-box mt45">
+<div class="leaf-tp leaf-pinglun">
+<h3>
+网友评论 
+</h3>
+</div>
+<div class="leaf-changyan">
+<div id="SOHUCS"></div>
+</div>
+</div> -->
+<!--网友评论结束-->
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1708/201708291508.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201708294711.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_409">
+                                <h3 class="post-title">
+                                    捕获键盘输入和输入组合键的js库hotkeys
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

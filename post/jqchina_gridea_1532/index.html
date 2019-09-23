@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯css3视觉差滚动幻灯片效果 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯css3视觉差滚动幻灯片效果
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411161541.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411161541.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141116497.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果很炫的纯css3视觉差幻灯片效果。在这个css3视觉差效果中，利用图片和曲线的位移来形成视觉差效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是利用光学原理制作的纯css3视觉差幻灯片效果。它利用几个不同的层在运动时交替变化不同的曲线、背景颜色和图片来形成视觉差效果。在这里，仅仅使用了css3，没有任何的javascript。</p>
+<h3>HTML</h3>
+<p>html结构有4个radio、4个labels和4个用于滚动的页面组成。每个页面都有自己的图片和描述文本。你可以自己添加更多的元素到每个页面中。这个视觉差效果的主要原理是：隐藏radio按钮，然后使用它们的label来为radio按钮设置“checked”状态。最后为当前选中的radio元素应用不同的css样式。</p>
+<pre class="brush:html">
+&lt;div class="pss\_main"&gt; &lt;!-- main parallax scrolling slider object --&gt;
+&lt;input id="r\_1" type="radio" name="p" class="sel\_page\_1" checked="checked" /&gt; &lt;!-- hidden radios --&gt;
+&lt;input id="r\_2" type="radio" name="p" class="sel\_page\_2" /&gt;
+&lt;input id="r\_3" type="radio" name="p" class="sel\_page\_3" /&gt;
+&lt;input id="r\_4" type="radio" name="p" class="sel\_page\_4" /&gt;
+<p>&lt;label for=&quot;r_1&quot; class=&quot;pss_contr c1&quot;&gt;&lt;/label&gt; &lt;!-- controls --&gt;<br>
+&lt;label for=&quot;r_2&quot; class=&quot;pss_contr c2&quot;&gt;&lt;/label&gt;<br>
+&lt;label for=&quot;r_3&quot; class=&quot;pss_contr c3&quot;&gt;&lt;/label&gt;<br>
+&lt;label for=&quot;r_4&quot; class=&quot;pss_contr c4&quot;&gt;&lt;/label&gt;</p>
+<p>&lt;div class=&quot;pss_slides&quot;&gt;<br>
+&lt;div class=&quot;pss_background&quot;&gt;&lt;/div&gt;<br>
+&lt;ul&gt; &lt;!-- slides --&gt;<br>
+&lt;li&gt;&lt;img src=&quot;images/image1.png&quot; alt=&quot;image01&quot; /&gt;<br>
+&lt;div&gt;Model DT 770&lt;/div&gt;<br>
+&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;images/image2.png&quot; alt=&quot;image02&quot; /&gt;<br>
+&lt;div&gt;Model DT 990&lt;/div&gt;<br>
+&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;images/image3.png&quot; alt=&quot;image03&quot; /&gt;<br>
+&lt;div&gt;Model DT 234&lt;/div&gt;<br>
+&lt;/li&gt;<br>
+&lt;li&gt;&lt;img src=&quot;images/image4.png&quot; alt=&quot;image04&quot; /&gt;<br>
+&lt;div&gt;Model DT 880&lt;/div&gt;<br>
+&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p>更多详细信息请参看：<a href="http://www.script-tutorials.com/css3-parallax-scrolling-slider/" target="\_blank">http://www.script-tutorials.com/css3-parallax-scrolling-slider/</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411161541.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141116497.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1533">
+                                <h3 class="post-title">
+                                    jQuery和css3文字特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

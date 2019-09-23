@@ -1,0 +1,580 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    ScrollReveal-元素随页面滚动产生动画的js插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            ScrollReveal-元素随页面滚动产生动画的js插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1512/201512211845.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512211845.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512212933.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>scrollreveal.js是一款可以轻易实现桌面和移动浏览器元素随页面滚动产生动画的js插件。该插件通过配置可以在页面滚动，元素进入视口时产生炫酷的动画效果，同时还支持元素的3D效果，非常的实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>scrollreveal.js是一款可以轻易实现桌面和移动浏览器元素随页面滚动产生动画的<a href="http://www.htmleaf.com/jQuery/">js插件</a>。该插件通过配置可以在页面滚动，元素进入视口时产生炫酷的动画效果，同时还支持元素的3D效果，非常的实用。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm或bower来安装scrollreveal.js插件。</p>
+<pre class="brush:html">
+npm install scrollreveal
+bower install scrollreveal
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本使用方法</h5>
+<p>HTML结构：</p>
+<pre class="brush:html">
+&lt;!-- HTML --&gt;
+&lt;div class="foo"&gt; Foo &lt;/div&gt;
+&lt;div class="bar"&gt; Bar &lt;/div&gt; 
+</pre>
+<p>JavaScript：</p>
+<pre class="brush:js">
+window.sr = ScrollReveal();
+sr.reveal('.foo');
+sr.reveal('.bar');
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 链式编程方法</h5>
+<p>ScrollReveal的构造函数和它主要的方法都支持链式编程。</p>
+<pre class="brush:js">
+window.sr = ScrollReveal();
+sr.reveal('.foo');
+sr.reveal('.bar');
+<p>// 上面的代码和下面的代码效果相同<br>
+window.sr = ScrollReveal().reveal('.foo, .bar');<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>可以通过传入一个配置参数对象到<code>ScrollReveal()</code>中来修改默认的参数设置。也可以通过向<code>reveal()</code>中插入配置参数对象来自定义动画集合。</p>
+<pre class="brush:js">
+// 修改默认配置
+window.sr = ScrollReveal({ reset: true });
+<p>// 自定义一个动画集合<br>
+sr.reveal( '.foo', { wait: 200 } );<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 默认参数</h5>
+<pre class="brush:js">
+// Animation
+origin: 'bottom',
+distance: '20px',
+duration: 500,
+delay : 0,
+rotate: { x: 0, y: 0, z: 0 },
+opacity : 0,
+scale : 0.9,
+easing: 'cubic-bezier( 0.6, 0.2, 0.1, 1 )',
+<p>// Options<br>
+container : null,<br>
+mobile: true,<br>
+reset : false,<br>
+useDelay: 'always',<br>
+viewFactor: 0.20,<br>
+viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },<br>
+afterReveal : function( domEl ) {},<br>
+afterReset: function( domEl ) {}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 参数描述</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>可用值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>origin</td>
+<td>string</td>
+<td>'top','right','bottom','left'</td>
+<td>动画的方向</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>string</td>
+<td>可用任何CSS单位值，如：'20px','10vw','5\%'</td>
+<td>动画的距离</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>number</td>
+<td>500</td>
+<td>动画持续时间，单位毫秒</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>number</td>
+<td>0</td>
+<td>动画的延迟时间，单位毫秒</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>object/number</td>
+<td>{ x: 0, y: 0, z: 0 }</td>
+<td>开始的角度，单位degrees</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>number</td>
+<td>0</td>
+<td>开始的透明度</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>number</td>
+<td>0.9</td>
+<td>开始的缩放值</td>
+</tr>
+<tr>
+<td>easing</td>
+<td>string</td>
+<td>'ease'<br>'ease'<br>'ease-out'<br>'ease-in-out'<br>'ease-in-out'</td>
+<td>动画的easing效果，可以是任何有效的CSS easing值</td>
+</tr>
+<tr>
+<td>container</td>
+<td>node</td>
+<td>document.getElementById('foo')</td>
+<td>容器</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>boolean</td>
+<td>true / false</td>
+<td>是否在移动手机上显示动画效果</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>boolean</td>
+<td>true / false</td>
+<td>元素是否在容器边界内来回滚动时都产生动画效果</td>
+</tr>
+<tr>
+<td>useDelay</td>
+<td>string</td>
+<td>'always','once','onload'</td>
+<td>控制元素什么时候使用动画延迟</td>
+</tr>
+<tr>
+<td>viewFactor</td>
+<td>number</td>
+<td>0.20</td>
+<td>0.20表示元素在产生动画之前，它的20\%在viewport或容器的边界之内</td>
+</tr>
+<tr>
+<td>viewOffset</td>
+<td>object/number</td>
+<td>{ top: 48, bottom: 24 }</td>
+<td>增加viewport或容器边界，单位像素</td>
+</tr>
+<tr>
+<td>afterReveal</td>
+<td>function</td>
+<td>function( domEl ) {}</td>
+<td>reveal动画之后触发的回调函数</td>
+</tr>
+<tr>
+<td>afterReset</td>
+<td>function</td>
+<td>function( domEl ) {}</td>
+<td>reset动画之后触发的回调函数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 高级应用</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 覆盖配置</h5>
+<p><code>reveal()</code>方法中的调用元素可以随时进行修改。例如：</p>
+<pre class="brush:html">
+&lt;div class="foo"&gt; Foo &lt;/div&gt;
+&lt;div class="foo" id="chocolate"&gt; Chip &lt;/div&gt;
+</pre>
+<pre class="brush:js">
+var fooReveal = {
+delay: 200,
+distance : '90px',
+easing : 'ease-in-out',
+rotate : { z: 10 },
+scale: 1.1
+};
+<p>window.sr = ScrollReveal()<br>
+.reveal( '.foo', fooReveal )<br>
+.reveal( '#chocolate', { delay: 500, scale: 0.9 } );<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 配置多个容器</h5>
+<p>默认的容器是viewport，你可以对它进行修改。</p>
+<pre class="brush:html">
+&lt;div id="fooContainer"&gt;
+&lt;div class="foo"&gt; Foo 1 &lt;/div&gt;
+&lt;div class="foo"&gt; Foo 2 &lt;/div&gt;
+&lt;div class="foo"&gt; Foo 3 &lt;/div&gt;
+&lt;/div&gt;
+<p>&lt;div id=&quot;barContainer&quot;&gt;<br>
+&lt;div class=&quot;bar&quot;&gt; Bar 1 &lt;/div&gt;<br>
+&lt;div class=&quot;bar&quot;&gt; Bar 2 &lt;/div&gt;<br>
+&lt;div class=&quot;bar&quot;&gt; Bar 3 &lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<pre class="brush:js">
+var fooContainer = document.getElementById('fooContainer');
+var barContainer = document.getElementById('barContainer');
+
+window.sr = ScrollReveal()
+.reveal( '.foo', { container: fooContainer } );
+.reveal( '.bar', { container: barContainer } );
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 异步调用内容</h5>
+<p>可以通过<code>sync()</code>方法来异步加载已经存在的reveal sets中的内容。</p>
+<pre class="brush:html">
+&lt;!-- index.html --&gt;
+&lt;div id="container"&gt;
+&lt;div class="foo"&gt;foo&lt;/div&gt;
+&lt;div class="foo"&gt;foo&lt;/div&gt;
+&lt;div class="foo"&gt;foo&lt;/div&gt;
+&lt;/div&gt;
+<p>&lt;!-- ajax.html --&gt;<br>
+&lt;div class=&quot;foo&quot;&gt;foo async&lt;/div&gt;<br>
+&lt;div class=&quot;foo&quot;&gt;foo async&lt;/div&gt;<br>
+&lt;div class=&quot;foo&quot;&gt;foo async&lt;/div&gt;<br>
+</pre></p>
+<pre class="brush:js">
+var fooContainer, content, sr, xmlhttp;
+
+fooContainer = document.getElementById('fooContainer');
+
+sr = ScrollReveal();
+sr.reveal( '.foo', { container: fooContainer } );
+
+// Setup a new asynchronous request...
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if ( xmlhttp.readyState == XMLHttpRequest.DONE ) {
+if ( xmlhttp.status == 200 ) {
+
+// Turn our response into HTML...
+var content = document.createElement('div');
+content.innerHTML = xmlhttp.responseText;
+content = content.childNodes;
+
+// Add each element to the DOM...
+for ( var i = 0; i &lt; content.length; i++ ) {
+fooContainer.appendChild( content[ i ]);
+};
+
+// Finally!
+sr.sync();
+}
+}
+}
+
+xmlhttp.open('GET', 'ajax.html', true);
+xmlhttp.send();
+</pre>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 小技巧</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 加载次序</h5>
+<p>你需要注意的重要的一点是尽可能在页面的最后再调用ScrollReveal，也就是说：</p>
+<ul>
+<li>页面中的DOM元素已经被加载完成。</li>
+<li>任何第三方的js库已经被加载。</li>
+<li>页面中的元素样式已经被加载不会在被覆盖。</li>
+</ul>
+<p>示例代码如下：</p>
+<pre class="brush:html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+<p>&lt;!-- All the things... --&gt;</p>
+<p>&lt;script src=&quot;js/scrollreveal.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+window.sr = ScrollReveal();<br>
+&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 提升用户体验</h5>
+<p>在大多数情况下，你的元素都是从<code>opacity: 0</code>开始，以使它们可以制作淡入的效果。但是由于JavaScript在页面开始渲染时才被加载，用户可能会看到元素闪烁的情况发生。</p>
+<p>解决这个问题的方法是在<code>&lt;head&gt;</code>中设置reveal元素的可见性为隐藏状态。例如下面的代码：</p>
+<pre class="brush:html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+// If JavaScript is enabled, add '.js-enabled' to &lt;html&gt; element
+document.documentElement.classList.add('js-enabled');
+&lt;/script&gt;
+&lt;style&gt;
+/* Ensure elements load hidden before ScrollReveal runs */
+.js-enabled .fooReveal { visibility: hidden; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<p>&lt;!-- All the things... --&gt;</p>
+<p>&lt;script src=&quot;js/scrollreveal.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+window.sr = ScrollReveal();<br>
+sr.reveal('.fooReveal');<br>
+&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 添加3D透视效果</h5>
+<p>ScrollReveal支持3D旋转效果，你需要做的是为你的容器指定一个<code>perspective</code>属性。</p>
+<pre class="brush:html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+document.documentElement.classList.add('js-enabled');
+&lt;/script&gt;
+&lt;style&gt;
+.js-enabled .fooReveal { visibility: hidden; }
+.fooContainer { perspective: 800px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<p>&lt;div class=&quot;fooContainer&quot;&gt;<br>
+&lt;div class=&quot;fooReveal&quot;&gt; Foo &lt;/div&gt;<br>
+&lt;div class=&quot;fooReveal&quot;&gt; Foo &lt;/div&gt;<br>
+&lt;div class=&quot;fooReveal&quot;&gt; Foo &lt;/div&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;script src=&quot;js/scrollreveal.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+window.sr = ScrollReveal();<br>
+sr.reveal( '.fooReveal', { rotate: {x: 65} } );<br>
+&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</pre></p>
+<p>ScrollReveal插件的github地址为：<a href="https://github.com/jlmakes/scrollreveal.js" target="\_blank">https://github.com/jlmakes/scrollreveal.js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512211845.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512212933.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_945">
+                                <h3 class="post-title">
+                                    Newsticker-兼容IE8的jQuery滚动新闻插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

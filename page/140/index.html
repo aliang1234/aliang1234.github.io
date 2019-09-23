@@ -1,0 +1,1593 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_813">
+                        OrgChart-简单实用的组织结构图表jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_813" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1602/201602231536.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+OrgChart是一款简单实用的组织结构图表jQuery插件。OrgChart通过DOM元素，jQuery和CSS3过渡效果来制作组织结构图表。可以使用本地数据，或通过ajax调用来完成数据的填充。
+内容：
+
+
+简要教程
+
+
+OrgChart是一款简单实用的组织结构图表jQuery插件。OrgChart通过DOM元素，jQuery和CSS3过渡效果来制作组织结构图表。可以使用本地数据，或通过ajax调用来完成数据的填充。
+
+ 使用方法
+使用OrgChart组织结构图表插件需要在页面中引入jquery.orgchart.css，jquery和html2canvas.js、jquery.orgchart.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jquery.orgchart.css&#34; type=&#34;text/css&#34;/&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/html2canvas.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.orgchart.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该组织结构图表插件的HTML结构使用一个&amp;lt;div&amp;gt;作为容器。
+
+&amp;lt;div id=&#34;chart-container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 使用本地数据
+下面的代码使用本地数据作为组织结构图表的数据源。得到的效果如下图所示：
+
+
+// sample of core source code
+var datascource = {
+&#39;name&#39;: &#39;Lao Lao&#39;,
+&#39;title&#39;: &#39;general manager&#39;,
+&#39;relationship&#39;: { &#39;children\_num&#39;: 3 },
+&#39;children&#39;: [
+{ &#39;name&#39;: &#39;Bo Miao&#39;, &#39;title&#39;: &#39;department manager&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 0, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 2 }},
+{ &#39;name&#39;: &#39;Su Miao&#39;, &#39;title&#39;: &#39;department manager&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 2, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 2 },
+&#39;children&#39;: [
+{ &#39;name&#39;: &#39;Tie Hua&#39;, &#39;title&#39;: &#39;senior engineer&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 0, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 1 }},
+{ &#39;name&#39;: &#39;Hei Hei&#39;, &#39;title&#39;: &#39;senior engineer&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 0, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 1 }}
+]
+},
+{ &#39;name&#39;: &#39;Yu Jie&#39;, &#39;title&#39;: &#39;department manager&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 0, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 2 }}
+]
+};
+$(&#39;#chart-container&#39;).orgchart({
+&#39;data&#39; : datascource,
+&#39;depth&#39;: 2,
+&#39;nodeTitle&#39;: &#39;name&#39;,
+&#39;nodeContent&#39;: &#39;title&#39;
+});
+
+
+ 使用Ajax远程数据
+下面的代码通过Ajax来调用远程的数据作为组织结构图表的数据源。得到的效果如下图所示：
+
+
+$(&#39;#chart-container&#39;).orgchart({
+&#39;data&#39; : &#39;/orgchart/initdata&#39;,
+&#39;depth&#39;: 2,
+&#39;nodeTitle&#39;: &#39;name&#39;,
+&#39;nodeContent&#39;: &#39;title&#39;
+});
+
+
+ 延迟加载数据
+下面的代码在用户点击相应的结点时才动态的通过Ajax来加载数据。得到的效果如下图所示：
+
+
+var datascource = {
+&#39;id&#39;: &#39;1&#39;,
+&#39;name&#39;: &#39;Su Miao&#39;,
+&#39;title&#39;: &#39;department manager&#39;,
+&#39;relationship&#39;: { &#39;children\_num&#39;: 2, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 2 },
+&#39;children&#39;: [
+{ &#39;id&#39;: &#39;2&#39;,&#39;name&#39;: &#39;Tie Hua&#39;, &#39;title&#39;: &#39;senior engineer&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 0, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 1 }},
+{ &#39;id&#39;: &#39;3&#39;,&#39;name&#39;: &#39;Hei Hei&#39;, &#39;title&#39;: &#39;senior engineer&#39;, 
+&#39;relationship&#39;: { &#39;children\_num&#39;: 2, &#39;parent\_num&#39;: 1,&#39;sibling\_num&#39;: 1 }}
+]
+};
+var ajaxURLs = {
+&#39;children&#39;: &#39;/orgchart/children/&#39;,
+&#39;parent&#39;: &#39;/orgchart/parent/&#39;,
+&#39;siblings&#39;: &#39;/orgchart/siblings/&#39;,
+&#39;families&#39;: &#39;/orgchart/families/&#39;
+};
+$(&#39;#chart-container&#39;).orgchart({
+&#39;data&#39; : datascource,
+&#39;ajaxURL&#39;: ajaxURLs,
+&#39;nodeTitle&#39;: &#39;name&#39;,
+&#39;nodeContent&#39;: &#39;title&#39;,
+&#39;nodeId&#39;: &#39;id&#39;
+});
+
+
+ 自定义数据节点
+下面的代码为组织结构图表中的每一个节点自定义一个头像。得到的效果如下图所示：
+
+
+$(&#39;#chart-container&#39;).orgchart({
+&#39;data&#39; : datascource,
+&#39;depth&#39;: 2,
+&#39;nodeTitle&#39;: &#39;name&#39;,
+&#39;nodeContent&#39;: &#39;title&#39;,
+&#39;nodeID&#39;: &#39;id&#39;,
+&#39;createNode&#39;: function($node, data) {
+var nodePrompt = $(&#39;&amp;lt;i&amp;gt;&#39;, {
+&#39;class&#39;: &#39;fa fa-info-circle second-menu-icon&#39;,
+click: function() {
+$(this).siblings(&#39;.second-menu&#39;).toggle();
+}
+});
+var secondMenu = &#39;&amp;lt;div class=&#34;second-menu&#34;&amp;gt;&amp;lt;img class=&#34;avatar&#34; src=&#34;../img/avatar/&#39; + data.id + &#39;.jpg&#34;&amp;gt;&amp;lt;/div&amp;gt;&#39;;
+$node.append(nodePrompt).append(secondMenu);
+}
+});
+
+OrgChart组织结构图表插件的github地址为:https://github.com/dabeng/OrgChart
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_813">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_814">
+                        jQuery和CSS3炫酷高级搜索框设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_814" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1602/201602051546.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3制作的炫酷高级搜索框设计效果。在这个高级搜索框设计中，当用户点击了搜索按钮之后，会出现搜索输入框，以及一个带相关搜索链接的面板供用户选择。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3制作的炫酷高级搜索框设计效果。在这个高级搜索框设计中，当用户点击了搜索按钮之后，会出现搜索输入框，以及一个带相关搜索链接的面板供用户选择。
+这种高级搜索框的设计对于用户来说是非常好的用户体验。用户点击了搜索框之后，可以在链接面板中看到一些建议的搜索链接，以及各种栏目类别。用户可以通过搜索一个关键字来得到更多的信息。
+下图是该高级搜索框效果的GIF图片预览。
+
+
+ 使用方法
+
+ HTML结构
+该高级搜索框的HTML结构有3个部分组成：一个&amp;lt;header&amp;gt;元素，用于包裹导航条。一个div.cd-main-search，用于制作搜索框。还有一个main.cd-main-content是页面的主体部分。
+
+&amp;lt;header class=&#34;cd-main-header animate-search&#34;&amp;gt;
+&amp;lt;div class=&#34;cd-logo&#34;&amp;gt;
+&amp;lt;a href=&#34;#0&#34;&amp;gt;
+&amp;lt;img src=&#34;img/cd-logo.svg&#34; alt=&#34;Logo&#34;&amp;gt;
+&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;nav class=&amp;quot;cd-main-nav-wrapper&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#search&amp;quot; class=&amp;quot;cd-search-trigger cd-text-replace&amp;quot;&amp;gt;Search&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-main-nav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Products&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- additional navigation items --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-nav-trigger cd-text-replace&amp;quot;&amp;gt;
+Menu&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;main class=&amp;quot;cd-main-content&amp;quot;&amp;gt;
+&amp;lt;!-- your content here --&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;div id=&amp;quot;search&amp;quot; class=&amp;quot;cd-main-search&amp;quot;&amp;gt;
+&amp;lt;form&amp;gt;
+&amp;lt;input type=&amp;quot;search&amp;quot; placeholder=&amp;quot;Search...&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;cd-select&amp;quot;&amp;gt;
+&amp;lt;span&amp;gt;in&amp;lt;/span&amp;gt;
+&amp;lt;select name=&amp;quot;select-category&amp;quot;&amp;gt;
+&amp;lt;option value=&amp;quot;all-categories&amp;quot;&amp;gt;all Categories&amp;lt;/option&amp;gt;
+&amp;lt;!-- additional options here --&amp;gt;
+&amp;lt;/select&amp;gt;
+&amp;lt;span class=&amp;quot;selected-value&amp;quot;&amp;gt;all Categories&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;div class=&amp;quot;cd-search-suggestions&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;news&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;News&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a class=&amp;quot;image-wrapper&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/placeholder.png&amp;quot; alt=&amp;quot;News image&amp;quot;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;h4&amp;gt;&amp;lt;a class=&amp;quot;cd-nowrap&amp;quot; href=&amp;quot;#0&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/h4&amp;gt;
+&amp;lt;time datetime=&amp;quot;2016-01-12&amp;quot;&amp;gt;Feb 03, 2016&amp;lt;/time&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- additional news here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .news --&amp;gt;
+&amp;lt;div class=&amp;quot;quick-links&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;Quick Links&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#0&amp;quot;&amp;gt;Find a store&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- additional quick links here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-search-suggestions --&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;close cd-text-replace&amp;quot;&amp;gt;Close Form&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-main-search --&amp;gt;
+
+
+ CSS样式
+在小屏幕设备上（视口小于1024像素），导航菜单和搜索框被隐藏，只在屏幕的右上方显示一个汉堡包按钮。当用户点击了汉堡包按钮之后，&amp;lt;main&amp;gt;和&amp;lt;header&amp;gt;元素会通过添加nav-is-visible class向左滑动进入屏幕。
+
+.cd-main-header, .cd-main-content {
+position: relative;
+transition: transform 0.3s;
+}
+.cd-main-header.nav-is-visible, .cd-main-content.nav-is-visible {
+transform: translateX(-260px);
+}
+
+在大屏幕设备上，搜索框被放置在导航菜单上，默认是隐藏的，只显示一个搜索图标。当用户点击了.cd-search-trigger元素之后，搜索框表单上会被添加一个.is-visible class，搜索框会被显示出来。
+
+@media only screen and (min-width: 1024px) {
+.cd-main-search {
+position: absolute;
+z-index: 2;
+top: 0;
+left: 0;
+height: 100\%;
+width: 100\%;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s, visibility 0.3s;
+}
+.cd-main-search.is-visible {
+/* search form open */
+opacity: 1;
+visibility: visible;
+}
+}
+
+为了制作搜索框的动画，特效中在&amp;lt;header&amp;gt;元素上添加了.animate-search class。这个class会触发2个不同的CSS3动画：对搜索框使用cd-slide-in动画，对高级搜索面板使用cd-3d-rotation动画。
+
+@media only screen and (min-width: 1024px) {
+.animate-search .cd-main-search.is-visible {
+/* trigger search form animation if &amp;lt;header&amp;gt; has the .animate-search class */
+animation: cd-slide-in 0.3s;
+}
+.animate-search .is-visible .cd-search-suggestions {
+/* trigger the dropdown animation if &amp;lt;header&amp;gt; has the .animate-search class */
+transform-origin: center top;
+animation: cd-3d-rotation 0.5s 0.3s;
+animation-fill-mode: backwards;
+}
+}
+@keyframes cd-slide-in {
+0\% {
+transform: translateY(-100\%);
+}
+100\% {
+transform: translateY(0);
+}
+}
+@keyframes cd-3d-rotation {
+0% {
+transform: perspective(1000px) rotateX(-90deg);
+}
+100% {
+transform: perspective(1000px) translateY(0);
+}
+}
+
+如果你想要淡入淡出的动画效果，只需要简单的从&amp;lt;header&amp;gt;元素中移除.animate-search class。
+对于高级搜索面板中的项目列表，要确保div.cd-select的宽度随用户的选择而改变。&amp;lt;select&amp;gt;元素是绝对定位的（因此它不占用空间），span.selected-value元素用于显示可选择的选项。
+
+@media only screen and (min-width: 1024px) {
+.cd-main-search .cd-select {
+position: absolute;
+right: 0;
+overflow: hidden;
+}
+.cd-main-search select {
+/* the &amp;lt;select&amp;gt; element is not visible - it is covered by the .selected-value element */
+position: absolute;
+right: 0;
+opacity: 0;
+color: transparent;
+}
+.cd-main-search .selected-value {
+color: #ffffff;
+pointer-events: none;
+}
+.cd-main-search select, .cd-main-search .selected-value {
+padding: 0.5em 1.7em 0.5em .3em;
+font-size: 1.4rem;
+border-radius: 3px;
+}
+}
+
+
+ JavaScript
+在初始的HTML结构中，导航菜单位于&amp;lt;header&amp;gt;元素中。在小屏幕设备上，导航菜单被移动到屏幕之外，默认隐藏。这些都通过jQuery代码来动态改变。
+另外div.cd-main-search元素也会做相同的操作：默认它在导航菜单之外，在小屏幕设备中，会将它移动到nav.cd-main-nav-wrapper元素之内。
+
+var navigationWrapper = $(&#39;.cd-main-nav-wrapper&#39;),
+navigation = navigationWrapper.children(&#39;.cd-main-nav&#39;),
+searchForm = $(&#39;.cd-main-search&#39;),
+navigationTrigger = $(&#39;.cd-nav-trigger&#39;),
+mainHeader = $(&#39;.cd-main-header&#39;);
+function moveNavigation(){
+var screenSize = checkWindowWidth(); //returns &#39;mobile&#39; or &#39;desktop&#39;
+if ( screenSize == &#39;desktop&#39; &amp;amp;&amp;amp; (navigationTrigger.siblings(&#39;.cd-main-search&#39;).length == 0) ) {
+//desktop screen - insert navigation and search form inside &amp;lt;header&amp;gt;
+searchForm.detach().insertBefore(navigationTrigger);
+navigationWrapper.detach().insertBefore(searchForm).find(&#39;.cd-serch-wrapper&#39;).remove();
+} else if( screenSize == &#39;mobile&#39; &amp;amp;&amp;amp; !(mainHeader.children(&#39;.cd-main-nav-wrapper&#39;).length == 0)) {
+//mobile screen - move navigation and search form after .cd-main-content element
+navigationWrapper.detach().insertAfter(&#39;.cd-main-content&#39;);
+var newListItem = $(&#39;&amp;lt;li class=&#34;cd-serch-wrapper&#34;&amp;gt;&amp;lt;/li&amp;gt;&#39;);
+searchForm.detach().appendTo(newListItem);
+newListItem.appendTo(navigation);
+}
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_814">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_815">
+                        hover3d.js-超酷鼠标滑过图片3D卡片效果jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_815" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603121510.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+hover3d.js是一款效果超酷的鼠标滑过图片3D卡片效果jQuery插件。通过该插件可以制作出鼠标滑过图片时，图片3D倾斜，旋转的效果，非常有层次感。
+内容：
+
+
+简要教程
+
+
+hover3d.js是一款效果超酷的鼠标滑过图片3D卡片效果jQuery插件。通过该插件可以制作出鼠标滑过图片时，图片3D倾斜，旋转的效果，非常有层次感。
+
+ 使用方法
+使用该jQuery插件需要在页面中引入jquery和jquery.hover3d.min.js文件
+
+&amp;lt;script src=&#34;src/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;src/jquery.hover3d.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+HTML结构
+该鼠标滑过图片效果的HTML结构如下：包裹元素和它里面的子元素将被之后为3D卡片效果。
+
+&amp;lt;div class=&#34;project&#34;&amp;gt;
+&amp;lt;div class=&#34;project\_\_card&#34;&amp;gt;
+&amp;lt;!-- Content element goes here --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+CSS样式
+该特效不需要特别的CSS样式，你可以指定自己的CSS样式。但是你可以为鼠标滑入和滑出图片时添加下面的辅助class类。
+
+/* This class can be replaced using options */
+.hover-in{
+transition: .3s ease-out;
+}
+.hover-out{
+transition: .3s ease-in;
+}
+
+
+初始化插件
+在页面加载完毕之后，可以通过下面的方法来初始化该插件。
+
+$(&#34;.project&#34;).hover3d({
+selector: &#34;.project\_\_card&#34;
+}); 
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+selector
+string
+null
+3D卡片的选择器元素
+
+
+perspective
+integer
+1000
+3D透视的深度
+
+
+sensitivity
+integer
+20
+鼠标移动的灵敏度，数值越大越不灵敏
+
+
+invert
+boolean
+false
+默认行为是元素会跟随鼠标，就像元素一直面向鼠标
+
+
+hoverInClass
+string
+hover-in
+鼠标滑入时的辅助class类，会在300毫秒后移除
+
+
+hoverOutClass
+string
+hover-out
+鼠标滑出时的辅助class类，会在300毫秒后移除
+
+
+hoverClass
+string
+hover-3d
+鼠标滑过图片时的辅助类
+
+
+
+
+hover3d.js插件的github地址为：https://github.com/ariona/hover3d
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_815">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_816">
+                        jZoom-轻量级jQuery图片放大镜插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_816" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603021529.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jZoom是一款简单实用的轻量级jQuery图片放大镜插件。该图片放大镜插件易于使用，它在鼠标滑过图片时，在图片的右侧或指定位置显示出高清大图。
+内容：
+
+
+简要教程
+
+
+jZoom是一款简单实用的轻量级jQuery图片放大镜插件。该图片放大镜插件易于使用，它在鼠标滑过图片时，在图片的右侧或指定位置显示出高清大图。
+
+ 使用方法
+
+HTML结构
+该图片放大镜效果需要使用一个容器来包裹缩略图。
+
+&amp;lt;div class=&#34;jzoom&#34;&amp;gt;
+&amp;lt;img src=&#34;img/mm.jpg&#34; height=&#34;300&#34; width=&#34;372&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+初始化插件
+在页面DOM元素加载完毕之后，可以通过jzoom()方法来初始化该图片放大镜插件。
+
+$(&#39;#id&#39;).jzoom(); 
+
+
+注意事项
+
+1、CSS部分代码已完全集成到JS代码中。
+2、如果父元素没有进行定位，则会默认添加position: relative属性。
+3、大图与原图之间需要有一定的对应关系：
+
+名称对应：如原图的文件名为image，则大图的文件名需为“image + 后缀名” ，后缀名默认为“\_big”。
+格式对应: 大图与原图的格式建议相同，也可指定原图的格式，但发现在IE下有时会出现bug。
+位于同一目录下。
+
+
+
+
+ 配置参数
+jzoom图片放大镜插件的可用配置参数有：
+
+
+width：默认值为400，放大镜div的宽度。
+
+height：默认值为400，放大镜div的高度。
+
+position： 默认值为&#34;right&#34;，放大镜div相对于原图的位置，可以设置为&#34;top&#34;、&#34;bottom&#34;、&#34;left&#34;。
+
+offsetX：默认值为20，放大镜div相对于原图的水平偏移，不能为负值。
+
+offsetY：默认值为0，放大镜div相对于原图的垂直偏移，不能为负值。
+
+opacity：默认值为0.6，镜片div的透明度。
+
+bgColor：默认值为#fff，镜片div的背景色。
+
+loading：默认值为Loading...，加载图片时显示的文字，水平垂直居中。
+
+suffixName：默认值为\_big，大图后缀名。
+
+imgType：默认值为原图格式，大图的格式，建议与原图相同。
+
+jzoom图片放大镜插件的github地址为：https://github.com/pciapcib/jZoom
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_816">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_817">
+                        jQuery文字长阴影特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_817" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604121540.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.longShadow是一款简单易用的jQuery文字长阴影特效插件。通过该插件可以制作各种文字长阴影效果，可以配置长阴影的颜色，大小和方向等。
+内容：
+
+
+简要教程
+
+
+jquery.longShadow是一款简单易用的jQuery文字长阴影特效插件。通过该插件可以制作各种文字长阴影效果，可以配置长阴影的颜色，大小和方向等。
+
+ 使用方法
+使用该文字长阴影插件需要在页面中又引入jquery和jquery.longShadow.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;src/jquery.longShadow.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个容器来包裹需要制作长阴影效果的字母。
+
+&amp;lt;span id=&#34;one&#34;&amp;gt;S&amp;lt;/span&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过longShadow()方法来初始化该文字长阴影插件。
+
+$(selector).longShadow({
+colorShadow: &#39;#a13c32&#39;,
+sizeShadow: 70,
+directionShadow: &#39;bottom&#39;
+});
+
+
+ 配置参数
+该文字长阴影特效插件的配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+colorShadow
+String
+#ccc
+长阴影的颜色，可以是HEX, RGB, RGBA颜色。
+
+
+sizeShadow
+Integer
+50
+长阴影的尺寸大小。
+
+
+directionShadow
+String
+bottom-right
+长阴影的方向。可以使用8个方向：top, right, bottom, left, top-right, top-left, bottom-right, bottom-left。
+
+
+
+
+jquery.longShadow文字长阴影插件的github地址为：https://github.com/dangvanthanh/jquery.longShadow
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_817">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_818">
+                        带视觉差和子幻灯片特效的jQuery幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_818" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603241540.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+pignose.parallaxslider.js是一款带视觉差和子幻灯片特效的jQuery幻灯片插件。该幻灯片在每一个slide中都可以带一个子幻灯片，两重幻灯片在运行的过程中会产生不错的视觉差效果。
+内容：
+
+
+简要教程
+
+
+pignose.parallaxslider.js是一款带视觉差和子幻灯片特效的jQuery幻灯片插件。该幻灯片在每一个slide中都可以带一个子幻灯片，两重幻灯片在运行的过程中会产生不错的视觉差效果。
+
+ 安装
+可以通过bower或npm来安装pignose.parallaxslider.js插件。
+
+bower install pg-parallaxslider
+npm install pg-parallaxslider 
+
+
+ 使用方法
+在页面中引入jquery(建议大于jquery1.11.x)、jquery.easing.js、pignose.parallaxslider.min.js和pignose.parallaxslider.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/pignose.parallaxslider.min.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.easing.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/js/pignose.parallaxslider.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该幻灯片的基本HTML结构如下：
+
+&amp;lt;div id=&#34;visual&#34;&amp;gt;
+&amp;lt;div class=&#34;slide-visual&#34;&amp;gt;
+&amp;lt;!-- 幻灯片区域 (1000 x 424) --&amp;gt;
+&amp;lt;ul class=&#34;slide-group&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide01.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide02.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide03.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide04.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide05.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;assets/img/visual\_slide06.jpg&#34; alt=&#34;slider image&#34; /&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- 子幻灯片区域 (316 x 328) --&amp;gt;
+&amp;lt;div class=&amp;quot;script-wrap&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;script-group&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;1.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;2.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;3.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;4.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;5.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;div class=&amp;quot;inner-script&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;6.jpg&amp;quot; alt=&amp;quot;thumbnail slider image&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div class=&amp;quot;slide-controller&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn-prev&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;assets/img/btn_prev.png&amp;quot; alt=&amp;quot;prev slide&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn-play&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;assets/img/btn_play.png&amp;quot; alt=&amp;quot;start slide&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn-pause&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;assets/img/btn_pause.png&amp;quot; alt=&amp;quot;pause slide&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn-next&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;assets/img/btn_next.png&amp;quot; alt=&amp;quot;next slide&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过pignoseParallaxSlider()方法来初始化该幻灯片插件。
+
+$(window).load(function() {
+$(&#39;#visual&#39;).pignoseParallaxSlider({
+play: &#39;.btn-play&#39;,
+pause : &#39;.btn-pause&#39;,
+next: &#39;.btn-next&#39;,
+prev: &#39;.btn-prev&#39;
+});
+});
+
+
+ 配置参数
+该幻灯片可用的配置参数有：
+
+
+
+
+参数
+名称
+默认值
+描述
+
+
+
+
+speed
+number
+1200
+幻灯片的动画速度，单位毫秒
+
+
+interval
+number
+3000
+幻灯片播放的间隔时间，单位毫秒
+
+
+direction
+string
+right
+幻灯片动画的方向
+
+
+diffTime
+number
+300
+主幻灯片和子幻灯片的视觉差时间，单位毫秒
+
+
+controlAnim
+boolean
+true
+如果该参数设置为false，插件会忽略动画队列的状态
+
+
+pagination
+boolean
+true
+是否显示分页圆点按钮
+
+
+auto
+boolean
+true
+是否自动开始播放幻灯片
+
+
+isLocal
+boolean
+true
+该属性设置控制按钮（播放、暂停、next、prev）是否属于当前的容器
+
+
+play
+jQuery object
+null
+播放按钮
+
+
+pause
+jQuery object
+null
+暂停按钮
+
+
+next
+jQuery object
+null
+next按钮
+
+
+prev
+jQuery object
+null
+prev按钮
+
+
+afterMove
+callback
+null
+幻灯片移动之后的回调函数
+
+
+
+
+PIGNOSE-ParallaxSlider幻灯片的github地址为：https://github.com/KennethanCeyer/PIGNOSE-ParallaxSlider
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_818">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_819">
+                        可以和鼠标互动的多背景层jQuery视觉差插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_819" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604281515.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+nGyroParallax是一款可以和鼠标互动的多背景层jQuery视觉差插件。该视觉差插件在页面中设置多个背景图层，然后通过检测鼠标位置来不同图层的位置和移动速度，形成视觉差效果。
+内容：
+
+
+简要教程
+
+
+nGyroParallax是一款可以和鼠标互动的多背景层jQuery视觉差插件。该视觉差插件在页面中设置多个背景图层，然后通过检测鼠标位置来不同图层的位置和移动速度，形成视觉差效果。
+
+ 使用方法
+使用该视觉差特效插件需要在页面中引入jQuery、jquery.nGyroParallax.min.js和jquery.easing.min.js文件。
+ 
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.easing.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.nGyroParallax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以设置多个图层来制作视觉差效果，每一个图层使用一个&amp;lt;div&amp;gt;元素来包裹一张图片。
+
+&amp;lt;div id=&#34;ink1-1&#34; class=&#34;nGyroParallax1&#34;&amp;gt;
+&amp;lt;img src=&#34;img/fes\_ink1-1.png&#34; alt=&#34;&#34; width=&#34;445&#34; height=&#34;373&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;ink1-2&#34; class=&#34;nGyroParallax1&#34;&amp;gt;
+&amp;lt;img src=&#34;img/fes\_ink1-2.png&#34; alt=&#34;&#34; width=&#34;379&#34; height=&#34;412&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;chouchin-1-1&amp;quot; class=&amp;quot;nGyroParallax1&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/fes_chouchin.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;151&amp;quot; height=&amp;quot;267&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;chouchin-1-2&amp;quot; class=&amp;quot;nGyroParallax1&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/fes_chouchin.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;151&amp;quot; height=&amp;quot;267&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;aori&amp;quot; class=&amp;quot;nGyroParallax1&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/sc_aori.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;260&amp;quot; height=&amp;quot;482&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&amp;quot;hotaru&amp;quot; class=&amp;quot;nGyroParallax1&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/sc_hotaru.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;202&amp;quot; height=&amp;quot;474&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+所有的图层都设置为居中定位，并设置一个CSS过渡动画效果。
+
+.nGyroParallax1 {
+position: absolute;
+top: 50\%;
+left: 50\%;
+transition: .5s ease-out;
+}
+
+然后通过margin属性来使各个图层移动到指定的位置。
+
+#chouchin-1-1 {
+margin: -160px 0 0 -460px;
+}
+#chouchin-1-2 {
+margin: -110px 0 0 280px;
+}
+#ink1-1 {
+margin: -186px 0 0 -400px;
+}
+#ink1-2 {
+margin: -206px 0 0 -40px;
+}
+#aori {
+margin: -241px 0 0 -270px;
+}
+#hotaru {
+margin: -237px 0 0 40px;
+}
+
+为需要进行鼠标互动的图像使用transform: translate3d(0,0,0);开启GPU模式，提高性能。并设置过渡动画的时间。
+
+#chouchin-1-1 img,
+#chouchin-1-2 img {
+transform: translate3d(0,0,0);
+transition: .5s;
+} 
+#aori img,
+#hotaru img {
+transform: translate3d(0,0,0);
+-webkit-filter: drop-shadow(4px 0 3px black);
+-ms-filter: drop-shadow(4px 0 3px black);
+filter: drop-shadow(4px 0 3px black);
+transition: .5s;
+} 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过nGyroParallax()方法来分别为各个图层进行初始化。
+
+$(function(){
+(window).load(function(){
+(&#39;#chouchin-1-1&#39;).nGyroParallax({
+magnification: .05
+});
+(&amp;#039;#chouchin-1-2&amp;#039;).nGyroParallax({
+magnification: .004
+});
+(&#39;#aori&#39;).nGyroParallax();
+$(&#39;#hotaru&#39;).nGyroParallax();
+});
+});
+
+
+ 配置参数
+该视觉差插件可用的配置参数有：
+
+
+background：指定某个图层是否是背景层，默认值为false。
+
+magnification：图像的移动范围，数值越大移动得越远。默认值为0.02。
+
+duration：动画的持续时间，默认为500毫秒。
+
+easing：由jquery.easing.js插件指定的easing效果。默认值为easeOutExpo。
+
+nGyroParallax视觉差插件的github地址为：https://github.com/Nunifuchisaka/nGyroParallax。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_819">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_82">
+                        jQuery基于窗口的照片查看器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_82" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811211539.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+photoviewer.js是一款基于窗口的照片查看器jQuery插件。该插件可以对一组图片生成预览，并将图片放置在一个窗口中，该窗口可以自由拖动，缩放，里面的图片可以缩放、旋转等。
+内容：
+
+
+简要教程
+
+
+photoviewer.js是一款基于窗口的照片查看器jQuery插件。该插件可以对一组图片生成预览，并将图片放置在一个窗口中，该窗口可以自由拖动，缩放，里面的图片可以缩放、旋转等。
+
+ 使用方法
+在页面中引入photoviewer.css、jquery和photoviewer.js文件。
+
+&amp;lt;link href=&#34;dist/photoviewer.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;assets/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/photoviewer.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+使用photoviewer非常简单，通过下面的方法来初始化即可。
+
+// build images array
+var items = [
+{
+src: &#39;path/to/image1.jpg&#39;, // path to image
+caption: &#39;Image Caption 1&#39; // If you skip it, there will display the original image name(image1)
+},
+{
+src: &#39;path/to/image2.jpg&#39;,
+caption: &#39;Image Caption 2&#39;
+}
+];
+// define options (if needed)
+var options = {
+// optionName: &#39;option value&#39;
+// for example:
+index: 0 // this option means you will start at first image
+};
+// Initialize the plugin
+var viewer = new PhotoViewer(items, options);
+
+最后通过一个按钮来触发打开photoviewer即可。
+
+ 使用超链接创建
+HTML DOM结构如下。
+
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-1.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-1.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-2.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-2.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-3.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-3.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+
+初始化插件：
+
+$(&#39;[data-gallery=manual]&#39;).click(function (e) {
+e.preventDefault();
+var items = [],
+// get index of element clicked
+options = {
+index: $(this).index()
+};
+// looping to create images array
+$(&#39;[data-gallery=manual]&#39;).each(function () {
+let src = $(this).attr(&#39;href&#39;);
+items.push({
+src: src
+});
+});
+new PhotoViewer(items, options);
+});
+
+
+ 作为jQuery插件来使用
+HTML DOM结构如下。
+
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-1.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-1.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-2.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-2.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a data-gallery=&#34;manual&#34; href=&#34;big-3.jpg&#34;&amp;gt;
+&amp;lt;img src=&#34;small-3.jpg&#34;&amp;gt;
+&amp;lt;/a&amp;gt;
+
+或者：
+
+&amp;lt;img data-gallery=&#34;jquery&#34; data-src=&#34;big-1.jpg&#34; src=&#34;small-1.jpg&#34;&amp;gt;
+&amp;lt;img data-gallery=&#34;jquery&#34; data-src=&#34;big-2.jpg&#34; src=&#34;small-2.jpg&#34;&amp;gt;
+&amp;lt;img data-gallery=&#34;jquery&#34; data-src=&#34;big-3.jpg&#34; src=&#34;small-3.jpg&#34;&amp;gt;
+
+初始化插件：
+
+$(&#39;[data-gallery=jquery]&#39;).photoviewer(options);
+
+
+ 创建消息通知
+初始化插件：
+
+new jBox(&#39;Notice&#39;, {
+content: &#39;Hurray! A notice!&#39;,
+color: &#39;blue&#39;
+});
+
+ 该jQuery基于窗口的照片查看器插件的github网址为：https://github.com/nzbin/photoviewer
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_82">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_820">
+                         基于magnific-popup.js和animate.css的响应式lightbox特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_820" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604011703.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于magnific-popup.js和animate.css的响应式lightbox特效。该特效使用magnific-popup.js作为驱动，使用animate.css作为动画特效，制作出各种打开lightbox的炫酷效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于magnific-popup.js和animate.css的响应式lightbox特效。该特效使用magnific-popup.js作为驱动，使用animate.css作为动画特效，制作出各种打开lightbox的炫酷效果。
+magnific-popup.js是一款响应式的lightbox和对话框插件。它可以为各种设备的用户提供良好的性能和更好的用户体验。
+animate.css是一款强大的CSS3动画库，它提供了75种不同的过渡动画效果。
+
+ 使用方法
+使用该特效需要在页面中引入jQuery、magnific-popup.js相关文件和animate.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css&#34;&amp;gt;
+&amp;lt;script src=&#39;js/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以通过一个超链接元素来打开lightbox，超链接中使用data-*属性来设置需要的CSS3动画效果。
+
+&amp;lt;a href=&#34;http://placehold.it/600x600&#34; 
+class=&#34;btn popup-link&#34; 
+data-effect=&#34;fadeIn&#34;&amp;gt;fadeIn&amp;lt;/a&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该特效。
+
+$(document).ready(function() {
+$(&#39;.popup-link&#39;).magnificPopup({ 
+removalDelay: 300,
+type: &#39;image&#39;,
+callbacks: {
+beforeOpen: function() {
+ this.st.image.markup = this.st.image.markup.replace(&#39;mfp-figure&#39;, &#39;mfp-figure animated &#39; + this.st.el.attr(&#39;data-effect&#39;));
+}
+},
+});
+});
+
+关于magnific-popup.js的详细使用方法请参考：http://dimsemenov.com/plugins/magnific-popup/documentation.html
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_820">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_821">
+                        炫酷鼠标滑过超链接动画特效jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_821" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605251533.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+anchor-hover-effect是一款炫酷的鼠标滑过超链接动画特效jQuery插件。该插件提供4种超链接动画效果：3D翻转效果，括号动画效果，上下翻转效果和下划线动画效果。
+内容：
+
+
+简要教程
+
+
+anchor-hover-effect是一款炫酷的鼠标滑过超链接动画特效jQuery插件。该插件提供4种超链接动画效果：3D翻转效果，括号动画效果，上下翻转效果和下划线动画效果。
+
+ 使用方法
+使用该插件需要在页面中引入anchorHoverEffect.css，jquery和anchorHoverEffect.js文件。
+
+&amp;lt;link href=&#34;css/anchorHoverEffect.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;!-- 可选 --&amp;gt;
+&amp;lt;script src=&#34;js/anchorHoverEffect.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+DEMO中使用无序列表来包裹一组超链接元素。
+
+&amp;lt;ul class=&#34;ulDefault&#34;&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;jQuery&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Angular Js&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;JavaScript&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Asp.net MVC&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过anchorHoverEffect()方法来初始化该超链接到能够插件。
+
+$(&#34;.ulDefault a&#34;).anchorHoverEffect(); 
+
+
+ 配置参数
+该超链接动画插件有4个可用的配置参数，分别用于制作4最后不同的动画：
+
+$(&#34;.ulDefault a&#34;).anchorHoverEffect({type: &#39;brackets&#39;}); 
+
+
+
+roller3d ：默认动画效果，3D翻转效果。
+
+brackets ：方括号动画效果。
+
+flip ：上下翻转超链接文本。
+
+borderBottom ：下划线动画效果。
+
+anchor-hover-effect超链接动画插件的github地址为：https://github.com/iSatinderSingh/anchor-hover-effect
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_821">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/139/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/141/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

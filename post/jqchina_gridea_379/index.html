@@ -1,0 +1,419 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单易用的jquery响应式轮播图插件ma5slider | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单易用的jquery响应式轮播图插件ma5slider
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1709/201709201520.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709201520.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709204750.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>ma5slider是一款简单易用的jquery响应式轮播图插件。该轮播图支持鼠标拖拽，可以通过CSS定制外观，支持无限循环模式，内置水平，垂直和淡入淡出三种轮播图过渡动画效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>ma5slider是一款简单易用的jquery响应式轮播图插件。该轮播图支持鼠标拖拽，可以通过CSS定制外观，支持无限循环模式，内置水平，垂直和淡入淡出三种轮播图过渡动画效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和jqueryui，jquery.ui.touch-punch.js文件，以及ma5slider轮播图插件的相关文件。</p>
+<pre class="brush:html">
+&lt;!-- jQuery --&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+<p>&lt;!-- jQuery UI mouse draggable widget --&gt;<br>
+&lt;script src=&quot;js/jquery-ui.min.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- Touch Event Support for jQuery UI --&gt;<br>
+&lt;script src=&quot;js/jquery.ui.touch-punch.min.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;!-- MA5 Slider --&gt;<br>
+&lt;link href=&quot;css/ma5slider.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br>
+&lt;script src=&quot;js/ma5slider.min.js&quot;&gt;&lt;/script&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>ma5slider轮播图的基本HTML结构如下：</p>
+<pre class="brush:html">
+&lt;body&gt;
+&lt;div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode"&gt;
+&lt;div class="slides"&gt;
+&lt;a href="#slide-1"&gt;&lt;img src="images/1.jpg" alt=""&gt;&lt;/a&gt;
+&lt;a href="#slide-2"&gt;&lt;img src="images/2.jpg" alt=""&gt;&lt;/a&gt;
+&lt;a href="#slide-3"&gt;&lt;img src="images/3.jpg" alt=""&gt;&lt;/a&gt;
+&lt;a href="#slide-4"&gt;&lt;img src="images/4.jpg" alt=""&gt;&lt;/a&gt;
+&lt;a href="#slide-5"&gt;&lt;img src="images/5.jpg" alt=""&gt;&lt;/a&gt;
+&lt;a href="#slide-6"&gt;&lt;img src="images/6.jpg" alt=""&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>ma5slider()</code>方法来初始化ma5slider轮播图插件。</p>
+<pre class="brush:js">
+&lt;script&gt;
+$(window).on('load', function () {
+$('.ma5slider').ma5slider();
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>你可以通过在轮播图的顶级容器上添加下面的class来自定义轮播图的外观和行为。</p>
+<ul>
+<li>
+<code>anim-horizontal</code>：水平滚动的轮播图。</li>
+<li>
+<code>anim-vertical</code>：垂直滚动的轮播图。</li>
+<li>
+<code>anim-fade</code>：淡入淡出的轮播图。</li>
+<li>
+<code>autoplay</code>：轮播图自动播放。</li>
+<li>
+<code>loop-mode</code>：无限循环模式。</li>
+<li>
+<code>horizontal-navs</code>：水平箭头导航按钮。</li>
+<li>
+<code>vertical-navs</code>：垂直箭头导航按钮。</li>
+<li>
+<code>inside-navs</code>：箭头导航按钮在轮播图内部。</li>
+<li>
+<code>outside-navs</code>：箭头导航按钮在轮播图外部。</li>
+<li>
+<code>hover-navs</code>：鼠标hover时才显示箭头导航按钮。</li>
+<li>
+<code>hidden-navs</code>：隐藏箭头导航按钮。</li>
+<li>
+<code>horizontal-dots</code>：水平圆点按钮。</li>
+<li>
+<code>bottom-dots</code>：底部分页导航按钮。</li>
+<li>
+<code>inside-dots</code>：圆点按钮在轮播图内部。</li>
+<li>
+<code>outside-dots</code>：圆点按钮在轮播图外部。</li>
+<li>
+<code>hover-dots</code>：鼠标hover时才显示圆点导航按钮。</li>
+<li>
+<code>hidden-dots</code>：隐藏圆点导航按钮。</li>
+</ul>
+<p>例如：</p>
+<pre class="brush:html">
+&lt;div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ..."&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 通过HTML5 data属性来控制轮播图</h5>
+<ul>
+<li>
+<code>data-ma5-dot</code>：覆盖圆点导航按钮的颜色。</li>
+<li>
+<code>data-ma5-dot-active</code>：覆盖激活状态圆点导航按钮的颜色。</li>
+<li>
+<code>data-ma5-nav</code>：覆盖箭头导航按钮的颜色。</li>
+<li>
+<code>data-ma5-anim</code>：覆盖默认的轮播图过渡动画。</li>
+</ul>
+<p>例如：</p>
+<pre class="brush:html">
+&lt;a href="#slide-2" data-ma5-dot="#888" data-ma5-dot-active="#649100"&gt;
+&lt;img src="2.jpg" alt=""&gt;
+&lt;/a&gt; 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>ma5slider轮播图插件可用的方法如下：</p>
+<pre class="brush:js">
+// 跳转到第三幅图片
+ma5sliderGoToSlide('#slider', 3 );
+<p>// 跳转到下一幅图片<br>
+ma5sliderGoToNext('#slider');</p>
+<p>// 跳转到前一幅图片<br>
+ma5sliderGoToPrev('#slider');</p>
+<p>// 跳转到第一幅图片<br>
+ma5sliderGoToFirst('#slider');</p>
+<p>// 跳转到最后一幅图片<br>
+ma5sliderGoToLast('#slider');<br>
+</pre></p>
+<p>ma5slider轮播图插件的github地址为：<a href="https://github.com/ma-5/ma5slider" target="\_blank">https://github.com/ma-5/ma5slider</a></p>
+<!--简要教程-->
+<div class="alert alert-warning mt25" role="alert">
+本文版权属于jQuery之家，转载请注明出处：<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201709204749.html">http://www.htmleaf.com/jQuery/Slideshow-Scroller/201709204749.html</a>
+</div>
+<div class="leaf-page-nav pt50minh50 clearfix">
+<div class="pull-left">上一篇：<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201709144739.html">jQuery和CSS3超酷3D立方体轮播图插件</a> </div>
+<div class="pull-right">下一篇：<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201711074815.html">纯js图片碎片轮播图切换效果</a> </div>
+</div>
+<!--相关插件-->
+<div class="leaf-box mt45">
+<div class="leaf-tp leaf-like">
+<h3>
+相关插件 
+</h3>
+</div>
+<div class="row pt30 pb30 minh150">
+<div class="mt30 col-md-12 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201909025780.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1908/201909025217.jpg" alt="js堆叠卡片轮播图插件stackedCards"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201909025780.html"><h5>js堆叠卡片轮播图插件stackedCards</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201908285776.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1908/201908286565.jpg" alt="jQuery和CSS3堆叠式轮播图特效"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201908285776.html"><h5>jQuery和CSS3堆叠式轮播图特效</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201907225742.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1907/201907226463.jpg" alt="js 3D旋转木马特效插件"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201907225742.html"><h5>js 3D旋转木马特效插件</h5></a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div class="thumbnail leaf-thumb-fix">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201906275710.html"><img class="lazy" src="http://www.htmleaf.com/images/pixel.gif" data-original="http://img.htmleaf.com/1906/201906270863.jpg" alt="jQuery轮播图插件camRoll Slider"></a>
+<div class="caption">
+<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201906275710.html"><h5>jQuery轮播图插件camRoll Slider</h5></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--相关插件结束-->
+<!--网友评论-->
+<!-- <div class="leaf-box mt45">
+<div class="leaf-tp leaf-pinglun">
+<h3>
+网友评论 
+</h3>
+</div>
+<div class="leaf-changyan">
+<div id="SOHUCS"></div>
+</div>
+</div> -->
+<!--网友评论结束-->
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1709/201709201520.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201709204750.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_38">
+                                <h3 class="post-title">
+                                    谷歌样式jquery水平滚动Carousel插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

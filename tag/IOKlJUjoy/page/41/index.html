@@ -1,0 +1,1558 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1465">
+                        jQuery和css3炫酷弹性轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1465" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411201728.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款实用jQuery和css3制作的炫酷弹性背景轮播图插件。该jQuery轮播图在轮播的时候，图片背景像弹簧一样来回弹动，效果非常震撼。
+内容：
+
+
+简要教程
+
+
+这是一款效果炫酷的jQuery和css3弹性背景轮播图插件，所有的现代浏览器都支持这个效果。
+HTML
+
+&amp;lt;div class=&#34;page\_container&#34;&amp;gt;
+&amp;lt;div class=&#34;jumpto-block&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Header 1&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;SubHeader 1&amp;lt;/h3&amp;gt;
+....
+&amp;lt;h3&amp;gt;SubHeader 2&amp;lt;/h3&amp;gt;
+....
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;jumpto-block&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Header 2&amp;lt;/h2&amp;gt;
+&amp;lt;h3&amp;gt;SubHeader 1&amp;lt;/h3&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+调用插件
+
+$(&#34;.page\_container&#34;).jumpto({
+firstLevel: &#34;&amp;gt; h2&#34;, // You can define which tag will represent your first level header. The default value is the &amp;lt;h2&amp;gt; tag. Any &amp;lt;h2&amp;gt; tag will automatically be used as a first level link in the menu.
+secondLevel: false, // We also support submenu. Like above, you can define the selector for the second level header to be used in the submenu. Default is false.
+innerWrapper: &#34;.jumpto-block&#34;, // In case you want to switch the section wrapper class name to something else
+offset: 400, // You can define how many pixels until the jump to menu starts to follow you on scroll. Default is 400 pixels.
+animate: 1000, // You can define how fast/slow the page will scroll when the jump to menu is clicked. Set to false to turn off animation.
+navContainer: false, // If you want to place your jump to menu somewhere else, simply add a selector to your predefined jump to menu container here. The default is false and it will automatically be generated.
+anchorTopPadding: 20, // This option let you set the top padding when the jump to menu is clicked. This will let you control the space between your header and the top of the page. Default is 20 pixels.
+showTitle: &#34;Jump To&#34;, // You can customize the title of the jump to menu here. Set to false if you want to hide the title
+closeButton: true // You can choose to show/hide the close button by toggling this to true/false respectively
+});
+
+更多详细信息请参看：https://github.com/peachananr/jumpto
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1465">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1466">
+                        jQuery下载按钮滑动显示文件大小
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1466" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411181756.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款很实用的jQuery下载按钮插件。该jQuery下载按钮当用户点击按钮时，会从按钮下发滑出一个面板显示下载文件的大小和类型。
+内容：
+
+
+简要教程
+
+
+这是一款很实用的jQuery下载按钮插件。
+HTML
+
+&amp;lt;div class=&#34;buttonWrap&#34;&amp;gt;
+&amp;lt;div class=&#34;toggleButton&#34;&amp;gt;Download Now!&amp;lt;/div&amp;gt;
+ &amp;lt;a href=&#34;#&#34; class=&#34;toggleSection&#34;&amp;gt;
+&amp;lt;span&amp;gt;Exe&amp;lt;/span&amp;gt;
+7.27 MB
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+CSS
+插件中按钮的渐变是使用Colorzilla制作的，使用Colorzilla制作的渐变代码将能够兼容所有的浏览器。
+
+.buttonWrap{width:170px; height:80px; display:block;}
+.toggleButton{
+display:block;
+width:170px;
+height:30px;
+padding:10px 0 0 0;
+text-size:24px;
+font-family:arial, sans-serif;
+font-weight:bold;
+text-align:center;
+color:#FFF;
+text-decoration:none;
+border-radius:7px;
+cursor:pointer;
+border:1px solid #05ABE0;
+text-shadow:-1px -1px 0px #05ABE0;
+background: #87E0FD;
+background: -moz-linear-gradient(top, #87E0FD 0%, #53CBF1 40%, #05ABE0 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87E0FD), color-stop(40%,#53CBF1), color-stop(100%,#05ABE0));
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#87E0FD&#39;, endColorstr=&#39;#05ABE0&#39;,GradientType=0 );
+}
+.toggleButton:active{
+background: #87e0fd;
+background: -moz-linear-gradient(top, #05ABE0 0%, #53CBF1 40%, #87E0FD 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05ABE0), color-stop(40%,#53CBF1), color-stop(100%,#87E0FD));
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#05ABE0&#39;, endColorstr=&#39;#87E0FD&#39;,GradientType=0 );
+}
+a.toggleSection{
+display:none;
+color:#333;
+background:#EEE url(icon-dl.png) no-repeat 5px center;
+border-left:1px solid #DDD; border-right:1px solid #DDD; border-bottom:1px solid #DDD;
+border-radius:00 5px 5px;
+width:60px;
+float:right;
+padding:5px 5px 5px 40px;
+margin:0 10px 0 0;
+font-family:arial, sans-serif;
+font-size:12px;
+text-decoration:none;
+}
+a.toggleSection span{font-weight:bold; display:block;}
+
+调用插件
+首先要引入jQuery
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;http://libs.useso.com/js/jquery/1.4.2/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+调用代码
+
+$(document).ready(function() {
+$(&#39;.buttonWrap&#39;).click(function() {
+if ($(&#39;.toggleSection&#39;).is(&#34;:hidden&#34;)) {
+$(&#39;.toggleSection&#39;).slideDown(&#34;slow&#34;);
+} else {
+$(&#39;.toggleSection&#39;).slideUp(&#34;slow&#34;);
+}
+return false;
+});
+});
+
+
+更多信息请参看：http://andrewchamp.com/articles/sliding-download-button-using-jquery
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1466">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1467">
+                        jQuery和css3鼠标滑过背景模糊特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1467" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411281522.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常不错的jQuery和css3鼠标滑过背景模糊特效。该特效果中页面上的所有项目以网格形式分布，当鼠标滑过其中的一个项目时，该项目放大并带阴影效果，其他所有项目则缩小变模糊。
+内容：
+
+
+简要教程
+
+
+这是一款效果十分炫酷的jQuery和css3鼠标滑过背景模糊特效。在插件中使用了CSS3 transitions和使用jQuery来切换class。不是所有的浏览器都支持CSS3 transitions，最好使用Chrome或Safari浏览器来查看demo。
+HTML
+html结构十分简单：
+
+&amp;lt;section class=&#34;ib-container&#34; id=&#34;ib-container&#34;&amp;gt;
+&amp;lt;article&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Some Headline&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;span&amp;gt;Some other text&amp;lt;/span&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;p&amp;gt;Some introduction&amp;lt;/p&amp;gt;
+&amp;lt;/article&amp;gt;
+&amp;lt;article&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/article&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/section&amp;gt;
+
+JAVASCRIPT
+当我们用鼠标hover一篇文章，将使用jQuery给当前鼠标滑过的文章一个class active，而给其它文章一个class blur。
+
+var $container= $(&#39;#ib-container&#39;),
+$articles = $container.children(&#39;article&#39;),
+timeout;
+$articles.on( &#39;mouseenter&#39;, function( event ) {
+var $article= $(this);
+clearTimeout( timeout );
+timeout = setTimeout( function() {
+if( $article.hasClass(&#39;active&#39;) ) return false;
+articles.not(articles.not(articles.not(article).removeClass(&#39;active&#39;).addClass(&#39;blur&#39;);
+$article.removeClass(&#39;blur&#39;).addClass(&#39;active&#39;);
+}, 75 );
+});
+$container.on( &#39;mouseleave&#39;, function( event ) {
+clearTimeout( timeout );
+$articles.removeClass(&#39;active blur&#39;);
+});
+
+css代码请参考下载文件。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1467">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1468">
+                        jQuery和css3单选框复选框美化效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1468" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411221728.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和css3制作的单选框和复选框美化效果的插件。该美化效果插件代码小巧简洁，最为显眼的效果是复选框选中时小勾的旋转效果。
+内容：
+
+
+简要教程
+
+
+这是一款简洁的jQuery和css3单选框复选框美化效果。
+HTML
+
+&amp;lt;div class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Gender:&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;input type=&#34;radio&#34; name=&#34;radio-btn&#34; /&amp;gt;Male&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;input type=&#34;radio&#34; name=&#34;radio-btn&#34; /&amp;gt;Female&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Favorite music:&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; name=&#34;check-box&#34; /&amp;gt; &amp;lt;span&amp;gt;Pop music&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; name=&#34;check-box&#34; /&amp;gt; &amp;lt;span&amp;gt;Rock music&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; name=&#34;check-box&#34; /&amp;gt; &amp;lt;span&amp;gt;Rap music&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; name=&#34;check-box&#34; /&amp;gt; &amp;lt;span&amp;gt;Hiphop music&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+使用jQuery切换动画效果
+引入jQuery文件。
+
+&amp;lt;script src=&#39;http://libs.useso.com/js/jquery/1.11.0/jquery.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+$(&#39;input[name=&#34;radio-btn&#34;]&#39;).wrap(&#39;&#39;);
+$(&#34;.radio-btn&#34;).on(&#39;click&#39;, function () {
+var \_this = $(this),
+block = \_this.parent().parent();
+block.find(&#39;input:radio&#39;).attr(&#39;checked&#39;, false);
+block.find(&#34;.radio-btn&#34;).removeClass(&#39;checkedRadio&#39;);
+\_this.addClass(&#39;checkedRadio&#39;);
+\_this.find(&#39;input:radio&#39;).attr(&#39;checked&#39;, true);
+});
+$(&#39;input[name=&#34;check-box&#34;]&#39;).wrap(&#39;&#39;);
+$.fn.toggleCheckbox = function () {
+this.attr(&#39;checked&#39;, !this.attr(&#39;checked&#39;));
+}
+$(&#39;.check-box&#39;).on(&#39;click&#39;, function () {
+$(this).find(&#39;:checkbox&#39;).toggleCheckbox();
+$(this).toggleClass(&#39;checkedBox&#39;);
+});
+
+更多详细信息请参看：http://codepen.io/ElmahdiMahmoud/pen/JFejy
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1468">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1469">
+                        jQuery和css3登录注册表单切换动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1469" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412061414.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款美化效果的jQuery和css3登录注册表单切换动画特效。该插件在用户登录界面、注册界面和忘记密码界面之间以淡入淡出的方式进行切换，效果十分不错。
+内容：
+
+
+简要教程
+
+
+这是一款简单的、非常实用的jQuery和css3登录注册表单切换动画特效。这个插件允许用户在登录、注册和忘记密码三个页面之间来回切换，切换时带有炫酷的css3动画效果。当浏览器不支持javascript时，三个页面只是做简单的跳转。
+HTML
+整个html结构是使用一个wrapper包住三个表单：登录表单、注册表单和忘记密码表单。
+
+&amp;lt;div id=&#34;form\_wrapper&#34; class=&#34;form\_wrapper&#34;&amp;gt;
+&amp;lt;!-- We will add our forms here --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;form class=&#34;register&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Register&amp;lt;/h3&amp;gt;
+&amp;lt;div class=&#34;column&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;First Name:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Last Name:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Website:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; value=&#34;http://&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;column&#34;&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Username:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Email:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Password:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;password&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bottom&#34;&amp;gt;
+&amp;lt;div class=&#34;remember&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;input type=&#34;submit&#34; value=&#34;Register&#34; /&amp;gt;
+&amp;lt;a href=&#34;index.html&#34; rel=&#34;login&#34; class=&#34;linkform&#34;&amp;gt;
+You have an account already? Log in here
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;form class=&#34;login active&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Login&amp;lt;/h3&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Username:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Password: 
+&amp;lt;a href=&#34;forgot\_password.html&#34; rel=&#34;forgot\_password&#34; class=&#34;forgot linkform&#34;&amp;gt;
+Forgot your password?
+&amp;lt;/a&amp;gt;
+&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;password&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bottom&#34;&amp;gt;
+&amp;lt;div class=&#34;remember&#34;&amp;gt;&amp;lt;input type=&#34;checkbox&#34; /&amp;gt;
+&amp;lt;span&amp;gt;Keep me logged in&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;input type=&#34;submit&#34; value=&#34;Login&#34;&amp;gt;&amp;lt;/input&amp;gt;
+&amp;lt;a href=&#34;register.html&#34; rel=&#34;register&#34; class=&#34;linkform&#34;&amp;gt;
+You don&#39;t have an account yet? Register here
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;lt;form class=&#34;forgot\_password&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Forgot Password&amp;lt;/h3&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;label&amp;gt;Username or Email:&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;text&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;bottom&#34;&amp;gt;
+&amp;lt;input type=&#34;submit&#34; value=&#34;Send reminder&#34;&amp;gt;&amp;lt;/input&amp;gt;
+&amp;lt;a href=&#34;index.html&#34; rel=&#34;login&#34; class=&#34;linkform&#34;&amp;gt;
+Suddenly remebered? Log in here
+&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;register.html&#34; rel=&#34;register&#34; class=&#34;linkform&#34;&amp;gt;
+You don&#39;t have an account? Register here
+&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+
+登录表单带有一个active class，表示页面打开时首先显示的是登录表单。
+JAVASCRIPT
+首先添加一些必须的变量参数。
+
+//the form wrapper (includes all forms)
+var $form\_wrapper = $(&#39;#form\_wrapper&#39;),
+//the current form is the one with class &#34;active&#34;
+$currentForm= $form\_wrapper.children(&#39;form.active&#39;), 
+//the switch form links
+$linkform = $form\_wrapper.find(&#39;.linkform&#39;);
+
+获取每个表单的高度和宽度用来做后面的动画。
+
+$form\_wrapper.children(&#39;form&#39;).each(function(i){
+var $theForm= $(this);
+//solve the inline display none problem when using fadeIn/fadeOut
+if(!$theForm.hasClass(&#39;active&#39;))
+$theForm.hide();
+$theForm.data({
+width : $theForm.width(),
+height: $theForm.height()
+});
+});
+
+接下来调用设置wrapper大小的函数，该函数将在下面给出： 
+
+setWrapperWidth();
+
+当用户点击了切换链接，我们将隐藏当前表单，显示用户点击的表单。这里需要动态改变表单的高度和宽度到新表单的高度和宽度。
+
+$linkform.bind(&#39;click&#39;,function(e){
+var $link = $(this);
+var target= $link.attr(&#39;rel&#39;);
+$currentForm.fadeOut(400,function(){
+//remove class &#34;active&#34; from current form
+$currentForm.removeClass(&#39;active&#39;);
+//new current form
+$currentForm= $form\_wrapper.children(&#39;form.&#39;+target);
+//animate the wrapper
+$form\_wrapper.stop()
+ .animate({
+width : $currentForm.data(&#39;width&#39;) + &#39;px&#39;,
+height: $currentForm.data(&#39;height&#39;) + &#39;px&#39;
+ },500,function(){
+//new form gets class &#34;active&#34;
+$currentForm.addClass(&#39;active&#39;);
+//show the new form
+$currentForm.fadeIn(400);
+ });
+});
+e.preventDefault();
+});
+
+setWrapperWidth函数是通过设置css属性完成的。我们希望页面加载完毕wrapper就能获得正确的高度和宽度：
+
+function setWrapperWidth(){
+$form\_wrapper.css({
+width : $currentForm.data(&#39;width&#39;) + &#39;px&#39;,
+height: $currentForm.data(&#39;height&#39;) + &#39;px&#39;
+});
+}
+
+在demo中我们禁用了submit按钮。实际应用中你需要检查哪个表单被提交并给该表单class active。
+
+$form\_wrapper.find(&#39;input[type=&#34;submit&#34;]&#39;)
+ .click(function(e){
+e.preventDefault();
+ });
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1469">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_147">
+                        jquery商城商品放大镜插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_147" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807241420.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+exzoom是一款jquery商城商品放大镜插件。该jquery放大镜插件,自带缩略图导航和自动播放功能,也提供了手动修改大图的方法。
+内容：
+
+
+简要教程
+
+
+exzoom是一款jquery商城商品放大镜插件。该jquery放大镜插件,自带缩略图导航和自动播放功能,也提供了手动修改大图的方法。
+
+
+
+ 使用方法
+在页面中引入jquery和jquery.exzoom.js和jquery.exzoom.css文件。
+
+&amp;lt;link href=&#34;dist/css/jquery.exzoom.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.exzoom.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该jquery放大镜的HTML结构如下：
+
+&amp;lt;div class=&#34;exzoom&#34; id=&#34;exzoom&#34;&amp;gt;
+&amp;lt;!--大图区域--&amp;gt;
+&amp;lt;div class=&#34;exzoom\_img\_box&#34;&amp;gt;
+&amp;lt;ul class=&#39;exzoom\_img\_ul&#39;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img01.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img02.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img03.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img04.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img05.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img06.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img07.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&#34;images/photos/img08.jpg&#34;/&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!--缩略图导航--&amp;gt;
+&amp;lt;div class=&#34;exzoom\_nav&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;!--控制按钮--&amp;gt;
+&amp;lt;p class=&#34;exzoom\_btn&#34;&amp;gt;
+&amp;lt;a href=&#34;javascript:void(0);&#34; class=&#34;exzoom\_prev\_btn&#34;&amp;gt; &amp;lt; &amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;javascript:void(0);&#34; class=&#34;exzoom\_next\_btn&#34;&amp;gt; &amp;gt; &amp;lt;/a&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过exzoom()方法来初始化该jquery放大镜插件。
+
+$(&#34;#exzoom&#34;).exzoom();
+
+
+ 配置参数
+该jquery放大镜插件的可用配置参数如下：
+
+defaults = {
+&#34;navWidth&#34;: 60,//列表每个宽度,该版本中请把宽高填写成一样
+&#34;navHeight&#34;: 60,//列表每个高度,该版本中请把宽高填写成一样
+&#34;navItemNum&#34;: 5,//列表显示个数
+&#34;navItemMargin&#34;: 7,//列表间隔
+&#34;navBorder&#34;: 1,//列表边框，没有边框填写0，边框在css中修改
+&#34;autoPlay&#34;: true,//是否自动播放
+&#34;autoPlayTimeout&#34;: 2000,//播放间隔时间
+};
+
+ 该jquery放大镜插件的github地址为：https://github.com/weihaipy/exzoom
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_147">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1470">
+                        jQuery和css3全屏导航菜单特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1470" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412122134.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常不错的jQuery和css3全屏导航菜单特效插件。当用户点击页面底部的导航主按钮时，将以3d动画的方式从屏幕上方滑出一个全屏的导航菜单。
+内容：
+
+
+简要教程
+
+
+有时候为了更好的用户体验，你可能会使用一张高分辨率的背景图片结合一些好看的字体来呈现给用户。这种做法是当前UI设计的一种趋势。对于这个插件，我们想：既然我们已经在手机app中实现了某些简单的效果，为何不能将它移植到桌面设备上去呢？
+CSS3 transitions 和 animations是这种转换变得十分容易实现。一个值得探讨的问题是：我们应该考虑是合并一些移动和桌面用户体验方面的经验，还是应该把他们分开？
+HTML结构
+我们使用&amp;lt;main&amp;gt;元素包住所有的可见元素。导航菜单在&amp;lt;main&amp;gt;元素之外，它将从页面顶部滑出。.cd-shadow-layer用于在&amp;lt;main&amp;gt;元素缩小时在其上制作一个阴影，使其看起来更具有3D效果。
+.cd-blurred-bg将被用来制作模糊图像层。
+
+&amp;lt;main&amp;gt;
+&amp;lt;section&amp;gt;
+&amp;lt;h1&amp;gt;&amp;lt;!-- title here --&amp;gt;&amp;lt;/h1&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;!-- logo and menu icon here --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;div class=&amp;quot;cd-blurred-bg&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;div class=&amp;quot;cd-shadow-layer&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;nav&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+
+CSS样式
+为了实现这个动画效果，我们在&amp;lt;main&amp;gt;和&amp;lt;nav&amp;gt;元素上结合使用CSS3 Transformations 和CSS3 Transitions。translate 和 scale属性使我们能够移动菜单和模拟3d移动效果。Transitions属性就像黄油一样可以使两个属性值平滑地从状态A过渡到状态B。
+
+#cd-main-content { /* this is the main element */
+transition-property: transform;
+transition-duration: 0.5s;
+}
+#cd-main-content.move-out {
+transform: scale(0.6);
+}
+#main-nav { /* this is the navigation */
+transform: translateY(-100\%);
+transition-property: transform;
+transition-duration: 0.5s;
+}
+#main-nav.is-visible {
+transform: translateY(0);
+}
+
+关于模糊效果，我们使用相同的背景克隆了一个&amp;lt;section&amp;gt;元素。为了达到模糊效果，我们需要将部分内容遮罩住。这里需要CSS 的clip属性，现在唯一的问题是，我们不知道它到顶部偏移了多少。我们需要使用jQuery来传递clip属性的值。这部分内容留到后面：
+
+.cd-blurred-bg {
+/* we use jQuery to apply a mask to this element - CSS clip property */
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+height: 100\%;
+background: url(&#34;../img/bg-img.jpg&#34;) no-repeat center center;
+background-size: cover;
+filter: blur(4px);
+}
+
+JAVASCRIPT
+我们没有使用太多的jQuery代码，唯一值得关注的地方是设置 .cd-blurred-bg元素的clip属性的函数：
+
+function set\_clip\_property() {
+var $header\_height = $(&#39;.cd-header&#39;).height(),
+$window\_height = $(window).height(),
+$header\_top = $window\_height - $header\_height,
+$window\_width = $(window).width();
+$(&#39;.cd-blurred-bg&#39;).css(&#39;clip&#39;, &#39;rect(&#39;+$header\_top+&#39;px, &#39;+$window\_width+&#39;px, &#39;+$window\_height+&#39;px, 0px)&#39;);
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1470">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1471">
+                        jQuery和css3侧边栏滑动显示相关文章插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1471" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412031713.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常炫酷的jQuery和css3侧边栏滑动显示相关文章插件。该插件将一篇文章的相关文章以侧边栏的形式放置，当鼠标滑过其中一项是相关文章侧边栏滑出显示详细信息。并且可以通过按钮更换一批相关文章。
+内容：
+
+
+简要教程
+
+
+这是一款十分酷的jQuery和css3侧边栏滑动显示相关文章插件。相关文章以固定的位置悬浮在网页的侧边，鼠标滑过相关文章时，它会滑动出来显示详细信息，下边还有一个按钮可以切换一批相关文章。
+HTML
+该插件的html结构使用一个嵌套结构的无序列表来制作：
+
+&amp;lt;div id=&#34;rp\_list&#34; class=&#34;rp\_list&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div&amp;gt;
+&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34;/&amp;gt;
+&amp;lt;span class=&#34;rp\_title&#34;&amp;gt;Post Title&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;rp\_links&#34;&amp;gt;
+&amp;lt;a target=&#34;\_blank&#34; href=&#34;#&#34;&amp;gt;Article&amp;lt;/a&amp;gt;
+&amp;lt;a target=&#34;\_blank&#34; href=&#34;#&#34;&amp;gt;Demo&amp;lt;/a&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;span id=&#34;rp\_shuffle&#34; class=&#34;rp\_shuffle&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+
+所有的相关文章都包括在无序列表中，通过jQuery，我们控制每次只显示5篇文章。span rp\_shuffle是用来更换一批文章的按钮。
+JAVASCRIPT
+首先要做的事情是只显示5篇文章，并在页面显示是快速将其隐藏到只能看见缩略图。这种效果将提示用户：你可以用鼠标放上来试试！
+当鼠标滑过缩略图，将滑动显示相关文章的全部内容。
+点击“更换一批”按钮将随机更换5篇文章。
+jQuery代码如下：
+
+$(function() {
+/**
+* the list of posts
+*/
+var $list = $(&#39;#rp\_list ul&#39;);
+/**
+* number of related posts
+*/
+var elems\_cnt = $list.children().length;
+/**
+
+show the first set of posts.
+200 is the initial left margin for the list elements
+*/
+load(200);
+
+function load(initial){
+$list.find(&#39;li&#39;).hide().andSelf().find(&#39;div&#39;).css(&#39;margin-left&#39;,-initial+&#39;px&#39;);
+var loaded= 0;
+//show 5 random posts from all the ones in the list.
+//Make sure not to repeat
+while(loaded &amp;lt; 5){
+var r = Math.floor(Math.random()*elems_cnt);
+var $elem = list.find(′li:nth−child(′+(r+1)+′)′);if(list.find(&amp;#x27;li:nth-child(&amp;#x27;+ (r+1) +&amp;#x27;)&amp;#x27;);
+if(list.find(′li:nth−child(′+(r+1)+′)′);if(elem.is(&#39;:visible&#39;))
+continue;
+else
+elem.show();
+++loaded;
+}
+//animate them
+var d = 200;
+list.find(&#39;li:visible div&#39;).each(function(){
+$(this).stop().animate({
+&#39;marginLeft&#39;:&#39;-50px&#39;
+},d += 100);
+});
+}
+/**
+
+hovering over the list elements makes them slide out
+*/
+list.find(&amp;#039;li:visible&amp;#039;).live(&amp;#039;mouseenter&amp;#039;,function () {
+(this).find(&#39;div&#39;).stop().animate({
+&#39;marginLeft&#39;:&#39;-220px&#39;
+},200);
+}).live(&#39;mouseleave&#39;,function () {
+$(this).find(&#39;div&#39;).stop().animate({
+&#39;marginLeft&#39;:&#39;-50px&#39;
+},200);
+});
+
+/**
+
+when clicking the shuffle button,
+show 5 random posts
+*/
+$(&#39;#rp_shuffle&#39;).unbind(&#39;click&#39;)
+.bind(&#39;click&#39;,shuffle)
+.stop()
+.animate({&#39;margin-left&#39;:&#39;-18px&#39;},700);
+
+function shuffle(){
+$list.find(&#39;li:visible div&#39;).stop().animate({
+&#39;marginLeft&#39;:&#39;60px&#39;
+},200,function(){
+load(-60);
+});
+}
+});
+
+css代码请参考下载文件。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1471">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1472">
+                        jQuery和css3响应式用户留言内容滑块插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1472" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412101836.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款实用的jQuery和css3响应式用户留言内容滑块插件。该内容滑块插件可以通过前后导航按钮浏览用户的留言，也可以点击浏览全部留言，切换到所有留言页面。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和css3响应式用户留言内容滑块插件。未来更好的用户体验，该内容滑块插件中添加了“查看更多”按钮，点击它可以弹出一个模态窗口来显示所有的用户留言。
+该内容滑块插件中集成了两款插件： FlexSlider 用于内容滑块和 Masonry layout 用于模态窗口的页面布局。
+HTML结构
+html结构使用.cd-testimonials-wrapper作为wrapper。内容滑块是一个无序列表。在内容滑块底部还有一个.cd-see-all作为按钮，链接到模态页面。
+
+&amp;lt;div class=&#34;cd-testimonials-wrapper cd-container&#34;&amp;gt;
+&amp;lt;ul class=&#34;cd-testimonials&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&amp;lt;/p&amp;gt;
+&amp;lt;div class=&#34;cd-author&#34;&amp;gt;
+&amp;lt;img src=&#34;img/avatar-1.jpg&#34; alt=&#34;Author image&#34;&amp;gt;
+&amp;lt;ul class=&#34;cd-author-info&#34;&amp;gt;
+&amp;lt;li&amp;gt;MyName&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;CEO, AmberCreative&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; &amp;lt;!-- cd-testimonials --&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;cd-see-all&amp;quot;&amp;gt;See all&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-testimonials-wrapper --&amp;gt;
+
+.cd-testimonials-all 包含另一个无序列表，它是用来显示所有留言的模态窗口。
+
+&amp;lt;div class=&#34;cd-testimonials-all&#34;&amp;gt;
+&amp;lt;div class=&#34;cd-testimonials-all-wrapper&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;cd-testimonials-item&#34;&amp;gt;
+&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;cd-author&amp;quot;&amp;gt;
+&amp;lt;img src=&amp;quot;img/avatar-1.jpg&amp;quot; alt=&amp;quot;Author image&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;cd-author-info&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;MyName&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;CEO, CompanyName&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-author --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;cd-testimonials-item&amp;quot;&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- cd-testimonials-all-wrapper --&amp;gt;
+&amp;lt;a href=&amp;quot;#0&amp;quot; class=&amp;quot;close-btn&amp;quot;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- cd-testimonials-all --&amp;gt;
+
+CSS样式
+
+.flex-direction-nav li {
+position: absolute;
+height: 100\%;
+width: 40px;
+top: 0;
+}
+ 
+.flex-direction-nav li:first-child {
+left: 0;
+}
+ 
+.flex-direction-nav li:last-child {
+right: 0;
+}
+ 
+.flex-direction-nav li a {
+display: block;
+height: 100\%;
+width: 100\%;
+ 
+/* image replacement */
+overflow: hidden;
+text-indent: 100\%;
+white-space: nowrap;
+ 
+transition: background-color 0.2s;
+}
+ 
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+/* left and right arrows in css only */
+content: &#39;&#39;;
+position: absolute;
+left: 50\%;
+top: 50\%;
+width: 2px;
+height: 13px;
+background-color: white;
+}
+ 
+.flex-direction-nav li a::before {
+transform: translateY(-35px) rotate(45deg);
+}
+ 
+.flex-direction-nav li a::after {
+transform: translateY(-27px) rotate(-45deg);
+}
+ 
+.flex-direction-nav li:last-child a::before {
+transform: translateY(-35px) rotate(-45deg);
+}
+ 
+.flex-direction-nav li:last-child a::after {
+transform: translateY(-27px) rotate(45deg);
+}
+
+.cd-testimonials-all元素默认是隐藏的（通过设置Visibility属性实现）。这里使用Visibility属性而不是使用display属性，是因为我们能够在Visibility属性上使用transition，而不能再display属性上使用transition。为了创建fade-in效果，我们需要在透明度属性上使用transition。
+下面是一些简化代码：
+
+.cd-testimonials-all {
+position: fixed;
+top: 0;
+left: 0;
+height: 100\%;
+width: 100\%;
+background-color: white;
+z-index: 2;
+visibility: hidden;
+opacity: 0;
+transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-testimonials-all.is-visible {
+visibility: visible;
+opacity: 1;
+transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+JAVASCRIPT
+为了实现内容滑块，我们使用了 FlexsliderjQuery plugin by Woothemes。
+
+$(&#39;.cd-testimonials-wrapper&#39;).flexslider({
+//declare the slider items
+selector: &#34;.cd-testimonials &amp;gt; li&#34;,
+animation: &#34;slide&#34;,
+//do not add navigation for paging control of each slide
+controlNav: false,
+slideshow: false,
+//Allow height of the slider to animate smoothly in horizontal mode
+smoothHeight: true,
+start: function(){
+$(&#39;.cd-testimonials&#39;).children(&#39;li&#39;).css({
+&#39;opacity&#39;: 1,
+&#39;position&#39;: &#39;relative&#39;
+});
+}
+});
+
+在模态窗口中我们使用了 Masonry library 。
+
+$(&#39;.cd-testimonials-all-wrapper&#39;).children(&#39;ul&#39;).masonry({
+itemSelector: &#39;.cd-testimonials-item&#39;
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1472">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1473">
+                        jQuery超酷文本和图标动画菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1473" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412191832.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery制作的超酷文本和图标动画菜单特效插件。该菜单特效共有8种效果，使用jQuery和jquery.easing来制作各种文字和图标的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常酷的 jQuery超酷文本和图标动画菜单特效插件。
+HTML结构
+html结构使用无序列表，每一个列表项都包含一个a元素，a元素中有三个用于动画的元素。
+
+&amp;lt;ul id=&#34;sti-menu&#34; class=&#34;sti-menu&#34;&amp;gt;
+&amp;lt;li data-hovercolor=&#34;#37c5e9&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;
+&amp;lt;h2 data-type=&#34;mText&#34; class=&#34;sti-item&#34;&amp;gt;
+Some text
+&amp;lt;/h2&amp;gt;
+&amp;lt;h3 data-type=&#34;sText&#34; class=&#34;sti-item&#34;&amp;gt;
+Some more text
+&amp;lt;/h3&amp;gt;
+&amp;lt;span data-type=&#34;icon&#34; class=&#34;sti-icon sti-icon-care sti-item&#34;&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;...&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+
+data-hovercolor将被用来设置鼠标滑过时文本的颜色。同时我们也给标题元素和图标span一些data-type，以便在后面用jQuery来控制它们。
+JAVASCRIPT
+首先定义一些默认设置：
+
+var settings = {
+// configuration for the mouseenter event
+animMouseenter: {
+&#39;mText&#39; : {speed : 350, easing : &#39;easeOutExpo&#39;, delay : 140, dir : 1},
+&#39;sText&#39; : {speed : 350, easing : &#39;easeOutExpo&#39;, delay : 0, dir : 1},
+&#39;icon&#39;: {speed : 350, easing : &#39;easeOutExpo&#39;, delay : 280, dir : 1}
+},
+// configuration for the mouseleave event
+animMouseleave: {
+&#39;mText&#39; : {speed : 300, easing : &#39;easeInExpo&#39;, delay : 140, dir : 1},
+&#39;sText&#39; : {speed : 300, easing : &#39;easeInExpo&#39;, delay : 280, dir : 1},
+&#39;icon&#39;: {speed : 300, easing : &#39;easeInExpo&#39;, delay : 0, dir : 1}
+},
+// speed for the item bg color animation
+boxAnimSpeed: 300,
+// default text color (same defined in the css)
+defaultTextColor: &#39;#000&#39;,
+// default bg color (same defined in the css)
+defaultBgColor: &#39;#fff&#39;
+};
+
+我们的每一个元素都有速度、easing效果、延时和方向（1为向上0为向下）。
+
+return this.each(function() {
+// if options exist, lets merge them with our default settings
+if ( options ) {
+$.extend( settings, options );
+}
+var $el = $(this),
+// the menu items
+$menuItems= $el.children(&#39;li&#39;),
+// save max delay time for mouseleave anim parameters
+maxdelay= Math.max( settings.animMouseleave[&#39;mText&#39;].speed + settings.animMouseleave[&#39;mText&#39;].delay ,
+settings.animMouseleave[&#39;sText&#39;].speed + settings.animMouseleave[&#39;sText&#39;].delay ,
+settings.animMouseleave[&#39;icon&#39;].speed + settings.animMouseleave[&#39;icon&#39;].delay
+),
+// timeout for the mouseenter event
+// lets us move the mouse quickly over the items,
+// without triggering the mouseenter event
+t\_mouseenter;
+// save default top values for the moving elements:
+// the elements that animate inside each menu item
+$menuItems.find(&#39;.sti-item&#39;).each(function() {
+var $el = (this);(this);
+(this);el.data(&#39;deftop&#39;, $el.position().top);
+});
+// Events
+...
+});
+
+接下来为菜单项定义鼠标进入事件：
+
+$menuItems.bind(&#39;mouseenter&#39;, function(e) {
+clearTimeout(t_mouseenter);
+var $item = (this),(this),
+(this),wrapper= $item.children(&#39;a&#39;),
+wrapper_h = wrapper.height(),//theelementsthatanimateinsidethismenuitemwrapper.height(),
+// the elements that animate inside this menu item
+wrapper.height(),//theelementsthatanimateinsidethismenuitemmovingItems= $wrapper.find(&#39;.sti-item&#39;),
+// the color that the texts will have on hover
+hovercolor= $item.data(&#39;hovercolor&#39;);
+t_mouseenter= setTimeout(function() {
+// indicates the item is on hover state
+$item.addClass(&#39;sti-current&#39;);
+$movingItems.each(function(i) {
+var $item = $(this),
+item_sti_type = $item.data(&#39;type&#39;),
+speed = settings.animMouseenter[item_sti_type].speed,
+easing= settings.animMouseenter[item_sti_type].easing,
+delay = settings.animMouseenter[item_sti_type].delay,
+dir = settings.animMouseenter[item_sti_type].dir,
+// if dir is 1 the item moves downwards
+// if -1 then upwards
+style = {&#39;top&#39; : -dir * wrapper_h + &#39;px&#39;};
+if( item_sti_type === &#39;icon&#39; ) {
+// this sets another bg image position for the icon
+style.backgroundPosition= &#39;bottom left&#39;;
+} else {
+style.color = hovercolor;
+}
+// we hide the icon, move it up or down, and then show it
+item.hide().css(style).show();clearTimeout(item.hide().css(style).show();
+clearTimeout(item.hide().css(style).show();clearTimeout(item.data(&#39;time_anim&#39;));
+item.data(&amp;#039;time\_anim&amp;#039;,
+setTimeout(function() {
+// now animate each item to its default tops
+// each item will animate with a delay specified 
+// in the options
+item.stop(true)
+.animate({top : item.data(&amp;#039;deftop&amp;#039;) + &amp;#039;px&amp;#039;}, speed, easing);
+}, delay)
+);
+});
+// animate the bg color of the item
+wrapper.stop(true).animate({
+backgroundColor: settings.defaultTextColor
+}, settings.boxAnimSpeed );
+}, 100);
+})
+
+然后定义鼠标离开事件：
+
+// mouseleave event for each menu item
+.bind(&#39;mouseleave&#39;, function(e) {
+clearTimeout(t_mouseenter);
+var $item = (this),(this),
+(this),wrapper= $item.children(&#39;a&#39;),
+wrapper_h = wrapper.height(),wrapper.height(),
+wrapper.height(),movingItems= $wrapper.find(&#39;.sti-item&#39;);
+if(!$item.hasClass(&#39;sti-current&#39;))
+return false;
+$item.removeClass(&#39;sti-current&#39;);
+$movingItems.each(function(i) {
+var $item = $(this),
+item_sti_type = $item.data(&#39;type&#39;),
+speed = settings.animMouseleave[item_sti_type].speed,
+easing= settings.animMouseleave[item_sti_type].easing,
+delay = settings.animMouseleave[item_sti_type].delay,
+dir = settings.animMouseleave[item_sti_type].dir;
+clearTimeout($item.data(&#39;time_anim&#39;));
+setTimeout(function() {
+$item.stop(true).animate({&#39;top&#39; : -dir * wrapper_h + &#39;px&#39;}, speed, easing, function() {
+if( delay + speed === maxdelay ) {
+$wrapper.stop(true).animate({
+backgroundColor: settings.defaultBgColor
+}, settings.boxAnimSpeed );
+$movingItems.each(function(i) {
+var $el = $(this),
+style = {&#39;top&#39; : $el.data(&#39;deftop&#39;) + &#39;px&#39;};
+if( $el.data(&#39;type&#39;) === &#39;icon&#39; ) {
+style.backgroundPosition= &#39;top left&#39;;
+} else {
+style.color = settings.defaultTextColor;
+}
+$el.hide().css(style).show();
+});
+}
+});
+}, delay);
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1473">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/40/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/42/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

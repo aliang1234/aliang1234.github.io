@@ -1,0 +1,435 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3超赞select下拉列表框美化插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3超赞select下拉列表框美化插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412261436.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412261436.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141226981.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果超赞的jQuery和css3 select下拉列表框美化插件。该下拉列表美化插件没有使用图片，纯css和一点jQurey打造。共有5中不同的select下拉列表框效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果超赞的jQuery和css3 select下拉列表框美化插件。这个select下拉列表框插件没有使用任何的图片，纯css制作，还使用了一点jQuery来完成动作交互。</p>
+<p>有两个地方需要做下说明：</p>
+<ul>
+<li>下面的代码中没有使用任何厂商的前缀。</li>
+<li>在插件中使用了CSS盒子模式（box-model）： [width] = [element-width] + [padding] + [borders]。看下面代码：</li>
+</ul>
+<pre class="brush:css">
+*,
+*:after,
+*:before {
+box-sizing: border-box;
+}
+</pre>
+<h3>HTML结构</h3>
+<p>首先要了解我们的select下拉列表框的html结构是怎么样的。我们使用的结构是一个div做wrapper，里面有一个span和一个无序列表。</p>
+<pre class="brush:html">
+&lt;div class="wrapper-dropdown"&gt;
+&lt;span&gt;I'm kinda the label!&lt;/span&gt;
+&lt;ul class="dropdown"&gt;
+&lt;li&gt;I'm hidden!&lt;/li&gt;
+&lt;li&gt;Me too!&lt;/li&gt;
+&lt;li&gt;So do I.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>我们需要一些js代码来使select下拉列表框能正常工作，下面的js代码是所有的demo都使用的代码：</p>
+<pre class="brush:js">
+//...
+obj.dd.on('click', function(event){
+$(this).toggleClass('active');
+return false;
+});
+//...
+<p>$(function() {<br>
+var dd = new DropDown( <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&#039;#̲dd&#039;) );
+'>(&#039;#dd&#039;) );
+</span>(document).click(function() {<br>
+// all dropdowns<br>
+$('.wrapper-dropdown-1').removeClass('active');<br>
+});<br>
+});<br>
+</pre></p>
+<p>在上面的代码中，当你点击了wrapper时，它会切换class为<span class="m">.active</span>。如果wrapper已经处于激活状态，它会移除class <span class="m">.active</span>。 </p>
+<p>另外，如果你在下拉列表框外任何地方点击，都会关闭下拉列表框。</p>
+<h3>EXAMPLE 1</h3>
+<p>下面来看一些第一个demo的代码：</p>
+<h5>HTML</h5>
+<p>在第一个demo中，我们需要一个wrapper div，一个隐藏的下拉列表，还有一个在span中的“label”。</p>
+<pre class="brush:html">
+&lt;div id="dd" class="wrapper-dropdown-1" tabindex="1"&gt;
+&lt;span&gt;Gender&lt;/span&gt;
+&lt;ul class="dropdown"&gt;
+&lt;li&gt;&lt;a href="#"&gt;Male&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Female&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h5>CSS</h5>
+<p>首先从wrapper开始：</p>
+<pre class="brush:css">
+.wrapper-dropdown {
+/* Size and position */
+position: relative; /* Enable absolute positioning for children and pseudo elements */
+width: 200px;
+padding: 10px;
+margin: 0 auto;
+<p>/* Styles */<br>
+background: #9bc7de;<br>
+color: #fff;<br>
+outline: none;<br>
+cursor: pointer;</p>
+<p>/* Font settings */<br>
+font-weight: bold;<br>
+}<br>
+</pre></p>
+<p>在"label"上通过伪元素来添加小箭头：</p>
+<pre class="brush:css">
+.wrapper-dropdown:after {
+content: "";
+width: 0;
+height: 0;
+position: absolute;
+right: 16px;
+top: 50\%;
+margin-top: -6px;
+border-width: 6px 0 6px 6px;
+border-style: solid;
+border-color: transparent #fff;
+}
+</pre>
+<p>下面是下拉列表的样式</p>
+<pre class="brush:css">
+.wrapper-dropdown-1 .dropdown {
+/* Size &amp; position */
+position: absolute;
+top: 100\%;
+left: 0; /* Size */
+right: 0; /* Size */
+<p>/* Styles <em>/<br>
+background: #fff;<br>
+font-weight: normal; /</em> Overwrites previous font-weight: bold; */</p>
+<p>/* Hiding */<br>
+opacity: 0;<br>
+pointer-events: none;<br>
+}<br>
+</pre></p>
+<p>再来给下拉列表中的元素一些样式</p>
+<pre class="brush:css">
+.wrapper-dropdown-1 .dropdown li a {
+display: block;
+text-decoration: none;
+color: #9e9e9e;
+padding: 10px 20px;
+}
+<p>/* Hover state */<br>
+.wrapper-dropdown-1 .dropdown li:hover a {<br>
+background: #f3f8f8;<br>
+}<br>
+</pre></p>
+<p>通过上面的CSS，我们有了一个很好看的按钮和一个隐藏的下拉菜单。下面要处理的是当点击了下拉列表主按钮时，下拉列表框展开出现的效果。</p>
+<p>我们使用javascript来在点击按钮时切换class<span class="m">.active</span>。</p>
+<pre class="brush:css">
+/* Active state */
+.wrapper-dropdown-1.active .dropdown {
+opacity: 1;
+pointer-events: auto;
+}
+<p>.wrapper-dropdown-1.active:after {<br>
+border-color: #9bc7de transparent;<br>
+border-width: 6px 6px 0 6px ;<br>
+margin-top: -3px;<br>
+}</p>
+<p>.wrapper-dropdown-1.active {<br>
+background: #9bc7de;<br>
+background: linear-gradient(to right, #9bc7de 0%, #9bc7de 78%, #ffffff 78%, #ffffff 100%);<br>
+}<br>
+</pre></p>
+<p>这里要注意三个地方：</p>
+<ul>
+<li>1、我们使用将透明度设置为1是下拉列表框出现。这里不要忘记设置<span class="m">pointer-event </span>为auto。</li>
+<li>2、我们改变了小箭头的方向和颜色。</li>
+<li>3、我们使用一个渐变来修改了箭头羡慕的背景色。</li>
+</ul>
+<h5>JAVASCRIPT</h5>
+<p>我们还需要javascript来显示下拉列表项的值</p>
+<pre class="brush:js">
+function DropDown(el) {
+this.dd = el;
+this.placeholder = this.dd.children('span');
+this.opts = this.dd.find('ul.dropdown &gt; li');
+this.val = '';
+this.index = -1;
+this.initEvents();
+}
+DropDown.prototype = {
+initEvents : function() {
+var obj = this;
+<p>obj.dd.on('click', function(event){<br>
+$(this).toggleClass('active');<br>
+return false;<br>
+});</p>
+<p>obj.opts.on('click',function(){<br>
+var opt = $(this);<br>
+obj.val = opt.text();<br>
+obj.index = opt.index();<br>
+obj.placeholder.text('Gender: ' + obj.val);<br>
+});<br>
+},<br>
+getValue : function() {<br>
+return this.val;<br>
+},<br>
+getIndex : function() {<br>
+return this.index;<br>
+}<br>
+}<br>
+</pre></p>
+<p>第一个demo的代码就这么多，其余几个demo的代码请参考下载文件。</p>
+<h3>FALLBACKS</h3>
+<p>为了兼容所有的浏览器，这个插件中做了一些回退处理。我们使用的是<a href="http://modernizr.com/" target="\_blank"> Modernizr </a>。Modernizr是一个用于检测用户浏览器是否支持html5和css3的javascript库，他的基本思想是“如果浏览器不支持XXX，那么我们就这样这样做。。。”。通过Modernizr，我们能为html添加class，例如：如果浏览器不支持 pointer-events ，就添加一个“no-pointerevents”的class。下面的例子说明了我们在浏览器不支持某些属性时，如何管理我们的回退代码：</p>
+<pre class="brush:js">
+/* No CSS3 support */
+<p>.no-opacity .wrapper-dropdown-1 .dropdown,<br>
+.no-pointerevents .wrapper-dropdown-1 .dropdown {<br>
+display: none;<br>
+opacity: 1; /* If opacity support but no pointer-events support <em>/<br>
+pointer-events: auto; /</em> If pointer-events support but no pointer-events support */<br>
+}</p>
+<p>.no-opacity .wrapper-dropdown-1.active .dropdown,<br>
+.no-pointerevents .wrapper-dropdown-1.active .dropdown {<br>
+display: block;<br>
+}<br>
+</pre></p>
+<p>如果浏览器不支持透明度或pointer-events，那么简单的将下拉列表框隐藏：<span class="m">display: none;</span>。</p>
+<p>如果浏览器支持透明度但是不支持pointer-events，在用户点击菜单时，我们将他们设置为<span class="m">auto</span>，以使菜单展开。</p>
+<p>另外，如果浏览器支持pointer-events但不支持透明度，我们设置透明度为1来使下拉列表在切换为<span class="m">.active</span>是立刻出现。</p>
+<p>当<span class="m">.active</span>被切换时，我们使用<span class="m">display: block;</span>来显示下拉列表框。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412261436.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141226981.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1401">
+                                <h3 class="post-title">
+                                    jQuery和css3炫酷3D互动图片画廊特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

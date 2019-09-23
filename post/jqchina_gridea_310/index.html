@@ -1,0 +1,542 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Bootstrap下拉框功能增强插件Bootstrap-select.js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Bootstrap下拉框功能增强插件Bootstrap-select.js
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-warning">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1802/201802131605.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1802/201802131605.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201802134982.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>bootstrap-select.js是一款Bootstrap下拉框功能增强插件。它为bootstrap下拉框增加了分组功能，多选功能，搜索功能，自定义内容和图标等多种功能，非常强大。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>bootstrap-select.js是一款Bootstrap下拉框功能增强插件。它为bootstrap下拉框增加了分组功能，多选功能，搜索功能，自定义内容和图标等多种功能，非常强大。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和bootstrap相关文件，以及bootstrap-select.js和bootstrap-select.css文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="dist/css/bootstrap-select.css"&gt;
+&lt;link href="css/jquery.min.css" rel="stylesheet"&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link href="css/bootstrap-select.css" rel="stylesheet"&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p><img src="http://img.htmleaf.com/1802/bootstrap-select.gif" width="250" height="341" alt="Bootstrap下拉框功能增强插件bootstrap-select.js" style="max-width: 100\%;"></p>
+<p>带分组的下拉选择框（Select boxes with optgroups）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker"&gt;
+&lt;optgroup label="Picnic"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Camping"&gt;
+&lt;option&gt;Tent&lt;/option&gt;
+&lt;option&gt;Flashlight&lt;/option&gt;
+&lt;option&gt;Toilet Paper&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt; 
+</pre>
+<p>多选下拉框（Multiple select boxes）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>带搜索功能的下拉框（Live search）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>关键词（Key words）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-live-search="true"&gt;
+&lt;option data-tokens="ketchup mustard"&gt;Hot Dog, Fries and a Soda&lt;/option&gt;
+&lt;option data-tokens="mustard"&gt;Burger, Shake and a Smile&lt;/option&gt;
+&lt;option data-tokens="frosting"&gt;Sugar, Spice and all things nice&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>限制选择的数量（Limit the number of selections）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple data-max-options="2"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+<p>&lt;select class=&quot;selectpicker&quot; multiple&gt;<br>
+&lt;optgroup label=&quot;Condiments&quot; data-max-options=&quot;2&quot;&gt;<br>
+&lt;option&gt;Mustard&lt;/option&gt;<br>
+&lt;option&gt;Ketchup&lt;/option&gt;<br>
+&lt;option&gt;Relish&lt;/option&gt;<br>
+&lt;/optgroup&gt;<br>
+&lt;optgroup label=&quot;Breads&quot; data-max-options=&quot;2&quot;&gt;<br>
+&lt;option&gt;Plain&lt;/option&gt;<br>
+&lt;option&gt;Steamed&lt;/option&gt;<br>
+&lt;option&gt;Toasted&lt;/option&gt;<br>
+&lt;/optgroup&gt;<br>
+&lt;/select&gt;<br>
+</pre></p>
+<p>自定义占位文本（Placeholder）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple title="请选择内容。。"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>替换文本（Selected text）</p>
+<pre class="brush:html">
+&lt;select class="selectpicker"&gt;
+&lt;option title="Combo 1"&gt;Hot Dog, Fries and a Soda&lt;/option&gt;
+&lt;option title="Combo 2"&gt;Burger, Shake and a Smile&lt;/option&gt;
+&lt;option title="Combo 3"&gt;Sugar, Spice and all things nice&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>多选下拉框的显示格式（Selected text format）</p>
+<p>通过<code>data-selected-text-format</code>属性，可以指定在多选下拉框选择选项后的显示格式。支持的属性有：</p>
+<ul>
+<li>
+<code>values</code>：用逗号分隔选择项。（默认）</li>
+<li>
+<code>count</code>：当选项等于一个时，显示选择选项的数量。</li>
+<li>
+<code>count &gt; x</code>：当选项大于某个数值时，从显示逗号分隔的多个值改为显示选择的数量。</li>
+<li>
+<code>static</code>：总是显示选择的替换文本。</li>
+</ul>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple data-selected-text-format="count"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+<p>&lt;select class=&quot;selectpicker&quot; multiple data-selected-text-format=&quot;count &gt; 3&quot;&gt;<br>
+&lt;option&gt;Mustard&lt;/option&gt;<br>
+&lt;option&gt;Ketchup&lt;/option&gt;<br>
+&lt;option&gt;Relish&lt;/option&gt;<br>
+&lt;option&gt;Onions&lt;/option&gt;<br>
+&lt;/select&gt;<br>
+</pre></p>
+<p>按钮样式（Button classes）</p>
+<p>通过<code>data-style</code>属性来为下拉框设置情景样式。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-style="btn-primary"&gt;
+...
+&lt;/select&gt;
+<p>&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-info&quot;&gt;<br>
+...<br>
+&lt;/select&gt;</p>
+<p>&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-success&quot;&gt;<br>
+...<br>
+&lt;/select&gt;</p>
+<p>&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-warning&quot;&gt;<br>
+...<br>
+&lt;/select&gt;</p>
+<p>&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-danger&quot;&gt;<br>
+...<br>
+&lt;/select&gt;<br>
+</pre></p>
+<p>勾选图标（Checkmark on selected option）</p>
+<p>在已经选择的选项上添加勾选图标。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker show-tick"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p> 下拉框箭头（Menu arrow）</p>
+<p>为下拉框添加一个箭头。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker show-menu-arrow"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p> 自定义分割线样式（Style individual options）</p>
+<p>可以自定义分割线样式。</p>
+<pre class="brush:html">
+.special {
+font-weight: bold !important;
+color: #fff !important;
+background: #bc0000 !important;
+text-transform: uppercase;
+}
+&lt;select class="selectpicker"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option class="special"&gt;Ketchup&lt;/option&gt;
+&lt;option style="background: #5cb85c; color: #fff;"&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>下拉框宽度（Width）</p>
+<p>可以自定义下拉框的宽度。</p>
+<pre class="brush:html">
+&lt;div class="row"&gt;
+&lt;div class="col-xs-3"&gt;
+&lt;div class="form-group"&gt;
+&lt;select class="selectpicker form-control"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>还可以通过<code>data-width</code>属性来设置下拉框的宽度。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-width="auto"&gt;
+...
+&lt;/select&gt;
+&lt;select class="selectpicker" data-width="fit"&gt;
+...
+&lt;/select&gt;
+&lt;select class="selectpicker" data-width="100px"&gt;
+...
+&lt;/select&gt;
+&lt;select class="selectpicker" data-width="75\%"&gt;
+...
+&lt;/select&gt; 
+</pre>
+<p>图标（Icons）</p>
+<p>可以通过<code>data-icon</code>属性来为选项设置一个图标。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker"&gt;
+&lt;option data-icon="glyphicon-heart"&gt;Mustard&lt;/option&gt;
+&lt;option data-icon="glyphicon-star"&gt;Ketchup&lt;/option&gt;
+&lt;option data-icon="glyphicon-paperclip"&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>自定义内容（Custom content）</p>
+<p>可以通过<code>data-content</code>属性来为选项插入HTML内容。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker"&gt;
+&lt;option data-content="&lt;span class='label label-success'&gt;Mustard&lt;/span&gt;"&gt;Mustard&lt;/option&gt;
+&lt;option data-content="&lt;span class='label label-info'&gt;Ketchup&lt;/span&gt;"&gt;Ketchup&lt;/option&gt;
+&lt;option data-content="&lt;span class='label label-primary'&gt;Relish&lt;/span&gt;"&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>子文本（Subtext）</p>
+<p>可以通过<code>data-size</code>属性来为选项添加一个子描述文本。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-size="5"&gt;
+&lt;option data-subtext="Heinz"&gt;Mustard&lt;/option&gt;
+&lt;option data-subtext="ok"&gt;Ketchup&lt;/option&gt;
+&lt;option data-subtext="hello"&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>菜单显示多少项（Menu size）</p>
+<p>菜单的尺寸默认为<code>auto</code>。如果设置菜单尺寸为<code>false</code>或0，则显示所有的菜单项。你可以通过<code>data-size</code>属性来设置指定的菜单尺寸。下面的菜单只显示2项。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-size="2"&gt;
+&lt;option data-subtext="Heinz"&gt;Mustard&lt;/option&gt;
+&lt;option data-subtext="ok"&gt;Ketchup&lt;/option&gt;
+&lt;option data-subtext="hello"&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>全选或全不选（Select/deselect all options）</p>
+<p>通过<code>data-actions-box="true"</code>来对下拉框进行全选或全不选。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" multiple data-actions-box="true"&gt;
+&lt;option data-subtext="Heinz"&gt;Mustard&lt;/option&gt;
+&lt;option data-subtext="ok"&gt;Ketchup&lt;/option&gt;
+&lt;option data-subtext="hello"&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>分隔线（Divider）</p>
+<p>通过<code>data-divider="true"</code>来设置下拉框的分隔线。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option data-divider="true"&gt;&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>菜单头部（Menu header）</p>
+<p>通过<code>data-header</code>来设置下拉框设置一个菜单头选项。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" data-header="Select a condiment"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>箭头方向（Dropup menu）</p>
+<p>通过<code>.dropup</code>class来手动设置小箭头的方向为向上方向。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker dropup"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>禁用下拉框（Disabled select box）</p>
+<p>通过<code>disabled</code>属性来禁用下拉框。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker" disabled&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>禁用菜单项（Disabled options）</p>
+<p>通过为菜单项添加<code>.disabled</code>属性来禁用它。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker disabled"&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option disabled&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+<p>禁用下拉框分组（Disabled option groups）</p>
+<p>通过为分组添加<code>.disabled</code>属性来禁用它。</p>
+<pre class="brush:html">
+&lt;select class="selectpicker test"&gt;
+&lt;optgroup label="Picnic" disabled&gt;
+&lt;option&gt;Mustard&lt;/option&gt;
+&lt;option&gt;Ketchup&lt;/option&gt;
+&lt;option&gt;Relish&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Camping"&gt;
+&lt;option&gt;Tent&lt;/option&gt;
+&lt;option&gt;Flashlight&lt;/option&gt;
+&lt;option&gt;Toilet Paper&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;
+</pre>
+<p>Bootstrap下拉框功能增强插件Bootstrap-select.js的github地址为：<a href="https://github.com/snapappointments/bootstrap-select" target="\_blank">https://github.com/snapappointments/bootstrap-select</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1802/201802131605.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201802134982.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_311">
+                                <h3 class="post-title">
+                                    Bootstrap4下拉框功能强化插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

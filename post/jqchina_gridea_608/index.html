@@ -1,0 +1,358 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单实用的jQuery确认框和警告框插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单实用的jQuery确认框和警告框插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1610/201610081627.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610081627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610084079.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery-alertable是一款简单实用的jQuery确认框和警告框插件。该插件可用于替代浏览器原生的确认框、警告框和提示框。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery-alertable是一款简单实用的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>确认框和警告框插件。该插件可用于替代浏览器原生的确认框、警告框和提示框。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过npm来安装jquery-alertable插件。</p>
+<pre class="brush:html">
+npm install --save @claviska/jquery-alertable
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> alerts警告框</h5>
+<p>警告框的调用方法如下：</p>
+ <pre class="brush:js">
+// Basic example
+$.alertable.alert('Howdy!');
+<p>// Example with action when the modal is dismissed<br>
+$.alertable.alert('Howdy!').always(function() {<br>
+// Modal was dismissed<br>
+});<br>
+</pre></p>
+ <h5>
+<span class="glyphicon glyphicon-paperclip"></span> confirmations确认框</h5>
+<p>确认框的调用方法如下：</p>
+<pre class="brush:js">
+// Basic example
+$.alertable.confirm('You sure?').then(function() {
+// OK was selected
+});
+<p>// Example with then/always<br>
+$.alertable.confirm('You sure?').then(function() {<br>
+// OK was selected<br>
+}, function() {<br>
+// Cancel was selected<br>
+}).always(function() {<br>
+// Modal was dismissed<br>
+});<br>
+</pre></p>
+ <h5>
+<span class="glyphicon glyphicon-paperclip"></span> prompts提示框</h5>
+<p>提示框的调用方法如下：</p>
+<pre class="brush:js">
+// Basic example
+$.alertable.prompt('How many?').then(function(data) {
+// Prompt was submitted
+});
+<p>// Example with then/always<br>
+$.alertable.prompt('How many?').then(function(data) {<br>
+// Prompt was submitted<br>
+}, function() {<br>
+// Prompt was canceled<br>
+}).always(function() {<br>
+// Modal was dismissed<br>
+});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>配置参数可以以对象的方式在第二个参数中传入：</p>
+<pre class="brush:js">
+$.alertable.alert('Howdy!', {
+optionName: optionValue,
+...
+});
+<p>$.alertable.confirm('You sure?', {<br>
+optionName: optionValue,<br>
+...<br>
+});</p>
+<p>$.alertable.prompt('How many?', {<br>
+optionName: optionValue,<br>
+...<br>
+});<br>
+</pre></p>
+<p>可用的配置参数有：</p>
+<ul>
+<li>
+<code>container</code>：模态窗口被添加的容器，默认是<code>body</code>。</li>
+<li>
+<code>html</code>：你的信息是否包含HTML代码。默认为<code>false</code>。</li>
+<li>
+<code>cancelButton</code>：取消按钮的HTML代码。默认为：
+<pre class="brush:html">
+&lt;button class="alertable-cancel" type="button"&gt;Cancel&lt;/button&gt;
+</pre>
+</li>
+<li>
+<code>okButton</code>：OK按钮的HTML代码。默认为：
+<pre class="brush:html">
+&lt;button class="alertable-ok" type="button"&gt;OK&lt;/button&gt;
+</pre>
+</li>
+<li>
+<code>overlay</code>：遮罩层的HTML代码。默认为：
+<pre class="brush:html">
+&lt;div class="alertable-overlay"&gt;&lt;/div&gt;
+</pre>
+</li>
+<li>
+<code>prompt</code>：提示框主体的HTML代码。在这个HTML中的所有<code>&lt;input&gt;</code>元素在提交时它们的值都会被返回。默认为：
+<pre class="brush:html">
+&lt;input class="alertable-input" type="text" name="value"&gt;
+</pre>
+</li>
+<li>
+<code>modal</code>：模态窗口的HTML代码。默认为：
+<pre class="brush:html">
+&lt;form class="alertable"&gt;
+&lt;div class="alertable-message"&gt;&lt;/div&gt;
+&lt;div class="alertable-prompt"&gt;&lt;/div&gt;
+&lt;div class="alertable-buttons"&gt;&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+</li>
+<li>
+<code>hide</code>：隐藏模态窗口和遮罩层的函数。可以使用<code>this.modal</code>和<code>this.overlay</code>来引用模态窗口和遮罩层。默认为：
+<pre class="brush:js">
+$(this.modal).add(this.overlay).fadeOut(100);
+</pre>
+</li>
+<li>
+<code>show</code>：显示模态窗口和遮罩层的函数。可以使用<code>this.modal</code>和<code>this.overlay</code>来引用模态窗口和遮罩层。默认为：
+<pre class="brush:js">
+$(this.modal).add(this.overlay).fadeIn(100);
+</pre>
+</li>
+</ul>
+<p>jquery-alertable插件的github地址为：<a href="https://github.com/claviska/jquery-alertable" target="\_blank">https://github.com/claviska/jquery-alertable</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1610/201610081627.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201610084079.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_609">
+                                <h3 class="post-title">
+                                    3种炫酷表单浮动标签设计效果
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

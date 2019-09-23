@@ -1,0 +1,361 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    单幅图片带平滑动画效果的jQuery幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            单幅图片带平滑动画效果的jQuery幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1507/201507182104.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507182104.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507182254.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Smoothslides是一款响应式的单幅图片带平滑动画效果的jQuery幻灯片插件。该幻灯片中在每一个slide中的图片都可以设置一种动画效果，例如可以缓慢移动，放大等共11种不同的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Smoothslides是一款响应式的单幅图片带平滑动画效果的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>幻灯片插件。该幻灯片中在每一个slide中的图片都可以设置一种动画效果，例如可以缓慢移动，放大等共11种不同的效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用这个圆形进度条插件首先要引入jQuery和smoothslides.theme.css和smoothslides-2.1.0.min.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/smoothslides.theme.css"&gt;
+&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="dist/smoothslides-2.1.0.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片的HTML结构使用一个<code>&lt;div&gt;</code>作为包裹容器，为包裹容器添加class <code>smoothslides</code>，然后可以在它里面放置多张你需要的图片。</p>
+<pre class="brush:html">
+&lt;div class="smoothslides" id="myslideshow1"&gt;
+&lt;img src="images/1.jpg"/&gt; 
+&lt;img src="images/2.jpg"/&gt; 
+&lt;img src="images/3.jpg"/&gt; 
+&lt;img src="images/4.jpg"/&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以使用下面的方法来初始化该幻灯片插件：</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt; 
+$(window).load( function() {
+$('#myslideshow1').smoothSlides();
+});
+&lt;/script&gt; 
+</pre>
+<p>你也可以在同一个页面中初始化多个幻灯片实例，每个实例可以带不同的参数，只需要为每个实例设置一个唯一的ID号。</p>
+<pre class="brush:js">
+&lt;script type="text/javascript"&gt; 
+$(window).load( function() {
+$('#example-one').smoothSlides(); 
+$('#example-two').smoothSlides(); 
+});
+&lt;/script&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>该幻灯片插件有下面一些可用的配置参数。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>描述</td>
+<td>可用值</td>
+<td>默认值</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>effectDuration</td>
+<td>各种动画效果的持续时间，单位毫秒</td>
+<td>用户指定</td>
+<td>6000</td>
+</tr>
+<tr>
+<td>transitionDuration</td>
+<td>幻灯片切换的时间</td>
+<td>用户指定</td>
+<td>500</td>
+</tr>
+<tr>
+<td>autoPlay</td>
+<td>指定在页面加载后是否自动播放幻灯片</td>
+<td>'true' 或 'false'</td>
+<td>'true'</td>
+</tr>
+<tr>
+<td>effect</td>
+<td>每个幻灯片中图片的动画效果</td>
+<td>'crossFade' 'zoomOut' zoomIn' 'panUp' 'panDown' 'panLeft' 'panRight' 'diagTopLeftToBottomRight' 'diagTopRightToBottomLeft' 'diagBottomRightToTopLeft' 'diagBottomLeftToTopRight' <br><strong>注意：</strong>你可以选择多个效果，中间使用逗号隔开，例如：'zoomOut,zoomIn'</td>
+<td>随机从可选值中选取一个</td>
+</tr>
+<tr>
+<td>effectEasing</td>
+<td>动画效果的CSS easing效果</td>
+<td>'ease' 'ease-in' 'ease-out' 'ease-in-out' 'linear'</td>
+<td>'ease-in-out'</td>
+</tr>
+<tr>
+<td>nextText</td>
+<td>向前翻页按钮上的文本</td>
+<td>用户指定</td>
+<td>' ►'</td>
+</tr>
+<tr>
+<td>prevText</td>
+<td>向后翻页按钮上的文本</td>
+<td>用户指定</td>
+<td>'◄ '</td>
+</tr>
+<tr>
+<td>captions</td>
+<td>是否使用图片的<code>alt</code>标签内容来显示图片标题</td>
+<td>'true' 或 'false'</td>
+<td>'true'</td>
+</tr>
+<tr>
+<td>navigation</td>
+<td>是否显示前一个和下一个按钮</td>
+<td>'true' 或 'false'</td>
+<td>'true'</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>是否显示分页导航按钮</td>
+<td>'true' 或 'false'</td>
+<td>'true'</td>
+</tr>
+<tr>
+<td>matchImageSize</td>
+<td>如果为<code>true</code>则设置一个机遇你的图片尺寸的最大宽度。如果为<code>false</code>则允许宽度比图片大</td>
+<td>'true' 或 'false'</td>
+<td>'true'</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>你可以同时选择多种图片动画效果，例如：</p>
+<pre class="brush:js">
+effect: 'zoomIn,zoomOut,panLeft,panRight'
+</pre>
+<p>该幻灯片提供了一些默认的CSS样式，但你可以通过编辑<code>smoothslides.theme.css</code>文件来自定义自己的样式。</p>
+<p>默认情况下，该幻灯片的宽度和你的图片是一样宽的。你可以通过设置<code>matchImageSize</code>为<code>false</code>来改变这个默认行为。在这种模式中，幻灯片将和它的父容器宽度匹配。但要注意的是，这时图片会被进行缩放。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1507/201507182104.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201507182254.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1126">
+                                <h3 class="post-title">
+                                    jQuery支持触摸屏的全屏响应式幻灯片特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

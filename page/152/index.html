@@ -1,0 +1,1779 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_922">
+                        带提示音的jQuery消息提示框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_922" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512302020.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-notify是一款简单实用的jQuery消息提示插件，该消息提示插件的特点是可以在显示提示框的时候发出声音。它简单实用，用户体验非常好。
+内容：
+
+
+简要教程
+
+
+jquery-notify是一款简单实用的jQuery消息提示插件，该消息提示插件的特点是可以在显示提示框的时候发出声音。它简单实用，用户体验非常好。
+
+ 使用方法
+使用该消息提示框插件需要引入jQuery和jquery.notify.js以及jquery.notify.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;js/jquery.notify.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.notify.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该消息提示插件有两中使用方法：第一种可以将提示的信息以HTML标签的形式写在&amp;lt;body&amp;gt;标签中。
+
+&amp;lt;p class=&#34;notify&#34; data-notify-type=&#34;error&#34;&amp;gt;Error!&amp;lt;/p&amp;gt;
+&amp;lt;p class=&#34;notify&#34; data-notify-type=&#34;success sticky&#34;&amp;gt;Sticky Info&amp;lt;/p&amp;gt; 
+
+标签中必须带有notify class类，另外data-notify-type是消息提示的类型。
+另外一种使用方法是通过js来初始化消息提示框。
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过notify()方法来初始化该消息提示插件。
+
+$(&#39;.notify&#39;).notify();
+
+使用纯JS的方法初始化消息提示框的方法如下：
+
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify();
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify(&#39;error&#39;);
+$(&#39;&amp;lt;p&amp;gt;Hello World!&amp;lt;/p&amp;gt;&#39;).notify({sticky: true});
+
+jquery-notify消息提示插件的github地址为：https://github.com/yefei/jquery-notify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_922">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_923">
+                        placeholder.js-可在浏览器端生成占位图片的js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_923" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512231532.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+placeholder.js是一款轻量级的可在浏览器端生成占位图片的javascript库插件。该图片占位插件大小小于1kb，不依赖于任何js框架，并提供完善的配置参数和简单的方法。
+内容：
+
+
+简要教程
+
+
+placeholder.js是一款轻量级的可在浏览器端生成占位图片的javascript库插件。该图片占位插件大小小于1kb，不依赖于任何js框架，并提供完善的配置参数和简单的方法。它的特点还有：
+
+不依赖任何框架javascript框架，例如jQuery。
+小于1k，具体是0.98k，增加img配置方式之后，为1.52kb。
+配置参数项多，都有默认值。
+使用简单。
+
+
+
+ 使用方法
+使用该图片占位插件需要引入placeholder.js文件。
+
+&amp;lt;script src=&#34;js/placeholder.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+1、可以调用placeholder.js的方法对图片进行替换，例如下面的例子:
+
+&amp;lt;img src=&#34;image\_origin.png&#34; onerror=&#34;this.src=placeholder.getData({text: &#39;Image 404&#39;})&#34;&amp;gt;
+
+2、可以使用URL参数的方式配置Img的属性options，例如：
+
+&amp;lt;img class=&#34;placeholder&#34; /&amp;gt;
+
+或者带参数options:
+
+&amp;lt;img options=&#34;size=256x128&amp;amp;text=Hello!&#34; class=&#34;placeholder&#34; /&amp;gt; 
+
+请注意img标签的class属性必须是placeholder。
+
+ 配置参数
+Placeholder配置项用于API方法的输入参数, 例如：placeholder.getData({text: &#39;Image 404&#39;})。 或者作为URL参数样式作为img的属性配置，例如：options=&#34;size=256x128&amp;amp;text=Hello!&#34;
+
+
+size： placeholder图片尺寸。例如: 256x128, 默认: 128x128。
+
+bgcolor：背景颜色. 例如: #969696。默认: random。
+
+color：前景颜色，文字颜色. 例如: #ccc。默认: random。
+
+text：自定义文本内容。 例如: Hello World, 你好 默认:equal to size。
+
+fstyle：字体样式。可以是normal / italic / oblique。 默认:oblique。
+
+fweight：字体weight。可以是normal / bold / bolder / lighter / Number。默认:bold。
+
+fsize：字体大小。默认: 自动计算字体大小防止文字超出图片大小。
+
+ffamily：字体。默认:consolas。
+
+参数配置的例子如下：
+
+var opts = {
+size: &#39;512x256&#39;,
+bgcolor: &#39;#ccc&#39;, 
+color: &#39;#969696&#39;,
+text: &#39;Hello World, 你好&#39;,
+fstyle:&#39;oblique&#39;,
+fweight: &#39;bold&#39;,
+fsize:&#39;40&#39;,
+ffamily: &#39;consolas&#39;
+}
+//get the base64 of the placeholder image. 
+console.log(placeholder.getData(opts))
+
+或者作为img的options属性：
+
+size=256x128&amp;amp;text=Hello!&amp;amp;bgcolor=#ccc&amp;amp;color=#969696&amp;amp;fstyle=oblique&amp;amp;fweight=bold&amp;amp;fsize=40&amp;amp;ffamily=consolas
+
+
+ 方法
+
+
+placeholder.getData(opts)：获得placeholder图片的base64字符串，可以直接在img标签的src属性中使用，或者在css的背景中使用。
+
+placeholder.getCanvas(opts)：获得canvas元素, 可以直接插入到DOM结构中。
+
+image placeholder插件的github地址为：https://github.com/hustcc/placeholder.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_923">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_924">
+                        jquery.pinBox-可将任何元素固定在容器中的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_924" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601141650.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.pinBox是一款可将任何元素固定在容器中的jQuery插件。通过该jQuery插件，你可以将元素固定在容器的某个位置，使它在页面滚动时跟随一起滚动。
+内容：
+
+
+简要教程
+
+
+jquery.pinBox是一款可将任何元素固定在容器中的jQuery插件。通过该jQuery插件，你可以将元素固定在容器的某个位置，使它在页面滚动时跟随一起滚动。
+该插件具有响应式的特点，你可以设定一个最小的视口宽度值，当屏幕小于这个宽度时，元素就不会再位置固定（例如可以在手机和平板上将元素占据满整列）。
+
+ 使用方法
+使用jquery.pinBox插件需要在页面中引入jquery1.7+和jquery.pinBox.min.js文件。
+
+&amp;lt;!--jQuery--&amp;gt;
+&amp;lt;script src=&#34;jquery-1.9.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!--Include pinBox plugin--&amp;gt;
+&amp;lt;script src=&#34;js/jquery.pinBox.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+你不需要进行任何特殊的设置，只需要将你需要滚动固定的元素放置在一个容器中，例如下面的代码中的#pinBoxContainer，通过为固定元素添加一个class，例如.pinBox。
+
+&amp;lt;!-- container with id --&amp;gt;
+&amp;lt;div class=&#34;container&#34; id=&#34;pinBoxContainer&#34;&amp;gt;
+&amp;lt;!--如果你不使用bootstrap.css，并且div的父元素是浮动（float）的，就要确保为其添加一个[position:relative]属性--&amp;gt;
+&amp;lt;div class=&#34;col-sm-4&#34;&amp;gt;
+&amp;lt;!-- box you want to pin inside [id=&#34;pinBoxContainer&#34;] have class or id --&amp;gt;
+&amp;lt;div class=&#34;pinBox&#34;&amp;gt;
+&amp;lt;h2 class=&#34;headColor&#34;&amp;gt;Example box&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;some text&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;col-sm-8&amp;quot;&amp;gt;
+&amp;lt;h2 class=&amp;quot;headColor&amp;quot;&amp;gt;Example box&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;some text&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面初始化完毕之后，可以通过下面的方法来初始化该插件。
+
+$(document).ready(function() {
+$(&#34;.pinBox&#34;).pinBox({
+Top : &#39;50px&#39;,
+Container : &#39;#pinBoxContainer&#39;,
+});
+});
+
+
+ 配置参数
+
+$(document).ready(function() {
+$(&#34;.pinBox&#34;).pinBox({
+//default 0px
+Top : &#39;50px&#39;,
+//default &#39;.container&#39; 
+Container : &#39;#pinBoxContainer&#39;,
+//default 20 
+ZIndex : 20,
+//default &#39;767px&#39; if you disable pinBox in mobile or tablet
+MinWidth : &#39;767px&#39;,
+//events if scrolled or window resized
+Events : function(e){
+console.log(e);
+// e.current =&amp;gt; current scroll top [number]
+// e.direction =&amp;gt; scroll down or up [up,down]
+// e.width =&amp;gt; window width [number]
+// e.active =&amp;gt; if pinBox active [true,false]
+// e.disabled =&amp;gt; if window width &amp;gt; MinWidth pinBox will disabled [true, false]
+}
+});
+});
+
+
+
+Top：元素固定时距离容器顶部的距离，默认为0。
+
+Container：容器的jQuery选择器，默认值为.container。
+
+ZIndex：元素的z-index属性，默认值为20。
+
+MinWidth：视口的最小宽度，当小于这个宽度时元素不再固定。默认值为767像素。
+
+Events：回调事件。
+
+jquery.pinBox官方网站地址为：http://nezamy.com/pinBox/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_924">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_925">
+                        jQuery和CSS3炫酷垂直固定侧边栏导航菜单特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_925" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601081548.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和CSS3垂直固定侧边栏导航菜单特效。该侧边栏特效中，菜单开始以圆点的形式垂直排列，在用户用鼠标滑过圆点时，圆点动画过渡变形为菜单图标，效果非常的酷。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的jQuery和CSS3垂直固定侧边栏导航菜单特效。该侧边栏特效中，菜单开始以圆点的形式垂直排列，在用户用鼠标滑过圆点时，圆点动画过渡变形为菜单图标，效果非常的酷。
+
+ 使用方法
+
+
+ HTML结构
+该菜单使用无序列表的结构，它包裹在一个nav.cd-vertical-nav元素中。 button.cd-nav-trigger元素是用于在移动手机上打开菜单的按钮。另外，每一个菜单项都对应一个section.cd-section的内容段落。
+
+&amp;lt;nav class=&#34;cd-vertical-nav&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#section1&#34; class=&#34;active&#34;&amp;gt;
+&amp;lt;span class=&#34;label&#34;&amp;gt;Intro&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#section2&#34;&amp;gt;
+&amp;lt;span class=&#34;label&#34;&amp;gt;Events&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- additional navigation items here --&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;&amp;lt;!-- .cd-vertical-nav --&amp;gt;
+&amp;lt;button class=&amp;quot;cd-nav-trigger cd-image-replace&amp;quot;&amp;gt;Open navigation
+&amp;lt;span aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;section id=&amp;quot;section1&amp;quot; class=&amp;quot;cd-section&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;content-wrapper&amp;quot;&amp;gt;
+&amp;lt;h1&amp;gt;Vertical Fixed Navigation #2&amp;lt;/h1&amp;gt;
+&amp;lt;a href=&amp;quot;#section2&amp;quot; class=&amp;quot;cd-scroll-down cd-image-replace&amp;quot;&amp;gt;scroll down&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;&amp;lt;!-- cd-section --&amp;gt;
+&amp;lt;section id=&amp;quot;section2&amp;quot; class=&amp;quot;cd-section&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;content-wrapper&amp;quot;&amp;gt;
+&amp;lt;!-- section content here --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;&amp;lt;!-- cd-section --&amp;gt;
+&amp;lt;!-- additional sections here --&amp;gt;
+
+
+ CSS样式
+在小屏幕设备中（视口宽度小于800像素），.cd-nav-trigger元素和&amp;lt;nav&amp;gt;元素被设置为position: fixed，并把它们放置在屏幕右下角的位置，然后使用右下角为转换原点，将菜单进行缩小操作。
+当用户点击了.cd-nav-trigger元素，导航菜单被添加一个.open class，该class将它的scale值从0次该为1，并带有平滑的CSS3过渡效果。
+
+.cd-nav-trigger {
+display: block;
+position: fixed;
+z-index: 2;
+bottom: 30px;
+right: 5\%;
+}
+.cd-vertical-nav {
+position: fixed;
+z-index: 1;
+right: 5%;
+bottom: 30px;
+transform: scale(0);
+transform-origin: right bottom;
+transition: transform 0.2s;
+}
+.cd-vertical-nav.open {
+transform: scale(1);
+}
+
+在大屏幕设备中，特效中使用Modernizr来检测移动触摸和非移动触摸设备。（使用.touch和.no-touch class）
+在移动触摸设备中，侧边栏菜单项默认是可见的，而在非移动触摸的设备中，它们默认显示为圆点，当用户用鼠标滑过时才转换为图标。
+&amp;lt;nav&amp;gt;元素被设置了固定的宽度和高度，并将它放置在视口的右侧。然后使用::before伪元素来创建导航菜单的背景。在非移动触摸设备中，::before伪元素默认被移动到右侧视口之外，然后当用户鼠标滑过时才从视口之外移动会原来的位置。同样在span.label元素上也会执行相同的效果。
+
+@media only screen and (min-width: 800px) {
+.cd-vertical-nav {
+right: 0;
+top: 0;
+height: 100vh;
+width: 90px;
+}
+.cd-vertical-nav::before {
+/* this is the navigation background */
+content: &#39;&#39;;
+position: absolute;
+top: 0;
+left: 0;
+width: 100\%;
+height: 100\%;
+background: rgba(0, 0, 0, 0.8);
+transform: translateX(100\%);
+transition: transform 0.4s;
+}
+.no-touch .cd-vertical-nav:hover::before, 
+.touch .cd-vertical-nav::before {
+transform: translateX(0);
+}
+.cd-vertical-nav .label {
+display: block;
+transform: translateX(100\%);
+transition: transform 0.4s;
+}
+.no-touch .cd-vertical-nav:hover .label, 
+.touch .cd-vertical-nav .label {
+transform: translateX(0);
+}
+}
+
+为了创建导航菜单的圆点和图标，特效中使用导航的锚链接元素（&amp;lt;a&amp;gt;元素）的::before和::after伪元素来制作它们。在非移动触摸设备中，::before和::after伪元素默认被缩小为0，然后在用户鼠标滑过时才被放大为原来的大小。
+
+@media only screen and (min-width: 800px) {
+.cd-vertical-nav a {
+position: relative;
+padding: 3em 0 0;
+margin: 1.4em auto;
+}
+.cd-vertical-nav a::before, 
+.cd-vertical-nav a::after {
+/* used to create the filled circle and the background icon */
+content: &#39;&#39;;
+position: absolute;
+left: 50\%;
+transition: transform 0.4s 0s;
+}
+.cd-vertical-nav a::before {
+/* filled circle */
+top: 0;
+height: 32px;
+width: 32px;
+border-radius: 50\%;
+background: #eaf2e3;
+transform: translateX(-50\%) scale(0.25);
+}
+.cd-vertical-nav a::after {
+/* icon */
+top: 8px;
+height: 16px;
+width: 16px;
+background: url(../img/cd-nav-icons.svg) no-repeat;
+transform: translateX(-50\%) scale(0);
+}
+.no-touch .cd-vertical-nav:hover a::before, 
+.no-touch .cd-vertical-nav:hover a::after, 
+.touch .cd-vertical-nav li:nth-of-type(n) a::before, 
+.touch .cd-vertical-nav li:nth-of-type(n) a::after {
+transform: translateX(-50\%) scale(1);
+}
+}
+
+现在，当导航的圆点被缩小之后，它们之间的间隔会非常的远，我们必须沿Y轴移动它们来调整它们之间的距离。
+首先我们从中间的圆点开始（在这个DEMO中是第二和第三个圆点）。我们向下移动第二个圆点（必须给它设置一个正值），同时使第三个圆点向上移动（要给它设置一个负值），所以，在DEMO中的代码如下：
+
+.cd-vertical-nav li:nth-of-type(2) a::after {
+transform: translateX(-50\%) translateY(1.5em) scale(0);
+}
+.cd-vertical-nav li:nth-of-type(2) a::before {
+transform: translateX(-50\%) translateY(1.5em) scale(0.25);
+}
+.cd-vertical-nav li:nth-of-type(3) a::after {
+transform: translateX(-50\%) translateY(-1.5em) scale(0);
+}
+.cd-vertical-nav li:nth-of-type(3) a::before {
+transform: translateX(-50\%) translateY(-1.5em) scale(0.25);
+}
+
+然后，第一个圆点的移动值要是第二个圆点的3倍，第四个圆点的移动值是第三个圆点的3倍。
+
+.cd-vertical-nav li:first-of-type a::after {
+transform: translateX(-50\%) translateY(4.5em) scale(0);
+}
+.cd-vertical-nav li:first-of-type a::before {
+transform: translateX(-50\%) translateY(4.5em) scale(0.25);
+}
+.cd-vertical-nav li:nth-of-type(4) a::after {
+transform: translateX(-50\%) translateY(-4.5em) scale(0);
+}
+.cd-vertical-nav li:nth-of-type(4) a::before {
+transform: translateX(-50\%) translateY(-4.5em) scale(0.25);
+}
+
+如果你使用的是不同的导航菜单项，你就需要根据实际情况来改变这些移动值。例如，如果你有6个菜单项，仍然是从中间开始移动（第三和第四个圆点），你可以将它们沿Y轴的移动值分别设置为1.5em和-1.5em，然后第二个和第五个元素分别设置为4.5em和-4.5em(3*1.5em)，最后，第一个和最后一个圆点的移动值设置为7.5em和-7.5em(5*1.5em)。
+如果你是奇数的菜单项，例如5个菜单项，那么中间的菜单项不需要移动，你只需要移动第二个和第四个菜单项，分别沿Y轴移动它们3em和-3em(2*1.5em)，第一个和第四个菜单项移动6em和-6em（4*1.5em）。
+
+ JavaScript
+当用户向下滚动页面的时候，updateSections()函数会计算当前在视口中的是哪一个section，并为相应的导航菜单项添加.active的class。
+另外在小屏幕设备中，插件会监听button.cd-nav-trigger的点击事件，用于打开和关闭菜单按钮。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_925">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_926">
+                        精美时尚的jQuery动态仪表盘插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_926" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510201643.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+GaugeMeter是一款精美时尚的jQuery动态仪表盘插件。该仪表盘插件提供总多参数来用于配置，可以制作出完整圆形进度条，半圆形进度条和拱圆形进度条的仪表盘。
+内容：
+
+
+简要教程
+
+
+GaugeMeter是一款精美时尚的jQuery动态仪表盘插件。该仪表盘插件提供总多参数来用于配置，可以制作出完整圆形，半圆形和拱圆形的仪表盘。它的特点有：
+
+仅一个js文件，没有其它依赖。
+高度可配置和扩展。
+提供大量内置主题。
+众多的参数设置。
+支持各种页面尺寸和页面颜色。
+使用HTML5 canvas渲染图形。
+可通过data属性来配置参数。
+
+
+ 使用方法
+使用该仪表盘插件需要引入jQuery(jquery1.10.2+)和jquery.AshAlom.gaugeMeter-2.0.0.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/jquery.AshAlom.gaugeMeter-2.0.0.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该仪表盘插件的基本HTML结构如下，data-percent属性指定的是圆形进度条的当前数值。
+
+&amp;lt;div class=&#34;GaugeMeter&#34; id=&#34;GaugeMeter\_1&#34; data-percent=&#34;10&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+在使用时需要为这个仪表盘添加一些必要的CSS样式。
+
+.GaugeMeter{
+Position:Relative;
+Text-Align:Center;
+Overflow:Hidden;
+Cursor:Default;
+}
+.GaugeMeter SPAN,
+.GaugeMeter B{
+Margin:0 23%;
+Width: 5%;
+Position:Absolute;
+Text-align:Center;
+Display: Inline-Block;
+Color: RGBa(0,0,0,.8);
+Font-Weight: 100;
+Font-Family: &amp;quot;Open Sans&amp;quot;, Arial;
+Overflow:Hidden;
+White-Space: NoWrap;
+Text-Overflow: Ellipsis;
+}
+.GaugeMeter[data-style=&amp;quot;Semi&amp;quot;] B{
+Margin:0 10%;
+Width: 80%;
+}
+.GaugeMeter S,
+.GaugeMeter U{
+Text-Decoration: None;
+Font-Size: .49em;
+Opacity: .5;
+}
+.GaugeMeter B{
+Color: Black;
+Font-Weight: 300;
+Opacity: .8;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该仪表盘插件。
+
+$(document).ready(function(){
+$(&#34;.GaugeMeter&#34;).gaugeMeter();
+});
+
+
+ 通过DATA属性来初始化
+你也可以直接在HTML标签中使用data属性来初始化该仪表盘插件。
+
+&amp;lt;div class=&#34;GaugeMeter&#34; id=&#34;GaugeMeter\_1&#34; data-percent=&#34;10&#34;
+data-text=&#34;Spendings&#34;
+data-total=&#34;1024&#34;
+data-used=&#34;256&#34;
+data-prepend=&#34;$&#34;
+data-append=&#34;.00&#34;
+data-size=&#34;200&#34;
+data-width=&#34;2&#34;
+data-style=&#34;Semi&#34;
+data-color=&#34;Blue&#34;
+data-back=&#34;Silver&#34;
+data-theme=&#34;Red-Gold-Green&#34;
+data-animate\_gauge\_colors=&#34;1&#34;
+data-animate\_text\_colors=&#34;1&#34;
+data-label=&#34;VISA Card&#34;
+data-label\_color=&#34;#F00&#34;
+data-stripe=&#34;2&#34;
+&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 配置参数
+下面是该仪表盘插件的一些可用参数，这些参数也可以在HTML DOM元素的data标签中使用。
+
+
+
+
+参数
+默认值
+可用值
+描述
+
+
+
+
+data-percent
+0
+任何0-100之间的正整数
+仪表盘的当前数值，必填参数
+
+
+data-used
+0
+任何正整数
+该参数用于覆盖data-percent设置的数值。例如：你要显示512GB的内存被使用了“25\%”，那么这里要指定为128，在data-total参数中指定512
+
+
+data-total
+100
+任何正整数
+该参数用于覆盖data-percent设置的数值。例如：你要显示512GB的内存被使用了“25\%”，那么data-used要指定为128，在data-total参数中指定512
+
+
+data-text
+null
+字符串
+它会替换仪表盘中间显示的data-percent数值
+
+
+data-prepend
+null
+字符串（最大2 bytes）
+在百分比数量之前添加的文本
+
+
+data-append
+null
+字符串（最大2 bytes）
+在百分比数量之后添加的文本，例如添加“\%”
+
+
+data-size
+100
+任何正整数
+仪表盘的宽度和高度，单位像素
+
+
+data-width
+3
+任何正整数
+仪表盘圆形进度条的厚度
+
+
+data-style
+Full
+Full, Semi 或 Arch
+是显示整圆，半圆还是arched-circle
+
+
+data-color
+#2C94E0
+十六进制颜色或RGBA颜色或HTML颜色名字（如red）
+仪表盘圆形进度条的前景色。如果设置了data-theme属性，该属性会被覆盖
+
+
+data-back
+RGBA(0,0,0,.06)
+十六进制颜色或RGBA颜色或HTML颜色名字（如red）
+仪表盘圆形进度条的背景色。
+
+
+data-theme
+Red-Gold-Green
+
+Red-Gold-Green
+
+Green-Gold-Red
+
+Green-Red
+
+Red-Green
+
+DarkBlue-LightBlue
+
+LightBlue-DarkBlue
+
+DarkRed-LightRed
+
+LightRed-DarkRed
+
+DarkGreen-LightGreen
+
+LightGreen-DarkGreen
+
+DarkGold-LightGold
+
+LightGold-DarkGold
+
+White
+
+Black
+
+
+仪表盘圆形进度条的颜色渐变主题
+
+
+data-animate\_gauge\_colors
+0
+布尔值0或1
+如果该参数设置为可用，仪表盘圆形进度条的前景色将会根据data-theme中的渐变来在不同的圆形位置显示不同的颜色。该参数会覆盖data-color设置的值
+
+
+data-animate\_text\_colors
+0
+布尔值0或1
+如果该参数设置为可用，仪表盘圆形进度条的文本色将会根据data-theme中的渐变来在不同的圆形位置显示不同的颜色。该参数会覆盖data-color设置的值
+
+
+data-label
+null
+字符串
+显示在百分比数值下面的文本
+
+
+data-label\_color
+Black
+十六进制颜色或RGBA颜色或HTML颜色名字（如red）
+添加的文本的颜色
+
+
+data-stripe
+0
+任何正整数
+以直线或条纹来显示仪表盘圆形进度条。如果给出的值大于0，圆形进度条从直线变为条纹，值为条纹的厚度
+
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_926">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_927">
+                        Material Design风格实用Tabs选项卡
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_927" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511151552.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的Material Design风格Tabs选项卡特效。该Tabs选项卡使用扁平化设计风格，Tabs点击时带有点击波特效，并且选项卡的高度会随内容而改变。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的Material Design风格Tabs选项卡特效。该Tabs选项卡使用扁平化设计风格，Tabs点击时带有点击波特效，并且选项卡的高度会随内容而改变。
+
+ 使用方法
+
+ HTML结构
+该Tabs选项卡的HTML结构如下：ul无序列表是选项卡的Tab，nav元素是选项卡的左右箭头导航按钮。div.nav-content是选项卡的内容，它通过tab-id属性和Tabs关联。
+
+&amp;lt;!--Tabs--&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;#tab-1&#34; tab-id=&#34;1&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34;&amp;gt;Tab 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#tab-2&#34; tab-id=&#34;2&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34;&amp;gt;Tab 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#tab-3&#34; tab-id=&#34;3&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34;&amp;gt;Tab 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#tab-4&#34; tab-id=&#34;4&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34;&amp;gt;Tab 4&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&#34;#tab-5&#34; tab-id=&#34;5&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34;&amp;gt;Tab 5&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!--箭头导航--&amp;gt;
+&amp;lt;nav class=&#34;tabs-nav&#34;&amp;gt;
+&amp;lt;i id=&#34;prev&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34; class=&#34;material-icons&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;i id=&#34;next&#34; ripple=&#34;ripple&#34; ripple-color=&#34;#FFF&#34; class=&#34;material-icons&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;!--选项卡内容--&amp;gt;
+&amp;lt;div class=&#34;tabs-content&#34;&amp;gt;
+&amp;lt;div tab-id=&#34;1&#34; class=&#34;tab active&#34;&amp;gt;......&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+该Tabs选项卡的按钮点击波特效的CSS样式如下：
+
+[ripple] {
+z-index: 1;
+position: relative;
+overflow: hidden;
+}
+[ripple] .ripple {
+position: absolute;
+background: #FFFFFF;
+width: 12px;
+height: 12px;
+border-radius: 100\%;
+-webkit-animation: ripple 1.6s;
+animation: ripple 1.6s;
+}
+@-webkit-keyframes ripple {
+0% {
+-webkit-transform: scale(1);
+transform: scale(1);
+opacity: 0.2;
+}
+100% {
+-webkit-transform: scale(40);
+transform: scale(40);
+opacity: 0;
+}
+}
+@keyframes ripple {
+0% {
+-webkit-transform: scale(1);
+transform: scale(1);
+opacity: 0.2;
+}
+100% {
+-webkit-transform: scale(40);
+transform: scale(40);
+opacity: 0;
+}
+}
+
+
+ JavaScript
+该Tabs选项卡使用下面的jQuery代码来完成选项卡的切换和按钮点击波特效的生成。
+
+$(document).ready(function () {
+var activePos = $(&#39;.tabs-header .active&#39;).position();
+function changePos() {
+activePos = $(&#39;.tabs-header .active&#39;).position();
+$(&#39;.border&#39;).stop().css({
+left: activePos.left,
+width: $(&#39;.tabs-header .active&#39;).width()
+});
+}
+changePos();
+var tabHeight = $(&#39;.tab.active&#39;).height();
+function animateTabHeight() {
+tabHeight = $(&#39;.tab.active&#39;).height();
+$(&#39;.tabs-content&#39;).stop().css({ height: tabHeight + &#39;px&#39; });
+}
+animateTabHeight();
+function changeTab() {
+var getTabId = $(&#39;.tabs-header .active a&#39;).attr(&#39;tab-id&#39;);
+$(&#39;.tab&#39;).stop().fadeOut(300, function () {
+$(this).removeClass(&#39;active&#39;);
+}).hide();
+$(&#39;.tab[tab-id=&#39; + getTabId + &#39;]&#39;).stop().fadeIn(300, function () {
+$(this).addClass(&#39;active&#39;);
+animateTabHeight();
+});
+}
+$(&#39;.tabs-header a&#39;).on(&#39;click&#39;, function (e) {
+e.preventDefault();
+var tabId = $(this).attr(&#39;tab-id&#39;);
+$(&#39;.tabs-header a&#39;).stop().parent().removeClass(&#39;active&#39;);
+$(this).stop().parent().addClass(&#39;active&#39;);
+changePos();
+tabCurrentItem = tabItems.filter(&#39;.active&#39;);
+$(&#39;.tab&#39;).stop().fadeOut(300, function () {
+$(this).removeClass(&#39;active&#39;);
+}).hide();
+$(&#39;.tab[tab-id=&#34;&#39; + tabId + &#39;&#34;]&#39;).stop().fadeIn(300, function () {
+$(this).addClass(&#39;active&#39;);
+animateTabHeight();
+});
+});
+var tabItems = $(&#39;.tabs-header ul li&#39;);
+var tabCurrentItem = tabItems.filter(&#39;.active&#39;);
+$(&#39;#next&#39;).on(&#39;click&#39;, function (e) {
+e.preventDefault();
+var nextItem = tabCurrentItem.next();
+tabCurrentItem.removeClass(&#39;active&#39;);
+if (nextItem.length) {
+tabCurrentItem = nextItem.addClass(&#39;active&#39;);
+} else {
+tabCurrentItem = tabItems.first().addClass(&#39;active&#39;);
+}
+changePos();
+changeTab();
+});
+$(&#39;#prev&#39;).on(&#39;click&#39;, function (e) {
+e.preventDefault();
+var prevItem = tabCurrentItem.prev();
+tabCurrentItem.removeClass(&#39;active&#39;);
+if (prevItem.length) {
+tabCurrentItem = prevItem.addClass(&#39;active&#39;);
+} else {
+tabCurrentItem = tabItems.last().addClass(&#39;active&#39;);
+}
+changePos();
+changeTab();
+});
+$(&#39;[ripple]&#39;).on(&#39;click&#39;, function (e) {
+var rippleDiv = $(&#39;&amp;lt;div class=&#34;ripple&#34; /&amp;gt;&#39;), 
+rippleOffset = $(this).offset(), 
+rippleY = e.pageY - rippleOffset.top, 
+rippleX = e.pageX - rippleOffset.left, 
+ripple = $(&#39;.ripple&#39;);
+rippleDiv.css({
+top: rippleY - ripple.height() / 2,
+left: rippleX - ripple.width() / 2,
+background: $(this).attr(&#39;ripple-color&#39;)
+}).appendTo($(this));
+window.setTimeout(function () {
+rippleDiv.remove();
+}, 1500);
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_927">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_928">
+                        Material Design风格返回顶部jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_928" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511021530.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+material-scrolltop是一款轻量级Material Design风格返回顶部jQuery插件。该返回顶部按钮有点击波特效，动画平滑过渡效果，并且通过参数可以配置各种滚动动画的easing效果。
+内容：
+
+
+简要教程
+
+
+material-scrolltop是一款轻量级Material Design风格返回顶部jQuery插件。该返回顶部按钮有点击波特效，动画平滑过渡效果，并且通过参数可以配置各种滚动动画的easing效果。它的特点还有：
+
+轻量级
+Material Design风格设计
+带按钮点击波特效
+平滑过渡动画
+可配置外观样式
+提供参数来控制动画
+
+
+ 安装
+可以通过bower来安装该返回顶部插件。
+
+bower install material-scrolltop
+
+
+ 使用方法
+使用该返回顶部插件需要引入jQuery（1.7+）和material-scrolltop.js以及material-scrolltop.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/material-scrolltop.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;material-scrolltop.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用一个按钮&amp;lt;button&amp;gt;元素来制作返回顶部的按钮。
+
+&amp;lt;button class=&#34;material-scrolltop&#34; type=&#34;button&#34;&amp;gt;&amp;lt;/button&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该返回顶部插件。
+
+&amp;lt;script&amp;gt;
+$(&#39;body&#39;).materialScrollTop();
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+revealElement
+string
+body
+页面滚动超过指定的元素的时候显示返回顶部按钮
+
+
+revealPosition
+string
+top
+返回顶部按钮的位置：&#39;top&#39;或&#39;bottom&#39;
+
+
+
+padding
+number
+0
+调整上下的padding值，可以是负数
+
+
+duration
+number
+600
+滚动到顶部动画的持续时间
+
+
+easing
+string
+&#39;swing&#39;
+animate()动画的easing效果
+
+
+onScrollEnd
+Function()
+false
+当返回顶部动画结束后的回调函数
+
+
+
+
+
+ 自定义
+通过Sass文件，你可以轻易的修改默认的样式、颜色、位置等等属性。
+如果需要修改SVG图标，可以将你的图标放入src/icons/目录下。
+
+ 自定义文字或标记
+如果需要自定义文字或标记，可以按下面步骤操作：
+
+通过Sass文件的$mst-icon: false变量关闭svg图标。
+新建你自己的样式（不带图标）。
+然后像下面这样将文字或标记放入一个&amp;lt;span&amp;gt;标签中。
+
+&amp;lt;button class=&#34;material-scrolltop&#34; type=&#34;button&#34;&amp;gt;
+&amp;lt;span&amp;gt;↑&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_928">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_929">
+                        基于Bootstrap3的带记事功能的全年日历插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_4">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_929" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512051649.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bootstrap-year-calendar是一款非常实用的基于Bootstrap3带记事功能的全年日历插件。该日历插件使用简单，可以动态在某个日期上设置备忘录，可以自定义高亮日期样式和选择最大日期和最小日期范围等。
+内容：
+
+
+简要教程
+
+
+bootstrap-year-calendar是一款非常实用的基于Bootstrap3带记事功能的全年日历插件。该日历插件使用简单，可以动态在某个日期上设置备忘录，可以自定义高亮日期样式和选择最大日期和最小日期范围等。
+该Bootstrap全年日历插件目前只支持英文和法文两种语言。
+
+ 使用方法
+使用bootstrap-year-calendar插件需要引入jQuery、Bootstap3的相关依赖文件和插件本身需要的js和css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;bootstrap-3.3.5/css/bootstrap.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/bootstrap-year-calendar.min.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;bootstrap-3.3.5/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/bootstrap-datepicker.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/bootstrap-year-calendar.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/bootstrap-popover.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该Bootstrap3带记事功能的全年日历插件最简单的HTML结构是使用一个空的&amp;lt;div&amp;gt;作为日历的容器。
+
+&amp;lt;div id=&#34;calendar&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该日历插件。
+
+$(&#39;.calendar&#39;).calendar()
+
+或者在初始化插件的时候设置一些配置参数：
+
+$(&#39;.calendar&#39;).calendar(options) 
+
+也可以直接在HTML元素上使用data-provide属性来初始化插件。
+
+&amp;lt;div data-provide=&#34;calendar&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+
+ 配置参数
+bootstrap-year-calendar全年日历插件的可用配置参数有：
+
+
+allowOverlap：类型：Boolean；默认值：true；指定用户是否可以选择一个在DataSource中于其它元素范围重叠的日期范围。
+Get/Set方法：getAllowOverlap(), setAllowOverlap()
+
+
+contextMenuItems：类型： Array of: { text: String, click: function(dataSourceElement), subMenu: [] }；默认值：false；指定上下文菜单的默认项。
+Get/Set方法：getContextMenuItems(), setContextMenuItems()
+
+
+dataSource：类型：Array of: { startDate: Date, endDate: Date, name: String, ... }；默认值：[]；显示在日历中的日期元素。
+Get/Set方法：getDataSource(), setDataSource()
+
+
+disableDays：类型：Array of Date；默认值：[]；不可用的日期。
+Get/Set方法：getDisableDays(), setDisableDays()
+
+
+displayWeekNumber：类型：Boolean；默认值：false；是否显示星期的序号。
+Get/Set方法：getDisplayWeekNumber(), setDisplayWeekNumber()
+
+
+enableContextMenu：类型：Boolean；默认值：false；是否在右键点击一个日期时显示上下文菜单。
+Get/Set方法：getEnableContextMenu(), setEnableContextMenu()
+
+
+enableRangeSelection：类型：Boolean；默认值：false；用户是否可以选择一个日期范围。
+Get/Set方法：getEnableRangeSelection(), setEnableRangeSelection()
+
+
+language：类型：String；默认值：en；当前日历的语言，目前只支持英语和法语。
+Get/Set方法：getLanguage(), setLanguage()
+
+
+maxDate：类型：Date；默认值：null；最大的日期时间，用户不能设置最大日期之后的备忘录。
+Get/Set方法：getMaxDate(), getMaxDate()
+
+
+minDate：类型：Date；默认值：null；最小的日期时间，用户不能设置最小日期之前的备忘录。
+Get/Set方法：getMaxDate(), getMaxDate()
+
+
+startYear：类型：Number；默认值：当期年份；日历打开时显示的年份。
+Get/Set方法：getYear(), setYear()
+
+
+style：类型：String；默认值：&#39;border&#39;；指定备忘录日期的样式。
+Get/Set方法：getStyle(), setStyle()
+
+
+
+ 事件
+你可以在初始化的时候为一个日历绑定事件：
+
+$(&#39;#element&#39;).calendar({
+clickDay: function(e) { ... }
+});
+
+或者使用jQuery方法来绑定日历事件：
+
+$(&#39;#element&#39;).clickDay(function(e){ ... });
+
+或者： 
+
+$(&#39;#element&#39;).bind(&#39;clickDay&#39;, function(e){ ... });
+
+
+
+clickDay：当某个日期被点击时触发。
+事件参数：
+
+element (DOM element)：被点击日期的HTML元素。
+date (Date)：被点击日期的日期。
+which (Number)：The number of the button used for clicking (from the original click event)。
+events (Array of data source element)：被点击日期的数据源。
+
+
+
+dayContextMenu：当一个日期被右键点击的时候触发。
+事件参数：
+
+element (DOM element)：被点击日期的HTML元素。
+date (Date)：被点击日期的日期。
+events (Array of data source element)：被点击日期的数据源。
+
+
+
+mouseOnDay：当鼠标进入某个日期时触发。
+事件参数：
+
+element (DOM element)：被点击日期的HTML元素。
+date (Date)：被点击日期的日期。
+events (Array of data source element)：被点击日期的数据源。
+
+
+
+mouseOutDay：：当鼠标离开某个日期时触发。
+事件参数：
+
+element (DOM element)：被点击日期的HTML元素。
+date (Date)：被点击日期的日期。
+events (Array of data source element)：被点击日期的数据源。
+
+
+
+renderDay：当渲染某个日期时触发。
+事件参数：
+
+element (DOM element)：被点击日期的HTML元素。
+date (Date)：被渲染的日期。
+
+
+
+renderEnd：当一个日期渲染结束时候触发。
+事件参数：
+
+currentYear(Number)：日历上显示的年份。
+
+
+
+selectRange：当一个日期范围被选择的时候触发。
+事件参数：
+
+startDate (Date): 日期范围的开始日期。
+endDate (Date): 日期范围的结束日期。
+
+
+
+关于该bootstrap-year-calendar全年日历插件的更多信息可以参考：http://www.bootstrap-year-calendar.com/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_929">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_93">
+                        day.js轻量级处理时间和日期JavaScript库
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_93" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1903/201903086132.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Day.js是一个轻量的处理时间和日期的JavaScript库，和Moment.js的API设计保持完全一样. 如果您曾经用过Moment.js, 那么您已经知道如何使用Day.js。
+内容：
+
+
+简要教程
+
+
+Day.js是一个轻量的处理时间和日期的JavaScript库，和Moment.js的API设计保持完全一样. 如果您曾经用过Moment.js, 那么您已经知道如何使用Day.js。
+Day.js的特点有：
+
+和 Moment.js 相同的 API 和用法
+不可变数据 (Immutable)
+支持链式操作 (Chainable)
+国际化 I18n
+仅 2kb 大小的微型库
+全浏览器兼容
+
+
+ 安装
+
+// npm
+npm install dayjs --save
+import dayjs from &#39;dayjs&#39;
+// 或者 CommonJS
+// var dayjs = require(&#39;dayjs&#39;);
+dayjs().format()
+// CDN 方法
+&amp;lt;!-- 最新的压缩后的 JavaScript 文件 --&amp;gt;
+&amp;lt;script src=&amp;quot;https://unpkg.com/dayjs&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+dayjs().format()
+&amp;lt;/script&amp;gt;
+
+
+ 使用方法
+
+ API
+Day.js 有很多 API 来解析、处理、校验、增减、展示时间和日期。
+
+dayjs(&#39;2018-08-08&#39;) // 解析
+dayjs().format(&#39;{YYYY} MM-DDTHH:mm:ss SSS [Z] A&#39;) // 展示
+dayjs()
+.set(&#39;month&#39;, 3)
+.month() // 获取
+dayjs().add(1, &#39;year&#39;) // 处理
+dayjs().isBefore(dayjs()) // 查询
+
+
+ 国际化 I18n
+Day.js 支持国际化，但除非手动加载，多国语言默认是不会被打包到工程里的。
+
+import &#39;dayjs/locale/es&#39; // 按需加载
+dayjs.locale(&#39;es&#39;) // 全局使用西班牙语
+dayjs(&#39;2018-05-05&#39;)
+.locale(&#39;zh-cn&#39;)
+.format() // 在这个实例上使用简体中文
+
+
+ 插件
+插件是一些独立的程序，可以给 Day.js 增加新功能和扩展已有功能。
+
+import advancedFormat from &#39;dayjs/plugin/advancedFormat&#39; // 按需加载插件
+dayjs.extend(advancedFormat) // 使用插件
+dayjs().format(&#39;Q Do k kk X x&#39;) // 使用扩展后的API
+
+插件列表
+ Day.js插件的github网址为：https://github.com/iamkun/dayjs
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_93">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_930">
+                        简单实用的jQuery响应式表格插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_930" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511271732.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.responsive-tables.js是一款轻量级的响应式jQuery表格插件。该响应式表格插件可以在小屏幕设备中将表格内容以列表的方式进行显示。并且它支持一个页面同时存在多个表格实例及合并单元格等。
+内容：
+
+
+简要教程
+
+
+jquery.responsive-tables.js是一款轻量级的响应式jQuery表格插件。该响应式表格插件可以在小屏幕设备中将表格内容以列表的方式进行显示。并且它支持一个页面同时存在多个表格实例及合并单元格等。
+
+ 使用方法
+要使用该jQuery响应式表格插件，需要在页面中引入jQuery、jquery.responsive-tables.js和responsive-tables.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/responsive-tables.css&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.responsive-tables.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+表格的HTML结构要确保使用&amp;lt;thead&amp;gt;和&amp;lt;tbody&amp;gt;元素。在&amp;lt;table&amp;gt;元素上要添加class respond。
+
+&amp;lt;table class=&#34;respond&#34;&amp;gt;
+&amp;lt;caption&amp;gt;表格的标题&amp;lt;/caption&amp;gt;
+&amp;lt;!--表头--&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Position&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Office&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Age&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Start date&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Salary&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;!--表体--&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;Airi Satou&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Accountant&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Tokyo&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;33&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;2008/11/28&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$162,700&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+......
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该jQuery响应式表格插件。
+
+$(document).ready(function() {
+$.responsiveTables();
+});
+
+
+ 自定义表格
+在responsive-tables.css样式表文件中，如果修改了table.respond td:before的top和left属性将会改变移动手机等小屏幕中的表格头padding值。这些属性会影响使表标题和表之间的数据填充的padding。
+
+table.respond td:before { 
+/* top/left values mimics padding */
+top: 8px;/* mimics padding top */
+left: 6px;/* mimics padding left */
+
+你也可以在responsive-tables.css样式表文件中修改你所需要的媒体查询断点。
+
+@media only screen and (max-width: 800px)
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_930">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/151/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/153/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

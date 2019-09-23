@@ -1,0 +1,1798 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    js | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        js</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_706">
+                        高性能页面滚动触发HTML元素动画JS插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-primary">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_706" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607071614.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ScrollTrigger是一款高性能页面滚动触发HTML元素动画JS插件。该插件根据页面滚动的位置来对页面中的元素执行动画，插件中使用requestAnimationFrame，对用户的滚动不会产生额外的影响
+内容：
+
+
+简要教程
+
+
+ScrollTrigger是一款高性能页面滚动触发HTML元素动画JS插件。该插件根据页面滚动的位置来对页面中的元素执行动画，插件中使用requestAnimationFrame，对用户的滚动不会产生额外的影响。
+
+ 使用方法
+在页面中引入ScrollTrigger.min.js文件。
+
+&amp;lt;script src=&#34;path/to/ScrollTrigger.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+在页面加载完毕之后，可以通过ScrollTrigger.init()方法来初始化该插件。
+
+&amp;lt;script&amp;gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, function(){
+ScrollTrigger.init();
+});
+&amp;lt;/script&amp;gt;
+
+初始化方法调用2个参数：bindTo和scrollIn，它们都是可选参数。
+bindTo参数是动画HTML元素的容器，通常是document.body。
+scrollIn参数是从中获取滚动位置的元素，通常是window。
+
+ HTML结构
+接下来你需要在HTML元素上添加data-scroll属性。
+
+&amp;lt;div data-scroll&amp;gt;&amp;lt;/div&amp;gt; 
+
+如果你想在元素进入视口时变为可见，离开视口时隐藏，可以在进入视口是为元素添加visible class类，在离开视口时添加invisible class类，然后在你的CSS文件中定义这两个class类的动画效果。
+
+.invisible {
+transition: opacity 0.5s ease;
+opacity: 0.0;
+}
+.visible {
+transition: opacity 0.5s ease;
+opacity: 1.0;
+}
+
+这样，一个简单的进入视口时元素淡入效果，离开视口时元素淡出效果的动画就完成了。
+
+ 配置参数
+data-scroll属性可以设置以下以下配置参数。
+
+
+
+
+参数
+类型
+描述
+示例代码
+
+
+
+
+toggle()
+CSS Classes
+一对用于在滚动时切换的class类，例如visible和invisible。
+
+data-scroll=&#34;toggle(.animateIn, .animateOut)&#34;也可以不带.号，data-scroll=&#34;toggle(animateIn, animateOut)&#34;
+
+
+
+offset()
+Pixels
+添加到元素上的偏移值。接收X和Y两个数作为参数。
+
+data-scroll=&#34;offset(0,50px)&#34;表示Y轴50像素的偏移。px单位可以不写：data-scroll=&#34;offset(-50,0)&#34;
+
+
+
+addWidth
+Boolean
+是否添加元素的偏移宽度，使元素完全可见时才添加相应的class类。
+data-scroll=&#34;addWidth&#34;
+
+
+addHeight
+Boolean
+是否添加元素的偏移高度，使元素完全可见时才添加相应的class类。
+data-scroll=&#34;addHeight&#34;
+
+
+centerHorizontal
+Boolean
+是否添加元素的一半偏移宽度，使元素在一半可见时就添加相应的class类。
+data-scroll=&#34;centerHorizontal&#34;
+
+
+centerVertical
+Boolean
+是否添加元素的一半偏移高度，使元素在一半可见时就添加相应的class类。
+data-scroll=&#34;centerVertical&#34;
+
+
+once
+Boolean
+是否让动画只执行一次。
+data-scroll=&#34;once&#34;
+
+
+
+
+
+ 回调函数
+你可以在元素显示或隐藏之后触发回调函数，通过data-scroll-showCallback或data-scroll-hideCallback属性来实现。例如：
+
+&amp;lt;div data-scroll data-scroll-showCallback=&#34;alert(&#39;Visible&#39;)&#34; data-scroll-hideCallback=&#34;alert(&#39;Invisible&#39;)&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+ScrollTrigger插件的github地址为：https://github.com/terwanerik/ScrollTrigger
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_706">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_714">
+                        switchPage.js-简单的jQuery全屏滚动翻页插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_714" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605211553.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+switchPage.js是一款小巧的jQuery全屏滚动翻页插件。通过它可以快速创建水平或垂直的全屏滚动翻页效果。该插件支持使用鼠标或键盘来进行翻页。
+内容：
+
+
+简要教程
+
+
+switchPage.js是一款小巧的jQuery全屏滚动翻页插件。通过它可以快速创建水平或垂直的全屏滚动翻页效果。该插件支持使用鼠标或键盘来进行翻页。它的特点还有：
+
+支持水平和垂直翻页。
+页面无限循环，滚动到最后一夜后会跳转会第一页。
+自动生成圆点导航按钮。
+可以自定义页面的过渡动画效果。
+
+
+ 使用方法
+使该插件需要在页面中引入jquery和switchPage.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/switchPage.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该全屏翻页滚动效果使用嵌套的HTML结构。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;section active&#34;&amp;gt;
+Section One
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34;&amp;gt;
+Section Two 
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;section&#34; id=&#34;section2&#34;&amp;gt;
+Section Three
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为每一个分段页面设置100\%的高度和宽度。
+
+* {
+padding: 0;
+margin: 0;
+}
+html, body {
+height: 100%;
+overflow: hidden;
+}
+#container, .section {
+height: 100%;
+position: relative;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过switchPage()方法来初始化该全屏翻页滚动插件。
+
+$(function(){
+$(&#34;#container&#34;).switchPage({
+// 配置参数
+});
+});
+
+
+ 配置参数
+bespoke-fx幻灯片插件的配置参数如下：
+
+
+&#39;container&#39;：顶级容器。默认值为&#39;#container&#39;。
+
+&#39;sections&#39;：分段容器。默认值为&#39;.section&#39;。
+
+&#39;easing&#39;：动画过渡效果，默认值为&#39;ease&#39;，可用值有：ease-in,ease-out,ease,linear。
+
+&#39;duration&#39;：动画的持续时间。默认值为1000毫秒。
+
+&#39;pagination&#39;：是否显示圆点导航按钮，默认为true。
+
+&#39;loop&#39;：是否支持无限循环，默认值为false。
+
+&#39;keyboard&#39;：是否支持键盘控制，默认值为true。
+
+&#39;direction&#39;：页面滚动的方向，默认值为&#39;vertical&#39;，可用值有：vertical 或 horizontal。
+
+&#39;onpageSwitch&#39;：回调函数。默认为function(pagenum) {}。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_714">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_715">
+                        CsvToTable-CSV格式文件转HTML表格js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-other_3">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_715" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606211521.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+CsvToTable是一款可以使用JavaScript解析本地CSV格式文件转换为HTML表格的js插件。它使用简单，可以将任意CSV格式文件转换为HTML表格，并显示在页面中。
+内容：
+
+
+简要教程
+
+
+CsvToTable是一款可以使用JavaScript解析本地CSV格式文件转换为HTML表格的js插件。它使用简单，可以将任意CSV格式文件转换为HTML表格，并显示在页面中。 
+CSV（Comma-Separated Values）格式是逗号分隔值的简写。其文件以纯文本形式存储表格数据(数字和文本)。CSV文件由任意数目的记录组成，记录间以某种换行符分隔;每条记录由字段组成，字段间的分隔符是其它字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。
+CSV文件的格式类似下面的样子：
+
+姓名,居住城市,国家
+张小明,北京,中国
+史蒂夫,纽约,美国
+......
+
+
+ 使用方法
+使用CsvToTable插件需要在页面中引入CsvToTable.js文件。
+
+&amp;lt;script src=&#34;path/to/CsvToTable.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 解析CSV文件
+使用CsvToTable()构造方法创建一个对象实例，然后通过该对象实例的run()方法来执行CSV格式的转换。
+
+&amp;lt;script&amp;gt;
+var csvtotable = new CsvToTable({
+csvFile: &#39;path/to/你的CSV文件&#39; 
+});
+csvtotable.run();
+&amp;lt;/script&amp;gt;
+
+CsvToTable插件的github地址为：https://github.com/yasharma/CsvToTable。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_715">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_716">
+                        纯JS和CSS3超酷3D翻转式幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_716" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607061633.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+3D-Flip-Slider是一款纯JS和CSS3超酷3D翻转式幻灯片插件。该幻灯片在点击前后按钮时，图片或幻灯片内容以3D翻转的方式进行切换。
+内容：
+
+
+简要教程
+
+
+3D-Flip-Slider是一款纯JS和CSS3超酷3D翻转式幻灯片插件。该幻灯片在点击前后按钮时，图片或幻灯片内容以3D翻转的方式进行切换。该3D翻转幻灯片的特点还有：
+
+纯JavaScript，不依赖jQuery库。
+轻量级，压缩版本只有2.5kb。
+支持图片和任何HTML内容。
+性能优化，支持IE10+浏览器。
+可通过外部元素来触发前后导航事件。
+
+
+ 使用方法
+在页面中引入flipslide.js和flipslide.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/flipslide.css&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/flipslide.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该3D翻转幻灯片的基本HTML结构如下：
+
+&amp;lt;div class=&#34;flip-slider&#34;&amp;gt;
+&amp;lt;div class=&#34;flip-frame&#34;&amp;gt;
+&amp;lt;div class=&#34;flip&#34;&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/1.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/2.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/3.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/4.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide&#34;&amp;gt;&amp;lt;img src=&#34;images/5.jpg&#34; alt=&#34;&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide color&#34;&amp;gt;
+&amp;lt;h1&amp;gt;Slide Title&amp;lt;/h1&amp;gt;
+&amp;lt;b&amp;gt;HTML Page&amp;lt;/b&amp;gt; &amp;lt;i&amp;gt;Content&amp;lt;/i&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;nav&#34;&amp;gt;
+&amp;lt;button class=&#34;prev&#34;&amp;gt;Previous&amp;lt;/button&amp;gt;
+&amp;lt;button class=&#34;next&#34;&amp;gt;Next&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+可以通过new FlipSlider()来实例化幻灯片对象。
+
+var flip1 = new FlipSlider({
+startIndex: 3,
+container: document.querySelector(&#34;.flip-slider&#34;)
+});
+//或者
+var flip2 = new FlipSlider({
+container: document.getElementById(&#34;#flipSlider2&#34;)
+});
+
+
+ 绑定触发事件
+方法一：在元素上绑定事件。
+
+// Binding Previous Event
+document.querySelector(&#34;#flipPrevious&#34;).onclick = flip1.prevFlip;
+// Binding Next Event
+document.querySelector(&#34;#flipNext&#34;).onclick = flip1.nextFlip; 
+
+方法二：通过JS来触发事件。
+
+flip1.prevFlip(); // Trigger Previous Event
+flip1.nextFlip(); // Trigger Next Event
+
+方法三：在标签上通过内联的方式来绑定事件：
+
+&amp;lt;p&amp;gt;&amp;lt;b onclick=&#34;flip1.prevFlip();&#34;&amp;gt;Click here&amp;lt;/b&amp;gt; to flip Previous the slider&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;b onclick=&#34;flip1.nextFlip();&#34;&amp;gt;Click here&amp;lt;/b&amp;gt; to flip next the slider&amp;lt;/p&amp;gt;
+
+3D-Flip-Slider幻灯片插件的github地址为：https://github.com/ashishkumar-ui/3D-Flip-Slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_716">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_719">
+                        纯js轻量级图片放大显示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_719" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607201705.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+lightense-images是一款可以将缩略图片在屏幕中间放大显示的纯js插件。该图片放大插件的效果类似于Medium.com上的图片放大预览效果。
+内容：
+
+
+简要教程
+
+
+lightense-images是一款可以将缩略图片在屏幕中间放大显示的纯js插件。该图片放大插件的效果类似于Medium.com上的图片放大预览效果。它的特点有：
+
+轻量级，压缩后的版本仅2KB。
+点击缩略图后，以lightbox的方式来显示放大图片。
+可以自定义背景遮罩层的颜色和透明度。
+在页面滚动时自动将大图恢复为缩略图。
+
+
+ 使用方法
+在页面中引入lightense.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/lightense.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+可以使用下面的方法来初始化该图片放大插件。
+
+window.addEventListener(&#39;load&#39;, function () {
+var el = document.querySelectorAll(&#39;img.lightense&#39;);
+Lightense(el);
+}, false); 
+
+你可以为图片&amp;lt;img&amp;gt;元素设置data-background属性来修改背景遮罩层的颜色和透明度。
+
+&amp;lt;img src=&#34;demo.png&#34; data-background=&#34;rgba(0, 10, 45, .6)&#34; class=&#34;lightense&#34;&amp;gt; 
+
+得到的效果类型下图：
+
+你也可以在超链接元素中通过data-image属性来指定要打开的图片。
+
+&amp;lt;a class=&#34;lightense&#34; data-image=&#34;demo.png&#34;&amp;gt;点击打开图片&amp;lt;/a&amp;gt;
+
+lightense-images图片放大插件的github地址为：https://github.com/sparanoid/lightense-images
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_719">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_728">
+                        Syntaxy.js-小巧灵活的网页语法高亮js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_728" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606281535.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Syntaxy.js是一款小巧灵活的网页语法高亮js插件。Syntaxy.js支持各种主流的编程语言，提供3种主题样式。它默认是JS插件，但是也可以作为jQuery插件来使用。
+内容：
+
+
+简要教程
+
+
+Syntaxy.js是一款小巧灵活的网页语法高亮js插件。Syntaxy.js支持各种主流的编程语言，提供3种主题样式。它默认是JS插件，但是也可以作为jQuery插件来使用。 
+
+ 使用方法
+使用该语法高亮插件需要在页面中引入syntaxy.theme.min.css文件和syntaxy.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;syntaxy.theme.min.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/syntaxy.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用&amp;lt;pre&amp;gt;标签来格式化代码片段。
+
+&amp;lt;pre id=&#34;codebox&#34; data-type=&#34;default&#34;&amp;gt;
+// 这里放置需要格式化的代码片段
+// default 是格式化语法高亮过滤器的名称
+&amp;lt;/pre&amp;gt; 
+
+
+ 初始化插件
+通过纯JS来初始化Syntaxy插件：
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+var options = {};
+var codebox = document.getElementById( &#39;codebox&#39; );
+var syntaxy = new Syntaxy( codebox, options );
+// add custom filters, modify options, etc. then...
+syntaxy.render();
+&amp;lt;/script&amp;gt;
+
+通过jQuery来初始化Syntaxy插件：
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+var options = {};
+$( &#39;#codebox&#39; ).syntaxy( options );
+&amp;lt;/script&amp;gt;
+
+
+ 配置参数
+有多种方法可以为Syntaxy插件设置配置参数：第一种方法是在初始化时以对象的方式传入Syntaxy构造函数中。第二种方法是使用setOptions( options );方法。第三种方法是使用data属性来进行参数传递。
+
+
+
+
+参数
+data属性
+类型
+默认值
+描述
+
+
+
+
+tagOpen
+n/a
+String
+&amp;lt;&amp;lt;
+指定包裹要渲染的HTML标记的开始标签。
+
+
+tagSplit
+n/a
+String
+≈
+指定包裹要渲染的HTML标记的分隔标签。
+
+
+tagClose
+n/a
+String
+&amp;gt;&amp;gt;
+指定包裹要渲染的HTML标记的闭合标签。
+
+
+tagName
+n/a
+String
+span
+在渲染时用于包裹高亮单词的HTML标签。
+
+
+classPrefix
+n/a
+String
+stx-
+相关主题的class前缀。
+
+
+codeTitle
+data-title
+String
+Source code
+工具栏上显示的标题。
+
+
+codeType
+data-type
+String
+blank
+指定用于高亮指定类型的语言的正则表达式过滤器。
+
+
+minHeight
+data-min-height
+String
+100px
+语法高亮容器的最小高度。
+
+
+maxHeight
+data-max-height
+String
+600px
+语法高亮容器的最大高度。
+
+
+isInline
+data-inline
+Mixed
+false
+指定代码容器是内联元素还是块级元素。
+
+
+wordWrap
+data-wrap
+Mixed
+false
+指定当代码很长时是断行显示还是一行显示（出现水平滚动条）。
+
+
+startLine
+data-start
+Int
+1
+代码第一行显示的行号
+
+
+debugLines
+data-debug
+String
+blank
+一个用逗号分隔的行号列表，这些行会闪烁/高亮。
+
+
+
+
+Syntaxy.js语法高亮插件的github主页地址为：https://github.com/rainner/syntaxy-js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_728">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_733">
+                        tingle.js-简单实用的纯JavaScript模态窗口插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_733" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606071542.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+tingle.js是一款简单实用的纯JavaScript模态窗口插件。该模态窗口使用CSS来渲染样式，支持CSS3过渡动画，提供编程API。简单易用，效果时尚美观。
+内容：
+
+
+简要教程
+
+
+tingle.js是一款简单实用的纯JavaScript模态窗口插件。该模态窗口使用CSS来渲染样式，支持CSS3过渡动画，提供编程API。简单易用，效果时尚美观。
+
+ 安装
+可以通过bower或npm来安装tingle.js模态窗口插件。
+
+bower install tingle --save
+npm install tingle.js --save
+
+
+ 使用方法
+使用tingle.js模态窗口插件需要在页面中引入tingle.css和tingle.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/tingle.css&#34; media=&#34;all&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/tingle.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 调用模态窗口
+可以通过下面的方法来调用一个模态窗口：
+
+// instanciate new modal
+var modal = new tingle.modal({
+footer: true,
+stickyFooter: false,
+cssClass: [&#39;custom-class-1&#39;, &#39;custom-class-2&#39;]
+onOpen: function() {
+console.log(&#39;modal open&#39;);
+},
+onClose: function() {
+console.log(&#39;modal closed&#39;);
+}
+});
+// set content
+modal.setContent(&#39;&amp;lt;h1&amp;gt;here some content&amp;lt;/h1&amp;gt;&#39;);
+// add a button
+modal.addFooterBtn(&#39;Button label&#39;, &#39;tingle-btn tingle-btn--primary&#39;, function() {
+// here goes some logic
+modal.close();
+});
+// add another button
+modal.addFooterBtn(&#39;Dangerous action !&#39;, &#39;tingle-btn tingle-btn--danger&#39;, function() {
+// here goes some logic
+modal.close();
+});
+// open modal
+modal.open();
+// close modal
+modal.close();
+
+
+ CSS样式
+tingle.js模态窗口的所有样式都用CSS来编写，只有极少数定位属性使用JavaScript来编写。你可以通过修改CSS文件来自定义自己的模态窗口样式。注意，对于模糊效果，你需要将你的内容包裹在class为.ingle-content-wrapper的容器中。
+tingle.js提供了一组预定义的按钮样式。
+
+tingle-btn
+tingle-btn--primary
+tingle-btn--default
+tingle-btn--danger
+tingle-btn--pull-left
+tingle-btn--pull-right
+
+
+ 配置参数
+
+
+footer：类型：boolean。是否显示footer。
+
+stickyFooter：类型：boolean。是否将footer固定在页面底部。
+
+onOpen：类型：function。模态窗口打开时的回调函数。
+
+onClose：类型：function。模态窗口关闭时的回调函数。
+
+cssClass：类型：array。添加到模态窗口容器上的class类。
+
+
+ API
+tingle.js提供了以下一些可用的api：
+
+
+open()：打开模态窗口（会在body上添加tingle-enabled class类）。
+
+close()：光标模态窗口。
+
+destroy()：销毁模态窗口（从DOM中移除，并解绑所有相关事件）。
+
+setContent(content)：设置模态窗口的内容。
+
+getContent()：获取模态窗口的内容。
+
+setFooterContent(content)：设置footer的内容。
+
+getFooterContent(content)：获取footer的内容。
+
+addFooterBtn(label, cssClass, callback)：在footer中添加按钮（使用cssClass参数来设置样式和定位）。
+
+resize()：重新计算模态窗口的位置。
+
+isOverflow()：如果模态窗口的高度大于视口的高度返回true。
+
+tingle.js模态窗口插件的github地址为：https://github.com/robinparisi/tingle。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_733">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_734">
+                        高性能的纯Js滚动条美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_734" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605201603.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+smooth-scrollbar是一款高性能的纯JavaScript滚动条美化插件。该滚动条为现代浏览器而制作，它具有高性能，自由配置，平滑滚动等特点，支持各种现代桌面浏览器和手机设备。
+内容：
+
+
+简要教程
+
+
+smooth-scrollbar是一款高性能的纯JavaScript滚动条美化插件。该滚动条为现代浏览器而制作，它具有高性能，自由配置，平滑滚动等特点，支持各种现代桌面浏览器和手机设备。
+
+ 安装
+可以通过 npm 或 bower 来安装在该滚动条插件。
+
+npm install smooth-scrollbar --save
+bower install smooth-scrollbar --save
+
+
+ 使用方法
+使用该滚动条插件需要在页面中引入smooth-scrollbar.css和smooth-scrollbar.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/smooth-scrollbar.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/smooth-scrollbar.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+你可以使用以下三种HTML结构来生成平滑滚动条。
+1、将要滚动的内容包裹在&amp;lt;scrollbar&amp;gt;元素中。
+
+&amp;lt;scrollbar&amp;gt;
+...
+&amp;lt;/scrollbar&amp;gt;
+
+2、使用scrollbar属性。
+
+&amp;lt;section scrollbar&amp;gt;
+...
+&amp;lt;/section&amp;gt;
+
+3、使用data属性。
+
+&amp;lt;section data-scrollbar&amp;gt;
+...
+&amp;lt;/section&amp;gt;
+
+
+ 初始化插件
+可以使用initAll()方法来初始化页面中所有的滚动条。
+
+Scrollbar.initAll(options);
+
+或者通过Scrollbar.init(elem, options)方法来初始化指定的滚动条。
+滚动条在初始化之后，会生成下面的HTML结构：
+
+&amp;lt;scrollbar&amp;gt;
+&amp;lt;article class=&#34;scroll-content&#34;&amp;gt;
+your contents here...
+&amp;lt;/article&amp;gt;
+&amp;lt;aside class=&#34;scrollbar-track scrollbar-track-x&#34;&amp;gt;
+&amp;lt;div class=&#34;scrollbar-thumb scrollbar-thumb-x&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/aside&amp;gt;
+&amp;lt;aside class=&#34;scrollbar-track scrollbar-track-y&#34;&amp;gt;
+&amp;lt;div class=&#34;scrollbar-thumb scrollbar-thumb-y&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/aside&amp;gt;
+&amp;lt;/scrollbar&amp;gt;
+
+
+ 配置参数
+slinky多级导航菜单插件的配置参数如下：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+speed
+Number
+1
+滚动条的滚动速度
+
+
+friction
+Number
+10
+滚动的摩擦系数，是一个1-100之间的百分比数
+
+
+thumbMinSize
+Number
+20
+滚动条的最小尺寸
+
+
+renderByPixels
+Boolean
+true
+使用整数像素来渲染滚动条，设置为true可以提高性能
+
+
+continuousScrolling
+Boolean|String
+&#39;auto&#39;
+在当前滚动条滚动到底部时是否让它上面的可滚动内容继续滚动。
+
+
+overscrollEffect
+Boolean|String
+false
+超出滚动范围时的效果。&#39;bounce&#39;为iOS样式的弹性效果，&#39;glow&#39;为Android 样式的发光效果。使用该选项会对性能有所影响。
+
+
+overscrollEffectColor
+String
+&#39;#87ceeb&#39;
+&#39;glow&#39;效果的颜色
+
+
+
+
+
+ 方法API
+
+
+Scrollbar.init( element, [options] )：初始化指定的滚动条，返回scrollbar实例。
+
+Scrollbar.initAll( [options] )：初始化所有的滚动条，返回一个数组。
+
+Scrollbar.has( element )：检测指定的元素是否有滚动条。
+
+Scrollbar.get( element )：获取指定的滚动条，如果没有返回undefined。
+
+Scrollbar.getAll()：返回包含所有滚动条实例的数组。
+
+Scrollbar.destroy( element )：移除指定元素上的滚动条。
+
+Scrollbar.destroyAll()：销毁所有的滚动条实例。
+
+
+ 浏览器兼容
+
+IE 10+
+Chrome 22+
+Firefox 16+
+Safari 8+
+Android Browser 4+
+Chrome for Android 32+
+iOS Safari 7+
+
+smooth-scrollbar滚动条插件的github地址为：https://github.com/idiotWu/smooth-scrollbar
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_734">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_737">
+                        Switch.js-iOS样式滑动开关按钮JS插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_737" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607051530.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Switch.js是一款可以将任意CheckBox控件转换为iOS样式滑动开关按钮的JS插件。Switch.js使用简单，功能强大，它可以控制滑动按钮的尺寸，颜色，状态等。
+内容：
+
+
+简要教程
+
+
+Switch.js是一款可以将任意CheckBox控件转换为iOS样式滑动开关按钮的JS插件。Switch.js使用简单，功能强大，它可以控制滑动按钮的尺寸，颜色，状态等。
+
+ 安装
+可以通过npm来安装switch.js滑动按钮插件。
+
+$ npm install weatherstar-switch --save-dev
+
+
+ 使用方法
+在页面中引入switch.css和switch.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/switch.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/switch.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以将任意的checkbox控件转换为滑动按钮。
+
+&amp;lt;input type=&#34;checkbox&#34; class=&#34;checkbox-switch&#34;/&amp;gt;
+
+
+ 初始化插件
+可以通过new Switch()方法来创建一个swith实例。
+
+var el = document.querySelector(&#39;.checkbox-swtich&#39;);
+var mySwitch = new Switch(el, options);
+
+
+ 配置参数
+switch.js滑动按钮插件的默认配置参数如下：
+
+defaults = {
+size : &#39;default&#39;
+, checked: undefined
+, onText : &#39;Y&#39;
+, offText: &#39;N&#39;
+, onSwitchColor: &#39;#64BD63&#39;
+, offSwitchColor : &#39;#fff&#39;
+, onJackColor: &#39;#fff&#39;
+, offJackColor : &#39;#fff&#39;
+, showText : false
+, disabled : false
+, onInit : function(){}
+, onChange : function(){}
+, onRemove : function(){}
+, onDestroy: function(){}
+}; 
+
+
+
+size：滑动按钮的尺寸，可以是default | small | large。
+
+checked：滑动按钮的状态。如果是undefined，在滑动按钮的状态根据checkbox来确定。
+
+onText：ON状态的文本。
+
+offText：OFF状态的文本。
+
+onSwitchColor：选中状态时switch元素的颜色。
+
+offSwitchColor：未选中状态时switch元素的颜色。
+
+onJackColor：选中状态时凸起圆形的颜色。
+
+offJackColor：未选中状态时凸起圆形的颜色。
+
+showText：在凸起圆形中是否显示文本。
+
+disabled：是否允许点击切换滑动按钮的状态。
+
+onInit：滑动按钮初始化结束后触发的事件。
+
+onChange：在原始的checkbox为checked状态时触发的回调函数。
+
+onRemove：当mySwitch.remove()时触发。
+
+onDestroy：当mySwitch.destroy()时触发。
+
+
+ API
+switch.js滑动按钮插件的可用API如下：
+
+
+.on()：设置为ON状态。
+
+.off()：设置为OFF状态。
+
+.toggle()：切换滑动按钮的状态。
+
+.disable()：禁用滑动按钮。
+
+.enable()：启用滑动按钮。
+
+.destroy()：销毁滑动按钮，移除所有绑定的事件。
+
+.remove()：移除滑动按钮，显示原始的checkbox。
+
+：
+
+switch.js滑动按钮插件的github地址为：https://github.com/zhiyul/Switch。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_737">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_738">
+                        SweetAlert2-强大的纯Js模态消息对话框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_738" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606121744.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+SweetAlert2是一款功能强大的纯Js模态消息对话框插件。SweetAlert2用于替代浏览器默认的弹出对话框，它提供各种参数和方法，支持嵌入图片，背景，HTML标签等，并提供5种内置的情景类，功能非常强大。
+内容：
+
+
+简要教程
+
+
+SweetAlert2是一款功能强大的纯Js模态消息对话框插件。SweetAlert2用于替代浏览器默认的弹出对话框，它提供各种参数和方法，支持嵌入图片，背景，HTML标签等，并提供5种内置的情景类，功能非常强大。
+SweetAlert2是SweetAlert-js的升级版本，它解决了SweetAlert-js中不能嵌入HTML标签的问题，并对弹出对话框进行了优化，同时提供对各种表单元素的支持，还增加了5种情景模式的模态对话框。
+
+ 安装
+可以通过bower或npm来安装sweetalert2对话框插件。
+
+bower install sweetalert2
+npm install sweetalert2
+
+
+ 使用方法
+使用SweetAlert2对话框需要在页面中引入sweetalert2.min.css和sweetalert2.min.js文件，为了兼容IE浏览器，还需要引入promise.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;path/to/sweetalert2/dist/sweetalert2.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/sweetalert2/dist/sweetalert2.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- for IE support --&amp;gt;
+&amp;lt;script src=&#34;path/to/es6-promise/promise.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 基本使用
+最基本的使用方法是通过swal()来弹出一个对话框。
+
+swal(&#39;Hello world!&#39;); 
+
+如果要弹出一个带情景模式的对话框，可以在的第二个参数中设置。
+
+swal(&#39;Oops...&#39;, &#39;Something went wrong!&#39;, &#39;error&#39;);
+
+你可以通过下面的方法来处理对话框的用户交互：
+
+swal({
+title: &#39;Are you sure?&#39;,
+text: &#39;You will not be able to recover this imaginary file!&#39;,
+type: &#39;warning&#39;,
+showCancelButton: true,
+confirmButtonText: &#39;Yes, delete it!&#39;,
+cancelButtonText: &#39;No, keep it&#39;,
+}).then(function(isConfirm) {
+if (isConfirm === true) {
+swal(
+&#39;Deleted!&#39;,
+&#39;Your imaginary file has been deleted.&#39;,
+&#39;success&#39;
+);
+} else if (isConfirm === false) {
+swal(
+&#39;Cancelled&#39;,
+&#39;Your imaginary file is safe :)&#39;,
+&#39;error&#39;
+);
+} else {
+// Esc, close button or outside click
+// isConfirm is undefined
+}
+});
+
+swal(...)会返回一个Promise对象，该Promise对象中then方法中的isConfirm参数的含义如下：
+
+
+true：代表Confirm（确认）按钮。
+
+false：代表Cancel（取消）按钮。
+
+undefined：代表按下Esc键，点击取消按钮或在对话框之外点击。
+
+
+ 模态对话框的类型
+sweetalert2提供了5种情景模式的对话框。
+
+
+ 配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+title
+null
+模态对话框的标题。它可以在参数对象的title参数中设置，也可以在swal()方法的第一个参数设置。
+
+
+text
+null
+模态对话框的内容。它可以在参数对象的text参数中设置，也可以在swal()方法的第二个参数设置。
+
+
+html
+null
+对话框中的内容作为HTML标签。如果同时提供text和html参数，插件将会优先使用text参数。
+
+
+type
+null
+对话框的情景类型。有5种内置的情景类型：warning，error，success，info和question。它可以在参数对象的type参数中设置，也可以在swal()方法的第三个参数设置。
+
+
+customClass
+null
+模态对话框的自定义class类。
+
+
+animation
+true
+如果设置为false，对话框将不会有动画效果。
+
+
+allowOutsideClick
+true
+是否允许点击对话框外部来关闭对话框。
+
+
+allowEscapeKey
+true
+是否允许按下Esc键来关闭对话框。
+
+
+showConfirmButton
+true
+是否显示“Confirm（确认）”按钮。
+
+
+showCancelButton
+false
+是否显示“Cancel（取消）”按钮。
+
+
+confirmButtonText
+&#34;OK&#34;
+确认按钮上的文本。
+
+
+cancelButtonText
+&#34;Cancel&#34;
+取消按钮上的文本。
+
+
+confirmButtonColor
+&#34;#3085d6&#34;
+确认按钮的颜色。必须是HEX颜色值。
+
+
+cancelButtonColor
+&#34;#aaa&#34;
+取消按钮的颜色。必须是HEX颜色值。
+
+
+confirmButtonClass
+null
+确认按钮的自定义class类。
+
+
+cancelButtonClass
+null
+取消按钮的自定义class类。
+
+
+buttonsStyling
+true
+为按钮添加默认的swal2样式。如果你想使用自己的按钮样式，可以将该参数设置为false。
+
+
+reverseButtons
+false
+如果你想反向显示按钮的位置，设置该参数为true。
+
+
+showLoaderOnConfirm
+false
+设置为true时，按钮被禁用，并显示一个在加载的进度条。该参数用于AJAX请求的情况。
+
+
+preConfirm
+null
+在确认之前执行的函数，返回一个Promise对象。
+
+
+imageUrl
+null
+为模态对话框自定义图片。指向一幅图片的URL地址。
+
+
+imageWidth
+null
+如果设置了imageUrl参数，可以为图片设置显示的宽度，单位像素。
+
+
+imageHeight
+null
+如果设置了imageUrl参数，可以为图片设置显示的高度，单位像素。
+
+
+imageClass
+null
+自定义的图片class类。
+
+
+timer
+null
+自动关闭对话框的定时器，单位毫秒。
+
+
+width
+500
+模态窗口的宽度，包括padding值（box-sizing: border-box）。
+
+
+padding
+20
+模态窗口的padding内边距。
+
+
+background
+&#34;#fff&#34;
+模态窗口的背景颜色。
+
+
+input
+null
+表单input域的类型，可以是&#34;text&#34;, &#34;email&#34;, &#34;password&#34;, &#34;textarea&#34;, &#34;select&#34;, &#34;radio&#34;, &#34;checkbox&#34; 和 &#34;file&#34;。
+
+
+inputPlaceholder
+&#34;&#34;
+input域的占位符。
+
+
+inputValue
+&#34;&#34;
+input域的初始值。
+
+
+inputOptions
+{} 或 Promise
+如果input的值是select或radio，你可以为它们提供选项。对象的key代表选项的值，value代表选项的文本值。
+
+
+inputAutoTrim
+true
+是否自动清除返回字符串前后两端的空白。
+
+
+inputValidator
+null
+是否对input域进行校验，返回Promise对象。
+
+
+inputClass
+null
+自定义input域的class类。
+
+
+
+
+你可以使用swal.setDefaults(customParams)方法来覆盖默认的参数，customParams是一个对象。
+
+ 方法
+
+
+
+
+方法
+描述
+
+
+
+
+swal.setDefaults({Object})
+当你在使用SweetAlert2时有大量的自定义参数，可以通过swal.setDefaults({Object})方法来将它们设置为默认参数。
+
+
+swal.resetDefaults()
+重置设置的默认值。
+
+
+swal.queue([Array])
+提供一个数组形式的SweetAlert2参数，用于显示多个对话框。对话框将会一个接一个的出现。
+
+
+swal.close() 或 swal.closeModal()
+以编程的方式关闭当前打开的SweetAlert2对话框。
+
+
+swal.enableButtons()
+确认和关闭按钮可用。
+
+
+swal.disableButtons()
+禁用确认和关闭按钮。
+
+
+swal.enableLoading() 或 swal.showLoading()
+禁用按钮并显示加载进度条。通常用于AJAX请求。
+
+
+swal.disableLoading() 或 swal.hideLoading()
+隐藏进度条并使按钮可用。
+
+
+swal.clickConfirm()
+以编程的方式点击确认按钮。
+
+
+swal.clickCancel()
+以编程的方式点击取消按钮。
+
+
+swal.showValidationError(error)
+显示表单校验错误信息。
+
+
+swal.resetValidationError()
+隐藏表单校验错误信息。
+
+
+swal.enableInput()
+使input域可用。
+
+
+swal.disableInput()
+禁用input域。
+
+
+
+
+
+ 浏览器兼容
+SweetAlert2可以工作在所有的现代浏览器中：
+
+IE: 10+（需要引入Promise文件）
+Microsoft Edge: 12+
+Safari: 4+
+Firefox: 4+
+Chrome 14+
+Opera: 15+
+
+SweetAlert2模态对话框插件的github地址为：https://github.com/limonte/sweetalert2
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_738">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/bNF36zwcF//page/25/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/bNF36zwcF//page/27/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

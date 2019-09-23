@@ -1,0 +1,390 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3可扩展的图片幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3可扩展的图片幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412111440.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412111440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141211760.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款可扩展的jQuery和css3图片幻灯片插件。在大屏幕上点击幻灯片时，幻灯片将放大到全屏宽度，并出现前后导航；在小屏幕上直接出现幻灯片效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款jQuery和css3可扩展的图片幻灯片插件。我们经常能看到“50\%平均分割布局”：屏幕的50\%宽是图片，50\%宽是文字。这种模式可以在我们这个幻灯片插件中使用。</p>
+<p>通常情况下，用户不能和图片进行交互。但是如果你想显示更多的图片该怎么办呢？一个解决方案是在点击时触发一个模态窗口来显示幻灯片。现在通过<strong>CSS Transitions</strong>为我们提供了更好的用户体验方案。这是一种新的用于扩展图像的方法，通过覆盖相邻的内容和将额外内容向下推进来使其全屏显示，从而将它变成一个全屏幻灯片。</p>
+<h3>HTML结构</h3>
+<p>html结构包含两个主要的<span class="m">&lt;div&gt;</span>(<span class="m">.cd-slider-wrapper</span>和<span class="m">.cd-item-info</span>)：。第一个div包含图片幻灯片，第二个div包含一些标题、说明文本等。它们都被包含在<span class="m"> section.cd-single-item</span>中。其他的内容包含在section <span class="m">.cd-content</span>中。</p>
+<pre class="brush:html">
+&lt;section class="cd-single-item"&gt;
+&lt;div class="cd-slider-wrapper"&gt;
+&lt;ul class="cd-slider"&gt;
+&lt;li class="selected"&gt;&lt;img src="img/img-1.jpg" alt="Product Image 1"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="img/img-2.jpg" alt="Product Image 1"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="img/img-3.jpg" alt="Product Image 2"&gt;&lt;/li&gt;
+&lt;/ul&gt; &lt;!-- cd-slider --&gt;
+<p>&lt;ul class=&quot;cd-slider-navigation&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot; class=&quot;cd-prev inactive&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot; class=&quot;cd-next&quot;&gt;Prev&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt; &lt;!-- cd-slider-navigation --&gt;</p>
+<p>&lt;a href=&quot;#0&quot; class=&quot;cd-close&quot;&gt;Close&lt;/a&gt;<br>
+&lt;/div&gt; &lt;!-- cd-slider-wrapper --&gt;</p>
+<p>&lt;div class=&quot;cd-item-info&quot;&gt;<br>
+&lt;h2&gt;Produt Title&lt;/h2&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;<br>
+&lt;button class=&quot;add-to-cart&quot;&gt;Add to cart&lt;/button&gt;<br>
+&lt;/div&gt; &lt;!-- cd-item-info --&gt;<br>
+&lt;/section&gt; &lt;!-- cd-single-item --&gt;</p>
+<p>&lt;section class=&quot;cd-content&quot;&gt;<br>
+&lt;!--other content here --&gt;<br>
+&lt;/section&gt;<br>
+</pre></p>
+<p>注意：幻灯片的前后导航按钮<span class="m">.cd-slider-pagination</span>不是直接插入到Html中，而是在运行时使用jQuery将其插入。</p>
+<h3>CSS样式</h3>
+<p>在小屏幕上，css样式十分简单：<span class="m">.cd-slider-wrapper</span>和<span class="m">.cd-item-info</span>都被设置为100\%宽度。</p>
+<p>在桌面设备上（屏幕大小超过1024px），我们为<span class="m">.cd-item-info</span>设置<span class="m">position: absolute </span>和<span class="m">width: 50\% </span>，并将其放在屏幕的右边。</p>
+<p>对于<span class="m">.cd-slider-wrapper</span>元素，我们设置其<span class="m">width: 50\%</span>。当用户点击了图片幻灯片，我们为<span class="m">.cd-single-item</span>添加<span class="m">.cd-slider-active</span> class：<span class="m">.cd-slider-wrapper</span>的宽度将被设置为100\%。通过这个方法，<span class="m">.cd-slider-wrapper</span>将变大，覆盖掉<span class="m">.cd-item-info</span>，并将额外内容向下推进。通过在宽度值上使用CSS3 Transition来使动画变得更加平滑。</p>
+<pre class="brush:css">
+@media only screen and (min-width: 1024px) {
+.cd-slider-wrapper {
+transition: width 0.4s;
+width: 50\%; 
+}
+.cd-slider-active .cd-slider-wrapper {
+width: 100\%; 
+} 
+}
+@media only screen and (min-width: 1024px) {
+.cd-item-info {
+position: absolute;
+width: 50\%;
+top: 0;
+right: 0;
+padding: 60px 60px 0;
+} 
+}
+</pre>
+<div class="alert alert-warning" role="alert">为了使这个技术能够正常工作，要求图片幻灯片中的图片的宽高比必须大于1（宽度大于高度）。当图片进入幻灯片模式，它的高度是成比例增加的宽度。因此，与纵横比小于1会导致更多的图像滚动。</div>
+<p>另外，因为<span class="m">.cd-item-info</span>是<span class="m">position: absolute</span>的，<span class="m">.cd-single-item</span>元素的高度仅仅通过幻灯片图片的高度来设置。因此，<span class="m">.cd-item-info</span>要比幻灯片图片的高度要小。</p>
+<h3>JAVASCRIPT</h3>
+<p>我们通过jQuery来在用户点击图片时切换到幻灯片模式。另外，我们为幻灯片实现一个基本的滑动方案（可以通过键盘和触摸导航，拥有前后导航和按钮导航）。</p>
+<pre class="brush:js">
+jQuery(document).ready(function($){
+var itemInfoWrapper = $('.cd-single-item'),
+slides = $('.cd-slider li'),
+slidesWrapper = $('.cd-slider'),
+// create slider pagination
+sliderPagination = createSliderPagination(slides);
+slidesWrapper.on('click', function(event){
+//enlarge slider images 
+if( !itemInfoWrapper.hasClass('cd-slider-active') &amp;&amp; $(event.target).is('.cd-slider')) {
+itemInfoWrapper.addClass('cd-slider-active').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+$('body,html').animate({'scrollTop':slidesWrapper.offset().top}, 200);
+});
+}
+});
+$('.cd-slider-wrapper .cd-close').on('click', function(){
+//shrink slider images 
+itemInfoWrapper.removeClass('cd-slider-active');
+});
+//update visible slide
+$('.cd-next').on('click', function(){
+nextSlide();
+});
+$('.cd-prev').on('click', function(){
+prevSlide();
+});
+$(document).keyup(function(event){
+if(event.which=='37' &amp;&amp; itemInfoWrapper.hasClass('cd-slider-active') &amp;&amp; !$('.cd-slider .selected').is(':first-child')) {
+prevSlide();
+} else if( event.which=='39' &amp;&amp; itemInfoWrapper.hasClass('cd-slider-active') &amp;&amp; !$('.cd-slider .selected').is(':last-child')) {
+nextSlide();
+} else if(event.which=='27') {
+itemInfoWrapper.removeClass('cd-slider-active');
+}
+});
+slidesWrapper.on('swipeleft', function(){
+var bool = enableSwipe();
+if(!$('.cd-slider .selected').is(':last-child') &amp;&amp; bool) {nextSlide();}
+});
+slidesWrapper.on('swiperight', function(){
+var bool = enableSwipe();
+if(!$('.cd-slider .selected').is(':first-child') &amp;&amp; bool) {prevSlide();}
+});
+sliderPagination.on('click', function(){
+var selectedDot = $(this);
+if(!selectedDot.hasClass('selected')) {
+var selectedPosition = selectedDot.index(),
+activePosition = $('.cd-slider .selected').index();
+if( activePosition &lt; selectedPosition) {
+nextSlide(selectedPosition);
+} else {
+prevSlide(selectedPosition);
+}
+}
+});
+function createSliderPagination($slides){
+var wrapper = $('</pre>
+<ul class="cd-slider-pagination"></ul>').insertAfter('.cd-slider-navigation');
+$slides.each(function(index){
+var dotWrapper = (index == 0) ? $('<li class="selected">') : $('<li>'),
+dot = $('<a href="#0"></a>').appendTo(dotWrapper);
+dotWrapper.appendTo(wrapper);
+dot.text(index+1);
+});
+return wrapper.children('li');
+}
+function nextSlide($n){
+var visibleSlide = $('.cd-slider .selected'),
+navigationDot = $('.cd-slider-pagination .selected');
+if(typeof $n === 'undefined') $n = visibleSlide.index() + 1;
+visibleSlide.removeClass('selected');
+slides.eq($n).addClass('selected').prevAll().addClass('move-left');
+navigationDot.removeClass('selected')
+sliderPagination.eq($n).addClass('selected');
+updateNavigation(slides.eq($n));
+}
+function prevSlide($n){
+var visibleSlide = $('.cd-slider .selected'),
+navigationDot = $('.cd-slider-pagination .selected');
+if(typeof $n === 'undefined') $n = visibleSlide.index() - 1;
+visibleSlide.removeClass('selected')
+slides.eq($n).addClass('selected').removeClass('move-left').nextAll().removeClass('move-left');
+navigationDot.removeClass('selected');
+sliderPagination.eq($n).addClass('selected');
+updateNavigation(slides.eq($n));
+}
+function updateNavigation($active) {
+$('.cd-prev').toggleClass('inactive', $active.is(':first-child'));
+$('.cd-next').toggleClass('inactive', $active.is(':last-child'));
+}
+function enableSwipe() {
+var mq = window.getComputedStyle(document.querySelector('.cd-slider'), '::before').getPropertyValue('content');
+return ( mq=='mobile' || itemInfoWrapper.hasClass('cd-slider-active'));
+}
+});
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412111440.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141211760.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1451">
+                                <h3 class="post-title">
+                                    jQuery和css3简单实用的3D背景幻灯片插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

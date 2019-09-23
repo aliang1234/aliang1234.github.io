@@ -1,0 +1,394 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持移动触摸设备的纯js元素拖放插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持移动触摸设备的纯js元素拖放插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504171602.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504171602.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504171695.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。它的特点有：</p>
+<ul>
+<li>设置非常简单</li>
+<li>没有外部依赖</li>
+<li>可以自动对数据进行排序</li>
+<li>被移动项带有半透明的视觉效果</li>
+<li>支持移动触摸设备</li>
+<li>兼容性好，支持IE7+的所有现代浏览器</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower或npm来安装该元素拖放插件。</p>
+<pre class="brush:html">
+npm install dragula --save
+bower install dragula.js --save 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该元素拖动插件提供了一个最简单的API来让你可以在页面中拖放元素。</p>
+<pre class="brush:js">
+dragula(containers, options?)
+</pre>
+<p>默认情况下，<code>dragula</code>允许用户在<code>containers</code>中拖动一个元素，并将元素放置到<code>containers</code>列表的其它容器中。如果元素被放置在<code>containers</code>列表元素之外，插件将取消<code>revertOnSpill</code>和<code>removeOnSpill</code>选项。</p>
+<p>注意：拖拽事件只会发生在用户鼠标左键点击的时候，并且没有meta键被按下。如果点击的是按钮或超链接元素，拖拽事件也会被忽略。</p>
+<p>下面的例子允许用户将元素从<code>left</code>容器拖放到<code>right</code>容器，或从<code>right</code>容器拖放到<code>left</code>容器中。</p>
+<pre class="brush:js">
+dragula([left, right]);
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>你也可以为它提供一些参数选项：</p>
+<pre class="brush:js">
+dragula(containers, {
+moves: function (el, container) {
+return true; // elements are always draggable by default
+},
+accepts: function (el, target, source, sibling) {
+return true; // elements can be dropped in any of the `containers` by default
+},
+direction: 'vertical', // Y axis is considered when determining where an element would be dropped
+copy: false, // elements are moved by default, not copied
+revertOnSpill: false,// spilling will put the element back where it was dragged from, if this is true
+removeOnSpill: false // spilling will `.remove` the element, if this is true
+});
+</pre>
+<ul>
+<li>
+<span class="m">options.moves</span>：你可以定义一个<code>moves</code>方法，该方法在发生点击的时候通过<code>(el, container)</code>参数进行调用。如果该方法返回的是<code>false</code>，拖拽事件将不会开始，事件也不会被阻止。</li>
+<li>
+<span class="m">options.accepts</span>：该方法确保一个来自<code>source</code>的元素<code>el</code>能够在<code>sibling</code>元素之前放入到<code>target</code>容器之中。<code>sibling</code>元素可以为<code>null</code>，这会使元素被放置到容器的最后一个位置。注意：如果<code>options.copy</code>设置为<code>true</code>，<code>el元素会被设置为一个副本，替代原始的拖放元素。</code>
+</li>
+<li>
+<span class="m">options.copy</span>：如果<code>copy</code>设置为<code>true</code>，元素将被复制而不是拖动。注意下面的区别：
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>Event</td>
+<td>Move</td>
+<td>Copy</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drag</td>
+<td>元素从<code>source</code>中隐藏</td>
+<td>Nothing happens</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>元素将移动到<code>target</code>中</td>
+<td>元素会被克隆到<code>target</code>中</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>元素会从DOM中移除</td>
+<td>Nothing happens</td>
+</tr>
+<tr>
+<td>cancel</td>
+<td>元素会停留在<code>source</code>中</td>
+<td>Nothing happens</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li>
+<span class="m">options.revertOnSpill</span>：默认情况下，元素被拖放到容器之外会被放置到由<code> feedback shadow</code>设定的投放点上。设置<code>revertOnSpill</code>为<code>true</code>将确保元素在拖放到容器之外时会被重新放置会拖放的开始位置。</li>
+<li>
+<span class="m">options.removeOnSpill</span>：设置<code>removeOnSpill</code>为<code>true</code>会使任何拖放到容器之外的元素被从DOM中移除。注意：如果<code>copy</code>设置为<code>true</code>，<code>remove</code>事件将不会触发。</li>
+<li>
+<span class="m">options.direction</span>：当元素被拖放到一个容器中，它将被放置到最接近鼠标位置的点上。如果<code>direction</code>设置为<code>vertical</code>，将会使用Y轴坐标作为参考带你，如果设置为<code>horizontal</code>会使用X轴坐标作为参考点。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<ul>
+<li>
+<span class="m">drake.end()</span>：使用最后位置的预览阴影标记最为拖放的目的地拖放元素。相应的<code>cancel</code>或<code>drop</code>事件将被触发。</li>
+<li>
+<span class="m">drake.cancel(revert)</span>：如果被<code>drake</code>管理的元素是当前被拖放的元素，这个方法会取消拖放事件。你也可以在该方法的调用级别中传入<code>revert</code>参数，效果与<code>revertOnSpill</code>设置为<code>true</code>相同。注意：一个"cancellation"将在下面的场景中会返回一个"cancel"事件：
+<ul>
+<li>
+<code>revertOnSpill</code>设置为<code>true</code>
+</li>
+<li>放置的目标（半透明的预览图）在source容器中，并且元素被放置到相同的容器中。</li>
+</ul>
+</li>
+<li>
+<span class="m">drake.remove()</span>：如果被<code>drake</code>管理的元素是当前被拖放的元素，该方法会将元素从DOM中移除。</li>
+<li>
+<span class="m">drake.on (Events)</span>：<code>drake</code>是一个事件发送器。下面的事件可以使用<code>drake.on(type, listener)</code>来跟踪。
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>事件名称</td>
+<td>参数</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drag</td>
+<td>el, container</td>
+<td>
+<code>el</code>从<code>container</code>中被拖拽</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>el, container, source</td>
+<td>
+<code>el</code>被放置到<code>container</code>中，它来自<code>source</code>
+</td>
+</tr>
+<tr>
+<td>cancel</td>
+<td>el, container</td>
+<td>
+<code>el</code>被拖动但仍在原处，并最终回到<code>container</code>
+</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>el, container</td>
+<td>
+<code>el</code>被拖动但仍在原处，并最终被从DOM中移除。</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>el, container</td>
+<td>
+<code>el</code>是拖放目的地的半透明预览，它会移动到<code>container</code>中。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li>
+<span class="m">drake.destroy()</span>：移除所有的拖放事件。如果<code>.destroy</code>在一个元素被拖动时触发，拖动将不会有效果。</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504171602.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504171695.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1273">
+                                <h3 class="post-title">
+                                    jQuery简单且功能强大的图片剪裁插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

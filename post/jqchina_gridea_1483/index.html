@@ -1,0 +1,319 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3滑动显示面板特效插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3滑动显示面板特效插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412101701.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412101701.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141210754.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和css3制作的滑动显示面板特效插件。当点击了滑动显示按钮，面板从左侧滑出，点击改变按钮或面板外任意位置，面板又滑动收缩回去。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款jQuery和css3滑动显示面板特效插件。在你需要创建内容，又不适合使用tooltips时，你可能会创建一个新的页面。但是作为良好的用户体验，应该尽量避免页面的刷新。这时候，从侧边滑出一个面板将是很好的解决方案。</p>
+<p>有很多网站都使用了这个解决方案。你可以去看看<a href="http://feedly.com/" target="\_blank"> Feedly </a>和<a href="https://play.spotify.com/" target="\_blank">Spotify web player </a>。</p>
+<h3>HTML结构</h3>
+<p>html结构相当简单，不多做解释。</p>
+<pre class="brush:html">
+&lt;main class="cd-main-content"&gt;
+&lt;!-- your main content here --&gt;
+&lt;/main&gt;
+<p>&lt;div class=&quot;cd-panel from-right&quot;&gt;<br>
+&lt;header class=&quot;cd-panel-header&quot;&gt;<br>
+&lt;h1&gt;Title Goes Here&lt;/h1&gt;<br>
+&lt;a href=&quot;#0&quot; class=&quot;cd-panel-close&quot;&gt;Close&lt;/a&gt;<br>
+&lt;/header&gt;</p>
+<p>&lt;div class=&quot;cd-panel-container&quot;&gt;<br>
+&lt;div class=&quot;cd-panel-content&quot;&gt;<br>
+&lt;!-- your side content here --&gt;<br>
+&lt;/div&gt; &lt;!-- cd-panel-content --&gt;<br>
+&lt;/div&gt; &lt;!-- cd-panel-container --&gt;<br>
+&lt;/div&gt; &lt;!-- cd-panel --&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>首先解释一下为什么要将header从panel容器中分离出来。我们为panel使用了一个CSS3 transformation（准确的说是<span class="m"> translateX </span>）来使它滑动显示。使用CSS3 transformation要比改变position的左右位置的效果要好（参考：<a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/" target="\_blank">Why Moving Elements With Translate() Is Better Than Pos:abs Top/left</a>）。header元素的位置是<span class="m">fixed </span>的，固定位置的元素再你对它们进行CSS3 transformation时会发生跳动。这是将header从panel容器中分离出来的原因。</p>
+<pre class="brush:css">
+.cd-panel {
+/*...*/
+visibility: hidden;
+transition: visibility 0s 0.6s;
+}
+<p>.cd-panel.is-visible {<br>
+visibility: visible;<br>
+transition: visibility 0s 0s;<br>
+}</p>
+<p>.cd-panel-header {<br>
+/<em>...</em>/<br>
+position: fixed;<br>
+top: -50px;<br>
+width: 90%;<br>
+height: 50px;<br>
+transition: top 0.3s 0s;<br>
+}</p>
+<p>.is-visible .cd-panel-header {<br>
+top: 0;<br>
+transition: top 0.3s 0.3s;<br>
+}</p>
+<p>.cd-panel-container {<br>
+/<em>...</em>/<br>
+position: fixed;<br>
+width: 90%;<br>
+height: 100%;<br>
+top: 0;<br>
+right: 0;</p>
+<p>transition-property: transform;<br>
+transition-duration: 0.3s;<br>
+transition-delay: 0.3s;</p>
+<p>transform: translate3d(100%, 0, 0);<br>
+}</p>
+<p>.is-visible .cd-panel-container {<br>
+transform: translate3d(0, 0, 0);<br>
+transition-delay: 0s;<br>
+}<br>
+</pre></p>
+<p>在上面的代码中注意观察<span class="m">transition-delay</span>属性。当你在页面上使某些元素产生动画，这时如果你想要一些延时或者不同的<span class="m">transition/animation durations</span>，那么<span class="m">transition-delay</span>就派上用场了。如果你想了解更多关于animations 和 transitions的知识，请参阅：<a href="http://www.google.co.uk/design/spec/material-design/introduction.html" target="\_blank">Google Material documentation</a>。</p>
+<div class="alert alert-warning" role="alert">重要提示：如果你改变<span class="m">.cd-panel</span>上的类，使它从<span class="m">.from-right</span>到<span class="m">.from-left</span>，那么panel将从左边滑出。</div>
+<h3>JAVASCRIPT</h3>
+<p>通过jQuery来为面板切换<span class="m">.is-visible </span>类使其显示和隐藏。</p>
+<pre class="brush:js">
+jQuery(document).ready(function($){
+//open the lateral panel
+$('.cd-btn').on('click', function(event){
+event.preventDefault();
+$('.cd-panel').addClass('is-visible');
+});
+//clode the lateral panel
+$('.cd-panel').on('click', function(event){
+if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+$('.cd-panel').removeClass('is-visible');
+event.preventDefault();
+}
+});
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412101701.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141210754.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1484">
+                                <h3 class="post-title">
+                                    jQuery超实用返回顶部插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

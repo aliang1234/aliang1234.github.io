@@ -1,0 +1,2290 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_88">
+                        jQuery鼠标吸附动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_88" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808241453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery鼠标吸附动画特效插件。该插件可以在一定范围内，通过鼠标移动，对指定元素产生吸附移动的动画特效。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery鼠标吸附动画特效插件。该插件可以在一定范围内，通过鼠标移动，对指定元素产生吸附移动的动画特效。
+
+ 使用方法
+在页面中引入jquery和attractHover.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/attractHover.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+然后在页面中使用下面的HTML结构来创建元素。
+
+&amp;lt;div class=&#34;boundary&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;example&#34;&amp;gt;
+Element
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加完毕之后，通过下面的方法来初始化插件。
+
+$.attractHover(&#39;.example&#39;);
+
+
+ 配置参数
+jQuery鼠标吸附动画特效插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+proximity
+integer
+30
+元素的交互范围
+
+
+magnetism
+integer
+3
+定义元素可以移动多远的距离
+
+
+attractClass
+string
+attract-hover
+被吸附元素动态添加的class类
+
+
+attractEasingClass
+string
+attract-hover-easing
+被吸附元素移动时动态添加的class类
+
+
+attractAttractedClass
+string
+attract-hover-attracted
+元素被吸附时添加的class类
+
+
+
+
+例如：
+
+$.attractHover(&#39;.js-attract&#39;, { proximity: 10 });
+
+ jQuery鼠标吸附动画特效插件的github地址为：https://github.com/bymayo/jquery-attract-hover
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_88">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_880">
+                        jQuery JSONView-格式化和语法高亮JSON格式数据查看插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_880" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601171736.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery JSONView是一款非常实用的格式化和语法高亮JSON格式数据查看器jQuery插件。通过该插件可以将JSON格式的数据进行格式输出，便于阅读，同时它还支持各种数据类型的语法高亮，以及节点的收缩和展开等。
+内容：
+
+
+简要教程
+
+
+jQuery JSONView是一款非常实用的格式化和语法高亮JSON格式数据查看器jQuery插件。通过该插件可以将JSON格式的数据进行格式输出，便于阅读，同时它还支持各种数据类型的语法高亮，以及节点的收缩和展开等。
+
+ 使用方法
+下载压缩包，在页面中引入jquery和jquery.jsonview.js，以及jquery.jsonview.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/jquery.jsonview.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/jquery.jsonview.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 关于语法高亮
+jQuery JSONView插件中的语法高亮是通过CSS来渲染不同数据类型的字符串，例如，可以在CSS中设置布尔型的数值为蓝色，字符串类型为绿色等等。jquery.jsonview.css文件中已经预设了各种高亮颜色，你可以根据实际情况自行修改。
+
+.jsonview .null {
+color: red; 
+}
+.jsonview .bool {
+color: #fde3a7; 
+}
+.jsonview .num {
+color: #bf55ec; 
+}
+.jsonview .string {
+color: #00b16a;
+white-space: pre-wrap; 
+} 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过JSONView()方法来初始化该插件。也可以在初始化时传入配置参数。
+
+var json = {&#34;hey&#34;: &#34;guy&#34;,&#34;anumber&#34;: 243,&#34;anobject&#34;: {...},...};
+(function() {
+(&amp;quot;#json&amp;quot;).JSONView(json);
+// with options
+$(&amp;quot;#json-collasped&amp;quot;).JSONView(json, { collapsed: true });
+});
+
+
+ 配置参数
+jQuery JSONView插件可以使用以下一些配置参数。
+
+
+collapsed：是否在第一次渲染时收缩所有的节点，默认值为：false。
+
+nl2br：是否将一个新行转换为&amp;lt;br&amp;gt;字符串，默认值为false。
+
+recursive\_collapser：是否递归收缩节点，默认值为false。
+
+escape：Escape HTML in key, default is true。
+
+
+ 方法
+jQuery JSONView提供了以下的方法来控制JSON节点，所有的方法都接收一个level参数来在相应的节点上执行操作。
+
+
+jQuery#JSONView(&#39;collapse&#39;, [level])：收缩节点。
+
+jQuery#JSONView(&#39;expand&#39;, [level])：展开节点。
+
+jQuery#JSONView(&#39;toggle&#39;, [level])：切换节点。
+
+jQuery JSONView插件的github地址为：https://github.com/yesmeck/jquery-jsonview
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_880">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_881">
+                        Sticky Header-兼容IE8的页面顶部固定jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_881" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601111557.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+sticky-header.js是一款非常实用的兼容IE8+浏览器的页面顶部固定jQuery插件。该页面顶部固定插件可以通过参数来控制header元素的样式及固定效果，并且提供了丰富的回调函数。
+内容：
+
+
+简要教程
+
+
+sticky-header.js是一款非常实用的兼容IE8+浏览器的页面顶部固定jQuery插件。该页面顶部固定插件可以通过参数来控制header元素的样式及固定效果，并且提供了丰富的回调函数。
+
+ 使用方法
+使用该图片画廊插件需要引入jQuery、sticky-header.js文件
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/sticky-header.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+你可以使用一个&amp;lt;header&amp;gt;元素来作为页面的头部。
+
+&amp;lt;header class=&#34;example&#34;&amp;gt; 
+&amp;lt;!--header stuff ... --&amp;gt; 
+&amp;lt;/header&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过stickMe()方法来初始化该页面顶部固定插件。
+
+$(document).ready(function(){
+$(&#39;.example&#39;).stickMe(); 
+}) 
+
+在插件初始化之后，&amp;lt;header&amp;gt;元素的将被修改，添加一些额外的class。
+
+&amp;lt;!-- 插件初始化之后header元素的结构 --&amp;gt; 
+&amp;lt;header class=&#34;example stick-me not-sticking&#34;&amp;gt; 
+&amp;lt;!--header stuff ... --&amp;gt; 
+&amp;lt;/header&amp;gt;
+&amp;lt;!-- header元素固定时的html结构 --&amp;gt;
+&amp;lt;header class=&amp;quot;example stick-me sticking&amp;quot;&amp;gt;
+&amp;lt;!--header stuff ... --&amp;gt;
+&amp;lt;/header&amp;gt;
+
+
+ CSS样式
+你需要通过CSS来设置一下header元素的z-index属性，如果有需要，还可以设置一下它的背景颜色。
+
+/* Make sure your header has z-index and background set and it&#39;s also full width */
+.example {
+width: 100\%;
+z-index: 999;
+background-color: #ffffff;
+}
+/* OR you can also style plugin&#39;s class .sticking,
+that way you can style it differently when it&#39;s sticking */
+.sticking {
+width: 100%;
+z-index: 999;
+background-color: #ffffff;
+}
+
+
+ 配置参数
+该页面顶部固定插件的默认配置参数如下：
+
+transitionDuration: 300,
+shadow: false,
+shadowOpacity: 0.3,
+animate: true,
+triggerAtCenter: true,
+transitionStyle: &#39;fade&#39;,
+stickyAlready: false
+
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+topOffset
+int
+页面滚动多少距离时顶部开始固定，默认值为300像素
+
+
+shadow
+boolean
+当页面顶部固定时将带阴影效果
+
+
+shadowOpacity
+float
+顶部阴影效果的透明度
+
+
+animate
+boolean
+是否使用平滑过渡的动画效果
+
+
+transitionStyle
+string
+顶部固定动画过渡效果的类型：&#39;fade&#39;或&#39;slide&#39;
+
+
+triggetAtCenter
+boolean
+默认情况下，当页面滚动到viewport的一半时顶部将固定，设置该参数为false，可以使页面滚动到viewport之外才固定
+
+
+stickyAlready
+boolean
+在页面初始化之后就使页面一直固定在顶部
+
+
+transitionDuration
+int
+动画过渡的持续时间
+
+
+
+
+
+ 事件
+
+
+
+
+事件
+描述
+
+
+
+
+sticky-begin
+当顶部开始固定时触发
+
+
+sticking
+当顶部固定时一直触发
+
+
+top-reached
+当滚动到页面顶部时触发
+
+
+bottom-reached
+当滚动到页面底部时触发
+
+
+
+
+事件的使用方法如下：
+
+$(document).ready(function(){
+$(&#39;.site-header&#39;).on(&#39;sticky-begin&#39;, function() { 
+console.log(&#34;Began&#34;); 
+});
+$(&#39;.site-header&#39;).on(&#39;sticking&#39;, function() {
+console.log(&amp;quot;Sticking&amp;quot;);
+});
+$(&#39;.site-header&#39;).on(&#39;top-reached&#39;, function() {
+console.log(&amp;quot;Top reached&amp;quot;);
+});
+$(&#39;.site-header&#39;).on(&#39;bottom-reached&#39;, function() {
+console.log(&amp;quot;Bottom reached&amp;quot;);
+});
+})
+
+Sticky Header插件的github地址为：https://github.com/m-danish-iqbal/sticky-header
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_881">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_882">
+                        jquery.sldr.js - 兼容IE8和移动手机的响应式幻灯片插
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-success">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_882" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1602/201602191730.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.sldr.js是一款兼容IE8+和移动手机设备的响应式jQuery幻灯片插件。该幻灯片插件可以自适应图片宽度，提供丰富的回调函数，并且支持Android和IOS等移动触摸设备。
+内容：
+
+
+简要教程
+
+
+jquery.sldr.js是一款兼容IE8+和移动手机设备的响应式jQuery幻灯片插件。该幻灯片插件可以自适应图片宽度，提供丰富的回调函数，并且支持Android和IOS等移动触摸设备。它的特点还有：
+
+灵活的设置，可定义前后导航按钮，分页导航按钮等。
+可设置多重幻灯片宽度，可见区域，并且完全响应式设计。
+在初始化时提供丰富的回调函数。
+可以通过编程在页面加载之后动态的添加图片。
+兼容 IE 7+, Chrome, Safari, Firefox, IOS 3+, Android 3+
+
+
+ 使用方法
+在页面中引入jquery和jquery.sldr.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;js/stickyelements-animate.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+每一个幻灯片slide元素都需要一个唯一的class标识。
+
+&amp;lt;div id=&#34;SLDR-ONE&#34; class=&#34;sldr&#34;&amp;gt;
+&amp;lt;ul class=&#34;wrp animate&#34;&amp;gt;
+&amp;lt;li class=&#34;elmnt-one&#34;&amp;gt;
+&amp;lt;img src=&#34;img/Lake.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-two&#34;&amp;gt;
+&amp;lt;img src=&#34;img/Mountain-Range.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-three&#34;&amp;gt;
+&amp;lt;img src=&#34;img/Mt-Fuji.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-four&#34;&amp;gt;
+&amp;lt;img src=&#34;img/Pink-Forest.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+下面的CSS样式用于使幻灯片从左向右移动。
+
+.sldr {
+max-width: 825px;
+margin: 0 auto;
+overflow: visible;
+position: relative;
+clear: both;
+display: block;
+}
+.sldr &amp;gt; ul.animate {
+-webkit-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+-moz-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+-o-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000); /* ease-in-out */
+}
+.sldr &amp;gt; ul &amp;gt; li {
+float: left;
+display: block;
+width: 825px;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该幻灯片插件。
+
+$( window ).load( function() {
+$( &#39;.sldr&#39; ).each( function() {
+var th = $( this );
+th.sldr({
+focalClass: &#39;focalPoint&#39;,
+offset: th.width() / 2,
+sldrWidth : &#39;responsive&#39;,
+nextSlide : th.nextAll( &#39;.sldr-nav.next:first&#39; ),
+previousSlide : th.nextAll( &#39;.sldr-nav.prev:first&#39; ),
+selectors : th.nextAll( &#39;.selectors:first&#39; ).find( &#39;li&#39; ),
+toggle: th.nextAll( &#39;.captions:first&#39; ).find( &#39;div&#39; ),
+sldrInit: sldrInit,
+sldrStart : sldrStart,
+sldrComplete: sldrComplete,
+sldrLoaded: sldrLoaded,
+sldrAuto: true,
+sldrTime: 2000,
+hasChange : true
+});
+});
+});
+
+
+ 配置参数
+jquery.sldr.js幻灯片的可用配置参数有：
+
+
+
+
+参数
+描述
+
+
+
+
+focalClass
+当前聚焦的slide的class名称，默认为：&#34;focalPoint&#34;。
+
+
+offset
+居中的slide的位置，默认为$(this).width() / 2。
+
+
+selectors
+分页圆点的选择器，例如：$(&#39;ul &amp;gt; li&#39;)，无默认值。
+
+
+toggle
+用于切换focalClass的一系列元素，可用于显示或隐藏标题，例如：$(&#39;.descriptions &amp;gt; div&#39;&#39;)，无默认值。
+
+
+nextSlide
+next slide的选择器，无默认值。
+
+
+previousSlide
+previous slide的选择器，无默认值。
+
+
+hashChange
+可选的布尔值参数，用于传入回调函数。无默认值。
+
+
+resizeDelay
+浏览器窗口尺寸改变的延迟时间，默认为1。
+
+
+sldrNumber
+在插件初始化时幻灯片数量的增量，默认为0。
+
+
+sldrInit
+回调函数，接收函数名称。当sldr初始化后被DOM管理之前触发。
+
+
+sldLoaded
+回调函数，接收函数名称。当某个幻灯片被加载后触发。
+
+
+sldrLoaded
+回调函数，接收函数名称。当幻灯片被完全加载，并被DOM管理之后触发。
+
+
+sldrStart
+回调函数，接收函数名称。当幻灯片slide被聚焦前触发。
+
+
+sldrComplete
+回调函数，接收函数名称。当幻灯片slide被聚焦后触发。
+
+
+sldrWidth
+幻灯片的宽度。设置为&#34;responsive&#34;表示全屏宽度。如果要设置固定宽度可以设置一个具体的数值。
+
+
+animate
+接收函数名称。自定义动画。默认为jquery.sldr.js中的&#34;base.animate&#34;。
+
+
+animateJquery
+强制使用jquery animate()动画。默认为flase，使用的是CSS transitions动画。浏览器不支持CSS transitions时使用jQuery动画。
+
+
+sldrAuto
+动画过渡的自动定时器。默认为false。
+
+
+sldrTime
+动画过渡的时间。默认为8000。
+
+
+isBrowser
+为浏览器设置的变量，默认为navigator.userAgent。
+
+
+isIE
+为IE浏览器设置的变量。默认为flase，将根据navigator.userAgent来设置。
+
+
+
+
+
+ 回调函数
+
+/**
+ * When the sldr is initiated, before the DOM is manipulated
+ * @param {object} args the slides, callback, and config of the slider
+ * @return null
+ **/
+function sldrInt( args ) { }
+/**
+
+When individual slides are loaded
+@param {object} args the slides, callback, and config of the slider
+@return null
+**/
+function sldLoaded( args ) { }
+
+/**
+
+When the full slider is loaded, after the DOM is manipulated
+@param {object} args the slides, callback, and config of the slider
+@return null
+**/
+function sldrLoaded( args ) { }
+
+/**
+
+Before the slides change focal points
+@param {object} args the slides, callback, and config of the slider
+@return null
+**/
+function sldrStart( args ) { }
+
+/**
+
+After the slides are done changing focal points
+@param {object} args the slides, callback, and config of the slider
+@return null
+**/
+function sldrComplete( args ) { }
+
+
+
+ 回调参数
+回调函数会返回一个带下列项目的对象。
+
+{ 
+&#39;slides&#39; : { 
+(array of slides) 
+}, 
+&#39;callback&#39; : {
+(the previous, current, next slide variables)
+}, 
+&#39;config&#39; : {
+(all of the original settings described above) 
+} 
+
+Slides：
+
+
+
+
+sld
+Slide jQuery object
+
+
+slideNum
+Slide number
+
+
+id
+Slide id
+
+
+class\_name
+Slide class
+
+
+html
+Slide inner html()
+
+
+
+
+Callback:
+
+
+
+
+sldr
+幻灯片的jQuery对象
+
+
+prevFocalIndex
+前一个slide的index()
+
+
+prevSlideNum
+前一个slide的号码
+
+
+currentFocalIndex
+当前slide的index()
+
+
+currentClass
+当前slide的class名称
+
+
+currentID
+当前slide的id
+
+
+currentFocalPoint
+从幻灯片左边到中间的像素距离
+
+
+currentSlideNum
+当前slide的号码
+
+
+shiftWidth
+从一个slide 切换到下一个slide的数量
+
+
+nextFocalIndex
+下一个slide的index()
+
+
+nextSlideNum
+下一个slide的号码
+
+
+
+
+
+ post load
+post load image特性可以在页面加载之后逐一的加载图片。你需要根据下面的HTML结构，为每一个幻灯片元素添加一个sldr-load的class，然后插件就会根据 &#39;class&#39; , &#39;src&#39; , &#39;alt&#39; , &#39;title&#39; , &#39;width&#39; 或 &#39;height&#39;这些属性来加载所需要的图片。 
+
+&amp;lt;div id=&#34;SLDR-ONE&#34; class=&#34;sldr&#34;&amp;gt;
+&amp;lt;ul class=&#34;wrp animate&#34;&amp;gt;
+&amp;lt;li class=&#34;elmnt-one&#34;&amp;gt;
+&amp;lt;div class=&#34;sldr-load&#34; src=&#34;img/Lake.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-two&#34;&amp;gt;
+&amp;lt;div class=&#34;sldr-load&#34; src=&#34;img/Mountain-Range.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-three&#34;&amp;gt;
+&amp;lt;div class=&#34;sldr-load&#34; src=&#34;img/Mt-Fuji.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;elmnt-four&#34;&amp;gt;
+&amp;lt;div class=&#34;sldr-load&#34; src=&#34;img/Pink-Forest.jpg&#34; width=&#34;1000&#34; height=&#34;563&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+jquery.sldr.js插件的github地址为：https://github.com/devowhippit/jquery.sldr
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_882">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_883">
+                        jQuery和CSS3响应式TAB选项卡样式幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_883" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601311843.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和CSS3动画制作的炫酷响应式TAB选项卡样式幻灯片特效。该幻灯片特效采用TAB选项卡来进行切换，每次切换时slide中的元素都带有非常炫酷的CSS3动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款使用jQuery和CSS3动画制作的炫酷响应式TAB选项卡样式幻灯片特效。该幻灯片特效采用TAB选项卡来进行切换，每次切换时slide中的元素都带有非常炫酷的CSS3动画效果。
+
+ 使用方法
+
+ HTML结构
+该TAB样式幻灯片的基本HTML结构如下：
+
+&amp;lt;div class=&#34;tabSlider&#34;&amp;gt;
+&amp;lt;div class=&#34;ts-items&#34;&amp;gt;
+&amp;lt;!-- 单个slide --&amp;gt;
+&amp;lt;div class=&#34;ts-item is-active&#34;&amp;gt;
+&amp;lt;div class=&#34;ts-banner&#34;&amp;gt;
+&amp;lt;!-- 背景图片 --&amp;gt;
+&amp;lt;img src=&#34;bg1.jpg&#34; alt=&#34;alt goes here&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ts-container set-layout thumb-cont&#34;&amp;gt;
+&amp;lt;div class=&#34;ts-thumbnail&#34;&amp;gt;
+&amp;lt;img src=&#34;img1.png&#34; alt=&#34;alt&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;ts-content&#34;&amp;gt;
+&amp;lt;div class=&#34;ts-title&#34;&amp;gt;
+标题
+&amp;lt;/div&amp;gt;
+&amp;lt;a href=&#34;&#34; class=&#34;ts-btn pull-right set-icon to-right&#34;&amp;gt;
+&amp;lt;span&amp;gt;文本内容&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 单个slide --&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;!--tab选项卡--&amp;gt;
+&amp;lt;nav class=&#34;ts-control&#34;&amp;gt;
+&amp;lt;div class=&#34;ts-container&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li class=&#34;is-active&#34;&amp;gt;&amp;lt;i class=&#34;ts-icon auto&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span&amp;gt;Slide 1&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;ts-icon medical&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span&amp;gt;Slide 2&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;ts-icon food&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;span&amp;gt;Slide 3&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+在切换TAB选项卡时，通过jQuery代码为当前的slide动态添加.is-activeclass。这个class类会为.ts-item元素下的缩略图、文本内容和按钮子元素分别添加CSS3动画。
+
+.tabSlider .ts-items .ts-item.is-active {
+background-position: center center;
+}
+.tabSlider .ts-items .ts-item.is-active .ts-thumbnail img {
+-webkit-animation-name: vanishIn;
+-moz-animation-name: vanishIn;
+-ms-animation-name: vanishIn;
+-o-animation-name: vanishIn;
+animation-name: vanishIn;
+}
+.tabSlider .ts-items .ts-item.is-active .ts-title {
+-webkit-animation-name: presRIn;
+-moz-animation-name: presRIn;
+-ms-animation-name: presRIn;
+-o-animation-name: presRIn;
+animation-name: presRIn;
+}
+.tabSlider .ts-items .ts-item.is-active .ts-btn {
+-webkit-animation-name: button;
+-moz-animation-name: button;
+-ms-animation-name: button;
+-o-animation-name: button;
+animation-name: button;
+}
+/* vanishIn动画 */
+@keyframes vanishIn {
+0\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: scale(2);
+-ms-transform: scale(2);
+-webkit-transform: scale(2);
+transform: scale(2);
+-webkit-filter: blur(10px);
+filter: blur(10px);
+}
+100\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+opacity: 1;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-filter: blur(0px);
+filter: blur(0px);
+}
+}
+/* button动画 */
+@keyframes button {
+0\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+left: -90px;
+}
+100\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+opacity: 1;
+left: 0;
+}
+}
+/* presRIn动画 */
+@keyframes presRIn {
+0\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(0.3, 0.3) rotateY(90deg);
+-ms-transform: perspective(600) scale(0.3, 0.3) rotateY(90deg);
+-webkit-transform: perspective(600) scale(0.3, 0.3) rotateY(90deg);
+transform: perspective(600) scale(0.3, 0.3) rotateY(90deg);
+}
+60\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+opacity: 0.4;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(0.7, 0.7) rotateY(0deg);
+-ms-transform: perspective(600) scale(0.7, 0.7) rotateY(0deg);
+-webkit-transform: perspective(600) scale(0.7, 0.7) rotateY(0deg);
+transform: perspective(600) scale(0.7, 0.7) rotateY(0deg);
+}
+70\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+opacity: 0.7;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(1, 1) rotateY(10deg);
+-ms-transform: perspective(600) scale(1, 1) rotateY(10deg);
+-webkit-transform: perspective(600) scale(1, 1) rotateY(10deg);
+transform: perspective(600) scale(1, 1) rotateY(10deg);
+}
+75\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+opacity: 0.8;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(1, 1) rotateY(-10deg);
+-ms-transform: perspective(600) scale(1, 1) rotateY(-10deg);
+-webkit-transform: perspective(600) scale(1, 1) rotateY(-10deg);
+transform: perspective(600) scale(1, 1) rotateY(-10deg);
+}
+90\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+opacity: 0.9;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(1, 1) rotateY(5deg);
+-ms-transform: perspective(600) scale(1, 1) rotateY(5deg);
+-webkit-transform: perspective(600) scale(1, 1) rotateY(5deg);
+transform: perspective(600) scale(1, 1) rotateY(5deg);
+}
+100\% {
+filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+opacity: 1;
+-moz-transform-origin: 50\% 50\%;
+-ms-transform-origin: 50\% 50\%;
+-webkit-transform-origin: 50\% 50\%;
+transform-origin: 50\% 50\%;
+-moz-transform: perspective(600) scale(1, 1) rotateY(0deg);
+-ms-transform: perspective(600) scale(1, 1) rotateY(0deg);
+-webkit-transform: perspective(600) scale(1, 1) rotateY(0deg);
+transform: perspective(600) scale(1, 1) rotateY(0deg);
+}
+}
+
+CSS样式中还使用媒体查询来制作响应式效果，完整的CSS代码请参考style.css文件。
+
+ JAVASCRIPT
+该TAB选项卡幻灯片特效使用jQuery来控制背景图片和tab选项卡切换时的事件，为相应的幻灯片slide添加和移除相应的class。
+
+$(function(){
+$(&#39;a&#39;).on(&#39;click&#39;, function(){ return false; }); 
+$(&#39;.ts-item&#39;).first().show();
+$(&#39;.ts-item&#39;).each(function () {
+var $this = $(this),
+\_imgSrc= $this.find(&#39;.ts-banner img&#39;).attr(&#39;src&#39;);
+if(_imgSrc)
+$this.css(&#39;background-image&#39;, &#39;url(&#39; + _imgSrc + &#39;)&#39;);
+});
+(&amp;#039;.ts-control li&amp;#039;).on(&amp;#039;click&amp;#039;, function(){
+varthis = $(this),
+_index = $this.index();
+(&amp;quot;li.is−active&amp;quot;).removeClass(&amp;quot;is−active&amp;quot;);(&amp;quot;li.is-active&amp;quot;).removeClass(&amp;quot;is-active&amp;quot;);
+(&amp;quot;li.is−active&amp;quot;).removeClass(&amp;quot;is−active&amp;quot;);(this).addClass(&amp;quot;is-active&amp;quot;);
+(′.ts−item.is−active′).removeClass(′is−active′).fadeOut();(&amp;#x27;.ts-item.is-active&amp;#x27;).removeClass(&amp;#x27;is-active&amp;#x27;).fadeOut();
+(′.ts−item.is−active′).removeClass(′is−active′).fadeOut();(&#39;.ts-item&#39;).eq(_index).addClass(&#39;is-active&#39;).fadeIn();
+return false;
+});
+var ww = $(window).width();
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_883">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_884">
+                        blowup.js-实用jQuery图片放大镜插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_884" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603051618.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+blowup.js是一款实用的jQuery图片放大镜插件。它属于轻量级插件，易于使用，可以通过配置参数来设置放大镜的外观样式等属性。
+内容：
+
+
+简要教程
+
+
+blowup.js是一款实用的jQuery图片放大镜插件。它属于轻量级插件，易于使用，可以通过配置参数来设置放大镜的外观样式等属性。
+
+
+ 使用方法
+使用该图片放大镜插件需要在页面中引入jquery和blowup.min.js文件
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/blowup.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+初始化插件
+在页面DOM元素加载完毕之后，可以通过blowup()方法来初始化该图片放大镜插件。
+
+$(document).ready(function () {
+$(&amp;quot;.demo-img&amp;quot;).blowup({
+&amp;quot;background&amp;quot; : &amp;quot;#F39C12&amp;quot;,
+&amp;quot;width&amp;quot; : 250,
+&amp;quot;height&amp;quot; : 250
+});
+})
+
+
+ 配置参数
+blowup.js图片放大镜插件的可用配置参数有：
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+round
+true
+设置为true为圆形的放大镜，false为矩形的放大镜
+
+
+width
+200
+放大镜的宽度，单位像素
+
+
+height
+200
+放大镜的高度，单位像素
+
+
+background
+&#34;#FFF&#34;
+放大镜的背景色
+
+
+shadow
+&#34;0 8px 17px 0 rgba(0, 0, 0, 0.2)&#34;
+放大镜阴影的CSS样式
+
+
+border
+&#34;6px solid #FFF&#34;
+放大镜边框的CSS样式
+
+
+cursor
+true
+设置为false放大镜中间就不会有十字光标
+
+
+zIndex
+999999
+放大镜的z-index属性
+
+
+
+
+blowup.js图片放大镜插件的github地址为：https://github.com/paulkr/blowup.js
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_884">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_886">
+                        jQuery和CSS3类似PPT的演讲稿幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-primary">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_886" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512101554.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单的使用jQuery和CSS3制作类似PPT的演讲稿幻灯片插件。该演讲稿幻灯片插件可以通过键盘上下左右方向键来控制，并且左上角带有菜单按钮，通过菜单项可以选择相应的幻灯片页面。
+内容：
+
+
+简要教程
+
+
+这是一款简单的使用jQuery和CSS3制作类似PPT的演讲稿幻灯片插件。该演讲稿幻灯片插件可以通过键盘上下左右方向键来控制，并且左上角带有菜单按钮，通过菜单项可以选择相应的幻灯片页面。
+
+ 使用方法
+
+ HTML结构
+该演讲稿幻灯片的HTML结构有2个主要的部分：一个&amp;lt;nav&amp;gt;元素用于制作幻灯片的导航菜单，还有一个有序列表用于制作幻灯片页面。对于多级幻灯片页面使用的是嵌套有序列表的方法来制作。
+
+&amp;lt;div class=&#34;cd-slideshow-wrapper&#34;&amp;gt;
+&amp;lt;nav class=&#34;cd-slideshow-nav&#34;&amp;gt;
+&amp;lt;button class=&#34;cd-nav-trigger&#34;&amp;gt;
+Open Navigation
+&amp;lt;span aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;div class=&amp;quot;cd-nav-items&amp;quot;&amp;gt;
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#slide-1&amp;quot;&amp;gt;Slide 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;#slide-2&amp;quot;&amp;gt;Slide 2&amp;lt;/a&amp;gt;
+&amp;lt;ol class=&amp;quot;sub-nav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#slide-2&amp;quot;&amp;gt;Slide 2 - Sub 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other sub-slide links here --&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#slide-3&amp;quot;&amp;gt;Slide 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;!-- other slide links here --&amp;gt;
+&amp;lt;/ol&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-nav-items --&amp;gt;
+&amp;lt;/nav&amp;gt; &amp;lt;!-- .cd-slideshow-nav --&amp;gt;
+&amp;lt;ol class=&amp;quot;cd-slideshow&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;visible&amp;quot; id=&amp;quot;slide-1&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;cd-slider-content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;content-wrapper&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Presentation Slideshow&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;A simple presentation template in CSS &amp;amp; jQuery.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li id=&amp;quot;slide-2&amp;quot;&amp;gt;
+&amp;lt;ol class=&amp;quot;sub-slides&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&amp;quot;cd-slider-content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;content-wrapper&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Slider #2&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- sub-slides content here --&amp;gt;
+&amp;lt;/ol&amp;gt; &amp;lt;!-- .sub-slides --&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;!-- additional slides here --&amp;gt;
+&amp;lt;/ol&amp;gt; &amp;lt;!-- .cd-slideshow --&amp;gt;
+&amp;lt;/div&amp;gt; &amp;lt;!-- .cd-slideshow-wrapper --&amp;gt;
+
+
+ CSS样式
+在小屏幕设备中（视口小于1100像素），插件会将所有的幻灯片项目优化为一个列表。对于右子项目的幻灯片，插件中实现了一个可以触摸滑动的slider，优化可以滑动来查看显示子项目。
+
+.cd-slideshow .sub-slides {
+width: 100\%;
+transition: transform 0.3s;
+}
+.cd-slideshow &amp;gt; li, 
+.cd-slideshow .sub-slides &amp;gt; li {
+position: relative;
+z-index: 1;
+height: 100vh;
+width: 100vw;
+}
+.cd-slideshow .sub-slides &amp;gt; li {
+float: left;
+} 
+
+带子项目的有序列表项的宽度使用JavaScript来设置。当用户从一个子项目导航到前一个或前一个子项目的时候，插件会沿X轴移动.sub-slides元素。
+在大屏幕设备中，.cd-slideshow-wrapper元素的高度被设置为100vh，并设置为overflow:hidden，所以只有在视口中的幻灯片是可见的。然后.cd-slider-content元素被设置宽度、高度和margin使它相对于视口居中。
+.visible class类用于添加到当前可见的幻灯片上：它的作用是隐藏.cd-slider-content::after伪元素（该伪元素用于在幻灯片聚焦时改变页面背景色）以及显示幻灯片的内容。
+
+@media only screen and (min-width: 1100px) {
+.cd-slideshow-wrapper {
+height: 100vh;
+overflow: hidden;
+}
+.cd-slideshow {
+transition: transform 0.6s;
+}
+.cd-slideshow &amp;gt; li, .cd-slideshow .sub-slides &amp;gt; li {
+height: auto;
+width: auto;
+}
+.cd-slider-content {
+height: 84vh;
+width: 90vw;
+margin: 2vh 5vw;
+border-radius: 10px;
+cursor: pointer;
+}
+.visible .sub-visible .cd-slider-content,
+.visible &amp;gt; .cd-slider-content {
+/* visible slide /
+cursor: auto;
+}
+.cd-slideshow &amp;gt; li:first-of-type .cd-slider-content {
+margin-top: 8vh;
+}
+.sub-slides &amp;gt; li:first-of-type .cd-slider-content {
+margin-left: 5vw;
+}
+.sub-slides &amp;gt; li .cd-slider-content {
+margin-left: 1.25vw;
+margin-right: 1.25vw;
+}
+.cd-slider-content .content-wrapper {
+height: 100%;
+/ hide the slide content if the slide is not selected/visible /
+opacity: 0;
+box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+border-radius: inherit;
+transition: opacity 0.6s;
+}
+.cd-slider-content::after {
+/ this is used to change the slide background color when the slide is out of focus */
+content: &#39;&#39;;
+position: absolute;
+z-index: 3;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+border-radius: inherit;
+background-color: #3a3a3a;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+opacity: 1;
+visibility: visible;
+transition: opacity 0.6s, visibility 0.6s;
+}
+.visible .cd-slider-content .content-wrapper {
+opacity: 1;
+}
+.visible .cd-slider-content::after {
+opacity: 0;
+visibility: hidden;
+}
+}
+
+当用户从一个幻灯片页面导航到另一个幻灯片页面时，插件会使用JavaScript沿Y轴移动.cd-slideshow元素。
+
+ JavaScript
+该演讲稿幻灯片可以通过2中方式来移动：使用键盘方向键和使用导航菜单。
+幻灯片的导航菜单功能通过2个主要的函数来实现：updateSlide函数用于从当前幻灯片导航到下一个或前一个幻灯片，updateSubSlide函数用于从当前幻灯片子项导航到前一个或下一个子项目。例如updateSubSlide函数的代码如下：
+
+function updateSubSlide(listItem, string, subSlide) {
+var translate,
+marginSlide = Number(listItem.find(&#39;.cd-slider-content&#39;).eq(0).css(&#39;margin-right&#39;).replace(&#39;px&#39;, &#39;&#39;))*6,
+windowWidth = window.innerWidth;
+windowWidth = ( mq == &#39;desktop&#39; ) ? windowWidth - marginSlide : windowWidth;
+if( listItem.children(&#39;.sub-slides&#39;).length &amp;gt; 0 ) {
+var subSlidesWrapper = listItem.children(&#39;.sub-slides&#39;),
+visibleSubSlide = subSlidesWrapper.children(&#39;.sub-visible&#39;);
+if( string == &#39;nav&#39; ) {
+/* we have choosen a new slide from the navigation /
+var newSubSlide = subSlide;
+} else {
+var newSubSlide = (string == &#39;next&#39;) ? visibleSubSlide.next() : visibleSubSlide.prev();
+}
+var newSubSlidePosition = newSubSlide.index();
+translate = parseInt(- newSubSlidePositionwindowWidth);
+setTransformValue(subSlidesWrapper.get(0), &#39;translateX&#39;, translate + &#39;px&#39;);
+visibleSubSlide.removeClass(&#39;sub-visible&#39;);
+newSubSlide.addClass(&#39;sub-visible&#39;);
+}
+}
+function setTransformValue(element, property, value) {
+element.style[&amp;quot;-webkit-transform&amp;quot;] = property+&amp;quot;(&amp;quot;+value+&amp;quot;)&amp;quot;;
+element.style[&amp;quot;-moz-transform&amp;quot;] = property+&amp;quot;(&amp;quot;+value+&amp;quot;)&amp;quot;;
+element.style[&amp;quot;-ms-transform&amp;quot;] = property+&amp;quot;(&amp;quot;+value+&amp;quot;)&amp;quot;;
+element.style[&amp;quot;-o-transform&amp;quot;] = property+&amp;quot;(&amp;quot;+value+&amp;quot;)&amp;quot;;
+element.style[&amp;quot;transform&amp;quot;] = property+&amp;quot;(&amp;quot;+value+&amp;quot;)&amp;quot;;
+// ...
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_886">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_888">
+                        基于Bootstrap的jQuery右键上下文菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_2">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_888" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512191525.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Bootstrap Context Menu是一款非常实用的基于Bootstrap的jQuery右键上下文菜单插件。该右键菜单插件可以在多种元素上触发，也可以配合Font Awesome字体图标一起使用，非常的方便。
+内容：
+
+
+简要教程
+
+
+Bootstrap Context Menu是一款非常实用的基于Bootstrap的jQuery右键上下文菜单插件。该右键菜单插件可以在多种元素上触发，也可以配合Font Awesome字体图标一起使用，非常的方便。
+
+ 安装
+可以通过npm来安装Bootstrap Context Menu插件。
+
+npm install bootstrap-menu
+
+
+ 使用方法
+使用该右键上下文菜单插件需要引入Bootstrap相关依赖文件和jQuery以及BootstrapMenu.min.js文件
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/BootstrapMenu.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化右键菜单。
+
+var menu = new BootstrapMenu(&#39;#dropdownButton&#39;, {
+actions: /* ... */
+}); 
+
+
+ 应用举例
+BootstrapMenu的构造函数第一个参数接收一个字符串格式的元素选择器，第二个参数是一个options参数对象。
+options对象必须至少有一个actions数组，数组中包含右键菜单的action。
+
+var menu = new BootstrapMenu(&#39;#button&#39;, {
+actions: [{
+name: &#39;Action&#39;,
+onClick: function() {
+// run when the action is clicked
+}
+}, {
+name: &#39;Another action&#39;,
+onClick: function() {
+// run when the action is clicked
+}
+}, {
+name: &#39;A third action&#39;,
+onClick: function() {
+// run when the action is clicked
+}
+}]
+});
+
+下面是一个在表格中使用右键菜单的例子：
+
+&amp;lt;table&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;#&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Description&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;!-- the modal will open right-clicking anywhere inside a .demoTableRow --&amp;gt;
+&amp;lt;tr class=&#34;demoTableRow&#34; data-row-id=&#34;1&#34;&amp;gt;
+&amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;First row&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Lorem ipsum dolor sit amet&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&#34;demoTableRow&#34; data-row-id=&#34;2&#34;&amp;gt;
+&amp;lt;td&amp;gt;2&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Second row&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Nemo enim ipsam voluptatem quia voluptas&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr class=&#34;demoTableRow&#34; data-row-id=&#34;3&#34;&amp;gt;
+&amp;lt;td&amp;gt;3&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Third row&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;Ut enim ad minima veniam&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+
+
+/* A centralized container of the table data. You could hold the
+ * row-specific data in a data-whatever-info=&#34;&#34; attribute in each
+ * row, you decide what fetchElementData() does!
+ */
+var tableRows = {
+&#39;1&#39;: { name: &#39;First row&#39;, isEditable: true, isRemovable: true },
+&#39;2&#39;: { name: &#39;Second row&#39;, isEditable: true, isRemovable: true },
+&#39;3&#39;: { name: &#39;Third row&#39;, isEditable: true, isRemovable: true }
+};
+var menu = new BootstrapMenu(&#39;.demoTableRow&#39;, {
+/* $rowElem is the jQuery element where the menu was opened. The
+
+returned value is the row argument passed to each function. /
+fetchElementData: function($rowElem) {
+var rowId = $rowElem.data(&#39;rowId&#39;);
+return tableRows[rowId];
+},
+/ group actions by their id to make use of separators between
+them in the context menu. Actions not added to any group with
+this option will appear in a default group of their own. /
+actionsGroups: [
+[&#39;setEditable&#39;, &#39;setUneditable&#39; ],
+[&#39;deleteRow&#39;]
+],
+/ you can declare &#39;actions&#39; as an object instead of an array,
+and its keys will be used as action ids. /
+actions: {
+editName: {
+name: &#39;Edit name&#39;,
+iconClass: &#39;fa-pencil&#39;,
+onClick: function(row) { / ... / },
+isEnabled: function(row) {
+return row.isEditable;
+}
+},
+editDescription: {
+name: &#39;Edit description&#39;,
+iconClass: &#39;fa-pencil&#39;,
+onClick: function(row) { / ... / },
+isEnabled: function(row) {
+return row.isEditable;
+}
+},
+setEditable: {
+name: &#39;Set editable&#39;,
+iconClass: &#39;fa-unlock&#39;,
+onClick: function(row) { / ... / },
+isShown: function(row) {
+return !row.isEditable;
+}
+},
+setUneditable: {
+name: &#39;Set uneditable&#39;,
+iconClass: &#39;fa-lock&#39;,
+onClick: function(row) { / ... / },
+isShown: function(row) {
+return row.isEditable;
+}
+},
+deleteRow: {
+name: &#39;Delete row&#39;,
+iconClass: &#39;fa-trash-o&#39;,
+onClick: function(row) { / ... */ },
+isEnabled: function(row) {
+return row.isEditable &amp;amp;&amp;amp; row.isRemovable;
+}
+}
+}
+});
+
+
+
+ 配置参数
+上下文菜单初始化参数：
+
+
+
+
+参数
+类型
+描述
+
+
+
+
+menuSource
+string
+What the source of the context menu should be when opened. Valid values are mouse and element. Defaults to mouse.
+
+
+menuPosition
+string
+上下文菜单的相对位置。可用值有：aboveLeft, aboveRight, belowLeft 和 belowRight。默认值为belowLeft。
+
+
+menuEvent
+string
+打开右键菜单的事件。可用值有：click, right-click, hover。默认值为right-click。
+
+
+fetchElementData
+function
+获取当前打开元素的数据，可以将它传入到用户第一的统一个action的函数中。
+
+
+actions
+array|object
+在上下文菜单中包含的actions列表的数组或对象。
+
+
+actionsGroups
+array
+将action进行分组，每组action之间只用横线进行分割
+
+
+
+
+Actions 属性：
+
+
+
+
+名称
+类型
+描述
+
+
+
+
+name
+string|function
+action的名称
+
+
+onClick
+function
+action被点击时执行的函数
+
+
+iconClass
+string
+可选，Font Awesome字体图标的class名称
+
+
+classNames
+string|object|function
+可选，添加到action的class
+
+
+isShown
+function
+可选，决定action在右键菜单中是否可见
+
+
+isEnabled
+function
+可选，决定action在右键菜单中是否可用
+
+
+
+
+Bootstrap Context Menu右键菜单插件的githb地址为：https://github.com/dgoguerra/bootstrap-menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_888">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_889">
+                        简单时尚的jQuery倒计时插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_889" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1601/201601031532.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+SyoTimer是一款简单时尚的jQuery倒计时插件。该计时器插件支持IE8+的现代浏览器，它的界面简洁，功能齐全。
+内容：
+
+
+简要教程
+
+
+SyoTimer是一款简单时尚的jQuery倒计时插件。该计时器插件支持IE8+的现代浏览器，它的界面简洁，功能齐全。它的特点还有：
+
+在计时器计时结束之后的回调函数中可以修改计时器的结构。
+可以周期的执行倒计时。
+计时采用淡入淡出的效果。
+可以自定义定时器的格式和样式。
+
+
+ 浏览器兼容
+
+Firefox 2+ (Win, Mac, Linux)
+IE8+ (Win)
+Chrome 6+ (Win, Mac, Linux, Android, iPhone)
+Safari 3.2+ (Win, Mac, iPhone)
+Opera 8+ (Win, Mac, Linux, Android, iPhone)
+
+
+ 使用方法
+首先需要在页面中引入jQuery(1.7+)和jquery.syotimer.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.syotimer.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该jQuery计时器的HTML结构使用一个空的&amp;lt;div&amp;gt;作为容器即可。
+
+&amp;lt;div id=&#34;simple\_timer&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+
+插件初始化之后计时器将会变为如下结构：
+
+&amp;lt;div id=&#34;simple\_timer&#34; class=&#34;timer&#34;&amp;gt;
+&amp;lt;div class=&#34;timer-head-block&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;timer-body-block&#34;&amp;gt;
+&amp;lt;div class=&#34;table-cell day&#34;&amp;gt;
+&amp;lt;div class=&#34;tab-val&#34;&amp;gt;1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;tab-metr&#34;&amp;gt;day&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;table-cell hour&#34;&amp;gt;
+&amp;lt;div class=&#34;tab-val&#34;&amp;gt;1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;tab-metr&#34;&amp;gt;hour&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;table-cell minute&#34;&amp;gt;
+&amp;lt;div class=&#34;tab-val&#34;&amp;gt;1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;tab-metr&#34;&amp;gt;minute&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;table-cell second&#34;&amp;gt;
+&amp;lt;div class=&#34;tab-val&#34;&amp;gt;1&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;tab-metr&#34;&amp;gt;second&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;timer-foot-block&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+需要为该计时器添加一些必要的CSS样式，这些样式你也可以自定义。
+
+.timer{
+text-align: center;
+margin: 30px auto 0;
+padding: 0 0 10px;
+border-bottom: 2px solid #80a3ca;
+}
+.timer .table-cell{
+display: inline-block;
+margin: 0 5px;
+width: 79px;
+background: url(./images/timer.png) no-repeat 0 0;
+}
+.timer .table-cell .tab-val{
+font-size: 35px;
+color: #80a3ca;
+height: 81px;
+line-height: 81px;
+margin: 0 0 5px;
+}
+.timer .table-cell .tab-metr{
+font-family: Arial;
+font-size: 12px;
+text-transform: uppercase;
+}
+#simple_timer.timer .table-cell.day,
+#periodic_timer_days.timer .table-cell.hour{
+width: 120px;
+background-image: url(./images/timer_long.png);
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过syotimer()方法来初始化该计时器插件，并在其中传入适当的参数。
+
+$(&#39;#simple\_timer&#39;).syotimer({
+year: 2020,
+month: 5,
+day: 9,
+hour: 20,
+minute: 30,
+});
+
+
+ 配置参数
+
+
+
+
+参数
+描述
+值类型
+默认值
+可用值
+
+
+
+
+year
+倒计时中的年份
+integer
+2014
+&amp;gt;1979
+
+
+month
+倒计时中的月份
+integer
+7
+1-12
+
+
+day
+倒计时中的天数
+integer
+31
+1-31
+
+
+hour
+倒计时中的小时数
+integer
+0
+0-23
+
+
+minute
+倒计时中的分钟数
+integer
+0
+0-59
+
+
+second
+倒计时中的秒数
+integer
+0
+0-59
+
+
+dayVisible
+如果为true则显示天数，为false则不显示天数，且小时数可以超过23
+boolean
+true
+
+
+
+dubleNumbers
+如果为true，则显示前导带0的小时、分钟和秒数
+boolean
+true
+
+
+
+effectType
+计时器秒数值改变时的效果
+string
+&#39;none&#39;
+&#39;none&#39;,&#39;opacity&#39;
+
+
+lang
+本地化计时器语言，目前只支持英文和俄文
+string
+&#39;eng&#39;
+&#39;eng&#39;,&#39;rus&#39;
+
+
+periodic
+计时器是否周期显示
+boolean
+false
+
+
+
+periodInterval
+the period of the timer in periodUnit (if periodic is set to true)
+integer
+7
+&amp;gt;0
+
+
+periodUnit
+周期时间的单位
+string
+&#39;d&#39;
+&#39;d&#39;, &#39;h&#39;,&#39;m&#39;, &#39;s&#39;
+
+
+
+
+SyoTimer倒计时插件的github地址为：https://github.com/mrfratello/SyoTimer
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_889">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_89">
+                        jQuery响应式全屏3D旋转查看图片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_89" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1905/201905066953.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery响应式全屏3D旋转查看图片特效。该特效使用GSAP的TweenMax库和TimelineMax库来制作，实现图片的3D缩放和立方体旋转效果。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery响应式全屏3D旋转查看图片特效。该特效使用GSAP的TweenMax库和TimelineMax库来制作，实现图片的3D缩放和立方体旋转效果。
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;assets/css/demo.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;assets/js/demo.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+
+&amp;lt;nav id=&#34;nav&#34;&amp;gt;
+&amp;lt;button id=&#34;prev&#34; class=&#34;nav-item&#34; data-increment=&#34;-1&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/img/icon-prev.png&#34; alt=&#34;prev&#34; /&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;button id=&#34;next&#34; class=&#34;nav-item&#34; data-increment=&#34;1&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/img/icon-next.png&#34; alt=&#34;next&#34; /&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;section class=&#34;coidea-3d-carousel&#34;&amp;gt;
+&amp;lt;div class=&#34;stage&#34;&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;div class=&#34;bcg&#34; style=&#34;background-image: url(assets/img/img-1.jpeg);&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div class=&#34;description&#34;&amp;gt;
+&amp;lt;p class=&#34;description-target&#34;&amp;gt;1483 - 1843&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;headline&#34;&amp;gt;
+&amp;lt;h2 class=&#34;headline-target&#34;&amp;gt;Dream big&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;discover-more&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;discover-more-target&#34;&amp;gt;Discover More&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;div class=&#34;bcg&#34; style=&#34;background-image: url(assets/img/img-2.jpeg);&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div class=&#34;description&#34;&amp;gt;
+&amp;lt;p class=&#34;description-target&#34;&amp;gt;1723 - 1798&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;headline&#34;&amp;gt;
+&amp;lt;h2 class=&#34;headline-target&#34;&amp;gt;Pray bigger&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;discover-more&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;discover-more-target&#34;&amp;gt;Discover More&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;item&#34;&amp;gt;
+&amp;lt;div class=&#34;bcg&#34; style=&#34;background-image: url(assets/img/img-3.jpeg);&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;div class=&#34;description&#34;&amp;gt;
+&amp;lt;p class=&#34;description-target&#34;&amp;gt;1845 - 1853&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;headline&#34;&amp;gt;
+&amp;lt;h2 class=&#34;headline-target&#34;&amp;gt;Keep going&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;discover-more&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34; class=&#34;discover-more-target&#34;&amp;gt;Discover More&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+
+ 该jQuery响应式全屏3D旋转查看图片特效的github网址为：https://github.com/COIDEAwebsite/impressive-slideshow-with-3d-effect
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_89">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/105/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/107/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery可任意拖动排序的导航图片效果 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery可任意拖动排序的导航图片效果
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1612/201612291513.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1612/201612291513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201612294292.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jquery来制作的可任意拖动排序的导航图片效果。在这个导航图片效果中，用户可以按自己的喜好来随意拖动导航图片进行排列，非常实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用jquery来制作的可任意拖动排序的导航图片效果。在这个导航图片效果中，用户可以按自己的喜好来随意拖动导航图片进行排列，非常实用。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery文件。</p>
+<pre class="brush:html">
+&lt;script src="path/to/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该导航图片效果的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="item\_container"&gt;
+&lt;div class="item\_content"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="item"&gt;
+&lt;img src="images/youku.png" /&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="item"&gt;
+&lt;img src="images/jd.png" /&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="item"&gt;
+&lt;img src="images/taobao.png" /&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+......
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为该导航图片特效添加下面的CSS样式。</p>
+<pre class="brush:css">
+.item\_content ul{
+list-style:none;
+}
+.item\_content ul li {
+width:200px;
+height:120px;
+float:left;
+margin:10px
+}
+.item\_content {
+width:740px;
+height:460px;
+margin:0 auto;
+}
+.item\_content .item {
+width:200px;
+height:120px;
+line-height:120px;
+text-align:center;
+cursor:pointer;
+background:#ccc;
+}
+.item\_content .item img {
+width:200px;
+height:120px;
+border-radius:6px;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>导航图片的拖动和位置交互完全有Jquery代码来实现，完整的代码如下：</p>
+<pre class="brush:js">
+$(function() {
+function Pointer(x, y) {
+this.x = x ;
+this.y = y ;
+}
+function Position(left, top) {
+this.left = left ;
+this.top = top ;
+}
+$(".item\_content .item").each(function(i) {
+this.init = function() { // 初始化
+this.box = $(this).parent() ;
+$(this).attr("index", i).css({
+position : "absolute",
+left : this.box.offset().left,
+top : this.box.offset().top
+}).appendTo(".item\_content") ;
+this.drag() ;
+},
+this.move = function(callback) {// 移动
+$(this).stop(true).animate({
+left : this.box.offset().left,
+top : this.box.offset().top
+}, 500, function() {
+if(callback) {
+callback.call(this) ;
+}
+}) ;
+},
+this.collisionCheck = function() {
+var currentItem = this ;
+var direction = null ;
+$(this).siblings(".item").each(function() {
+if(
+currentItem.pointer.x &gt; this.box.offset().left &amp;&amp;
+currentItem.pointer.y &gt; this.box.offset().top &amp;&amp;
+(currentItem.pointer.x &lt; this.box.offset().left + this.box.width()) &amp;&amp;
+(currentItem.pointer.y &lt; this.box.offset().top + this.box.height())
+) {
+// 返回对象和方向
+if(currentItem.box.offset().top &lt; this.box.offset().top) {
+direction = "down" ;
+} else if(currentItem.box.offset().top &gt; this.box.offset().top) {
+direction = "up" ;
+} else {
+direction = "normal" ;
+}
+this.swap(currentItem, direction) ;
+}
+}) ;
+},
+this.swap = function(currentItem, direction) { // 交换位置
+if(this.moveing) return false ;
+var directions = {
+normal : function() {
+var saveBox = this.box ;
+this.box = currentItem.box ;
+currentItem.box = saveBox ;
+this.move() ;
+$(this).attr("index", this.box.index()) ;
+$(currentItem).attr("index", currentItem.box.index()) ;
+},
+down : function() {
+// 移到上方
+var box = this.box ;
+var node = this ;
+var startIndex = currentItem.box.index() ;
+var endIndex = node.box.index(); ;
+for(var i = endIndex; i &gt; startIndex ; i--) {
+var prevNode = $(".item\_content .item[index="+ (i - 1) +"]")[0] ;
+node.box = prevNode.box ;
+$(node).attr("index", node.box.index()) ;
+node.move() ;
+node = prevNode ;
+}
+currentItem.box = box ;
+$(currentItem).attr("index", box.index()) ;
+},
+up : function() {
+// 移到上方
+var box = this.box ;
+var node = this ;
+var startIndex = node.box.index() ;
+var endIndex = currentItem.box.index(); ;
+for(var i = startIndex; i &lt; endIndex; i++) {
+var nextNode = $(".item\_content .item[index="+ (i + 1) +"]")[0] ;
+node.box = nextNode.box ;
+$(node).attr("index", node.box.index()) ;
+node.move() ;
+node = nextNode ;
+}
+currentItem.box = box ;
+$(currentItem).attr("index", box.index()) ;
+}
+}
+directions[direction].call(this) ;
+},
+this.drag = function() { // 拖拽
+var oldPosition = new Position() ;
+var oldPointer = new Pointer() ;
+var isDrag = false ;
+var currentItem = null ;
+$(this).mousedown(function(e) {
+e.preventDefault() ;
+oldPosition.left = $(this).position().left ;
+oldPosition.top =$(this).position().top ;
+oldPointer.x = e.clientX ;
+oldPointer.y = e.clientY ;
+isDrag = true ;
+<p>currentItem = this ;</p>
+<p>}) ;<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …return false ;
+'>(document).mousemove(function(e) {
+var currentPointer = new Pointer(e.clientX, e.clientY) ;
+if(!isDrag) return false ;
+</span>(currentItem).css({<br>
+&quot;opacity&quot; : &quot;0.8&quot;,<br>
+&quot;z-index&quot; : 999<br>
+}) ;<br>
+var left = currentPointer.x - oldPointer.x + oldPosition.left ;<br>
+var top = currentPointer.y - oldPointer.y + oldPosition.top ;<br>
+$(currentItem).css({<br>
+left : left,<br>
+top : top<br>
+}) ;<br>
+currentItem.pointer = currentPointer ;<br>
+// 开始交换位置</p>
+<p>currentItem.collisionCheck() ;</p>
+<p>}) ;<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …e(function() {
+'>(document).mouseup(function() {
+if(!isDrag) return false ;
+isDrag = false ;
+currentItem.move(function() {
+</span>(this).css({<br>
+&quot;opacity&quot; : &quot;1&quot;,<br>
+&quot;z-index&quot; : 0<br>
+}) ;<br>
+}) ;<br>
+}) ;<br>
+}<br>
+this.init() ;<br>
+}) ;<br>
+}) ;<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1612/201612291513.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201612294292.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_517">
+                                <h3 class="post-title">
+                                    可展开和收缩的jquery FAQ问答列表特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

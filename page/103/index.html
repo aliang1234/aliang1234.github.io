@@ -1,0 +1,1300 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_477">
+                        jExcel-类似Excel的jquery电子表格插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_477" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1703/201703081524.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jexcel.js是一款轻量级的类似Excel的jquery电子表格插件。你可以同js数组、json数据或CSV文件来为jexcel表格提供数据，你甚至可以直接从一个Excel表格中直接复制粘贴数据到jexcel表格中。
+内容：
+
+
+简要教程
+
+
+jexcel.js是一款轻量级的类似Excel的jquery电子表格插件。你可以同js数组、json数据或CSV文件来为jexcel表格提供数据，你甚至可以直接从一个Excel表格中直接复制粘贴数据到jexcel表格中。
+
+ 使用方法
+在页面中引入jquery、jquery.jexcel.js和jquery.jexcel.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.jexcel.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.jexcel.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;容器作为jexcel表格的容器。
+
+&amp;lt;div id=&#34;my&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的代码来初始化jexcel表格。
+
+data = [
+[&#39;Google&#39;, 1998, 807.80],
+[&#39;Apple&#39;, 1976, 116.52],
+[&#39;Yahoo&#39;, 1994, 38.66],
+];
+$(&#39;#mytable&#39;).jexcel({ data:data, colWidths: [ 300, 80, 100 ] });
+
+下面是一张带日期的jexcel表格的截图效果：
+
+更多关于jexcel.js表格插件的信息，可以参考官方网站：http://bossanova.uk/jexcel
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_477">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_478">
+                        纯js文字洗牌式切换特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_478" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1705/201705081526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ShuffleText是一款纯js文字洗牌式切换特效插件。该插件在鼠标滑过指定的文本时，文字会不停的逐个进行翻转，类似洗牌效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+ShuffleText是一款纯js文字洗牌式切换特效插件。该插件在鼠标滑过指定的文本时，文字会不停的逐个进行翻转，类似洗牌效果，非常炫酷。
+
+ 安装
+可以通过npm来安装ShuffleText插件。
+
+npm install shuffle-text 
+
+
+ 使用方法
+在页面中引入shuffle-text.js文件。
+
+&amp;lt;script src=&#34;path/to/shuffle-text.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+ShuffleText插件基本的HTML结构如下：
+
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script src=&#34;shuffle-text.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;h1 id=&#34;myText&#34;&amp;gt;This is a ShuffleText.js Examle&amp;lt;/h1&amp;gt;
+&amp;lt;script&amp;gt;
+var el = document.getElementById(&#34;myText&#34;);
+var text = new ShuffleText(el);
+text.start();
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+ 初始化插件
+通过下面的方法为要进行洗牌切换的文字创建实例对象。
+
+var el = document.getElementById(&#34;myText&#34;);
+var text = new ShuffleText(el);
+
+
+ 方法
+ShuffleText洗牌式文字切换插件可用的方法有：
+
+//开始执行洗牌动画
+start(): void
+//结束洗牌动画
+stop(): void
+//设置文字
+setText(text: string): void
+dispose(): void
+
+ShuffleText纯js文字洗牌式切换特效插件的github地址为：https://github.com/ics-ikeda/shuffle-text
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_478">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_479">
+                        控制animate.css动画的jquery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_479" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1703/201703231450.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.animator.js是一款基于animate.css的jquery动画插件。Animator插件可以为DOM元素提供各种animate.css中设定的CSS3动画，并额外提供当DOM元素进入视口时触发CSS3动画的方法。
+内容：
+
+
+简要教程
+
+
+jquery.animator.js是一款基于animate.css的jquery动画插件。Animator插件可以为DOM元素提供各种animate.css中设定的CSS3动画，并额外提供当DOM元素进入视口时触发CSS3动画的方法。
+
+ 使用方法
+在页面中引入jquery和jquery.animator-beta.min.js文件，以及animate.css样式文件。
+
+&amp;lt;link href=&#34;path/to/css/animate.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/js/jquery.animator-beta.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用插件
+要为一个目标DOM元素设置动画效果，可以简单的使用下面的jquery代码。
+
+$(&#39;#target-elem&#39;).addAnimation(&#39;lightSpeedIn&#39;,500);
+
+其中lightSpeedIn是animate.css中设定的CSS3动画名称。
+如果需要在元素进入视口时，触发指定的CSS3动画，可以使用下面的代码：
+
+if($(&#39;#target-elem&#39;).isOnScreen()){
+$(&#39;#target-elem&#39;).addAnimation(&#39;lightSpeedIn&#39;);
+}
+
+你也可以将DOM元素上指定的动画移除：
+
+$(&#39;#ele&#39;).removeAnimation(&#39;lightSpeedIn&#39;);
+
+jquery.animator.js-jquery动画插件的github地址为：https://github.com/zugoripls/jquery.animator
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_479">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_48">
+                        jQuery弹窗对话框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_48" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1901/201901251459.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery弹窗对话框插件。该jquery弹窗插件可以用于做提示框，对话框，确认框等，兼容ie8，并提供点击按钮后的回调函数调用方法，非常好用。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery弹窗对话框插件。该jquery弹窗插件可以用于做提示框，对话框，确认框等，兼容ie8，并提供点击按钮后的回调函数调用方法，非常好用。
+
+ 使用方法
+在页面中引入jquery、jquery.dialog.js和dialog.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dialog.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.dialog.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 创建一个基本的对话框
+一个基本的对话框的调用方法如下。
+
+$.dialog({
+content: &#39;&#39;这是对话框的内容&#39;
+});
+
+
+ 创建消息通知框
+消息通知框有3个参数。
+
+
+message：消息通知框显示的内容。
+
+timeout：多少毫秒后自动关闭。
+
+callback：关闭后的回调函数。
+
+
+$.sendMsg(&#39;Notification Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+// or
+$.sendSuccess(&#39;Success Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+$.sendWarning(&#39;Warning Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+$.sendError(&#39;Error Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+$.sendSuccessToTop(&#39;Sticky Success Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+$.sendWarningToTop(&#39;Sticky Warning Message&#39;, 3000, function(){
+alert(&#39;close&#39;)
+});
+
+
+ 创建确认框
+
+$.sendConfirm({
+title: &#39;Confirm Dialog&#39;,
+msg: &#39;Are U Sure?&#39;,
+desc: &#39;Are U Sure to delete this entry?&#39;,
+button: {
+confirm: &#39;Okey&#39;,
+cancel: &#39;Cancel&#39;
+},
+onConfirm: function() {
+console.log(&#39;Confirm&#39;);
+},
+onCancel: function() {
+console.log(&#39;Cancel&#39;);
+},
+onClose: function() {
+console.log(&#39;Close&#39;);
+}
+});
+
+
+ 配置参数
+全局配置参数和默认值如下：
+
+{
+id: &#39;&#39;,
+title: &#39;Title&#39;,
+isFixed: true,
+hideHeader: false,
+hideClose: false,
+content: null,
+callback: null,
+withNoPadding: false, 
+withNoMinWidth: false,
+bgHide: true,
+escHide: true
+} 
+
+对话框的默认配置参数如下：
+
+{
+id: &#39;dialogConfirmBox&#39;,
+title: &#39;Confirm&#39;,
+hideHeader: false,
+hideClose: false,
+withCenter: false,
+withIcon: false,
+autoClose: false,
+timeout: 3000,
+width: null, 
+noconfirm: false,
+msg: &#39;&#39;,
+desc: &#39;&#39;, 
+content: &#39;&#39;, 
+button: {
+confirm: &#39;Okey&#39;, // {text:&#39;Text&#39;, href:&#39;#&#39;, target:&#39;\_blank&#39;,behavior:&#39;behavior&#39;}
+cancel: &#39;Cancel&#39;, // {text:&#39;Text&#39;, href:&#39;#&#39;, target:&#39;\_blank&#39;,behavior:&#39;behavior&#39;}
+cancelFirst: false
+}
+}
+
+ 该jQuery弹窗对话框插件的github网址为：https://github.com/springlong/jquery-dialog
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_48">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_480">
+                        纯js百叶窗效果轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_480" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1706/201706141454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款纯js百叶窗效果轮播图插件。该js轮播图在图片切换时的效果类似于多张图片展开合成一张完整的大图。该轮播图由纯js编写，兼容ie8浏览器。
+内容：
+
+
+简要教程
+
+
+这是一款纯js百叶窗效果轮播图插件。该js轮播图在图片切换时的效果类似于多张图片展开合成一张完整的大图。该轮播图由纯js编写，兼容ie8浏览器。
+
+ 使用方法
+在页面中引入imgSwitch.min.js文件。
+
+&amp;lt;script src=&#34;&#34;path/to/js/imgSwitch.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该轮播图使用一个&amp;lt;div&amp;gt;元素来包裹一组图片。
+
+&amp;lt;div id=&#34;imgContainer&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/2.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/3.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/4.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/5.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/6.jpg&#34;/&amp;gt;
+&amp;lt;img src=&#34;images/7.jpg&#34;/&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过创建一个imgSwitch()对象来实例化一个轮播图。
+
+window.onload=function(){
+new imgSwitch(&#34;imgContainer&#34;,{
+Type:12,
+Width:943,
+Height:354,
+Pause:3000,
+Speed:&#34;fast&#34;,
+Auto:true,
+Navigate:&#34;numberic&#34;,
+NavigatePlace:&#34;outer&#34;,
+PicturePosition:&#34;left&#34;})
+}
+
+
+ 配置参数
+该轮播图可用的配置参数有：
+
+Auto:true,//是否自动播放
+Pause:3000,//暂停的时间
+Type:1,//播放类型
+Navigate:&#34;numberic&#34;,//导航，有三种，分别为no(无),numberic(数字),picture(图片)
+Width:874,//图片的宽度
+Height:211,//图片的高度
+Speed:&#34;normal&#34;,//转变的速度
+PicturePosition:&#34;inner&#34;,
+NavigatePlace:&#34;inner&#34;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_480">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_481">
+                        纯js二维码生成插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_1">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_481" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1704/201704211510.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+qrjs2.js是一款仿纯js二维码生成插件。该二维码生成插件能生成4种类型的二维码：SVG格式的二维码，data URI为SVG的图像，data URI为PNG的图像，和表格形式的二维码。
+内容：
+
+
+简要教程
+
+
+qrjs2.js是一款仿纯js二维码生成插件。该二维码生成插件能生成4种类型的二维码：SVG格式的二维码，data URI为SVG的图像，data URI为PNG的图像，和表格形式的二维码。
+
+ 安装
+可以通过npm和bower来安装qrjs2.js插件。
+
+npm install qrjs2
+bower install qrjs2
+
+
+ 使用方法
+在页面中引入qrjs2.min.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/qrjs2.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 生成svg二维码
+通过下面的代码可以生成svg格式的二维码。
+
+var svgElement = document.createElement(&#34;div&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateSVG(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+svgElement.appendChild(s);
+document.body.appendChild(svgElement); 
+
+生成后的代码如下：
+
+&amp;lt;svg viewBox=&#34;0 0 264 264&#34; style=&#34;shape-rendering:crispEdges&#34;&amp;gt;
+&amp;lt;style scoped=&#34;scoped&#34;&amp;gt;.bg{fill:#FFFFFF}.fg{fill:#373737}&amp;lt;/style&amp;gt;
+&amp;lt;rect class=&#34;bg&#34; fill=&#34;none&#34; x=&#34;0&#34; y=&#34;0&#34; width=&#34;264&#34; height=&#34;264&#34;&amp;gt;&amp;lt;/rect&amp;gt;
+&amp;lt;rect class=&#34;fg&#34; fill=&#34;none&#34; x=&#34;32&#34; y=&#34;32&#34; width=&#34;8&#34; height=&#34;8&#34;&amp;gt;&amp;lt;/rect&amp;gt;
+...
+&amp;lt;/svg&amp;gt;
+
+
+ 生成Data URI SVG格式的二维码
+通过下面的代码可以生成Data URI SVG格式的二维码。
+
+if (document.implementation.hasFeature(&#34;http://www.w3.org/2000/svg&#34;,&#34;1.1&#34;)) {
+var dataUriSvgImage = document.createElement(&#34;img&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateSVG(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+var XMLS = new XMLSerializer();
+s = XMLS.serializeToString(s);
+s = &#34;data:image/svg+xml;base64,&#34; + window.btoa(unescape(encodeURIComponent(s)));
+dataUriSvgImage.src = s;
+document.body.appendChild(dataUriSvgImage);
+}
+
+生成后的代码如下：
+
+&amp;lt;img src=&#34;data:image/svg+xml;base64,...&#34;&amp;gt;
+
+
+ 生成Data URI PNG格式的二维码
+通过下面的代码可以生成Data URI PNG格式的二维码。
+
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generatePNG(u, {
+ecclevel: &#34;M&#34;,
+format: &#34;html&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+dataUriPngImage.src = s;
+document.body.appendChild(dataUriPngImage); 
+
+生成后的代码如下：
+
+&amp;lt;img src=&#34;data:image/png;base64,...&#34;&amp;gt;
+
+
+ 生成表格格式的二维码
+通过下面的代码可以生成表格元素格式的二维码。
+
+var htmlTable = document.createElement(&#34;div&#34;),
+u = &#34;http://www.htmleaf.com/&#34;,
+s = QRCode.generateHTML(u, {
+ecclevel: &#34;M&#34;,
+fillcolor: &#34;#FFFFFF&#34;,
+textcolor: &#34;#373737&#34;,
+margin: 4,
+modulesize: 8
+});
+htmlTable.appendChild(s);
+document.body.appendChild(htmlTable);
+
+生成后的代码如下：
+
+&amp;lt;table style=&#34;border:32px solid #FFFFFF;background:#FFFFFF&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; border=&#34;0&#34;&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td style=&#34;width:8px;height:8px;background:#373737&#34;&amp;gt;&amp;lt;/td&amp;gt;
+...
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+qrjs2.js二维码生成插件的github地址为：https://github.com/englishextra/qrjs2
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_481">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_482">
+                        前端jquery生成验证码插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_482" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1707/201707181454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ClientSideCaptcha是一款前端jquery生成验证码插件。该验证码插件完全由js生成。通过该插件，可以不依赖于后台，在前端完成验证码的测试工作。
+内容：
+
+
+简要教程
+
+
+ClientSideCaptcha是一款前端jquery生成验证码插件。该验证码插件完全由js生成。通过该插件，可以不依赖于后台，在前端完成验证码的测试工作。
+
+ 使用方法
+在页面中引入jquery和client\_captcha.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/client\_captcha.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+一个完整的图片验证码的HTML结构如下：
+
+&amp;lt;div class=&#34;captcha-chat&#34;&amp;gt;
+&amp;lt;div class=&#34;captcha-container media&#34;&amp;gt;
+&amp;lt;div class=&#34;media-body&#34;&amp;gt;
+&amp;lt;p class=&#34;security&#34;&amp;gt;请输入验证码：&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;captcha&#34;&amp;gt;
+&amp;lt;div class=&#34;controls&#34;&amp;gt;
+&amp;lt;input class=&#34;user-text btn-common&#34; placeholder=&#34;输入验证码&#34; type=&#34;text&#34; /&amp;gt;
+&amp;lt;button class=&#34;validate btn-common&#34;&amp;gt;
+&amp;lt;!-- this image should be converted into inline svg --&amp;gt;
+&amp;lt;img src=&#34;img/enter\_icon.png&#34; alt=&#34;submit icon&#34;&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;button class=&#34;refresh btn-common&#34;&amp;gt;
+&amp;lt;!-- this image should be converted into inline svg --&amp;gt;
+&amp;lt;img src=&#34;img/refresh\_icon.png&#34; alt=&#34;refresh icon&#34;&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p class=&#34;wrong info&#34;&amp;gt;输入错误，请重试！&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery验证码插件。
+
+var captcha = new $.Captcha({ //initialize captcha
+selector: &#34;#captcha&#34;,
+text: null,
+randomText: true,
+randomColours: true,
+width: 244,
+height: 163,
+colour1: null,
+colour2: null,
+font: &#39;normal 40px &#34;Comic Sans MS&#34;, cursive, sans-serif&#39;,
+onFailure: function() {
+ alert(&#34;Failure!&#34;);
+},
+onSuccess: function() {
+ alert(&#34;验证码输入成功！&#34;);
+}
+});
+captcha.generate(); //Generate or refresh captcha
+captcha.validate(); //validate filled captcha
+
+该前端jquery生成验证码插件的github网址为：https://github.com/AnupamKhosla/ClientSideCaptcha
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_482">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_483">
+                        简单的jquery进度条插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_483" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1705/201705261459.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+LineProgressbar.js是一款最简单的jquery进度条插件。通过LineProgressbar.js可以创建带动画效果的线性进度条，你可以配置进度条的颜色，高度，圆角等属性。
+内容：
+
+
+简要教程
+
+
+LineProgressbar.js是一款最简单的jquery进度条插件。通过LineProgressbar.js可以创建带动画效果的线性进度条，你可以配置进度条的颜色，高度，圆角等属性。
+
+ 使用方法
+在页面中引入jquery.lineProgressbar.css和jquery.lineProgressbar.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/jquery.lineProgressbar.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/js/circleMagic.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;作为进度条的容器。
+
+&amp;lt;div id=&#34;progressbar1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下LineProgressbar()方法来初始化该jquery进度条插件。
+
+$(&#39;#progressbar1&#39;).LineProgressbar(); 
+
+
+ 配置参数
+LineProgressbar.js进度条插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+percentage
+int
+null
+定义进度条的百分比数。
+
+
+ShowProgressCount
+boolean
+true
+定义是否显示百分比数值。
+
+
+duration
+int
+1000
+定义进度条动画的速度。默认为1000毫秒。可以使用整数值孟获关键字：slow或fast。
+
+
+fillBackgroundColor
+string
+&#39;#3498db&#39;
+定义进度条的背景填充色。
+
+
+backgroundColor
+string
+&#39;#EEEEEE&#39;
+定义进度条的背景色。
+
+
+radius
+string
+&#39;0px&#39;
+定义进度条的圆角。
+
+
+height
+string
+&#39;10px&#39;
+定义进度条的高度。
+
+
+width
+string
+&#39;100\%&#39;
+定义进度条的宽度。
+
+
+
+
+LineProgressbar.js进度条插件的github地址为：https://github.com/kingRayhan/LineProgressbar
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_483">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_484">
+                        jquery tabs选项卡设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_484" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1706/201706291544.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于bootstrap的简单jquery tabs选项卡美化效果。该tabs选项卡美观大方，使用简单，适用于多种网页场景。
+内容：
+
+
+简要教程
+
+
+这是一款基于bootstrap的简单jquery tabs选项卡美化效果。该tabs选项卡美观大方，使用简单，适用于多种网页场景。
+
+ 使用方法
+在页面中引入jquery和bootstrap相关文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap.min.css&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该tabs选项卡的HTML结构如下：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-offset-3 col-md-6&#34;&amp;gt;
+&amp;lt;div class=&#34;tab&#34; role=&#34;tabpanel&#34;&amp;gt;
+&amp;lt;!-- Nav tabs --&amp;gt;
+&amp;lt;ul class=&#34;nav nav-tabs&#34; role=&#34;tablist&#34;&amp;gt;
+&amp;lt;li role=&#34;presentation&#34; class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;#Section1&#34; aria-controls=&#34;home&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 1&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section2&#34; aria-controls=&#34;profile&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 2&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li role=&#34;presentation&#34;&amp;gt;&amp;lt;a href=&#34;#Section3&#34; aria-controls=&#34;messages&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&amp;gt;Section 3&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;!-- Tab panes --&amp;gt;
+&amp;lt;div class=&#34;tab-content tabs&#34;&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade in active&#34; id=&#34;Section1&#34;&amp;gt;
+&amp;lt;h3&amp;gt;选项卡标题一&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;选项卡内容一&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade&#34; id=&#34;Section2&#34;&amp;gt;
+&amp;lt;h3&amp;gt;选项卡标题二&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;选项卡内容二&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane fade&#34; id=&#34;Section3&#34;&amp;gt;
+&amp;lt;h3&amp;gt;选项卡标题三&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;选项卡内容三&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+通过下面的CSS代码来美化该tabs选项卡。
+
+a:hover,a:focus{
+outline: none;
+text-decoration: none;
+}
+.tab .nav-tabs{
+border-bottom: none;
+position: relative;
+}
+.tab .nav-tabs li{
+margin-right: 60px;
+z-index: 1;
+}
+.tab .nav-tabs li:after{
+content: &#34;&#34;;
+width: 100\%;
+border: 1px solid #ccc6c6;
+position: absolute;
+top: 50\%;
+right: -60\%;
+z-index: -1;
+}
+.tab .nav-tabs li:last-child:after{
+border: none;
+}
+.tab .nav-tabs li a{
+display: block;
+padding: 15px 20px;
+background: #fff;
+font-size: 15px;
+font-weight: 600;
+color: #956cae;
+text-transform: uppercase;
+border-radius: 0;
+margin-right: 0;
+border: 2px solid #956cae;
+position: relative;
+overflow: hidden;
+z-index: 1;
+transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li a:hover{
+color: #fff;
+border: 2px solid #956cae;
+}
+.tab .nav-tabs li a:after{
+content: &#34;&#34;;
+display: block;
+width: 100\%;
+height: 0;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li.active a:after,
+.tab .nav-tabs li a:hover:after{
+height: 100\%;
+background: #956cae;
+}
+.tab .tab-content{
+padding: 20px 10px;
+margin-top: 0;
+font-size: 14px;
+color: #999;
+line-height: 26px;
+}
+.tab .tab-content h3{
+font-size: 24px;
+margin-top: 0;
+}
+@media only screen and (max-width: 767px){
+.tab .nav-tabs li{ margin: 0 25px 0 0; }
+}
+@media only screen and (max-width: 479px){
+.tab .nav-tabs li{
+width: 100\%;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.tab .nav-tabs li:after{
+width: 0;
+height: 100\%;
+top: auto;
+bottom: -60\%;
+right: 50\%;
+}
+} 
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_484">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_485">
+                        js和CSS3鼠标hover菜单文字特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_485" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1708/201708021502.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款js和CSS3鼠标hover菜单文字特效。该文字特效是在鼠标滑过菜单文字时，使用js和CSS3为单独的字母制作各种动画效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款js和CSS3鼠标hover菜单文字特效。该文字特效是在鼠标滑过菜单文字时，使用js和CSS3为单独的字母制作各种动画效果，非常炫酷。
+该鼠标hover菜单文字特效使用了大量新的CSS3特性，如css grid和css变量，因此不是所有的浏览器都支持该特效。
+下面是该鼠标hover菜单文字特效的一些截图效果：
+
+
+
+
+该鼠标hover菜单文字特效的github地址为：https://github.com/codrops/MenuHoverEffects/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_485">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/102/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/104/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

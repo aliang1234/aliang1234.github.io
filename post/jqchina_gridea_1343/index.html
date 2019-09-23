@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带loading指示器的js提交按钮动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带loading指示器的js提交按钮动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1503/201503101526.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503101526.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503101495.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Ladda是一款内置Loading指示器和进度条的提交js按钮特效插件。该js按钮特效用于制作提交按钮，在点击按钮后，按钮上会出现无限循环的Loading指示器和加载进度条效果。这种设计大大增强了用户的体验性。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Ladda是一款内置Loading指示器和进度条的提交js按钮特效插件。该js按钮特效用于制作提交按钮，在点击按钮后，按钮上会出现无限循环的Loading指示器和加载进度条效果。这种设计大大增强了用户的体验性。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>你可以使用<code>bower install ladda</code>或<code>npm install ladda</code>来安装该js按钮插件。指示器和Ladda可以通过AMD作为一个module来调用：</p>
+<pre class="brush:js">
+// Using Require.js
+define(['ladda'], function(Ladda) {
+// Make Buttons Here
+});
+</pre>
+<p>或在Common.js中，你可以：</p>
+<pre class="brush:js">
+var ladda = require('Ladda/dist/ladda.min');
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>该js按钮特效在使用时要引入<code>ladda.min.js</code>和<code>spin.min.js</code>文件，如果你想要和DEMO中一样的按钮样式，可以使用<code>ladda.min.css</code>样式文件，如果你只是需要按钮的功能而不需要样式，可以使用<code>ladda-themeless.min.css</code>文件。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>Ladda js按钮特效必须在按钮上使用class <code>ladda-button</code>，按钮的标签使用<code>ladda-label</code>作为class。如果在DOM中不存在，<code>ladda-label</code>会自动创建。下面的代码是向右扩展的进度条动画的按钮代码：</p>
+<pre class="brush:html">
+&lt;button class="ladda-button" data-style="expand-right"&gt;&lt;span class="ladda-label"&gt;Submit&lt;/span&gt;&lt;/button&gt; 
+</pre>
+<p>按钮接收3个参数：</p>
+<ul>
+<li>
+<span class="m">data-style</span>：按钮的某个样式，所有的样式前查看DEMO。</li>
+<li>
+<span class="m">data-color</span>：green/red/blue/purple/mint。</li>
+<li>
+<span class="m">data-size</span>： xs/s/l/xl,默认值是中等大小。</li>
+<li>
+<span class="m">data-spinner-size</span>： 直径40像素，默认会依据按钮的尺寸动态调整。</li>
+<li>
+<span class="m">data-spinner-color</span>： hex颜色代码或<a href="http://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/" target="\_blank">css 颜色名称</a>。</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>如果你是在一个表单中使用该js按钮来向服务器提交信息，你可以使用<code>bind()</code>方法来提交信息：</p>
+<pre class="brush:js">
+// Automatically trigger the loading animation on click
+Ladda.bind( 'input[type=submit]' );
+<p>// Same as the above but automatically stops after two seconds<br>
+Ladda.bind( 'input[type=submit]', { timeout: 2000 } );<br>
+</pre></p>
+<p>如果你想使用javascript来控制该js按钮特效,可以使用下面的方法：</p>
+<pre class="brush:js">
+// Create a new instance of ladda for the specified button
+var l = Ladda.create( document.querySelector( '.my-button' ) );
+<p>// Start loading<br>
+l.start();</p>
+<p>// Will display a progress bar for 50% of the button width<br>
+l.setProgress( 0.5 );</p>
+<p>// Stop loading<br>
+l.stop();</p>
+<p>// Toggle between loading/not loading states<br>
+l.toggle();</p>
+<p>// Check the current state<br>
+l.isLoading();</p>
+<p>// Delete the button's ladda instance<br>
+l.remove();<br>
+</pre></p>
+<p>页面上所用的loading加载动画可以通过下面的方法来停止：</p>
+<pre class="brush:js">
+Ladda.stopAll();
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 与jQuery结合使用</h5>
+<p>该js按钮特效可以和<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>完美结合，如果你是在一个表单中使用该js按钮来向服务器提交信息，你可以使用<code>ladda('bind')</code>方法来提交信息：</p>
+<pre class="brush:js">
+// Automatically trigger the loading animation on click
+$( 'input[type=submit]' ).ladda( 'bind' );
+<p>// Same as the above but automatically stops after two seconds<br>
+$( 'input[type=submit]' ).ladda( 'bind', { timeout: 2000 } );<br>
+</pre></p>
+<p>如果你想使用jQuery来控制该js按钮特效,可以使用下面的方法：</p>
+<pre class="brush:js">
+// Create a new instance of ladda for the specified button
+var l = $( '.my-button' ).ladda();
+<p>// Start loading<br>
+l.ladda( 'start' );</p>
+<p>// Will display a progress bar for 50% of the button width<br>
+l.ladda( 'setProgress', 0.5 );</p>
+<p>// Stop loading<br>
+l.ladda( 'stop' );</p>
+<p>// Toggle between loading/not loading states<br>
+l.ladda( 'toggle' );</p>
+<p>// Check the current state<br>
+l.ladda( 'isLoading' );<br>
+</pre></p>
+<p>页面上所用的loading加载动画可以通过下面的方法来停止：</p>
+<pre class="brush:js">
+$.ladda( 'stopAll' ); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<p>该js按钮特效插件在Chrome和Firefox上进行了测试。它可以很好的工作在当前最新版本的Chrome, Firefox, Safari和IE9+浏览器上。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503101526.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503101495.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1344">
+                                <h3 class="post-title">
+                                    基于Bootstrap 3的jQuery日期时间选择器
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

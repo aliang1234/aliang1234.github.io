@@ -1,0 +1,915 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Tabulator-基于jQuery UI的实用表格插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Tabulator-基于jQuery UI的实用表格插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1512/201512261717.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512261717.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512262955.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Tabulator是一款非常实用的基于jQuery UI的表格插件。Tabulator表格插件可以快速的使用JSON数据来创建表格，它没有任何外部依赖的CSS样式和图片，使用非常简单。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Tabulator是一款非常实用的基于jQuery UI的表格插件。Tabulator表格插件可以快速的使用JSON数据来创建表格，它没有任何外部依赖的CSS样式和图片，使用非常简单。它的特点还有：</p>
+<ul>
+<li>可以加载JSON，数组或AJAX数据。</li>
+<li>支持表格列排序。</li>
+<li>表格单元格可编辑。</li>
+<li>可以添加和删除表格行。</li>
+<li>可以自定义数据格式。</li>
+<li>可以对表格数据进行过滤。</li>
+<li>表格列可以用鼠标拖拽拉伸或缩小。</li>
+<li>自动缩放来匹配数据/元素。</li>
+<li>支持多种可选的表格主题。</li>
+<li>自定义点击和上下文事件。</li>
+<li>丰富的回调函数。</li>
+</ul>
+<p><img src="http://img.htmleaf.com/1512/tabulator\_table.jpg" alt="Tabulator表格插件预览图" width="650" height="250"></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该Jquery UI表格插件需要引入<a href="http://www.htmleaf.com/jQuery/">jQuery</a>、jQuery UI相关文件和tabulator.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="js/jquery-ui-11.4/jquery-ui.theme.min.css"&gt;
+&lt;script type="text/javascript" src="js//jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery-ui-11.4/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/tabulator.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>可以使用一个空的<code>&lt;div&gt;</code>作为Tabulator表格的容器。</p>
+<pre class="brush:html">
+&lt;div id="example-table"&gt;&lt;div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素初加载完毕之后可以通过<code>tabulator()</code>方法来初始化表格。</p>
+<pre class="brush:js">
+$("#example-table").tabulator();
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 定义表格头</h5>
+<p>可以通过在初始化的时候在<code>columns</code>参数中传入一个数组或JSON对象来定义表格的表格头。</p>
+<pre class="brush:js">
+$("#example-table").tabulator({
+columns:[
+{title:"Name", field:"name", sortable:true, sorter:"string", width:200, editable:true},
+{title:"Age", field:"age", sortable:true, sorter:"number", align:"right", formatter:"progress"},
+{title:"Gender", field:"gender", sortable:true, sorter:"string", onClick:function(e, val, cell, row){console.log("cell click")},},
+{title:"Height", field:"height", sortable:true, formatter:"star", align:"center", width:100},
+{title:"Favourite Color", field:"col", sorter:"string", sortable:false},
+{title:"Date Of Birth", field:"dob", sortable:true, sorter:"date", align:"center"},
+{title:"Cheese Preference", field:"cheese", sortable:true, sorter:"boolean", align:"center", formatter:"tickCross"},
+],
+});
+</pre>
+<p>可以传入表格列中的参数有：</p>
+<ul>
+<li>
+<code>title</code>：必选参数。显示在表格列的标题。</li>
+<li>
+<code>field</code>：必选参数（在图标/按钮列非必选项）。该列数据数组的key值。</li>
+<li>
+<code>align</code>：设置表格列的对齐方式。（left|center|right）</li>
+<li>
+<code>width</code>：设置表格列的宽度。（如果不设置系统会自动设置）</li>
+<li>
+<code>sortable</code>：用户是否可以对表格列进行排序。</li>
+<li>
+<code>sorter</code>：用于决定列排序的方式。（参看下面的表格排序介绍）</li>
+<li>
+<code>formatter</code>：设置数据的格式。（参看下面的表格数据格式介绍）</li>
+<li>
+<code>onClick</code>：当用户点击了列中的某个单元格时的回调函数。</li>
+<li>
+<code>editable</code>：决定表格数据是否可编辑，布尔值，默认为false。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 设置表格数据</h3>
+<p>Tabulator的行数据使用一组对象来定义，也可以使用AJAX从URL中传入一个数组或JSON格式的字符串来定义。</p>
+<p>可以使用<code>columns</code>参数来定义多个表格列，它会对数据进行排序，但不会立刻渲染到屏幕中。</p>
+<p>每一行的数据必须有一个唯一的ID标识符，如果没有，Tabluator会自动为你添加一个。</p>
+<p>下面是一个使用JSON数据的例子：</p>
+<pre class="brush:js">
+[
+{id:1, name:"Billy Bob", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1},
+{id:2, name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true},
+{id:3, name:"Christine Lobowski", age:"42", height:0, col:"green", dob:"22/05/1982", cheese:"true"},
+{id:4, name:"Brendon Philips", age:"125", gender:"male", height:1, col:"orange", dob:"01/08/1980"},
+{id:5, name:"Margret Marmajuke", age:"16", gender:"female", height:5, col:"yellow", dob:"31/01/1999"},
+{id:6, name:"Billy Bob", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1},
+{id:7, name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true},
+{id:8, name:"Christine Lobowski", age:"42", height:0, col:"green", dob:"22/05/1982", cheese:"true"},
+{id:9, name:"Brendon Philips", age:"125", gender:"male", height:1, col:"orange", dob:"01/08/1980"},
+{id:10, name:"Margret Marmajuke", age:"16", gender:"female", height:5, col:"yellow", dob:"31/01/1999"},
+]
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用数组设置数据</h5>
+<p>你可以使用<code>setData</code>直接传入一个数组来作为表格的数据。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setData",[
+{id:1, name:"Billy Bob", age:"12", gender:"male", height:1, col:"red", dob:"", cheese:1},
+{id:2, name:"Mary May", age:"1", gender:"female", height:2, col:"blue", dob:"14/05/1982", cheese:true},
+]);
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用AJAX设置数据</h5>
+<p>如果你的数据来自于远程服务器，可以在<code>setData</code>中传入URL地址，插件会使用AJAX的方式来处理请求。URL可以是相对地址也可以是绝对地址。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setData","http://www.getmydata.com/now");
+</pre>
+<p>JSON格式数据必须是格式化数组对象。</p>
+<p>如果你的数据都是通过URL获取的，你可以在初始化的时候通过<code>ajaxURL</code>参数来设置URL地址。</p>
+<pre class="brush:js">
+$("#example-table").tabulator({
+ajaxURL:"http://www.getmydata.com/now",
+});
+</pre>
+<p>然后可以通过<code>setData</code>在任何时候刷新表格数据。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setData");
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 数据排序</h3>
+<p>默认情况下所有的表格列都可以对列进行排序。你可以通过<code>sortable</code>参数来设置列是否可以排序。</p>
+<pre class="brush:js">
+$("#example-table").tabulator({
+sortable:false, // boolean值 (默认为true)
+});
+<p>// 你可以对单一的行使用sortable参数<br>
+{title:&quot;Name&quot;, field:&quot;name&quot;, sortable:true, sorter:&quot;string&quot;}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 排序类型</h5>
+<p>默认情况下数据按字符串进行排序。如果你希望使用不同的排序方式，可以在列数据中使用<code>sorter</code>参数来进行设置。</p>
+<p>Tabulator预定义了一些数据排序方式，它们是：</p>
+<ul>
+<li>
+<code>string</code>：按字符串的字母对列进行排序。</li>
+<li>
+<code>number</code>：按数值的大小对列进行排序。（可以是整数或浮点数，也可以处理使用<code>,</code>分割的数字）。</li>
+<li>
+<code>alphanum</code>：按alpha numeric code对列进行排序。</li>
+<li>
+<code>boolean</code>：按布尔值对列进行排序。</li>
+<li>
+<code>date</code>：按日期对列进行排序（使用这种排序方式你必须在创建表格时使用<code>dateFormat</code>来设置日期格式，默认的日期格式为：<code>dd/mm/yyyy</code>）。</li>
+</ul>
+<pre class="brush:js">
+{title:"Name", field:"name", sortable:true, sorter:function(a, b){
+// a 和 b是两个要进行比较的值
+// 返回值大于0时a大于b，返回值等于0时它们相等，返回值小于0时a小于b
+return a - b;
+},
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 表格加载后的排序</h5>
+<p>在数据加载到表格中的时候可以设置按某个指定列来进行排序。可以通过参数<code>sortBy</code>或<code>sortDir</code>来完成这个操作。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 格式化数据</h3>
+<p>Tabulator允许你对表格数据进行自由的格式化。</p>
+<p>你可以在每一列上使用<code>formatter</code>参数来设置该列的数据格式。</p>
+<pre class="brush:js">
+{title:"Name", field:"name", formatter:"tick"}
+</pre>
+<p>Tabulator包括下面一些预定义的数据格式。</p>
+<ul>
+<li>
+<code>money</code>：将数值格式为货币格式，例如：1234567.8901 -&gt; 1,234,567.89。</li>
+<li>
+<code>email</code>：将数据作为锚链接使用mailto链接到一个邮件地址上。</li>
+<li>
+<code>link</code>：将数据作为锚链接链接到指定的地址上。</li>
+<li>
+<code>tick</code>：如果值为：true|'true'|'True'|1，则显示一个绿色的小勾，否则什么都不显示。</li>
+<li>
+<code>tickCross</code>：如果值为：true|'true'|'True'|1，则显示一个绿色的小勾，否则显示一个红色的小叉。</li>
+<li>
+<code>star</code>：显示0-5颗星级评分。</li>
+<li>
+<code>progress</code>：在单元格值从左到右显示一个进度条，值为宽度的0-100\%。</li>
+</ul>
+<pre class="brush:js">
+{title:"Name", field:"name", formatter:function(value, data, cell, row, options){
+//value - 单元格的值
+//data - 单元格所在的列的数据
+//cell - 单元格的DOM元素
+//row - 行的DOM元素
+//options - 参数
+//must return the html or jquery element of the html for the contents of the cell;
+return "&lt;div&gt;&lt;/div&gt;";
+},
+}
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> icon/按钮列</h5>
+<p>你可以在列数据值传入<code>field</code>来设置icon/按钮列，并为列内容自定义格式。下面的例子在每一列的开头行显示一个打印机图标。</p>
+<pre class="brush:js">
+//custom formatter definition
+var printIcon = function(value, data, cell, row, options){ //plain text value
+return "&lt;i class='fa fa-print'&gt;&lt;/i&gt;"
+};
+<p>//column definition in the columns array<br>
+{formatter:printIcon, width:40, align:&quot;center&quot;, onClick:function(e, cell, val, row){alert(&quot;打印行数据: &quot; + row.name)}},<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 数据过滤</h3>
+<p>Tabulator允许你对任何字段进行过滤。</p>
+<p>你可以通过<code>setFilter</code>方法来调用设置过滤器。在方法中传入你需要过滤的字段，比较类型和值。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setFilter", "age", "&gt;", 10);
+</pre>
+<p>Tabulator内置了一些可用的过滤类型。</p>
+<ul>
+<li>
+<code>=</code>：只有当行的内容和过滤内个相等时才显示。</li>
+<li>
+<code>&lt;</code>：只有当值小于过滤值时才显示。</li>
+<li>
+<code>&gt;=</code>：只有当值大于或等于过滤值时才显示。</li>
+<li>
+<code>&gt;</code>：只有当值大于过滤值时才显示。</li>
+<li>
+<code>&lt;=</code>：只有当值小于等于过滤值时才显示。</li>
+<li>
+<code>！=</code>：只有当值不等于过滤值时才显示。</li>
+<li>
+<code>like</code>：当在指定的字段中包含指定的值时句显示这些行。</li>
+</ul>
+<p>默认情况下，tabulator会假设你使用<code>=</code>来作为过滤器。你也可以使用下面的简写方式：</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setFilter", "name", "bob");
+</pre>
+<p>你每次只能调用一个过滤器，第二次调用会覆盖前面的过滤器。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 获取当前的过滤器</h5>
+<p>可以使用<code>getFilter</code>方法来获取当前表格中使用的过滤器。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("getFilter");
+</pre>
+<p>如果没有设置过滤器，则会返回<code>false</code>。否则会返回一个包含过滤器信息的对象。</p>
+<pre class="brush:js">
+{
+"field":"age",
+"type":"&gt;",
+"value":10,
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 清除过滤器</h5>
+<p>你可以通过<code>clearFilter</code>方法来清除过滤器。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("clearFilter");
+</pre>
+<p>你也可以通过设置不带值的<code>setFilter</code>方法来清除过滤器。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("setFilter");
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 管理数据</h3>
+<p>可以通过<code>editable</code>参数来设置表格是否可以进行编辑。当用户点击了一个可以编辑的表格列，他将可以修改单元格中的内容（只有文本内容可以被编辑）。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 添加表格行</h5>
+<p>你可以在任何时候使用<code>addRow</code>方法来添加表格行。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("addRow", {name:"Billy Bob", age:"12", gender:"male", height:1});
+</pre>
+<p>如果你没有为一个列传入数据，将产生一个空列。要制作一个空行，可以在方法中插入一个空的对象。</p>
+<p>默认情况下，新行会被添加到表格的最后面，可以通过<code>addRowPos</code>参数设置为<code>top</code>来在表格第一行前插入新行。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 删除表格行</h5>
+<p>你可以使用<code>deleteRow</code>来删除一个表格行。</p>
+<pre class="brush:js">
+$("#example-table").tabulator("deleteRow", 15);
+</pre>
+<p>你也可以在参数中插入要删除的行的ID或代表行的数据对象来删除行。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 检索数据</h5>
+<p>你可以使用<code>getData</code>方法来检索存储在表格中的数据。</p>
+<pre class="brush:js">
+var data = $("#example-table").tabulator("getData"); 
+</pre>
+<p>该方法返回包含表格中每一行的数据对象的数组。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 数据布局</h3>
+<p>Tabulator有两种不同的布局样式。</p>
+<ul>
+<li>数据适配（默认）。</li>
+<li>容器适配。</li>
+</ul>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 数据适配(Fit Columns to data)</h5>
+<p>这是表格的默认布局方式，它会将列扩展到内完全放置内容的宽度，这将使得表格的实际宽度大于容器的宽度，此时会有一个滚动条出现。</p>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 容器适配(Fit columns to container)</h5>
+<p>这种布局会调整列的宽度使整个表格包含在容器中。</p>
+<p>如果任何列中指定了宽度，那么这个列会根据这个宽度来设置，其它列则根据这个列来进行自动调整。如果没有足够的空间来容纳所有的列，则会忽略所有已经设置的表格列宽度。</p>
+<p>要使用这种布局可以将<code>fitColumns</code>参数设置为<code>true</code>。</p>
+<pre class="brush:js">
+$("#example-table").tabulator({
+fitColumns:true, // this option takes a boolean value (default = false)
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 可调整宽度的列</h5>
+<p>默认情况下可以通过拖动表格头的边框来改变列的宽度。要禁用这个选项可以在创建表格的时候设置<code>colResizable</code>为<code>false</code>。</p>
+<pre class="brush:js">
+$("#example-table").tabulator({
+colResizable:false, // this option takes a boolean value (default = true)
+});
+</pre>
+ <h5>
+<span class="glyphicon glyphicon-paperclip"></span> 最小宽度列度</h5>
+ <p>可以通过设置最小列宽来防止拖动列的宽度小于这个宽度。可以通过在创建表格的时候通过<code>colMinWidth</code>参数来设置最小宽度值。</p>
+ <pre class="brush:js">
+$("#example-table").tabulator({
+colMinWidth:80, //Minimum column width in px (default = 40)
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 重绘表格</h5>
+<p>如果包含在Tabulator表格中的元素的尺寸改变了，有必要重绘表格以确保每一列都匹配新的坐标。可以通过<code>redraw</code>方法来重绘表格。</p>
+<pre class="brush:js">
+$(window).resize(function(){
+$("#example-table").tabulator("redraw");
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 排序初始化数据参数</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sortBy</td>
+<td>string</td>
+<td>"id"</td>
+<td>要排序的字段的名称</td>
+</tr>
+<tr>
+<td>sortDir</td>
+<td>string</td>
+<td>"DESC"</td>
+<td>升序或降序排列（ASC 或 DESC）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 添加行配置参数</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addRowPos</td>
+<td>string</td>
+<td>"bottom"</td>
+<td>在什么位置添加一个新行，"top"或"bottom"</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 表格主题配置参数</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backgroundColor</td>
+<td>string</td>
+<td>#888</td>
+<td>背景颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>borderColor</td>
+<td>string</td>
+<td>#999</td>
+<td>边框的颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>textSize</td>
+<td>int/string</td>
+<td>14</td>
+<td>表格中的字体大小</td>
+</tr>
+<tr>
+<td>headerBackgroundColor</td>
+<td>string</td>
+<td>#e6e6e6</td>
+<td>表格头单元格的背景色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>headerTextColor</td>
+<td>string</td>
+<td>#555</td>
+<td>表格头的字体颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>headerBorderColor</td>
+<td>string</td>
+<td>#aaa</td>
+<td>表格头的边框颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>headerSeperatorColor</td>
+<td>string</td>
+<td>#999</td>
+<td>表格头的底部边框颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>headerMargin</td>
+<td>int/string</td>
+<td>4</td>
+<td>表格头单元格的margin值，单位像素</td>
+</tr>
+<tr>
+<td>sortArrows</td>
+<td>object</td>
+<td></td>
+<td>包含2种主题的排序小箭头的对象</td>
+</tr>
+<tr>
+<td>rowBackgroundColor</td>
+<td>string</td>
+<td>#fff</td>
+<td>表格行的背景色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>rowBorderColor</td>
+<td>string</td>
+<td>#fff</td>
+<td>表格行边框的颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>rowTextColor</td>
+<td>string</td>
+<td>#333</td>
+<td>表格行文本的颜色，任何有效的css颜色值</td>
+</tr>
+<tr>
+<td>rowHoverBackground</td>
+<td>string</td>
+<td>#bbb</td>
+<td>鼠标滑过时表格单元行的颜色，任何有效的css颜色值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>排序箭头的主题</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>active</td>
+<td>string</td>
+<td>#666</td>
+<td>当前排序列的排序箭头</td>
+</tr>
+<tr>
+<td>inactive</td>
+<td>string</td>
+<td>#bbb</td>
+<td>未排序列的排序箭头</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 表格尺寸配置参数</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>height</td>
+<td>string/int</td>
+<td>false</td>
+<td>设置容器元素的高度，如果设置为false，则自动匹配表格元素的高度。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 style="text-tranform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> Data Loaders</h5>
+<p>在表格数据加载的时候，会显示一个lopading遮罩层，它包含一个模态背景和一个加载指示器。加载指示器可以通过参数进行设置，它必须是一个<code>display:inline-block</code>样式的div元素。</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>数据类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>showLoader</td>
+<td>boolean</td>
+<td>true</td>
+<td>数据加载时是否显示指示器</td>
+</tr>
+<tr>
+<td>loader</td>
+<td>string</td>
+<td>html（参考下面）</td>
+<td>指示器的HTML元素</td>
+</tr>
+<tr>
+<td>loaderError</td>
+<td>string</td>
+<td>html（参考下面）</td>
+<td>加载出错时的HTML元素</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>默认的loader元素：</p>
+<pre class="brush:html">
+&lt;div style='display:inline-block; border:4px solid #333;
+ border-radius:10px; background:#fff; font-weight:bold; 
+ font-size:16px; color:#000; padding:10px 20px;'&gt;Loading Data&lt;/div&gt;
+</pre>
+<p>默认的loader error元素：</p>
+<pre class="brush:html">
+&lt;div style='display:inline-block; border:4px solid #D00; 
+ border-radius:10px; background:#fff; font-weight:bold; 
+ font-size:16px; color:#590000; padding:10px 20px;'&gt;Loading Error&lt;/div&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 回调函数</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 点击单元格的回调函数</h5>
+<p>在用户鼠标左键点击单元格时的回调函数，可以在列数据中通过<code>onClick</code>为每一列设置回调函数。</p>
+<pre class="brush:js">
+{title:"Name", field:"name", onClick:function(e, cell, value, data){
+//e - the click event object
+//cell - the DOM element of the cell
+//value - the value of the cell
+//data - the data for the row the cell is in
+},
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 添加表格行的回调函数</h5>
+<pre class="brush:js">
+$("#example-table").tabulator({
+rowAdded:function(data){
+//data - the data for the row
+},
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 编辑表格行的回调函数</h5>
+<pre class="brush:js">
+$("#example-table").tabulator({
+rowEdit:function(id, data, row){
+//id - the id of the row
+//data - the data for the row
+//row - the DOM element of the row
+},
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 删除表格行的回调函数</h5>
+<pre class="brush:js">
+$("#example-table").tabulator({
+rowDelete:function(id){
+//id - the id of the row
+},
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 表格行右键菜单的回调函数</h5>
+<pre class="brush:js">
+$("#example-table").tabulator({
+rowContext:function(e, id, data, row){
+//e - the click event object
+//id - the id of the row
+//data - the data for the row
+//row - the DOM element of the row
+},
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 数据加载完毕的回调函数</h5>
+<pre class="brush:js">
+$("#example-table").tabulator({
+dataLoaded:function(data){
+//data - the data for the row
+},
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>事件</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dataLoading</td>
+<td>数据被完全加载</td>
+</tr>
+<tr>
+<td>dataLoadError</td>
+<td>数据加载出错</td>
+</tr>
+<tr>
+<td>renderStarted</td>
+<td>表格开始渲染</td>
+</tr>
+<tr>
+<td>renderComplete</td>
+<td>表格渲染结束</td>
+</tr>
+<tr>
+<td>sortStarted</td>
+<td>开始排序</td>
+</tr>
+<tr>
+<td>sortComplete</td>
+<td>排序结束</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Tabulator表格插件的github地址：<a href="https://github.com/olifolkerd/tabulator" target="\_blank">https://github.com/olifolkerd/tabulator</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1512/201512261717.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201512262955.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_88">
+                                <h3 class="post-title">
+                                    jQuery鼠标吸附动画特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

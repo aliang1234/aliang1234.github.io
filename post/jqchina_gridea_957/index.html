@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    移动优先的响应式侧边栏导航菜单界面设计 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            移动优先的响应式侧边栏导航菜单界面设计
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1509/201509151643.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509151643.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509152577.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款移动优先的响应式侧边栏导航菜单界面设计效果。该侧边栏设计中提供了多级子菜单，菜单图标，激活状态子菜单，以及按钮的设计方案。来还额外提供了顶部导航的搜索框和右侧菜单的设计效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款移动优先的响应式侧边栏导航菜单界面设计效果。该侧边栏设计中提供了多级子菜单，菜单图标，激活状态子菜单，以及按钮的设计方案。来还额外提供了顶部导航的搜索框和右侧菜单的设计效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该侧边栏布局的HTML结构分为两个主要元素：一个<code>&lt;header&gt;</code>元素，包含网站的logo，搜索框和导航触发按钮（只在手机中可见）和顶部的导航按钮，另一个元素是<code>&lt;main&gt;</code>元素，它包含侧边栏菜单<code>nav.cd-side-nav</code>和页面内容<code>div.content-wrapper</code>。</p>
+<pre class="brush:html">
+&lt;header class="cd-main-header"&gt;
+&lt;a href="#0" class="cd-logo"&gt;&lt;img src="img/cd-logo.svg" alt="Logo"&gt;&lt;/a&gt;
+<p>&lt;div class=&quot;cd-search&quot;&gt;<br>
+&lt;form action=&quot;#0&quot;&gt;<br>
+&lt;input type=&quot;search&quot; placeholder=&quot;Search...&quot;&gt;<br>
+&lt;/form&gt;<br>
+&lt;/div&gt; &lt;!-- cd-search --&gt;</p>
+<p>&lt;a href=&quot;#0&quot; class=&quot;cd-nav-trigger&quot;&gt;Menu&lt;span&gt;&lt;/span&gt;&lt;/a&gt;</p>
+<p>&lt;nav class=&quot;cd-nav&quot;&gt;<br>
+&lt;ul class=&quot;cd-top-nav&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Tour&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Support&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;has-children account&quot;&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;<br>
+&lt;img src=&quot;img/cd-avatar.png&quot; alt=&quot;avatar&quot;&gt;<br>
+Account<br>
+&lt;/a&gt;</p>
+<p>&lt;ul&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;My Account&lt;/a&gt;&lt;/li&gt;<br>
+&lt;!-- other list items here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;<br>
+&lt;/header&gt; &lt;!-- .cd-main-header --&gt;</p>
+<p>&lt;main class=&quot;cd-main-content&quot;&gt;<br>
+&lt;nav class=&quot;cd-side-nav&quot;&gt;<br>
+&lt;ul&gt;<br>
+&lt;li class=&quot;cd-label&quot;&gt;Main&lt;/li&gt;<br>
+&lt;li class=&quot;has-children overview&quot;&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;Overview&lt;/a&gt;</p>
+<p>&lt;ul&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;All Data&lt;/a&gt;&lt;/li&gt;<br>
+&lt;!-- other list items here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/li&gt;<br>
+&lt;li class=&quot;has-children notifications active&quot;&gt;<br>
+&lt;a href=&quot;#0&quot;&gt;Notifications&lt;span class=&quot;count&quot;&gt;3&lt;/span&gt;&lt;/a&gt;</p>
+<p>&lt;ul&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot;&gt;All Notifications&lt;/a&gt;&lt;/li&gt;<br>
+&lt;!-- other list items here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;!-- other list items here --&gt;<br>
+&lt;/ul&gt;</p>
+<p>&lt;!-- other unordered lists here --&gt;<br>
+&lt;/nav&gt;</p>
+<p>&lt;div class=&quot;content-wrapper&quot;&gt;<br>
+&lt;!-- main content here --&gt;<br>
+&lt;/div&gt; &lt;!-- .content-wrapper --&gt;<br>
+&lt;/main&gt; &lt;!-- .cd-main-content --&gt;<br>
+</pre></p>
+<p>在大屏幕中，<code>.cd-search</code>和<code>.cd-top-nav</code>元素都在<code>&lt;header&gt;</code>元素中。但是在移动手机中，它们会被移动到<code>.cd-side-nav</code>元素中。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>该侧边栏布局的CSS样式中根据屏幕的尺寸设置了3种不同的侧边栏显示方案。</p>
+<p>在小屏幕设备中，侧边栏的宽度设置为100\%，使用绝对定位，默认是隐藏的。当用户点击（触摸）了<code>.cd-nav-trigger</code>按钮，侧边栏菜单才变为可见状态（通过<code>.nav-is-visible</code> class）。</p>
+<pre class="brush:css">
+.cd-side-nav {
+position: absolute;
+left: 0;
+top: 0;
+width: 100\%;
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+.cd-side-nav.nav-is-visible {
+opacity: 1;
+visibility: visible;
+transition: opacity 0.2s 0s, visibility 0s 0s;
+}
+</pre>
+<p>在中等尺寸的设备屏幕上（屏幕视口大于768px），默认会显示一个缩小版本的侧边栏菜单，它采用相对定位，宽度固定为110像素，并且左浮动是它位于<code>&lt;main&gt;</code>元素的左侧。</p>
+<pre class="brush:css">
+@media only screen and (min-width: 768px) {
+.cd-side-nav {
+position: relative;
+float: left;
+width: 110px;
+/* reset style */
+visibility: visible;
+opacity: 1;
+}
+}
+<p>@media only screen and (min-width: 768px) {<br>
+.cd-main-content .content-wrapper {<br>
+margin-left: 110px;<br>
+}<br>
+}<br>
+</pre></p>
+<p>在大屏幕设备屏幕上（视口大于1170px），会显示完整版本的侧边栏菜单。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>在初始的HTML结构中，<code>.cd-search</code>和<code>.cd-top-nav</code>元素都在<code>&lt;header&gt;</code>元素中。在小屏幕设备上（视口小于1170px），特效中将这些元素都移动到<code>.cd-side-nav</code>中。</p>
+<pre class="brush:js">
+var resizing = false;
+moveNavigation();
+$(window).on('resize', function(){
+ if( !resizing ) window.requestAnimationFrame(moveNavigation);
+});
+<p>function moveNavigation(){<br>
+var mq = checkMQ(); //this function returns mobile,tablet or desktop</p>
+<p>if ( mq == 'mobile' &amp;&amp; topNavigation.parents('.cd-side-nav').length == 0 ) { //topNavigation = $('.cd-top-nav')<br>
+detachElements();<br>
+topNavigation.appendTo(sidebar); //sidebar = $('.cd-side-nav')<br>
+searchForm.prependTo(sidebar);<br>
+} else if ( ( mq == 'tablet' || mq == 'desktop') &amp;&amp; topNavigation.parents('.cd-side-nav').length &gt; 0 ) {<br>
+detachElements();<br>
+searchForm.insertAfter(header.find('.cd-logo')); //header = $('.cd-main-header')<br>
+topNavigation.appendTo(header.find('.cd-nav'));<br>
+}<br>
+resizing = false;<br>
+}</p>
+<p>function detachElements() {<br>
+topNavigation.detach();//topNavigation = $('.cd-top-nav')<br>
+searchForm.detach();//searchForm = $('.cd-search')<br>
+}<br>
+</pre></p>
+<p>另外，该侧边栏菜单特效中还使用<a href="https://github.com/kamens/jQuery-menu-aim" target="\_blank">jQuery-menu-aim</a>插件来区分用户是想用鼠标滑过一个菜单项还是想进入一个子菜单（仅在桌面设备使用）。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509151643.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509152577.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_958">
+                                <h3 class="post-title">
+                                    仿Ken Burns效果jQuery幻灯片插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

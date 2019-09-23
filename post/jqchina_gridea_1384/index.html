@@ -1,0 +1,500 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery轻量级圆形进度指示器插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery轻量级圆形进度指示器插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1502/201502172119.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502172119.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502171390.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>radialIndicator是一款轻量级的jQuery圆形指示器插件。该圆形指示器插件支持颜色范围，动态修改值，格式化和百分比值等形式。它可以很好的和jQuery或angular js一起工作。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>radialIndicator是一款轻量级的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a><strong>圆形指示器</strong>插件。该圆形指示器插件支持颜色范围，动态修改值，格式化和百分比值等形式。它可以很好的和<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>或angular js一起工作。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中添加添加jQuery(可选)和radialIndicator.js文件：</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/radialindicator.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>圆形指示器的HTML结构使用一个<code>&lt;div&gt;即可。</code></p>
+<pre class="brush:html">
+&lt;div id="indicatorContainer"&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 调用插件</h5>
+<p>现在，可以用下面的方法调用最基本的圆形指示器：</p>
+<pre class="brush:js">
+$('#indicatorContainer').radialIndicator(); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 参数选项</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 语法</h5>
+<pre class="brush:js">
+$('#indicatorContainer5').radialIndicator({
+showPercentage : false // option
+});
+<p>//or using native javascript<br>
+var progObj = radialIndicator('#indicatorContainer5' , {<br>
+showPercentage : false // option<br>
+});<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 全局参数选项</h5>
+<pre class="brush:js">
+radialIndicator.defaults.radius = 80;
+radialIndicator.defaults.barColor = "#99CC33";
+</pre>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数名称</td>
+<td>参数类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radius</td>
+<td>number</td>
+<td>50</td>
+<td>定义圆形指示器的内部的圆的半径。</td>
+</tr>
+<tr>
+<td>barWidth</td>
+<td>number</td>
+<td>5</td>
+<td>定义圆形指示器的刻度条的宽度。</td>
+</tr>
+<tr>
+<td>barBgColor</td>
+<td>colour code in hex</td>
+<td>#eeeeee</td>
+<td>定义圆形指示器的刻度条的背景颜色。</td>
+</tr>
+<tr>
+<td>barColor</td>
+<td>object of colour range like ({0 : '#FF0000', 50 : '#FFFF00', 100 : '#0066FF',}) or color code in hex</td>
+<td>#99CC33</td>
+<td>定义渊声巷指示器的刻度条颜色。如果提供一个颜色范围对象作为值，插件会将该范围的颜色插入（如果<code>
+interpolate</code>选项为<code>true</code>）在指定的位置。</td>
+</tr>
+<tr>
+<td>roundCorner</td>
+<td>boolean</td>
+<td>false</td>
+<td>如果设置为<code>true</code>则圆形指示器的刻度bar有圆角。</td>
+</tr>
+<tr>
+<td>format</td>
+<td># format like (##,###,###) or a formatter function</td>
+<td>##</td>
+<td>Define # format or formatter function to format indicator number.</td>
+</tr>
+<tr>
+<td>frameNum</td>
+<td>number</td>
+<td>100 for percentage and 500 for others</td>
+<td>Number of frames in which indcator circle is divided.</td>
+</tr>
+<tr>
+<td>frameTime</td>
+<td>number</td>
+<td>10</td>
+<td>Time taken to go from one frame to another.</td>
+</tr>
+<tr>
+<td>fontColor</td>
+<td>hex color code</td>
+<td>color code of progress</td>
+<td>By default it takes the color code of progress at specific point. If defined it will take the defined color code.</td>
+</tr>
+<tr>
+<td>fontSize</td>
+<td>number</td>
+<td>Calculated</td>
+<td>默认情况下字体大小是适合于圆形指示器的内圆。定义这个参数可以覆盖它。</td>
+</tr>
+<tr>
+<td>fontFamily</td>
+<td>font family similiar to per css syntax</td>
+<td>default</td>
+<td>定义圆形指示器的数值的字体。</td>
+</tr>
+<tr>
+<td>fontWeight</td>
+<td>font weight similiar to css syntax</td>
+<td>bold</td>
+<td>定义圆形指示器的数值的字体weight。</td>
+</tr>
+<tr>
+<td>interpolate</td>
+<td>boolean</td>
+<td>true</td>
+<p>设置为<code>true</code>在圆形指示器中插入给定范围的颜色。</p>
+</tr>
+<tr>
+<td>percentage</td>
+<td>boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>显示圆形指示器的百分比数值。</td>
+</tr>
+<tr>
+<td>displayNumber</td>
+<td>boolean</td>
+<td>true</td>
+<td>设置为<code>true</code>显示圆形指示器的刻度数值。</td>
+</tr>
+<tr>
+<td>initValue</td>
+<td>number</td>
+<td>minValue or 0</td>
+<td>圆形指示器初始化的值。</td>
+</tr>
+<tr>
+<td>minValue</td>
+<td>number</td>
+<td>0</td>
+<td>圆形指示器的最小值。</td>
+</tr>
+<tr>
+<td>maxValue</td>
+<td>number</td>
+<td>100</td>
+<p>圆形指示器的最大值。</p>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 获取对象实例</h5>
+<pre class="brush:js">
+//jquery
+$('#indicatorContainer').radialIndicator();
+var radialObj = $('#indicatorContainer').data('radialIndicator');
+<p>//Vanilla JS<br>
+var radialObj = radialIndicator('#indicatorContainer');<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 参数</h5>
+<p>下面的方法可以在初始化后获取一个参数的值或改变任何参数值。</p>
+<pre class="brush:js">
+//getter
+var interpolate = radialObj.option('interpolate');
+<p>//setter<br>
+radialObj.option('interpolate',false);<br>
+radialObj.option('radius',60);<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 获取值</h5>
+<p>下面的方法可以获取或设置圆形指示器的刻度值。设置值是不会有动画效果的。</p>
+<pre class="brush:js">
+//getter
+var curProgress = radialObj.value();
+<p>//setter<br>
+radialObj.value(80);<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 动画</h5>
+<p>下面的方法可以在为圆形指示器设置值时有动画效果。</p>
+<pre class="brush:js">
+radialObj.animate(80);
+</pre>
+<h3>
+<span class="glyphicon glyphicon-check"></span> Angular JS使用方法</h3>
+<p>首先要在页面中引入<code>angular.radialIndicator.js</code>和<code>radialIndicator.js</code>文件：</p>
+<pre class="brush:js">
+&lt;script src="radialIndicator.js"&gt;&lt;/script&gt;
+&lt;script src="angular.radialIndicator.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 基本使用</h5>
+<pre class="brush:html">
+&lt;div ng-app="myApp" ng-controller="demo"&gt;
+ &lt;div data-radial-indicator=""&gt;&lt;/div&gt;
+ &lt;div data-radial-indicator="{radius : 80, percentage :true,barColor : '#87CEEB', initValue: 70}"&gt;&lt;/div&gt;
+ &lt;div data-radial-indicator="indicatorOption"&gt;&lt;/div&gt; 
+ &lt;/div&gt;
+</pre>
+<pre class="brush:js">
+angular.module('myApp', ['ng-sortable','radialIndicator'])
+.controller('demo', ['$scope', function ($scope) {
+$scope.indicatorOption = {
+radius : 80,
+percentage :true,
+barColor : "#87CEEB",
+initValue : 70
+};
+}]);
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 通过模式绑定指示器</h5>
+<p>你可以在指示器中的<code>radial-indicator-model</code>属性中设置模式的名字，指示器将会根据模式的改变而相应的改变：</p>
+<pre class="brush:html">
+&lt;div ng-app="myApp" ng-controller="demo"&gt;
+ &lt;div data-radial-indicator="indicatorOption" data-radial-indicator-model="indicatorValue"&gt;&lt;/div&gt; 
+&lt;/div&gt;
+</pre>
+<pre class="brush:js">
+angular.module('myApp', ['ng-sortable','radialIndicator'])
+.controller('demo', ['$scope', function ($scope) {
+$scope.indicatorOption = {
+radius : 80,
+percentage :true,
+barColor : "#87CEEB"
+};
+<p>$scope.indicatorValue = 70;<br>
+}]);<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 通过DI获取指示器的对象实例</h5>
+<pre class="brush:html">
+&lt;div ng-app="myApp" ng-controller="demo"&gt;
+ &lt;div data-radial-indicator="indicatorOption" data-radial-indicator-id="indicator1"&gt;&lt;/div&gt; 
+ &lt;button data-ng-click="changeValue(30)"&gt;&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+<pre class="brush:js">
+angular.module('myApp', ['ng-sortable', 'radialIndicator'])
+.controller('demo', ['$scope', 'radialIndicatorInstance', function($scope, radialIndicatorInstance) {
+$scope.indicatorOption = {
+percentage: true,
+barColor: "#87CEEB",
+initValue : 70
+};
+<p>$scope.changeValue =<br>
+function(val) {<br>
+radialIndicatorInstance['indicator1'].animate(30);<br>
+}<br>
+}]);<br>
+</pre></p>
+<p>具体各种圆形指示器情况的使用方法请参考<a href="http://www.htmleaf.com/Demo/201502171390.html" target="\_blank">Demo</a>。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1502/201502172119.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201502171390.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1385">
+                                <h3 class="post-title">
+                                    jQuery表单input字段提示信息动画特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

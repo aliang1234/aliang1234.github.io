@@ -1,0 +1,1586 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_968">
+                        draggabilly | 功能强大的拖动拖拽元素插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_968" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509141632.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+draggabilly是一款功能强大的网页元素拖动拖拽插件。该元素拖拽插件可以和jQuery结合使用，也可以以纯js的方式使用。它提供了强大的拖拽元素的能力，并且可以支持IE8浏览器和移动触摸设备。
+内容：
+
+
+简要教程
+
+
+draggabilly是一款功能强大的网页元素拖动拖拽插件。该元素拖拽插件可以和jQuery结合使用，也可以以纯js的方式使用。它提供了强大的拖拽元素的能力，并且可以支持IE8浏览器和移动触摸设备。
+
+ 使用方法
+
+ 安装
+可以通过bower或npm来安装该draggabilly插件。
+
+bower install draggabilly
+npm install draggabilly
+
+
+ 作为jQuery插件来使用
+
+var $draggable = $(&#39;.draggable&#39;).draggabilly({
+// options...
+}) 
+
+
+ 通过纯JS来初始化该拖动元素插件
+
+var elem = document.querySelector(&#39;.draggable&#39;);
+var draggie = new Draggabilly( elem, {
+// options...
+});
+// or pass in selector string as first argument
+var draggie = new Draggabilly( &#39;.draggable&#39;, {
+// options...
+});
+// if you have multiple .draggable elements
+// get all draggie elements
+var draggableElems = document.querySelectorAll(&#39;.draggable&#39;);
+// array of Draggabillies
+var draggies = []
+// init Draggabillies
+for ( var i=0, len = draggableElems.length; i &amp;lt; len; i++ ) {
+var draggableElem = draggableElems[i];
+var draggie = new Draggabilly( draggableElem, {
+// options...
+});
+draggies.push( draggie );
+}
+
+
+ CSS样式
+插件在拖动元素的时候会附加两个class类：
+
+
+.is-pointer-down：当用户第一次点击元素（mouse, touch, pointer）是添加的class。
+
+.is-dragging：当元素开始拖动的时候添加的class。
+
+
+ 配置参数
+
+
+axis：类型：String，可用值：&#39;x&#39; 或 &#39;y&#39;。约束元素只能在X或Y轴移动。
+
+containment：类型：Element，Selector String或Boolean。约束元素只能在指定的容器中拖动。如果设置为true，那么约束容器就是该元素的父元素。
+
+grid：类型：Array，可用值：[ x, y ]。元素拖动是会以网格的方式进行吸附。
+
+handle：类型：Selector String。指定拖动交互的元素。
+
+
+ 事件
+
+ 通过jQuery来绑定事件
+可以通过标准的jQuery事件：.on()，.off()，.one()来绑定事件，在事件内部，this引用就是Draggabilly元素。
+
+// jQuery
+function listener(/* parameters */) {
+// 获取Draggabilly对象实例
+var draggie = $(this).data(&#39;draggabilly&#39;);
+console.log( &#39;eventName happened&#39;, draggie.position.x, draggie.position.y );
+}
+// 绑定事件监听
+$draggable.on( &#39;eventName&#39;, listener );
+// 移除事件监听
+$draggable.off( &#39;eventName&#39;, listener );
+// 只绑定一次事件，注意是ONCE，而不是ONE或ON
+$draggable.one( &#39;eventName&#39;, function() {
+console.log(&#39;eventName happened just once&#39;);
+});
+
+
+ 通过纯JS来绑定事件
+也可以通过纯JS使用.on()，.off()，.one()方法来绑定事件，在事件内部，this引用就是Draggabilly元素。
+
+// vanilla JS
+function listener(/* parameters */) {
+console.log( &#39;eventName happened&#39;, this.position.x, this.position.y );
+}
+// 绑定事件监听
+draggie.on( &#39;eventName&#39;, listener );
+// 移除事件监听
+draggie.off( &#39;eventName&#39;, listener );
+// 只绑定一次事件，注意是ONCE，而不是ONE或ON
+draggie.once( &#39;eventName&#39;, function() {
+console.log(&#39;eventName happened just once&#39;);
+});
+
+dragStart
+在拖动开始，元素移动的时候触发。
+
+// jQuery
+$draggable.on( &#39;dragStart&#39;, function( event, pointer ) {...})
+// vanilla JS
+draggie.on( &#39;dragStart&#39;, function( event, pointer ) {...})
+
+
+
+event：类型：Event。原生的mousedown或touchstart事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+dragMove
+在拖拽元素移动的时候触发。
+
+// jQuery
+$draggable.on( &#39;dragMove&#39;, function( event, pointer, moveVector ) {...})
+// vanilla JS
+draggie.on( &#39;dragMove&#39;, function( event, pointer, moveVector ) {...})
+
+
+
+event：类型：Event。原生的mousemove或touchmove事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+moveVector：类型：Object。鼠标指针移动到距离开始移动位置有多远：{ x: 20, y: -30 }。
+
+dragEnd
+当元素拖动结束的时候触发。
+
+// jQuery
+$draggable.on( &#39;dragEnd&#39;, function( event, pointer ) {...})
+// vanilla JS
+draggie.on( &#39;dragEnd&#39;, function( event, pointer ) {...})
+
+
+
+event：类型：Event。原生的mouseup或touchend事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+pointerDown
+当用户指针（mouse, touch, pointer）被按下的时候触发。
+
+// jQuery
+$draggable.on( &#39;pointerDown&#39;, function( event, pointer ) {...})
+// vanilla JS
+draggie.on( &#39;pointerDown&#39;, function( event, pointer ) {...})
+
+
+
+event：类型：Event。原生的mousedown或touchstart事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+pointerMove
+当用户指针移动的时候触发。
+
+// jQuery
+$draggable.on( &#39;pointerMove&#39;, function( event, pointer, moveVector ) {...})
+// vanilla JS
+draggie.on( &#39;pointerMove&#39;, function( event, pointer, moveVector ) {...})
+
+
+
+event：类型：Event。原生的mousemove或touchmove事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+moveVector：类型：Object。鼠标指针移动到距离开始移动位置有多远：{ x: 20, y: -30 }。
+
+pointerUp
+当用户指针被松开的时候触发。
+
+// jQuery
+$draggable.on( &#39;pointerUp&#39;, function( event, pointer ) {...})
+// vanilla JS
+draggie.on( &#39;pointerUp&#39;, function( event, pointer ) {...}) 
+
+
+
+event：类型：Event。原生的mouseup或touchend事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+staticClick
+在用户指针被按下不松开，并且没有移动的时候触发。
+
+// jQuery
+$draggable.on( &#39;staticClick&#39;, function( event, pointer ) {...})
+// vanilla JS
+draggie.on( &#39;staticClick&#39;, function( event, pointer ) {...})
+
+
+
+event：类型：Event。原生的mouseup或touchend事件。
+
+pointer：类型：MouseEvent或Touch。有.pageX和.pageY的事件对象。
+
+
+ 方法
+disable
+
+// jQuery
+$draggable.draggabilly(&#39;disable&#39;)
+// vanilla JS
+draggie.disable()
+
+enable
+
+// jQuery
+$draggable.draggabilly(&#39;enable&#39;)
+// vanilla JS
+draggie.enable() 
+
+destroy
+
+// jQuery
+$draggable.draggabilly(&#39;destroy&#39;)
+// vanilla JS
+draggie.destroy()
+
+jQuery.fn.data(&#39;draggabilly&#39;)：从jQuery对象中获取Draggabilly实例。
+
+var draggie = $(&#39;.draggable&#39;).data(&#39;draggabilly&#39;)
+// access Draggabilly properties
+console.log( &#39;draggie at &#39; + draggie.position.x + &#39;, &#39; + draggie.position.y ) 
+
+Draggabilly官方主页：http://draggabilly.desandro.com/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_968">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_969">
+                        jQuery文章章节平滑切换过渡动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_969" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510151648.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可以实现文章章节段落平滑切换过渡的jQuery特效。该特效在用户点击了切换按钮之后，当前界面垂直缩小为一条线，再变为一个点消失，接着从这个消失点的位置再逆向打开新的章节界面。
+内容：
+
+
+简要教程
+
+
+这是一款可以实现文章章节段落平滑切换过渡的jQuery特效。该特效在用户点击了切换按钮之后，当前界面垂直缩小为一条线，再变为一个点消失，接着从这个消失点的位置再逆向打开新的章节界面。
+
+ 使用方法
+
+ HTML结构
+这个例子中的HTML结构分为两个部分：第一个部分是当前的主界面，包裹在&amp;lt;main&amp;gt;元素中，第二个部分是要切换的章节界面，包裹在&amp;lt;section&amp;gt;元素中。
+
+&amp;lt;main&amp;gt;
+ &amp;lt;section class=&#34;main&#34;&amp;gt;
+&amp;lt;div class=&#34;container mainContent&#34;&amp;gt;
+&amp;lt;h1&amp;gt;......&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;button class=&#34;about&#34;&amp;gt;About&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+ &amp;lt;/section&amp;gt;
+&amp;lt;/main&amp;gt;
+&amp;lt;section class=&amp;quot;aboutSection&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;container aboutContent&amp;quot;&amp;gt;
+&amp;lt;h1&amp;gt;About&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;......&amp;lt;/p&amp;gt;
+&amp;lt;button class=&amp;quot;home&amp;quot;&amp;gt;Home&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+
+
+ JavaScript
+该文章章节切换特效主要使用的是jQuery的animate方法来完成，代码非常简单，它通过不断的设置元素的min-height，height，top，padding，padding-top和padding-bottom属性来完成。
+
+$(function () {
+&#39;use strict&#39;;
+var main = $(&#39;.main&#39;), about = $(&#39;.aboutSection&#39;);
+$(&#39;.about&#39;).click(function () {
+main.animate({
+&#39;height&#39;: &#39;0&#39;,
+&#39;top&#39;: &#39;50vh&#39;,
+&#39;padding&#39;: &#39;0&#39;
+}, 300).animate({
+&#39;width&#39;: &#39;2px&#39;,
+&#39;left&#39;: &#39;50\%&#39;
+}, 900).fadeOut(200, function () {
+about.fadeIn(200);
+about.animate({
+&#39;width&#39;: &#39;100\%&#39;,
+&#39;left&#39;: &#39;0&#39;
+}, 900);
+about.animate({
+&#39;min-height&#39;: &#39;100vh&#39;,
+&#39;top&#39;: &#39;0&#39;,
+&#39;padding-top&#39;: &#39;50px&#39;,
+&#39;padding-bottom&#39;: &#39;50px&#39;
+}, 300);
+});
+});
+$(&#39;.home&#39;).click(function () {
+about.animate({
+&#39;min-height&#39;: &#39;0&#39;,
+&#39;height&#39;: &#39;0&#39;,
+&#39;top&#39;: &#39;50vh&#39;,
+&#39;padding&#39;: &#39;0&#39;
+}, 300).animate({
+&#39;width&#39;: &#39;2px&#39;,
+&#39;left&#39;: &#39;50\%&#39;
+}, 900).fadeOut(200, function () {
+main.fadeIn(200).animate({
+&#39;width&#39;: &#39;100\%&#39;,
+&#39;left&#39;: &#39;0&#39;
+}, 900).animate({
+&#39;height&#39;: &#39;100vh&#39;,
+&#39;top&#39;: &#39;0&#39;,
+&#39;padding-top&#39;: &#39;100px&#39;,
+&#39;padding-bottom&#39;: &#39;100px&#39;
+}, 300);
+});
+});
+}); 
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_969">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_97">
+                        基于TweenMax的图片平滑滚动动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_97" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1908/201908234689.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于TweenMax的图片平滑滚动动画特效。该特效提供了6种动画效果，分别是在页面向下滚动时，页面中的图片分别展示出不同的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于TweenMax的图片平滑滚动动画特效。该特效提供了6种动画效果，分别是在页面向下滚动时，页面中的图片分别展示出不同的动画效果。
+下面是该特效的一些屏幕截图效果。
+
+
+
+ 该基于TweenMax的图片平滑滚动动画特效的github网址为：https://github.com/codrops/SmoothScrollingImageEffects/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_97">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_970">
+                        jQuery超酷页面树叶飘落装饰特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_970" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511081529.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的页面树叶飘落装饰特效jQuery插件。该jQuery插件可以在页面顶部生成各种树叶，这些树叶会随机飘落，在树叶飘落的过程中，使用鼠标点击它将会发生更加神奇的效果。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常炫酷的页面树叶飘落装饰特效jQuery插件。该jQuery插件可以在页面顶部生成各种树叶，这些树叶会随机飘落，在树叶飘落的过程中，使用鼠标点击它将会发生更加神奇的效果。
+该jQuery插件支持IE10以上的所有最新版现代浏览器，并且在移动手机上做了优化，它在使用上也非常简单。
+
+ 使用方法
+使用该落叶jQuery插件需要引入jQuery和jquery.rotate.js插件以及jquery.classyleaves.min.css和jquery.classyleaves.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.classyleaves.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;jquery/1.10.2/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.rotate.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.classyleaves.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该落叶插件。
+
+var tree = new ClassyLeaves({
+leaves: 30,
+maxY: -10,
+multiplyOnClick: true,
+multiply: 2,
+infinite: true,
+speed: 4000
+});
+
+如果需要动态添加叶子的数量，可以使用下面的方法：
+
+tree.add(8);
+
+
+ 配置参数
+
+
+leaves：初始化时叶子的数量，默认值为50。
+
+maxY：初始化时叶子区域的范围，负数为向上移动，正数为向下移动。默认值为100。
+
+multiplyOnClick：当用户点击叶子时，是否会增加叶片数，默认值为true。
+
+multiply：当点击叶子时产生的图片数量，默认值为1。
+
+infinite：树叶是否无限的跌落。默认值为true。
+
+speed：叶子跌落的速度，默认值为3000。
+
+numImages：在叶子图片文件夹中所有图片的数量，默认值为8。
+
+folder：放置叶子图片的文件夹所在的路径，默认值为images/leaves/。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_970">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_971">
+                        基于Animate.css的炫酷jQuery消息通知框插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_971" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510021545.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+notification是一款基于Animate.css的炫酷jQuery消息通知框插件。该插件可以在屏幕的四个角显示消息通知框，结合Animate.css可以制作出多种效果非常炫酷的CSS3动画特效。
+内容：
+
+
+简要教程
+
+
+notification是一款基于Animate.css的炫酷jQuery消息通知框插件。该插件可以在屏幕的四个角显示消息通知框，结合Animate.css可以制作出多种效果非常炫酷的CSS3动画特效。
+
+ 使用方法
+使用该jQuery消息通知框插件需要引入jQuery，notification.js，animate.css和notification.css文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;css/animate.min.css&#39;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/notification.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/notification.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ HTML结构
+该jQuery消息通知框插件需要一个元素来触发它，该元素可以是任意的HTML元素：按钮、超链接等。
+
+&amp;lt;div class=&#34;notify btn&#34; value=&#34;bounceIn&#34;&amp;gt;bounceIn&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元加载完毕之后，可以通过下面的方法来初始化该jQuery消息通知框插件。
+
+$(&#39;.notify&#39;).click(function (event) {
+Notification.create(
+// 消息通知框的标题
+&#34;Notification title&#34;,
+// 消息通知框的内容
+&#34;Long text Long text Long text Long text. 2 lines = Perfect ;)&#34;,
+// 图片
+&#34;img/user.jpg&#34;,
+// 效果
+$(event.target).text(),
+// 定位
+position
+);
+}); 
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_971">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_972">
+                        简单实用的jQuery全屏背景视觉差特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_972" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510271737.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于jquery.parallax.js的简单实用的jQuery全屏背景视觉差特效。jquery.parallax.js是一个用于制作视觉差特效的jQuery插件，它可以将各个div设置为不同的层，并为各个层设置不同的速度，在鼠标移动时产生视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于jquery.parallax.js的简单实用的jQuery全屏背景视觉差特效。jquery.parallax.js是一个用于制作视觉差特效的jQuery插件，它可以将各个div设置为不同的层，并为各个层设置不同的速度，在鼠标移动时产生视觉差效果。
+
+ 使用方法
+使用该滑动开关按钮插件需要引入jQuery和jquery.parallax.min.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/jquery.parallax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该视觉差特效的HTML结构使用一个无序列表来作为背景图层，每一个列表项是一张图片，它们通过设置不同的data-depth属性来设置各种的运动速度。另外内容层放置在一个div.wrapper中，里面可以放置图片或文字。
+
+&amp;lt;main&amp;gt;
+&amp;lt;div id=&#34;overlay&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;ul id=&#34;scene&#34;&amp;gt;
+&amp;lt;li class=&#34;layer&#34; data-depth=&#34;0.1&#34;&amp;gt;
+&amp;lt;div class=&#34;layer1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&#34;layer&#34; data-depth=&#34;0.2&#34;&amp;gt;
+&amp;lt;div class=&#34;layer2&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;img alt=&#34;logo&#34; src=&#34;img/35iw4ki.jpg&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/main&amp;gt; 
+
+
+ CSS样式
+在使用时需要添加下面的必要的CSS样式，其中背景图层的图片可以根据实际情况进行更改。
+
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+overflow-y: auto;
+backface-visibility: hidden;
+}
+#overlay {
+background-color: #000;
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 99;
+opacity: 0.08;
+}
+#scene {
+padding: 0;
+margin: 0;
+width: 115%;
+height: 120vh;
+overflow: hidden;
+top: -5%;
+left: -5%;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+}
+main {
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+.wrapper {
+position: absolute;
+top: 50%;
+left: 50%;
+z-index: 101;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+text-align: center;
+}
+.wrapper img {
+width: 350px;
+height: auto;
+}
+.layer {
+width: 110%;
+height: 120vh;
+overflow: hidden;
+}
+.layer2 {
+background-image: url(fx5wd1.png);
+background-size: cover;
+background-position: center;
+position: absolute;
+width: 100%;
+height: 100%;
+left: -5%;
+top: -5%;
+}
+.layer1 {
+background-image: url(sp94ls.jpg);
+background-position: center;
+background-size: cover;
+position: absolute;
+width: 100%;
+height: 100%;
+left: -5%;
+top: -5%;
+}
+@media (max-width:700px) {
+.layer2 {
+background-size: cover;
+background-position: center;
+position: absolute;
+width: 167%;
+height: 77vh;
+left: -69%;
+top: 27%;
+}
+.layer1 {
+background-position: center;
+background-size: cover;
+position: absolute;
+width: 100%;
+height: 115%;
+left: -5%;
+top: -1%;
+}
+.wrapper img {
+width: 180px;
+height: auto;
+}
+}
+
+
+ 初始化插件
+该视觉差特效依赖于jquery.parallax.js插件，关于该插件的详细介绍可以参考这里。
+
+$(document).ready(function () {
+$(&#39;#scene&#39;).parallax();
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_972">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_973">
+                        简单漂亮的jQuery计时器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_973" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512011724.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Jquery-Stylish-Timer是一款简单漂亮的jQuery计时器插件。该计时器插件可以实现秒、分钟和小时的计时功能，并带有开始、暂停和重新开始计时的按钮功能。
+内容：
+
+
+简要教程
+
+
+Jquery-Stylish-Timer是一款简单漂亮的jQuery计时器插件。该计时器插件可以实现秒、分钟和小时的计时功能，并带有开始、暂停和重新开始计时的按钮功能。
+
+ 使用方法
+该计时器插件的计时功能依赖于jquery-runner插件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;style.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery-runner.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+DEMO中的计时器代码的HTML结构使用Bootstrap来进行布局，其结构如下：
+
+&amp;lt;div class=&#34;container-fluid&#34;&amp;gt;
+&amp;lt;div class=&#34;col-xs-12 fill&#34;&amp;gt;
+&amp;lt;span id=&#34;runner&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&#34;col-sm-10 col-sm-offset-2&#34;&amp;gt;
+&amp;lt;div class=&#34;col-xs-4 col-sm-3 centered&#34;&amp;gt;&amp;lt;button id=&#34;stopBtn&#34;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;col-xs-4 col-sm-3 centered&#34;&amp;gt;&amp;lt;button id=&#34;startBtn&#34;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;col-xs-4 col-sm-3 centered&#34;&amp;gt;&amp;lt;button id=&#34;resetBtn&#34;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素初始化完毕之后，可以通过下面的方法来初始化该计时器插件。
+
+$(&#39;#runner&#39;).runner({
+milliseconds: false,
+format: function millisecondsToString(milliseconds) {
+var oneHour = 3600000;
+var oneMinute = 60000;
+var oneSecond = 1000;
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+var result;
+if (milliseconds &amp;gt;= oneHour) {
+hours = Math.floor(milliseconds / oneHour);
+}
+milliseconds = hours &amp;gt; 0 ? (milliseconds - hours * oneHour) : milliseconds;
+if (milliseconds &amp;gt;= oneMinute) {
+minutes = Math.floor(milliseconds / oneMinute);
+}
+milliseconds = minutes &amp;gt; 0 ? (milliseconds - minutes * oneMinute) : milliseconds;
+if (milliseconds &amp;gt;= oneSecond) {
+seconds = Math.floor(milliseconds / oneSecond);
+}
+milliseconds = seconds &amp;gt; 0 ? (milliseconds - seconds * oneSecond) : milliseconds;
+if (hours &amp;gt; 0) {
+result = (hours &amp;gt; 9 ? hours : &amp;quot;0&amp;quot; + hours) + &amp;quot;:&amp;quot;;
+} else {
+result = &amp;quot;00:&amp;quot;;
+}
+if (minutes &amp;gt; 0) {
+result += (minutes &amp;gt; 9 ? minutes : &amp;quot;0&amp;quot; + minutes) + &amp;quot;:&amp;quot;;
+} else {
+result += &amp;quot;00:&amp;quot;;
+}
+if (seconds &amp;gt; 0) {
+result += (seconds &amp;gt; 9 ? seconds : &amp;quot;0&amp;quot; + seconds);
+} else {
+result += &amp;quot;00&amp;quot;;
+}
+return result;
+}
+});
+
+开始计时按钮、停止计时按钮和重置按钮分别要添加相应的方法，以及在点击的时候添加和移除相应的class类。
+
+$(&#39;#startBtn&#39;).click(function() {
+$(&#39;#runner&#39;).runner(&#39;start&#39;);
+$(this).addClass(&#39;activeBtn&#39;);
+$(&#39;#stopBtn&#39;).removeClass(&#39;activeBtn&#39;);
+});
+(&amp;#039;#stopBtn&amp;#039;).click(function() {
+(&#39;#runner&#39;).runner(&#39;stop&#39;);
+(this).addClass(′activeBtn′);(this).addClass(&amp;#x27;activeBtn&amp;#x27;);
+(this).addClass(′activeBtn′);(&#39;#startBtn&#39;).removeClass(&#39;activeBtn&#39;);
+});
+(&amp;#039;#resetBtn&amp;#039;).click(function() {
+(&#39;#runner&#39;).runner(&#39;reset&#39;);
+(&amp;#039;#stopBtn&amp;#039;).removeClass(&amp;#039;activeBtn&amp;#039;);
+(&#39;#startBtn&#39;).removeClass(&#39;activeBtn&#39;);
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_973">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_974">
+                        基于HTML5 SVG的跨设备jQuery图表插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/bqrgZVBijT" class="post-tag i-tag
+                            i-tag-">
+            #html
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_974" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511241538.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+pizza.js是一款基于HTML5 SVG的跨设备的jQuery图表插件。该图表插件可以制作饼状图、圆环图、柱状图和线性图。因为它是基于SVG生成的图表，所以在任何设备中都不会失真。
+内容：
+
+
+简要教程
+
+
+pizza.js是一款基于HTML5 SVG的跨设备的jQuery图表插件。该图表插件可以制作饼状图、圆环图、柱状图和线性图。因为它是基于SVG生成的图表，所以在任何设备中都不会失真。
+
+ 使用方法
+使用该jQuery图表插件需要引入jQuery、snap.svg.js、jquery.pizza.js和pizza.css文件。
+
+&amp;lt;link href=&#34;stylesheets/pizza.css&#34; media=&#34;screen, projector, print&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/vendor/snap.svg.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.pizza.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+pizza.js图表可以分为饼状图、柱状图和线性图，它们的HTML结构基本类似。
+饼状图的HTML结构如下：使用一个无序列表，每一个列表项都有一个data-value值，代表所占的百分比。
+
+&amp;lt;ul data-pie-id=&#34;my-cool-pie-chart&#34;&amp;gt;
+&amp;lt;li data-value=&#34;36&#34;&amp;gt;Pepperoni&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;14&#34;&amp;gt;Sausage&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;8&#34;&amp;gt;Cheese&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;11&#34;&amp;gt;Mushrooms&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;7&#34;&amp;gt;Chicken&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;24&#34;&amp;gt;Other&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div id=&#34;my-cool-pie-chart&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+柱状图的HTML结构如下：
+
+&amp;lt;ul data-bar-id=&#34;my-cool-bar-chart&#34;&amp;gt;
+&amp;lt;li data-value=&#34;36&#34;&amp;gt;Pepperoni&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;14&#34;&amp;gt;Sausage&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;8&#34;&amp;gt;Cheese&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;11&#34;&amp;gt;Mushrooms&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;7&#34;&amp;gt;Chicken&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;24&#34;&amp;gt;Other&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div id=&#34;my-cool-bar-chart&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+线性图的HTML结构如下：
+
+&amp;lt;ul data-pie-id=&#34;my-cool-line-graph&#34;&amp;gt;
+&amp;lt;li data-x=&#34;36&#34; data-y=&#34;1&#34;&amp;gt;Pepperoni&amp;lt;/li&amp;gt;
+&amp;lt;li data-x=&#34;14&#34; data-y=&#34;2&#34;&amp;gt;Sausage&amp;lt;/li&amp;gt;
+&amp;lt;li data-x=&#34;8&#34; data-y=&#34;3&#34;&amp;gt;Cheese&amp;lt;/li&amp;gt;
+&amp;lt;li data-x=&#34;11&#34; data-y=&#34;4&#34;&amp;gt;Mushrooms&amp;lt;/li&amp;gt;
+&amp;lt;li data-x=&#34;7&#34; data-y=&#34;5&#34;&amp;gt;Chicken&amp;lt;/li&amp;gt;
+&amp;lt;li data-x=&#34;24&#34; data-y=&#34;6&#34;&amp;gt;Other&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div id=&#34;my-cool-line-graph&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+在各种图表的无序列表之后都有一个&amp;lt;div&amp;gt;元素，它们通过id和无序列表的data-pie-id属性关联，这是实际生成图表的地方。
+
+ SASS
+该图表插件使用SASS来编写统一样式。如果你不使用SASS，也可以使用其它的方式。
+下面是一些SASS变量：
+
+//Base color for the charts
+$pie-color: $primary-color;
+
+$pie-color用于设置图表的颜色，上面的例子使用的是Foundation的$primary-color颜色，你可以更换为其它十六进制的颜色。
+另外还有2个Sass mixins可以设置图表的主题。你只需要引入其中一个。
+
+@mixin darkened-children($num-children, $color) {
+@for $i from 1 through $num-children {
+$color: scale-color($color, $lightness: -10\%);
+&amp;amp; &amp;gt; *:nth-child(#{$num-children}n+#{$i}) {
+color: $color;
+}
+}
+}
+@mixin lightened-children($num-children, $color) {
+@for $i from 1 through $num-children {
+$color: scale-color($color, $lightness: 10\%);
+&amp;amp; &amp;gt; *:nth-child(#{$num-children}n+#{$i}) {
+color: $color;
+}
+}
+}
+
+
+ CSS
+如果你不使用SASS，可以通过CSS来调整图表的颜色。
+
+ul[data-pie-id] li:nth-child(1) {
+color: red;
+}
+ul[data-pie-id] li:nth-child(2) {
+color: red;
+}
+ul[data-pie-id] li:nth-child(3) {
+color: yellow;
+}
+
+
+ JavaScript
+在完成了HTML标签和CSS样式之后，你可以通过下面的方式来初始化该图表插件：
+
+Pizza.init();
+
+图表会在改变尺寸的时候自动进行更新，如果你改变了图表中的值，或在页面中添加了新的图表，可以再次允许初始化方法来重新加载它。
+你也可以在初始化的时候为图表传入初始化数据。
+
+Pizza.init(&#39;#example1&#39;, {
+data: [23, 43, 17, 7, 11]
+});
+
+可以通过第二个参数来修改图表的参数设置：
+
+Pizza.init(document.body, {border-size: 0});
+
+也可以直接在HTML元素上进行设置：
+
+&amp;lt;ul data-pie-id=&#34;my-cool-chart&#34; data-options=&#39;{&#34;donut&#34;: &#34;true&#34;}&#39;&amp;gt;
+&amp;lt;li data-value=&#34;36&#34;&amp;gt;Pepperoni&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;14&#34;&amp;gt;Sausage&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;8&#34;&amp;gt;Cheese&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;11&#34;&amp;gt;Mushrooms&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;7&#34;&amp;gt;Chicken&amp;lt;/li&amp;gt;
+&amp;lt;li data-value=&#34;24&#34;&amp;gt;Other&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;div id=&#34;my-cool-chart&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 配置参数
+该jQuery图表插件可用的配置参数如下：
+
+{
+donut: false,
+donut\_inner\_ratio: 0.4, // between 0 and 1
+percent\_offset: 30, // relative to radius
+stroke\_color: &#39;#333&#39;,
+stroke\_width: 0,
+show\_percent: true, // show or hide the percentage on the chart.
+animation\_speed: 500,
+show\_grid: true,
+bar\_spacer: 100,
+bar\_intervals: 6,
+animation\_type: &#39;elastic&#39; // options: backin, backout, bounce, easein, 
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_974">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_975">
+                        支持移动端的响应式jQuery焦点图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_975" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1512/201512101658.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+hiSlider.js是一款支持移动端的响应式jQuery焦点图插件。该焦点图插件支持flexible布局，支持移动触摸事件，支持IE8+浏览器，并且有大量的可用配置参数。
+内容：
+
+
+简要教程
+
+
+hiSlider.js是一款支持移动端的响应式焦点图插件。该焦点图插件支持flexible布局，支持移动触摸事件，支持IE8+浏览器，并且有大量的可用配置参数。
+
+ 使用方法
+使用hiSlider.js幻灯片插件需要引入jquery.hiSlider.css和jQuery以及jquery.hiSlider.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jquery.hiSlider.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;//code.jquery.com/jquery-1.9.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.hiSlider.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+hiSlider.js幻灯片插件使用的是无序列表的HTML结构。
+
+&amp;lt;ul class=&#34;hiSlider demo&#34;&amp;gt;
+&amp;lt;li data-title=&#34;1&#34; class=&#34;hiSlider-item&#34;&amp;gt;
+&amp;lt;img src=&#34;1.jpg&#34; alt=&#34;1&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li data-title=&#34;2&#34; class=&#34;hiSlider-item&#34;&amp;gt;
+&amp;lt;img src=&#34;2.jpg&#34; alt=&#34;2&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li data-title=&#34;3&#34; class=&#34;hiSlider-item&#34;&amp;gt;
+&amp;lt;img src=&#34;3.jpg&#34; alt=&#34;3&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li data-title=&#34;4&#34; class=&#34;hiSlider-item&#34;&amp;gt;
+&amp;lt;img src=&#34;4.jpg&#34; alt=&#34;4&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li data-title=&#34;5&#34; class=&#34;hiSlider-item&#34;&amp;gt;
+&amp;lt;img src=&#34;5.jpg&#34; alt=&#34;5&#34;&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化hiSlider.js幻灯片插件。
+
+$(&#39;.demo&#39;).hiSlider(); 
+
+
+ 配置参数
+hiSlider.js焦点图插件的可用配置参数有：
+
+
+startSlide：开始索引，从0开始。默认值：0。
+
+item：子元素选择器。默认值：&#39;.hiSlider-item&#39;。
+
+isFullScreen：是否全屏，默认值：false。
+
+isFlexible：是否自适应，默认值：false。
+
+isSupportTouch：是否支持触摸、html5和css3transform。默认值：&#39;\_\_proto\_\_&#39; in {}。
+
+isShowPage：是否显示分页按钮。默认值：true。
+
+isShowTitle：是否显示标题栏。默认值：true。
+
+titleAttr：标题文本存放的属性 或者回调函数(需要返回值)，默认值：&#39;data-title&#39;。
+
+isShowControls：是否显示左右控制按钮，默认值：true。
+
+isAuto：是否自动播放，默认值：true。
+
+intervalTime：自动播放间隔时间，默认值：5000。
+
+affectTime：特效时间，默认值：500。
+
+mode：特效类型，可选值有：fade || move，默认值为：&#34;move&#34;。
+
+direction：方向，可选值有：left || top，默认值为：&#34;left&#34;。
+
+onSwipeStart：开始滑动时的回调函数。默认值：$.noop。
+
+onSwipeMove：滑动中的回调函数。默认值：$.noop。
+
+minSwipeLength：正常滑动的最小值。默认值：30。
+
+onSwipeCancel：滑动取消回调 和 minSwipeLength值有关，默认值：$.noop。
+
+onSwipeEnd：触摸结束回调 (正常触摸)，默认值：$.noop。
+
+onSwipeLeft：向左滑动时的回调函数。默认值：$.noop。
+
+onSwipeRight：向右滑动时的回调函数。默认值：$.noop。
+
+onSwipeTop：向上滑动时的回调函数。默认值：$.noop。
+
+onSwipeBottom：向下滑动时的回调函数。默认值：$.noop。
+
+onInited：初始化后的回调函数，默认值：$.noop。
+
+onMoveBefore：幻灯片运动前的回调函数，默认值：$.noop。
+
+onMoveAfter：幻灯片运动后的回调函数，默认值：$.noop。
+
+onSelected：分页被选中时的回调函数，默认值：$.noop。
+
+jquery.hiSlider.js插件的github地址为：https://github.com/hishion/jquery.hiSlider.js 
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_975">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_976">
+                        简单实用的轻量级jQuery评分插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_976" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509061624.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-bar-rating是一款小巧的简单实用的轻量级jQuery评分插件。该评分插件是将一个标准的select元素转换为评分组件。你可以通过CSS来渲染评分组件的样式，插件中提供了6种不同的主题样式。它还内置了一些CSS星级评分样式。
+内容：
+
+
+简要教程
+
+
+jquery-bar-rating是一款小巧的简单实用的轻量级jQuery评分插件。该评分插件是将一个标准的select元素转换为评分组件。你可以通过CSS来渲染评分组件的样式，插件中提供了6种不同的主题样式。它还内置了一些CSS星级评分样式。
+
+ 安装
+可以通过Bower来安装该评分插件。
+
+bower install jquery-bar-rating
+
+
+ 使用方法
+使用该评分插件你需要引入jQuery（1.7.2+），jquery.barrating.min.js文件，并选择一种你需要的主题样式CSS文件将其引入，例如选择fontawesome-stars.css样式文件。
+
+&amp;lt;link href=&#34;css/fontawesome-stars.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.barrating.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该评分插件的HTML结构是标准的&amp;lt;select&amp;gt;元素。
+
+&amp;lt;select id=&#34;example&#34;&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34;&amp;gt;3&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;4&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;5&#34;&amp;gt;5&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该评分插件。
+
+&amp;lt;script type=&#34;text/javascript&#34;&amp;gt;
+ $(function() {
+$(&#39;#example&#39;).barrating({
+theme: &#39;fontawesome-stars&#39;
+});
+ });
+&amp;lt;/script&amp;gt;
+
+通过上面的初始化，&amp;lt;select&amp;gt;元素将被包裹到一个带.br-theme-fontawesome-stars class的&amp;lt;div&amp;gt;元素中，得到的结构如下：
+
+&amp;lt;div class=&#34;br-wrapper br-theme-fontawesome-stars&#34;&amp;gt;
+&amp;lt;select id=&#34;example&#34;&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34;&amp;gt;3&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;4&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;5&#34;&amp;gt;5&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+...rating widget...
+&amp;lt;/div&amp;gt;
+
+
+ 配置参数
+
+
+theme：默认值：&#39;&#39;。指定一种评分主题。
+
+initialRating：默认值：null。指定初始化时评分的值，如果为空，插件会查找带有selected属性的option项。
+
+showValues：默认值：false。如果设置为true，将会在评分上显示数值。
+
+showSelectedRating：默认值：true。显示用户选择的分数。
+
+reverse：默认值：false。如果设置为true，评分系统将反向。
+
+readonly：默认值：false。如果设置为true，评分系统将只读。
+
+fastClicks：默认值：true。在触摸设备上移除300ms的点击延迟。
+
+wrapperClass：默认值：&#39;br-wrapper&#39;。指定包裹div容器的class名称。
+
+
+ 方法
+
+
+$(&#39;select&#39;).barrating(&#39;show&#39;);：显示评分组件。
+
+$(&#39;select&#39;).barrating(&#39;set&#39;, value);：设置评分组件的值。
+
+$(&#39;select&#39;).barrating(&#39;clear&#39;);：清空评分数值。
+
+$(&#39;select&#39;).barrating(&#39;destroy&#39;);：销毁评分组件实例。
+
+
+ 回调函数
+
+
+onSelect:function(value, text)：当一个分数被选择的时候触发。
+
+onClear:function(value, text)：当评分被清除的时候触发。
+
+onDestroy:function(value, text)：当评分组件被销毁的时候触发。
+
+
+ 小技巧
+
+ 如何在初始化时设置为空的评分值？
+如果你想在页面初始化的时候将评分组件设置为空的分值，可以简单的添加一个空的option选项：
+
+&amp;lt;select id=&#34;example&#34;&amp;gt;
+&amp;lt;option value=&#34;&#34;&amp;gt;&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34;&amp;gt;3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 如何指定显示在评分上的文本？
+插件中提供的showValues参数可以实现在评分值上显示文本。如果你想设置一些额外的显示文本，可以为每一个&amp;lt;option&amp;gt;元素设置data-html属性，例如：
+
+&amp;lt;select id=&#34;example&#34;&amp;gt;
+&amp;lt;option value=&#34;1&#34; data-html=&#34;一般&#34;&amp;gt;1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34; data-html=&#34;不错&#34;&amp;gt;2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34; data-html=&#34;非常好&#34;&amp;gt;3&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_976">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/156/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/158/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

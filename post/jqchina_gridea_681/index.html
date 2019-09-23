@@ -1,0 +1,373 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于JSON数据的简单jQuery幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于JSON数据的简单jQuery幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1608/201608091600.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1608/201608091600.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201608093842.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jquery-slider是一款基于JSON格式数据的jQuery幻灯片插件。该幻灯片通过JSON数据来提供图片地址和描述信息等，你可以通过更换JSON数据来动态切换不同的图片。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jquery-slider是一款基于JSON格式数据的<a href="http://www.htmleaf.com/jQuery/">jQuery</a><a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/">幻灯片插件</a>。该幻灯片通过JSON数据来提供图片地址和描述信息等，你可以通过更换JSON数据来动态切换不同的图片。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和slider.js文件和font-awesome字体图标文件。</p>
+<pre class="brush:html">
+&lt;link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/slider.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>使用一个<code>&lt;div&gt;</code>作为幻灯片的容器，里面放置作为前后导航按钮的<code>&lt;button&gt;</code>元素。</p>
+<pre class="brush:html">
+&lt;div class="slider" id="slider"&gt;
+&lt;button type="button" class="button button-prev"&gt;
+&lt;i class="fa fa-chevron-left" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type="button" class="button button-next"&gt;
+&lt;i class="fa fa-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为幻灯片设置下面的CSS样式。</p>
+<pre class="brush:css">
+.slider {
+width: 100\%;
+overflow: hidden;
+height: 500px;
+position: relative;
+}
+.sliderList {
+position: absolute;
+top: 0;
+width: 300\%;
+height: 100\%;
+list-style: none;
+}
+.sliderList li {
+position: absolute;
+top: 0;
+bottom: 0;
+overflow: hidden;
+width: 33.333333\%;
+height: 100\%;
+padding: 0;
+margin: 0;
+}
+.sliderList li img {
+width: 100\%;
+min-height: 100\%;
+border: none;
+}
+.bulletList {
+position: absolute;
+bottom: 15px;
+width: 100\%;
+margin: 0 auto;
+list-style: none;
+}
+.bulletList li {
+display: inline-block;
+width: 12px;
+height: 12px;
+margin: 0 5px;
+-webkit-border-radius: 50\%;
+-moz-border-radius: 50\%;
+-ms-border-radius: 50\%;
+border-radius: 50\%;
+background-color: #fff;
+cursor: pointer;
+}
+.bulletList .bulletActive { background-color: #0b0d18; }
+.content {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.3);
+font-size: 48px;
+color: #fff;
+}
+.button {
+position: absolute;
+bottom: 15px;
+z-index: 2;
+display: block;
+width: 40px;
+height: 40px;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: none;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+border-radius: 5px;
+background-color: rgba(5, 0, 36, 0.6);
+color: #fff;
+}
+.button-prev { left: 15px; }
+<p>.button-next { right: 15px; }<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JSON数据</h5>
+<p>该幻灯片的图片和图片描述信息有JSON数据来提供，格式如下：</p>
+<pre class="brush:js">
+sliderJSON = [
+{
+"imagePath": "1.jpg",
+"order": "2",
+"url": "#",
+"slideText": "图片描述"
+},
+{
+"imagePath": "2.jpg",
+"order": "3",
+"url": "#",
+"slideText": "图片描述"
+}, 
+{
+"imagePath": "3.jpg",
+"order": "1",
+"url": "#",
+"slideText": "图片描述"
+},
+{
+"imagePath": "4.jpg",
+"order": "4",
+"url": "#",
+"slideText": "图片描述"
+}
+</pre>
+<p>jquery-slider幻灯片插件的github地址为：<a href="https://github.com/eryasov/jquery-slider" target="\_blank">https://github.com/eryasov/jquery-slider</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1608/201608091600.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201608093842.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_682">
+                                <h3 class="post-title">
+                                    简单实用的Bootstrap右键上下文菜单插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

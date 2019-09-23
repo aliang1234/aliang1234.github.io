@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持元素惯性拖放和多点触摸手势的js插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持元素惯性拖放和多点触摸手势的js插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504101636.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504101636.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504101654.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>interact.js是一款支持元素惯性拖放和多点触摸手势的js插件。该插件支持在桌面设备和移动手机设备中拖放元素，拖动结束时带有惯性效果。并且支持移动设备的多点触摸手势。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>interact.js是一款支持元素惯性拖放和多点触摸手势的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">js插件</a>。该js插件支持在桌面设备和移动手机设备中拖放元素，拖动结束时带有惯性效果。并且支持移动设备的多点触摸手势。它的特点有：</p>
+<ul>
+<li>带惯性和吸附效果</li>
+<li>支持多元互动</li>
+<li>跨浏览器和设备，支持桌面和移动版本的Chrome, Firefox 和 Opera浏览器以及IE8+浏览器</li>
+<li>可以和SVG元素相互作用</li>
+<li>轻量级，无任何外部依赖</li>
+<li>除非要支持IE8或修改鼠标样式，否则不用修改任何DOM元素</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过<a href="http://bower.io/" target="\_blank">bower</a>或<a href="https://www.npmjs.org/" target="\_blank">npm</a>来安装该js插件。</p>
+<pre class="brush:html">
+bower install interact
+npm install interact.js
+</pre>
+<p>你也可以通过下面的CDN节点来引用该js插件：</p>
+<ul>
+<li>
+<a href="http://www.jsdelivr.com/#!interact.js" target="\_blank">jsDelivr CDN</a>
+<pre class="brush:html">
+&lt;script src="//cdn.jsdelivr.net/interact.js/VERSION/interact.min.js"&gt;&lt;/script&gt;
+</pre>
+</li>
+<li>
+<a href="https://cdnjs.com/libraries/interact.js" target="\_blank">cdnjs CDN</a>
+<pre class="brush:html">
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/VERSION/interact.min.js"&gt;&lt;/script&gt;
+</pre>
+</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 互动</h5>
+<p><code>interact</code>函数接收一个元素或CSS选择器和一个可选的<code>options</code>选项。它返回<code>Interactable</code>对象，该对象有一些方法和属性可以配置哪些事件可以触发以及修改结果坐标。这些方法都可以通过链式编程的方式来调用。</p>
+<pre class="brush:js">
+interact('.drag-and-resize')
+.draggable({
+snap: {
+targets: [
+{ x: 100, y: 200 },
+function (x, y) { return { x: x \% 20, y: y }; }
+]}
+})
+.resizable({
+inertia: true
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 选择器上下文</h5>
+<p>如果你想用选择器来选择一些元素，并且只想选择某些元素的子元素，可以在插件<code>Interactable</code>对象时，在<code>options</code>对象中传入一个<code>context</code>元素。</p>
+<p>通过使用同样的选择器但是指定不同的上下文，<code>interact</code>会返回不同的对象。默认的上下文是<code>document</code>。</p>
+<pre class="brush:html">
+&lt;ul id="my-list"&gt;
+&lt;li&gt; item 1 &lt;/li&gt;
+&lt;li&gt; item 2 &lt;/li&gt;
+&lt;li&gt; item 3 &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<pre class="brush:js">
+var myList = document.querySelector('#my-list');
+<p>interact('li', {<br>
+context: myList<br>
+})<br>
+.draggable({ /* ... */ });<br>
+If you want to use a selector to target elements but only want to to target the children of a certain element, add a context element to the options object when creating the Interactable.</p>
+<p>interact('li') === interact('li', { context: document })// true<br>
+interact('li') === interact('li', { context: myList })// false<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p><code>draggable</code>、<code>resizable</code>和<code>gesturable</code>方法使用<code>true</code>和<code>false</code>来简单的允许或不允许某些行为，或者使用一个带属性的对象来改变某些设置。</p>
+<pre class="brush:js">
+interact(target)
+.draggable({
+max: Number,
+maxPerElement: Number,
+manualStart: Boolean,
+snap : {/* ... */},
+restrict : {/* ... */},
+inertia: {/* ... */},
+autoScroll : {/* ... */},
+<p>axis : 'x' || 'y'</p>
+<p>})<br>
+.resizable({<br>
+max: Number,<br>
+maxPerElement: Number,<br>
+manualStart: Boolean,<br>
+snap : {/* ... <em>/},<br>
+restrict : {/</em> ... <em>/},<br>
+inertia: {/</em> ... <em>/},<br>
+autoScroll : {/</em> ... */},</p>
+<p>square : true || false,<br>
+axis : 'x' || 'y'<br>
+})<br>
+.gesturable({<br>
+max: Number,<br>
+maxPerElement: Number,<br>
+manualStart: Boolean,<br>
+restrict : {/* ... */}<br>
+});<br>
+</pre></p>
+<ul>
+<li>
+<span class="m">enabled</span>：允许交互行为。如果对象参数中没有<code>enabled</code>选项或属性值为<code>true</code>那么可以执行交互行为。</li>
+<li>
+<span class="m">max</span>：<code>max</code>用于限制发生交互作用对象的数量。默认情况下任何数量的对象都可以发生交互作用。</li>
+<li>
+<span class="m">maxPerElement</span>：By default only 1 interaction can target the same interactable+element combination. If you want to allow multiple interactions on the same target element, set the maxPerElement property of your object to a value &gt;= 2.</li>
+<li>
+<span class="m">manualStart</span>：设置为<code>true</code>时， drag, resize 和 gesture行为将被执行。</li>
+<li>
+<span class="m">snap</span>：改变drag 和 resize的snapping 设置。</li>
+<li>
+<span class="m">restrict</span>：改变 drag, resize 和 gesture的限制设置。</li>
+<li>
+<span class="m">inertia</span>：改变 drag 和 resize的惯性设置。</li>
+<li>
+<span class="m">autoScroll</span>：当 drag 或 resize发生边界溢出时滚动容器（<code>window</code>或一个HTML元素）</li>
+</ul>
+<p>更详细的参数、事件和方法资料请参看下载包中docs文件夹下的文档。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504101636.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504101654.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1261">
+                                <h3 class="post-title">
+                                    jQuery超酷轻量级响应式lightbox插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

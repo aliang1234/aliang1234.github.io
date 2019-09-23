@@ -1,0 +1,408 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    纯js点击按钮弹出登录对话框特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            纯js点击按钮弹出登录对话框特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-info">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1704/201704281532.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704281532.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704284482.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款简单的纯js点击按钮弹出登录对话框特效。该特效在用户点击登录按钮时，在屏幕中间弹出一个登录对话框，该对话框可以使用鼠标来进行位置拖动，整体效果简洁大方。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款简单的纯js点击按钮弹出登录对话框特效。该特效在用户点击登录按钮时，在屏幕中间弹出一个登录对话框，该对话框可以使用鼠标来进行位置拖动，整体效果简洁大方。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>登录对话框的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="ui-dialog" id="dialogMove" onselectstart='return false;'&gt;
+&lt;div class="ui-dialog-title" id="dialogDrag"onselectstart="return false;" &gt;
+登录通行证
+&lt;a class="ui-dialog-closebutton" href="javascript:hideDialog();"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="ui-dialog-content"&gt;
+&lt;div class="ui-dialog-l40 ui-dialog-pt15"&gt;
+&lt;input class="ui-dialog-input ui-dialog-input-username" type="input" placeholder="手机/邮箱/用户名" /&gt;
+&lt;/div&gt;
+&lt;div class="ui-dialog-l40 ui-dialog-pt15"&gt;
+&lt;input class="ui-dialog-input ui-dialog-input-password" type="input" placeholder="密码" /&gt;
+&lt;/div&gt;
+&lt;div class="ui-dialog-l40"&gt;
+&lt;a href="#"&gt;忘记密码&lt;/a&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;a class="ui-dialog-submit" href="#" &gt;登录&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="ui-dialog-l40"&gt;
+&lt;a href="#"&gt;立即注册&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>在弹出登录对话框时，要添加一个全屏的遮罩层。</p>
+<pre class="brush:html">
+&lt;div class="ui-mask" id="mask" onselectstart="return false"&gt;&lt;/div&gt;
+</pre>
+<p>还需要一个用于触发弹出登录对话框的按钮或超链接。</p>
+<pre class="brush:html">
+&lt;a href="javascript:showDialog()" class="current"&gt;立刻登录&lt;/a&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为登陆对话框添加下面的CSS样式。</p>
+<pre class="brush:css">
+.ui-dialog{ 
+width: 380px;height: auto;display: none;
+position: absolute;z-index: 9000;
+top: 0px;left: 0px;
+border: 1px solid #D5D5D5;background: #fff;
+}
+<p>.ui-dialog a{text-decoration: none;}</p>
+<p>.ui-dialog-title{<br>
+height: 48px;line-height: 48px; padding:0px 20px;color: #535353;font-size: 16px;<br>
+border-bottom: 1px solid #efefef;background: #f5f5f5;<br>
+cursor: move;<br>
+user-select:none;<br>
+}<br>
+.ui-dialog-closebutton{<br>
+width: 16px;height: 16px;display: block;<br>
+position: absolute;top: 12px;right: 20px;<br>
+background: url(../images/close_def.png) no-repeat;cursor: pointer;</p>
+<p>}<br>
+.ui-dialog-closebutton:hover{background:url(../images/close_hov.png);}</p>
+<p>.ui-dialog-content{<br>
+padding: 15px 20px;<br>
+}<br>
+.ui-dialog-pt15{<br>
+padding-top: 15px;<br>
+}<br>
+.ui-dialog-l40{<br>
+height: 40px;line-height: 40px;<br>
+text-align: right;<br>
+}</p>
+<p>.ui-dialog-input{<br>
+width: 100%;height: 40px;<br>
+margin: 0px;padding:0px;<br>
+border: 1px solid #d5d5d5;<br>
+font-size: 16px;color: #c1c1c1;<br>
+text-indent: 25px;<br>
+outline: none;<br>
+}<br>
+.ui-dialog-input-username{<br>
+background: url(../images/input_username.png) no-repeat 2px ;<br>
+}</p>
+<p>.ui-dialog-input-password{<br>
+background: url(../images/input_password.png) no-repeat 2px ;<br>
+}<br>
+.ui-dialog-submit{<br>
+width: 100%;height: 50px;background: #3b7ae3;border:none;font-size: 16px;color: #fff;<br>
+outline: none;text-decoration: none;<br>
+display: block;text-align: center;line-height: 50px;<br>
+}<br>
+.ui-dialog-submit:hover{<br>
+background: #3f81b0;<br>
+}</p>
+<p>.ui-mask{<br>
+width: 100%;height:100%;background: #000;<br>
+position: absolute;top: 0px;height: 0px;z-index: 8000;<br>
+opacity:0.4; filter: Alpha(opacity=40);<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>通过下面的javascript代码来实例化登录对话框，以及监听鼠标的点击事件。</p>
+<pre class="brush:js">
+var dialogInstace , onMoveStartId;//用于记录当前可拖拽的对象
+//获取元素对象
+function g(id){return document.getElementById(id);}
+//自动居中元素（el = Element）
+function autoCenter( el ){
+var bodyW = document.documentElement.clientWidth;
+var bodyH = document.documentElement.clientHeight;
+var elW = el.offsetWidth;
+var elH = el.offsetHeight;
+el.style.left = (bodyW-elW)/2 + 'px';
+el.style.top = (bodyH-elH)/2 + 'px';
+}
+//自动扩展元素到全部显示区域
+function fillToBody( el ){
+el.style.width= document.documentElement.clientWidth+'px';
+el.style.height = document.documentElement.clientHeight + 'px';
+}
+//Dialog实例化的方法
+function Dialog( dragId , moveId ){
+var instace = {} ;
+instace.dragElement= g(dragId); //允许执行 拖拽操作 的元素
+instace.moveElement= g(moveId); //拖拽操作时，移动的元素
+instace.mouseOffsetLeft = 0;//拖拽操作时，移动元素的起始 X 点
+instace.mouseOffsetTop = 0; //拖拽操作时，移动元素的起始 Y 点
+instace.dragElement.addEventListener('mousedown',function(e){
+var e = e || window.event;
+dialogInstace = instace;
+instace.mouseOffsetLeft = e.pageX - instace.moveElement.offsetLeft ;
+instace.mouseOffsetTop= e.pageY - instace.moveElement.offsetTop ;
+// instace.moveElement.style.zIndex = zIndex ++;
+})
+return instace;
+}
+//在页面中侦听 鼠标弹起事件
+document.onmouseup = function(e){
+dialogInstace = false;
+clearInterval(onMoveStartId);
+}
+//在页面中侦听 鼠标移动事件
+document.onmousemove = function(e) {
+var e = e || window.event;
+var instace = dialogInstace;
+if (instace) {
+var maxX = document.documentElement.clientWidth -instace.moveElement.offsetWidth;
+var maxY = document.documentElement.clientHeight - instace.moveElement.offsetHeight ;
+instace.moveElement.style.left = Math.min( Math.max( ( e.pageX - instace.mouseOffsetLeft) , 0 ) , maxX) + "px";
+instace.moveElement.style.top= Math.min( Math.max( ( e.pageY - instace.mouseOffsetTop ) , 0 ) , maxY) + "px";
+}
+if(e.stopPropagation) {
+e.stopPropagation();
+} else {
+e.cancelBubble = true;
+}
+};
+//拖拽对话框实例对象
+Dialog('dialogDrag','dialogMove');
+function onMoveStart(){
+}
+//重新调整对话框的位置和遮罩，并且展现
+function showDialog(){
+g('dialogMove').style.display = 'block';
+g('mask').style.display = 'block';
+autoCenter( g('dialogMove') );
+fillToBody( g('mask') );
+}
+//关闭对话框
+function hideDialog(){
+g('dialogMove').style.display = 'none';
+g('mask').style.display = 'none';
+}
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1704/201704281532.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201704284482.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_534">
+                                <h3 class="post-title">
+                                    带缩略图和多种过渡动画效果的jquery轮播图特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

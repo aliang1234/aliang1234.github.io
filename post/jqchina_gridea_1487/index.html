@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery鼠标滑过hover图片开门效果 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery鼠标滑过hover图片开门效果
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411201531.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411201531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141120537.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一个神奇的jQuery鼠标滑过hover图片效果，这个图片鼠标滑过效果当鼠标hover图片的时候，图片分割成4快分别向四个角移动，鼠标离开的时候4个小图片又收缩回来。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款jQuery图片鼠标滑过开门效果插件，来看看它是如何工作的：</p>
+<ul>
+<li>将所有的图片层的div的class都设置为<code> qitem </code>，以便能用jQuery找到图片并替换为4个角的div。</li>
+<li>每一个角的div都具有相同的背景图像，但是它们的background position各不相同，分别是：top left，top right，bottom left和bottom right。它看起来像是一整幅图片，实际是图片被分成4块，合并在一起。</li>
+<li>鼠标滑过的移入、移出操作将使4个角向4个方向运动。</li>
+<li>当4个角图片移动后，图片的标题将显示在出来。</li>
+<li>如果以后点击了某张图片，那么将链接到哪张图片的div中包含的超链接上去。</li>
+</ul>
+<p>从下图可以看到它的工作流程</p>
+<p><img src="http://img.htmleaf.com/1411/slice01.gif" alt="jquery鼠标滑过效果-slice01"></p>
+<h3>HTML</h3>
+<p>html代码设计额原则就是要足够简单实用。下面的html代码是一张图片的代码，可以通过它复制出多张图片。</p>
+<pre class="brush:html">
+&lt;a href="http://www.htmleaf.com"&gt;&lt;img src="1.gif" alt="Test 1" title="" width="126" height="126"/&gt;&lt;/a&gt;
+ &lt;span class="caption"&gt;&lt;h4&gt;Night Club&lt;/h4&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+<h3>CSS</h3>
+<pre class="brush:css">
+body {
+ font-family:arial; 
+}
+.qitem {
+ /* width and height must be even number */
+ width:126px;
+ height:126px; 
+ /* some styling for the item */
+ border:4px solid #222; 
+ margin:5px 5px 5px 0;
+ background: url('bg.gif') no-repeat;
+ /* make sure the four divs are hidden after changing the position */
+ overflow:hidden;
+ /* absolute position enabled for children elements*/
+ position:relative;
+ /* display item in single row */
+ float:left;
+ /* hand symbol for ie and other browser */
+ cursor:hand; cursor:pointer;
+}
+.qitem img {
+border:0;
+}
+/* styling for caption, position absolute is a must to set the z-index */
+.qitem .caption {
+position:absolute;
+z-index:0; 
+color:#ccc;
+display:block;
+}
+.qitem .caption h4 {
+ font-size:12px;
+ padding:10px 5px 0 8px;
+ margin:0;
+ color:#369ead;
+}
+.qitem .caption p {
+ font-size:10px; 
+ padding:3px 5px 0 8px;
+ margin:0;
+}
+/* Generic setting for corners */
+.topLeft, .topRight, .bottomLeft, .bottomRight {
+ /* allow javascript to move the corners */
+ position:absolute;
+ background-repeat: no-repeat; 
+ z-index:200;
+}
+/* set the background position for different corners */
+.topLeft {
+ background-position: top left;
+} 
+.topRight {
+ background-position: top right; 
+} 
+.bottomLeft {
+ background-position: bottom left; 
+} 
+.bottomRight {
+ background-position: bottom right; 
+}
+.clear {
+ clear:both; 
+}
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>如何工作</p>
+<ul>
+<li>当文档就绪时，计算出所有角部块的值。</li>
+<li>使用<code>each()</code>来循环每一个图片项，在循环中：
+<ul>
+<li>获取图片url和超链接及其他图片信息。</li>
+<li>删除<code>img</code>元素。</li>
+<li>添加4个角部div。</li>
+<li>为所有角部div添加背景图片。</li>
+<li>为所有角部div设置position。</li>
+<li>为所有角部div设置position。</li>
+</ul>
+</li>
+<li>鼠标移入事件：为角部div设置正确的值来移动它们。</li>
+<li>鼠标移出事件：重置所有的角部div的值，使它们回到原来的位置。</li>
+<li>鼠标点击事件：连接到指定的url上。</li>
+</ul>
+<p>从下图展示位脚部div的position</p>
+<p><img src="http://img.htmleaf.com/1411/slice02.gif" alt="jquery鼠标滑过效果-slice02"></p>
+<p>仔细观察上面的图片，假设一个item的宽为126px，那么我们需要生成的值分别为：0px, 63px, -63px 和 126px。</p>
+<p>因此(在这个demo中使用的item值就是126像素)</p>
+<ul>
+<li>var neg = Math.round($('.qitem').width() / 2) * (-1);</li>
+<li>(126 / 2) * (-1), neg = -63px</li>
+<li>var pos = neg * (-1);</li>
+<li>neg = -63px, pos = (-63) * -(1), pos = 63px</li>
+<li>var out = pos * 2;</li>
+<li>pos = 63px, pos = 63 * 2, pos = 126px</li>
+</ul>
+<pre class="brush:js">
+$(document).ready(function() {
+ //Custom settings
+ var style\_in = 'easeOutBounce';
+ var style\_out = 'jswing';
+ var speed\_in = 1000;
+ var speed\_out = 300; 
+ //Calculation for corners
+ var neg = Math.round($('.qitem').width() / 2) * (-1); 
+ var pos = neg * (-1); 
+ var out = pos * 2;
+ $('.qitem').each(function () {
+//grab the anchor and image path
+url = $(this).find('a').attr('href');
+img = $(this).find('img').attr('src');
+//remove the image
+$('img', this).remove();
+//append four corners/divs into it
+$(this).append('&lt;div class="topLeft"&gt;&lt;/div&gt;&lt;div class="topRight"&gt;&lt;/div&gt;&lt;div class="bottomLeft"&gt;&lt;/div&gt;&lt;div class="bottomRight"&gt;&lt;/div&gt;'); 
+//set the background image to all the corners
+$(this).children('div').css('background-image','url('+ img + ')');
+//set the position of corners
+$(this).find('div.topLeft').css({top:0, left:0, width:pos , height:pos}); 
+$(this).find('div.topRight').css({top:0, left:pos, width:pos , height:pos}); 
+$(this).find('div.bottomLeft').css({bottom:0, left:0, width:pos , height:pos}); 
+$(this).find('div.bottomRight').css({bottom:0, left:pos, width:pos , height:pos}); 
+ }).hover(function () {
+//animate the position
+$(this).find('div.topLeft').stop(false, true).animate({top:neg, left:neg}, {duration:speed\_out, easing:style\_out}); 
+$(this).find('div.topRight').stop(false, true).animate({top:neg, left:out}, {duration:speed\_out, easing:style\_out}); 
+$(this).find('div.bottomLeft').stop(false, true).animate({bottom:neg, left:neg}, {duration:speed\_out, easing:style\_out}); 
+$(this).find('div.bottomRight').stop(false, true).animate({bottom:neg, left:out}, {duration:speed\_out, easing:style\_out}); 
+ },
+ function () {
+//put corners back to the original position
+$(this).find('div.topLeft').stop(false, true).animate({top:0, left:0}, {duration:speed\_in, easing:style\_in}); 
+$(this).find('div.topRight').stop(false, true).animate({top:0, left:pos}, {duration:speed\_in, easing:style\_in}); 
+$(this).find('div.bottomLeft').stop(false, true).animate({bottom:0, left:0}, {duration:speed\_in, easing:style\_in}); 
+$(this).find('div.bottomRight').stop(false, true).animate({bottom:0, left:pos}, {duration:speed\_in, easing:style\_in});
+ }).click (function () {
+//go to the url
+[removed] = $(this).find('a').attr('href'); 
+ });
+});
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411201531.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141120537.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1488">
+                                <h3 class="post-title">
+                                    jQuery拖拽拖放插件-Gridly
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

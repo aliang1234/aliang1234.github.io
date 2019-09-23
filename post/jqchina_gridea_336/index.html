@@ -1,0 +1,297 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery loading遮罩层插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery loading遮罩层插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1711/201711301516.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1711/201711301516.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201711304856.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>busy-load是一款灵活的jquery loading遮罩层插件。它可以在加载的时候为容器添加一个遮罩层，并显示loading效果。loader可以是字体图标，图片，文字等，非常灵活方便。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>busy-load是一款灵活的<strong>jquery loading遮罩层插件</strong>。它可以在加载的时候为容器添加一个遮罩层，并显示loading效果。loader可以是字体图标，图片，文字等，非常灵活方便。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和busy-load相关文件。</p>
+<pre class="brush:html">
+&lt;script src="http://code.jquery.com/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>然后你就可以在需要的容器上调用loadingi效果了。</p>
+<pre class="brush:js">
+// 显示loading
+$("#some-element").busyLoad("show");
+</pre>
+<p>或者在调用时带上配置参数。</p>
+<pre class="brush:js">
+// 带配置参数
+$("#another-element").busyLoad("show", {
+background: "#000",
+spinner: "cube",
+animation: "slide"
+});
+</pre>
+<p>如果需要隐藏loading，只需要传入<code>"hide"</code>即可。</p>
+<pre class="brush:js">
+// 隐藏loading
+$("#some-element").busyLoad("hide");
+</pre>
+<pre class="brush:js">
+// 带配置参数
+$("#another-element").busyLoad("hide", {
+animation: "fade"
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>buzy-load插件的默认配置参数如下：</p>
+<pre class="brush:js">
+exports.default = {
+spinner: "pump", // pump, accordion, pulsar, cube, cubes, circle-line, circles, cube-grid
+image: false,
+fontawesome: false, // "fa fa-refresh fa-spin fa-2x fa-fw"
+custom: false, // jQuery Object
+color: "#fff",
+background: "rgba(0, 0, 0, 0.21)",
+maxSize: "50px", // Integer/String only for spinners &amp; images, not fontawesome &amp; custom
+minSize: "20px", // Integer/String only for spinners &amp; images, not fontawesome &amp; custom
+text: false,
+textColor: false, // default is color
+textMargin: ".5rem",
+textPosition: "right", // left, right, top, bottom
+fontSize: "1rem",
+fullScreen: false,
+animation: false, // fade, slide
+animationDuration: "fast", // String, Integer 
+containerClass: "busy-load-container",
+containerItemClass: "busy-load-container-item",
+spinnerClass: "busy-load-spinner",
+textClass: "busy-load-text"
+};
+</pre>
+<p>busy-load jquery loading遮罩层插件的github网址为：<a href="https://github.com/piccard21/busy-load" target="\_blank">https://github.com/piccard21/busy-load</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1711/201711301516.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201711304856.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_337">
+                                <h3 class="post-title">
+                                    基于vue2.0的input输入框文字特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

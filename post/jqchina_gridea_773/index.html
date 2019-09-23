@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    force-js | 实用的页面滚动和元素动画JavaScript库插 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            force-js | 实用的页面滚动和元素动画JavaScript库插
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1604/201604051803.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604051803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604053303.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>force.js是一款可以制作各种平滑页面滚动过渡效果和元素动画效果的JavaScript插件。该插件可以和jQuery结合使用，也可以单独通过JS来使用。通过它可以制作出31种动画的平滑过渡效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>force.js是一款可以制作各种平滑页面滚动过渡效果和元素动画效果的JavaScript插件。该插件可以和<a href="http://www.htmleaf.com/jQuery/">jQuery</a>结合使用，也可以单独通过JS来使用。通过它可以制作出31种动画的平滑过渡效果。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower来安装该插件。</p>
+<pre class="brush:html">
+bower install force-js 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该插件需要在页面中引入force.js文件。</p>
+<pre class="brush:html">
+&lt;script src="force.js.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 与jQuery结合使用</h5>
+<p>Force.js会自动检测页面是否加载了jQuery，并使jQuery对象继承<code>force.move()</code>和<code>force.jump()</code>函数。你可以像下面这样来移动元素：</p>
+<pre class="brush:js">
+$('#ball').move({left: 100px, top: 50px}, 1000);
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 页面平滑滚动</h5>
+<p>如果要自动检测页面中的hash链接，可以调用<code>force.bindHashes()</code>方法：</p>
+<pre class="brush:js">
+force.bindHashes();
+</pre>
+<p>如果你想手动设置，那么使用<code>force.jump()</code>方法：</p>
+<pre class="brush:js">
+var element = document.getElementBy('element-id');
+<p>// jump by object<br>
+force.jump(element);</p>
+<p>// jump by selector<br>
+force.jump('#element-id');<br>
+</pre></p>
+<p>你也可以使用一额外的配置参数：</p>
+<pre class="brush:js">
+force.jump(target);
+<p>var options = {<br>
+setHash: false<br>
+// if set to TRUE, it sets the hash/id value of the element in the URL</p>
+<p>duration: 500,<br>
+done: function() {},<br>
+easing: 'easeInQuad',<br>
+};<br>
+force.jump(target, options);<br>
+</pre></p>
+<p>或者使用jQuery：</p>
+<pre class="brush:js">
+$('#ball').jump();
+<p>//$('#ball').jump(options);<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 元素平滑过渡动画</h5>
+<p>使用<code>force.move()</code>方法可以制作元素的平滑过渡动画效果。</p>
+<pre class="brush:js">
+var element = document.getElementBy('element-id');
+<p>// jump by object<br>
+force.move(element, {left: 100px, top: 50px}, 1000);</p>
+<p>// jump by selector<br>
+force.move('#element-id', {left: 100px, top: 50px}, 1000);<br>
+</pre></p>
+<p>也可以在调用函数时设置一些配置参数：</p>
+<pre class="brush:js">
+force.move(target, properties, duration, doneCallback);
+<p>var options = {<br>
+properties: {<br>
+left: '100px'<br>
+},<br>
+duration: 500,<br>
+done: function() {},<br>
+easing: 'easeInQuad'<br>
+};<br>
+force.move(target, options);<br>
+</pre></p>
+<p>或者使用jQuery：</p>
+<pre class="brush:js">
+$('#ball').move({left: 100px, top: 50px}, 1000);
+<p>// $('#ball').move(options, duration, doneCallback);<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>在force.js中你可以修改任何你想修改的东西。</p>
+<pre class="brush:js">
+// 修改单个选项
+force.opt.cacheScrolling = true;
+<p>// 或者使用配置函数并传入一个对象来覆盖旧的配置<br>
+force.config( { cacheScrolling: true } );<br>
+</pre></p>
+<h5 style="text-transform: none;">hashLinkPattern: 'a[href*="#"]:not([href="#"])'</h5>
+<p>通过执行<code>force.bindHashes()</code>函数来发现页面中的hash链接的选择器。</p>
+<h5 style="text-transform: none;">frames: 60</h5>
+<p>默认force.js的动画速度为60fps。你可以通过这个参数来自定义动画速度。</p>
+<h5 style="text-transform: none;">moveDuration: 1000 AND jumpDuration: 1000</h5>
+<p><code>force.move()</code>和<code>force.jump()</code>函数的默认动画持续时间为1000毫秒。你可以在函数中传入<code>duration</code>配置参数来修改动画持续时间。</p>
+<h5 style="text-transform: none;">moveEasing: 'swing' AND jumpEasing: 'swing'</h5>
+<p>默认的动画easing函数是swing，可用的easing效果有：</p>
+<ul>
+<li>swing</li>
+<li>easeInQuad</li>
+<li>easeOutQuad</li>
+<li>easeInOutQuad</li>
+<li>easeInCubic</li>
+<li>easeOutCubic</li>
+<li>easeInOutCubic</li>
+<li>easeInQuart</li>
+<li>easeOutQuart</li>
+<li>easeInOutQuart</li>
+<li>easeInQuint</li>
+<li>easeOutQuint</li>
+<li>easeInOutQuint</li>
+<li>easeInSine</li>
+<li>easeOutSine</li>
+<li>easeInOutSine</li>
+<li>easeInExpo</li>
+<li>easeOutExpo</li>
+<li>easeInOutExpo</li>
+<li>easeInCirc</li>
+<li>easeOutCirc</li>
+<li>easeInOutCirc</li>
+<li>easeInElastic*</li>
+<li>easeOutElastic*</li>
+<li>easeInOutElastic*</li>
+<li>easeInBack*</li>
+<li>easeOutBack*</li>
+<li>easeInOutBack*</li>
+<li>easeInBounce*</li>
+<li>easeOutBounce*</li>
+<li>easeInOutBounce*</li>
+</ul>
+<p>带*号的easing效果不CSS动画过渡，只能使用原生的javascript。</p>
+<h5 style="text-transform: none;">cacheJumps: true</h5>
+<p>页面跳转默认会被缓存，这意味着下一场跳转只有在上一次跳转结束后才会有动画效果。设置这个参数为<code>false</code>会离开停止当前的跳转，并开始新的跳转。</p>
+<h5 style="text-transform: none;">cssTransitions: true</h5>
+<p>默认情况下，force.js在浏览器支持的情况下使用CSS动画过渡效果。建议将该选项设置为<code>true</code>，如果浏览器不支持CSS动画过渡，插件会自动转换为JS动画过渡。</p>
+<p>force-js插件的github地址为：<a href="https://github.com/gravmatt/force-js" target="\_blank">https://github.com/gravmatt/force-js</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604051803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604053303.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_774">
+                                <h3 class="post-title">
+                                    3种基于Bootstrap的超酷Tabs选项卡UI设计
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

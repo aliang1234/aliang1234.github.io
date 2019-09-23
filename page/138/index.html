@@ -1,0 +1,1772 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_795">
+                        pickout-纯JS炫酷下拉列表框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_795" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604041546.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+pickout.js是一款效果非常炫酷的纯JavaScript下拉列表框美化插件。该下拉列表框插件大小仅5kb，在用户点击了列表框时，会弹出类似模态窗口的下拉列表，还可以对列表中的选项进行搜索过滤。
+内容：
+
+
+简要教程
+
+
+pickout.js是一款效果非常炫酷的纯JavaScript下拉列表框美化插件。该下拉列表框插件大小仅5kb，在用户点击了列表框时，会弹出类似模态窗口的下拉列表，还可以对列表中的选项进行搜索过滤。
+
+ 安装
+可以通过npm或bower来安装该下拉列表框插件。
+
+npm install pickout --save
+bower install pickout --save
+
+
+ 使用方法
+使用该下拉列表框插件需要在页面中引入pickout.min.css和pickout.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;./path/to/pickout.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;./path/to/pickout.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该下拉列表框的HTML结构使用一个带.form-group的&amp;lt;div&amp;gt;作为容器，里面放置标签&amp;lt;label&amp;gt;和&amp;lt;select&amp;gt;元素。
+
+&amp;lt;!-- 普通的下拉列表框 --&amp;gt;
+&amp;lt;div class=&#34;form-group&#34;&amp;gt;
+&amp;lt;label for=&#34;city&#34;&amp;gt;City:&amp;lt;/label&amp;gt;
+&amp;lt;select name=&#34;city&#34; id=&#34;city&#34; class=&#34;city all&#34; placeholder=&#34;Select to option&#34;&amp;gt;
+&amp;lt;option value=&#34;opt1&#34;&amp;gt;Option 1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;opt2&#34;&amp;gt;Option 2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;opt3&#34;&amp;gt;Option 3&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;opt4&#34;&amp;gt;Option 4&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt; 
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 带图标的下拉列表框 --&amp;gt;
+&amp;lt;div class=&amp;quot;form-group&amp;quot;&amp;gt;
+&amp;lt;label for=&amp;quot;state&amp;quot;&amp;gt;State:&amp;lt;/label&amp;gt;
+&amp;lt;select name=&amp;quot;state&amp;quot; id=&amp;quot;state&amp;quot; class=&amp;quot;state all&amp;quot; placeholder=&amp;quot;Select to option&amp;quot;&amp;gt;
+&amp;lt;option value=&amp;quot;opt1&amp;quot; data-icon=&amp;quot;&amp;quot; &amp;gt;Option 1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;opt2&amp;quot; data-icon=&amp;quot;&amp;quot;&amp;gt;Option 2&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;opt3&amp;quot; data-icon=&amp;quot;&amp;quot;&amp;gt;Option 3&amp;lt;/option&amp;gt;
+&amp;lt;option value=&amp;quot;opt4&amp;quot; data-icon=&amp;quot;&amp;quot;&amp;gt;Option 4&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+可以使用.to()方法来初始化该下拉列表框插件。
+
+pickout.to(&#39;.city&#39;);
+/* 或者 */
+pickout.to({
+el: &#39;.city&#39;
+});
+
+如果是类选择器需要加上“.”号，如果是ID选择器需要加上“#”号。
+如果需要开启选项搜索过滤功能，可以将配置参数search设置为true。
+
+pickout.to({
+el: &#39;.state&#39;,
+search: true
+});
+
+你可以为所有的下拉列表框配置一个相同的class类，然后一次性初始化所有的下拉列表。
+
+pickout.to(&#39;.all&#39;);
+
+
+ 自定义样式
+如果你需要自定义下拉列表的样式，可以在下面的类选择器中编写你的代码：
+
+.pk-input.-MySelector{
+// my customization 
+}
+.pk-arrow.-MySelector{
+// my customization 
+}
+
+然后在插件初始化时作为主题的参数传入：
+
+pickout.to({
+el: &#39;.city&#39;,
+theme: &#39;MySelector&#39;
+});
+
+
+ 可用主题
+有2个可用的主题：
+
+clean（默认主题）
+dark
+
+
+pickout.to({
+el: &#39;.state&#39;,
+theme: &#39;dark&#39;
+});
+
+
+ 设置默认值
+ 
+&amp;lt;div class=&#34;form-group&#34;&amp;gt;
+&amp;lt;label for=&#34;state&#34;&amp;gt;State:&amp;lt;/label&amp;gt;
+&amp;lt;select name=&#34;state&#34; id=&#34;state&#34; class=&#34;state all&#34; placeholder=&#34;Select to option&#34;&amp;gt;
+&amp;lt;!-- Option selected by default --&amp;gt;
+&amp;lt;option value=&#34;opt1&#34; selected&amp;gt;Option 1&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;opt2&#34;&amp;gt;Option 2&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt; 
+&amp;lt;/div&amp;gt; 
+ 
+可以通过updated()方法来更新默认值。
+
+pickout.updated(&#39;.city&#39;);
+
+pickout.js下拉列表框美化插件的github地址为：https://github.com/ktquez/pickout
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_795">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_796">
+                        FAQs问答垂直手风琴列表UI设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_796" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605261704.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用CSS3和jQuery来制作的FAQs问答垂直手风琴列表UI设计效果。该FAQs垂直手风琴效果设计简单，效果时尚大方，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一款使用CSS3和jQuery来制作的FAQs问答垂直手风琴列表UI设计效果。该FAQs垂直手风琴效果设计简单，效果时尚大方，非常实用。
+
+ 使用方法
+
+ HTML结构
+该FAQs垂直手风琴的HTML结构使用一个容器来包裹一个有序列表。
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;dl&amp;gt;
+&amp;lt;dt&amp;gt;标题&amp;lt;/dt&amp;gt;
+&amp;lt;dd&amp;gt;
+&amp;lt;p&amp;gt;内容......&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;内容......&amp;lt;/p&amp;gt;
+&amp;lt;/dd&amp;gt;
+......
+&amp;lt;/dl&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+该FAQs垂直手风琴的样式也非常简单。列表前面的小三角形使用dt元素的:before伪元素来制作。
+
+dt:before {
+content: &#34;&#34;;
+border-color: transparent #ccc;
+border-style: solid;
+border-width: 5px 0 5px 8px;
+display: block;
+height: 0;
+width: 0;
+left: -16px;
+top: 17px;
+position: relative;
+}
+
+内容面板的提示框三角形使用dd元素的:before和:after伪元素来制作。
+
+dd:after, dd:before {
+bottom: 100\%;
+left: 6\%;
+border: solid transparent;
+content: &#34;&#34;;
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+}
+dd:after {
+border-color: rgba(136, 183, 213, 0);
+border-color: transparent;
+border-bottom-color: #FDFCFA;
+border-width: 15px;
+margin-left: -15px;
+}
+dd:before {
+border-color: rgba(194, 225, 245, 0);
+border-color: transparent;
+border-bottom-color: #F2EEE6;
+border-width: 17px;
+margin-left: -17px;
+}
+
+
+ JavaScript
+手风琴列表的切换通过jQuery的slideToggle()方法来实现。
+
+(function(){
+$(&#39;dd&#39;).filter(&#39;:nth-child(n+4)&#39;).addClass(&#39;hide&#39;);
+(&amp;#039;dl&amp;#039;).on(&amp;#039;click&amp;#039;, &amp;#039;dt&amp;#039;, function() {
+(this).next().slideToggle(200);
+});
+})();
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_796">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_797">
+                        jstree-实用的jQuery目录树插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_797" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1604/201604211621.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jstree是一款非常实用的jQuery目录树插件。jsTree树插件易于扩展，可以配置主题，支持HTML和JSON格式的数据，还支持异步回调数据，支持多级树结构等。
+内容：
+
+
+简要教程
+
+
+jstree是一款非常实用的jQuery目录树插件。jsTree树插件易于扩展，可以配置主题，支持HTML和JSON格式的数据，还支持异步回调数据，支持多级树结构等。它的特点还有：
+
+支持树节点的拖拽。
+支持使用键盘导航。
+支持在线编辑、创建和删除。
+支持3状态的checkbox
+支持模糊搜索。
+可自定义节点类型。
+
+
+ 使用方法
+使用该目录树插件需要在页面中引入jquery、主题样式文件style.min.css和jstree.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;themes/default/style.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jstree/3.0.9/jstree.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 通过HTML代码来生成树结构
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Root node
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Child node 1&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Child node 2&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree();
+});
+&amp;lt;/script&amp;gt;
+
+你可以通过data-jstree来为树节点添加选项：
+
+&amp;lt;li data-jstree=&#39;{ &#34;selected&#34; : true, &#34;opened&#34; : true }&#39;&amp;gt;Root node ...
+
+
+ 通过JSON来生成树结构
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : [
+{ &#34;text&#34; : &#34;Root node&#34;, &#34;children&#34; : [
+{ &#34;text&#34; : &#34;Child node 1&#34; },
+{ &#34;text&#34; : &#34;Child node 2&#34; }
+]
+}
+]
+}
+});
+});
+&amp;lt;/script&amp;gt;
+
+在json数据中可用的选项有：
+
+
+id：节点的ID，用于标识一个树节点。
+
+icon：树节点的图标。它可以是某个图标文件或CSS class名称。
+
+data：可以是任何数据，它对树的显示没有影响，只是附加在节点上的数据。
+
+state：指定树节点状态的对象：
+
+
+selected：初始化时该节点是否被选择。
+
+opened：该节点是否打开。
+
+disabled：是否禁用该节点。
+
+checked：指定使用checkbox插件。指定节点是否被checked（仅当tie\_selection为false时有效）。
+
+undetermined：指定使用checkbox插件。节点在不确定状态时是否被渲染。
+
+
+
+type：节点的类型。
+
+li\_attr：在生成的HTML树结构li元素上的属性对象。
+
+a\_attr：在生成的HTML树结构a元素上的属性对象。
+
+下面是一个示例代码：
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : [
+{
+&#34;text&#34; : &#34;Root node&#34;,
+&#34;state&#34; : {&#34;opened&#34; : true },
+&#34;children&#34; : [
+{
+&#34;text&#34; : &#34;Child node 1&#34;,
+&#34;state&#34; : { &#34;selected&#34; : true },
+&#34;icon&#34; : &#34;glyphicon glyphicon-flash&#34;
+},
+{ &#34;text&#34; : &#34;Child node 2&#34;, &#34;state&#34; : { &#34;disabled&#34; : true } }
+]
+}
+]
+}
+});
+});
+&amp;lt;/script&amp;gt;
+
+
+ 通过AJAX来管理树结构
+可以通过jaax请求来生成树结构：
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : {
+&#34;url&#34; : &#34;//www.jstree.com/fiddle/&#34;,
+&#34;dataType&#34; : &#34;json&#34; // needed only if you do not supply JSON headers
+}
+}
+});
+});
+&amp;lt;/script&amp;gt; 
+
+服务器端的响应代码是：
+
+[{
+&#34;id&#34;:1,&#34;text&#34;:&#34;Root node&#34;,&#34;children&#34;:[
+{&#34;id&#34;:2,&#34;text&#34;:&#34;Child node 1&#34;},
+{&#34;id&#34;:3,&#34;text&#34;:&#34;Child node 2&#34;}
+]
+}]
+
+
+ 通过回调函数来管理树结构
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : function (node, cb) {
+if(node.id === &#34;#&#34;) {
+cb([{&#34;text&#34; : &#34;Root&#34;, &#34;id&#34; : &#34;1&#34;, &#34;children&#34; : true}]);
+}
+else {
+cb([&#34;Child&#34;]);
+}
+}
+}
+});
+});
+&amp;lt;/script&amp;gt;
+
+
+ 事件
+jstree 提供了很多事件来管理树结构。最常使用的是changed事件，它在用户选择不同的树节点时触发：
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : [
+{&#34;id&#34; : 1, &#34;text&#34; : &#34;Node 1&#34;},
+{&#34;id&#34; : 2, &#34;text&#34; : &#34;Node 2&#34;},
+]
+}
+});
+$(&#39;#container&#39;).on(&#34;changed.jstree&#34;, function (e, data) {
+console.log(&#34;The selected nodes are:&#34;);
+console.log(data.selected);
+});
+});
+&amp;lt;/script&amp;gt;
+
+所有的事件都在.jstree命名空间中触发。
+
+ 方法
+你可以通过调用方法的方式来操作树：
+
+&amp;lt;button&amp;gt;Select node 1&amp;lt;/button&amp;gt;
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+$(function() {
+$(&#39;#container&#39;).jstree({
+&#39;core&#39; : {
+&#39;data&#39; : [
+{&#34;id&#34; : 1, &#34;text&#34; : &#34;Node 1&#34;},
+{&#34;id&#34; : 2, &#34;text&#34; : &#34;Node 2&#34;},
+]
+}
+});
+$(&#39;button&#39;).on(&#34;click&#34;, function () {
+var instance = $(&#39;#container&#39;).jstree(true);
+instance.deselect\_all();
+instance.select\_node(&#39;1&#39;);
+});
+});
+&amp;lt;/script&amp;gt;
+
+上面的例子展示了如何通过jstree示例来调用方法，你也可以通过下面的方式来调用方法：
+
+$(&#39;#container&#39;).jstree(&#34;select\_node&#34;, &#34;1&#34;);
+
+关于jstree更多的API和使用方法请参考官方主页：https://www.jstree.com/
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_797">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_798">
+                        头部固定的响应式jQuery表格插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_798" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1606/201606021549.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款头部固定的响应式jQuery表格插件。该表格通过jQuery来构造固定的表格头效果，在页面向下滚动时，表格头固定在页面的顶部。
+内容：
+
+
+简要教程
+
+
+jquery.fixme是一款头部固定的响应式jQuery表格插件。该表格通过jQuery来构造固定的表格头效果，在页面向下滚动时，表格头固定在页面的顶部。
+
+ 使用方法
+
+ HTML结构
+该表格的HTML结构使用标准的HTML表格的结构：
+
+&amp;lt;table class=&#34;blue&#34;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;列1&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;列2&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;列3&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;单元格1&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;单元格2&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;单元格3&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+......
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+
+ CSS样式
+该表格所需的样式非常简单，它提供了2中颜色主题：蓝色和紫色。
+
+.container{
+width:90\%;
+margin:auto;
+}
+table{
+border-collapse:collapse;
+width:100%;
+}
+.blue{
+border:2px solid #1ABC9C;
+}
+.blue thead{
+background:#1ABC9C;
+}
+.purple{
+border:2px solid #9B59B6;
+}
+.purple thead{
+background:#9B59B6;
+}
+
+通过nth-child为表格偶数行设置斑马线效果。
+
+tbody tr:nth-child(even){
+background:#ECF0F1;
+}
+
+鼠标滑过表格时修改表格行的背景色和文字颜色。
+
+tbody tr:hover{
+background:#BDC3C7;
+color:#FFFFFF;
+} 
+
+.fixed类用于固定表格头，定位方式使用固定定位，开始是是不可见的。
+
+.fixed{
+top:0;
+position:fixed;
+width:auto;
+display:none;
+border:none;
+}
+
+
+ JavaScript
+在Js代码中，通过$.fn.fixMe构造了一个简单的表格头部固定插件。该插件中有3个方法：初始化方法init()，头部尺寸修改方法resizeFixed()和头部滚动固定方法scrollFixed()。然后以参数的形式将后两个方法分别传入window对象的resize()和scroll()方法中。
+
+;(function($) {
+ $.fn.fixMe = function() {
+return this.each(function() {
+ var $this = $(this),
+$t\_fixed;
+ function init() {
+$this.wrap(&#39;&amp;lt;div class=&#34;container&#34; /&amp;gt;&#39;);
+$t\_fixed = $this.clone();
+$t\_fixed.find(&#34;tbody&#34;).remove().end().addClass(&#34;fixed&#34;).insertBefore($this);
+resizeFixed();
+ }
+ function resizeFixed() {
+$t\_fixed.find(&#34;th&#34;).each(function(index) {
+ $(this).css(&#34;width&#34;,$this.find(&#34;th&#34;).eq(index).outerWidth()+&#34;px&#34;);
+});
+ }
+ function scrollFixed() {
+var offset = $(this).scrollTop(),
+tableOffsetTop = $this.offset().top,
+tableOffsetBottom = tableOffsetTop + $this.height() - $this.find(&#34;thead&#34;).height();
+if(offset &amp;lt; tableOffsetTop || offset &amp;gt; tableOffsetBottom)
+ $t\_fixed.hide();
+else if(offset &amp;gt;= tableOffsetTop &amp;amp;&amp;amp; offset &amp;lt;= tableOffsetBottom &amp;amp;&amp;amp; $t\_fixed.is(&#34;:hidden&#34;))
+ $t\_fixed.show();
+ }
+ $(window).resize(resizeFixed);
+ $(window).scroll(scrollFixed);
+ init();
+});
+ };
+})(jQuery); 
+
+最后在页面DOM元素加载完毕之后，通过fixMe()方法来初始化插件。
+
+$(document).ready(function(){
+$(&#34;table&#34;).fixMe();
+});
+
+jquery.fixme固定表格头插件的github地址为：https://github.com/ispot-tv/jquery.fixme
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_798">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_799">
+                        基于Bootstrap的响应式垂直时间轴jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_799" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605171507.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+eeyellow.Timeline是一款基于Bootstrap的响应式垂直时间轴jQuery插件。该垂直时间轴基于Bootstrap的网格系统，它使用简单，每个时间节点还可以制作轮播图效果。
+内容：
+
+
+简要教程
+
+
+eeyellow.Timeline是一款基于Bootstrap的响应式垂直时间轴jQuery插件。该垂直时间轴基于Bootstrap的网格系统，它使用简单，每个时间节点还可以制作轮播图效果。它的特点还有：
+
+基于Bootstrap网格系统，响应式设计。
+点击每一个时间节点的头部可以展开或收缩面板。
+每一个面板都可以制作多事件轮播图效果。
+
+
+ 使用方法
+使用该时间轴插件需要在页面中引入Bootstrap的相关文件，以及jquery.eeyellow.Timeline.css和jquery，jquery.eeyellow.Timeline.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;bootstrap-3.3.6-dist/css/bootstrap.min.css&#34; /&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.eeyellow.Timeline.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;bootstrap-3.3.6-dist/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.eeyellow.Timeline.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该时间轴插件的基本HTML结构如下，每一个&amp;lt;dt&amp;gt;元素是一个时间节点。
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-12&#34;&amp;gt;
+&amp;lt;div class=&#34;VivaTimeline&#34;&amp;gt;
+&amp;lt;dl&amp;gt;
+&amp;lt;dt&amp;gt;2016 3月&amp;lt;/dt&amp;gt;
+&amp;lt;dd class=&#34;pos-left clearfix&#34;&amp;gt;
+&amp;lt;div class=&#34;circ&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;time&#34;&amp;gt;Feb 03&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;events&#34;&amp;gt;
+&amp;lt;div class=&#34;events-header&#34;&amp;gt;Event Heading&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;events-body&#34;&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-6 pull-left&#34;&amp;gt;
+&amp;lt;img class=&#34;events-object img-responsive img-rounded&#34; src=&#34;img/1.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;events-desc&#34;&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;row&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-6 pull-left&#34;&amp;gt;
+&amp;lt;img class=&#34;events-object img-responsive img-rounded&#34; src=&#34;img/2.jpg&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;events-desc&#34;&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;events-footer&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/dd&amp;gt;
+&amp;lt;!-- 其它时间节点 --&amp;gt;
+&amp;lt;dt&amp;gt;Jan 2016&amp;lt;/dt&amp;gt;
+&amp;lt;dt&amp;gt;Dec 2015&amp;lt;/dt&amp;gt;
+&amp;lt;dt&amp;gt;Oct 2015&amp;lt;/dt&amp;gt;
+&amp;lt;dt&amp;gt;Sep 2015&amp;lt;/dt&amp;gt;
+&amp;lt;dt&amp;gt;Aug 2015&amp;lt;/dt&amp;gt;
+&amp;lt;/dl&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过vivaTimeline()方法来初始化该时间轴插件。
+
+$(&#39;.VivaTimeline&#39;).vivaTimeline();
+
+
+ 配置参数
+该时间轴插件有2个可用的配置参数：
+
+
+carousel：启用或禁用面板的轮播图功能。默认值为true。
+
+$(&#39;.VivaTimeline&#39;).vivaTimeline({
+carousel: true
+});
+
+
+
+carouselTime：轮播图的播放速度。默认值为10000毫秒。
+
+$(&#39;.VivaTimeline&#39;).vivaTimeline({
+carousel: true,
+carouselTime: 3000
+});
+
+
+
+eeyellow.Timeline垂直时间轴插件的github地址为：https://github.com/eeyellow/eeyellow.Timeline
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_799">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_80">
+                        js绘制文字动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_80" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1901/201901231528.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是js绘制文字动画特效插件。该插件通过在js中配置要绘制的文字、大小、颜色等属性，就可以在屏幕中指定文字实现文字的绘画过程。
+内容：
+
+
+简要教程
+
+
+这是js绘制文字动画特效插件。该插件通过在js中配置要绘制的文字、大小、颜色等属性，就可以在屏幕中指定文字实现文字的绘画过程。
+
+ 使用方法
+在页面中引入vara.min.js文件。
+
+&amp;lt;script src=&#34;./src/vara.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素作为文字绘画的容器。
+
+&amp;lt;div id=&#34;container&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+然后通过下面的方法来初始化插件。
+
+new Vara(&#34;#element&#34;,&#34;font.json&#34;,[{
+text:&#34;Handwritten&#34;
+}],{
+fontSize:46
+});
+
+
+ 配置参数
+该js绘制文字动画特效插件的可用配置参数有：
+
+new Vara(&#34;#container&#34;,&#34;font.json&#34;,[
+{
+text:&#34;Hello World&#34;, // String, text to be shown
+fontSize:24, // Number, size of the text
+strokeWidth:.5, // Width / Thickness of the stroke
+color:&#34;black&#34;, // Color of the text
+id:&#34;&#34;, // String or integer, for if animations are called manually or when using the get() method. Default is the index of the object.
+duration:2000, // Number, Duration of the animation in milliseconds
+textAlign:&#34;left&#34;, // String, text align, accepted values are left,center,right
+x:0, // Number, x coordinate of the text
+y:0, // Number, y coordinate of the text
+fromCurrentPosition:{ // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied
+x:true, // Boolean
+y:true, // Boolean
+},
+autoAnimation:true, // Boolean, Whether to animate the text automatically
+queued:true, // Boolean, Whether the animation should be in a queue
+delay:0, // Delay before the animation starts in milliseconds
+letterSpacing:0 // Number, space between each character
+}],{
+// The options given below will be applicable to every text created,
+// however they will not override the options set above.
+// They will work as secondary options.
+fontSize:24, // Number, size of the text
+strokeWidth:.5, // Width / Thickness of the stroke
+color:&#34;black&#34;, // Color of the text
+duration:2000, // Number, Duration of the animation in milliseconds
+textAlign:&#34;left&#34;, // String, text align, accepted values are left,center,right
+autoAnimation:true, // Boolean, Whether to animate the text automatically
+queued:true, // Boolean, Whether the animation should be in a queue
+letterSpacing:0
+})
+
+
+ 方法
+该js绘制文字动画特效插件的可用方法有：
+
+
+.ready(function)：当字体被加载完成，元素准备就绪时执行该方法。其它方法在该方法内执行。
+
+.get(id)：返回字符和容器对象。字符是一个svg g元素的数组。
+
+.draw(id)：用于当 autoAnimation:false 时手动绘制文字动画。
+
+.animationEnd(function(i,o){})：用于在动画结束时触发一个函数。
+
+.playAll()：开始所有的文字动画。
+
+ 该js绘制文字动画特效插件的github网址为：https://github.com/akzhy/Vara
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_80">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_800">
+                        超酷select选择下拉框美化jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_800" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1605/201605091758.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-nice-select是一款轻量级的select下拉选择框美化jQuery插件。该插件可以将原生的select元素转换为自定义样式的下拉选择框，并且在选择时带有很酷的CSS3过渡动画效果。
+内容：
+
+
+简要教程
+
+
+jquery-nice-select是一款轻量级的select下拉选择框美化jQuery插件。该插件可以将原生的select元素转换为自定义样式的下拉选择框，并且在选择时带有很酷的CSS3过渡动画效果。
+
+ 使用方法
+使用该下拉框美化插件需要在页面中引入nice-select.css和jquery以及jquery.nice-select.js文件。
+ 
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/nice-select.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;path/to/jquery.nice-select.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过niceSelect()方法来初始化该插件。
+
+$(document).ready(function() {
+$(&#39;select&#39;).niceSelect();
+}); 
+
+
+ 显示文本
+你可以为每一个选项定义一个预定义的文本，在该选项被选择的时候，会显示这个文本。
+
+&amp;lt;select&amp;gt;
+&amp;lt;option data-display=&#34;Select&#34;&amp;gt;Nothing&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;Some option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Another option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34; disabled&amp;gt;A disabled option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;Potato&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 选择框的宽度
+插件中预定义了一些可用的class类，用于定制不同样式的select选择下拉框。使用.wide class类会生成于父容器相等宽度的下拉框。
+
+&amp;lt;select class=&#34;wide&#34;&amp;gt;
+&amp;lt;option data-display=&#34;Select&#34;&amp;gt;Nothing&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;Some option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Another option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34; disabled&amp;gt;A disabled option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;Potato&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 右对齐
+
+&amp;lt;select class=&#34;right&#34;&amp;gt;
+&amp;lt;option data-display=&#34;Select&#34;&amp;gt;Nothing&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;Some option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Another option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34; disabled&amp;gt;A disabled option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;Potato&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 小号文字
+
+&amp;lt;select class=&#34;small&#34;&amp;gt;
+&amp;lt;option data-display=&#34;Select&#34;&amp;gt;Nothing&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;1&#34;&amp;gt;Some option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;2&#34;&amp;gt;Another option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;3&#34; disabled&amp;gt;A disabled option&amp;lt;/option&amp;gt;
+&amp;lt;option value=&#34;4&#34;&amp;gt;Potato&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ 方法
+
+ update
+该方法用于更新select下拉选择框。
+
+$(&#39;select&#39;).niceSelect(&#39;update&#39;); 
+
+
+ destory
+该方法用于销毁select下拉选择框。
+
+$(&#39;select&#39;).niceSelect(&#39;destory&#39;); 
+
+jquery-nice-select选择下拉框美化插件的github地址为：https://github.com/hernansartorio/jquery-nice-select
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_800">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_801">
+                        cbFlyout-响应式jQuery多级隐藏侧边栏菜单插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_801" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1602/201602231700.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+cbFlyout是一款简单实用的响应式jQuery多级隐藏侧边栏菜单插件。该隐藏侧边栏插件实用简单，通过简单的设置最小视口参数就可以在小于该视口宽度时，将导航菜单转换为隐藏侧边栏菜单。
+内容：
+
+
+简要教程
+
+
+cbFlyout是一款简单实用的响应式jQuery多级隐藏侧边栏菜单插件。该隐藏侧边栏插件实用简单，通过简单的设置最小视口参数就可以在小于该视口宽度时，将导航菜单转换为隐藏侧边栏菜单。
+
+ 使用方法
+使用该多级隐藏侧边栏菜单插件需要在页面中引入global.css，jQuery和jquery.cbFlyout.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/global.css&#34; type=&#34;text/css&#34;/&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.cbFlyout.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该多级隐藏侧边栏菜单的HTML结构如下：
+
+&amp;lt;div class=&#34;layout-left-flyout visible-sm&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;layout-right-content&#34;&amp;gt;
+&amp;lt;header class=&#34;the-header&#34;&amp;gt;
+&amp;lt;div class=&#34;navbar container&#34;&amp;gt;
+&amp;lt;!-- Trigger --&amp;gt;
+&amp;lt;a class=&amp;quot;btn-navbar btn-navbar-navtoggle btn-flyout-trigger&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;icon-bar btn-flyout-trigger&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;icon-bar btn-flyout-trigger&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;icon-bar btn-flyout-trigger&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;!-- Structure --&amp;gt;
+&amp;lt;nav class=&amp;quot;the-nav nav-collapse clearfix&amp;quot;&amp;gt;
+&amp;lt;ul class=&amp;quot;nav nav-pill pull-left&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;dropdown&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Dogs &amp;lt;b class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;subnav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Terrier&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Labrador&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;dropdown&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Cats&amp;lt;b class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;subnav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Persian&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Siamese&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;dropdown&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Primates&amp;lt;b class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;ul class=&amp;quot;subnav&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Monkey&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;ul class=&amp;quot;nav nav-pill pull-right&amp;quot;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Congress &amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+...
+&amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;main class=&amp;quot;container&amp;quot;&amp;gt;
+...
+&amp;lt;/main&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- END .layout-left-flyout --&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该多级隐藏侧边栏菜单插件。
+
+$(&#39;.the-nav&#39;).cbFlyout( minWidth:768 );
+
+minWidth参数用于指定最小视口宽度。在浏览器视口小于该视口宽度时，导航菜单将转换为隐藏侧边栏菜单。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_801">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_802">
+                        带预览模式的Bootstrap所见即所得文本编辑器
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-success">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_802" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603131609.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+bootstrap-markdown-editor是一款带预览模式的Bootstrap所见即所得文本编辑器jQuery插件。该文本编辑器支持图片上传，可以进入全屏模式，非常实用。
+内容：
+
+
+简要教程
+
+
+bootstrap-markdown-editor是一款带预览模式的Bootstrap所见即所得文本编辑器jQuery插件。该文本编辑器支持图片上传，可以进入全屏模式，非常实用。它的特点还有：
+
+支持预览模式。
+支持文件上传（拖拽和点击按钮上传）。
+支持快捷键。
+同一个页面支持多个编辑器实例。
+支持全屏模式。
+多种主题。
+支持i18n。
+
+
+ 安装
+可以通过bower来安装该文本编辑器插件。
+
+bower install bootstrap-markdown-editor --save
+
+
+ 使用方法
+该文本编辑器依赖于Bootstrap 3，jQuery和Ace editor
+
+&amp;lt;link href=&#34;http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap-theme.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;dist/css/bootstrap-markdown-editor.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://libs.useso.com/js/bootstrap/3.2.0/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/ace.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/marked.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/js/bootstrap-markdown-editor.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+HTML结构
+可以使用一个&amp;lt;div&amp;gt;容器作为该文本编辑器的容器。
+
+&amp;lt;div id=&#34;myEditor&#34;&amp;gt;# Test&amp;lt;/div&amp;gt; 
+
+
+初始化插件
+在页面加载完毕之后，可以通过下面的方法来初始化该文本编辑器插件。
+
+$(&#39;#myEditor&#39;).markdownEditor();
+
+可以通过下面的方法来获取文本内容。
+
+var markdownContent = $(&#39;#myEditor&#39;).markdownEditor(&#39;content&#39;);
+
+
+预览模式
+Bootstrap Markdown Editor提供一个回调函数来解析模型并返回HTML代码，要使用预览模式，你需要使用下面的参数。
+
+$(&#39;#myEditor&#39;).markdownEditor({
+// Activate the preview:
+preview: true,
+// This callback is called when the user click on the preview button:
+onPreview: function (content, callback) {
+// Example of implementation with ajax:
+$.ajax({
+url: &#39;preview.php&#39;,
+type: &#39;POST&#39;,
+dataType: &#39;html&#39;,
+data: {content: content},
+})
+.done(function(result) {
+// Return the html:
+callback(result);
+});
+}
+});
+
+
+图片上传
+要实现图片上传，你需要自己实现服务器端代码，并使用下面的参数。
+
+$(&#39;#myEditor&#39;).markdownEditor({
+imageUpload: true, // Activate the option
+uploadPath: &#39;upload.php&#39; // Path of the server side script that receive the files
+});
+
+在你的服务器端代码可以接收到一个json格式的数组。例如下面的PHP代码：
+
+$uploadedFiles = array();
+if (! empty(\_FILES)) {
+foreach (_FILES as file) {
+if (superAwesomeUploadFunction(file)) {
+uploadedFiles[]=′/img/′.urlencode(uploadedFiles[] = &amp;#x27;/img/&amp;#x27; . urlencode(uploadedFiles[]=′/img/′.urlencode(file[&#39;name&#39;]);
+}
+}
+}
+echo json_encode($uploadedFiles);
+
+
+快捷键
+下面是一些可用的快捷键。
+
+Ctrl-B / ⌘B：Bold
+Ctrl-I / ⌘I：Italic
+Ctrl-K / ⌘K：Link
+
+
+ 配置参数
+下面的参数可以以对象的方式传入初始化方法中。
+
+$(&#39;#myEditor&#39;).markdownEditor({
+// Options
+}); 
+
+或者你也可以覆盖插件的默认参数：
+
+$.fn.markdownEditor.defaults.width = &#39;250px&#39;;
+
+
+
+width：类型：string，默认值：&#39;100\%&#39;。编辑器的宽度。
+
+height：类型：string，默认值：&#39;400px&#39;。编辑器的高度。
+
+fontSize：类型：string，默认值：&#39;14px&#39;。编辑器的默认值字体大小。
+
+theme：类型：string，默认值：&#39;tomorrow&#39;。编辑器的主题，可用的主题可以参考Ace。
+
+softTabs：类型：boolean，默认值：true。设置为false可以禁止使用soft tabs。soft tabs是指使用空格来代替tab字符（&#34;\t&#34;）。
+
+fullscreen：类型：boolean，默认值：true。全屏模式是否可用。
+
+imageUpload：类型：boolean，默认值：true。是否可以上传图片。如果可用，你还需要指定uploadPath参数。
+
+uploadPath：类型：uploadPath，默认值&#39;&#39;。服务器端接收图片的路径。可以接收到一个json格式的数组。
+
+preview：类型：boolean，默认值：false。是否开启预览模式。如果开启，你需要指定onPreview参数。
+
+onPreview：类型：function，默认值：
+
+function (content, callback) {
+callback(content);
+}
+
+回调函数会在用户点击预览按钮时触发，它有2个参数：
+
+
+content：文本内容。
+
+callback：将解析的HTML作为一个参数的函数。
+
+
+
+label：类型：object，默认值：
+
+{
+btnHeader1: &#39;Header 1&#39;,
+btnHeader2: &#39;Header 2&#39;,
+btnHeader3: &#39;Header 3&#39;,
+btnBold: &#39;Bold&#39;,
+btnItalic: &#39;Italic&#39;,
+btnList: &#39;Unordered list&#39;,
+btnOrderedList: &#39;Ordered list&#39;,
+btnLink: &#39;Link&#39;,
+btnImage: &#39;Insert image&#39;,
+btnUpload: &#39;Uplaod image&#39;,
+btnEdit: &#39;Edit&#39;,
+btnPreview: &#39;Preview&#39;,
+btnFullscreen: &#39;Fullscreen&#39;,
+loading: &#39;Loading&#39;
+}
+
+
+
+
+ 方法
+可以通过字符串的形式将方法名称作为参数传入markdownEditor()中来调用相应的方法：
+
+// Returns the content of the editor
+var content = $(&#39;#myEditor&#39;).markdownEditor(&#39;content&#39;); 
+// Sets the content of the editor
+$(&#39;#myEditor&#39;).markdownEditor(&#39;setContent&#39;, content);
+
+bootstrap-markdown-editor文本编辑器插件的github地址为：https://github.com/inacho/bootstrap-markdown-editor
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_802">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_803">
+                        仿Twitter简洁的页面顶部消息提示栏插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_803" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1603/201603021643.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jQuery Notify bar是一款仿Twitter的简洁的页面顶部消息提示栏插件。通过该插件你可以在页面中显示各种类型的消息提示栏。也可以通过参数来自定义消息提示栏的背景和颜色等。
+内容：
+
+
+简要教程
+
+
+jQuery Notify bar是一款仿Twitter的简洁的页面顶部消息提示栏插件。通过该插件你可以在页面中显示各种类型的消息提示栏。也可以通过参数来自定义消息提示栏的背景和颜色等。
+
+ 安装
+可以通过bower来安装该消息提示栏插件。
+
+bower install jqnotifybar
+
+
+ 使用方法
+使用该消息提示栏插件需要在页面中引入jquery.notifyBar.css和jquery，以及jquery.notifyBar.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jquery.notifyBar.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.notifyBar.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化一个消息提示栏组件。
+
+jQuery(function () {
+jQuery.notifyBar({
+html: &#34;这里是消息提示栏的提示消息！&#34;,
+delay: 2000,
+animationSpeed: &#34;normal&#34;
+});
+}); 
+
+你也可以将消息提示栏的位置设置在页面的底部。
+
+jQuery(function () {
+jQuery.notifyBar({
+html: &#34;Hi from below!&#34;,
+cssClass: &#34;Appear at bottom&#34;,
+position: &#34;bottom&#34;
+});
+});
+
+
+ 配置参数
+该消息提示栏插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+html
+String（可选）
+&#34;Your message here&#34;
+消息提示栏中的文本消息
+
+
+delay
+Integer（可选）
+2000
+延迟的时间，动画时间不计在内
+
+
+animationSpeed
+String | Integer
+&#34;normal&#34;
+消息提示栏滑动显示的时间
+
+
+jqObject
+jquery对象（可选）
+null
+为消息提示栏自定义jquery对象
+
+
+cssClass
+String
+&#34;&#34;
+自定义的消息提示栏CSS样式，预定义的class名称有：&#34;error&#34;, &#34;warning&#34; 和 &#34;success&#34;
+
+
+close
+Boolean
+false
+设置为true会显示一个关闭按钮
+
+
+closeText
+String
+&#34;Close [X]&#34;
+设置关闭按钮的文本
+
+
+closeOnClick
+Boolean
+true
+是否点击消息提示栏时关闭它
+
+
+closeOnOver
+Boolean
+false
+是否在鼠标滑过消息提示栏时关闭它
+
+
+waitingForClose
+Boolean
+true
+是否在等待一段时间后自动关闭提示栏
+
+
+onBeforeShow
+function
+null
+消息提示栏显示前的回调函数
+
+
+onShow
+function
+null
+消息提示栏显示后的回调函数
+
+
+onBeforeHide
+function
+null
+消息提示栏隐藏前的回调函数
+
+
+onHide
+function
+null
+消息提示栏隐藏后的回调函数
+
+
+position
+string
+&#34;top&#34;
+设置消息提示栏的位置，可选位置有：top, bottom
+
+
+
+
+该消息提示栏插件的github地址为：https://github.com/dknight/jQuery-Notify-bar
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_803">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/137/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/139/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

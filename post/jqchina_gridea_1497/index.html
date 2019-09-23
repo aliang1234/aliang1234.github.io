@@ -1,0 +1,287 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery波浪状图片展示插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery波浪状图片展示插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1411/201411111434.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411111434.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141111447.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和css3制作的漂亮的波浪状图片展示效果。在这个jQuery图片展示中，所有的图片都以缩略图的形式呈正弦曲线波浪状排列，点击小图后会放大为大图片。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>插件中的滑块控制条来自于<a href="http://www.premiumpixels.com/freebies/slider-interface-metal-handle-psd/" target="\_blank">premiumpixels.com</a>。使用的图标来自于<a href="http://www.wpzoom.com/wpzoom/new-freebie-wpzoom-developer-icon-set-154-free-icons/" target="\_blank">WPZOOM Developer Icon Set (154 free icons)</a></p>
+<h3>HTML</h3>
+<p>html结构包括一个主容器<code>wd-wrapper</code>。在demo中它被设置为绝对定位，这样我们就可以上下左右的伸展正弦曲线波浪而不必给定它宽度和高度。但你也可以把它设置为相对定位，并给它一个宽度和高度。这条正弦曲线能够自动跳转高度。在demo中你可以调整窗口大小看看效果。</p>
+<p>初始化的时候，正弦曲线上的所有缩略图都要随机旋转一点角度。</p>
+<p><img src="http://img.htmleaf.com/1411/201411111434-1.jpg" alt="波浪状图片展示效果1"></p>
+<p>为了添加图片和其它内容，html结构应该如下所示：</p>
+<pre class="brush:html">
+&lt;div class="wd-element"&gt;
+&lt;img src="images/1.jpg" alt="Some Image" /&gt;
+&lt;div class="wd-info"&gt;
+&lt;div class="wd-info-title"&gt;
+&lt;h2&gt;Some title&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="wd-info-desc"&gt;
+&lt;p&gt;Some Description&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p><code>wd-info-desc</code>是点击缩略图后展示的第二级图片内容，如下：</p>
+<p><img src="http://img.htmleaf.com/1411/201411111434-2.jpg" alt="波浪状图片展示效果2"></p>
+<p>在这里我们可以通过上方的放大镜按钮退回到第一级缩略图。如果这时再点击图片，那么图片内容滑块就会出现。用户可以通过前后导航按钮查看图片或通过关闭按钮回到第二级缩略图。</p>
+<p><img src="http://img.htmleaf.com/1411/201411111434-3.jpg" alt="波浪状图片展示效果3"></p>
+<h3>可用参数</h3>
+<p>下面是可用的参数选项：</p>
+<pre class="brush:js">
+speed : 1000, 
+// speed for the animations
+<p>easing: 'easeInOutExpo',<br>
+// easing for the animations</p>
+<p>minImgW : 50,<br>
+// minimum width the thumbnail<br>
+// will have (randomly set)</p>
+<p>maxImgW : 90,<br>
+// maximum width the thumb<br>
+// image will have (randomly set)</p>
+<p>minImgAngle : -15,<br>
+// minimum rotation angle the<br>
+// thumbnail will have (randomly set)</p>
+<p>maxImgAngle : 15,<br>
+// maximum rotation angle<br>
+// the thumbnail will have (randomly set)</p>
+<p>leftFactor: 40,<br>
+// space between images on the x-axis</p>
+<p>startFactor : 1,<br>
+// the higher this value, the more<br>
+// space between the first thumbnail and<br>
+// the left of the container</p>
+<p>sinusoidFunction: {<br>
+A : 100,// amplitude<br>
+T : 700,// period<br>
+P : 0 // phase<br>
+}<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1411/201411111434.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141111447.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1498">
+                                <h3 class="post-title">
+                                    纯js图片放大镜插件-Magnifier
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带视觉差效果可互动的背景粒子动画特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带视觉差效果可互动的背景粒子动画特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508151803.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508151803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508152418.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果非常炫酷的jQuery和CSS3网页背景粒子动画特效。该背景特效中粒子可以使用鼠标来进行互动，并且在粒子运动的过程中带有一些视觉差特效。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常炫酷的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>和<a href="http://www.htmleaf.com/css3/" target="\_blank">CSS3</a>网页背景粒子动画特效。该背景特效中粒子可以使用鼠标来进行互动，并且在粒子运动的过程中带有一些视觉差特效。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 制作方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>这个背景粒子动画特效的HTML结构使用的是一个无序列表。每一个列表元素是一个层，在每一个层中放置一张粒子图片。<code>data-depth</code>属性设置了各个图层的深度。</p>
+<pre class="brush:html">
+</pre>
+<ul id="scene">
+<li class="layer" id="specks" data-depth="0.1">
+<li class="layer" id="layer-1" data-depth="0.15">
+<div class="img" id="img-1"></div>
+</li>
+<li class="layer" id="layer-2" data-depth="0.25">
+<div class="img" id="img-2"></div>
+</li>
+<li class="layer" id="layer-3" data-depth="0.45">
+<div class="img" id="img-3"></div>
+</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>这个背景粒子动画特效的CSS样式非常简单。整个用于制作背景粒子动画的无序列表被设置为100vw和100vh，使它和视口宽度和高度相同。<code>z-index</code>设置为999，如果你要在背景上放置元素，<code>z-index</code>要比999高。</p>
+<pre class="brush:css">
+#specks {
+position: absolute;
+z-index: 999;
+height: 100vh;
+width: 100vw;
+}
+</pre>
+<p><code>.speck</code>是用于动画的粒子，它的样式如下：</p>
+<pre class="brush:css">
+.speck {
+opacity: 0;
+height: 4px;
+width: 4px;
+background: url('../img/speck\_zpsu9xym9zl.png');
+background-size: cover;
+position: absolute;
+border-radius: 10px;
+z-index: 99;
+}
+</pre>
+<p>所有的图片都被设置了非常大的宽度和高度，开始时，<code>top</code>和<code>left</code>分别为-8500px和-8000px，然后它们被执行<code>float</code>动画，使用<code>transform:translate(8000px, 4000px);</code>使图片从左上角向右下角运动。</p>
+<pre class="brush:css">
+.img {
+position: absolute;
+height: 100000px;
+width: 100000px;
+top: -8500px;
+left: -8000px;
+animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+animation-name: float;
+animation-iteration-count: infinite;
+}
+@keyframes float {
+0\% {
+transform: translate(0px, 0px);
+}
+100\% {
+transform:translate(8000px, 4000px);
+}
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> JAVASCRIPT</h5>
+<p>背景粒子的视觉差效果使用的是<code>parallax.js</code>来完成。在jQuery代码中，使用<code>twinkle()</code>函数来随机生成一些闪烁的粒子。这些粒子生成后或执行<code>twinkle</code> CSS动画，它们会由透明变为75\%透明度，在变为完全透明，在这个过程中会移动一段距离，形成以淡入，移动一段距离，在淡出的效果。</p>
+<pre class="brush:css">
+function twinkleLoop(i) {
+var duration = Math.random() * 5 + 3;
+duration = duration - (495 - speed) / 100;
+twinkle(i, duration);
+setTimeout(function () {
+twinkleLoop(i);
+}, duration * 1000);
+}
+function twinkle(id, duration) {
+var top = Math.floor(Math.random() * 85) + 0 + '\%';
+var left = Math.floor(Math.random() * 85) + 0 + '\%';
+$('#speck' + id).remove();
+$('#specks').append('<div class="\'speck\'" id="\'speck'"></div>');
+$('#speck' + id).css({
+'top': top,
+'left': left,
+'animation-duration': duration + 's',
+'animation-timing-function': 'cubic-bezier(0.250, 0.250, 0.750, 0.750)',
+'animation-name': 'twinkle'
+});
+}
+</pre>
+<p>具体js代码前参考下载文件。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508151803.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508152418.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_998">
+                                <h3 class="post-title">
+                                    多用途响应式jQuery视频和图片画廊插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery每日签到日历插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jquery每日签到日历插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1612/201612011512.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1612/201612011512.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201612014233.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jquery来实现的每日签到日历插件源代码。该每日签到插件可以实现签到功能，查看签到次数等，非常实用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款使用jquery来实现的每日<strong>签到日历插件</strong>源代码。该每日签到插件可以实现签到功能，查看签到次数等，非常实用。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入样式文件style.css，jquery.min.js和签到js主文件main.js。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>签到界面的HTML结如下：</p>
+<pre class="brush:html">
+&lt;div class="qiandao-warp"&gt;
+&lt;div class="qiandap-box"&gt;
+&lt;div class="qiandao-con clear"&gt;
+&lt;div class="qiandao-left"&gt;
+&lt;div class="qiandao-left-top clear"&gt;
+&lt;div class="current-date"&gt;2016年1月6日&lt;/div&gt;
+&lt;div class="qiandao-history qiandao-tran qiandao-radius" id="js-qiandao-history"&gt;我的签到&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-main" id="js-qiandao-main"&gt;
+&lt;ul class="qiandao-list" id="js-qiandao-list"&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-right"&gt;
+&lt;div class="qiandao-top"&gt;
+&lt;div class="just-qiandao qiandao-sprits" id="js-just-qiandao"&gt;
+&lt;/div&gt;
+&lt;p class="qiandao-notic"&gt;今日已领&lt;span&gt;0.1&lt;/span&gt;元，请明日继续签到&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-bottom"&gt;
+&lt;div class="qiandao-rule-list"&gt;
+&lt;h4&gt;签到规则&lt;/h4&gt;
+&lt;p&gt;首次签到获得0.05元现金奖励&lt;/p&gt;
+&lt;p&gt;连续签到每天增加0.01元现金奖励&lt;/p&gt;
+&lt;p&gt;连续签到16天及以上每天获得0.2元现金奖励&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-rule-list"&gt;
+&lt;h4&gt;其他说明&lt;/h4&gt;
+&lt;p&gt;如果中间有一天间断未签到的，重先开始计算连续签到时间。&lt;/p&gt;
+&lt;p&gt;连续签到获得奖励后分享到QQ空间、微信朋友圈后再获得一次奖励，每天只限分享一次。&lt;/p&gt;
+&lt;p&gt;获得的奖励不能直接提现，只能投资后转让变现。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>展示我的签到的弹出层界面的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="qiandao-layer qiandao-history-layer"&gt;
+&lt;div class="qiandao-layer-con qiandao-radius"&gt;
+&lt;a href="javascript:;" class="close-qiandao-layer qiandao-sprits"&gt;&lt;/a&gt;
+&lt;ul class="qiandao-history-inf clear"&gt;
+&lt;li&gt;
+&lt;p&gt;连续签到&lt;/p&gt;
+&lt;h4&gt;5&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本月签到&lt;/p&gt;
+&lt;h4&gt;17&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总共签到数&lt;/p&gt;
+&lt;h4&gt;28&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;签到累计奖励&lt;/p&gt;
+&lt;h4&gt;30&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="qiandao-history-table"&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;签到日期&lt;/th&gt;
+&lt;th&gt;奖励&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;分享奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016-1-6 14:23:45&lt;/td&gt;
+&lt;td&gt;0.20&lt;/td&gt;
+&lt;td&gt;连续签到19天奖励&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-layer-bg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>点击签到后的弹出层的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;div class="qiandao-layer qiandao-active"&gt;
+&lt;div class="qiandao-layer-con qiandao-radius"&gt;
+&lt;a href="javascript:;" class="close-qiandao-layer qiandao-sprits"&gt;&lt;/a&gt;
+&lt;div class="yiqiandao clear"&gt;
+&lt;div class="yiqiandao-icon qiandao-sprits"&gt;&lt;/div&gt;您已连续签到&lt;span&gt;2&lt;/span&gt;天
+&lt;/div&gt;
+&lt;div class="qiandao-jiangli qiandao-sprits"&gt;
+&lt;span class="qiandao-jiangli-num"&gt;0.55&lt;em&gt;元&lt;/em&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;a href="#" class="qiandao-share qiandao-tran"&gt;分享获取双倍收益&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="qiandao-layer-bg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1612/201612011512.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201612014233.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_537">
+                                <h3 class="post-title">
+                                    基于HTML5 time元素的倒计时jquery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1740 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1381">
+                        jQuery错误图片链接修补插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1381" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501211538.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的错误图片链接修补jQuery插件。该插件能够循环遍历页面中链接错误的图片，并将它们替换为指定的图片，大大增加了用户的体验度。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的错误图片链接修补jQuery插件。在网页中可能会存在链接错误的图片，这时图片显示的是alt的内容或难看的缩略图。如果能自动检测页面上的错误图片链接，在将它们更换为指定的图片，来提示用户这时一张链接错误的图片，将是一种十分好的用户体验。
+基本使用方法
+我们可以通过多种方法来实现这个功能，在这个插件中，使用jQuery来完成这个功能。该错误图片链接修补插件有两个主要的参数：
+
+
+complete：是否加载完成。 
+
+naturalWidth：取原始图像的宽度。如果为0或undefined则为损坏的形象。 
+
+该插件十分简单，在页面中引入jQuery文件之后，我们编写brokenImages()函数来修补破损的图片。
+
+&amp;lt;script&amp;gt;
+function brokenImages() {
+/* 找到页面中的图片的总数 */
+var totalimg = $(&#39;body&#39;).find(&#39;img&#39;).length;
+var brokenimg = 0;
+$(&#39;img&#39;).each(function () {
+/* 循环图片，使用naturalWidth来判断图片是否损坏 */
+if (!this.complete || typeof this.naturalWidth == &#39;undefined&#39; || this.naturalWidth == 0) {
+brokenimg++;
+/* 用指定的图片URL替换损坏图片的URL */
+this.src = &#39;img/nIrhl0z.png&#39;;
+}
+});
+alert(brokenimg + &#39; of &#39; + totalimg + &#39; image(s) are broken. I fixed them!&#39;);
+}
+$(&#39;.demo&#39;).click(function () {
+$(this).remove();
+brokenImages();
+});
+&amp;lt;/script&amp;gt;
+
+错误图片链接修补插件至此编写完成，在页面加载完毕后调用该插件即可修补链接错误的图片：
+
+$(document).ready(function(){
+brokenImages();
+});
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1381">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1382">
+                        jQuery扁平化风格下拉框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1382" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502091454.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+FancySelect是一款小巧实用的jQuery下拉框美化插件。该下拉框美化插件采用扁平化设计风格，是追求时尚的开发者的首选下拉框美化插件之一。
+内容：
+
+
+简要教程
+
+
+FancySelect是一款小巧实用的jQuery下拉框美化插件。该下拉框美化插件采用扁平化设计风格，是追求时尚的开发者的首选下拉框美化插件之一。
+
+ 使用方法
+
+ HTML结构
+FancySelect实用十分简单，它可以和jQuery或Zepto结合使用。在页面中放置一些&amp;lt;select&amp;gt;下拉框组件，然后就可以通过.fancySelect()方法来调用该下拉框插件。如果下拉框中有某个选项没有值，该插件会使用某种占位文字来代替它。 
+默认情况下，FancySelect 在 iOS 设备上仅使用原生的下拉框和样式。如果你想覆盖它，在下拉框插件初始化的时候设置forceiOS为true即可。
+FancySelect 也可以通过&amp;lt;select&amp;gt;元素的data-class属性来指定样式，你可以通过这个方法来指定不同样式的select下拉框。
+
+&amp;lt;select class=&#34;basic&#34;&amp;gt;
+&amp;lt;option value=&#34;&#34;&amp;gt;Select something…&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Lorem&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Ipsum&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Dolor&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Sit&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Amet&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+ JAVASCRIPT
+
+$(&#39;.basic&#39;).fancySelect();
+
+
+ 更新options
+如果你的下拉框的options在插件初始化后被修改了，你可以通过在下拉框上触发update.fs方法来告诉插件更新options列表。
+
+var mySelect = $(&#39;.my-select&#39;);
+mySelect.fancySelect();
+mySelect.append(&#39;FooBar&#39;);
+mySelect.trigger(&#39;update.fs&#39;);
+
+
+ 启用/禁用下拉框
+FancySelect 下拉框插件会在初始化后自动将下拉框设置为disabled禁用状态。如果你需要重新设置下拉框的状态，可以在select元素上使用enable.fs或disable.fs方法来修改它们。
+
+&amp;lt;select class=&#34;my-select&#34; disabled&amp;gt;
+&amp;lt;option&amp;gt;First Option&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Second Option&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+var mySelect = $(&#39;.my-select&#39;);
+mySelect.fancySelect(); // currently disabled because of html property
+// later…
+mySelect.trigger(&#39;enable.fs&#39;); // now enabled
+// even later…
+mySelect.trigger(&#39;disable.fs&#39;); // now disabled again
+
+
+ 模板
+如果你需要制作一些个性效果，可以使用triggerTemplate和triggerTemplate方法，它们都是通过option选项来返回一个HTML字符串：
+
+&amp;lt;select class=&#34;bulbs&#34;&amp;gt;
+&amp;lt;option data-icon=&#34;old&#34;&amp;gt;Incandescent&amp;lt;/option&amp;gt;
+&amp;lt;option data-icon=&#34;curly&#34;&amp;gt;CFL&amp;lt;/option&amp;gt;
+&amp;lt;option data-icon=&#34;work&#34;&amp;gt;Halogen&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+$(&#39;.bulbs&#39;).fancySelect({
+optionTemplate: function(optionEl) {
+return optionEl.text() + &#39;&#39;;
+}
+})
+
+
+ 事件
+你可以在&amp;lt;select&amp;gt;下拉框框选项改变的时候监听change.fs事件：
+
+&amp;lt;select class=&#34;my-select&#34; disabled&amp;gt;
+&amp;lt;option&amp;gt;First Option&amp;lt;/option&amp;gt;
+&amp;lt;option&amp;gt;Second Option&amp;lt;/option&amp;gt;
+&amp;lt;/select&amp;gt;
+
+
+var mySelect = $(&#39;.my-select&#39;);
+mySelect.fancySelect().on(&#39;change.fs&#39;, function() {
+$(this).trigger(&#39;change.$&#39;);
+}); // trigger the DOM&#39;s change event when changing FancySelect
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1382">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1383">
+                        基于Bootstrap的炫酷jQuery slider插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-other_1">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1383" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502041438.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款在原生bootstrap slider的基础上制作效果非常炫酷的jQuery slider插件。该slider插件可以自定义slider的颜色、形状、透明度和tooltip等属性，美化的效果非常好。
+内容：
+
+
+简要教程
+
+
+这是一款在原生bootstrap slider的基础上制作效果非常炫酷的jQuery slider插件。该slider插件可以自定义slider的颜色、形状、透明度和tooltip等属性，美化的效果非常好。
+
+ 安装
+可以使用npm和bower来安装该slider插件。
+
+npm install bootstrap-slider
+bower install seiyria-bootstrap-slider
+
+
+ 使用方法
+首先要在页面中引入必要的css和js文件。
+
+&amp;lt;link href=&#34;css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/bootstrap-slider.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script type=&#39;text/javascript&#39; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#39;text/javascript&#39; src=&#34;js/bootstrap-slider.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+记住要在引入完上边的文件后才可以开始调用该bootstrap slider插件。
+注意：这个bootstrap slider插件可以不依赖于jQuery，使用纯js的方式也可以操作它。
+
+ 浏览器兼容
+该bootstrap slider插件只支持现代浏览器，低于IE9的浏览器都不支持。
+
+ 应用举例
+
+ 作为jQuery插件版本的bootstrap-slider。
+插件一个input元素，然后在它上面调用.slider()方法。
+
+// Instantiate a slider
+var mySlider = $(&#34;input.slider&#34;).slider();
+// Call a method on the slider
+var value = mySlider.slider(&#39;getValue&#39;);
+// For non-getter methods, you can chain together commands
+mySlider
+.slider(&#39;setValue&#39;, 5)
+.slider(&#39;setValue&#39;, 7);
+
+如果已经有一个jQuery插件的slider()绑定在该命名空间中，那么bootstrap slider插件会一个候补的调用方法bootstrapSlider。
+
+// Instantiate a slider
+var mySlider = $(&#34;input.slider&#34;).bootstrapSlider();
+// Call a method on the slider
+var value = mySlider.bootstrapSlider(&#39;getValue&#39;);
+// For non-getter methods, you can chain together commands
+mySlider
+.bootstrapSlider(&#39;setValue&#39;, 5)
+.bootstrapSlider(&#39;setValue&#39;, 7);
+
+
+ 使用原生js调用bootstrap slider
+在DOM中创建一个input元素，然后通过选择器为该input元素创建slider实例。
+
+// Instantiate a slider
+var mySlider = new Slider(&#34;input.slider&#34;, {
+// initial options object
+});
+// Call a method on the slider
+var value = mySlider.getValue();
+// For non-getter methods, you can chain together commands
+mySlider
+.setValue(5)
+.setValue(7);
+
+
+ 配置参数
+以下这些参数也可以通过一个data属性（data-slider-foo）或作为slider对象的一部分来调用。
+
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+
+
+id
+string
+&#39; &#39;
+设置slider元素的id
+
+
+min
+float
+0
+slider允许的最小值
+
+
+max
+float
+10
+slider允许的最大值
+
+
+step
+float
+1
+slider的步长
+
+
+precision
+float
+小数的位数
+slider数值的精度。
+
+
+orientation
+string
+&#39;horizontal&#39;
+设置slider的初始值，设置为数组表示一个范围。的方向。可选值：&#39;vertical&#39; 或 &#39;horizontal&#39;
+
+
+value
+float,array
+5
+slider的初始值，设置为数组表示一个范围。
+
+
+range
+bool
+false
+是否设置一个范围slider。如果初始化值为一个数组，该选项可选。如果初始化值为scalar，最大值将使用第二个值。
+
+
+selection
+string
+&#39;before&#39;
+选择配置。接收：&#39;before&#39;, &#39;after&#39; 或 &#39;none&#39;。在范围slider中，selection 被放置在两个手柄中间。
+
+
+tooltip
+string
+&#39;show&#39;
+在拖动手柄时是否显示tooltip，隐藏tooltip，或者总是显示tooltip。可选值：&#39;show&#39;, &#39;hide&#39; 或 &#39;always&#39;
+
+
+tooltip\_split
+bool
+false
+如果是flase显示一个tooltip，如果设置为true，显示两个tooltip，每个手柄显示一个。
+
+
+handle
+string
+&#39;round&#39;
+手柄的形状。可选值： &#39;round&#39;, &#39;square&#39;, &#39;triangle&#39; 或 &#39;custom&#39;
+
+
+reversed
+bool
+false
+slider是否反向
+
+
+enabled
+bool
+true
+slider是否可用
+
+
+formatter
+function
+返回文本值
+回调函数。返回想在tooltip中显示的文字。
+
+
+natural\_arrow\_keys
+bool
+false
+是否允许使用键盘的方向键来控制slider。默认情况下，right/up键是slider数值增大，left/down键使slider数值减少。
+
+
+
+
+
+ 方法
+
+
+
+
+方法
+参数
+描述
+
+
+
+
+getValue
+---
+获取slider的当前值
+
+
+setValue
+newValue, triggerSlideEvent
+为slider设置一个新值。如果可选的triggerSlideEvent参数为true，&#39;slide&#39;事件将被触发。
+
+
+destroy
+---
+移除和销毁slider实例
+
+
+disable
+---
+使slider不可用，用户不能修改slider的值
+
+
+enable
+---
+使slider可用
+
+
+toggle
+---
+在slider可用与不可用之间切换
+
+
+isEnabled
+---
+如果slider可用返回true，否则返回false
+
+
+setAttribute
+attribute, value
+更新slider的属性
+
+
+getAttribute
+attribute
+获取slider的属性
+
+
+refresh
+---
+刷新当前的slider
+
+
+on
+eventType, callback
+当slider的eventType事件被触发，回调函数将被调用
+
+
+relayout
+---
+在初始化之后重新渲染tooltip。这在slider和tooltip在初始化时是隐藏的时候非常有用
+
+
+
+
+
+ 事件
+
+
+
+
+事件
+描述
+返回值
+
+
+
+
+slide
+当slider被拖动时触发
+新的slider值
+
+
+slideStart
+当slider开始拖动时触发
+新的slider值
+
+
+slideStop
+当slider停止拖动或slider被点击时触发
+新的slider值
+
+
+change
+slider的值改变时触发
+带有两个属性的对象：&#34;oldValue&#34;和&#34;newValue&#34;
+
+
+slideEnabled
+当设置slider为可用时触发
+N/A
+
+
+slideDisabled
+当设置slider为不可用时触发
+N/A
+
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1383">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1384">
+                        jQuery轻量级圆形进度指示器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1384" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1502/201502172119.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+radialIndicator是一款轻量级的jQuery圆形指示器插件。该圆形指示器插件支持颜色范围，动态修改值，格式化和百分比值等形式。它可以很好的和jQuery或angular js一起工作。
+内容：
+
+
+简要教程
+
+
+radialIndicator是一款轻量级的jQuery圆形指示器插件。该圆形指示器插件支持颜色范围，动态修改值，格式化和百分比值等形式。它可以很好的和jQuery或angular js一起工作。
+
+ 使用方法
+在页面中添加添加jQuery(可选)和radialIndicator.js文件：
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/radialindicator.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+圆形指示器的HTML结构使用一个&amp;lt;div&amp;gt;即可。
+
+&amp;lt;div id=&#34;indicatorContainer&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 调用插件
+现在，可以用下面的方法调用最基本的圆形指示器：
+
+$(&#39;#indicatorContainer&#39;).radialIndicator(); 
+
+
+ 参数选项
+
+ 语法
+
+$(&#39;#indicatorContainer5&#39;).radialIndicator({
+showPercentage : false // option
+});
+//or using native javascript
+var progObj = radialIndicator(&#39;#indicatorContainer5&#39; , {
+showPercentage : false // option
+});
+
+
+ 全局参数选项
+
+radialIndicator.defaults.radius = 80;
+radialIndicator.defaults.barColor = &#34;#99CC33&#34;;
+
+
+
+
+
+参数名称
+参数类型
+默认值
+描述
+
+
+
+
+radius
+number
+50
+定义圆形指示器的内部的圆的半径。
+
+
+barWidth
+number
+5
+定义圆形指示器的刻度条的宽度。
+
+
+barBgColor
+colour code in hex
+#eeeeee
+定义圆形指示器的刻度条的背景颜色。
+
+
+barColor
+object of colour range like ({0 : &#39;#FF0000&#39;, 50 : &#39;#FFFF00&#39;, 100 : &#39;#0066FF&#39;,}) or color code in hex
+#99CC33
+定义渊声巷指示器的刻度条颜色。如果提供一个颜色范围对象作为值，插件会将该范围的颜色插入（如果
+interpolate选项为true）在指定的位置。
+
+
+roundCorner
+boolean
+false
+如果设置为true则圆形指示器的刻度bar有圆角。
+
+
+format
+# format like (##,###,###) or a formatter function
+##
+Define # format or formatter function to format indicator number.
+
+
+frameNum
+number
+100 for percentage and 500 for others
+Number of frames in which indcator circle is divided.
+
+
+frameTime
+number
+10
+Time taken to go from one frame to another.
+
+
+fontColor
+hex color code
+color code of progress
+By default it takes the color code of progress at specific point. If defined it will take the defined color code.
+
+
+fontSize
+number
+Calculated
+默认情况下字体大小是适合于圆形指示器的内圆。定义这个参数可以覆盖它。
+
+
+fontFamily
+font family similiar to per css syntax
+default
+定义圆形指示器的数值的字体。
+
+
+fontWeight
+font weight similiar to css syntax
+bold
+定义圆形指示器的数值的字体weight。
+
+
+interpolate
+boolean
+true
+设置为true在圆形指示器中插入给定范围的颜色。
+
+
+percentage
+boolean
+true
+设置为true显示圆形指示器的百分比数值。
+
+
+displayNumber
+boolean
+true
+设置为true显示圆形指示器的刻度数值。
+
+
+initValue
+number
+minValue or 0
+圆形指示器初始化的值。
+
+
+minValue
+number
+0
+圆形指示器的最小值。
+
+
+maxValue
+number
+100
+圆形指示器的最大值。
+
+
+
+
+
+ 方法
+
+ 获取对象实例
+
+//jquery
+$(&#39;#indicatorContainer&#39;).radialIndicator();
+var radialObj = $(&#39;#indicatorContainer&#39;).data(&#39;radialIndicator&#39;);
+//Vanilla JS
+var radialObj = radialIndicator(&#39;#indicatorContainer&#39;);
+
+
+ 参数
+下面的方法可以在初始化后获取一个参数的值或改变任何参数值。
+
+//getter
+var interpolate = radialObj.option(&#39;interpolate&#39;);
+//setter
+radialObj.option(&#39;interpolate&#39;,false);
+radialObj.option(&#39;radius&#39;,60);
+
+
+ 获取值
+下面的方法可以获取或设置圆形指示器的刻度值。设置值是不会有动画效果的。
+
+//getter
+var curProgress = radialObj.value();
+//setter
+radialObj.value(80);
+
+
+ 动画
+下面的方法可以在为圆形指示器设置值时有动画效果。
+
+radialObj.animate(80);
+
+
+ Angular JS使用方法
+首先要在页面中引入angular.radialIndicator.js和radialIndicator.js文件：
+
+&amp;lt;script src=&#34;radialIndicator.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;angular.radialIndicator.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 基本使用
+
+&amp;lt;div ng-app=&#34;myApp&#34; ng-controller=&#34;demo&#34;&amp;gt;
+ &amp;lt;div data-radial-indicator=&#34;&#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;div data-radial-indicator=&#34;{radius : 80, percentage :true,barColor : &#39;#87CEEB&#39;, initValue: 70}&#34;&amp;gt;&amp;lt;/div&amp;gt;
+ &amp;lt;div data-radial-indicator=&#34;indicatorOption&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+ &amp;lt;/div&amp;gt;
+
+
+angular.module(&#39;myApp&#39;, [&#39;ng-sortable&#39;,&#39;radialIndicator&#39;])
+.controller(&#39;demo&#39;, [&#39;$scope&#39;, function ($scope) {
+$scope.indicatorOption = {
+radius : 80,
+percentage :true,
+barColor : &#34;#87CEEB&#34;,
+initValue : 70
+};
+}]);
+
+
+ 通过模式绑定指示器
+你可以在指示器中的radial-indicator-model属性中设置模式的名字，指示器将会根据模式的改变而相应的改变：
+
+&amp;lt;div ng-app=&#34;myApp&#34; ng-controller=&#34;demo&#34;&amp;gt;
+ &amp;lt;div data-radial-indicator=&#34;indicatorOption&#34; data-radial-indicator-model=&#34;indicatorValue&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;/div&amp;gt;
+
+
+angular.module(&#39;myApp&#39;, [&#39;ng-sortable&#39;,&#39;radialIndicator&#39;])
+.controller(&#39;demo&#39;, [&#39;$scope&#39;, function ($scope) {
+$scope.indicatorOption = {
+radius : 80,
+percentage :true,
+barColor : &#34;#87CEEB&#34;
+};
+$scope.indicatorValue = 70;
+}]);
+
+
+ 通过DI获取指示器的对象实例
+
+&amp;lt;div ng-app=&#34;myApp&#34; ng-controller=&#34;demo&#34;&amp;gt;
+ &amp;lt;div data-radial-indicator=&#34;indicatorOption&#34; data-radial-indicator-id=&#34;indicator1&#34;&amp;gt;&amp;lt;/div&amp;gt; 
+ &amp;lt;button data-ng-click=&#34;changeValue(30)&#34;&amp;gt;&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+angular.module(&#39;myApp&#39;, [&#39;ng-sortable&#39;, &#39;radialIndicator&#39;])
+.controller(&#39;demo&#39;, [&#39;$scope&#39;, &#39;radialIndicatorInstance&#39;, function($scope, radialIndicatorInstance) {
+$scope.indicatorOption = {
+percentage: true,
+barColor: &#34;#87CEEB&#34;,
+initValue : 70
+};
+$scope.changeValue =
+function(val) {
+radialIndicatorInstance[&#39;indicator1&#39;].animate(30);
+}
+}]);
+
+具体各种圆形指示器情况的使用方法请参考Demo。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1384">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1385">
+                        jQuery表单input字段提示信息动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1385" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412221636.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jquery制作的表单input字段提示信息动画特效插件。该input提示信息特效中，当input字段得到焦点时，input字段的占位提示文字会有向上升起的动画效果，非常给力。
+内容：
+
+
+简要教程
+
+
+表单和input字段是网页设计不被或缺的一部分。自从“placeholder”属性的出现，越来越少的人会在设计表单时使用Label标签，而是改为使用占位文字。在这个插件中，我们发挥了一点点想象力，将input字段的占位文字产生一些非常酷的动画效果。
+插件的工作原理非常简单，插件检测input字段的状态，当发现input字段被聚焦时，插件将用占位文字产生一个新的div，然后使用css3使其向上运动。当input字段失去焦点时，插件就会检查input的内容，如果发现它是空的，那么就将原来占位文字放回去。
+HTML结构
+我们可以使用html5的自定义字段来使该插件工作。
+data-position
+这个字段可以让你定义label的位置，
+
+&amp;lt;div class=&#34;page-container&#34;&amp;gt;
+&amp;lt;input type=&#34;text&#34; class=&#34;label\_better&#34; data-position=&#34;top&#34; placeholder=&#34;Username&#34;&amp;gt;
+&amp;lt;input type=&#34;text&#34; class=&#34;label\_better&#34; data-position=&#34;right&#34; placeholder=&#34;Email Address&#34;&amp;gt;
+
+data-new-placeholder
+这个属性可以使你在占位中不仅使用文本还可以使用图标等其它资源。
+
+&amp;lt;input type=&#34;text&#34; class=&#34;label\_better&#34; data-new-placeholder=&#34;Type your username&#34; placeholder=&#34;Username&#34;&amp;gt;
+&amp;lt;input type=&#34;text&#34; class=&#34;label\_better&#34; data-new-placeholder=&#34;Type your email address&#34; placeholder=&#34;Email Address&#34;&amp;gt;
+
+JAVASCRIPT
+首先需要引入jQuery和jquery.label\_better.js文件。 
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;http://libs.useso.com/js/jquery/1.11.1/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;jquery.label\_better.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+然后调用插件：
+
+$(&#34;input.label\_better&#34;).label\_better({
+position: &#34;top&#34;,
+animationTime: 500,
+easing: &#34;ease-in-out&#34;,
+offset: 20
+});
+
+position：定义label出现的位置。可用参数为：“left”, “right”, “top&#34; 和 “bottom”。“top”为默认参数。
+animateTime：label向上或向下动画的时间。默认值为500ms。
+easing：类似CSS easing动画方式。用于定义动画的类型。可用参数有：linear, ease, ease-in, ease-out, ease-in-out 和 cubic-bezier。默认值为：ease-in-out。你可以在这里测试easing动画。
+offset：该参数用于调整字段和label之间的距离。单位是像素，默认值为：10。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1385">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1386">
+                        jQuery带视觉差的整个页面滚动特效插件OnePageScr
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1386" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412311421.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+OnePageScroll.js是一款带有背景视觉差效果的jQuery整页滚动特效插件。OnePageScroll.js能够滚动一次鼠标滚轮就使整个页面向上或向下翻动一页。并且在页面滚动时还带有一点视觉差效果。
+内容：
+
+
+简要教程
+
+
+OnePageScroll.js是一款十分好用的jQuery带视觉差的整个页面滚动特效插件。这个插件能够每次上下滚动一个页面，还带有视觉差效果，简单实用。
+该整页滚动插件已经在Chrome, Firefox, Safari 和 IE10的桌面和移动浏览器上测试通过。
+这个整页滚动插件会自动检测鼠标滚轮或鼠标手势（使用Eike的 jQuery Swipe Events ）来决定向哪个方向滚动页面。当用户使用鼠标滚轮或手势是，插件将自动使用CSS3 transform 来使整个页面向上或向下滚动。
+HTML结构
+使用该整页滚动插件，首先要在页面中引入jquery和jquery.onepage.js以及onepage-scroll.css。
+
+&amp;lt;body&amp;gt;
+...
+&amp;lt;div class=&#34;main&#34;&amp;gt;
+&amp;lt;section&amp;gt;...&amp;lt;/section&amp;gt;
+&amp;lt;section&amp;gt;...&amp;lt;/section&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+...
+&amp;lt;/body&amp;gt;
+
+注意：推荐将wrapper div.mian放在body标签的下一级，这样更容易将它制作成全屏效果。
+JAVASCRIPT
+通过下面的语句来调用该整页滚动插件。
+
+$(document).ready(function() {
+...
+$(&#34;.main&#34;).onepage\_scroll({
+ sectionContainer: &#34;section&#34;, 
+ easing: &#34;ease&#34;,
+ animationTime: 1000,
+ pagination: true,
+ updateURL: false
+});
+...
+});
+
+下面介绍一些可用参数：
+
+
+sectionContainer ：如果你不想使用section来作为每个单页，可以使用该参数来改变它。该参数接收jQuery选择器，默认标签为section。
+
+easing ：该参数用于确定页面在向上或向下滚动时的easing effect（缓动效果）。该参数接收所有的CSS3 easing选项，例如：linear, ease-in, ease-out, ease-in-out，你甚至可以使用cubic-bezier制作反弹效果。更多关于如何生成cubic-bezier的效果资料，请参考Ceaser。默认值为ease。
+
+animationTime ：该参数用于设置每次执行动画的时间。单位毫秒，默认值为1000。
+
+pagination ：如果设置为true，将自动在屏幕的右边添加一个分页条。你可以通过CSS很容易的改变它的位置。设置为false移除分页条。默认值为true。
+
+updateURL ：该参数用于设置是否改变用户当前浏览的section的URL到指定的URL。如果你想让每个section都指向不同的URL设置该参数为true。默认值为false。
+
+公共方法
+该整页滚动插件可以通过编程的方式来触发页面的滚动，它提供了一些公共方法。
+
+
+$.fn.moveUp()
+该方法使页面向上滚动一页。
+
+$(&#34;.main&#34;).moveUp();
+
+
+
+$.fn.moveDown()
+该方法使页面向下滚动一页。
+
+$(&#34;.main&#34;).moveDown();
+
+
+
+你可以在按钮上使用上面的公共方法来使页面整页上下滚动。
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1386">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1387">
+                        jQuery和css3全屏翻页切换页面特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1387" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412191702.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果非常炫酷的jQuery和css3全屏翻页切换页面特效插件。该翻页插件有三个主要按钮：先前翻页、向后翻页和打开隐藏侧边栏菜单。通过该翻页插件可以像看书一样浏览网页。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常酷的jQuery和css3全屏翻页切换页面特效插件。该插件是在BookBlock可预览的css3+js翻书效果的基础上，添加了侧边栏，和前后翻页按钮制作而成的。在插件中我们还集成了 jScrollPane 用来自定义滚动条元素。
+下面的jQuery插件将在该插件中被使用：
+
+Custom jQuery++
+jScrollPane
+jQuery Mouse Wheel Plugin
+Custom Modernizr
+
+HTML结构
+.container作为wrapper。在里面，使用一个div .menu-panel作为侧边栏。“书本”使用.bb-custom-wrapper包裹起来。
+
+&amp;lt;div id=&#34;container&#34; class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&amp;quot;menu-panel&amp;quot;&amp;gt;
+&amp;lt;h3&amp;gt;Table of Contents&amp;lt;/h3&amp;gt;
+&amp;lt;ul id=&amp;quot;menu-toc&amp;quot; class=&amp;quot;menu-toc&amp;quot;&amp;gt;
+&amp;lt;li class=&amp;quot;menu-toc-current&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#item1&amp;quot;&amp;gt;Self-destruction&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#item2&amp;quot;&amp;gt;Why we die&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#item3&amp;quot;&amp;gt;The honeymoon&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#item4&amp;quot;&amp;gt;A drawing joke&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#item5&amp;quot;&amp;gt;Commencing practice&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bb-custom-wrapper&amp;quot;&amp;gt;
+&amp;lt;div id=&amp;quot;bb-bookblock&amp;quot; class=&amp;quot;bb-bookblock&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;bb-item&amp;quot; id=&amp;quot;item1&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;scroller&amp;quot;&amp;gt;
+&amp;lt;h2&amp;gt;Self-destruction&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /content --&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /bb-item --&amp;gt;
+&amp;lt;div class=&amp;quot;bb-item&amp;quot; id=&amp;quot;item2&amp;quot;&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bb-item&amp;quot; id=&amp;quot;item3&amp;quot;&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bb-item&amp;quot; id=&amp;quot;item4&amp;quot;&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;bb-item&amp;quot; id=&amp;quot;item5&amp;quot;&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /bb-bookblock --&amp;gt;
+&amp;lt;nav&amp;gt;
+&amp;lt;a id=&amp;quot;bb-nav-prev&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;←&amp;lt;/a&amp;gt;
+&amp;lt;a id=&amp;quot;bb-nav-next&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;→&amp;lt;/a&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;span id=&amp;quot;tblcontents&amp;quot; class=&amp;quot;menu-button&amp;quot;&amp;gt;Table of Contents&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /bb-custom-wrapper --&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;!-- /container --&amp;gt;
+
+JAVASCRIPT
+我们需要指定每次翻页之后，当前项的index和jScrollPane 的状态，这些通过onEndFlip 在BookBlock的回调中指定：
+
+var $container = $( &#39;#container&#39; ),
+// the element we will apply the BookBlock plugin to
+$bookBlock = $( &#39;#bb-bookblock&#39; ),
+// the BookBlock items (bb-item)
+$items = $bookBlock.children(),
+// index of the current item
+current = 0,
+// initialize the BookBlock
+bb = $( &#39;#bb-bookblock&#39; ).bookblock( {
+speed : 800,
+perspective : 2000,
+shadowSides : 0.8,
+shadowFlip: 0.4,
+// after each flip...
+onEndFlip : function(old, page, isLimit) {
+// update the current value
+current = page;
+// update the selected item of the table of contents (TOC)
+updateTOC();
+// show and/or hide the navigation arrows
+updateNavigation( isLimit );
+// initialize the jScrollPane on the content div for the new item
+setJSP( &#39;init&#39; );
+// destroy jScrollPane on the content div for the old item
+setJSP( &#39;destroy&#39;, old );
+}
+} ),
+// the navigation arrows
+$navNext = ( &amp;#039;#bb-nav-next&amp;#039; ),
+navPrev = $( &#39;#bb-nav-prev&#39; ).hide(),
+// the table of content items
+$menuItems = $container.find( &#39;ul.menu-toc &amp;gt; li&#39; ),
+// button to open the TOC
+$tblcontents = $( &#39;#tblcontents&#39; ),
+transEndEventNames = {
+&#39;WebkitTransition&#39;: &#39;webkitTransitionEnd&#39;,
+&#39;MozTransition&#39;: &#39;transitionend&#39;,
+&#39;OTransition&#39;: &#39;oTransitionEnd&#39;,
+&#39;msTransition&#39;: &#39;MSTransitionEnd&#39;,
+&#39;transition&#39;: &#39;transitionend&#39;
+},
+// transition event name
+transEndEventName = transEndEventNames[Modernizr.prefixed(&#39;transition&#39;)],
+// check if transitions are supported
+supportTransitions = Modernizr.csstransitions;
+
+在元素初始化时为它们绑定一些事件，同时我们需要初始化jScrollPane 的当前项。
+
+function init() {
+// initialize jScrollPane on the content div of the first item
+setJSP( &#39;init&#39; );
+initEvents();
+}
+
+因为我们最终需要初始化和销毁jScrollPane，因此，可以定义一个函数来做这些事情。
+
+function setJSP( action, idx ) {
+var idx = idx === undefined ? current : idx,
+$content = $items.eq( idx ).children( &#39;div.content&#39; ),
+apiJSP = $content.data( &#39;jsp&#39; );
+if( action === &#39;init&#39; &amp;amp;&amp;amp; apiJSP === undefined ) {
+$content.jScrollPane({verticalGutter : 0, hideFocus : true });
+}
+else if( action === &#39;reinit&#39; &amp;amp;&amp;amp; apiJSP !== undefined ) {
+apiJSP.reinitialise();
+}
+else if( action === &#39;destroy&#39; &amp;amp;&amp;amp; apiJSP !== undefined ) {
+apiJSP.destroy();
+}
+}
+
+我们需要绑定一些事件：
+
+1、当我们点击前后翻页导航按钮时，我们需要调用BookBlock的next() 和 prev()方法。
+2、当我们点击侧边栏按钮时，侧边栏将被显示/隐藏。
+3、当我们点击侧边栏选项时，将调用BookBlock的jump()方法。
+4、jScrollPane将在窗口变化时被重置。
+
+
+function initEvents() {
+// add navigation events
+$navNext.on( &#39;click&#39;, function() {
+bb.next();
+return false;
+} );
+$navPrev.on( &#39;click&#39;, function() {
+bb.prev();
+return false;
+} );
+// add swipe events
+$items.on( {
+&#39;swipeleft&#39; : function( event ) {
+if( $container.data( &#39;opened&#39; ) ) {
+return false;
+}
+bb.next();
+return false;
+},
+&#39;swiperight&#39;: function( event ) {
+if( $container.data( &#39;opened&#39; ) ) {
+return false;
+}
+bb.prev();
+return false;
+}
+} );
+// show TOC
+$tblcontents.on( &#39;click&#39;, toggleTOC );
+// click a menu item
+$menuItems.on( &#39;click&#39;, function() {
+var $el = $( this ),
+idx = $el.index(),
+jump = function() {
+bb.jump( idx + 1 );
+}; 
+current !== idx ? closeTOC( jump ) : closeTOC();
+return false;
+} );
+// reinit jScrollPane on window resize
+$( window ).on( &#39;debouncedresize&#39;, function() {
+// reinitialise jScrollPane on the content div
+setJSP( &#39;reinit&#39; );
+} );
+}
+
+前后翻页导航按钮的可见性将依赖与当前页面。如果我们是在第一页，则向前翻页导航按钮不可见。如果是在最后一页，则向后翻页导航按钮不可见。
+
+function updateNavigation( isLastPage ) {
+if( current === 0 ) {
+$navNext.show();
+$navPrev.hide();
+}
+else if( isLastPage ) {
+$navNext.hide();
+$navPrev.show();
+}
+else {
+$navNext.show();
+$navPrev.show();
+}
+}
+
+当我们打开侧边栏时，要隐藏前后翻页导航按钮，关闭侧边栏时在重新显示它们。
+我们将使用CSS transition来制作侧边栏的动画效果。如果浏览器不支持CSS transition，那么这里只是简单的显示和隐藏侧边栏菜单。
+
+function toggleTOC() {
+var opened = $container.data( &#39;opened&#39; );
+opened ? closeTOC() : openTOC();
+}
+function openTOC() {
+$navNext.hide();
+$navPrev.hide();
+$container.addClass( &#39;slideRight&#39; ).data( &#39;opened&#39;, true );
+}
+function closeTOC( callback ) {
+$navNext.show();
+$navPrev.show();
+$container.removeClass( &#39;slideRight&#39; ).data( &#39;opened&#39;, false );
+if( callback ) {
+if( supportTransitions ) {
+$container.on( transEndEventName, function() {
+$( this ).off( transEndEventName );
+callback.call();
+} );
+}
+else {
+callback.call();
+}
+}
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1387">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1388">
+                        jQuery UI拖拽拖放插件jquery.top-droppable
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1388" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1501/201501141800.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.top-droppable是一款非常实用的jQuery UI拖拽拖放插件。该拖拽拖放插件可以将元素拖动到指定的容器中，如果容器是堆叠的，它还能知道到底是拖放到哪个容器中。
+内容：
+
+
+简要教程
+
+
+jquery.top-droppable是一款非常实用的jQuery UI拖拽拖放插件。在演示的demo中，我们集成了一个非常棒的提示插件 SweetAlert，用于显示提示信息。
+使用方法
+要使用这个拖拽拖放插件，首先要在页面的头部引入 jQuery 和 jQuery UI 以及 jquery.top-droppable.js 文件
+
+&amp;lt;script src=&#34;/path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;/path/to/jquery-ui.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;/path/to/jquery.top-droppable.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+HTML结构
+每一个用于拖放目的地div都设置class为top-droppable，并分别给它们设置一个z-index值。
+
+&amp;lt;div id=&#34;1&#34; class=&#34;top-droppable&#34; style=&#34;z-index: 1;&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;2&#34; class=&#34;top-droppable&#34; style=&#34;z-index: 2;&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+方法和事件
+使用这个拖放插件非常简单，选择你的拖放目的地元素，为它调用topDroppable方法，然后监听drop事件。drop事件将会在拖拽元素时被触发，并提供一个指向最前端拖放目的地元素的引用this。参数 e 和 ui 的用法和原生的jQuery ui的用法是一样的。
+
+$(&#34;.top-droppable&#34;).topDroppable({
+drop: function (e, ui) {
+ alert(&#34;dropped into &#34; + $(this).attr(&#39;id&#39;));
+}
+});
+
+使用jQuery ui的droppable选项和参数
+你可以以链式编程的方式来设置所有的jQuery UI原生参数和事件。
+
+$(&#34;.top-droppable&#34;).topDroppable({
+drop: function (e, ui) {
+ alert(&#34;dropped into &#34; + $(this).attr(&#39;id&#39;));
+}
+}).droppable({
+tolerance: &#34;pointer&#34;
+});
+
+注意：不要使用原生的 drop 方法。
+获取拖动时的最前端目的地容器
+你可以通过下面的方法来获取拖动时的最前端目的地容器。
+
+$.getTopElement();
+
+获取拖动元素时当前鼠标悬停的目的地容器
+你可以通过下面的方法来获取拖动元素时当前鼠标悬停的目的地容器。
+
+$.getCurrentHoveredElements();
+
+更多详细信息请参考：https://github.com/vaceta/jquery-top-droppable
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1388">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1389">
+                        js和css3超酷checkbox复选框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-warning">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1389" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1412/201412271613.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用js和css3制作的超酷checkbox复选框美化插件。该checkbox复选框美化插件没有使用图片，纯CSS制作，它可以通过拖动来进行复选框的多选，非常方便，美化效果也是一流的。
+内容：
+
+
+简要教程
+
+
+这是一款效果超超酷的js和css3 checkbox复选框美化插件。这个checkbox复选框美化插件最大的特点是可以拖动进行复选框的多选，当你选择一个复选框后，按住它往下拖动，下面的复选框也会被选择，非常方便。
+注意：这个复选框美化插件只在桌面设备上可以使用。
+该复选框美化插件中制作了两个demo，在第一个demo中只是有复选框的基本功能，第二个demo可以拖动进行复选框的多选。
+下面是复选框美化插件的初始化事件：
+
+new magicSelection( [selector], {
+// time to start the selection
+onSelectionTime : 300,
+// element &#34;el&#34; is selected
+onSelection : function( el ) {},
+// element &#34;el&#34; is clicked
+onClick : function( el ) {}
+// selection starts (mouse down for [onSelectionTime]ms)
+onSelectionStart : function( ev ) { return false; },
+// selection ends (mouse up)
+onSelectionEnd : function( ev ) { return false; },
+} );
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1389">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_139">
+                        js模糊幻影动画特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_139" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1904/201904116381.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+MotionBlurJS是一款小巧的js模糊幻影动画特效插件。该插件可以为正在执行CSS3动画的元素添加炫酷的模糊幻影效果。支持HTML元素和SVG元素动画。
+内容：
+
+
+简要教程
+
+
+MotionBlurJS是一款小巧的js模糊幻影动画特效插件。该插件可以为正在执行CSS3动画的元素添加炫酷的模糊幻影效果。支持HTML元素和SVG元素动画。
+
+ 使用方法
+在页面中引入blur.js文件。
+
+&amp;lt;script src=&#34;js/blur.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+为你需要执行幻影模糊动画效果的元素添加blurjs或fadejs class类。
+
+&amp;lt;div id=&#34;yourId&#34; class=&#34;someClass blurjs&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;yourId&#34; class=&#34;fadejs someClass&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ SVG元素动画
+要为SVG元素添加模糊幻影动画，SVG的结构类似下面的样子。
+
+&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&amp;gt;
+&amp;lt;svg version=&#34;1.1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; xmlns:xlink=&#34;http://www.w3.org/1999/xlink&#34; x=&#34;0px&#34; y=&#34;0px&#34;
+ viewBox=&#34;0 0 414 150.8&#34; style=&#34;enable-background:new 0 0 414 150.8;&#34; xml:space=&#34;preserve&#34;&amp;gt;
+&amp;lt;script xlink:href=&#34;js/blurSVG.js&#34; /&amp;gt;
+&amp;lt;style type=&#34;text/css&#34;&amp;gt;
+.st0{
+animation-name: circleAnim;
+animation-play-state: running;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+@keyframes circleAnim{
+0\%{transform: translate(0,0);}
+20\%{transform: translate(0,56\%);}
+50\%{transform: translate(30\%,56\%);}
+100\%{transform: translate(0,0);}
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;circle id=&#34;circleA&#34; class=&#34;st0 blurjs&#34; cx=&#34;40&#34; cy=&#34;40&#34; r=&#34;20&#34; fill=&#34;#85B528&#34; /&amp;gt;
+&amp;lt;circle id=&#34;circleB&#34; class=&#34;st0 fadejs&#34; cx=&#34;200&#34; cy=&#34;40&#34; r=&#34;20&#34; fill=&#34;#1a307b&#34; /&amp;gt;
+&amp;lt;/svg&amp;gt;
+
+  MotionBlurJS插件的github网址为：https://github.com/Adir-SL/MotionBlurJS
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_139">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/42/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/44/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

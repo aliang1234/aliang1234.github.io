@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于Three.js的360X180度全景图预览插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于Three.js的360X180度全景图预览插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1508/201508111743.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508111743.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508112395.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Photo Sphere Viewer是一款基于Three.js的360X180度全景图预览js插件。该js插件可以360度旋转查看全景图，也可以上下180度查看图片。使用该插件的唯一要求是浏览器支持canvas或WebGL。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Photo Sphere Viewer是一款基于Three.js的360X180度全景图预览<a href="http://www.htmleaf.com/jQuery/" target="\_blank">js插件</a>。该js插件可以360度旋转查看全景图，也可以上下180度查看图片。使用该插件的唯一要求是浏览器支持canvas或WebGL。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该全景图插件时要引入three.min.js和photo-sphere-viewer.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="js/three.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/photo-sphere-viewer.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>可以创建一个空的<code>&lt;div&gt;</code>来放置全景图，通过CSS来设置它的尺寸。</p>
+<pre class="brush:html">
+&lt;div id="container"&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>要初始化该全景图插件，可以创建一个新的<code>PhotoSphereViewer</code>对象，然后在这个对象中插入一个参数对象，有两个参数是必须设置的：</p>
+<pre class="brush:js">
+var PSV = new PhotoSphereViewer({
+// Path to the panorama
+panorama: '1.jpg',
+<p>// Container<br>
+container: div<br>
+});<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>下面是该全景图插件的所有可用配置参数：</p>
+<ul>
+<li>
+<code>panorama</code>：必填参数，全景图的路径。</li>
+<li>
+<code>container</code>：必填参数，放置全景图的<code>div</code>元素。</li>
+<li>
+<code>autoload</code>：可选，默认值为<code>true</code>，<code>true</code>为自动调用全景图，<code>false</code>为在后面加载全景图（通过<code>.load()</code>方法）。</li>
+<li>
+<code>usexmpdata</code>：可选，默认值为<code>true</code>，如果Photo Sphere Viewer必须读入XMP数据则为<code>true</code>。</li>
+<li>
+<code>default\_position</code>：可选，默认值为<code>{}</code>，定义默认的位置，及用户看见的第一个点，例如：<code>{long: Math.PI, lat: Math.PI/2}</code>。</li>
+<li>
+<code>min\_fov</code>：可选，默认值为30，观察的最小区域，单位degrees，在1-179之间。</li>
+<li>
+<code>max\_fov</code>：可选，默认值为90，观察的最大区域，单位degrees，在1-179之间。</li>
+<li>
+<code>allow\_user\_interactions</code>：可选，默认值为<code>true</code>，设置为<code>false</code>则禁止用户和全景图交互（导航条不可用）。</li>
+<li>
+<code>tilt\_up\_max</code>：可选，默认值为<code>Math.PI/2</code>，向上倾斜的最大角度，单位radians。</li>
+<li>
+<code>tilt\_down\_max</code>：可选，默认值为<code>Math.PI/2</code>，向下倾斜的最大角度，单位radians。</li>
+<li>
+<code>zoom\_level</code>：可选，默认值为0，默认的缩放级别，值在0-100之间。</li>
+<li>
+<code>long\_offset</code>：可选，默认值为<code>PI/360</code>，mouse/touch移动时每像素经过的经度值。</li>
+<li>
+<code>lat\_offset</code>：可选，默认值为<code>PI/180</code>，mouse/touch移动时每像素经过的纬度值。</li>
+<li>
+<code>time\_anim</code>：可选，默认值为2000，全景图在<code>time\_anim</code>毫秒后会自动进行动画。（设置为false禁用它）</li>
+<li>
+<code>theta\_offset</code>：过时的选项，可选，默认值为1440，自动动画时水平方向的速度。</li>
+<li>
+<code>anim\_speed</code>：可选，默认值为<code>2rpm</code>，动画的速度，每秒/分钟多少radians/degrees/revolutions。</li>
+<li>
+<code>navbar</code>：可选值，默认为<code>false</code>。显示导航条。</li>
+<li>
+<code>navbar\_style</code>：可选值，默认为<code>{}</code>。导航条的自定义样式。下面是可用的样式列表：
+<ul>
+<li>
+<code>backgroundColor</code>：导航条的背景颜色，默认值为<code>rgba(61, 61, 61, 0.5)</code>。</li>
+<li>
+<code>buttonsColor</code>：按钮的前景颜色，默认值为<code>transparent</code>。</li>
+<li>
+<code>activeButtonsBackgroundColor</code>：按钮激活状态的背景颜色，默认值为<code>rgba(255, 255, 255, 0.1)</code>。</li>
+<li>
+<code>buttonsHeight</code>：按钮的高度，单位像素，默认值为<code>20</code>。</li>
+<li>
+<code>autorotateThickness</code>：autorotate图标的厚度，单位像素，默认值为<code>1</code>。</li>
+<li>
+<code>zoomRangeWidth</code>：缩放的范围，单位显示，默认值50。</li>
+<li>
+<code>zoomRangeThickness</code>：缩放的范围的厚度，单位像素，默认值1。</li>
+<li>
+<code>zoomRangeDisk</code>：缩放范围的圆盘直径，单位像素，默认值为7。</li>
+<li>
+<code>fullscreenRatio</code>：全屏图标的比例，默认值为<code>3/4</code>。</li>
+<li>
+<code>fullscreenThickness</code>：全屏图标的厚度，单位像素，默认值为2。</li>
+</ul>
+</li>
+<li>
+<code>loading\_msg</code>：可选，默认值为<code>Loading…</code>，图片加载时的提示文字。</li>
+<li>
+<code>loading\_img</code>：可选，默认值为<code>null</code>，在加载时显示的图片的路径。</li>
+<li>
+<code>size</code>：可选，默认值<code>null</code>，全景图容器的最终尺寸。例如：<code>{width: 500, height: 300}</code>。</li>
+<li>
+<code>onready</code>：可选值，默认值为<code>null</code>。当全景图准备就绪并且第一张图片显示时的回调函数。</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1508/201508111743.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201508112395.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1053">
+                                <h3 class="post-title">
+                                    纯javascript实用多级目录树结构插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

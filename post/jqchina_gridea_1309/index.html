@@ -1,0 +1,341 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery可智能缓存响应数据的ajax调用插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery可智能缓存响应数据的ajax调用插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1503/201503181537.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503181537.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503181539.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Smartjax是一款可以将ajax请求的内容进行智能缓存的jQuery插件。Smartjax.ajax()可以将ajax的回调内容缓存在浏览器中，再次进行相同url的ajax调用时，不会在向服务器发送请求，而是读取本地的缓存。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Smartjax是一款可以将ajax请求的内容进行智能缓存的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。作为原生<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>的<code>$.ajax()</code>方法的替代，<code>Smartjax.ajax()</code>可以将ajax的回调内容缓存在浏览器中，再次进行相同url的ajax调用时，不会在向服务器发送请求，而是读取本地的缓存。你还可以强制发送ajax请求，或清除指定或所有的ajax缓存内容。</p>
+<p>Smartjax的特点有：</p>
+<ul>
+<li>Smartjax.js是一个轻量级的插件。</li>
+<li>Smartjax的语法和原生jQuery <code>$.ajax()</code>的语法十分相似，你只需要注意一些额外的参数即可。</li>
+<li>减少服务器端的http请求可以大大提升你的网站性能。</li>
+</ul>
+<p>如上面所述，Smartjax会缓存ajax响应信息，并且不会对同一个url发生两次ajax请求。举个例子来说明：例如你要在你的网站的右上方显示用户登录状态和用户信息，如果你每一个页面都要显示这个信息，那么每一个页面都会向服务器发送相同的ajax请求来获取该用户的信息，或者是通过服务器端程序来完成这个功能。如果使用smartjax，那么它会在第一次获取用户信息后，将信息缓存在浏览器中，以后每个页面的用户信息都会从浏览器缓存中提取。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>smartjax的使用方法非常简单，下面是它和原生jQuery ajax的比较：</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 原生jQuery Ajax</h5>
+<pre class="brush:js">
+$.ajax({
+url:'http://httpbin.org/post',
+type: 'POST',
+data:{
+a:1,b:2
+}
+});
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> Smartjax</h5>
+<pre class="brush:js">
+Smartjax.ajax({
+url:'http://httpbin.org/post',
+type: 'POST',
+data:{
+a:1,b:2
+}
+}); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 如果控制ajax数据</h3>
+<p>通过Smartjax.ajax()的一些参数和方法，你可以控制ajax响应数据的缓存方式，以及清除缓存和保存数据的方式。</p>
+<ul>
+<li>
+<span class="m">Smartjax</span>：在你引入smartjax.js文件之后，会创建一个全局的变量<code>Smartjax</code>，该变量包含一个方法,<code>ajax()</code>。</li>
+<li>
+<span class="m">force</span>：如果在某个ajax调用中设置<code>force</code>属性为<code>true</code>，smartjax会强制执行ajax调用并更新缓存的内容。
+<pre class="brush:js">
+Smartjax.ajax({
+url:'http://httpbin.org/post',
+type: 'POST',
+data:{
+a:1,b:2
+},
+force:true
+});
+</pre>
+<p>该参数默认值为<code>false</code>。</p>
+</li>
+<li>
+<span class="m">store</span>：如果在某个ajax调用中设置<code>store</code>属性为<code>false</code>，那么响应的信息不回被缓存。
+<pre class="brush:js">
+Smartjax.ajax({
+url:'http://httpbin.org/post',
+type: 'POST',
+data:{
+a:1,b:2
+},
+store:false
+});
+</pre>
+</li>
+<li>
+<span class="m">group</span>：你可以使用<code>group</code>参数来对ajax调用进行分组。在清除响应缓存的时候，组是非常有用的。
+<pre class="brush:js">
+Smartjax.ajax({
+url:'http://httpbin.org/post',
+type: 'POST',
+data:{
+a:1,b:2
+},
+group:"group1"
+});
+</pre>
+</li>
+<li>
+<span class="m">cleanStore(param)</span>：该方法用于清除ajax的缓存数据。可以使用组参数来清除某一个组的缓存数据。
+<pre class="brush:js">
+Smartjax.cleanStore({groups:["g1"]});
+</pre>
+</li>
+<li>
+<span class="m">cleanAll()</span>：该方法没有参数，作用是清除所有的ajax缓存数据。
+<pre class="brush:js">
+Smartjax.cleanAll();
+</pre>
+</li>
+<li>
+<span class="m">setDefaults(param)</span>：该方法接收一个对象作为参数。默认的调用方式是<code>get</code>方式，你可以进行修改，其它两个参数和<code>force</code>和<code>store</code>相同。
+<pre class="brush:js">
+Smartjax.setDefaults({
+defaultMethod: 'get',
+alwaysForce: false,
+alwaysStore: true
+});
+</pre>
+</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> Pipelined features</h5>
+<ul>
+<li>support of ID. It will make saving data and retrieving faster.</li>
+<li>Record and Mock services, which will help you to develop UI even if your api is not ready.</li>
+</ul>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1503/201503181537.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201503181539.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_131">
+                                <h3 class="post-title">
+                                    js 3D旋转木马特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

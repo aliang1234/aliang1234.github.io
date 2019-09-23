@@ -1,0 +1,766 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    简单实用且功能齐全的jQuery分页插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            简单实用且功能齐全的jQuery分页插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1511/201511201735.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511201735.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511202806.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Pagination.js是一款简单实用且功能齐全的jQuery分页插件。该jQuery分页插件提供多种数据源方式，众多的配置参数，回调函数，显示控制等，还提供了5套内置的分页条皮肤。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Pagination.js是一款简单实用且功能齐全的<strong>jQuery分页插件</strong>。该jQuery分页插件提供多种数据源方式，众多的配置参数，回调函数，显示控制等，还提供了5套内置的分页条皮肤。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 数据源</h5>
+<p>数据源是最终提供给分页组件的是一个数组。Pagination.js支持4最后数据源格式：</p>
+<pre class="brush:js">
+dataSource array | string | object | function
+</pre>
+<p>1、数组格式：直接提供一个数组，例如：</p>
+<pre class="brush:js">
+['1', '2', '3', '4']
+</pre>
+<p>2、Object：提供一个对象，里面要包含数组，可以通过<code>locator: 'data'</code>指定这个数组</p>
+<pre class="brush:js">
+{
+data: ['1', '2', '3', '4']
+} 
+</pre>
+<p>3、Function：提供一个自定义函数，根据自己的业务逻辑返回数组，自定义程度很高，可以实现上面2种方式可以动态组装数据，使用<code>done</code>返回数据，如：</p>
+<pre class="brush:js">
+dataSource: function(done){
+var result = [];
+<p>for(var i = 1; i &lt; 196; i++){<br>
+result.push(i);<br>
+}</p>
+<p>done(result);<br>
+}<br>
+</pre></p>
+<p>也可以发送请求获取数据，使用<code>done</code>异步返回数据。</p>
+<pre class="brush:js">
+dataSource: function(done){
+$.ajax({
+type: 'GET',
+url: '/test.json',
+success: function(response){
+done(response);
+}
+});
+}
+</pre>
+<p>4、URL：提供一个URL，通过Ajax返回数据，适用于异步分页，每次请求返回一页的数据，返回的数据也可以通过<code>locator</code>查找。</p>
+<p>如果URL为file、http或https协议，会用jsonp发送请求，否则为Ajax。</p>
+<pre class="brush:js">
+/test.json
+</pre>
+<p>每次分页发起请求时，会附加两个参数<code>pageNumber</code>和<code>pageSize</code>，也可使用<code>alias</code>来指定参数名。</p>
+<pre class="brush:js">
+/test.json?pageNumber=2&amp;pageSize=10
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<ul>
+<li>
+<code>locator string | function</code>：这个参数与<code>dataSource</code>相关，一般情况下，<code>dataSource</code>是一个数组，可以直接传给分页组件处理。但如果返回的是<code>Object</code>，那么就需要指定那个数组，默认为<code>data</code>。指定<code>locator</code>可定位到数据源的位置，支持2种方式：
+<p>1、String</p>
+<pre class="brush:js">
+{
+data: ['1', '2', '3', '4']
+}
+</pre>
+<p>指定<code>locator: 'data'</code>之后，最终传给分页组件的就是<code>['1', '2', '3', '4']</code>。此外，还支持多层定位，如果<code>dataSource</code>是下面代码的样子，则可用<code>locator: 'a.b'</code>：</p>
+<pre class="brush:js">
+{
+a: {b: ['1', '2', '3', '4']}
+}
+</pre>
+<p>2、Function：提供一个自定义函数，找到数组的位置，并返回。</p>
+<pre class="brush:js">
+locator: function(){
+// find data and return
+return 'a.b';
+}
+</pre>
+<p>通过Ajax获取的数据同样会应用此规则。</p>
+</li>
+<li>
+<code>totalNumber</code>：类型：number，默认值：1。条目总数，异步分页时必填，模拟分页时为数组的长度</li>
+<li>
+<code>pageNumber </code>：类型：number，默认值：1。指定初始化时加载哪一页的数据</li>
+<li>
+<code>pageSize</code>：类型：number，默认值：10。每页的条目数</li>
+<li>
+<code>pageRange</code>：类型：number，默认值：2。可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为2，则页码条显示为'1...4 5 6 7 8'</li>
+<li>
+<code>callback function(data, pagination)</code>：每次翻页时的回调，<code>callback</code>会传入两个参数：
+<pre class="brush:js">
+callback: function(data, pagination){ ... }
+</pre>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>array</td>
+<td>当页数据</td>
+</tr>
+<tr>
+<td>pagination</td>
+<td>object</td>
+<td>包含当页配置信息的对象</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>pagination对象包含以下属性值：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageNumber</td>
+<td>number</td>
+<td>当前页码</td>
+</tr>
+<tr>
+<td>pageRange</td>
+<td>number</td>
+<td>页码范围</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>number</td>
+<td>每页条目数</td>
+</tr>
+<tr>
+<td>totalPage</td>
+<td>number</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td>totalNumber</td>
+<td>number</td>
+<td>总条目数</td>
+</tr>
+<tr>
+<td>el</td>
+<td>jQueryObject</td>
+<td>分页实例的容器</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>number</td>
+<td>分页方向，往前翻页时值为-1，往后翻为1，初始化时为0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li>
+<code>alias </code>：类型：Object。请求的参数别名，用于异步分页，默认为空。例如：
+<pre class="brush:js">
+alias: {
+pageNumber: 'pageNum',
+pageSize: 'limit'
+}
+</pre>
+<p>那么通过Ajax发起请求时，会替换默认的pageNumber和pageSize。</p>
+<pre class="brush:js">/test.json?pageNum=2&amp;limit=10 </pre>
+</li>
+</ul>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 显示控制</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>showPrevious</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否显示 '上一页'</td>
+</tr>
+<tr>
+<td>showNext</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否显示 '下一页'</td>
+</tr>
+<tr>
+<td>showPageNumbers</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否显示 '页码'</td>
+</tr>
+<tr>
+<td>showNavigator </td>
+<td>boolean</td>
+<td>false</td>
+<td>是否显示导航器</td>
+</tr>
+<tr>
+<td>showGoInput</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否显示跳转输入框</td>
+</tr>
+<tr>
+<td>showGoButton</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否显示跳转按钮</td>
+</tr>
+<tr>
+<td>showFirstOnEllipsisShow</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否在有省略号时显示开始页码<br><code>showBeginingOnOmit: false,</code><br><code>pageRange: 1,</code><br><code>totalNumber: 100,</code><br><code>pageSize: 10</code><br>像上面这样设置，分页会显示为：分页条会显示成这样 '... 4 5 6 ... 10'</td>
+</tr>
+<tr>
+<td>showLastOnEllipsisShow</td>
+<td>boolean</td>
+<td>true</td>
+<td>是否在有省略号时显示结束页码<br><code>showEndingOnOmit: false,</code><br><code>pageRange: 1,</code><br><code>totalNumber: 100,</code><br><code>pageSize: 10</code><br>像上面这样设置，分页会显示为：分页条会显示成这样 '1 ... 4 5 6 ...'</td>
+</tr>
+<tr>
+<td>autoHidePrevious</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否在当前显示为第一页时隐藏 '上一页' 按钮</td>
+</tr>
+<tr>
+<td>autoHideNext</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否在当前显示为最后一页时隐藏 '下一页' 按钮</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 分页样式</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>classPrefix</td>
+<td>string</td>
+<td>'pagination'</td>
+<td>样式前缀</td>
+</tr>
+<tr>
+<td>className</td>
+<td>string</td>
+<td>''</td>
+<td>附加给分页容器的额外样式类</td>
+</tr>
+<tr>
+<td>activeClassName</td>
+<td>string</td>
+<td>'active'</td>
+<td>选中页码的样式类</td>
+</tr>
+<tr>
+<td>disableClassName</td>
+<td>string</td>
+<td>'disabled'</td>
+<td>不可用页码的样式类</td>
+</tr>
+<tr>
+<td>ulClassName</td>
+<td>string</td>
+<td>''</td>
+<td>附加给分页容器下的 'ul' 元素的样式类</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 定制样式</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prevText</td>
+<td>string</td>
+<td>
+<code>«</code>，即符号«</td>
+<td>'上一页' 的文本</td>
+</tr>
+<tr>
+<td>nextText</td>
+<td>string</td>
+<td>
+<code>»</code>，即符号»</td>
+<td>'下一页' 的文本</td>
+</tr>
+<tr>
+<td>ellipsisText</td>
+<td>string</td>
+<td>'...'</td>
+<td>省略号文本</td>
+</tr>
+<tr>
+<td>goButtonText</td>
+<td>string</td>
+<td>'Go'</td>
+<td>跳转按钮文本</td>
+</tr>
+<tr>
+<td>formatNavigator</td>
+<td>string | function</td>
+<td>&lt;\%= currentPage \%&gt; / &lt;\%= totalPage \%&gt;，也可提供一个自定义函数，返回一个这样的字符串</td>
+<td>导航器格式化模板。提供 3 个模板变量：<br><code>currentPage</code>：当前页码<br><code>totalPage</code>：总页数<br><code>totalNumber</code>：总条目数</td>
+</tr>
+<tr>
+<td>formatGoInput</td>
+<td>string | function</td>
+<td>&lt;\%= input \%&gt;</td>
+<td>跳转输入框格式化模板，默认为 &lt;\%= input \%&gt;，也可提供一个自定义函数，返回一个这样的字符串。<br>
+&lt;\%= input \%&gt; 相当于 &lt;input type="text" class="J-paginationjs-go-pagenumber"&gt; 的一个包装，所以，也可自定义一个输入框标签元素，只需要确保带有 J-paginationjs-go-pagenumber 这个class即可。提供 4 个模板变量：<br><code>input</code>：输入框<br><code>currentPage</code>：当前页码<br><code>totalPage</code>：总页数<br><code>totalNumber</code>：总条目数</td>
+</tr>
+<tr>
+<td>formatGoButton</td>
+<td>string | function</td>
+<td>&lt;\%= button \%&gt;</td>
+<td>跳转按钮格式化模板，默认为 &lt;\%= button \%&gt;，也可提供一个自定义函数，返回一个这样的字符串。&lt;\%= button \%&gt; 相当于 &lt;input type="button" class="J-paginationjs-go-button"&gt;，所以，也可自定义一个跳转按钮的标签元素，只需要确保带有 J-paginationjs-go-button 这个class即可。提供 4 个模板变量：<br><code>button</code>：按钮<br><code>currentPage</code>：当前页码<br><code>totalPage</code>：总页数<br><code>totalNumber</code>：总条目数</td>
+</tr>
+<tr>
+<td>header</td>
+<td>string | function</td>
+<td>null</td>
+<td>自定义头部内容。提供 3 个模板变量：<br><code>currentPage</code>：当前页码<br><code>totalPage</code>：总页数<br><code>totalNumber</code>：总条目数</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>string | function</td>
+<td>null</td>
+<td>自定义尾部内容。提供 3 个模板变量：<br><code>currentPage</code>：当前页码<br><code>totalPage</code>：总页数<br><code>totalNumber</code>：总条目数</td>
+</tr>
+<tr>
+<td>pageLink</td>
+<td>string</td>
+<td>null</td>
+<td>分页的链接</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>分页初始化之后，可以使用下面列出的方法来改变分页的行为。</p>
+<pre class="brush:js">
+var container = $('#example1');
+container.pagination({ ... });
+<p>container.pagination('previous');<br>
+</pre></p>
+<ul>
+<li>
+<code>previous</code>：触发上一页。</li>
+<li>
+<code>next</code>：触发下一页。</li>
+<li>
+<code>go</code>：跳转到指定页，有以下 2 种使用方式。
+<pre class="brush:js">
+container.pagination('go', 8)
+container.pagination(8)
+</pre>
+<p>也支持自定义回调函数，例如：</p>
+<pre class="brush:js">
+container.pagination('go', 8, function(data, pagination){
+// template method of yourself
+})
+</pre>
+<p>注意，设置自定义函数后，就不会再调用分页的回调函数<code>callback</code>了。</p>
+</li>
+<li>
+<code>disable</code>：禁用分页，执行后分页不可用，要重新恢复可用需要调用解锁事件<code>container.pagination('enable')</code>。每次异步翻页发出请求前，会自动调用此方法，请求成功之后会自动调用<code>enable</code>解锁。</li>
+<li>
+<code>enable</code>：解锁分页，执行后分页恢复可用。</li>
+<li>
+<code>show</code>：显示分页。</li>
+<li>
+<code>hide</code>：隐藏分页。</li>
+<li>
+<code>destroy</code>：销毁分页实例。</li>
+<li>
+<code>getSelectedPageNum</code>：number，获取当前页码。</li>
+<li>
+<code>getTotalPage</code>：number，获取总页数。</li>
+<li>
+<code>getSelectedPageData</code>：array，获取当前页码的数据。</li>
+<li>
+<code>isDisabled</code>：function，当前是否正处在禁用状态。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>分页事件的功能接口有 2 种使用方式，分别是回调函数和插件钩子。</p>
+<p>使用回调函数：</p>
+<pre class="brush:js">
+var container = $('#example1');
+container.pagination({
+afterRender: function(){
+// function body
+}
+}); 
+</pre>
+<p>使用插件钩子：</p>
+<pre class="brush:js">
+var container = $('#example2');
+<p>container.pagination({<br>
+dataSource: [1, 2, 3],<br>
+pageSize: 1<br>
+});</p>
+<p>container.addHook('afterRender', function(){<br>
+// function body<br>
+});<br>
+</pre></p>
+<p>注意，钩子可以在分页初始化之前定义，也可以在初始化之后定义。</p>
+<ul>
+<li>
+<code>beforeInit</code>：分页实例初始化之前调用，返回false将阻止初始化。</li>
+<li>
+<code>beforeRender</code>：每次分页时会重新渲染分页条，渲染之前调用。</li>
+<li>
+<code>beforePaging</code>：分页之前调用。</li>
+<li>
+<code>beforeDestroy</code>：分页实例销毁之前调用。</li>
+<li>
+<code>beforeDisable</code>：禁用之前调用。</li>
+<li>
+<code>beforeEnable</code>：解锁之前调用。</li>
+<li>
+<code>beforePreviousOnClick</code>：点击上一页之前调用。</li>
+<li>
+<code>beforePageOnClick</code>：点击页码之前调用。</li>
+<li>
+<code>beforeNextOnClick</code>：点击下一页之前调用。</li>
+<li>
+<code>beforeGoInputOnEnter</code>：分页输入框回车之前调用。</li>
+<li>
+<code>beforeGoButtonOnClick</code>：分页跳转按钮点击之前调用。</li>
+<li>
+<code>afterInit</code>：分页实例初始化创建完成之后调用。</li>
+<li>
+<code>afterRender</code>：每次分页时会重新渲染分页条，渲染之后调用。</li>
+<li>
+<code>afterPaging</code>：分页之后调用。</li>
+<li>
+<code>afterDestroy</code>：分页实例销毁之后调用。</li>
+<li>
+<code>afterDisable</code>：禁用之后调用。</li>
+<li>
+<code>afterEnable</code>：解锁之后调用。</li>
+<li>
+<code>afterPreviousOnClick</code>：点击上一页之后调用。</li>
+<li>
+<code>afterPageOnClick</code>：点击页码之后调用。</li>
+<li>
+<code>afterNextOnClick</code>：点击下一页之后调用。</li>
+<li>
+<code>afterGoInputOnEnter</code>：分页输入框回车之后调用。</li>
+<li>
+<code>afterGoButtonOnClick</code>：分页跳转按钮点击之后调用。</li>
+<li>
+<code>afterIsFirstPage</code>：当前是第一页时调用。</li>
+<li>
+<code>afterIsLastPage</code>：当前是最后一页时调用。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 皮肤</h3>
+<p>分页组件自带了 5 套默认皮肤，但你完全可以定制你自己的皮肤。</p>
+<p>例如蓝色皮肤，可以这样使用：</p>
+<pre class="brush:js">
+className: 'paginationjs-theme-blue'
+</pre>
+<p>小号蓝色皮肤：</p>
+<pre class="brush:js">
+className: 'paginationjs-theme-blue paginationjs-small'
+</pre>
+<p>大号蓝色皮肤：</p>
+<pre class="brush:js">
+className: 'paginationjs-theme-blue paginationjs-big'
+</pre>
+<p>如果需要自定义样式，则可以增加CSS类<code>custom-paginationjs</code>。</p>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 配置默认值</h3>
+<p>Pagination.js分页可通过<code>$.fn.pagination.defaults</code>对象来修改默认配置，修改后，将影响所有之后创建的实例。例如：</p>
+<pre class="brush:js">
+$.extend($.fn.pagination.defaults, {
+pageSize: 20
+})
+</pre>
+<p>之后所有新建的分页实例，每页条数都是20。</p>
+<p>Pagination.js插件的github地址是：<a href="https://github.com/superRaytin/paginationjs" target="\_blank">https://github.com/superRaytin/paginationjs</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1511/201511201735.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201511202806.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_996">
+                                <h3 class="post-title">
+                                    Bootstrap谷歌Material Design风格日期时间选择器
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

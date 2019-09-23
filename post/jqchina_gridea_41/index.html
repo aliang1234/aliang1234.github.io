@@ -1,0 +1,357 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery全屏滚动插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery全屏滚动插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1902/201902253956.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1902/201902253956.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201902255539.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>XSwitch是一款jQuery全屏滚动插件。XSwitch可以高度自定义，生成通过鼠标滚动全屏翻页的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>XSwitch是一款jQuery全屏滚动插件。XSwitch可以高度自定义，生成通过鼠标滚动全屏翻页的效果。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面最后引入jquery和XSwitch.min.js文件。</p>
+<pre class="brush:html">
+&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/XSwitch.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>基本的HTML结构如下。</p>
+<pre class="brush:html">
+&lt;!-- 插件基本结构 --&gt;
+&lt;div id="container"&gt;
+&lt;div class="sections"&gt;
+&lt;div class="section" id="section0"&gt;&lt;/div&gt;
+&lt;div class="section" id="section1"&gt;&lt;/div&gt;
+&lt;div class="section" id="section2"&gt;&lt;/div&gt;
+&lt;div class="section" id="section3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>然后添加一些基础的样式支持。</p>
+<pre class="brush:css">
+/*简单reset*/
+* {
+margin: 0;
+padding: 0;
+}
+/*必须，关系到单个page能否全屏显示*/
+html,
+body {
+height: 100\%;
+overflow: hidden;
+}
+#container,
+.sections,
+.section {
+/*必须，兼容，在浏览器不支持transform属性时，通过改变top/left完成滑动动画*/
+position: relative;
+/*必须，关系到单个page能否全屏显示*/
+height: 100\%;
+}
+.section {
+/*有背景图时必须，关系到背景图能否全屏显示*/
+background-color: #000;
+background-size: cover;
+background-position: 50\% 50\%;
+}
+/*非必需，只是用来设置背景图，id不会被插件用到*/
+#section0 {
+background-image: url(img/img1.jpg);
+}
+#section1 {
+background-image: url(img/img2.jpg);
+}
+#section2 {
+background-image: url(img/img3.jpg);
+}
+#section3 {
+background-image: url(img/img4.jpg);
+}
+/*以下样式用来设置slider样式，可自行修改*/
+.pages {
+position:fixed;
+right: 10px;
+top: 50\%;
+list-style: none;
+}
+.pages li {
+width: 8px;
+height: 8px;
+border-radius: 50\%;
+background: #fff;
+margin: 15px 0 0 7px;
+}
+.pages li.active {
+margin-left: 0;
+width: 14px;
+height: 14px;
+border: 4px solid #FFFFFF;
+background: none;
+}
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>有两种调用插件的方法：</p>
+<p>方法一： 通过给<code>div#container</code>添加属性<code>data-XSwitch</code>调用，插件将会使用默认配置，如：</p>
+<pre class="brush:html">
+&lt;div id="container" data-XSwitch&gt;
+...
+&lt;/div&gt;
+</pre>
+<p>方法二 ：通过js调用，使用这种方法可设置参数。</p>
+<pre class="brush:js">
+$('#container').XSwitch({
+direction: 'horizontal'
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>XSwitch插件配置参数如下：</p>
+<pre class="brush:js">
+/*默认配置*/
+{
+selectors: {
+sections: '.sections', //容器类名
+section: '.section', //子容器类名，即每个单页
+page: '.pages', //slider类名 插件会生成一个ul侧边栏
+active: '.active' //被选中的slider下li的类名
+},
+index: 0,//起始页下标
+easing: 'ease',//动画类型，支持transition所有类型
+duration: 500,//动画执行时间 单位毫秒
+loop: false, //是否支持循环滑动
+pagination: true, //是否分页
+keyboard: true, //是否支持键盘滚动事件
+direction: 'vertical', //滑动方向 默认为垂直 设置为 horizontal 将水平滑动
+callback: '' //滑动完成后的回调函数
+} 
+</pre>
+<p><i class="fa fa-github"></i> 该jQuery全屏滚动插件的github网址为：<a href="https://github.com/XxinLiang/XSwitch" target="\_blank">https://github.com/XxinLiang/XSwitch</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1902/201902253956.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201902255539.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_410">
+                                <h3 class="post-title">
+                                    js和CSS3背景图片切片和glitch闪动效果
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

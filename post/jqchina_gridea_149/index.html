@@ -1,0 +1,393 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持无限加载的js图片画廊插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持无限加载的js图片画廊插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1807/201807061445.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807061445.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807065213.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>natural-gallery-js是一款支持无限加载的js图片画廊插件。该js图片画廊支持图片的懒加载，可以对图片进行搜索，分类，还可以以轮播图的方式来展示和切换图片。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>natural-gallery-js是一款支持无限加载的js图片画廊插件。该js图片画廊支持图片的懒加载，可以对图片进行搜索，分类，还可以以轮播图的方式来展示和切换图片。</p>
+<p>
+</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入下面的CSS和js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="../dist/themes/natural.css"&gt;
+&lt;link rel="stylesheet" href="../dist/natural-gallery.full.css"&gt;
+&lt;script src="../dist/natural-gallery.full.js" defer&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>使用一个<code>&lt;div&gt;</code>作为图片画廊的容器。</p>
+<pre class="brush:html">
+&lt;div id="myGallery""&gt;&lt;/div&gt;
+</pre>
+<p>然后添加PhotoSwipe轮播图模板。</p>
+<pre class="brush:html">
+&lt;div class="myPhotoswipe" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+&lt;div class="pswp\_\_bg"&gt;&lt;/div&gt;
+&lt;div class="pswp\_\_scroll-wrap"&gt;
+&lt;div class="pswp\_\_container"&gt;
+&lt;div class="pswp\_\_item"&gt;&lt;/div&gt;
+&lt;div class="pswp\_\_item"&gt;&lt;/div&gt;
+&lt;div class="pswp\_\_item"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp\_\_ui pswp\_\_ui--hidden"&gt;
+&lt;div class="pswp\_\_top-bar"&gt;
+&lt;div class="pswp\_\_counter"&gt;&lt;/div&gt;
+&lt;button class="pswp\_\_button pswp\_\_button--close" title="Close (Esc)"&gt;&lt;/button&gt;
+&lt;button class="pswp\_\_button pswp\_\_button--fs" title="Toggle fullscreen"&gt;&lt;/button&gt;
+&lt;button class="pswp\_\_button pswp\_\_button--zoom" title="Zoom in/out"&gt;&lt;/button&gt;
+&lt;div class="pswp\_\_preloader"&gt;
+&lt;div class="pswp\_\_preloader\_\_icn"&gt;
+&lt;div class="pswp\_\_preloader\_\_cut"&gt;
+&lt;div class="pswp\_\_preloader\_\_donut"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pswp\_\_share-modal pswp\_\_share-modal--hidden pswp\_\_single-tap"&gt;
+&lt;div class="pswp\_\_share-tooltip"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="pswp\_\_button pswp\_\_button--arrow--left" title="Previous (arrow left)"&gt;&lt;/button&gt;
+&lt;button class="pswp\_\_button pswp\_\_button--arrow--right" title="Next (arrow right)"&gt;&lt;/button&gt;
+&lt;div class="pswp\_\_caption"&gt;
+&lt;div class="pswp\_\_caption\_\_center"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>以及下面的一些操作图标。</p>
+<pre class="brush:html">
+ &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"viewBox="0 0 100 100"xml:space="preserve" style="display:none;"&gt;
+&lt;g id="icon-search"&gt;
+&lt;path d="M67.647,61.054c1.74-1.741,3.046-3.706,3.916-5.896c0.87-2.19,1.305-4.422,1.305-6.696c0-2.274-0.435-4.52-1.305-6.738
+c-0.87-2.218-2.176-4.197-3.916-5.938c-1.741-1.741-3.706-3.032-5.896-3.874c-2.19-0.842-4.436-1.263-6.738-1.263
+c-2.302,0-4.549,0.421-6.738,1.263c-2.19,0.842-4.155,2.134-5.896,3.874s-3.046,3.72-3.916,5.938
+c-0.87,2.218-1.305,4.464-1.305,6.738c0,2.274,0.435,4.506,1.305,6.696c0.87,2.19,2.176,4.155,3.916,5.896
+c1.741,1.74,3.706,3.046,5.896,3.916c2.19,0.87,4.436,1.305,6.738,1.305s4.548-0.435,6.738-1.305
+C63.941,64.1,65.906,62.794,67.647,61.054z M77.754,25.679c3.145,3.144,5.503,6.696,7.075,10.654
+c1.572,3.959,2.358,7.987,2.358,12.086s-0.786,8.128-2.358,12.086c-1.572,3.959-3.93,7.51-7.075,10.654
+c-2.526,2.527-5.334,4.548-8.422,6.064c-3.088,1.516-6.288,2.526-9.602,3.032c-3.313,0.506-6.64,0.478-9.98-0.084
+c-3.341-0.562-6.528-1.628-9.56-3.201L25.703,91.459c-0.842,0.842-1.769,1.459-2.779,1.853c-1.011,0.393-2.064,0.59-3.158,0.59
+s-2.148-0.197-3.158-0.59c-1.011-0.393-1.937-1.011-2.779-1.853c-0.842-0.842-1.46-1.769-1.853-2.779
+c-0.393-1.011-0.59-2.064-0.59-3.158s0.197-2.147,0.59-3.158c0.393-1.011,1.011-1.937,1.853-2.779l13.981-13.981
+c-1.965-3.088-3.341-6.401-4.127-9.939c-0.786-3.538-0.997-7.075-0.632-10.612c0.365-3.537,1.32-6.977,2.864-10.318
+c1.544-3.341,3.664-6.359,6.359-9.054c3.144-3.088,6.696-5.418,10.654-6.991c3.959-1.572,7.987-2.358,12.086-2.358
+c4.099,0,8.128,0.786,12.086,2.358C71.058,20.261,74.61,22.591,77.754,25.679z"/&gt;
+&lt;/g&gt;
+&lt;g id="icon-next"&gt;
+&lt;polygon points="88.126,24.216 50.036,62.306 11.947,24.216 0.355,35.809 50.036,85.49 99.718,35.809 "/&gt;
+&lt;/g&gt;
+&lt;g id="icon-category"&gt;
+&lt;path d="M98.929,28.421L87.854,17.346c-1.311-1.311-3.436-1.311-4.747,0L36.974,63.48L17.353,43.859
+c-1.31-1.311-3.436-1.311-4.746,0L1.532,54.933c-1.311,1.31-1.311,3.436,0,4.747l33.069,33.069
+c0.655,0.656,1.514,0.983,2.373,0.983c0.859,0,1.718-0.328,2.373-0.983l59.581-59.582c0.63-0.629,0.983-1.483,0.983-2.373
+C99.912,29.904,99.559,29.05,98.929,28.421z"/&gt;
+&lt;/g&gt;
+&lt;g id="icon-pict"&gt;
+&lt;path d="M8.603,16.406v77.478H91.47V16.406H8.603z M82.018,26.091V72.5l-14.65-17.355L54.369,66.581L36.093,44.649L18.055,69.808
+V26.091H82.018z"/&gt;
+&lt;path d="M60.643,46.263c3.655,0,6.617-3.034,6.617-6.774c0-3.744-2.962-6.779-6.617-6.779c-3.654,0-6.617,3.035-6.617,6.779
+C54.026,43.228,56.989,46.263,60.643,46.263z"/&gt;
+&lt;/g&gt;
+&lt;g id="icon-noresults"&gt;
+&lt;path d="M99.912,6.908L6.821,100l-5.812-5.812L94.1,1.096L99.912,6.908z M68.442,8.462L5.237,71.349V8.462H68.442z M35.174,27.716
+c0-6.075-4.925-10.999-10.999-10.999c-6.129,0-10.999,4.988-10.999,10.999c0,6.012,4.87,10.999,10.999,10.999
+C30.25,38.716,35.174,33.791,35.174,27.716z M88.514,82.787c-3.364,0-25.162,0-28.576,0l-5.895-11.473l-6.014,5.984l2.738,5.489
+c-0.846,0-2.921,0-8.254,0l-9.896,9.847h63.07V29.881L73.257,52.198C78.41,62.531,88.123,82.004,88.514,82.787z"/&gt;
+&lt;/g&gt;
+&lt;/svg&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>最后通过下面的js代码来初始化该图片画廊插件。</p>
+<pre class="brush:js">
+var containerRef = document.getElementById('myGallery'); // uses HTMLElement reference as container
+var photoswipeRef = document.getElementById('myPhotoswipe'); // photoswipe template if required
+<p>// Create your gallery options<br>
+var options = {</p>
+<p>format: 'natural | square',</p>
+<p>// Max row height. Works for both natural and square format. Prefer this option for a &quot;responsive&quot; approach<br>
+rowHeight: 350,</p>
+<p>// Only for square format. Disables responsive<br>
+imagesPerRow: 4,</p>
+<p>round: 3, // Rounded corner<br>
+margin: 3, // Gap between thumbnails<br>
+limit: 0, // Number of rows, activate pagination (disables infinite scroll)<br>
+minRowsAtStart: 2, // Initial number of rows. If null, gallery tries to define the number of required rows to fill the viewport.</p>
+<p>showLabels: 'hover | always | never', // When to show the labels in thumbnails</p>
+<p>lightbox: true, // Open a lightbox with a bigger image -&gt; activate a zoom effect on hover on thumbnails<br>
+zoomRotation: true,</p>
+<p>// Number of pixels to offset the infinite scroll autoload<br>
+// If negative, next rows will load before the bottom of gallery container is visible<br>
+// If 0 the next rows will load when the bottom of the gallery will be visible<br>
+// If positive, the next rows will load when the bottom of the gallery will be this amount above the end of the viewport.<br>
+// If positive be sure to always have this number of pixels as margin, padding or more content after the gallery.<br>
+infiniteScrollOffset: 0,</p>
+<p>// Header / Search options.<br>
+showCount: false,<br>
+searchFilter: false,<br>
+categoriesFilter: false,<br>
+showNone: false,<br>
+showOthers: false,<br>
+labelCategories: 'Category',<br>
+labelNone: 'None',<br>
+labelOthers: 'Others',<br>
+labelSearch: 'Search',<br>
+labelImages: 'Images',<br>
+};</p>
+<p>var images= [<br>
+{<br>
+&quot;thumbnail&quot;: &quot;thumb.jpg&quot;,<br>
+&quot;enlarged&quot;: &quot;big.jpg&quot;,<br>
+&quot;title&quot;: &quot;Antonio Ron&quot;,<br>
+&quot;categories&quot;: [<br>
+{<br>
+&quot;id&quot;: 4,<br>
+&quot;title&quot;: &quot;Nature&quot;,<br>
+&quot;photo_count&quot;: 41787,<br>
+&quot;links&quot;: {<br>
+&quot;self&quot;: &quot;https://api.unsplash.com/categories/4&quot;,<br>
+&quot;photos&quot;: &quot;https://api.unsplash.com/categories/4/photos&quot;<br>
+}<br>
+}<br>
+],<br>
+&quot;tWidth&quot;: 443.74009508716324,<br>
+&quot;tHeight&quot;: 300,<br>
+&quot;eWidth&quot;: 2800,<br>
+&quot;eHeight&quot;: 1893<br>
+},<br>
+{...}<br>
+];</p>
+<p>// Create a gallery<br>
+var gallery = new Gallery(containerRef, photoswipeRef, options);<br>
+</pre></p>
+<p><i class="fa fa-github"></i> 该支持无限加载的js图片画廊插件的github地址为：<a href="https://github.com/Ecodev/natural-gallery-js" target="\_blank">https://github.com/Ecodev/natural-gallery-js</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1807/201807061445.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201807065213.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1490">
+                                <h3 class="post-title">
+                                    jQuery切换缩略图模式和列表模式插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

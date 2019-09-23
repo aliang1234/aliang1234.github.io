@@ -1,0 +1,475 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    pageSwitch-支持121种过渡效果的JavaScript页面切换插 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            pageSwitch-支持121种过渡效果的JavaScript页面切换插
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601231551.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601231551.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601233062.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>pageSwitch.js是一款支持121种页面切换效果的javascript页面切换插件。pageSwitch插件适用场景为全屏切换，即一切一屏。它支持桌面和移动手机，支持多达121种切页效果，还支持自定义切页动画。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>pageSwitch.js是一款支持121种页面切换效果的javascript页面切换插件。pageSwitch插件适用场景为全屏切换，即一切一屏。它支持桌面和移动手机，支持多达121种切页效果，还支持自定义切页动画。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该页面切换插件需要引入pageSwitch.js文件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript" src="src/pageSwitch.js"&gt;&lt;/script&gt; 
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>pageSwitch页面切换插件的基本HTML结构采用嵌套<code>&lt;div&gt;</code>的HTML结构。</p>
+<pre class="brush:html">
+&lt;div id="imgs"&gt;
+&lt;div&gt;&lt;img src="images/1.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/2.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/3.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/4.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/5.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/6.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/7.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/8.jpg" /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src="images/9.png" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--导航--&gt;
+&lt;div id="navs"&gt;
+&lt;a href="javascript:;" class="active"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;a href="javascript:;"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>可以通过下面的方法来初始化一个pageSwitch对象。</p>
+<pre class="brush:js">
+var pw=new pageSwitch('container id',{
+duration:600, //int 页面过渡时间
+direction:1,//int 页面切换方向，0横向，1纵向
+start:0,//int 默认显示页面
+loop:false, //bool 是否循环切换
+ease:'ease',//string|function 过渡曲线动画，详见下方说明
+transition:'slide', //string|function转场方式，详见下方说明
+freeze:false, //bool 是否冻结页面（冻结后不可响应用户操作，可以通过 `.freeze(false)` 方法来解冻）
+mouse:true, //bool 是否启用鼠标拖拽
+mousewheel:false, //bool 是否启用鼠标滚轮切换
+arrowkey:false, //bool 是否启用键盘方向切换
+autoplay:false, //bool 是否自动播放幻灯 新增
+interval:int//bool 幻灯播放时间间隔 新增
+});
+</pre>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>pageSwitch插件的可用方法有:</p>
+<pre class="brush:js">
+pw.prev();//上一张
+pw.next();//下一张
+pw.slide(n);//第n张
+pw.setEase(); //重新设定过渡曲线
+pw.setTransition(); //重新设定转场方式
+pw.freeze(true|false);//冻结页面转换，冻结后不可响应用户操作（调用slide prev next方法还可以进行）
+<p>pw.play();//播放幻灯<br>
+pw.pause(); //暂停幻灯</p>
+<p>pw.prepend(DOM_NODE); //前增页面<br>
+pw.append(DOM_NODE);//后增页面<br>
+pw.insertBefore(DOM_NODE,index);//在index前添加<br>
+pw.insertAfter(DOM_NODE,index); //在index后添加<br>
+pw.remove(index); //删除第index页面<br>
+pw.isStatic();//是否静止状态</p>
+<p>pw.destroy(); //销毁pageSwitch效果对象<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<p>可以通过<code>.on()</code>为pageSwitch对象绑定事件。</p>
+<pre class="brush:js">
+/* 事件绑定
+ * event可选值:
+ * 
+ * before 页面切换前
+ * after 页面切换后
+ * update 页面切换中
+ * dragStart 开始拖拽
+ * dragMove 拖拽中
+ * dragEnd 结束拖拽
+ */
+pw.on(event,callback);
+</pre>
+<h3>
+<span class="glyphicon glyphicon-bullhorn"></span> 应用举例</h3>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 设置easing效果</h5>
+<p>pageSwitch插件支持内置的<code>linear</code>、<code>ease</code>、<code>ease-in</code>、<code>ease-out</code>、<code>ease-in-out</code>、<code>bounce</code>等easing动画效果。</p>
+<pre class="brush:js">
+//注：此处传值也可直接在new pageSwitch对象时经ease参数传入
+//设置匀速linear过渡示例：
+pw.setEase('linear'); //由于内置了linear支持，所以可以直接使用
+<p>//假如没有内置linear，则使用自定义过渡曲线函数如下<br>
+pw.setEase(function(t,b,c,d){<br>
+return c*t/d + b;<br>
+});<br>
+</pre></p>
+<p>更多曲线函数参见：<a href="https://github.com/zhangxinxu/Tween/blob/master/tween.js" target="\_blank">https://github.com/zhangxinxu/Tween/blob/master/tween.js</a></p>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 设置Transition过渡动画</h5>
+<p>pageSwitch插件支持的动画过渡效果有：</p>
+<ul>
+<li>
+<code>fade</code>：渐隐渐显。</li>
+<li>
+<code>slice</code>：裁切效果。</li>
+<li>
+<code>scroll</code>：页面滚动。</li>
+<li>
+<code>scroll3d</code>：3d页面滚动。</li>
+<li>
+<code>scrollCover</code>：页面视差滚入滚出（前后页面速度不一致）。</li>
+<li>
+<code>scrollCoverReverse</code>：同上反向。</li>
+<li>
+<code>scrollCoverIn</code>：总是下一张页面视差滚入。</li>
+<li>
+<code>scrollCoverOut</code>：总是当前页面视差滚出。</li>
+<li>
+<code>slide</code>：滑动切换，后者页面有缩放效果。</li>
+<li>
+<code>slideCover</code>：页面滑入滑出。</li>
+<li>
+<code>slideCoverReverse</code>：同上反向。</li>
+<li>
+<code>slideCoverIn</code>：总是下一张页面滑入。</li>
+<li>
+<code>slideCoverOut</code>：总是当前页面滑出。</li>
+<li>
+<code>flow</code>：封面滑动切换。</li>
+<li>
+<code>flowCover</code>：页面滑入滑出。</li>
+<li>
+<code>flowCoverReverse</code>：同上反向。</li>
+<li>
+<code>flowCoverIn</code>：总是下一张页面滑入。</li>
+<li>
+<code>flowCoverOut</code>：总是当前页面滑出。</li>
+<li>
+<code>zoom</code>：缩放切换。</li>
+<li>
+<code>zoomCover</code>：页面缩进缩出。</li>
+<li>
+<code>zoomCoverReverse</code>：同上反向。</li>
+<li>
+<code>zoomCoverIn</code>：总是下一张页面缩入。</li>
+<li>
+<code>zoomCoverOut</code>：总是当前页面缩出。</li>
+<li>
+<code>skew</code>：扭曲切换。</li>
+<li>
+<code>skewCover</code>：页面扭进扭出。</li>
+<li>
+<code>skewCoverReverse</code>：同上反向。</li>
+<li>
+<code>skewCoverIn</code>：总是下一张页面扭入。</li>
+<li>
+<code>skewCoverOut</code>：总是当前页面扭出。</li>
+<li>
+<code>flip</code>：翻转切换。</li>
+<li>
+<code>flip3d</code>：3d翻转切换。</li>
+<li>
+<code>flipClock</code>：翻页钟效果。</li>
+<li>
+<code>flipPaper</code>：翻书本效果。</li>
+<li>
+<code>flipCover</code>：页面翻入翻出。</li>
+<li>
+<code>flipCoverReverse</code>：同上反向。</li>
+<li>
+<code>flipCoverIn</code>：总是下一张页面翻入。</li>
+<li>
+<code>flipCoverOut</code>：总是当前页面翻出。</li>
+<li>
+<code>bomb</code>：放大切换。</li>
+<li>
+<code>bombCover</code>：页面大入大出。</li>
+<li>
+<code>bombCoverReverse</code>：同上反向。</li>
+<li>
+<code>bombCoverIn</code>：总是下一张页面大入。</li>
+<li>
+<code>bombCoverOut</code>：总是当前页面大出。</li>
+</ul>
+<p>注意：除了<code>fade</code>，所有效果都支持指定X或Y轴方向效果，只要在名字后面加上X或Y即可。 例如：<code>scrollY</code>、<code>flipX</code>、<code>flipCoverX</code>、<code>flipCoverInX</code>等类似。</p>
+<pre class="brush:js">
+//注：此处传值也可直接在new pageSwitch对象时经transition参数传入
+//设置fade效果示例：
+pw.setTransition('fade'); //由于内置了fade效果，所以可以直接调用。
+<p>//假定没有内置fade，自定义转场函数如下<br>
+pw.setTransition(function(cpage,cp,tpage,tp){<br>
+/* 过渡效果处理函数</p>
+<ul>
+<li>@param HTMLElement cpage 参与动画的前序页面</li>
+<li>@param Float cp 目标页面过渡比率，取值范围-1到1</li>
+<li>@param HTMLElement tpage 参与动画的后序页面；如果非循环loop模式，则在切换到边缘页面时可能不存在该参数</li>
+<li>@param Float tp 目标页面过渡比率，取值范围-1到1；如果非循环loop模式，则在切换到边缘页面时可能不存在该参数<br>
+*/</li>
+</ul>
+<p>if('opacity' in cpage.style){<br>
+cpage.style.opacity=1-Math.abs(cp);<br>
+if(tpage){<br>
+tpage.style.opacity=Math.abs(cp);<br>
+}<br>
+}else{<br>
+cpage.style.filter='alpha(opacity='+(1-Math.abs(cp))*100+')';<br>
+if(tpage){<br>
+tpage.style.filter='alpha(opacity='+Math.abs(cp)*100+')';<br>
+}<br>
+}<br>
+});</p>
+<p>//如果你有jQuery类似组件，可以更简单<br>
+pw.setTransition(function(cpage,cp,tpage,tp){<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>c</mi><mi>p</mi><mi>a</mi><mi>g</mi><mi>e</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>o</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>i</mi><mi>t</mi><msup><mi>y</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mn>1</mn><mo>−</mo><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi mathvariant="normal">.</mi><mi>a</mi><mi>b</mi><mi>s</mi><mo>(</mo><mi>c</mi><mi>p</mi><mo>)</mo><mo>)</mo><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">(cpage).css(&#x27;opacity&#x27;,1-Math.abs(cp));
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">b</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mord mathdefault">p</span><span class="mclose">)</span><span class="mclose">)</span><span class="mpunct">;</span></span></span></span>(tpage).css('opacity',Math.abs(cp));<br>
+});<br>
+</pre></p>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> jQuery/Zepto适配器</h5>
+<pre class="brush:js">
+$.fn.extend({
+pageSwitch:function(cfg){
+this[0].ps=new pageSwitch(this[0],cfg);
+return this;
+},
+ps:function(){
+return this[0].ps;
+}
+});
+<p>//使用<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">_</mi><mi>i</mi><mi>d</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>p</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>S</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>(</mo><mrow><mi>d</mi><mi>u</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>:</mo><mn>1000</mn><mo separator="true">,</mo><mi>t</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>s</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><msup><mo>:</mo><mo mathvariant="normal">′</mo></msup><mi>s</mi><mi>l</mi><mi>i</mi><mi>d</mi><msup><mi>e</mi><mo mathvariant="normal">′</mo></msup></mrow><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">由</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">链</mi><mi mathvariant="normal">式</mi><mi mathvariant="normal">调</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">返</mi><mi mathvariant="normal">回</mi><mi mathvariant="normal">依</mi><mi mathvariant="normal">然</mi><mi mathvariant="normal">是</mi><mi>j</mi><mi>q</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">身</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>p</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>S</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">通</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">‘</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>s</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">‘</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">对</mi><mi>p</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>S</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>c</mi><mi>h</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">引</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">。</mi></mrow><annotation encoding="application/x-tex">(container\_id).pageSwitch({
+duration:1000,
+transition:&#x27;slide&#x27;
+});
+//由于链式调用返回依然是jq对象自身，所以如果需要使用pageSwitch对象方法，
+//需要通过 `.ps()` 方法获取对pageSwitch对象的引用。
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.061892em;vertical-align:-0.31em;"></span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">d</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">:</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">由</span><span class="mord cjk_fallback">于</span><span class="mord cjk_fallback">链</span><span class="mord cjk_fallback">式</span><span class="mord cjk_fallback">调</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">返</span><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">依</span><span class="mord cjk_fallback">然</span><span class="mord cjk_fallback">是</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">身</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">，</span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">过</span><span class="mord">‘</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">‘</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">对</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">。</span></span></span></span>(container_id).ps().next();<br>
+</pre></p>
+<p>pageSwitch页面切换插件的github地址为：<a href="https://github.com/qiqiboy/pageSwitch" target="\_blank">https://github.com/qiqiboy/pageSwitch</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601231551.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601233062.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_888">
+                                <h3 class="post-title">
+                                    基于Bootstrap的jQuery右键上下文菜单插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

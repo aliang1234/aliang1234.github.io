@@ -1,0 +1,456 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    可拖拽和带预览图的jQuery文件上传插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            可拖拽和带预览图的jQuery文件上传插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1607/201607031619.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1607/201607031619.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201607033681.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>ssi-uploader是一款带预览图并且可以拖拽文件的jQuery ajax文件上传插件。该文件上传插件支持AJAX，支持多文件上传，可控制上的文件格式和文件大小，提供各种回调函数，使用非常方便。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>ssi-uploader是一款带预览图并且可以拖拽文件的<a href="http://www.htmleaf.com/jQuery/">jQuery</a> ajax文件上传插件。该文件上传插件支持AJAX，支持多文件上传，可控制上的文件格式和文件大小，提供各种回调函数，使用非常方便。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过bower或npm来安装ssi-uploader文件上传插件。</p>
+<pre class="brush:html">
+bower install ssi-uploader
+npm install ssi-uploader 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入ssi-uploader.css和ssi-uploader.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="path/to/ssi-uploader.css"&gt;
+&lt;script src="path/to/ssi-uploader.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>最基本的文件上传HTML结构是使用一个<code>&lt;input&gt;</code>元素，类型为<code>file</code>，并指定一个id。</p>
+<pre class="brush:html">
+&lt;input type="file" multiple id="ssi-upload"/&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>ssi\_uploader</code>方法来初始化该文件上传插件。</p>
+<pre class="brush:js">
+$('#ssi-upload').ssi\_uploader({
+url: 'path/to/upload.php'
+}); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p><code>ssi\_uploader</code>文件上传插件的可用配置参数如下：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>{String}</td>
+<td>null</td>
+<td>接收ajax请求的地址。必须填写。</td>
+</tr>
+<tr>
+<td>data</td>
+<td>{Object}</td>
+<td>null</td>
+<td>发送请求的额外数据。例如<code>$('input').ssi-uploader({url:'upload.php',data:{"name":"myDragon"}})</code>
+</td>
+</tr>
+<tr>
+<td>ajaxOptions</td>
+<td>{Object}</td>
+<td>{type:'DELETE'}</td>
+<td>扩展默认的<code>$.ajax</code>函数的选项。</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>{String}</td>
+<td>"en"</td>
+<td>使用的本地化语言。</td>
+</tr>
+<tr>
+<td>preview</td>
+<td>{boolean}</td>
+<td>true</td>
+<td>是否启用文件预览图效果。</td>
+</tr>
+<tr>
+<td>maxNumberOfFiles</td>
+<td>{Number}</td>
+<td>null</td>
+<td>每次允许上传多少个文件。</td>
+</tr>
+<tr>
+<td>maxFileSize</td>
+<td>{Number}</td>
+<td>null</td>
+<td>允许上传的最大文件尺寸。</td>
+</tr>
+<tr>
+<td>allowed</td>
+<td>{Array}</td>
+<td>['jpg', 'jpeg', 'png', 'bmp', 'gif']</td>
+<td>允许上传的文件类型。</td>
+</tr>
+<tr>
+<td>errorHandler</td>
+<td>{Object}</td>
+<td></td>
+<td>用于处理错误信息的方法。</td>
+</tr>
+<tr>
+<td>beforeUpload</td>
+<td>{Function}</td>
+<td></td>
+<td>文件上传前执行的回调函数。</td>
+</tr>
+<tr>
+<td>beforeEachUpload</td>
+<td>{Function}</td>
+<td></td>
+<td>每一个单独的文件上传前执行的回调函数。</td>
+</tr>
+<tr>
+<td>onUpload</td>
+<td>{Function}</td>
+<td></td>
+<td>文件上传后执行的回调函数。</td>
+</tr>
+<tr>
+<td>onEachUpload</td>
+<td>{Function}</td>
+<td></td>
+<td>每一个单独的文件上传后执行的回调函数。</td>
+</tr>
+<tr>
+<td>responseValidation</td>
+<td>{Object||false}</td>
+<td></td>
+<td>设置错误校验，插件将显示设置的信息。可以可以是：<code>{ type:"error",result:"Already exists" }</code>或<code>{ error:"Already exists." }</code>。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>其中，<code>errorHandler</code>参数带有一个<code>errorHandler.method</code>函数，该函数错误信息和类型。</p>
+<pre class="brush:js">
+function(msg,type){alert(msg);}
+</pre>
+<p><code>responseValidation</code>对象的可用属性有：</p>
+<ul>
+<li>
+<code>validationKey</code>：类型{String||Object}，设置验证信息。</li>
+<li>
+<code>resultKey</code>：类型{String||Object}，设置返回验证信息。</li>
+<li>
+<code>success</code>：类型{String}，设置成功信息。</li>
+<li>
+<code>error</code>：类型{String}，设置错误信息。</li>
+</ul>
+<p>例如：</p>
+<pre class="brush:js">
+//structure 1
+$('#ss-uploader').ssi\_uploader({
+responseValidation:{
+validationKey: 'type',
+resultKey: 'data',
+success: 'success',
+error: 'error'
+}
+});
+<p>//result<br>
+/*<br>
+{<br>
+type:'error',<br>
+data:'Already Exists.'<br>
+}<br>
+*/</p>
+<p>//structure 2<br>
+$('#ss-uploader').ssi_uploader({<br>
+responseValidation:{<br>
+validationKey: {<br>
+success: 'success',<br>
+error: 'error'<br>
+},<br>
+resultKey: 'validationKey'<br>
+}<br>
+})<br>
+//result<br>
+/*<br>
+{<br>
+error:'Already Exists.'<br>
+}<br>
+*/<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 回调函数</h3>
+<p><code>ssi-uploader</code>文件生成插件支持4种回调函数：<code>beforeUpload</code>、<code>beforeEachUpload</code>、<code>onUpload</code>和<code>onEachUpload</code>。</p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> beforeUpload</h5>
+<p><code>beforeUpload</code>回调函数在文件上传前执行的回调函数。</p>
+<pre class="brush:js">
+$('input').ssi\_uploader({url:'uploadAction.php',beforeUpload:function(){
+ console.log('文件上传准备就绪！');
+}})
+<p>$('input').on('beforeUpload.ssi-uploader',function(){console.log('一个文件准备上传。')});<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> beforeEachUpload</h5>
+<p><code>beforeEachUpload</code>回调函数在每一个单独的文件上传前执行的回调函数。该函数访问每个文件的信息和xhr对象。如果终止了某个文件，你可以设置一个字符串，提示取消的原因，并显示的错误信息中。</p>
+<pre class="brush:js">
+$('input').ssi\_uploader({url:'uploadAction.php',beforeEachUpload:function(fileInfo,xhr){
+ console.log(fileInfo.name+' '+fileInfo.type+' '+fileInfo.size);
+ if(fileInfo.size &gt; 1){ xhr.abort(); }
+ return '文件尺寸太大！';
+}});
+<p>$('input').on('beforeEachUpload.ssi-uploader',function(){console.log('A file is going for uploading.')});<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> onUpload</h5>
+<p><code>beforeUpload</code>回调函数在文件上传后执行的回调函数。</p>
+<pre class="brush:js">
+$('input').ssi\_uploader({url:'uploadAction.php',onUpload:function(){
+ console.log('文件上传完毕！');
+}})
+<p>$('input').on('onUpload.ssi-uploader',function(){console.log('文件上传完毕！')});<br>
+</pre></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> onEachUpload</h5>
+<p><code>beforeUpload</code>回调函数在每一个单独的文件上传后执行的回调函数。</p>
+<pre class="brush:js">
+$('input').ssi\_uploader({url:'uploadAction.php',onEachUpload:function(fileInfo){
+ console.log(fileInfo.uploadStatus+' 'fileInfo.name+' '+fileInfo.type+' '+fileInfo.size+' '+fileInfo.uploadStatus);
+}});
+<p>$('input').on('onEachUpload.ssi-uploader',function(){console.log('A file uploaded.')});<br>
+</pre></p>
+<p>ssi-uploader文件上传插件的github地址为：<a href="https://github.com/ssbeefeater/ssi-uploader" target="\_blank">https://github.com/ssbeefeater/ssi-uploader</a>。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1607/201607031619.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201607033681.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_679">
+                                <h3 class="post-title">
+                                    带炫酷CSS3过渡动画的jQuery模态窗口插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

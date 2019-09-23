@@ -1,0 +1,1589 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jquery | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        jquery</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_654">
+                        图片内部缩放和平移jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_654" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609201723.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.zoom.js是一款非常实用的图片内部缩放和平移jQuery插件。该插件可以鼠标滑过图片，点击图片或移动手机上触摸图片时，将图片进行放大或平移操作。
+内容：
+
+
+简要教程
+
+
+jquery.zoom.js是一款非常实用的图片内部缩放和平移jQuery插件。该插件可以鼠标滑过图片，点击图片或移动手机上触摸图片时，将图片进行放大或平移操作。
+
+ 安装
+可以通过npm来安装jquery.zoom.js插件。
+
+npm install jquery-zoom
+
+
+ 使用方法
+在页面中引入jquery和jquery-zoom.js文件。
+
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery-zoom.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+可使用&amp;lt;a&amp;gt;、&amp;lt;span&amp;gt;、&amp;lt;li&amp;gt;和&amp;lt;div&amp;gt;等元素来包裹图片。
+
+&amp;lt;span class=&#39;zoom&#39; id=&#39;ex1&#39;&amp;gt;
+&amp;lt;img src=&#39;img/design.jpg&#39; width=&#39;555&#39; height=&#39;320&#39; alt=&#39;web design&#39;/&amp;gt;
+&amp;lt;p&amp;gt;Hover&amp;lt;/p&amp;gt;
+&amp;lt;/span&amp;gt;
+
+
+ 初始化插件
+在DOM元素加载完毕之后，通过zoom()方法来初始化该插件。
+
+$(document).ready(function(){
+$(&#39;a.photo&#39;).zoom({url: &#39;photo-big.jpg&#39;});
+});
+// 或者通过 Colorbox 来放大图片
+(document).ready(function(){
+(&#39;a.photo&#39;).zoom({
+url: &#39;photo-big.jpg&#39;,
+callback: function(){
+$(this).colorbox({href: this.src});
+}
+});
+});
+
+要使图片可以被放大，必须将图片包裹在一个容器中，你可以通过js代码来为图片动态添加容器，例如：
+
+$(document).ready(function(){
+$(&#39;img&#39;)
+.wrap(&#39;&amp;lt;span style=&#34;display:inline-block&#34;&amp;gt;&amp;lt;/span&amp;gt;&#39;)
+.css(&#39;display&#39;, &#39;block&#39;)
+.parent()
+.zoom();
+});
+
+可以通过下面的方法来移除图片的放大效果：
+
+$(&#39;#example&#39;).zoom(); // 添加图片放大效果
+$(&#39;#example&#39;).trigger(&#39;zoom.destroy&#39;); // 移除图片放大效果
+
+
+ 配置参数
+jquery.zoom.js插件的可用配置参数有：
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+url
+false
+显示大图的url地址。如果没有提供，默认使用第一个img子元素的url地址。
+
+
+on
+&#39;mouseover&#39;
+触发图片放大的事件。可用类型有：mouseover, grab, click, toggle。
+
+
+duration
+120
+淡入淡出效果的持续时间。
+
+
+target
+false
+要放大图片的父容器的选择器或DOM元素。
+
+
+touch
+true
+是否允许移动触摸交互。
+
+
+magnify
+1
+1表示图片放大为原尺寸的2倍。
+
+
+callback
+false
+图片加载时的回调函数。
+
+
+onZoomIn
+false
+图片放大时的回调函数。
+
+
+onZoomOut
+false
+图片缩小时的回调函数。
+
+
+
+
+jquery.zoom.js插件的github地址为：https://github.com/jackmoore/zoom
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_654">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_656">
+                        带聚焦效果的jQuery响应式图片轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_656" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607111623.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-bigSlider是一款带聚焦效果的jQuery响应式图片轮播图插件。该轮播图插件可以制作当前图片高亮和图片放大两种聚焦效果。
+内容：
+
+
+简要教程
+
+
+jquery-bigSlider是一款带聚焦效果的jQuery响应式图片轮播图插件。该轮播图插件可以制作当前图片高亮和图片放大两种聚焦效果。
+
+
+ 使用方法
+在页面中引入jquery和jquery-bigSlider.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery-bigSlider.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个容器来包裹一组需要制作轮播图效果的图片。
+
+&amp;lt;div id=&#39;container&#39;&amp;gt;
+&amp;lt;img src=&#39;images/1.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/2.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/3.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/4.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/5.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/6.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/7.jpg&#39;/&amp;gt;
+&amp;lt;img src=&#39;images/8.jpg&#39;/&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过bigSlider()方法来初始化该图片轮播图插件。
+
+$(&#39;#container&#39;).bigSlider();
+
+上面的初始化方法默认是生成高亮的聚焦效果。如果要制作当前聚焦图片放大的效果，可以通过配置参数focusType来实现。
+
+$(&#39;#container&#39;).bigSlider({
+focusType: &#39;enlarge&#39;
+}); 
+
+另外可以通过animationDuration参数来覆盖默认的动画延迟时间。
+
+$(&#39;#container&#39;).bigSlider({
+focusType: &#39;enlarge&#39;,
+animationDuration: 200
+}); 
+
+jquery-bigSlider轮播图插件的github地址为：https://github.com/shendykurnia/jquery-bigSlider。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_656">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_657">
+                        小巧的jQuery页面预加载指示器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_657" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607261512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+preloader是一款小巧的jQuery页面预加载loading指示器插件。通过该插件可以在页面加载的时候显示预定义的loading指示器动画，并在页面加载结束之后将它关闭。
+内容：
+
+
+简要教程
+
+
+preloader是一款小巧的jQuery页面预加载loading指示器插件。通过该插件可以在页面加载的时候显示预定义的loading指示器动画，并在页面加载结束之后将它关闭。
+
+ 安装
+可以通过bower来安装该loading指示器插件。
+
+$ bower install core-themes-jquery-preloader --save
+
+
+ 使用方法
+在页面中引入jquery和jquery.preloader.min.js文件，examples.css文件中是预定义的loading指示器的样式。
+
+&amp;lt;link href=&#34;css/examples.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.preloader.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素作为遮罩层，里面放置作为预加载指示器的元素。
+
+&amp;lt;div id=&#34;preloader&#34;&amp;gt;
+&amp;lt;div id=&#34;preloader-inner&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+可以使用preloader()方法来初始化该loading指示器插件。
+
+$(window).preloader(); 
+
+或者在初始化时传入配置参数。
+
+$(window).preloader({
+option: &#39;value&#39;
+});
+
+
+ 配置参数
+该loading指示器插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+selector
+string
+&#39;#preloader&#39;
+loading指示器的容器选择器。
+
+
+type
+string
+&#39;document&#39;
+预加载方法的类型。
+
+
+removeType
+string
+&#39;fade&#39;
+移除预加载容器的方法。
+
+
+fadeDuration
+int
+750
+预加载指示器淡出的时间。
+
+
+delay
+int
+0
+在页面加载之后多长时间移除loading指示器。
+
+
+
+
+
+ 事件
+预加载之前触发的事件：
+
+$(window).on(&#39;preloader:before&#39;, function(){
+});
+
+预加载之后触发的事件：
+
+$(window).on(&#39;preloader:after&#39;, function(){
+});
+
+preloader预加载指示器插件的github地址为：https://github.com/core-themes/preloader
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_657">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_659">
+                        jQuery圆形循环信息展示插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_659" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608111714.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+CircleBoxInfo是一款简单实用jQuery圆形循环信息展示插件。所有的预置信息以节点的方式分布在一个圆环上，你可以设置自动循环播放信息，也可以让用户手动点击展示信息。
+内容：
+
+
+简要教程
+
+
+CircleBoxInfo是一款简单实用jQuery圆形循环信息展示插件。所有的预置信息以节点的方式分布在一个圆环上，你可以设置自动循环播放信息，也可以让用户手动点击展示信息。它的特点还有：
+
+可以设置是否自动播放。
+可以控制自动播放的速度。
+可以通过CSS breakpoint来控制响应式效果。
+控制是点击还是鼠标滑过时展示信息。
+可以通过CSS来控制节点样式。
+可以控制节点的移动顺序。
+
+
+
+ 使用方法
+
+ HTML结构
+该圆形循环信息展示效果的基本HTML结构如下：
+
+&amp;lt;div class=&#34;circle2&#34;&amp;gt;
+&amp;lt;ul class=&#34;circleWrapper&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;div class=&#34;circleFeature&#34; data-cyrcleBox=&#34;feature1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;circleBox&#34; id=&#34;feature1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后可以通过s8CircleInfoBox()方法来初始化该插件。
+
+$(&#34;.circle2&#34;).s8CircleInfoBox();
+
+
+ 配置参数
+CircleBoxInfo插件可用的配置参数如下：
+
+
+autoSlide：是否自动播放。默认值为true。
+
+slideSpeed：自动播放的速度。默认值为3000，单位毫秒。
+
+notResponsive：是否使用响应式效果。默认值为false。
+
+action：是鼠标滑过还是鼠标点击来激活节点事件。默认为&#34;mouseover&#34;。
+
+responsive：响应式断点。默认为760像素。
+
+hoverStyle：鼠标滑过节点时的CSS class类。默认为&#34;circleSelect&#34;。
+
+spreadStyle：节点的传播方向。默认为&#34;all&#34;，可以是：top、left、right、bottom。
+
+CircleBoxInfo插件的github地址为：https://github.com/soori8/CircleBoxInfo
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_659">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_661">
+                        可拖动切换的全屏jQuery幻灯片特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_661" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608291653.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款可以拖动切换的全屏jQuery幻灯片特效。该幻灯片特效特效可以使用鼠标来前后切换，带分页圆点按钮，可以自动播放，并且带有一点视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是一款可以拖动切换的全屏jQuery幻灯片特效。该幻灯片特效特效可以使用鼠标来前后切换，带分页圆点按钮，可以自动播放，并且带有一点视觉差效果。
+
+ 使用方法
+
+ HTML结构
+该幻灯片的HTML结构如下:
+
+&amp;lt;div class=&#34;demo-container&#34;&amp;gt;
+&amp;lt;div class=&#34;slides&#34;&amp;gt;
+&amp;lt;div class=&#34;slide slide-1&#34;&amp;gt;
+&amp;lt;div class=&#34;bg bg-1&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;Slide #1&amp;lt;/div&amp;gt;&amp;lt;span class=&#34;hint&#34;&amp;gt;图片描述...&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide slide-2&#34;&amp;gt;
+&amp;lt;div class=&#34;bg bg-2&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;Slide #2&amp;lt;/div&amp;gt;&amp;lt;span class=&#34;hint&#34;&amp;gt;图片描述...&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide slide-3&#34;&amp;gt;
+&amp;lt;div class=&#34;bg bg-3&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;Slide #3&amp;lt;/div&amp;gt;&amp;lt;span class=&#34;hint&#34;&amp;gt;图片描述...&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide slide-4&#34;&amp;gt;
+&amp;lt;div class=&#34;bg bg-4&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;Slide #4图片描述...&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide slide-5&#34;&amp;gt;
+&amp;lt;div class=&#34;bg bg-5&#34;&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;Slide #5. 图片描述...&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;slide-indicator&#34;&amp;gt;
+&amp;lt;div where=&#34;1&#34; class=&#34;dot dot-1&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div where=&#34;2&#34; class=&#34;dot dot-2&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div where=&#34;3&#34; class=&#34;dot dot-3&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div where=&#34;4&#34; class=&#34;dot dot-4&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div where=&#34;5&#34; class=&#34;dot dot-5&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;property-hack&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+在页面中引入幻灯片需要的style.css文件。幻灯片的图片以背景图片的方式进行引入。
+
+
+ JavaScript
+在页面中引入jquery。该幻灯片为文档绑定鼠标事件和移动触摸touch事件，时幻灯片可以进行鼠标拖动和在移动设备中使用手指来进行滑动切换。
+
+$(document).ready(function() {
+ var curX = 0;
+ var diff = 0;
+ var curSlide = 1;
+ var busy = false;
+ var flag = false;
+ var winW = parseInt($(&#34;.demo-container&#34;).css(&#34;width&#34;));
+ var animationTime = parseFloat($(&#34;.property-hack&#34;).css(&#34;height&#34;));
+ var k = parseFloat($(&#34;.property-hack&#34;).css(&#34;width&#34;)) / 100;
+ var numOfSlides = $(&#34;.slide&#34;).length;
+ var autoChangeTime = parseFloat($(&#34;.property-hack&#34;).css(&#34;margin-left&#34;));
+ var autoChangeInterval = setInterval(autoChangeFunction, autoChangeTime);
+ $(&#34;.slide-1 .overlay&#34;).addClass(&#34;overlay-active&#34;);
+ $(window).on(&#34;keydown&#34;, function(event) {
+if (!busy) {
+ if (event.which == 37 &amp;amp;&amp;amp; curSlide &amp;gt;= 2) {
+curSlide--;
+animation();
+ }
+ if (event.which == 39 &amp;amp;&amp;amp; curSlide &amp;lt; numOfSlides) {
+curSlide++;
+animation();
+ }
+}
+ });
+ $(&#34;.dot&#34;).on(&#34;click&#34;, function() {
+if (!busy) { 
+ curSlide = parseInt($(this).attr(&#34;where&#34;));
+ animation(true); 
+}
+ });
+ $(document).on(&#34;mousedown touchstart&#34;, &#34;.slides&#34;, function(event) {
+if (!busy) {
+ clearInterval(autoChangeInterval);
+ flag = true;
+ $(&#34;.demo-container&#34;).addClass(&#34;grabbing&#34;);
+ winW = parseInt($(&#34;.demo-container&#34;).css(&#34;width&#34;));
+ if (event.originalEvent.touches) var stX = event.originalEvent.touches[0].pageX;
+ else var stX = event.pageX;
+ $(document).on(&#34;mousemove touchmove&#34;, function(event) {
+if (event.originalEvent.touches) var msX = event.originalEvent.touches[0].pageX;
+else var msX = event.pageX;
+diff = (msX - stX) / winW * 100 / k;
+if (diff &amp;gt; 110) diff = 110;
+if (diff &amp;lt; -110) diff = -110;
+if (curSlide == 1) {
+ if (diff &amp;gt; 0) diff /= 10;
+ if (diff &amp;gt; 5) diff = 5;
+}
+if (curSlide == numOfSlides) {
+ if (diff &amp;lt; 0) diff /= 10;
+ if (diff &amp;lt; -5) diff = -5;
+}
+$(&#34;.slides&#34;).css(&#34;transform&#34;, &#34;translate3d(&#34; + (diff + curX) + &#34;vw, 0, 0)&#34;);
+$(&#34;.bg-&#34; + curSlide).css(&#34;transform&#34;, &#34;translate3d(&#34; + (-diff / 2) + &#34;vw, 0, 0)&#34;);
+$(&#34;.bg-&#34; + (curSlide + 1)).css(&#34;transform&#34;, &#34;translate3d(&#34; + (-50 - diff / 2) + &#34;vw, 0, 0)&#34;);
+$(&#34;.bg-&#34; + (curSlide - 1)).css(&#34;transform&#34;, &#34;translate3d(&#34; + (50 - diff / 2) + &#34;vw, 0, 0)&#34;);
+ });
+}
+ });
+ $(document).on(&#34;mouseup touchend&#34;, function(event) {
+if (flag) {
+ if (diff * k &amp;lt; -30) curSlide++;
+ else if (diff * k &amp;gt; 30)
+curSlide--;
+ animation();
+ diff = 0;
+ $(document).off(&#34;mousemove&#34;);
+ $(&#34;.demo-container&#34;).removeClass(&#34;grabbing&#34;);
+ flag = false;
+}
+ });
+function animation(r) {
+busy = true;
+curX = (-curSlide + 1) * 100;
+(&amp;quot;.overlay&amp;quot;).removeClass(&amp;quot;overlay−active&amp;quot;);(&amp;quot;.overlay&amp;quot;).removeClass(&amp;quot;overlay-active&amp;quot;);
+(&amp;quot;.overlay&amp;quot;).removeClass(&amp;quot;overlay−active&amp;quot;);(&amp;quot;.slide-&amp;quot; + curSlide + &amp;quot; .overlay&amp;quot;).addClass(&amp;quot;overlay-active&amp;quot;);
+(&amp;quot;.dot&amp;quot;).css(&amp;quot;opacity&amp;quot;,&amp;quot;0.3&amp;quot;);(&amp;quot;.dot&amp;quot;).css(&amp;quot;opacity&amp;quot;, &amp;quot;0.3&amp;quot;);
+(&amp;quot;.dot&amp;quot;).css(&amp;quot;opacity&amp;quot;,&amp;quot;0.3&amp;quot;);(&amp;quot;.dot-&amp;quot; + curSlide).css(&amp;quot;opacity&amp;quot;, &amp;quot;1&amp;quot;);
+(&amp;quot;.slides&amp;quot;).addClass(&amp;quot;animation&amp;quot;);if(!r)(&amp;quot;.slides&amp;quot;).addClass(&amp;quot;animation&amp;quot;);
+if (!r)(&amp;quot;.slides&amp;quot;).addClass(&amp;quot;animation&amp;quot;);if(!r)(&amp;quot;.bg&amp;quot;).addClass(&amp;quot;animation&amp;quot;);
+else (&amp;quot;.bg&amp;quot;).css(&amp;quot;transform&amp;quot;,&amp;quot;translate3d(0,0,0)&amp;quot;);(&amp;quot;.bg&amp;quot;).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(0, 0, 0)&amp;quot;);
+(&amp;quot;.bg&amp;quot;).css(&amp;quot;transform&amp;quot;,&amp;quot;translate3d(0,0,0)&amp;quot;);(&amp;quot;.slides&amp;quot;).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(-&amp;quot; + (curSlide - 1) * 100 + &amp;quot;vw, 0, 0)&amp;quot;);
+$(&amp;quot;.bg&amp;quot;).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(0, 0, 0)&amp;quot;);
+if (!r) {
+$(&amp;quot;.bg-&amp;quot; + (curSlide + 1) + &amp;quot;, .bg-&amp;quot; + (curSlide + 2)).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(-50vw, 0, 0)&amp;quot;);
+$(&amp;quot;.bg-&amp;quot; + (curSlide - 1) + &amp;quot;, .bg-&amp;quot; + (curSlide - 2)).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(50vw, 0, 0)&amp;quot;);
+}
+clearInterval(autoChangeInterval);
+setTimeout(function() {
+$(&amp;quot;.slides, .bg&amp;quot;).removeClass(&amp;quot;animation&amp;quot;);
+busy = false;
+$(&amp;quot;.bg-&amp;quot; + (curSlide + 1)).css(&amp;quot;transform&amp;quot;, &amp;quot;translate3d(-50vw, 0, 0)&amp;quot;);
+autoChangeInterval = setInterval(autoChangeFunction, autoChangeTime);
+}, animationTime);
+}
+function autoChangeFunction() {
+if (curSlide != numOfSlides) {
+curSlide++;
+animation();
+}
+else {
+curSlide = 1;
+animation(true);
+}
+}
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_661">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_664">
+                        mgGlitch.js-模拟显示故障的jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_664" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609091656.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+mgGlitch.js是一款能够模拟显示器故障效果的jQuery插件。mgGlitch.js能够为页面中的任何元素制作错屏效果，就像显示器发生故障时的画面在闪动的效果。
+内容：
+
+
+简要教程
+
+
+mgGlitch.js是一款能够模拟显示器故障效果的jQuery插件。mgGlitch.js能够为页面中的任何元素制作错屏效果，就像显示器发生故障时的画面在闪动的效果。
+
+ 使用方法
+在页面中引入jquery和mgGlitch.js文件。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/mgGlitch.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+DEMO中是以背景图片为例子，它的HTML结构如下：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;glitch-img&#34; style=&#34;background-image: url(&#39;img/1.jpg&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过mgGlitch()方法来初始化插件。
+
+$( function() {
+$( &#34;.glitch-img&#34; ).mgGlitch({
+destroy : false, // set &#39;true&#39; to stop the plugin
+glitch: true, // set &#39;false&#39; to stop glitching
+scale: true, // set &#39;false&#39; to stop scaling
+blend : true, // set &#39;false&#39; to stop glitch blending
+blendModeType : &#39;hue&#39;, // select blend mode type
+glitch1TimeMin : 600, // set min time for glitch 1 elem
+glitch1TimeMax : 900, // set max time for glitch 1 elem
+glitch2TimeMin : 10, // set min time for glitch 2 elem
+glitch2TimeMax : 115, // set max time for glitch 2 elem
+zIndexStart : 8, // because of absolute position, set z-index base value
+});
+});
+
+
+ 配置参数
+mgGlitch.js插件的可用配置参数有：
+
+
+destroy：是否禁用插件。
+
+glitch：设置为false停止画面闪动效果。
+
+scale：设置为false停止缩放。
+
+blend：设置为false停止混合模式。
+
+blendModeType：混合模式的类型。
+
+glitch1TimeMin：设置第一个闪动元素的闪动最小时间。
+
+glitch1TimeMax：设置第一个闪动元素的闪动最大时间。
+
+glitch2TimeMin：设置第二个闪动元素的闪动最小时间。
+
+glitch2TimeMax：设置第二个闪动元素的闪动最大时间。
+
+zIndexStart：闪动元素必须是绝对定位，通过该参数来设置z-index属性。
+
+mgGlitch.js模拟显示器故障效果插件的github地址为：https://github.com/hmongouachon/mgGlitch
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_664">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_665">
+                        OneBook3D-逼真的jQuery翻书特效插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_665" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609201555.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+OneBook3D是一款逼真的jQuery翻书特效插件。该插件将多张图片或文件组合为书本杂志来进行翻页查看。它支持webGL，可以应用在移动手机上，速度和性能都非常好。
+内容：
+
+
+简要教程
+
+
+OneBook3D是一款逼真的jQuery翻书特效插件。该插件将多张图片或文件组合为书本杂志来进行翻页查看。它支持webGL，可以应用在移动手机上，速度和性能都非常好。
+
+ 使用方法
+在页面中引入jquery.onebook3d2.min.js以及它相关的依赖文件：
+
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.mousewheel.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/treejs.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.onebook3d2.min.js&#34;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;元素作为书本的容器即可。
+
+&amp;lt;div id=&#34;mybook&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+首先将需要的图片放入一个数组中：
+
+var arr=[&#39;./gallery/001.jpg&#39;,&#39;./gallery/002.jpg&#39;,&#39;./gallery/003.jpg&#39;,...];
+// 或者
+var arr=[[&#39;./001.jpg&#39;,&#39;title1&#39;],[&#39;./002.jpg&#39;,title2],[&#39;./003.jpg&#39;,title3],...];
+
+然后在DOM元素加载完毕之后，通过onebook()方法来初始化该插件。
+
+$(&#39;#mybook&#39;).onebook(arr,{
+skin:[&#39;light&#39;,&#39;dark&#39;], 
+bgDark:&#39;#222222 url(./bg.jpg)&#39;, 
+flip:&#39;soft&#39;, 
+border:25
+});
+// 或者
+$(&#39;a&#39;).click(function(){
+$.onebook(arr,{border:100,bgDark:&#39;#777777&#39;, cesh:false});
+});
+
+下面是插件的一些截图效果：
+
+
+
+
+ 配置参数
+OneBook3D翻书插件的可用配置参数有：
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+startPage
+Integer
+1
+在书本初始化时显示的页。
+
+
+flip
+String
+&#39;soft&#39;
+翻转动画的类型
+
+
+skin
+String
+&#39;dark&#39;
+书本的皮肤模式（&#39;dark&#39;或&#39;light&#39;）
+
+
+bgDark
+String
+&#39;&#39;
+设置&#39;light&#39;模式下的背景图片
+
+
+bgLight
+String
+&#39;&#39;
+设置&#39;dark&#39;模式下的背景图片
+
+
+pageСolor
+String
+&#39;white&#39;
+设置书中所有页的前景色
+
+
+slope
+Integer
+0
+slope模式
+
+
+border
+Integer
+30
+图片的边框大小
+
+
+language
+String
+&#39;en&#39;
+使用的语言（&#39;en&#39;, &#39;ru&#39;）
+
+
+cesh
+Boolean
+&#39;true&#39;
+cesh images
+
+
+
+
+OneBook3D插件的官方主页地址为：http://onebook3d.riadesign.ru/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_665">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_666">
+                        zoomove-jQuery图片内部放大和移动插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_666" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607111519.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+zoomove是一款可以在鼠标滑过图片时在图片内部放大图片并移动的jQuery插件。zoomove使用简单，可以通过配置参数来控制图片的放大倍数和是否跟随鼠标移动等。
+内容：
+
+
+简要教程
+
+
+zoomove是一款可以在鼠标滑过图片时在图片内部放大图片并移动的jQuery插件。zoomove使用简单，可以通过配置参数来控制图片的放大倍数和是否跟随鼠标移动等。
+
+ 安装
+可以通过bower或npm来安装在zoomove图片放大插件。
+
+$ npm install zoomove --save
+$ bower install zoomove --save
+
+
+ 使用方法
+在页面中引入zoomove.min.css和jquery、zoomove.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;zoomove.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;zoomove.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用&amp;lt;figure &amp;gt;或&amp;lt;img &amp;gt;元素来作为图片的容器。
+
+&amp;lt;figure class=&#34;zoo-item&#34; zoo-image=&#34;img/example.jpg&#34;&amp;gt;&amp;lt;/figure&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过ZooMove()方法来初始化该图片放大插件。
+
+$(&#39;.zoo-item&#39;).ZooMove();
+
+
+ 配置参数
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+zoo-image
+--
+要进行放大的图片的URL地址。
+
+
+zoo-scale
+1.5 (150\%)
+设置图片放大的倍数。
+
+
+zoo-move
+true
+图片在鼠标移动时是否跟随移动。
+
+
+zoo-over
+false
+设置图片放大后是否超出原图片的范围。
+
+
+zoo-cursor
+false
+设置鼠标样式是pointer还是default。
+
+
+
+
+可以在HTML中通过属性来使用这些配置参数。
+
+&amp;lt;!-- HTML Element --&amp;gt;
+&amp;lt;figure
+class=&#34;zoo-item&#34;
+zoo-image=&#34;[value]&#34;
+zoo-scale=&#34;[value]&#34;
+zoo-move=&#34;[value]&#34;
+zoo-over=&#34;[value]&#34;
+zoo-cursor=&#34;[value]&#34;
+&amp;gt;
+&amp;lt;/figure&amp;gt;
+
+也可以使用js来进行初始化。
+
+&amp;lt;!-- JavaScript --&amp;gt;
+&amp;lt;script&amp;gt;
+ $(&#39;.zoo-item&#39;).ZooMove({
+ image: &#39;[value]&#39;,
+ scale: &#39;[value]&#39;,
+ move: &#39;[value]&#39;,
+ over: &#39;[value]&#39;,
+ cursor: &#39;[value]&#39;
+ });
+&amp;lt;/script&amp;gt;
+
+
+ 应用举例
+在demo中的3种图片放大效果的HTML代码分别如下：
+图片1：
+
+&amp;lt;figure class=&#34;zoo-item&#34; zoo-image=&#34;img/example.jpg&#34;&amp;gt;&amp;lt;/figure&amp;gt;
+
+图片2：
+
+&amp;lt;figure class=&#34;zoo-item&#34; zoo-image=&#34;img/example.jpg&#34; zoo-scale=&#34;3&#34;&amp;gt;&amp;lt;/figure&amp;gt;
+
+图片3：
+
+&amp;lt;figure class=&#34;zoo-item&#34; zoo-image=&#34;img/example.jpg&#34; zoo-over=&#34;true&#34; zoo-move=&#34;false&#34;&amp;gt;&amp;lt;/figure&amp;gt;
+
+zoomove图片放大插件的github地址为：https://github.com/thompsonemerson/zoomove。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_666">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_667">
+                        Excel样式表格单元格选择jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_667" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1607/201607041533.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+tablecellsselection是一款效果类似Excel或GoogleDocs样式的表格单元格选择jQuery插件。该插件可以在点击某个或多个单元格时，使被选择的单元格高亮显示。
+内容：
+
+
+简要教程
+
+
+tablecellsselection是一款效果类似Excel或GoogleDocs样式的表格单元格选择jQuery插件。该插件可以在点击某个或多个单元格时，使被选择的单元格高亮显示。下面的两张图说明了使用插件前后的效果。
+使用插件之前选择表格单元格的效果：
+
+使用插件之后选择表格单元格的效果：
+
+
+ 使用方法
+在页面中引入tablecellsselection.css和jquery、tablecellsselection.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/tablecellsselection.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/tablecellsselection.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+表格可以是任何普通的HTML表格。
+
+&amp;lt;table class=&#34;table table-bordered&#34; id=&#34;tablecellsselection&#34;&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th rowspan=&#34;2&#34;&amp;gt;Table summary&amp;lt;/th&amp;gt;
+&amp;lt;th colspan=&#34;3&#34;&amp;gt;Group 1&amp;lt;/th&amp;gt;
+&amp;lt;th colspan=&#34;3&#34;&amp;gt;Group 2&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Column 1&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Column 2&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Column 3&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Column 4&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Column 5&amp;lt;/th&amp;gt;
+&amp;lt;th&amp;gt;Column 6&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 1&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$20&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$40&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$50&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 2&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td rowspan=&#34;3&#34;&amp;gt;$20&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$40&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$50&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 3&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td colspan=&#34;3&#34;&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 4&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$40&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$50&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 5&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$20&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$40&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$50&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;th&amp;gt;Property 6&amp;lt;/th&amp;gt;
+&amp;lt;td&amp;gt;$10&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$20&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$30&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$40&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$50&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;$60&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过tableCellsSelection方法来初始化该表格单元格选择插件。
+
+jQuery(document).ready(function($) {
+$(&#39;#tablecellsselection&#39;).tableCellsSelection();
+});
+
+
+ API
+TableCellsSelection表格单元格选择插件有以下一些可用的API。
+
+
+init：初始化表格，为表格添加需要的class类和事件监听。
+
+destroy：销毁插件，移除相应的class类和事件监听。
+
+selectedCells：以jQuey对象的形式返回被选择的单元格。
+
+removeDocumentHtmlChanges：恢复所有被插件修改的HTML DOM元素。
+
+例如：
+
+// 在指定的表格中应用插件
+//下面的语句相当于$(&#39;.tables-with.selection&#39;).tableCellsSelection(&#39;init&#39;);
+$(&#39;.tables-with.selection&#39;).tableCellsSelection();
+var testTable = $(&#39;#test&#39;);
+// 在table#test中选择单元格
+var $selectedCells = $(&#39;#test&#39;).tableCellsSelection(&#39;selectedCells&#39;);
+// 在获取表格的HTML内容之前清除有插件修改的标签
+testTable.tableCellsSelection(&#39;removeDocumentHtmlChanges&#39;);
+// 获取表格的HTML内容
+$testTableContent = testTable.html();
+// 恢复插件修改的HTML内容
+// 销毁插件
+testTable.tableCellsSelection(&#39;destroy&#39;);
+
+tablecellsselection表格单元格选择插件的github地址为：https://github.com/likemusic/tablecellsselection。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_667">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_67">
+                        基于jquery ui的手动旋转元素插件 
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_67" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809111512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于jquery ui的手动旋转元素插件 。它是对jquery ui插件的补充，添加了手动旋转元素的功能。
+内容：
+
+
+简要教程
+
+
+这是一款基于jquery ui的手动旋转元素插件 。它是对jquery ui插件的补充，添加了手动旋转元素的功能。
+
+ 使用方法
+在页面中引入jquery和jquery ui文件，以及jquery.ui.rotatable.css和jquery.ui.rotatable.js文件。
+
+&amp;lt;link href=&#34;jquery.ui.rotatable.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery-ui.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.ui.rotatable.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+在页面中放置一个空的div元素。
+
+&amp;lt;div id=&#34;target&#34; &amp;gt;旋转我&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来使该元素进行旋转。
+
+$(document).ready(function() {
+var params = {
+// Callback fired on rotation start.
+start: function(event, ui) {
+},
+// Callback fired during rotation.
+rotate: function(event, ui) {
+},
+// Callback fired on rotation end.
+stop: function(event, ui) {
+},
+// Set the rotation center
+rotationCenterOffset: {
+top: 20,
+left: 20
+},
+transforms: {
+translate: &#39;(50\%, 50\%)&#39;,
+scale: &#39;(2)&#39;
+//any other transforms
+}
+};
+$(&#39;#target&#39;).rotatable(params);
+});
+
+
+ 配置参数
+该基于jquery ui的手动旋转元素插件的可用配置参数有：
+
+
+angle：元素的开始角度。
+
+degrees：旋转的度数。
+
+handle：旋转的手柄的图片的url地址。
+
+handleOffset：手柄的位置，{top: 0, left: 0}。
+
+radians：使用radians作为旋转的度数。
+
+rotationCenterOffset：旋转的中心点位置，{top: 0, left: 0}。
+
+snap：是否启用step步长。
+
+step：按住shift键时，按指定的步长来旋转，默认为22.5度。
+
+start：回调函数。
+
+stop：回调函数。
+
+rotate：回调函数。
+
+transforms：在旋转元素上添加的CSS transforms。
+
+wheelRotate：是否允许鼠标滚轮进行旋转。
+
+ 该基于jquery ui的手动旋转元素插件的github地址为：https://github.com/godswearhats/jquery-ui-rotatable
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_67">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/88/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/IOKlJUjoy//page/90/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1756 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_986">
+                        可制作谷歌样式图片画廊的纯js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-error">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_986" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508241702.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+gallerly.js是一款可以制作Google Image Search效果的图片画廊的纯js插件。该插件使用纯javascript编写，大小只有7kb，是一款非常不错的轻量级图片画廊插件。
+内容：
+
+
+简要教程
+
+
+gallerly.js是一款可以制作Google Image Search效果的图片画廊的纯js插件。该插件使用纯javascript编写，大小只有7kb，是一款非常不错的轻量级图片画廊插件。
+
+ 使用方法
+
+ HTML结构
+该图片画廊的基本HTML结构如下：
+
+&amp;lt;div id=&#34;gallerly&#34; class=&#34;container&#34;&amp;gt;
+&amp;lt;h1&amp;gt;NASA Space Gallery&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&#34;image-viewer&#34;&amp;gt;
+&amp;lt;a class=&#34;thumbnail&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.gif&#34; data-title=&#34;...&#34; data-description=&#34;...&#34;/&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;thumbnail&#34;&amp;gt;
+&amp;lt;img src=&#34;images/2.jpg&#34; data-title=&#34;...&#34; data-description=&#34;...&#34;/&amp;gt;
+&amp;lt;/a&amp;gt;
+......
+&amp;lt;div class=&#34;preview hide&#34;&amp;gt;
+&amp;lt;div class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;span class=&#34;arrow&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;a class=&#34;prev&#34;&amp;gt;← Prev&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;preview-content&#34;&amp;gt;
+&amp;lt;img src=&#34;&#34; /&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;h3 class=&#34;title&#34;&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;span class=&#34;description&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;a class=&#34;next&#34;&amp;gt;Next →&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;close-preview&#34;&amp;gt;Close&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+可以通过下面的方法来初始化该图片画廊插件。
+
+var $gallerly = document.querySelector(&#34;#gallerly&#34;);
+var gallerly = new Gallerly($gallerly);
+
+插件效果屏幕截图：
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_986">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_987">
+                        jQuery实用表单文件域美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_987" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509051833.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-filestyle是一款可以简单实用的表单文件上传域美化jQuery插件。该插件可以将表单的文件上传域转换为类似Bootstrap按钮组的样式。它提供了大量的data属性来控制文件上传域的样式，可以自定义按钮文本和图标等。
+内容：
+
+
+简要教程
+
+
+jquery-filestyle是一款可以简单实用的表单文件上传域美化jQuery插件。该插件可以将表单的文件上传域转换为类似Bootstrap按钮组的样式。它提供了大量的data属性来控制文件上传域的样式，可以自定义按钮文本和图标等。
+
+ 使用方法
+使用该表单文件上传域美化插件需要引入jquery，jquery-filestyle.min.css和jquery-filestyle.min.js文件。
+
+&amp;lt;link href=&#34;css/jquery-filestyle.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery-filestyle.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+最简单的使用方法是在&amp;lt;input&amp;gt;元素中使用data属性来直接转换文件上传域。
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-theme=&#34;blue&#34; data-input=&#34;false&#34;&amp;gt;
+
+
+ 应用举例
+
+ 将input元素进行转换
+将一个普通的&amp;lt;input&amp;gt;元素进行美化。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({input: false});
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-input=&#34;false&#34;&amp;gt; 
+
+
+ 按钮文本
+改变按钮上的文本。默认值为：&#34;Choose file&#34;。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({buttonText: &#34;查找文件&#34;}); 
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-buttonText=&#34;查找文件&#34;&amp;gt; 
+
+
+ 禁用状态
+设置文件选择为禁用状态。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({disabled: true});
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-disabled=&#34;true&#34;&amp;gt; 
+
+
+ 禁用状态
+选择文件按钮在输入框的前面。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({buttonBefore: true});
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-buttonBefore=&#34;true&#34;&amp;gt; 
+
+
+ 输入框的尺寸
+设置文件选择域的尺寸。使用CSS测量单位，默认值为200px。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({inputSize: &#34;350px&#34;});
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-inputSize=&#34;400px&#34;&amp;gt; 
+
+
+ 文本占位
+设置输入框的文本占位。
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({placeholder: &#34;My place holder&#34;});
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-placeholder=&#34;文本占位字符&#34;&amp;gt; 
+
+
+ 使用图标
+javascript方法：
+
+$(&#34;:file&#34;).jfilestyle({buttonText: &#34;&amp;lt;span class=&#39;glyphicon glyphicon-folder-open&#39;&amp;gt;&amp;lt;/span&amp;gt;&#34;}); 
+
+通过data属性：
+
+&amp;lt;input type=&#34;file&#34; class=&#34;jfilestyle&#34; data-buttonText=&#34;&amp;lt;span class=&#39;glyphicon glyphicon-folder-open&#39;&amp;gt;&amp;lt;/span&amp;gt;&#34;&amp;gt;
+
+
+ 方法
+
+
+clear：清空选择的文件。
+
+$(&#34;:file&#34;).jfilestyle(&#39;clear&#39;);
+
+
+
+destroy：销毁对象实例。
+$(&#34;:file&#34;).jfilestyle(&#39;destroy&#39;);
+
+
+input：设置或获取输入域的内容。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;input&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;input&#39;: false});
+
+
+
+buttonText：设置或获取按钮上的文本。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;buttonText&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;buttonText&#39;: &#39;My text&#39;});
+
+
+
+disabled：设置按钮为不可用或获取按钮状态是否为不可用。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;disabled&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;disabled&#39;: true});
+
+
+
+buttonBefore：设置按钮在输入框前面或获取按钮的位置。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;buttonBefore&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;buttonBefore&#39;: true});
+
+
+
+inputSize：设置或获取输入框的尺寸。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;inputSize&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;inputSize&#39;: &#39;400px&#39;});
+
+
+
+placeholder：设置或获取占位文本。
+
+// 获取
+$(&#34;:file&#34;).jfilestyle(&#39;placeholder&#39;);
+// 设置
+$(&#34;:file&#34;).jfilestyle({&#39;placeholder&#39;: &#39;My text placeholder&#39;});
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_987">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_988">
+                        移动优先的纯javascript幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_988" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1508/201508311748.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+wallop是一款移动优先的纯javascript幻灯片插件。这个幻灯片插件仅4k大小，它的原理仅是为HTML元素添加和移除适当的class来显示和隐藏它们，至于这些class样式你可以完全自定义。
+内容：
+
+
+简要教程
+
+
+wallop是一款移动优先的纯javascript幻灯片插件。这个幻灯片插件仅4k大小，它的原理仅是为HTML元素添加和移除适当的class来显示和隐藏它们，至于这些class样式你可以完全自定义。wallop的特点有：
+
+移动优先
+动画和过渡效果都使用CSS来生成
+轻量级，仅4k大小
+高度灵活性和可扩展性
+可自定义事件和API
+没有任何外部依赖
+
+
+ 安装
+你可以通过npm或bower来安装该幻灯片插件。
+
+$ npm install wallop
+$ bower install wallop
+
+
+ 使用方法
+使用该幻灯片插件首先需要引入wallop.css和Wallop.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/wallop.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/Wallop.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该幻灯片的基本HTML结构如下，你可以为第一个幻灯片slide添加.Wallop-item--current class。
+
+&amp;lt;div class=&#34;Wallop&#34;&amp;gt;
+&amp;lt;div class=&#34;Wallop-list&#34;&amp;gt;
+&amp;lt;div class=&#34;Wallop-item&#34;&amp;gt;…&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;Wallop-item&#34;&amp;gt;…&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;Wallop-item&#34;&amp;gt;…&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;Wallop-item&#34;&amp;gt;…&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;Wallop-item&#34;&amp;gt;…&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;button class=&#34;Wallop-buttonPrevious&#34;&amp;gt;Previous&amp;lt;/button&amp;gt;
+&amp;lt;button class=&#34;Wallop-buttonNext&#34;&amp;gt;Next&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+
+&amp;lt;script&amp;gt;
+var wallopEl = document.querySelector(&#39;.Wallop&#39;);
+var slider = new Wallop(wallopEl);
+&amp;lt;/script&amp;gt;
+
+
+ 添加动画效果
+该幻灯片插件默认是没有动画过渡效果的，如果你需要添加动画效果，需要引入相应的wallop-animation.css文件，并为元素添加Wallop--xxxx class。例如要添加淡入淡出的效果：
+
+&amp;lt;head&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/wallop.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;path/to/wallop-fade.css&#34;&amp;gt;
+&amp;lt;/head&amp;gt;
+
+
+&amp;lt;div class=&#34;Wallop Wallop--fade&#34;&amp;gt;
+...
+&amp;lt;/div&amp;gt;
+
+
+ 可用动画类型
+该幻灯片可用的过渡动画类型有：
+
+Wallop--slide
+Wallop--fade
+Wallop--scale
+Wallop--rotate
+Wallop--fold
+Wallop--vertical-slide
+
+上面是一些内置的过渡动画类型，你也可以自定义自己的过渡动画。
+
+ 配置参数
+下面是一些可用的配置参数：
+
+buttonPreviousClass: &#39;Wallop-buttonPrevious&#39;
+buttonNextClass: &#39;Wallop-buttonNext&#39;
+itemClass: &#39;Wallop-item&#39;
+currentItemClass: &#39;Wallop-item--current&#39;
+showPreviousClass: &#39;Wallop-item--showPrevious&#39;
+showNextClass: &#39;Wallop-item--showNext&#39;
+hidePreviousClass: &#39;Wallop-item--hidePrevious&#39;
+hideNextClass: &#39;Wallop-item--hideNext&#39;
+carousel: true
+
+
+ 方法
+Wallop幻灯片插件提供了一些基本的方法用于按钮的控制：
+goTo
+允许跳转到指定index的幻灯片上。
+
+var slider = document.querySelector(&#39;.Wallop&#39;);
+var Wallop = new Wallop(slider);
+// 跳转到第二个slide（index从0开始）
+Wallop.goTo(1);
+
+next
+跳转到下一个幻灯片slide。
+
+var slider = document.querySelector(&#39;.Wallop&#39;);
+var Wallop = new Wallop(slider);
+// 跳转到下一个slide
+Wallop.next();
+
+previous
+跳转到前一个幻灯片slide。
+
+var slider = document.querySelector(&#39;.Wallop&#39;);
+var Wallop = new Wallop(slider);
+// 跳转到前一个slide
+Wallop.previous();
+
+
+ 事件
+Wallop在每一次slide改变的时候都会发出一个事件，它返回一个detail对象，该对象包含当前slide的index和Wallop对象。
+
+var slider = document.querySelector(&#39;.Wallop&#39;);
+var Wallop = new Wallop(slider);
+Wallop.on(&#39;change&#39;, function(event) {
+// event.detail.wallopEl
+// =&amp;gt; &amp;lt;div class=&amp;quot;Wallop&amp;quot;&amp;gt;…&amp;lt;/div&amp;gt;
+// event.detail.currentItemIndex
+// =&amp;gt; number
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_988">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_989">
+                        Windows8样式的消息提示框jQuery插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_989" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509201655.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-notific8是一款仿Windows8消息提示框效果的jQuery插件。它内置了多种消息提示框的主题样式，并且可以自定义自己的主题样式。它还可以设置自动关闭，显示图标，显示位置等，功能非常强大。
+内容：
+
+
+简要教程
+
+
+jquery-notific8是一款仿Windows8消息提示框效果的jQuery插件。它内置了多种消息提示框的主题样式，并且可以自定义自己的主题样式。它还可以设置自动关闭，显示图标，显示位置等，功能非常强大。它的特点还有：
+
+消息提示框平滑滑动显示和隐藏。
+可以定制消息提示框的显示时间。
+可以选择显示消息提示框的标题。
+可以使用字体图标来显示一个图标。
+内置多种主题，并可以通过CSS来自定义主题。
+可以设置消息提示框位置固定。
+可以设置消息提示框出现的位置。
+可以设置消息提示框的z-index属性。
+可以自定义关闭按钮的文字。
+可用初始化，创建和关闭回调函数。
+
+
+ 安装
+可以通过Bower或NPM来安装该消息通知框插件。
+
+$ bower install jquery-notific8 --save
+$ npm install jquery-notific8 --save
+
+
+ 使用方法
+使用该windows8消息提示框插件需要引入jQuery，jquery.notific8.min.js和jquery.notific8.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/jquery.notific8.css&#34; media=&#34;screen&#34;&amp;gt;
+&amp;lt;script src=&#34;dist/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/jquery.notific8.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 调用消息提示框
+基本使用方法：
+
+$.notific8(&#39;消息提示框中的内容...&#39;, {
+// 消息提示框的显示时间，单位毫秒
+life: 5000, 
+// 消息提示框中的标题
+heading: &#39;这是一个标题&#39;, 
+// 主题：teal, amethyst,ruby, tangerine, lemon, lime, ebony, smoke
+theme: &#39;amethyst&#39;, 
+// 是否为真固定
+sticky: true, 
+// 显示在页面的顶部还是底部
+horizontalEdge: &#39;bottom&#39;, 
+// 显示在页面的左边还是右边
+verticalEdge: &#39;left&#39;, 
+// z-index
+zindex: 1500,
+// 设置消息提示框的图标
+icon: false,
+// 关闭按钮的文本
+closeText: &#39;close&#39;,
+// 回调函数
+onInit: null,
+onCreate: null,
+onClose: null
+});
+
+设置消息提示框的z-index属性。
+
+$.notific8(&#39;zindex&#39;, 1500);
+
+销毁消息提示框。
+
+$.notific8(&#39;destroy&#39;);
+
+移除所有可见的消息提示框，但是不销毁实例。
+
+$.notific8(&#39;remove&#39;); 
+
+初始化消息提示框回调函数：
+
+$.notific8(&#39;onInit event example.&#39;, {
+onInit: function(data) {
+console.log(&#39;--onInit--&#39;);
+console.log(&#39;data:&#39;);
+console.log(data);
+}
+}
+
+创建消息提示框回调函数：
+
+$.notific8(&#39;onCreate event example.&#39;, {
+onCreate: function(notification, data) {
+console.log(&#39;--onCreate--&#39;);
+console.log(&#39;notification:&#39;);
+console.log(notification);
+console.log(&#39;data:&#39;);
+console.log(data);
+}
+}
+
+关闭消息提示框回调函数：
+
+$.notific8(&#39;onClose event example.&#39;, {
+onClose: function(notification, data) {
+console.log(&#39;--onClose--&#39;);
+console.log(&#39;notification:&#39;);
+console.log(notification);
+console.log(&#39;data:&#39;);
+console.log(data);
+}
+}
+
+各种配置参数可以在DEMO中查看效果。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_989">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_99">
+                        jQuery新闻类轮播图插件sliderBox
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_99" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808081425.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+sliderBox.js是一款jQuery新闻类轮播图插件。该jQuery新闻类轮播图插件可以创建兼容ie8、带缩略图导航、以及多种过渡效果的轮播图。
+内容：
+
+
+简要教程
+
+
+sliderBox.js是一款jQuery新闻类轮播图插件。该jQuery新闻类轮播图插件可以创建兼容ie8、带缩略图导航、以及多种过渡效果的轮播图。
+
+ 使用方法
+在页面中引入jQuery、slider-box.min.js、slider-box.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;assets/css/slider-box.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;assets/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;assets/js/slider-box.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+创建一个sliderBox对象，然后在backgrounds参数中指定一组图片，就可以生成一个简单的轮播图。
+
+sliderBox({
+backgrounds: [&#34;1.jpg&#34;, &#34;2.jpg&#34;, &#34;3.jpg&#34;]
+});
+
+可以指定是否隐藏缩略图导航。
+
+sliderBox({
+backgrounds: [&#34;1.jpg&#34;, &#34;2.jpg&#34;, &#34;3.jpg&#34;],
+align: &#34;right&#34;,
+hide: false // or true
+});
+
+还以自定义轮播图的动画过渡效果。
+
+sliderBox({
+backgrounds: [&#34;1.jpg&#34;, &#34;2.jpg&#34;, &#34;3.jpg&#34;],
+align: &#34;right&#34;,
+hide: false,
+effect: &#34;random&#34;, // or &#39;fade&#39;, &#39;slide&#39;
+direction: false // direction (for slide)
+});
+
+还可以为轮播图项添加描述文本。
+
+sliderBox({
+backgrounds: [&#34;1.jpg&#34;, &#34;2.jpg&#34;, &#34;3.jpg&#34;],
+align: &#34;right&#34;,
+hide: false,
+effect: &#34;random&#34;,
+direction: false,
+text: [&#34;Caption 1&#34;, &#39;Caption 2&#39;, &#34;Caption 3&#34;],
+valign: &#34;bottom&#34; // text alignment
+});
+
+ 该jQuery新闻类轮播图插件的github地址为：https://github.com/CharlesStover/jquery-news-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_99">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_990">
+                        简单实用的jQuery左侧固定侧边栏插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_990" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509121626.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-vertical-navigation是一款简单实用的jQuery左侧固定侧边栏插件。它可以制作多级子菜单，使用Font Awesome作为默认图标，通过简单的设置就可以生成一个漂亮的固定侧边栏菜单。
+内容：
+
+
+简要教程
+
+
+jquery-vertical-navigation是一款简单实用的jQuery左侧固定侧边栏插件。它可以制作多级子菜单，使用Font Awesome作为默认图标，通过简单的设置就可以生成一个漂亮的固定侧边栏菜单。
+
+ 使用方法
+使用该侧边栏插件需要引入jQuery，jquery.ssd-vertical-navigation.min.js文件
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.ssd-vertical-navigation.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该侧边栏菜单使用嵌套的无序列表作为菜单项和子菜单项。在菜单的外围，div.contentLeft是侧边栏的包裹容器。div.contentRight是正文内容。
+
+&amp;lt;div id=&#34;contentWrapper&#34;&amp;gt;
+&amp;lt;div id=&#34;contentLeft&#34;&amp;gt;
+&amp;lt;ul id=&#34;leftNavigation&#34;&amp;gt;
+&amp;lt;li class=&#34;active&#34;&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-coffee leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;Menu&amp;lt;/a&amp;gt; 1 &amp;lt;/a&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 1.1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 1.2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-flask leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 2 &amp;lt;/a&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 2.1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 2.2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 2.3 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-truck leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 3&amp;lt;/a&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 3.1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 3.2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 3.3 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-envelope-o leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 4 &amp;lt;/a&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 4.1 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt; &amp;lt;a href=&#34;#&#34;&amp;gt;&amp;lt;i class=&#34;fa fa-angle-right leftNavIcon&#34;&amp;gt;&amp;lt;/i&amp;gt; Menu 4.2 &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div id=&#34;contentRight&#34;&amp;gt;
+Your main content goes here
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为该侧边栏菜单添加下面的基本CSS样式。要做得更漂亮，你可以自定义这些样式。
+
+#contentWrapper {
+width: 100\%;
+height: 100\%;
+position: relative;
+}
+#contentLeft {
+z-index: 10;
+width: 250px;
+height: 100\%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #283c51;
+}
+#contentRight {
+padding: 1.3rem 2rem;
+margin-left: 250px;
+}
+#leftNavigation {
+margin: 2rem 0;
+}
+#leftNavigation, #leftNavigation li ul {
+list-style: none;
+padding: 0;
+}
+#leftNavigation li a {
+font-size: 0.875rem;
+display: block;
+padding: 0.8rem 1rem 0.8rem 3rem;
+color: #adadad;
+border-bottom: solid 1px #395673;
+text-overflow: ellipsis;
+overflow: hidden;
+position: relative;
+-webkit-transition: color 0.2s ease;
+transition: color 0.2s ease;
+}
+#leftNavigation li a, #leftNavigation li a .leftNavIcon {
+line-height: 120\%;
+}
+#leftNavigation li a .leftNavIcon {
+position: absolute;
+top: 0;
+left: 0;
+width: 3rem;
+padding: 0.8rem 0;
+text-align: center;
+}
+#leftNavigation li a:hover {
+color: white;
+}
+#leftNavigation li ul {
+display: none;
+margin: 0;
+background-color: #17232f;
+}
+#leftNavigation li ul li a {
+border-bottom: solid 1px #233547;
+}
+#leftNavigation li ul li:last-child a {
+border-bottom: none;
+}
+#leftNavigation li ul li.active a {
+color: white;
+}
+#leftNavigation li.active &amp;gt; a {
+color: white;
+}
+#leftNavigation li.active ul {
+display: block;
+}
+#leftNavigation &amp;gt; li.active {
+background-color: #427c97;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以使用下面的方法来初始化该固定侧边栏插件。
+
+$(function() {
+var verticalNavigation = new SSDSystem.VerticalNavigation();
+verticalNavigation.init();
+});
+
+
+ 配置参数
+
+
+classMaster：自动添加到顶级ul元素上的class。默认值：&#39;master&#39;。
+
+classActive：添加到激活的菜单项li元素上的class。默认值：&#39;active&#39;。
+
+classClickable：添加到第一级li元素上的class。默认值：&#39;clickable&#39;。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_990">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_991">
+                        可拖拽文件的jQuery文件上传控件美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_991" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510141536.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+dropify是一款可以拖拽文件到指定区域进行文件上传的jQuery表单文件上传控件美化插件。该插件对原生的input元素进行了美化使其能够直接拖动文件到指定区域进行文件的上传操作。
+内容：
+
+
+简要教程
+
+
+dropify是一款可以拖拽文件到指定区域进行文件上传的jQuery表单文件上传控件美化插件。该jQuery文件上传控件对原生的input元素进行了美化使其能够直接拖动文件到指定区域进行文件的上传操作。
+
+ 使用方法
+使用该文件上传美化插件需要引入jQuery，dropify.js和ropify.css文件，以及dist/fonts目录下的所有文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/css/dropify.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;dist/js/dropify.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该文件上传控件美化插件最基本的HTML结果是使用一个带dropify class的input[type=&#39;file&#39;]元素来制作。
+
+&amp;lt;input type=&#34;file&#34; id=&#34;input-file-now&#34; class=&#34;dropify&#34; data-default-file=&#34;&#34; /&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该文件上传控件美化插件。
+
+$(&#39;.dropify&#39;).dropify(); 
+
+
+ 配置参数
+
+
+defaultFile：input元素中是否有默认的文件。可以在初始化插件使配置该参数，或直接在DOM元素上标注data-default-file=&#34;url\_of\_your\_file&#34;（建议这样做）。
+&amp;lt;input type=&#34;file&#34; class=&#34;dropify&#34; data-default-file=&#34;url\_of\_your\_file&#34; /&amp;gt;
+
+
+height：可拖拽文件上传区域的高度。例如你想设置300像素的高度，可以在DOM元素中设置data-height=&#34;300&#34;。
+&amp;lt;input type=&#34;file&#34; class=&#34;dropify&#34; data-height=&#34;300&#34; /&amp;gt;
+
+
+maxFileSize：设置上传文件大小的最大值。如果上传的文件大小大于这个值，将会弹出一个错误对话框。你可以使用K，M或G为单位。
+&amp;lt;input type=&#34;file&#34; class=&#34;dropify&#34; data-max-file-size=&#34;3M&#34; /&amp;gt;
+
+
+disabled：通过disabled=&#34;disabled&#34;可以禁用该文件上传控件。
+&amp;lt;input type=&#34;file&#34; class=&#34;dropify&#34; disabled=&#34;disabled&#34; /&amp;gt;
+
+
+disableRemove：使用data-disable-remove=&#34;true&#34;可以禁用remove按钮。
+&amp;lt;input type=&#34;file&#34; class=&#34;dropify&#34; data-disable-remove=&#34;true&#34; /&amp;gt;
+
+
+messages：通过该参数可以修改默认的提示信息。这些信息将会在tpl参数中被替换。
+
+$(&#39;.dropify&#39;).dropify({
+messages: {
+&#39;default&#39;: &#39;点击或拖拽文件到这里&#39;,
+&#39;replace&#39;: &#39;点击或拖拽文件到这里来替换文件&#39;,
+&#39;remove&#39;:&#39;移除文件&#39;,
+&#39;error&#39;: &#39;对不起，你上传的文件太大了&#39;
+}
+}
+
+
+
+tpl：该参数用于更新默认的模板。
+
+$(&#39;.dropify&#39;).dropify({
+tpl: {
+wrap:&#39;&amp;lt;div class=&#34;dropify-wrapper&#34;&amp;gt;&amp;lt;/div&amp;gt;&#39;,
+message: &#39;&amp;lt;div class=&#34;dropify-message&#34;&amp;gt;&amp;lt;span class=&#34;file-icon&#34; /&amp;gt; &amp;lt;p&amp;gt;{{ default }}&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&#39;,
+preview: &#39;&amp;lt;div class=&#34;dropify-preview&#34;&amp;gt;&amp;lt;span class=&#34;dropify-render&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;div class=&#34;dropify-infos&#34;&amp;gt;&amp;lt;div class=&#34;dropify-infos-inner&#34;&amp;gt;&amp;lt;p class=&#34;dropify-infos-message&#34;&amp;gt;{{ replace }}&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;,
+filename:&#39;&amp;lt;p class=&#34;dropify-filename&#34;&amp;gt;&amp;lt;span class=&#34;file-icon&#34;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&#34;dropify-filename-inner&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&#39;,
+clearButton: &#39;&amp;lt;button type=&#34;button&#34; class=&#34;dropify-clear&#34;&amp;gt;{{ remove }}&amp;lt;/button&amp;gt;&#39;,
+error: &#39;&amp;lt;p class=&#34;dropify-error&#34;&amp;gt;{{ error }}&amp;lt;/p&amp;gt;&#39;
+}
+}
+
+
+
+
+ 事件
+
+
+dropify.beforeClear：当点击“remove”按钮时该事件被触发。你可以通过element.xxxx来接收Dropify对象所有的属性。
+
+var drEvent = $(&#39;.dropify&#39;).dropify();
+drEvent.on(&#39;dropify.beforeClear&#39;, function(event, element){
+return confirm(&amp;quot;Do you really want to delete &amp;quot;&amp;quot; + element.filename + &amp;quot;&amp;quot; ?&amp;quot;);
+});
+
+
+
+dropify.afterClear：当文件上传域被清空后该事件会被触发。你可以通过element.xxxx来接收Dropify对象所有的属性。
+
+var drEvent = $(&#39;.dropify&#39;).dropify();
+drEvent.on(&#39;dropify.afterClear&#39;, function(event, element){
+alert(&#39;File deleted&#39;);
+});
+
+
+
+
+ 
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_991">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_992">
+                        简单实用的jQuery图片放大镜插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_992" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1511/201511061605.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ClassyLoupe是一款简单实用的jQuery图片放大镜插件。该放大镜插件只需一行HTML代码。它可以控制图片的放大倍数，可以制作圆形，方形和圆角矩形的放大镜，并带有非常好看的遮罩层效果。
+内容：
+
+
+简要教程
+
+
+ClassyLoupe是一款简单实用的jQuery图片放大镜插件。该放大镜插件只需一行HTML代码。它可以控制图片的放大倍数，可以制作圆形，方形和圆角矩形的放大镜，并带有非常好看的遮罩层效果。
+
+ 使用方法
+使用该放大镜插件需要引入jQuery，jquery.mousewheel.js和jquery.easing.1.2.js文件，以及插件本身的jquery.classyloupe.min.js和jquery.classyloupe.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.classyloupe.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.mousewheel.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.easing.1.2.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.classyloupe.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该图片放大镜插件的HTML结构如下：
+
+&amp;lt;a href=&#34;#&#34;&amp;gt;
+&amp;lt;img alt=&#34;Your image caption&#34; src=&#34;your-image.jpg&#34; class=&#34;louped&#34; /&amp;gt;
+&amp;lt;/a&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该图片放大镜插件。
+
+$(&#39;.louped&#39;).ClassyLoupe({
+maxSize: 600,
+loupeToggleSpeed: &#39;fast&#39;
+}); 
+
+
+ 配置参数
+
+
+shape：放大镜的形状，可选值有：circle, rounded 或 square，默认是circle。
+
+glossy：放大镜是否有光泽特效，默认值为true。
+
+shadow：放大镜是否带有drop-shadow效果，默认值为true。
+
+trigger：触发放大镜效果的鼠标事件，默认值为mouseenter。
+
+roundedCorners：放大镜的圆角大小（如果是矩形），默认值为10。
+
+size：放大镜的尺寸，宽度和高度，默认值为200。
+
+minSize：放大镜的最小尺寸，默认值为150。
+
+maxSize：放大镜的最大尺寸，默认值为250。
+
+resize：是否可以改变大小，默认值为true。
+
+sizeSnap：默认值为10。
+
+canZoom：是否可以放大，默认值为true。
+
+zoom：放大倍数，默认值为100。
+
+minZoom：最小放大倍数，默认值为50。
+
+maxZoom：最大放大倍数，默认值为200。
+
+zoomSnap：默认值为5。
+
+overlay：是否显示遮罩层，默认值为true。
+
+overlayOpacity：遮罩层的透明度，默认值为0.5。
+
+overlayClassName：遮罩层的class名称。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_992">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_993">
+                        仿windows资源管理器风格的jQuery复选框美化插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_993" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1509/201509291719.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+folderselect.js是一款仿windows资源管理器风格的jQuery复选框美化插件。它能够以文件夹的形式来显示分层的数据结构，它还支持AJAX数据调用，事件回调，数据头等。
+内容：
+
+
+简要教程
+
+
+folderselect.js是一款仿windows资源管理器风格的jQuery复选框美化插件。它能够以文件夹的形式来显示分层的数据结构，它还支持AJAX数据调用，事件回调，数据头等。
+
+ 使用方法
+
+ 初始化插件
+可以通过下面的方法来初始化该美化复选框插件。
+
+$(&#34;#element&#34;).folderselect({
+data:my\_json\_hierarchical\_data,
+headers: [],
+url: false,
+icon\_item: &#34;item.png&#34;,
+icon\_folder: &#34;folder.png&#34;,
+icon\_home: &#34;home.png&#34;,
+spinner\_gif: &#34;ajax-loader.gif&#34;,
+item\_selected\_callback:function(item) {},
+item\_removed\_callback: function(item) {},
+folder\_entered\_callback: function(folder) {}
+}); 
+
+
+ 获取被选择的项
+你可以在初始化jQuery对象上调用folderselect(&#39;selected&#39;)方法来获取被选择的复选框元素。你所得到的数据和你在初始化的时候放入的数据是相同的。
+
+var selected\_items = $(&#34;#element&#34;).folderselect(&#39;selected&#39;);
+
+
+ 配置参数
+除了data参数，所有的其他参数都是可选的。
+
+
+headers：该字符串数组将转换为每个文件夹的headers。
+
+url：如果用户尝试打开一个空的文件夹（content = []），将使用该URL发送一个POST请求来获取文件夹的内容。
+
+icon\_folder / icon\_item / icon\_home：不同图标的URL地址。
+
+item\_selected\_callback：当某项被选择时调用。
+
+item\_removed\_callback：当某项取消选择时被调用。
+
+folder\_entered\_callback：当文件夹打开时被调用。
+
+data：参考下面。
+
+
+ DATA参数
+data参数是一个包含分层数据的json对象。它可能只是一个基本的树结构，然后在用户点击的时候通过ajax来调用子节点的数据。
+data参数包含2种类型的对象：items和folders。它们有相同点和不同点。
+适用于Folder和item
+
+
+type：可取值为&#39;folder&#39;或&#39;item&#39;。
+
+icon：使用的item/folder图标的URL地址。
+
+cells：字符串数组。第一个字符串标识folder/icon的名称。如果使用headers，cells的数量将等于headers的数量。
+
+payload：一个任意的json对象。
+
+仅适用于Folder
+
+
+content：在该文件夹中可以找到的item/folder对象数组。
+
+headers：在文件夹中显示的Headers的数组。
+
+openable：设置为true是文件夹可以打开，false则不能。如果一个ajax请求为一个文件夹得到了空的数据，那么它就会被设置为false。
+
+open：如果设置为true，则文件夹默认打开。默认只有一个文件夹是打开的。
+
+仅适用于Item
+
+
+selectable：如果设置为true，则item可以被选择。
+
+selected：如果设置为true，则item默认被选择。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_993">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_994">
+                        支持移动手机的简洁jQuery图片LightBox插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_994" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1510/201510262012.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款支持移动触摸设备的简洁jQuery图片Lightbox插件。该LightBox插件可以在移动手机和桌面设备中运行，它具有响应式，预加载图片，键盘支持等特点，非常实用。
+内容：
+
+
+简要教程
+
+
+这是一款支持移动触摸设备的简洁jQuery图片Lightbox插件。该LightBox插件可以在移动手机和桌面设备中运行，它具有响应式，预加载图片，键盘支持等特点，非常实用。它的特点还有：
+
+响应式设计
+支持滑动触摸
+易于安装使用
+众多参数设置
+支持预加载图片
+支持Android, iOs 和 Windows phone
+在旧的浏览器中对CSS3过渡效果进行回退
+可以使用jQuery1.x或2.x
+支持键盘控制
+
+
+ 安装
+可以通过npm或bower来安装该插件。
+
+npm install simplelightbox
+bower install simplelightbox
+
+或下载插件的压缩包，在页面中引入以下文件：
+
+&amp;lt;link href=&#39;dist/simplelightbox.min.css&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/simple-lightbox.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 使用方法
+
+ HTML结构
+该lightbox插件的基本HTML结构如下：
+
+&amp;lt;div class=&#34;gallery&#34;&amp;gt; 
+&amp;lt;a href=&#34;images/image1.jpg&#34; class=&#34;big&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb1.jpg&#34; alt=&#34;&#34; title=&#34;Image&#34; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image2.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb2.jpg&#34; alt=&#34;&#34; title=&#34;&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image3.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb3.jpg&#34; alt=&#34;&#34; title=&#34;Beautiful Image&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&#34;images/image4.jpg&#34;&amp;gt;&amp;lt;img src=&#34;images/thumbs/thumb4.jpg&#34; alt=&#34;&#34; title=&#34;&#34;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;clear&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;a href=&amp;quot;images/image5.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb5.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image6.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb6.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image7.jpg&amp;quot; class=&amp;quot;big&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb7.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image8.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb8.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;a href=&amp;quot;images/image9.jpg&amp;quot; class=&amp;quot;big&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb9.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image10.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb10.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image11.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb11.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;images/image12.jpg&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/thumbs/thumb12.jpg&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;div class=&amp;quot;clear&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该Lightbox插件。
+
+var lightbox = $(&#39;.gallery a&#39;).simpleLightbox(options); 
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+overlay
+true
+bool
+是否显示遮罩层
+
+
+spinner
+true
+bool
+是否显示加载指示器
+
+
+nav
+true
+bool
+是否显示左右导航箭头
+
+
+navText
+[←‘,’→‘]
+array
+导航箭头文字或HTML标签
+
+
+captions
+true
+bool
+是否显示标题
+
+
+captionSelector
+&#39;img&#39;
+string
+如何获取标题，可以在 attr, data 或 text之间选择
+
+
+captionType
+&#39;attr&#39;
+string
+是否显示标题
+
+
+captionsData
+title
+string
+从给定的属性或data-title获取标题
+
+
+close
+true
+bool
+是否显示关闭按钮
+
+
+closeText
+&#39;X&#39;
+string
+关闭按钮上的文本
+
+
+showCounter
+true
+bool
+是否显示当前图片的序号
+
+
+fileExt
+png|jpg|jpeg|gif
+regexp
+图片文件类型扩展名的正则表达式
+
+
+animationSpeed
+250
+int
+幻灯片模式中slide的动画速度
+
+
+preloading
+true
+bool
+是否预加载前一张和下一张图片
+
+
+enableKeyboard
+true
+bool
+是否允许键盘导航和使用ESC键关闭
+
+
+loop
+true
+bool
+是否循环图片
+
+
+docClose
+true
+bool
+是否在点击lightbox之外的区域时关闭它
+
+
+swipeTolerance
+50
+int
+swipe多少像素才显示下一张图片
+
+
+className
+&#39;simple-lightbox&#39;
+string
+包裹容器的class名称
+
+
+widthRatio
+0.8
+float
+图片宽度和屏幕宽度的比例
+
+
+heightRatio
+0.9
+float
+图片高度和屏幕高度的比例
+
+
+
+
+
+ 事件
+
+
+
+
+事件名称
+描述
+
+
+
+
+open.simplelightbox
+该事件在lightbox打开之前触发
+
+
+opened.simplelightbox
+该事件在lightbox打开之后触发
+
+
+close.simplelightbox
+该事件在lightbox关闭之前触发
+
+
+closed.simplelightbox
+该事件在lightbox关闭之后触发
+
+
+
+
+示例代码
+
+$(&#39;.gallery a&#39;).on(&#39;open.simplelightbox&#39;, function () {
+// do something…
+});
+
+
+ 公共方法
+
+
+
+
+名称
+描述
+
+
+
+
+open
+通过给定的JQuery元素打开lightbox
+
+
+close
+表格当前打开的Lightbox
+
+
+next
+跳转到下一张图片
+
+
+prev
+跳转到前一张图片
+
+
+destroy
+销毁lightbox实例对象
+
+
+
+
+示例代码：
+
+var gallery = $(&#39;.gallery a&#39;).simpleLightbox();
+gallery.next(); // Next Image
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_994">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/158/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/160/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,510 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    snabbt.js 强大的jQuery动画库插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            snabbt.js 强大的jQuery动画库插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-primary">
+                            #js
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501061443.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501061443.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501061113.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>snabbt.js是一款轻量级的、功能强大的、简单易用的jQuery动画库插件。snabbt.js提供了丰富的函数和接口来组合各种动画效果，它的过渡动画效果可以和CSS transform媲美，是一个非常强大的js动画库。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>snabbt.js是一款轻量级的、功能强大的、简单易用的jQuery动画库插件。snabbt.js的每秒传输帧数（刷新率）达到60FPS，即使是移动设备上也能达到这个数值。它的大小只有4KB，非常轻便。</p>
+<p>使用snabbt.js可以很容易的将元素移动、旋转、放大缩小、倾斜和改变元素的大小。通过使用矩阵乘法运算（matrix multiplication operations），你可以结合各种变换动画来制作你想要的动画效果。它得到的效果比CSS3 transform效果更加好。</p>
+<p>snabbt.js的运行速度相当快，它致力于让开发者制作平滑的动画而不需要知道太多关于浏览器渲染方面的知识。</p>
+<div class="alert alert-warning" role="alert">注意：高度和宽度同样也可以被动画，但他们可能会照成页面溢出和使你的动画速度变慢。</div>
+<h5>局限性</h5>
+<ul>
+<li>所有的变换动画都是基于像素或弧度，任何单位转换都要事先做好。</li>
+<li>不是所有属性都可以进行动画。如：颜色、paddings、margins或行高的动画。</li>
+<li>处于性能的原因，snabbt.js从来不会去查询DOM信息。</li>
+</ul>
+<h3>使用方法</h3>
+<p>动画通过<span class="m">snabbt</span>函数来调用。函数的第一个参数是要动画的元素，第二个参数是动画的参数，它被包装为一个对象。</p>
+<pre class="brush:js">
+snabbt(element, {
+position: [100, 0, 0],
+rotation: [Math.PI, 0, 0],
+duration: 1000,
+delay: 100,
+easing: 'ease'
+});
+</pre>
+<button type="button" class="btn btn-primary mb30" id="usage-example-execute">Run example</button>
+<h3>链式编程</h3>
+<p>动画可以通过在返回的对话对象上使用<span class="m"> then() </span>方法来进行链式编程。所有的<span class="m"> from\_xxx </span>属性都键被设置前一个动画的结束状态。</p>
+<pre class="brush:js">
+snabbt(element, {
+position: [100, 0, 0],
+easing: 'ease'
+}).then({
+from\_rotation: [0, 0, -2*Math.PI],
+easing: 'spring',
+spring\_constant: 0.2,
+spring\_deaccelaration: 0.95,
+});
+</pre>
+<button type="button" class="btn btn-primary mb30" id="chaining-example-execute">Run example</button>
+<h3>jQuery</h3>
+<p>snabbt.js可以不使用jQuery而单独运行。如果snabbt.js检测到jQuery，那么它将被作为jQuery插件来调用。当通过jQuery来使用snabbt.js的时候，第一个参数是动画的配置对象。如下所示：</p>
+<h5>作为jQuery插件使用</h5>
+<pre class="brush:js">
+$element.snabbt({
+position: [150, 0, 0],
+rotation: [0, 0, Math.PI],
+});
+</pre>
+<h5>不使用jQuery</h5>
+<pre class="brush:js">
+snabbt(element, {
+position: [150, 0, 0],
+rotation: [0, 0, Math.PI],
+});
+</pre>
+<h3>Easing效果</h3>
+<p>snabbt.js包含4个easing效果：linear、ease、ease-in 和 ease-out。你可以使用自定义easing效果或使用Spring easing效果（下面讲解）。</p>
+<h5>自定义easing效果</h5>
+<p>使用一种easing效果的名称作为函数来调用：</p>
+<pre class="brush:js">
+snabbt(element, {
+position: [200, 0, 0],
+easing: function(value) {
+return Math.sin(Math.PI * value);
+}
+});
+</pre>
+<button id="custom-easer" class="btn btn-success mb30">Run example</button>
+<h5>Spring easing</h5>
+<p>当使用Spring easing的时候，duration 参数是没有效果的。动画将一直运行到平衡为止。当设置为Spring easing时，有三个附加参数可以使用：</p>
+<ul>
+<li>
+<span>spring\_constant </span>：动画的强度。</li>
+<li>
+<span>spring\_deaccelaration </span>：控制放慢速度。</li>
+<li>
+<span>spring\_mass </span>：对象的“重量”。</li>
+</ul>
+<pre class="brush:js">
+snabbt(element, {
+position: [100, 0, 0],
+rotation: [0, 0, 2*Math.PI],
+easing: 'spring',
+spring\_constant: 0.3,
+spring\_deacceleration: 0.8,
+}).then({
+rotation: [0, 0, 2*Math.PI],
+easing: 'ease'
+});
+</pre>
+<button id="spring-example" class="btn btn-success mb30 extra-top-margin ">Run example</button>
+<h3>高级用法</h3>
+<p>下面是snabbt.js的一些高级用法。</p>
+<h5>Value feeding</h5>
+<p>单独的动画对象很容易控制，但是在多个动画对象时就有些困难了。有时候你想在另一个动画中执行某个动画转换效果，这时候就是使用Value feeding的时候了。<span class="m">value\_feeder</span>的参数包含一个从0到1变化的参数。每一次调用你都要返回一个代表当前动画的snabbtjs.matrix(看后面的Matrix API)对象。</p>
+<pre class="brush:js">
+snabbt(element, {
+value\_feeder: function(i) {
+var x = Math.sin(i*Math.PI);
+return snabbtjs.mult(snabbtjs.rotZ(Math.sin(6*i*Math.PI)), snabbtjs.trans(x*400, 0, 0));
+},
+duration: 1000
+});
+</pre>
+<button id="value-feed-example" class="btn btn-success mb30 extra-top-margin">Run example</button>
+<h5>Attention animations</h5>
+<p>snabbt.js也支持原地动画。这对于一些表单验证时的按钮动画是非常有用的。看例子：</p>
+<pre class="brush:js">
+snabbt(element, 'attention', {
+rotation: [0, 0, Math.PI/2],
+spring\_constant: 1.9,
+spring\_deacceleration: 0.9,
+});
+</pre>
+<button id="attention-example-1" class="btn btn-success mb30 extra-top-margin">Run example</button>
+<pre class="brush:js">
+snabbt(element, 'attention', {
+position: [50, 0, 0],
+spring\_constant: 2.4,
+spring\_deacceleration: 0.9,
+});
+</pre>
+<button id="attention-example-2" class="btn btn-success mb30 extra-top-margin">Run example</button>
+<h3>Matrix API</h3>
+<p>下面是Matrix API的一些函数：</p>
+<ul>
+<li>
+<span class="m">snabbtjs.ident() </span>：返回单位矩阵。</li>
+<li>
+<span class="m">snabbtjs.trans(x, y, z) </span>：返回矩阵的translation。</li>
+<li>
+<span class="m">snabbtjs.rotX(radians) </span>：返回绕x轴旋转的值。</li>
+<li>
+<span class="m">snabbtjs.rotY(radians) </span>：返回绕y轴旋转的值。</li>
+<li>
+<span class="m">snabbtjs.rotZ(radians) </span>：返回绕z轴旋转的值。</li>
+<li>
+<span class="m">snabbtjs.scale(x, y) </span>：返回一个变换矩阵。</li>
+<li>
+<span class="m">snabbtjs.skew(ax, ay) </span>：返回一个倾斜矩阵。</li>
+<li>
+<span class="m">snabbtjs.mult(A, B) </span>：返回一个A * B的矩阵乘积。</li>
+</ul>
+<h3>动画参数配置</h3>
+<p>下面的参数可以用于配置一个动画对象。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>position</td>
+<td>Array(3)</td>
+<td>[0, 0, 0]</td>
+<td>Pixel offsets in each x-, y- and z-direction</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>Array(3)</td>
+<td>[0, 0, 0]</td>
+<td>Rotation in radians in x-, y- and z-direction</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>Array(2)</td>
+<td>[1, 1]</td>
+<td>Scale in x- and y-direction</td>
+</tr>
+<tr>
+<td>rotation\_post</td>
+<td>Array(3)</td>
+<td>[0, 0, 0]</td>
+<td>Rotation applied after <em>position</em> and <em>rotation</em>
+</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Scalar</td>
+<td>Unchanged</td>
+<td>Element width in pixels</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Scalar</td>
+<td>Unchanged</td>
+<td>Element height in pixels</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>Scalar</td>
+<td>1</td>
+<td>Element opacity(0 - 1)</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Scalar</td>
+<td>500</td>
+<td>Animation duration in milliseconds</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>Scalar</td>
+<td>0</td>
+<td>Delay before the animation is started in milliseconds</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Scalar</td>
+<td>0</td>
+<td>Number of times to repeat the animation</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>undefined</td>
+<td>Function to be called when animation is completed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="m">from\_xxx</span>可以设置更多的属性：</p>
+<div class="table-responsive">
+<table class="table table-striped hide-mobile">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from\_position</td>
+<td>Array(3)</td>
+<td>[0, 0, 0] or previous end state</td>
+</tr>
+<tr>
+<td>from\_rotation</td>
+<td>Array(3)</td>
+<td>[0, 0, 0] or previous end state</td>
+</tr>
+<tr>
+<td>from\_scale</td>
+<td>Array(2)</td>
+<td>[1, 1] or previous end state</td>
+</tr>
+<tr>
+<td>from\_rotation\_post</td>
+<td>Array(3)</td>
+<td>[0, 0, 0] or previous end state</td>
+</tr>
+<tr>
+<td>from\_width</td>
+<td>Scalar</td>
+<td>Previous end state width</td>
+</tr>
+<tr>
+<td>from\_height</td>
+<td>Scalar</td>
+<td>Previous end state height</td>
+</tr>
+<tr>
+<td>from\_opacity</td>
+<td>Scalar</td>
+<td>Previous end state opacity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501061443.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501061113.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1367">
+                                <h3 class="post-title">
+                                    jQuery超酷隐藏菜单放大显示特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery简单带备忘录功能的日期选择器插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery简单带备忘录功能的日期选择器插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501231436.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501231436.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501231253.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款带备忘录功能的简单的jQuery日期选择器插件。你可以为该日期选择器的某些日期设定设定一些信息，方便日常查询，就像现实生活中的备忘录一样。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jQuery.Simple-EventCalendar是一款带备忘录功能的<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery</a>日期选择器插件。你可以在某个日期上记录需要做的事情或已经做的事情，就像工作中的备忘录一样，十分方便。</p>
+<h3>bower 安装</h3>
+<pre class="brush:html">
+bower install simpleeventcalendar
+</pre>
+<h3>HTML结构</h3>
+<p>该日期选择器的html结构十分简单。下面是日期选择器的html结构，使用的是一个表格：</p>
+<pre class="brush:html">
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;td&gt;星期一&lt;/td&gt;&lt;td&gt;星期二&lt;/td&gt;&lt;td&gt;星期三&lt;/td&gt;&lt;td&gt;星期四&lt;/td&gt;&lt;td&gt;星期五&lt;/td&gt;&lt;td&gt;星期六&lt;/td&gt;&lt;td&gt;星期日&lt;/td&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td date-month="12" date-day="1"&gt;1&lt;/td&gt;
+......
+&lt;/tr&gt;
+......
+&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+<p>下面是备忘录的html结构：</p>
+<pre class="brush:html">
+&lt;div class="day-event" date-month="12" date-day="16" data-number="1"&gt;
+&lt;a href="#" class="close fontawesome-remove"&gt;&lt;/a&gt;
+&lt;h2 class="title"&gt;Lorem ipsum 3&lt;/h2&gt;
+&lt;span class="date"&gt;2015-01-23&lt;/span&gt;
+&lt;p&gt;......&lt;/p&gt;
+&lt;button class="read-more"&gt;Read more&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+<h3>调用插件</h3>
+<p>要调用该日期选择器插件需要在页面中引入jquery和simplecalendar.js，以及日期插件的样式style.css。</p>
+<pre class="brush:html">
+&lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+<p>&lt;script src=&quot;simplecalendar.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;script src=&quot;style.css&quot;&gt;&lt;/script&gt;<br>
+</pre></p>
+<p>在完成以上步骤后，该jQuery日期选择器插件在页面加载完毕后会自动加载。它使用<span class="m">.day-event</span> <code>div</code>中的<span class="m">date-month</span>属性和<span class="m">date-day</span>属性来和日期表格中的相应属性进行匹配，并在有事件的单元格中添加相应的样式和点击事件。</p>
+<p>基本的备忘录日期插件</p>
+<p><img src="http://img.htmleaf.com/1501/Simple-Event-Calendar-1.png" alt="基本的带备忘录功能的日期选择器插件" width="418" height="632"></p>
+<p>带列表的备忘录日期插件</p>
+<p><img src="http://img.htmleaf.com/1501/Simple-Event-Calendar-2.png" alt="带列表的带备忘录功能的日期选择器插件" width="800" height="539"></p>
+<p>更多关于该日期选择器的信息请参考：<a href="https://github.com/philipehsing/jQuery.Simple-Event-Calendar" target="\_blank">https://github.com/philipehsing/jQuery.Simple-Event-Calendar</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501231436.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501231253.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1327">
+                                <h3 class="post-title">
+                                    jQuery和CSS3全屏推拉式滑动菜单特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

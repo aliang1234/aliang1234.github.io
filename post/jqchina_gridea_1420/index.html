@@ -1,0 +1,369 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+     jQuery select下拉菜单美化插件ddlist | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                             jQuery select下拉菜单美化插件ddlist
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412181724.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412181724.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141218887.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款用于美化下拉列表菜单控件的jquery插件ddlist。使用该ddlist下拉列表美化插件可以为下拉列表添加图标，增强下拉列表的默认功能等。在美化的同时使下拉列表功能得到增强。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>service.ddlist.jquery是一款小巧的jquery下拉列表插件，它允许我们在下拉列表中插入图片、文本和其它一些额外的东西。</p>
+<p>该下拉列表插件通过<span class="m">&lt;select&gt;</span>元素开发，使用jQuery将其隐藏，并生成新的html结构。</p>
+<h3>HTML结构</h3>
+<p>要使用该插件，首先要在html的header中引入以下文件：</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" type="text/css" href="[your-path]/service.ddlist.jquery.css" /&gt;
+&lt;script src="[your-path]/service.ddlist.jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>然后在html中对于一个select元素，例如：</p>
+<pre class="brush:html">
+&lt;select id="myList"&gt;
+&lt;option value="0"&gt;Text 0&lt;/option&gt;
+&lt;option value="1" selected="selected"&gt;Text 1&lt;/option&gt;
+...
+&lt;option value="9"&gt;Text 9&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>然后通过jQuery调用该下拉列表插件：</p>
+<pre class="brush:js">
+<script type="text/javascript">
+// Execute on page load
+$(function () {
+$('#myList').ddlist({
+width: 270,
+onSelected: function (index, value, text) {
+// Do something with selected option
+...
+}
+});
+});
+</script>
+</pre>
+<h3>获取下拉列表的值</h3>
+<p>有三种方法可以指定列表项的值：</p>
+<ul>
+<li>在某个选项上设置“selected”；</li>
+<li>你可以在插件初始化的时候设置“selectionIndex”的值来选择指定的项；</li>
+<li>如果以上两个选项都未被设定，那么第一个选项将被执行。</li>
+</ul>
+<h4>Example 1:</h4>
+<pre class="brush:html">
+&lt;select id="myList"&gt;
+&lt;option value="0"&gt;Red&lt;/option&gt;
+&lt;option value="1" selected="selected"&gt;Green&lt;/option&gt;
+&lt;option value="2"&gt;Blue&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>'Green'将被选择为默认选项。</p>
+<h4>Example 2:</h4>
+<pre class="brush:html">
+&lt;select id="myList"&gt;
+&lt;option value="0"&gt;Red&lt;/option&gt;
+&lt;option value="1"&gt;Green&lt;/option&gt;
+&lt;option value="2"&gt;Blue&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<pre class="brush:js">
+<script type="text/javascript">
+// Execute on page load
+$(function () {
+$('#myList').ddlist({
+width: 270,
+selectionIndex: 2,
+onSelected: function (index, value, text) {
+// Do something with selected option
+...
+}
+});
+});
+</script>
+</pre>
+<p>例子2中，"Blue"将被设置为默认选项。</p>
+<h3>带图片的选项</h3>
+<p>你可以为每一个选项指定一张图和段描文本。你必须通过HTML5的<span class="m">data-imagesrc</span> 和<span class="m">data-description</span>属性来指定它们。</p>
+<pre class="brush:html">
+&lt;select id="myList"&gt;
+&lt;option value="0" data-imagesrc="/images/option0img.png" data-description="A description for the option"&gt;text - 0&lt;/option&gt;
+...
+&lt;option value="4" data-imagesrc="/images/option4img.png" data-description="A description for the option"&gt;text - 4&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>下拉列表的显示效果如下：</p>
+<img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/ddlist-with-image.png" alt="下拉列表美化插件ddlist" width="180" height="180">
+<br>
+<h3>编写CSS样式</h3>
+<p>在该下拉列表插件带有一个CSS文件包含当前列表的内部元素的各种样式，但是如果你想自定义下拉列表的样式，那么你必须知道该下拉列表的DOM结构：</p>
+<pre class="brush:html">
+&lt;div id="ddList-[select-id]" class="ddListContainer"&gt;
+&lt;a&gt;
+&lt;img src="option-image-url" /&gt;
+&lt;label&gt;option-text&lt;/label&gt;
+&lt;small&gt;option-description&lt;/small&gt;
+&lt;/a&gt;
+&lt;span class="ddListArrow"&gt;&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a&gt;
+&lt;img src="option-image-url" /&gt;
+&lt;label&gt;option-text&lt;/label&gt;
+&lt;small&gt;option-description&lt;/small&gt;
+&lt;/li&gt;
+...
+&lt;li&gt;..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<ul>
+<li>根元素是一个id为<span class="m">ddList-</span>开头的select元素。</li>
+<li>第一个<span class="m">&lt;a&gt;</span>元素是下拉列表的可见选项：</li>
+<ul>
+<li>
+<span class="m">&lt;label&gt;</span>元素用于显示选项</li>
+<li>
+<span class="m">&lt;img&gt;</span>元素和<span class="m">&lt;small&gt;</span>元素是可选的，它们用于显示选项前面的图标和选项的描述文本。</li>
+</ul>
+<li>第二个<span class="m">&lt;span&gt;</span>元素是下拉列表的上下箭头。</li>
+<li>第三个<span class="m">&lt;ul&gt;</span>元素包含所有的选项。</li>
+</ul>
+<h3>API</h3>
+<p>初始化方法：</p>
+<pre class="brush:js">
+[jqObject(s)].ddlist(options)
+</pre>
+<p>可选参数：</p>
+<p>width:Integerdefault:260-该参数对于下拉列表的宽度。</p>
+<p>selectionIndex:Integerdefault:0-该参数指定初始化是哪个选项被选择。</p>
+<p>disabled:Booleandefault:false-设置为“true”则下拉列表不可用。</p>
+<p>showSelectionTextOnly:Booleandefault:false-设置为“true”仅下拉列表的文本。</p>
+<p>onSelectedOnInit:Booleandefault:false-设置为“true”时onSelected回调函数被触发。</p>
+<p>onSelected:callback functionSignature: onSelected: function (index, value, text) { }。</p>
+<ul>
+<li>index：列表被选择项的index。</li>
+<li>value：列表被选择项的value。</li>
+<li>text：列表被选择项的text。</li>
+</ul>
+<p>更多详细详细请参考：<a href="https://github.com/JosHuybrighs/service.ddlist.jquery" target="\_blank">https://github.com/JosHuybrighs/service.ddlist.jquery</a>。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412181724.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141218887.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1421">
+                                <h3 class="post-title">
+                                    逼真的js打字机效果插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

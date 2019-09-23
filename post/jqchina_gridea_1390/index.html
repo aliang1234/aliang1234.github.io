@@ -1,0 +1,492 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带弹性摇摆效果的卡片js拖拽插件swing | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带弹性摇摆效果的卡片js拖拽插件swing
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+                            #js
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501071507.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501071507.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501071120.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>swing是一款可以容器中的卡片元素拖拽到容器外的js拖拽插件。该拖拽插件在拖动卡片元素到容器外后，放下卡片时有很酷的卡片弹性左右摇摆效果。如果拖动距离不够，卡片将被拉回容器中。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>swing是一款拖动和拖拽卡片的交互动画接口。它可以将容器中的卡片元素拖动到容器外部，并在拖动时代有非常酷的弹性摇摆动画效果。可以通过下面的gif图片来预览一下效果。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1501/card-stack.gif" alt="js拖拽卡片动画效果" width="520" height="520"></p>
+<h3>HTML结构</h3>
+<p>html结构使用一个无序列表来作为图片栈，它被包裹在一个作为容器的div中。</p>
+<pre class="brush:html">
+&lt;div id="viewport"&gt;
+&lt;ul class="stack"&gt;
+&lt;li class="clubs"&gt;♣&lt;/li&gt;
+&lt;li class="diamonds"&gt;♦&lt;/li&gt;
+&lt;li class="hearts"&gt;♥&lt;/li&gt;
+&lt;li class="spades"&gt;♠&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h3>JAVASCRIPT</h3>
+<pre class="brush:js">
+var stack,
+cards;
+<p>// Prepare the cards in the stack for iteration.<br>
+cards = [].slice.call(document.querySelectorAll('ul li'))</p>
+<p>// An instance of the Stack is used to attach event listeners.<br>
+stack = Swing.Stack();</p>
+<p>cards.forEach(function (targetElement) {<br>
+// Add card element to the Stack.<br>
+stack.createCard(targetElement);<br>
+});</p>
+<p>// Add event listener for when a card is thrown out of the stack.<br>
+stack.on('throwout', function (e) {<br>
+// e.target Reference to the element that has been thrown out of the stack.<br>
+// e.throwDirection Direction in which the element has been thrown (Card.DIRECTION_LEFT, Card.DIRECTION_RIGHT).</p>
+<p>console.log('Card has been thrown out of the stack.');<br>
+console.log('Throw direction: ' + (e.throwDirection == Card.DIRECTION_LEFT ? 'left' : 'right'));<br>
+});</p>
+<p>// Add event listener for when a card is thrown in the stack, including the spring back into place effect.<br>
+stack.on('throwin', function (e) {<br>
+console.log('Card has snapped back to the stack.');<br>
+});<br>
+</pre></p>
+<h3>配置</h3>
+<pre class="brush:js">
+var stack,
+config;
+<p>config = {<br>
+/**</p>
+<ul>
+<li>Invoked in the event of dragmove.</li>
+<li>Returns a value between 0 and 1 indicating the completeness of the throw out condition.</li>
+<li>Ration of the absolute distance from the original card position and element width.</li>
+<li></li>
+<li>@param {Number} offset Distance from the dragStart.</li>
+<li>@param {HTMLElement} element Element.</li>
+<li>@return {Number}<br>
+*/<br>
+throwOutConfidence: function (offset, element) {<br>
+return Math.min(Math.abs(offset) / element.offsetWidth, 1);<br>
+}<br>
+};<br>
+stack = stack = Swing.Stack(config);<br>
+</pre></li>
+</ul>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>描述</td>
+<td>默认值</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isThrowOut</td>
+<td>Invoked in the event of <span class="m">dragend</span>. Determines if element is being thrown out of the stack.</td>
+<td>Element is considered to be thrown out when throwOutConfidence is equal to 1.</td>
+</tr>
+<tr>
+<td>throwOutConfidence</td>
+<td>Invoked in the event of <span class="m">dragmove</span>. Returns a value between 0 and 1 indicating the completeness of the throw out condition.</td>
+<td>Ration of the absolute distance from the original card position and element width.</td>
+</tr>
+<tr>
+<td>throwOutDistance</td>
+<td>Invoked when card is added to the stack. The card is thrown to this offset from the stack.</td>
+<td>The value is a random number between <span class="m">minThrowOutDistance</span> and <span class="m">maxThrowOutDistance</span>.</td>
+</tr>
+<tr>
+<td>minThrowOutDistance</td>
+<td>In effect when <span class="m">throwOutDistance</span> is not overwritten.</td>
+<td>450</td>
+</tr>
+<tr>
+<td>maxThrowOutDistance</td>
+<td>In effect when <span class="m">throwOutDistance</span> is not overwritten.</td>
+<td>500</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>Invoked in the event of <span class="m">dragmove</span>. Determine the rotation of the element.</td>
+<td>Rotation is equal to the proportion of horizontal and vertical offset times the <span class="m">maximumRotation</span> constant.</td>
+</tr>
+<tr>
+<td>maxRotation</td>
+<td>In effect when <span class="m">rotation</span> is not overwritten.</td>
+<td>20</td>
+</tr>
+<tr>
+<td>transform</td>
+<td>Invoked in the event of <span class="m">dragmove</span> and every time the physics solver is triggered.</td>
+<td>Uses CSS transform to translate element position and rotation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>所有的配置参数都是可选的。</p>
+<h3>方法</h3>
+<pre class="brush:js">
+var stack,
+card;
+<p>stack = stack = Swing.Stack();<br>
+card = stack.createCard(HTMLElement);<br>
+</pre></p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stack.createCard(element)</td>
+<td>创建一个和元素相关联的卡片实例。</td>
+</tr>
+<tr>
+<td>stack.getCard(element)</td>
+<td>返回卡片相关联的元素。</td>
+</tr>
+<tr>
+<td>stack.on(event, listener)</td>
+<td>为栈添加一个事件监听。</td>
+</tr>
+<tr>
+<td>card.on(event, listener)</td>
+<td>为卡片添加一个事件监听。</td>
+</tr>
+<tr>
+<td>card.throwIn(x, y)</td>
+<td>从任意位置将卡片拖拽回栈中。x和y是开始抛出的位置。</td>
+</tr>
+<tr>
+<td>card.throwOut(x, y)</td>
+<td>将卡片拖拽到栈外任意位置。x和y是开始抛出的位置。</td>
+</tr>
+<tr>
+<td>card.destroy()</td>
+<td>销毁卡片。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>将卡片拖拽到容器外</h5>
+<p>可以使用<span class="m">card.throwOut(x, y)</span>方法来将卡片拖拽到容器外。你可已设置卡片的拖拽方向，例如：</p>
+<pre class="brush:js">
+card.throwOut(Card.DIRECTION\_LEFT, 0);
+card.throwOut(Card.DIRECTION\_RIGHT, 0);
+</pre>
+<p>如果想各种拖拽行为各不相同，可以把y参数设置为一个随机值。</p>
+<h5>事件监听</h5>
+<p>事件监听可以使用 <a href="http://www.htmleaf.com/jquery-doc/on.html" target="\_blank">on</a> 方法附加到<span class="m">Swing.Stack</span>或<span class="m">Swing.Card</span>上。</p>
+<pre class="brush:js">
+var stack,
+card;
+<p>stack = stack = Swing.Stack();</p>
+<p>card = stack.createCard(HTMLElement);</p>
+<p>card.on('throwout', function () {});<br>
+stack.on('throwout', function () {});<br>
+</pre></p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>throwout</td>
+<td>When card has been thrown out of the stack.</td>
+</tr>
+<tr>
+<td>throwoutend</td>
+<td>When card has been thrown out of the stack and the animation has ended.</td>
+</tr>
+<tr>
+<td>throwoutleft</td>
+<td>Shorthand for <span class="m">throwout</span> event in the <span class="m">Card.DIRECTION\_LEFT</span> direction.</td>
+</tr>
+<tr>
+<td>throwoutright</td>
+<td>Shorthand for <span class="m">throwout</span> event in the <span class="m">Card.DIRECTION\_RIGHT</span> direction.</td>
+</tr>
+<tr>
+<td>throwin</td>
+<td>When card has been thrown into the stack.</td>
+</tr>
+<tr>
+<td>throwinend</td>
+<td>When card has been thrown into the stack and the animation has ended.</td>
+</tr>
+<tr>
+<td>dragstart</td>
+<td>drag start.</td>
+</tr>
+<tr>
+<td>dragmove</td>
+<td>drag move.</td>
+</tr>
+<tr>
+<td>dragend</td>
+<td>drag end.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5>事件对象</h5>
+<p>事件侦听器是用一个参数<span class="m">eventobject</span>调用：</p>
+<pre class="brush:js">
+var stack;
+<p>stack = stack = Swing.Stack();</p>
+<p>stack.on('throwout', function (eventObject) {});<br>
+</pre></p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>名称</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>The element being dragged.</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>The direction in which the element is being dragged: <span class="m">Card.DIRECTION\_LEFT</span> or <span class="m">Card.DIRECTION\_RIGHT</span>
+</td>
+</tr>
+<tr>
+<td>throwOutConfidence</td>
+<td>A value between 0 and 1 indicating the completeness of the throw out condition.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>更多资料请参考：<a href="https://github.com/gajus/swing" target="\_blank">https://github.com/gajus/swing</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501071507.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501071120.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1391">
+                                <h3 class="post-title">
+                                    js轻量级计数器动画特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带多种过渡动画的响应式jQuery幻灯片插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带多种过渡动画的响应式jQuery幻灯片插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1509/201509131651.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509131651.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509132567.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Nivo-Slider是一款非常强大的响应式jQuery幻灯片插件。该幻灯片插件内置有16种不同的动画过渡效果。它提供了丰富的参数来控制幻灯片的播放。它使用简单，并且可以兼容IE8浏览器。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Nivo-Slider是一款非常强大的响应式<a href="http://www.htmleaf.com/jQuery/">jQuery</a>幻灯片插件。该幻灯片插件内置有16种不同的动画过渡效果。它提供了丰富的参数来控制幻灯片的播放。它使用简单，并且可以兼容IE8浏览器。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用Nivo-Slider幻灯片需要引入nivo-slider.css，jQuery(1.7+)和jquery.nivo.slider.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/nivo-slider.css" type="text/css" /&gt;
+&lt;script src=js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.nivo.slider.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该响应式幻灯片的HTML结构非常简单，使用一个带<code>#slider</code>的<code>&lt;div&gt;</code>作为容器，里面放置你需要的图片即可。</p>
+<pre class="brush:html">
+&lt;div id="slider" class="nivoSlider"&gt;
+&lt;img src="images/slide1.jpg" alt="" /&gt;
+&lt;a href="#"&gt;&lt;img src="images/slide2.jpg" alt="" title="#htmlcaption" /&gt;&lt;/a&gt;
+&lt;img src="images/slide3.jpg" alt="" title="This is an example of a caption" /&gt;
+&lt;img src="images/slide4.jpg" alt="" /&gt;
+&lt;/div&gt;
+&lt;div id="htmlcaption" class="nivo-html-caption"&gt;
+&lt;strong&gt;This&lt;/strong&gt; is an example of a &lt;em&gt;HTML&lt;/em&gt; caption with &lt;a href="#"&gt;a link&lt;/a&gt;.
+&lt;/div&gt;
+</pre>
+<p>最好在包裹容器上添加class <code>nivoSlider</code>。上面的代码中还展示了如何为图标添加可以带HTML标签的标题效果（例如超链接）。它们的关联关系是在图片的<code>title</code>属性指向作为图片标签的容器<code>div#htmlcaption</code>。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 调用插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该幻灯片插件。</p>
+<pre class="brush:html">
+&lt;script type="text/javascript"&gt;
+$(window).load(function() {
+$('#slider').nivoSlider();
+});
+&lt;/script&gt;
+</pre>
+<div class="alert alert-success" role="alert">
+<i class="fa fa-exclamation-triangle fa-lg"></i> 注意Nivo Slider幻灯片插件使用<code>$(window).load()</code>函数而不是<code>$(document).ready()</code>函数，这与其它jQuery插件的使用有所不同。
+</div>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>下面是该响应式幻灯片的可用配置参数。</p>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>effect</td>
+<td>'random'</td>
+<td>幻灯片的过渡动画效果，可以指定类似：'fold,fade,sliceDown'</td>
+</tr>
+<tr>
+<td>slices</td>
+<td>15</td>
+<td>slice动画过渡的配置</td>
+</tr>
+<tr>
+<td>boxCols</td>
+<td>8</td>
+<td>box动画过渡的配置</td>
+</tr>
+<tr>
+<td>boxRows</td>
+<td>4</td>
+<td>box动画过渡的配置</td>
+</tr>
+<tr>
+<td>animSpeed</td>
+<td>500</td>
+<td>幻灯片过渡动画的时间</td>
+</tr>
+<tr>
+<td>pauseTime</td>
+<td>3000</td>
+<td>每一个幻灯片slide显示的时间</td>
+</tr>
+<tr>
+<td>startSlide</td>
+<td>0</td>
+<td>幻灯片开始的slide的序号</td>
+</tr>
+<tr>
+<td>directionNav</td>
+<td>true</td>
+<td>是否显示next/prev导航</td>
+</tr>
+<tr>
+<td>controlNav</td>
+<td>true</td>
+<td>是否显示圆点导航</td>
+</tr>
+<tr>
+<td>controlNavThumbs</td>
+<td>false</td>
+<td>使用图片缩略图来代替圆点导航按钮</td>
+</tr>
+<tr>
+<td>pauseOnHover</td>
+<td>true</td>
+<td>在鼠标滑过幻灯片时是否暂停播放</td>
+</tr>
+<tr>
+<td>manualAdvance</td>
+<td>false</td>
+<td>强制手动进行过渡动画</td>
+</tr>
+<tr>
+<td>prevText</td>
+<td>'Prev'</td>
+<td>prev导航按钮上的文本</td>
+</tr>
+<tr>
+<td>nextText</td>
+<td>'Next'</td>
+<td>next导航按钮上的文本</td>
+</tr>
+<tr>
+<td>randomStart</td>
+<td>false</td>
+<td>是否随机开始播放</td>
+</tr>
+<tr>
+<td>beforeChange</td>
+<td>function(){}</td>
+<td>一个slide开始过渡动画之前触发</td>
+</tr>
+<tr>
+<td>afterChange</td>
+<td>function(){}</td>
+<td>一个slide结束过渡动画之后触发</td>
+</tr>
+<tr>
+<td>slideshowEnd</td>
+<td>function(){}</td>
+<td>所有的幻灯片都被显示之后触发</td>
+</tr>
+<tr>
+<td>lastSlide</td>
+<td>function(){}</td>
+<td>最后一个幻灯片slide显示之后触发</td>
+</tr>
+<tr>
+<td>afterLoad</td>
+<td>function(){}</td>
+<td>幻灯片被加载之后触发</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code>effect</code>可以设置为以下的动画过渡效果：</p>
+<ul>
+<li><code>sliceDown</code></li>
+<li><code>sliceDownLeft</code></li>
+<li><code>sliceUp</code></li>
+<li><code>sliceUpLeft</code></li>
+<li><code>sliceUpDown</code></li>
+<li><code>sliceUpDownLeft</code></li>
+<li><code>fold</code></li>
+<li><code>fade</code></li>
+<li><code>random</code></li>
+<li><code>slideInRight</code></li>
+<li><code>slideInLeft</code></li>
+<li><code>boxRandom</code></li>
+<li><code>boxRain</code></li>
+<li><code>boxRainReverse</code></li>
+<li><code>boxRainGrow</code></li>
+<li><code>boxRainGrowReverse</code></li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-thumbs-up"></span> 小技巧</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用幻灯片主题</h5>
+<p>要使用Nivo Slider幻灯片插件提供的各种主题样式，可以按下面操作。首先在页面中引入主题CSS文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" /&gt;
+</pre>
+<p>然后需要按下面的格式调整一些你的HTML标签。</p>
+<pre class="brush:html">
+&lt;div class="slider-wrapper theme-default"&gt;
+&lt;div class="ribbon"&gt;&lt;/div&gt;
+&lt;div id="slider" class="nivoSlider"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>注意，你可以在页面中引入多个主题CSS样式文件，但是它们不会被显示，直到你在幻灯片包裹容器上设置<code>theme-{theme name}</code>后，该主题才会被启用。</p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 使用缩略图导航</h5>
+<p>要使用缩略图导航必须确保<code>controlNavThumbs</code>参数设置为<code>true</code>。该参数被启用后，插件会检查图片的<code>data-thumb</code>属性，使用该属性中指定的图片URL作为缩略图。</p>
+<pre class="brush:html">
+&lt;div id="slider"&gt;
+&lt;img src="images/1.jpg" alt="" data-thumb="images/1\_thumb.jpg" /&gt;
+&lt;img src="images/2.jpg" alt="" data-thumb="images/2\_thumb.jpg" /&gt;
+&lt;img src="images/3.jpg" alt="" data-thumb="images/3\_thumb.jpg" /&gt;
+&lt;img src="images/4.jpg" alt="" data-thumb="images/4\_thumb.jpg" /&gt;
+&lt;/div&gt;
+</pre>
+<h5 style="text-transform:none;">
+<span class="glyphicon glyphicon-paperclip"></span> 自定义每一个slide的动画过渡效果</h5>
+<p>你可以使用<code>data-transition</code>属性为幻灯片的每一个slide指定它的过渡动画效果，例如：</p>
+<pre class="brush:html">
+&lt;img src="images/slide1.jpg" alt="" data-transition="slideInLeft" /&gt;
+</pre>
+<p>上面的代码会强制该slide在每次出现的时候都使用<code>slideInLeft</code>过渡动画。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1509/201509131651.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201509132567.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_98">
+                                <h3 class="post-title">
+                                    jQuery和CSS3响应式全屏商品介绍轮播图特效
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

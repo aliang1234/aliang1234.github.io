@@ -1,0 +1,405 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery表格搜索过滤和单元格高亮插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery表格搜索过滤和单元格高亮插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1703/201703241539.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1703/201703241539.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201703244420.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>jQuery.FilterTable是一款表格搜索过滤和单元格高亮插件。该插件允许你对任意表格进行条件过滤，并且它会将搜索到的结果单元格高亮显示，非常实用和强大。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>jQuery.FilterTable是一款表格搜索过滤和单元格高亮插件。该插件允许你对任意表格进行条件过滤，并且它会将搜索到的结果单元格高亮显示，非常实用和强大。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery和jquery.filtertable文件。</p>
+<pre class="brush:html">
+&lt;script src="path/to/js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/js/jquery.filtertable.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>需要手动为搜索的结果设置高亮样式：</p>
+<pre class="brush:css">
+.filter-table .quick { margin-left: 0.5em; font-size: 0.8em; text-decoration: none; }
+.fitler-table .quick:hover { text-decoration: underline; }
+td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>filterTable()</code>来初始化该表格过滤插件。</p>
+<pre class="brush:js">
+$('table').filterTable(); 
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>jQuery.FilterTable插件的可用配置参数有：</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>参数</td>
+<td>类型</td>
+<td>默认值</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autofocus</td>
+<td>boolean</td>
+<td>false</td>
+<td>过滤输入框是否自动后的焦点。</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function(term, table)</td>
+<td>null</td>
+<td>当一个搜索完成时的回调函数。</td>
+</tr>
+<tr>
+<td>containerClass</td>
+<td>string</td>
+<td>filter-table</td>
+<td>过滤输入框的css样式。</td>
+</tr>
+<tr>
+<td>containerTag</td>
+<td>string</td>
+<td>p</td>
+<td>过滤输入框父容器的标签名称。</td>
+</tr>
+<tr>
+<td>hideTFootOnFilter</td>
+<td>boolean</td>
+<td>false</td>
+<td>表格在过滤后脚部是否隐藏。</td>
+</tr>
+<tr>
+<td>highlightClass</td>
+<td>string</td>
+<td>alt</td>
+<td>被过滤选中的单元格的class名称。</td>
+</tr>
+<tr>
+<td>ignoreClass</td>
+<td>string</td>
+<td>''</td>
+<td>在过滤时带该class的所有单元格将被忽略。</td>
+</tr>
+<tr>
+<td>ignoreColumns</td>
+<td>array</td>
+<td>[]</td>
+<td>数组中的列在过滤是将被忽略。</td>
+</tr>
+<tr>
+<td>inputSelector</td>
+<td>string</td>
+<td>null</td>
+<td>如果需要使用已经存在的input作为搜索输入框，使用该选择器来进行关联。</td>
+</tr>
+<tr>
+<td>inputName</td>
+<td>string</td>
+<td>filter-table</td>
+<td>搜索输入框的name名称。</td>
+</tr>
+<tr>
+<td>inputType</td>
+<td>string</td>
+<td>search</td>
+<td>搜索输入框的type类型。</td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>Filter:</td>
+<td>搜索输入框前面的标签。</td>
+</tr>
+<tr>
+<td>minChars</td>
+<td>integer</td>
+<td>1</td>
+<td>最小的搜索字符数。</td>
+</tr>
+<tr>
+<td>minRows</td>
+<td>integer</td>
+<td>8</td>
+<td>显示的最小搜索行数。</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>string</td>
+<td>search this table</td>
+<td>搜索输入框的HTML5提示文本。</td>
+</tr>
+<tr>
+<td>preventReturnKey</td>
+<td>boolean</td>
+<td>true</td>
+<td>阻止默认的表单提交事件。</td>
+</tr>
+<tr>
+<td>quickList</td>
+<td>array</td>
+<td>[]</td>
+<td>使用快速搜索模式，通过可点击的文本来进行搜索，例如点击一个超链接。</td>
+</tr>
+<tr>
+<td>quickListClass</td>
+<td>string</td>
+<td>quick</td>
+<td>快速搜索列表项的class名称。</td>
+</tr>
+<tr>
+<td>quickListClear</td>
+<td>string</td>
+<td>''</td>
+<td>Label for the clear filtering quick list item</td>
+</tr>
+<tr>
+<td>quickListGroupTag</td>
+<td>string</td>
+<td>''</td>
+<td>Tag name surrounding quick list items</td>
+</tr>
+<tr>
+<td>quickListTag</td>
+<td>string</td>
+<td>a</td>
+<td>快速搜索列表项的标签名称。</td>
+</tr>
+<tr>
+<td>visibleClass</td>
+<td>string</td>
+<td>visible</td>
+<td>可见行的class名称。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>jQuery.FilterTable表格搜索过滤插件的github地址为：<a href="https://github.com/sunnywalker/jQuery.FilterTable" target="\_blank">https://github.com/sunnywalker/jQuery.FilterTable</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1703/201703241539.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201703244420.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_469">
+                                <h3 class="post-title">
+                                    js和CSS3仿宝丽莱Polaroid图片相册画廊
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

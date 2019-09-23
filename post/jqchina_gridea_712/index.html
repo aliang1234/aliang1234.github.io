@@ -1,0 +1,378 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于SVG clipPath的预览图变形特效幻灯片 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于SVG clipPath的预览图变形特效幻灯片
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1607/201607281526.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1607/201607281526.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201607283792.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款基于SVG clipPath的预览图变形特效幻灯片。该幻灯片特效结合SVG和clipPath元素制作路径变形动画，在幻灯片前后切换时，前后预览图平滑的变形过渡到屏幕中间。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款基于<a href="http://www.htmleaf.com/html5/SVG/">SVG</a> clipPath的预览图变形特效幻灯片。该幻灯片特效结合<a href="http://www.htmleaf.com/html5/SVG/">SVG</a>和clipPath元素制作路径变形动画，在幻灯片前后切换时，前后预览图平滑的变形过渡到屏幕中间。</p>
+<p>该幻灯片特效的SVG动画使用<a href="http://snapsvg.io/" target="\_blank">Snap.svg</a>来制作。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该幻灯片特效的HTML结构包含3个无序列表：一个是<code>ul.gallery</code>，一个<code>ul.navigation</code>是前后导航缩略图，<code>ul.caption</code>是各个图片的描述信息。</p>
+<p>在<code>ul.gallery</code>中的每一个列表项由一个<code>.svg-wrapper</code>元素来包裹一个<code>&lt;svg&gt;</code>元素。在<code>&lt;svg&gt;</code>元素中又包含一个<code>&lt;clipPath&gt;</code>元素，它用于改变图片的剪裁区域。还有一个<code>&lt;image&gt;</code>元素，它的<code>clip-path</code>属性的URL指向<code>&lt;clipPath&gt;</code>元素的ID。最后还有一个<code>&lt;use&gt;</code>元素，它的<code>xlink:href</code>属性指向<code>&lt;clipPath&gt;</code>元素中<code>&lt;path&gt;</code>路径的ID。</p>
+<pre class="brush:html">
+&lt;div class="cd-svg-clipped-slider" data-selected="M780,0H20C8.954,0,0,8.954,0,20v760c0,11.046,8.954,20,20,20h760c11.046,0,20-8.954,20-20V20 C800,8.954,791.046,0,780,0z" data-lateral="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"&gt;
+&lt;div class="gallery-wrapper"&gt;
+&lt;ul class="gallery"&gt;
+&lt;li class="left"&gt;
+&lt;div class="svg-wrapper"&gt;
+&lt;svg viewBox="0 0 800 800"&gt;
+&lt;title&gt;Animated SVG&lt;/title&gt;
+&lt;defs&gt;
+&lt;clipPath id="cd-image-1"&gt;
+&lt;path id="cd-morphing-path-1" d="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"/&gt;
+&lt;/clipPath&gt;
+&lt;/defs&gt;
+<p>&lt;image height='800px' width=&quot;800px&quot; clip-path=&quot;url(#cd-image-1)&quot; xlink:href=&quot;img/img-01.jpg&quot;&gt;&lt;/image&gt;<br>
+&lt;use xlink:href=&quot;#cd-morphing-path-1&quot; class=&quot;cover-layer&quot; /&gt;<br>
+&lt;/svg&gt;<br>
+&lt;/div&gt; &lt;!-- .svg-wrapper --&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;li class=&quot;selected&quot;&gt;<br>
+&lt;div class=&quot;svg-wrapper&quot;&gt;<br>
+&lt;svg viewBox=&quot;0 0 800 800&quot;&gt;<br>
+&lt;title&gt;Animated SVG&lt;/title&gt;<br>
+&lt;defs&gt;<br>
+&lt;clipPath id=&quot;cd-image-2&quot;&gt;<br>
+&lt;path id=&quot;cd-morphing-path-2&quot; d=&quot;M780,0H20C8.954,0,0,8.954,0,20v760c0,11.046,8.954,20,20,20h760c11.046,0,20-8.954,20-20V20 C800,8.954,791.046,0,780,0z&quot;/&gt;<br>
+&lt;/clipPath&gt;<br>
+&lt;/defs&gt;</p>
+<p>&lt;image height='800px' width=&quot;800px&quot; clip-path=&quot;url(#cd-image-2)&quot; xlink:href=&quot;img/img-02.jpg&quot;&gt;&lt;/image&gt;<br>
+&lt;use xlink:href=&quot;#cd-morphing-path-2&quot; class=&quot;cover-layer&quot; /&gt;<br>
+&lt;/svg&gt;<br>
+&lt;/div&gt; &lt;!-- .svg-wrapper --&gt;<br>
+&lt;/li&gt;</p>
+<p>&lt;!-- other slides here --&gt;<br>
+&lt;/ul&gt;</p>
+<p>&lt;nav&gt;<br>
+&lt;ul class=&quot;navigation&quot;&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot; class=&quot;prev&quot;&gt;Prev&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;#0&quot; class=&quot;next&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;<br>
+&lt;/div&gt;</p>
+<p>&lt;ul class=&quot;caption&quot;&gt;<br>
+&lt;li class=&quot;left&quot;&gt;Lorem ipsum dolor&lt;/li&gt;<br>
+&lt;li class=&quot;selected&quot;&gt;Consectetur adipisicing elit&lt;/li&gt;<br>
+&lt;!-- other captions here --&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/div&gt; &lt;!-- .cd-svg-clipped-slider --&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>默认情况下，<code>ul.gallery</code>中的所有列表元素都使用绝对定位方式，并且透明度都设置为0，并使用<code>translateX()</code>函数将它们移动到右边，同时将它们缩小为0.4倍。</p>
+<pre class="brush:css">
+.cd-svg-clipped-slider .gallery li {
+/* slider images */
+position: absolute;
+z-index: 1;
+top: 0;
+left: 25\%;/* (100\% - width)/2 */
+width: 50\%;
+height: 100\%;
+opacity: 0;
+transform: translateX(75\%) scale(0.4);
+transition: opacity .3s, transform .3s ease-in-out;
+}
+</pre>
+<p>当前被选择的图片会被添加<code>.selected</code> class类，该class类将图片移动会屏幕的中间，同时对它进行放大操作。</p>
+<pre class="brush:css">
+.cd-svg-clipped-slider .gallery li.selected {
+/* slide in the center */
+position: relative;
+z-index: 3;
+opacity: 1;
+transform: translateX(0) scale(1);
+}
+</pre>
+<p><code>.left</code>和<code>.right</code> class用于在当前图片的左右两侧显示前后预览图片。<code>.left</code> class的另一个作用是将预览图片移动到左侧。</p>
+<pre class="brush:css">
+.cd-svg-clipped-slider .gallery li.left {
+/* slides on the left */
+transform: translateX(-75\%) scale(0.4);
+}
+.cd-svg-clipped-slider .gallery li.left, 
+.cd-svg-clipped-slider .gallery li.right {
+/* .right -&gt; slide visible on the right */
+z-index: 2;
+opacity: 1;
+} 
+</pre>
+<p>当一个新的幻灯片slide被选择的时候，<code>&lt;path&gt;</code>元素用于剪裁图片，如果是当前选择的图片，则完全显示，左右两侧的预览图则只显示一部分。</p>
+<p>另外，上面的这些class类页用于控制图片的描述信息的显示和隐藏。默认情况下，图片的描述信息也是被隐藏和移动到屏幕的右侧。<code>.selected</code> class用于显示当前被选择的图片的描述信息，<code>.left</code> class用于隐藏描述信息，并将它们移动到屏幕的左侧。</p>
+<pre class="brush:css">
+.cd-svg-clipped-slider .caption li {
+/* slide titles */
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+text-align: center;
+width: 100\%;
+transform: translateX(100px);
+opacity: 0;
+transition: opacity .3s, transform .3s ease-in-out;
+}
+.cd-svg-clipped-slider .caption li.selected {
+/* slide visible in the center */
+z-index: 2;
+position: relative;
+transform: translateX(0);
+opacity: 1;
+}
+.cd-svg-clipped-slider .caption li.left {
+/* slide hidden on the left */
+transform: translateX(-100px);
+}
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> JavaScript</h5>
+<p>该幻灯片特效的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>代码中创建了一个<code>svgClippedSlider</code>对象，并通过<code>bindEvents()</code>方法来绑定事件。</p>
+<pre class="brush:js">
+function svgClippedSlider(element) {
+this.element = element;
+this.slidesGallery = this.element.find('.gallery').children('li');
+this.slidesCaption = this.element.find('.caption').children('li');
+this.slidesNumber = this.slidesGallery.length;
+this.selectedSlide = this.slidesGallery.filter('.selected').index();
+// ....
+<p>this.bindEvents();<br>
+}</p>
+<p>svgClippedSlider.prototype.bindEvents = function() {<br>
+var self = this;<br>
+//detect click on one of the slides<br>
+this.slidesGallery.on('click', function(event){<br>
+if( !$(this).hasClass('selected') ) {<br>
+//determine new slide index and show it<br>
+var newSlideIndex = ( $(this).hasClass('left') )<br>
+? self.showPrevSlide(self.selectedSlide - 1)<br>
+: self.showNextSlide(self.selectedSlide + 1);<br>
+}<br>
+});<br>
+}<br>
+</pre></p>
+<p><code>showPrevSlide</code>和<code>showNextSlide</code>用于显示前一个和下一个幻灯片。这些函数用于为指定的幻灯片图片的描述信息添加和移除相应的class类，并修改<code>&lt;clipPath&gt;</code>元素中的<code>&lt;path&gt;</code>元素的<code>d</code>属性，用来对图片制作路径剪裁。</p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1607/201607281526.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201607283792.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_713">
+                                <h3 class="post-title">
+                                    移动端优先且支持jQuery和Zepto的模态对话框插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

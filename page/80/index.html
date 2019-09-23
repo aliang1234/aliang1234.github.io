@@ -1,0 +1,1257 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_264">
+                        jQuery和CSS3斑马线样式range滑块特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_264" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807301415.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3斑马线样式range滑块特效。该range滑块通过css3将普通的range滑块渲染成斑马线样式，并通过jquery代码来控制滑块数值的显示。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3斑马线样式range滑块特效。该range滑块通过css3将普通的range滑块渲染成斑马线样式，并通过jquery代码来控制滑块数值的显示。
+
+
+
+ 使用方法
+在页面中引入jquery和bootstrap.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrapcss&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该range滑块的基本HTML结构如下：
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;row pad-15&#34;&amp;gt;
+&amp;lt;div class=&#34;col-md-offset-2 col-md-8&#34;&amp;gt;
+&amp;lt;div class=&#34;range-slider&#34;&amp;gt;
+&amp;lt;input type=&#34;range&#34; value=&#34;150&#34; min=&#34;0&#34; max=&#34;500&#34;&amp;gt;
+&amp;lt;span class=&#34;range-value&#34;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;range-slider&amp;quot;&amp;gt;
+&amp;lt;input type=&amp;quot;range&amp;quot; value=&amp;quot;280&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;500&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;range-value&amp;quot;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;range-slider&amp;quot;&amp;gt;
+&amp;lt;input type=&amp;quot;range&amp;quot; value=&amp;quot;360&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;500&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;range-value&amp;quot;&amp;gt;0&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+然后通过下面的CSS样式来对滑块进行美化，将它渲染为斑马线样式。
+
+.range-slider{ margin: 50px 0 0 0; }
+.range-slider input[type=&#34;range&#34;]{
+width: calc(100\% - (68px));
+height: 12px;
+background: #f8fc04;
+background-image: repeating-linear-gradient(28deg, transparent, transparent 10px, #08b2e3 10px, #08b2e3 20px);
+box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+outline: none;
+float: left;
+-webkit-appearance: none;
+position: relative
+}
+.range-slider input[type=&#34;range&#34;]::-webkit-slider-thumb{
+width: 35px;
+height: 35px;
+background: #2c2144;
+border-left: 5px solid #08b2e3;
+border-right: 5px solid #08b2e3;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+transition: all 0.15s ease 0s;
+}
+.range-slider input[type=&#34;range&#34;]::-webkit-slider-thumb:hover,
+.range-slider input[type=&#34;range&#34;]:active::-webkit-slider-thumb{ background: #08b2e3; }
+.range-slider input[type=&#34;range&#34;]::-moz-range-thumb{
+width: 25px;
+height: 35px;
+background: #2c2144;
+border-radius: 0;
+border: none;
+border-left: 5px solid #08b2e3;
+border-right: 5px solid #08b2e3;
+cursor: pointer;
+transition: all 0.15s ease 0s;
+}
+.range-slider input[type=&#34;range&#34;]::-moz-range-thumb:hover,
+.range-slider input[type=&#34;range&#34;]:active::-moz-range-thumb{ background: #08b2e3; }
+.range-slider .range-value{
+display: inline-block;
+width: 50px;
+height: 50px;
+line-height: 50px;
+background: #fff;
+margin-left: 8px;
+font-size: 15px;
+font-weight: 600;
+color: #000;
+text-align: center;
+position: relative;
+top: -20px;
+-webkit-clip-path: polygon(40\% 0\%, 40\% 20\%, 100\% 20\%, 100\% 80\%, 40\% 80\%, 40\% 100\%, 0\% 50\%);
+clip-path: polygon(40\% 0\%, 40\% 20\%, 100\% 20\%, 100\% 80\%, 40\% 80\%, 40\% 100\%, 0\% 50\%);
+}
+::-moz-range-track{
+background: transparent;
+border: 0;
+}
+
+
+ JavaScript
+最后通过下面的jquery代码，来在拖动滑块时，动态显示滑块的数值。
+
+$(document).ready(function(){
+var rangeSlider = function(){
+var slider = $(&#39;.range-slider&#39;),
+range = $(&#39;.range-slider input[type=&#34;range&#34;]&#39;),
+value = $(&#39;.range-value&#39;);
+slider.each(function(){
+value.each(function(){
+var value = $(this).prev().attr(&#39;value&#39;);
+$(this).html(value);
+});
+range.on(&#39;input&#39;, function(){
+$(this).next(value).html(this.value);
+});
+});
+};
+rangeSlider();
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_264">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_265">
+                        jQuery酒店类入住日期时间范围选择器插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_265" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1807/201807141510.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+t-datepicker是一款jQuery酒店类入住日期时间范围选择器插件。该jquery日期选择器提供多个配置参数和方法，可以创建响应式的、灵活的、多种主题效果的日期范围选择器。
+内容：
+
+
+简要教程
+
+
+t-datepicker是一款jQuery酒店类入住日期时间范围选择器插件。该jquery日期选择器提供多个配置参数和方法，可以创建响应式的、灵活的、多种主题效果的日期范围选择器。它的特点还有：
+
+
+
+内置10种主题效果。
+同一个页面可以生成多个日期选择器实例。
+可以自定义日期格式。
+提供大量有用的配置参数和API。
+适用于酒店类入住时间范围选择。
+
+
+ 使用方法
+在页面中引入下面的文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;public/theme/css/t-datepicker.min.css&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;public/theme/css/themes/t-datepicker-main.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;public/theme/js/t-datepicker.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ HTML结构
+最简单的使用方法如下：创建一个带t-datepickerclass类的容器。
+
+&amp;lt;div class=&#34;t-datepicker&#34;&amp;gt;
+&amp;lt;div class=&#34;t-check-in&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;t-check-out&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+在初始化插件之后，生成的完整HTML如下：
+
+&amp;lt;div class=&#34;t-datepicker&#34;&amp;gt;
+&amp;lt;div class=&#34;t-check-in&#34;&amp;gt;
+&amp;lt;div class=&#34;t-dates t-date-check-in&#34;&amp;gt;
+&amp;lt;label class=&#34;t-date-info-title&#34;&amp;gt;Check In&amp;lt;/label&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;input type=&#34;hidden&#34; class=&#34;t-input-check-in&#34; value=&#34;null&#34; name=&#34;start&#34;&amp;gt;
+&amp;lt;div class=&#34;t-datepicker-day&#34;&amp;gt;
+&amp;lt;table class=&#34;t-table-condensed&#34;&amp;gt;
+&amp;lt;!-- Date theme calendar --&amp;gt;
+&amp;lt;/table&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;t-check-out&#34;&amp;gt;
+&amp;lt;div class=&#34;t-dates t-date-check-out&#34;&amp;gt;
+&amp;lt;label class=&#34;t-date-info-title&#34;&amp;gt;Check Out&amp;lt;/label&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;input type=&#34;hidden&#34; class=&#34;t-input-check-out&#34; value=&#34;null&#34; name=&#34;end&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过tDatePicker方法来初始化该日期范围选择器。
+
+$(document).ready(function(){
+$(&#39;.t-datepicker&#39;).tDatePicker();
+});
+
+
+ 颜色主题
+t-datepicker日期选择器有10种内置颜色主题，使用时引入相应的CSS文件。
+
+t-datepicker-blue.css
+t-datepicker-bluegrey.css
+t-datepicker-cyan.css
+t-datepicker-green.css
+t-datepicker-lime.css
+t-datepicker-main.css
+t-datepicker-orange.css
+t-datepicker-purple.css
+t-datepicker-teal.css
+t-datepicker-yellow.css
+
+
+ 配置参数
+t-datepicker日期选择器的可用配置参数有：
+
+
+autoClose：是否在选择日期范围后关闭选择器。默认值为true。
+
+durationArrowTop：iconArrowTop选项的动画持续时间。默认值为200。
+
+formatDate：格式化日期格式。可用选项有：yyyy-mm-dd , yyyy-dd-mm , mm-dd-yyyy , dd-mm-yyyy。
+
+dateCheckIn：如果没有指定该参数，默认使用startDate作为入住开始时间。
+
+dateCheckOut：如果没有指定该参数，默认使用limitNextMonth的最后日期作为离店时间。
+
+startDate：第一次选择的日期为开始日期，默认为今天。
+
+endDate：第二次选择的日期为结束日期，如果没有指定，插件会自动根据numCalendar和limitNextMonth来指定。
+
+limitPrevMonth：可选的最小月份，默认为0。
+
+limitNextMonth：可选的最大月份，默认为11。
+
+limitDateRanges：可选的日期范围，默认为31。
+
+showFullDateRanges：当鼠标滑过日期时，显示入住几晚。
+
+更多的配置参数和API请参看：https://t-datepicker.getqwerty.com/documents.html
+ t-datepicker jQuery酒店类入住日期时间范围选择器插件的github地址为：https://github.com/crazychicken/t-datepicker
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_265">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_266">
+                        三面板布局js图片轮播特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_266" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1806/201806291500.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款三面板布局js图片轮播特效。该特效中，轮播图片分为左中右三个面板，中间展示的的大图，两侧显示小图。当点击小图时，通过TweenMax制作动画，将它展示到中间。
+内容：
+
+
+简要教程
+
+
+这是一款三面板布局js图片轮播特效。该特效中，轮播图片分为左中右三个面板，中间展示的的大图，两侧显示小图。当点击小图时，通过TweenMax制作动画，将它展示到中间。
+
+
+由于该特效中使用了CSS变量，所以不是所以的浏览器都支持该特效。
+另外，该特效中还带有鼠标hover时的图片放大效果。鼠标移动到“Explore”超链接上，图片就会稍稍的放大。
+下面是该特效的一些屏幕截图效果。
+
+ 该三面板布局js图片轮播特效的github地址为：https://github.com/codrops/RevealSlideshow/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_266">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_267">
+                        js和CSS3炫酷图片画廊插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-info">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_267" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811271437.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+LGallery是一款非常炫酷的js图片画廊插件。LGallery采用响应式设计，支持手机移动端，可以快速的制作图片画廊、轮播图、lightbox等。
+内容：
+
+
+简要教程
+
+
+LGallery是一款非常炫酷的js图片画廊插件。LGallery采用响应式设计，支持手机移动端，可以快速的制作图片画廊、轮播图、lightbox等。
+
+ 使用方法
+在页面中引入lgallery.min.css和lgallery.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;/path/to/lgallery.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;/path/to/lgallery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+ HTML结构
+在一个div元素中添加data-attributes属性，取值可以是：lgallery, lgparent, lgslider, lgpreview 或者 lgcarusel
+
+&amp;lt;div class=example data-lgallery=&#34;img/1.jpg,img/2.jpg, img/3.jpg&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+然后通过initLG()来初始化该插件。
+
+initLG()
+
+ LGallery图片画廊插件的github网址为：https://github.com/mopcweb/LGallery
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_267">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_268">
+                        支持三种状态的jQuery开关按钮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_268" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811081526.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+ijToggler是一款支持三种状态的jQuery开关按钮插件。该开关按钮插件实用简单，支持选择状态，未选状态和中间状态三种状态。
+内容：
+
+
+简要教程
+
+
+ijToggler是一款支持三种状态的jQuery开关按钮插件。该开关按钮插件实用简单，支持选择状态，未选状态和中间状态三种状态。
+
+ 使用方法
+在页面中引入jquery、jtoggler.js和jtoggler.styles.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;jtoggler.styles.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jtoggler.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+实用类型为checkbox的input组件来创建开关按钮。
+
+&amp;lt;input type=&#34;checkbox&#34; class=&#34;jtoggler&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; checked class=&#34;jtoggler&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; disabled class=&#34;jtoggler&#34;&amp;gt;
+&amp;lt;input type=&#34;checkbox&#34; checked disabled class=&#34;jtoggler&#34;&amp;gt;
+
+要实现多种状态，可以添加data-jtmulti-state属性。
+
+&amp;lt;input type=&#34;checkbox&#34; class=&#34;jtoggler&#34; data-jtmulti-state&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过jtoggler()方法来初始化该插件。
+
+$(function(){
+$(&#39;.jtoggler&#39;).jtoggler();
+});
+
+当开关按钮的状态发生改变时，可以通过下面的方法来查看。
+
+$(document).on(&#39;jt:toggled&#39;, function(event, target) {
+console.log(event, target);
+console.info($(target).prop(&#39;checked&#39;))
+});
+(document).on(&amp;#039;jt:toggled:multi&amp;#039;, function (event, target) {
+console.log(event, target);
+console.info((target).parent().index())
+});
+
+ 该jQuery开关按钮插件的github网址为：https://github.com/sinneren/jToggler
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_268">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_269">
+                        jQuery和CSS3精美时钟插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-banana">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_269" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810241420.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3精美时钟插件。该插件使用简单，易于扩展，采用响应式设计，可以制作出非常逼真的时钟效果。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3精美时钟插件。该插件使用简单，易于扩展，采用响应式设计，可以制作出非常逼真的时钟效果。它的特点还有：
+
+响应式设计，可调节、可定制。
+代码简洁，使用简单。
+支持三种尺寸的时钟显示：X small, X large和250x250的原始尺寸。
+时钟动画使用CSS3动画来制作。
+采用服务器时间，提高时间的精确度。
+支持Chrome, Safari, Firefox, Opera, IE7+, IOS, Android 和 windows phone。
+
+
+ 使用方法
+在页面中引入codehim-clock.css文件，以及jquery和jquery.codehim.clock.js文件。
+
+&amp;lt;link href=&#34;css/codehim-clock.css&#34; rel=&#34;stylesheet&#34;&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.codehim.clock.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+使用一个&amp;lt;div&amp;gt;作为时钟的容器。
+
+&amp;lt;div class=&#34;clock-place&#34;&amp;gt; &amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该jquery时钟插件。
+
+$(document).ready(function(){
+$(&amp;quot;.clock-place&amp;quot;).CodehimClock();
+});
+
+或者在初始化时传入参数，来指定时钟的尺寸。
+
+$(document).ready(function(){
+$(&amp;quot;.clock-place&amp;quot;).CodehimClock({
+clockSize: &amp;quot;original&amp;quot;,
+});
+});
+
+ 该jQuery和CSS3精美时钟插件的github地址为：https://github.com/CodeHimBlog/jquery-codehim-analog-clock
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_269">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_270">
+                        Bootstrap4表单浮动标签插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-success">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_270" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810061503.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于Bootstrap4表单浮动标签插件。该插件使用 Material Design 设计风格，可以为bootstrap表单实现占位标签的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于Bootstrap4表单浮动标签插件。该插件使用 Material Design 设计风格，可以为bootstrap表单实现占位标签的动画效果。
+
+ 使用方法
+在页面中引入jquery和bootstrap4相关文件，以及bootstrap-float-label.css和bootstrap-float-label.js文件。
+
+&amp;lt;link href=&#34;bootstrap/4.1.0/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/bootstrap-float-label.css&#34;&amp;gt;
+&amp;lt;script src=&#34;js/jquery-1.11.0.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/popper.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;bootstrap/4.1.0/js/bootstrap.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/bootstrap-float-label.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML
+在form-group中添加floating-control-group class类。
+
+&amp;lt;form&amp;gt;
+&amp;lt;div class=&#34;form-group floating-control-group&#34;&amp;gt;
+&amp;lt;label for=&#34;txtFloatingUsername&#34;&amp;gt;Username&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;email&#34; class=&#34;form-control&#34; id=&#34;txtFloatingUsername&#34; placeholder=&#34;Enter Username&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;form-group floating-control-group&#34;&amp;gt;
+&amp;lt;label for=&#34;txtFloatingPassword&#34;&amp;gt;Password&amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;password&#34; class=&#34;form-control&#34; id=&#34;txtFloatingPassword&#34; placeholder=&#34;Enter Password&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;form-group floating-control-group&#34;&amp;gt;
+&amp;lt;label for=&#34;txtFloatingComments&#34;&amp;gt;Comments&amp;lt;/label&amp;gt;
+&amp;lt;textarea class=&#34;form-control&#34; id=&#34;txtFloatingComments&#34; rows=&#34;3&#34;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加完毕之后，通过floatingLabel()方法来初始化该插件。
+
+$(function(){
+$(&#39;.form-group&#39;).floatingLabel();
+});
+
+ 该Bootstrap4表单浮动标签插件的github地址为：https://github.com/wgarrido/bootstrap-float-label
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_270">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_271">
+                        基于SVG的jquery手势密码解锁插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_271" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1809/201809121522.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款仿安卓的基于SVG的jquery手势密码解锁插件。你可以设置手势密码，以及验证手势密码，使用非常方便。
+内容：
+
+
+简要教程
+
+
+这是一款仿安卓的基于SVG的jquery手势密码解锁插件。你可以设置手势密码，以及验证手势密码，使用非常方便。
+
+ 使用方法
+在页面中引入jquery和patternlock.js文件，以及patternlock.css文件。
+
+&amp;lt;link href=&#34;patternlock.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;patternlock.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+创建一个有9个点的手势解锁屏幕。
+
+&amp;lt;svg class=&#34;patternlock&#34; id=&#34;lock&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&amp;gt;
+&amp;lt;g class=&#34;lock-actives&#34;&amp;gt;&amp;lt;/g&amp;gt;
+&amp;lt;g class=&#34;lock-lines&#34;&amp;gt;&amp;lt;/g&amp;gt;
+&amp;lt;g class=&#34;lock-dots&#34;&amp;gt;
+&amp;lt;circle cx=&#34;20&#34; cy=&#34;20&#34; r=&#34;2&#34;/&amp;gt;
+&amp;lt;circle cx=&#34;50&#34; cy=&#34;20&#34; r=&#34;2&#34;/&amp;gt;
+&amp;lt;circle cx=&#34;80&#34; cy=&#34;20&#34; r=&#34;2&#34;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;20&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;80&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;20&amp;quot; cy=&amp;quot;80&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;50&amp;quot; cy=&amp;quot;80&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;circle cx=&amp;quot;80&amp;quot; cy=&amp;quot;80&amp;quot; r=&amp;quot;2&amp;quot;/&amp;gt;
+&amp;lt;/g&amp;gt;
+&amp;lt;svg&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该插件。
+
+var e = document.getElementById(&#39;lock&#39;)
+var p = new PatternLock(e, {
+onPattern: function() {
+this.success()
+}
+});
+
+
+ 方法
+
+
+clear()：清除当前的模式。
+
+success()：验证输入的模式是否成功。
+
+error()：验证输入的模式是否失败。
+
+getPattern()：获取当前的而输入模式，得到模式或者NaN。
+
+ 该基于SVG的jquery手势密码解锁插件的github地址为：https://github.com/tympanix/pattern-lock-js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_271">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_272">
+                        漂亮的jQuery对话框插件Dialogify
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_272" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808281505.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery对话框插件。该对话框插件使用dialog元素和 HTMLDialogElement API来制作对话框， 可以生成漂亮的对话框效果。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery对话框插件。该对话框插件使用dialog元素和 HTMLDialogElement API来制作对话框， 可以生成漂亮的对话框效果。
+
+ 使用方法
+在页面中引入jquery和dialogify.min.js文件和样式文件dialogify.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/dialogify.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/dialogify.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+最简单的使用方法如下：
+
+Dialogify.alert(&#39;这是一个Alert&#39;);
+
+可以创建带确认和取消按钮的对话框。
+
+Dialogify.confirm(&#39;Are You Sure?&#39;, {
+ok: function(){
+// confirm callback
+},
+cancel: function(){
+// cancel callback
+}
+});
+
+也可以创建prompt对话框。
+
+Dialogify.prompt(&#39;What\&#39;s your name ?&#39;, {
+placeholder: &#39;Enter your name&#39;,
+ok: function(val){
+Dialogify.alert(&#39;Hi! &#39; + val);
+},
+cancel: function(){
+Dialogify.alert(&#39;canceled&#39;);
+}
+});
+
+还可以通过面板创建自定义的对话框。
+
+&amp;lt;script type=&#34;text/template&#34; id=&#34;template&#34;&amp;gt;
+Modal Content Here
+&amp;lt;/script&amp;gt;
+new Dialogify(&#39;#template&#39;)
+.title(&#39;Dialogify&#39;) // dialog title
+.buttons([ // custom buttons
+{
+text: &#39;Cancel&#39;,
+click: function(e){
+console.log(&#39;cancel click&#39;);
+this.close();
+}
+},
+{
+text: &#39;Okey&#39;,
+type: Dialogify.BUTTON_PRIMARY,
+click: function(e){
+console.log(&#39;ok click, title value: &#39; + this.$content.find(&#39;input.text-field&#39;).val());
+}
+}
+])
+.show(); // shows the modal
+});
+
+通过HTML标签创建对话框。
+
+let html = &#39;modal content here&#39;;
+let dialogify = new Dialogify(html)
+.title(&#39;Modal Dialogify&#39;)
+.buttons([
+{
+type: Dialogify.BUTTON_DANGER,
+click: function(e){
+console.log(&#39;danger-style button click&#39;);
+this.close();
+}
+},
+&#39;&amp;lt;a class=&amp;quot;btn btn-insert&amp;quot; href=&amp;quot;javascript:;&amp;quot;&amp;gt;other action&amp;lt;/a&amp;gt;&#39;
+], {position: Dialogify.BUTTON_CENTER});
+dialogify.showModal();
+
+通过ajax调用内容。
+
+var options = {
+ajaxPrefix: &#39;&#39;,
+ajaxData: {var1: &#39;hello world&#39;},
+ajaxComplete: function(){
+console.log(&#39;ajax complete&#39;);
+this.buttons([{
+type: Dialogify.BUTTON\_PRIMARY
+}]);
+}
+};
+new Dialogify(&#39;ajax.html&#39;, options)
+.title(&#39;Ajax Dialogify&#39;)
+.show();
+
+ 该jQuery对话框插件的github地址为：https://github.com/OneupNetwork/dialogify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_272">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_273">
+                        jQuery制作DOM元素倾斜特效插件Skew.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_273" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1808/201808111421.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+Skew.js是一款能够制作DOM元素倾斜特效的jQuery插件。你可以控制元素在x和y轴上多少像素进行倾斜，还能够控制在屏幕尺寸改变时，更新元素的倾斜效果。
+内容：
+
+
+简要教程
+
+
+Skew.js是一款能够制作DOM元素倾斜特效的jQuery插件。你可以控制元素在x和y轴上多少像素进行倾斜，还能够控制在屏幕尺寸改变时，更新元素的倾斜效果。
+
+ 使用方法
+在页面中引入skew.min.js文件，jQuery不是必须的，如果比想将它作为jQuery插件来使用，就引入jQuery。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;skew.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+作为jQuery插件来使用：
+
+$(function() {
+$(&#39;selector&#39;).skew({x: 50});
+});
+
+作为js插件来使用：
+
+window.onload = function() {
+var Skew = new Skew(&#39;selector&#39;, {x: 50});
+}
+
+
+ 插件调用语法
+JavaScript
+
+var skewObj = new Skew(&#39;selector&#39;, {option: value});
+//example
+var skewObj = new Skew(&#39;.skew&#39;, {x: 50, y: 100, breakpoints: [{break: 768, x: 30}]});
+skewObject.method(argument);
+//example
+skewObj.update({x: 30, breakpoints: [{break: 768, x: 15}]});
+
+jQuery
+
+$(&#39;selector&#39;).skew({option: value});
+//example
+$(&#39;.skew&#39;).skew({x: 50, y: 100, breakpoints: [{break: 768, x: 30}]});
+(′selector′).skew(′method′,argument);//example(&amp;#x27;selector&amp;#x27;).skew(&amp;#x27;method&amp;#x27;, argument);
+//example
+(′selector′).skew(′method′,argument);//example(&#39;.skew&#39;).skew(&#39;update&#39;, {x: 30, breakpoints: [{break: 768, x: 15}]});
+
+
+ 配置参数
+
+
+
+
+参数
+类型
+默认值
+描述
+
+
+
+
+x
+int
+0
+元素在x轴多少像素进行倾斜
+
+
+y
+int
+0
+元素在y轴多少像素进行倾斜
+
+
+unskewContent
+bool/string
+false
+元素中不想进行倾斜的元素
+
+
+breakpoints
+array
+[]
+屏幕分辨率断点对象。
+
+
+debounce
+boolean
+true
+在屏幕尺寸改变时消除抖动
+
+
+debounceTime
+int
+50
+消抖的时间，单位毫秒
+
+
+
+
+ 该jQuery制作DOM元素倾斜特效插件的github地址为：https://github.com/wiserim/Skew
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_273">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/79/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/81/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

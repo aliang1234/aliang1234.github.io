@@ -1,0 +1,1215 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_613">
+                        基于jQuery的页面便签插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_613" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611241453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+color-sticker是一款基于jQuery的页面便签插件。它是一个可以任意拖拽，保存，删除，导入和定制颜色的页面便签插件。
+内容：
+
+
+简要教程
+
+
+color-sticker是一款基于jQuery的页面便签插件。它是一个可以任意拖拽，保存，删除，导入和定制颜色的页面便签插件。主要的功能点有以下几点：
+
+点击右上方的蓝色+按钮，可以在页面中添加一个便签,用户可以在便签中输入需要记录的文字。
+点击便签右下角的保存按钮，便签里的内容以及便签的位置可以通过回调函数持久化到文件或数据库。
+点击便签右上方的关闭按钮可以关闭便签,回调函数会得到该便签的stickerId。
+按住便签上方的胶带，可以在屏幕上拖拽便签。
+插件支持通过数组格式导入，将保存的便签还原到页面。
+
+
+ 使用方法
+在页面中引入样式文件color-sticker.css和jquery.min.js、colorsticker.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/color-sticker.css&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script src=&#34;colorsticker.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+采用默认配置引入便签插件，页面加载后，页面右上方会出现添加便签的按钮。
+
+$(&#39;body&#39;).sticker();
+
+
+ 配置参数
+color-sticker页面便签插件的可用配置参数如下：
+
+$(&#39;body&#39;).sticker({
+color:&#39;purple&#39;, //便签默认是黄色，可以选择pink,green,blue,purple
+width:&#39;200px&#39;,//便签的宽度，默认是200px
+height:&#39;300px&#39;, //便签的高度，默认是200px
+saveStickerCallback: function(sticker){ //保存便签的回调方法，参数是sticker对象，包括便签的位置和内容信息
+alert(&#39;sticker info: left &#39; + sticker.left + &#39;,top &#39; + sticker.top + &#39;,content &#39; + sticker.content);
+}，
+closeStickerCallback： function(stickerId){//删除便签的回调方法，参数是便签的stickerId
+alert(stickerId);
+}
+});
+
+
+
+color：便签默认是黄色，可以选择pink,green,blue,purple。
+
+width：便签的宽度，默认是200px。
+
+height：便签的高度，默认是200px。
+
+saveStickerCallback：保存便签的回调方法，参数是sticker对象，包括便签的位置和内容信息。
+
+closeStickerCallback：删除便签的回调方法，参数是便签的stickerId。
+
+
+ 导入便签
+导入便签的格式如下：
+
+/**导入的便签Object有以下属性：
+ *stickerId--用户自定义的便签Id,用于删除便签后便于同时删除后台数据
+ *left--便签与浏览器左侧的距离
+ *top--便签与浏览器上方的边距
+ *content--便签的内容
+ *将便签对象存在一个数组中导入
+**/
+var stickers = [{stickerId:&#39;2&#39;,left:&#39;1000px&#39;, top:&#39;100px&#39;, content:&#39;I\&#39;m Ashley\&#39;s cat&#39;}];
+$(&#39;body&#39;).sticker({
+color:&#39;purple&#39;, //便签默认是黄色，可以选择pink,green,blue,purple
+width:&#39;200px&#39;,//便签的宽度
+height:&#39;300px&#39;, //便签的高度
+saveStickerCallback: function(sticker){ //保存便签的回调方法，参数是sticker对象，包括便签的位置和内容信息
+alert(&#39;sticker info: left &#39; + sticker.left + &#39;,top &#39; + sticker.top + &#39;,content &#39; + sticker.content);
+}，
+closeStickerCallback： function(stickerId){//删除便签的回调方法，参数是便签的stickerId
+alert(stickerId);
+}
+}，stickers);//将导入的便签数组作为插件的第二个参数
+
+
+ 关于作者
+color-sticker页面便签插件的作者是Ashley Lv。关于插件在使用上用任何问题可以联系他。Ashley Lv的联系方式有：
+
+
+ QQ：1005019471
+
+ github：https://github.com/AshleyLv/
+
+
+color-sticker页面便签插件的github地址是：https://github.com/AshleyLv/color-sticker
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_613">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_614">
+                        jquery全屏响应式淡入淡出效果轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_614" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611131439.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jquery全屏响应式淡入淡出效果轮播图插件。该轮播图插件简单实用，兼容ie8浏览器，可以自动切换播放，带淡入淡出的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款jquery全屏响应式淡入淡出效果轮播图插件。该轮播图插件简单实用，兼容ie8浏览器，可以自动切换播放，带淡入淡出的动画效果。
+
+ 使用方法
+在页面中引入jquery和jquery.flexslider-min.js文件。
+
+&amp;lt;script src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/js/jquery.flexslider-min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+实用一个&amp;lt;div&amp;gt;作为轮播图的容器，然后在里面放置一个无序列表。轮播图中的图片以背景图片的方式在每一个列表项中设置。
+
+&amp;lt;div class=&#34;flexslider&#34;&amp;gt;
+&amp;lt;ul class=&#34;slides&#34;&amp;gt;
+&amp;lt;li style=&#34;background:url(images/img1.jpg) 50\% 0 no-repeat;&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li style=&#34;background:url(images/img2.jpg) 50\% 0 no-repeat;&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li style=&#34;background:url(images/img3.jpg) 50\% 0 no-repeat;&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li style=&#34;background:url(images/img4.jpg) 50\% 0 no-repeat;&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li style=&#34;background:url(images/img5.jpg) 50\% 0 no-repeat;&#34;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+为轮播图添加下面的CSS样式：
+
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+/* flexslider */
+.flexslider{position:relative;height:400px;overflow:hidden;background:url(images/loading.gif) 50\% no-repeat;}
+.slides{position:relative;z-index:1;}
+.slides li{height:400px;}
+.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100\%;text-align:center;}
+.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;
+background:url(images/dot.png) right 0 no-repeat;cursor:pointer;}
+.flex-control-nav .flex-active{background-position:0 0;}
+.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+.flex-direction-nav li a.flex-prev{left:40px;background:url(images/prev.png) center center no-repeat;}
+.flex-direction-nav li a.flex-next{right:40px;background:url(images/next.png) center center no-repeat;}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过flexslider()方法来初始化该轮播图。
+
+$(document).ready(function(){
+$(&#39;.flexslider&#39;).flexslider({
+directionNav: true,
+pauseOnAction: false
+});
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_614">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_615">
+                        jquery手机端带农历的万年历插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_615" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1612/201612041512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jquery结合swiper.js来制作的手机端带农历的万年历插件。该万年历类似百度的万年历，带有农历日期。用户可以通过类似iphone的滚轮来选择不同的的日期。
+内容：
+
+
+简要教程
+
+
+这是一款使用jquery结合swiper.js来制作的手机端带农历的万年历插件。该万年历类似百度的万年历，带有农历日期。用户可以通过类似iphone的滚轮来选择不同的的日期。
+
+ 使用方法
+在页面中引入common.css、index.css和swiper-3.3.1.min.css样式文件，以及jquery、swiper-3.3.1.min.js、common.js文件。
+下面是该手机端带农历的万年历插件的一些效果截图。
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_615">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_616">
+                        超酷火箭冲天返回顶部jQuery特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-success">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_616" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608161512.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于gsap的超酷火箭冲天返回顶部jQuery特效。该特效由清萍工作室提供。该返回顶部特效的火箭使用SVG来制作，通过gsap以不同的动画时间和缓动函数来完成返回顶部的效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于gsap的超酷火箭冲天返回顶部jQuery特效。该特效由清萍工作室提供。该返回顶部特效的火箭使用SVG来制作，通过gsap以不同的动画时间和缓动函数来完成返回顶部的效果。该返回顶部特效的DEOM中实现了3个功能：
+
+点击火箭以1.5秒的慢快慢速度旋转冲天而去，然后再旋转回来。
+点击底部“返回顶部”文字按钮也会让火箭做动画消失。
+火箭由悬停特效，该特效由“animate.css”强力驱动，本动画只是提取了其中一个。
+
+
+ 使用方法
+在页面中引入jquery和TweenMax.min.js，以及ScrollToPlugin.min.js文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://cdn.bootcss.com/gsap/1.19.0/TweenMax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://cdn.bootcss.com/gsap/1.19.0/plugins/ScrollToPlugin.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+返回顶部小火箭的HTML结构如下：
+
+&amp;lt;div id=&#34;shangxia2&#34;&amp;gt;
+&amp;lt;span id=&#34;gotop&#34;&amp;gt;
+&amp;lt;img src=&#34;img/huojian.svg&#34; alt=&#34;返回顶部小火箭&#34;&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+为小火箭添加必要的CSS样式：定位方式为fixed，位置固定在页面的右下角。然后在鼠标滑过小火箭时，为小火箭添加rubberBand的animation动画，该动画通过transform函数来对小火箭进行3D缩放。
+
+/* 小火箭css */
+#gotop1 {
+width: 80px;
+position: fixed;
+bottom: 90px;
+cursor: pointer;
+z-index: 99998;
+right: 50\%;
+margin-right: -620px;
+}
+/* 小火箭悬停特效 */
+#gotop1:hover {
+animation: rubberBand 1s;
+}
+@keyframes rubberBand {
+from {
+transform: scale3d(1, 1, 1);
+}
+30% {
+transform: scale3d(1.25, 0.75, 1);
+}
+40% {
+transform: scale3d(0.75, 1.25, 1);
+}
+50% {
+transform: scale3d(1.15, 0.85, 1);
+}
+65% {
+transform: scale3d(.95, 1.05, 1);
+}
+75% {
+transform: scale3d(1.05, .95, 1);
+}
+to {
+transform: scale3d(1, 1, 1);
+}
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来初始化该返回顶部特效。
+
+$(&#34;#gotop&#34;).click(function(e) {
+ TweenMax.to(window, 1.5, {scrollTo:0, ease: Expo.easeInOut});
+ var huojian = new TimelineLite();
+huojian.to(&#34;#gotop1&#34;, 1, {rotationY:720, scale:0.6, y:&#34;+=40&#34;, ease:Power4.easeOut})
+.to(&#34;#gotop1&#34;, 1, {y:-1000, opacity:0, ease:Power4.easeOut}, 0.6)
+.to(&#34;#gotop1&#34;, 1, {y:0, rotationY:0, opacity:1, scale:1, ease: Expo.easeOut, clearProps: &#34;all&#34;}, &#34;1.4&#34;);
+});
+
+该火箭冲天返回顶部特效由清萍工作室投稿提供。
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_616">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_617">
+                        可生成环形文字的纯js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_617" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609051555.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+emblem.js是一款可以生成环形文字的js插件。emblem.js是纯js插件，无任何外部依赖。它通过将每一个字符进行包裹，并通过CSS transform属性将它们分别进行旋转，形成一个完整的圆形。
+内容：
+
+
+简要教程
+
+
+emblem.js是一款可以生成环形文字的js插件。emblem.js是纯js插件，无任何外部依赖。它通过将每一个字符进行包裹，并通过CSS3 transform属性将它们分别进行旋转，形成一个完整的圆形。
+
+ 使用方法
+在页面中引入emblem.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/emblem.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;div&amp;gt;作为文字的容器。
+
+&amp;lt;div class=&#34;emblem&#34;&amp;gt;这里放置你的文字...&amp;lt;/div&amp;gt; 
+
+
+ CSS样式
+emblem.js会将容器中的每一个文字都包裹在一个&amp;lt;span&amp;gt;元素中，你可以为它没设置自己的样式。DEMO中设置的样式为：
+
+html,
+body {
+height: 100\%;
+margin: 0;
+overflow: hidden;
+background: #FFFCEC;
+font-family: &#34;Microsoft YaHei&#34;, Helvetica, Arial,sans-serif;
+}
+.emblem {
+position: absolute;
+left: 0;
+right: 0;
+top: 25vh;
+margin: 0 auto;
+width: 50vh;
+height: 50vh;
+border-radius: 50%;
+font-weight: bold;
+color: #003A6F;
+animation: spinZ 20s linear infinite;
+text-align: center;
+}
+.emblem span {
+position: absolute;
+display: inline-block;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+text-transform: uppercase;
+font-size: 4vh;
+transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+}
+@keyframes spinZ {
+0% {
+transform: rotateZ(360deg);
+}
+100% {
+transform: rotateZ(0deg);
+}
+}
+
+
+ 初始化插件
+可以通过下面的方法来初始化emblem.js插件。
+
+Emblem.init(&#39;.emblem&#39;); 
+
+你也可以在初始化时载传入你需要的文字。
+
+Emblem.init(&#39;.emblem&#39;, &#39;Hello World&#39;); 
+
+emblem.js里程表数字动画特效插件的github地址为：https://github.com/GeorgeHastings/emblem
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_617">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_618">
+                        jQuery网页背景渐变色平滑过渡动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_1">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_618" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1608/201608241456.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery-gradientify是一款可以制作网页背景渐变色平滑过渡动画的jQuery插件。该插件使用简单，它通过参数的方式来提供一组渐变色，并使元素的背景色在这组渐变色之间反复平滑过渡。
+内容：
+
+
+简要教程
+
+
+jquery-gradientify是一款可以制作网页背景渐变色平滑过渡动画的jQuery插件。该插件使用简单，它通过参数的方式来提供一组渐变色，并使元素的背景色在这组渐变色之间反复平滑过渡。
+
+ 使用方法
+在页面中引入jquery2.0+和jquery.gradientify.min.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/jquery/1.11.0/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;dist/jquery.gradientify.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 初始化插件
+例如为&amp;lt;body&amp;gt;元素设置一组背景渐变色过渡动画的js代码如下：
+
+$(&#39;body&#39;).gradientify({
+gradients: [
+{ start: [49,76,172], stop: [242,159,191] },
+{ start: [255,103,69], stop: [240,154,241] },
+{ start: [33,229,241], stop: [235,236,117] }
+]
+}); 
+
+
+ 配置参数
+jquery-gradientify插件的可用配置参数如下：
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+gradients
+[]
+渐变的开始和结束颜色，RGB值，必填参数。
+
+
+angle
+0deg
+渐变的角度，可选参数。
+
+
+fps
+60
+每秒钟的频率。值越大则过渡动画越平滑，但对性能的影响也越大。可选参数。
+
+
+transition\_time
+8
+两个渐变过渡之间的时间间隔。可选参数。
+
+
+
+
+jquery-gradientify背景渐变过渡动画插件的github地址为：https://github.com/codefog/jquery-gradientify
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_618">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_619">
+                        简单的堆叠卡片样式jQuery轮播图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_619" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610051535.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+MxSlider.js是一款堆叠卡片样式的jQuery响应式轮播图插件。该轮播图插件兼容IE8浏览器，采用响应式设计，它在图片切换时，就像一叠扑克牌将最上面一张挪开的效果。
+内容：
+
+
+简要教程
+
+
+MxSlider.js是一款堆叠卡片样式的jQuery响应式轮播图插件。该轮播图插件兼容IE8浏览器，采用响应式设计，它在图片切换时，就像一叠扑克牌将最上面一张挪开的效果。
+
+ 使用方法
+在页面中引入MxSlider.css，jquery和MxSlider.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/MxSlider.css&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/MxSlider.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+该轮播图的基本HTML结构如下：
+ 
+&amp;lt;div class=&#34;sliderWrapper&#34;&amp;gt; 
+&amp;lt;!-- Slider --&amp;gt;
+&amp;lt;div class=&#34;mySlider&#34;&amp;gt;
+&amp;lt;div&amp;gt; 
+&amp;lt;img src=&#34;1.png&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;div class=&#34;sliderDescription&#34;&amp;gt; 
+Slide Description 1
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt; 
+&amp;lt;img src=&#34;2.png&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;div class=&#34;sliderDescription&#34;&amp;gt; 
+Slide Description 2
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt; 
+&amp;lt;img src=&#34;3.png&#34; alt=&#34;&#34;&amp;gt;
+&amp;lt;div class=&#34;sliderDescription&#34;&amp;gt; 
+Slide Description 3
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- Slider --&amp;gt; 
+&amp;lt;/div&amp;gt; 
+ 
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过MxSlider()方法来初始化该轮播图插件。
+
+$(&#39;.mySlider&#39;).MxSlider({
+autoPlay: true,
+dots: true,
+timeSlide: 500
+}); 
+
+
+ 配置参数
+MxSlider.js轮播图插件的可用配置参数有：
+
+
+nav：是否显示前后导航箭头，默认为true。
+
+dots：：是否显示前后圆点导航按钮，默认为false。
+
+timeSlide：动画的速度，默认为100毫秒。
+
+autoPlay：是否自动播放，默认为false。
+
+autoPlaySpeed：自动播放的速度，默认为5000毫秒。
+
+MxSlider.js轮播图插件的github地址为：https://github.com/Maxim-us/MxSlider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_619">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_62">
+                        支持5种炫酷动画类型的jQuery插件-EnlivenTricks.js
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-banana">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_62" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1811/201811231456.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+EnlivenTricks.js是一款支持5种炫酷动画类型的jQuery插件。该jQuery插件支持淡入淡出、抖动、缩放、平移和loading等5种动画。
+内容：
+
+
+简要教程
+
+
+EnlivenTricks.js是一款支持5种炫酷动画类型的jQuery插件。该jQuery插件支持淡入淡出、抖动、缩放、平移和loading等5种动画。
+
+ 使用方法
+在页面中引入EnlivenTricks.css、jquery和EnlivenTricks.js文件。
+
+&amp;lt;link href=&#34;dist/bootstrap.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;EnlivenTricks.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ 淡入淡出动画
+
+$(&#39;.element&#39;).FadeTrick({
+duration: 500, 
+disappear: false,
+mode: &#39;in&#39;
+})
+
+
+
+duration：动画的持续时间。
+
+disappear：是否在淡出之后移除元素。
+
+mode：淡入或淡出。
+
+
+ 抖动动画
+
+$(&#39;.element&#39;).ShakeTrick({
+times: 6
+wrapper: false
+})
+
+
+
+times：抖动的次数。
+
+wrapper：包裹元素。
+
+
+ 缩放动画
+
+$(&#39;.element&#39;).BlobTrick()
+
+
+ 平移动画
+
+$(&#39;.element&#39;).SwapTrick({
+revert: false, 
+vertical: false, 
+next: null,
+callback: function() {return;}
+})
+
+
+
+revert：恢复动画。
+
+vertical：垂直还是水平动画。
+
+next：下一个移动的元素。
+
+callback：回调函数。
+
+
+ loading动画
+
+$(&#39;.element&#39;).LoadTrick({
+color: &#39;white&#39;,
+appearance: &#39;simple&#39;,
+position: { left: &#39;42\%&#39;, right: 0, bottom: 0, top: 0 },
+delayHandler: 5000
+})
+
+
+
+color：动画元素的颜色。
+
+appearance：&#39;square&#39;, &#39;flash&#39;, &#39;disk&#39;, &#39;spinner&#39;, &#39;fixed-spinner&#39;, &#39;classic-spinner&#39;,&#39;simple&#39;。
+
+position：自定义位置。
+
+delayHandler：interger, &#39;infinite&#39;，或一个函数。
+
+ EnlivenTricks.js插件的github网址为：https://github.com/hupiat/EnlivenTricks.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_62">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_620">
+                        支持移动端的仿medium图片放大预览js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_620" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1609/201609131645.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+MediumLightbox是一款支持移动端的仿medium图片放大预览js插件。该插件可以在用户点击页面中的图片时，将图片平滑过渡放大到屏幕中间显示。
+内容：
+
+
+简要教程
+
+
+MediumLightbox是一款支持移动端的仿medium图片放大预览js插件。该插件可以在用户点击页面中的图片时，将图片平滑过渡放大到屏幕中间显示。
+
+ 使用方法
+在页面中引入mediumLightbox.js和样式文件style.css。
+
+&amp;lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;css/style.css&#39; /&amp;gt;
+&amp;lt;script src=&#34;mediumLightbox.js&#34; &amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+为你的页面中需要放大显示的图片使用下面的HTML结构：
+
+&amp;lt;figure class=&#34;half left zoom-effect&#34;&amp;gt;
+&amp;lt;div class=&#34;aspectRatioPlaceholder&#34; &amp;gt;
+&amp;lt;div class=&#34;aspect-ratio-fill&#34; style=&#34;padding-bottom: 50\%;&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;img class=&#34;img&#34; data-width=&#34;900&#34; data-height=&#34;450&#34; src=&#34;image.jpg&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/figure&amp;gt; 
+
+其中，各个data-属性的含义如下：
+
+
+data-width：图片的实际宽度。
+
+data-height：图片的实际高度。
+
+带aspect-ratio-fill class的&amp;lt;div&amp;gt;元素被添加一个padding-bottom的样式，该样式中的百分比值的计算方法为：(height/width)*100。
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过MediumLightbox()来实例化对象。
+
+MediumLightbox(&#39;figure.zoom-effect&#39;);
+
+该插件有一个可用的配置参数：
+
+MediumLightbox(&#39;figure.zoom-effect&#39;, {
+margin:40
+}); 
+
+margin：图片被放大是添加到图片上的margin值，默认为20像素。
+MediumLightbox图片放大插件的github地址为：https://github.com/davidecalignano/MediumLightbox
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_620">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_621">
+                        轻量级jquery数字动画插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_621" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610301531.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.countup.js是一款轻量级jquery数字动画插件。该数字动画插件可以在页面滚动时，将指定的数字从0开始计数增加动画。
+内容：
+
+
+简要教程
+
+
+jquery.countup.js是一款轻量级jquery数字动画插件。该数字动画插件可以在页面滚动时，将指定的数字从0开始计数增加动画。
+该数字动画插件可以控制动画的延迟时间和动画过渡时间。它依赖于Waypoints插件来监听滚动事件。
+
+ 安装
+可以通过npm或bower来安装jquery.countup.js插件。
+
+npm install jquery.countup.js
+bower install jquery.countup.js
+
+
+ 使用方法
+在页面引入jquery，jquery.waypoints.min.js和jquery.countup.min.js文件。
+
+&amp;lt;script src=&#34;jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.waypoints.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;jquery.countup.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用&amp;lt;span&amp;gt;元素作为数字的容器。
+
+&amp;lt;span class=&#34;counter&#34;&amp;gt;1,498,547.00&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;counter&#34;&amp;gt;7.99&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;counter&#34;&amp;gt;1455455&amp;lt;/span&amp;gt; 
+
+你也可以使用data-counter-time和data-counter-delay属性来设置数字动画的动画时间和延迟时间。
+
+&amp;lt;span class=&#34;counter&#34; data-counter-time=&#34;5000&#34; data-counter-delay=&#34;50&#34;&amp;gt;1981&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;counter&#34; data-counter-time=&#34;100&#34; data-counter-delay=&#34;20&#34;&amp;gt;9842&amp;lt;/span&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过countUp()方法来初始化数字动画。
+
+$(&#39;.counter&#39;).countUp();
+
+也可以在初始化的时候传入配置参数。
+
+$(&#39;.counter&#39;).countUp({
+delay: 10,
+time: 2000
+});
+
+
+
+delay：每个数字动画的延迟时间，单位毫秒。
+
+time：计数动画总的持续时间。
+
+jquery.countup.js数字动画插件的github地址为：https://github.com/AGMStudio/jquery.countup.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_621">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/117/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/119/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

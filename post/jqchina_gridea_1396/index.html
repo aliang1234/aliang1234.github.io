@@ -1,0 +1,468 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和css3滑动显示tooltips工具提示特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和css3滑动显示tooltips工具提示特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1412/201412221452.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412221452.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141222957.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款使用jQuery和css3制作的滑动显示tooltips工具提示特效。该tooltips工具提示特效以滑动展开的方式显示特定链接的详细信息，整个动画过渡自然，效果非常酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h4>简要教程</h4>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果非常酷的jQuery和css3滑动显示tooltips工具提示特效。这个tooltips工具提示插件可以从4个方向打开：右下（默认）、左下、左上和右上。还可以选择3种颜色：绿色（默认）、蓝色和红色。</p>
+<h3>HTML结构</h3>
+<p>要创建这个tooltips工具提示效果，你需要使用p标签，这意味着tooltips的内容对搜索引擎是可见的。在页面加载的时候，p标签的内容被用jQuery替换为滑动面板中的内容。</p>
+<pre class="brush:html">
+&lt;div class="main"&gt;
+ &lt;p title="A New Tutorial Every Week" style="top:200px;left:120px;"&gt;
+This slideout is going to open to the bottom-right (the default).
+ &lt;/p&gt;
+<p>&lt;p title=&quot;2200+ Twitter Followers&quot; class=&quot;openTop openLeft blue&quot; style=&quot;top:400px;left:650px;&quot;&gt;<br>
+This slideout is going to open to the top-left.<br>
+&lt;/p&gt;</p>
+<p>&lt;p title=&quot;Over 5000 RSS Subscribers&quot; class=&quot;openTop red&quot; style=&quot;top:500px;left:90px;&quot;&gt;<br>
+This slideout is going to open to the top-right.<br>
+&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p>如上所示，每一个标签都带有一个style和一个class。当使用jQuery替换滑动面板时，这些属性一起被复制过去。</p>
+<p>style属性决定了滑动面板在父元素中的位置，也就是说，滑动面板的位置和p标签的位置是相同的。</p>
+<p>class属性是可选的，它为滑动面板提供一些可选参数。你可以旋转打开的方向或是面板的颜色。</p>
+<pre class="brush:html">
+&lt;div class="slideOutTip openLeft blue" style="left:100px;top:200px"&gt;
+ &lt;div class="tipVisible"&gt;
+&lt;div class="tipIcon"&gt;&lt;div class="plusIcon"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class="tipTitle"&gt;The title of the slideout&lt;/p&gt;
+ &lt;/div&gt;
+<p>&lt;div class=&quot;slideOutContent&quot;&gt;<br>
+&lt;p&gt;Slideout Content&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+</pre></p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/i1.jpg" alt="jquery和css3 tooptips工具提示效果-1" width="620" height="460"></p>
+<h3>CSS样式</h3>
+<p>下面只列出了滑动面板的样式：</p>
+<pre class="brush:css">
+.slideOutTip{
+ /* The main wrapping div of the slideout tips */
+ position:absolute;
+ padding:3px;
+ top:0;
+ left:0;
+ background-color:#111;
+ font-size:13px;
+ color:white;
+ overflow:hidden;
+ height:22px;
+}
+<p>.slideOutTip:hover{<br>
+/* Applying a CSS3 outer glow on hover */<br>
+-moz-box-shadow:0 0 1px #999;<br>
+-webkit-box-shadow:0 0 1px #999;<br>
+box-shadow:0 0 1px #999;<br>
+}</p>
+<p>/* The holder for the title and the icon: */<br>
+.tipVisible{ cursor:pointer; height:22px; }</p>
+<p>.tipTitle{<br>
+float:left;<br>
+font-family:'Myriad Pro',Arial, Helvetica, sans-serif;<br>
+font-size:15px;<br>
+font-weight:bold;<br>
+white-space:nowrap;<br>
+line-height:22px;<br>
+padding-right:5px;<br>
+}</p>
+<p>.tipIcon{<br>
+width:20px;<br>
+height:20px;<br>
+float:left;<br>
+background-color:#61b035;<br>
+border:1px solid #70c244;<br>
+margin-right:8px;</p>
+<p>/* CSS3 Rounded corners */</p>
+<p>-moz-border-radius:1px;<br>
+-webkit-border-radius:1px;<br>
+border-radius:1px;<br>
+}<br>
+</pre></p>
+<p>开始的时候，tooltips面板只有标题和一个图标是可见的，然后在后面使用jQuery为它们绑定click事件，当用户点击时滑动面板展开。</p>
+<pre class="brush:css">
+/* Three color themes */
+.green .tipIcon{ background-color:#61b035; border:1px solid #70c244; }
+.blue .tipIcon{ background-color:#1078C7; border:1px solid #1e82cd; }
+.red .tipIcon{ background-color:#CD3A12; border:1px solid #da421a; }
+<p>.plusIcon{<br>
+/* The plus icon */<br>
+width:13px;<br>
+height:13px;<br>
+background:url('img/plus.gif') no-repeat center center;<br>
+margin:4px;</p>
+<p>/* Defining a CSS3 animation. Currently only works in Chrome and Safari */<br>
+-webkit-transition: -webkit-transform 0.2s linear;<br>
+-moz-transition: -moz-transform 0.2s linear;<br>
+transition: transform 0.2s linear;<br>
+}</p>
+<p>.slideOutTip.isOpened{ z-index:10000; }</p>
+<p>.slideOutTip.isOpened .plusIcon{<br>
+/* Applying a CSS3 rotationto the opened slideouts*/<br>
+-moz-transform:rotate(45deg);<br>
+-webkit-transform:rotate(45deg);<br>
+transform:rotate(45deg);<br>
+}</p>
+<p>/* Special rules for the left and top - opening versions */</p>
+<p>.openLeft .tipIcon{<br>
+/* Floating the title and the icon to the right */<br>
+margin:0 0 0 8px;<br>
+float:right;<br>
+}<br>
+.openLeft .tipTitle{ float:right; padding:0 0 0 5px; }<br>
+.openLeft .slideOutContent{ margin-top:22px; }<br>
+.openLeft.openTop .slideOutContent{ margin-top:0; }</p>
+<p>.slideOutContent{<br>
+/* Hiding the div with the slide out content: */<br>
+display:none;<br>
+padding:10px;<br>
+font-size:11px;<br>
+}</p>
+<p>/* Hiding the original paragraphs if they have not been replaced (JS disabled): */</p>
+<p>.main &gt; p{ display:none; }<br>
+</pre></p>
+<p>滑动面板默认的打开方式是草右下方打开，你可以通过设置<span class="m">openLeft </span>或<span class="m">openTop</span>来改变它的打开方式。你也可以通过class来改变图标的颜色。</p>
+<p><img class="lazy" src="http://www.htmleaf.com/load.gif" data-original="http://img.htmleaf.com/1412/i21.jpg" alt="jquery和css3 tooptips工具提示效果-1" width="620" height="260"></p>
+<h3>JAVASCRIPT</h3>
+<p>当夜幕加载完毕，jQuery循环整个div中的p元素，将它们替换为滑动面板标签。然后根据style和class为滑动面板绑定click事件：</p> 
+<pre class="brush:js">
+$(document).ready(function(){
+ /* The code here is executed on page load */
+<p>/* Replacing all the paragraphs */<br>
+$('.main p').replaceWith(function(){</p>
+<p>/*<br>
+The style, class and title attributes of the p<br>
+are copied to the slideout:<br>
+*/</p>
+<p>return '<br>
+&lt;div class=&quot;slideOutTip '+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><msup><mo>(</mo><mo mathvariant="normal">′</mo></msup><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><msup><mo>+</mo><mo mathvariant="normal">′</mo></msup><mi mathvariant="normal">&quot;</mi><mi>s</mi><mi>t</mi><mi>y</mi><mi>l</mi><mi>e</mi><mo>=</mo><msup><mi mathvariant="normal">&quot;</mi><mo mathvariant="normal">′</mo></msup><mo>+</mo></mrow><annotation encoding="application/x-tex">(this).attr(&#x27;class&#x27;)+&#x27;&quot; style=&quot;&#x27;+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin"><span class="mbin">+</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.835222em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">&quot;</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">+</span></span></span></span>(this).attr('style')+'&quot;&gt;<br>
+<br>
+&lt;div class=&quot;tipVisible&quot;&gt;<br>
+&lt;div class=&quot;tipIcon&quot;&gt;&lt;div class=&quot;plusIcon&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br>
+&lt;p class=&quot;tipTitle&quot;&gt;'+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 23: …attr(&#039;title&#039;)+&#039;&amp;̲lt;/p&amp;gt;\
+ &amp;lt…'>(this).attr(&#039;title&#039;)+&#039;&amp;lt;/p&amp;gt;\
+ &amp;lt;/div&amp;gt;\
+ \
+ &amp;lt;div class=&quot;slideOutContent&quot;&amp;gt;\
+&amp;lt;p&amp;gt;&#039;+</span>(this).html()+'&lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;';<br>
+});</p>
+<p>$('.slideOutTip').each(function(){</p>
+<p>/*<br>
+Implicitly defining the width of the slideouts according to the<br>
+width of its title, because IE fails to calculate it on its own.<br>
+*/</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>w</mi><mi>i</mi><mi>d</mi><mi>t</mi><mi>h</mi><mo>(</mo><mn>40</mn><mo>+</mo></mrow><annotation encoding="application/x-tex">(this).width(40+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord">4</span><span class="mord">0</span><span class="mord">+</span></span></span></span>(this).find('.tipTitle').width());<br>
+});</p>
+<p>/* Listening for the click event: */</p>
+<p>$('.tipVisible').bind('click',function(){<br>
+var tip = $(this).parent();</p>
+<p>/* If a open/close animation is in progress, exit the function */<br>
+if(tip.is(':animated'))<br>
+return false;</p>
+<p>if(tip.find('.slideOutContent').css('display') == 'none')<br>
+{<br>
+tip.trigger('slideOut');<br>
+}<br>
+else tip.trigger('slideIn');</p>
+<p>});<br>
+$('.slideOutTip').bind('slideOut',function(){</p>
+<p>var tip = $(this);<br>
+var slideOut = tip.find('.slideOutContent');</p>
+<p>/* Closing all currently open slideouts: */<br>
+$('.slideOutTip.isOpened').trigger('slideIn');</p>
+<p>/* Executed only the first time the slideout is clicked: */<br>
+if(!tip.data('dataIsSet'))<br>
+{<br>
+tip .data('origWidth',tip.width())<br>
+.data('origHeight',tip.height())<br>
+.data('dataIsSet',true);</p>
+<p>if(tip.hasClass('openTop'))<br>
+{<br>
+/*<br>
+If this slideout opens to the top, instead of the bottom,<br>
+calculate the distance to the bottom and fix the slideout to it.<br>
+*/</p>
+<p>tip.css({<br>
+bottom : tip.parent().height()-(tip.position().top+tip.outerHeight()),<br>
+top: 'auto'<br>
+});</p>
+<p>/*<br>
+Fixing the title to the bottom of the slideout,<br>
+so it is not slid to the top on open:<br>
+*/<br>
+tip.find('.tipVisible').css({position:'absolute',bottom:3});</p>
+<p>/*<br>
+Moving the content above the title, so it can<br>
+slide-open to the top:<br>
+*/<br>
+tip.find('.slideOutContent').remove().prependTo(tip);<br>
+}</p>
+<p>if(tip.hasClass('openLeft'))<br>
+{<br>
+/*<br>
+If this slideout opens to the left, fix it to the right so<br>
+the left edge can expand without moving the entire div:<br>
+*/<br>
+tip.css({<br>
+right : Math.abs(tip.parent().outerWidth()-(tip.position().left+tip.outerWidth())),<br>
+left : 'auto'<br>
+});</p>
+<p>tip.find('.tipVisible').css({position:'absolute',right:3});<br>
+}<br>
+}</p>
+<p>/* Resize the slideout to fit the content, which is then faded into view: */</p>
+<p>tip.addClass('isOpened').animate({<br>
+width : Math.max(slideOut.outerWidth(),tip.data('origWidth')),<br>
+height : slideOut.outerHeight()+tip.data('origHeight')<br>
+},function(){<br>
+slideOut.fadeIn();<br>
+});<br>
+}).bind('slideIn',function(){ // Binding the slideIn event to .slideOutTip<br>
+var tip = $(this);</p>
+<p>/* Hide the content and restore the original size of the slideout: */</p>
+<p>tip.find('.slideOutContent').fadeOut('fast',function(){<br>
+tip.animate({<br>
+width : tip.data('origWidth'),<br>
+height : tip.data('origHeight')<br>
+},function(){<br>
+tip.removeClass('isOpened');<br>
+});<br>
+});</p>
+<p>});</p>
+<p>}); /* Closing $(document).ready() */<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1412/201412221452.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/20141222957.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1397">
+                                <h3 class="post-title">
+                                    jQuery超酷背景视觉差特效插件Jarallax.js
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

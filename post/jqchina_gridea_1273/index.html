@@ -1,0 +1,711 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery简单且功能强大的图片剪裁插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery简单且功能强大的图片剪裁插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1504/201504212053.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504212053.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504211717.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>cropper是一款使用简单且功能强大的图片剪裁jQuery插件。该图片剪裁插件支持图片放大缩小，支持图片旋转，支持触摸屏设备，支持canvas，并且支持跨浏览器使用。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>cropper是一款使用简单且功能强大的图片剪裁<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>。该图片剪裁插件支持图片放大缩小，支持鼠标滚轮操作，支持图片旋转，支持触摸屏设备，支持<a href="http://www.htmleaf.com/html5/html5-canvas/" target="\_blank">canvas</a>，并且支持跨浏览器使用。</p>
+<p>cropper提供了大量的参数、方法和事件供图片的剪裁操作。</p>
+<h3>
+<span class="glyphicon glyphicon-wrench"></span> 安装</h3>
+<p>可以通过<a href="http://bower.io/" target="\_blank">Bower</a>或<a href="http://npmjs.org/" target="\_blank">NPM</a>来安装该插件。</p>
+<pre class="brush:html">
+bower install cropper
+npm install cropper
+</pre>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该图片剪裁插件首先要引入必要的js和css文件。</p>
+<pre class="brush:html">
+&lt;script src="/path/to/jquery.js"&gt;&lt;/script&gt;&lt;!-- jQuery is required --&gt;
+&lt;linkhref="/path/to/cropper.css" rel="stylesheet"&gt;
+&lt;script src="/path/to/cropper.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>可以将图片或canvas直接包裹到一个块级元素中。</p>
+<pre class="brush:html">
+&lt;!-- Wrap the image or canvas with a block element --&gt;
+&lt;div class="container"&gt;
+&lt;img src="picture.jpg"&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 调用插件</h5>
+<p>可以使用<code>$.fn.cropper</code>方法来初始化该图片剪裁插件。</p>
+<pre class="brush:js">
+$('.container &gt; img').cropper({
+aspectRatio: 16 / 9,
+crop: function(data) {
+// Output the result data for cropping image.
+}
+});
+</pre>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>注意：剪裁区域的尺寸继承自图片的父容器（包裹容器），所以要确保包裹图片的是一个可见的块级元素。</li>
+<li>输出的剪裁数据基于原始的图片尺寸，你可以使用这些数据直接剪裁图片。</li>
+<li>如果你要使用跨源图片来作为剪裁图片，请确保你的浏览器支持HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS\_settings\_attributes" target="\_blank">CORS settings attributes</a>，并且你的图片服务器支持<code>Access-Control-Allow-Origin</code>属性。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<p>你可以通过<code>$().cropper(options)</code>方法来设置参数。如果你想改变全局默认参数，可以使用<code>$.fn.cropper.setDefaults(options)</code>方法。</p>
+<ul>
+<li>
+<span class="m">aspectRatio</span>：类型：<code>Number</code>，默认值<code>NaN</code>。设置剪裁容器的比例。</li>
+<li>
+<span class="m">crop</span>：类型：<code>Function</code>，默认值<code>null</code>。当改变剪裁容器或图片时的事件函数。</li>
+<li>
+<span class="m">preview</span>：类型：<code>String</code>(jQuery选择器)，默认值<code>''</code>。添加额外的元素（容器）的预览。注意：
+<ul>
+<li>最大宽度是剪裁容器的初始化宽度</li>
+<li>最大高度是剪裁容器的初始化高度</li>
+<li>如果你设置了<code>aspectRatio</code>参数，确保预览容器具有相同的比例</li>
+</ul>
+</li>
+<li>
+<span class="m">strict</span>：类型：<code>Boolean</code>，默认值<code>true</code>。在strict模式中，canvas不能小于容器，剪裁容器不能再canvas之外。</li>
+<li>
+<span class="m">responsive</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在窗口尺寸改变的时候重置cropper。</li>
+<li>
+<span class="m">checkImageOrigin</span>：类型：<code>Boolean</code>，默认值<code>true</code>。默认情况下，插件会检测图片的源，如果是跨域图片，图片元素会被添加<code>crossOrigin</code> class，并会为图片的url添加一个时间戳来使<code>getCroppedCanvas</code>变为可用。添加时间戳会使图片重新加载，以使跨域图片能够使用<code>getCroppedCanvas</code>。在图片上添加<code>crossOrigin</code> class会阻止在图片url上添加时间戳，及图片的重新加载。</li>
+<li>
+<span class="m">background</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在容器上显示网格背景。</li>
+<li>
+<span class="m">modal</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在剪裁框上显示黑色的模态窗口。</li>
+<li>
+<span class="m">guides</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在剪裁框上显示虚线。</li>
+<li>
+<span class="m">highlight</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在剪裁框上显示白色的模态窗口。</li>
+<li>
+<span class="m">autoCrop</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否在初始化时允许自动剪裁图片。</li>
+<li>
+<span class="m">autoCropArea</span>：类型：<code>Number</code>，默认值<code>0.8</code>（图片的80\%）。0-1之间的数值，定义自动剪裁区域的大小。</li>
+<li>
+<span class="m">dragCrop</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域。</li>
+<li>
+<span class="m">movable</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许移动剪裁框。</li>
+<li>
+<span class="m">resizable</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许改变剪裁框的大小。</li>
+<li>
+<span class="m">zoomable</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许放大缩小图片。</li>
+<li>
+<span class="m">mouseWheelZoom</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许通过鼠标滚轮来缩放图片。</li>
+<li>
+<span class="m">touchDragZoom</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许通过触摸移动来缩放图片。</li>
+<li>
+<span class="m">rotatable</span>：类型：<code>Boolean</code>，默认值<code>true</code>。是否允许旋转图片。</li>
+<li>
+<span class="m">minContainerWidth</span>：类型：<code>Number</code>，默认值<code>200</code>。容器的最小宽度。</li>
+<li>
+<span class="m">minContainerHeight</span>：类型：<code>Number</code>，默认值<code>100</code>。容器的最小高度。</li>
+<li>
+<span class="m">minCanvasWidth</span>：类型：<code>Number</code>，默认值<code>0</code>。canvas 的最小宽度（image wrapper）。</li>
+<li>
+<span class="m">minCanvasHeight</span>：类型：<code>Number</code>，默认值<code>0</code>。canvas 的最小高度（image wrapper）。</li>
+<li>
+<span class="m">build</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>build.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">built</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>built.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">dragstart</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>dragstart.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">dragmove</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>dragmove.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">dragend</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>dragend.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">zoomin</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>zoomin.cropper</code>事件的简写方式。</li>
+<li>
+<span class="m">zoomout</span>：类型：<code>Function</code>，默认值<code>null</code>。<code>zoomout.cropper</code>事件的简写方式。</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<p>因为图片是异步加载的，所以你需要在built之后才能调用下面的方法，<code>setAspectRatio</code>、<code>replace</code>和<code>destroy</code>方法例外。</p>
+<pre class="brush:js">
+$().cropper({
+built: function () {
+$().cropper('method', argument1, , argument2, ..., argumentN)
+}
+}
+</pre>
+<ul>
+<li>
+<span class="m">move(offsetX, offsetY)</span>：
+<ul>
+<li>
+<span class="m">offsetX</span>：类型：<code>Number</code>，水平方向上移动的大小，单位像素。</li>
+<li>
+<span class="m">offsetY</span>：类型：<code>Number</code>，垂直方向上移动的大小，单位像素。</li>
+</ul> 
+<p>移动一幅图片：</p>
+<pre class="brush:js">
+$().cropper('move', 1, 0)
+$().cropper('move', 0, -1) 
+</pre>
+</li>
+<li>
+<span class="m">zoom(ratio)</span>：
+<p><code>ratio</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>Zoom in：需要一个正数（ratio &gt; 0）</li>
+<li>Zoom out：需要一个负数（ratio &lt; 0）</li>
+</ul>
+<p>缩放一幅图片：</p>
+<pre class="brush:js">
+$().cropper('zoom', 0.1)
+$().cropper('zoom', -0.1) 
+</pre>
+</li>
+<li>
+<span class="m">rotate(degree)</span>：
+<p><code>ratio</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>Rotate right：需要一个正数（degree &gt; 0）</li>
+<li>Rotate left：需要一个负数（degree &lt; 0）</li>
+</ul>
+<p>旋转一幅图片，需要<a href="http://caniuse.com/transforms3d" target="\_blank">CSS3 Transforms3d</a>的支持（IE10+）：</p>
+<pre class="brush:js">
+$().cropper('rotate', 90)
+$().cropper('rotate', -90)
+</pre>
+</li>
+<li>
+<span class="m">enable()</span>：使cropper可用。</li>
+<li>
+<span class="m">disable()</span>：冻结cropper。</li>
+<li>
+<span class="m">reset()</span>：重置剪裁区域的图片到初始状态。</li>
+<li>
+<span class="m">clear()</span>：清空剪裁区域。</li>
+<li>
+<span class="m">replace(url)</span>：
+<p><code>url</code>：</p>
+<ul>
+<li>类型：<code>String</code>
+</li>
+<li>一个新的图片URL</li>
+</ul>
+<p>替换图片的URL重建cropper。</p>
+</li>
+<li>
+<span class="m">getData()</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">x</span>：剪裁区域左侧的偏移。</li>
+<li>
+<span class="m">y</span>：剪裁区域距上部的偏移。</li>
+<li>
+<span class="m">width</span>：剪裁区域的宽度。</li>
+<li>
+<span class="m">height</span>：剪裁区域的高度。</li>
+<li>
+<span class="m">rotate</span>：图片的旋转角度。</li>
+</ul>
+</li>
+</ul>
+<p>看下图演示从原始图片中返回的剪裁区域数据。</p>
+<p><img src="http://img.htmleaf.com/1504/cropper-data.png" alt="图片剪裁区域" width="320" height="231"></p>
+</li>
+<li>
+<span class="m">getContainerData()</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">width</span>：容器的当前宽度。</li>
+<li>
+<span class="m">height</span>：容器的当前高度。</li>
+</ul>
+</li>
+</ul>
+<p>输出容器尺寸数据。</p>
+</li>
+<li>
+<span class="m">getImageData()</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">left</span>：图片的左侧偏移。</li>
+<li>
+<span class="m">top</span>：图片的上部偏移。</li>
+<li>
+<span class="m">width</span>：图片的宽度。</li>
+<li>
+<span class="m">height</span>：图片的高度。</li>
+</ul>
+</li>
+</ul>
+<p>输出图片的位置和尺寸大小。</p>
+</li>
+<li>
+<span class="m">getCanvasData()</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">left</span>：canvas的左侧偏移。</li>
+<li>
+<span class="m">top</span>：canvas的上部偏移。</li>
+<li>
+<span class="m">width</span>：canvas的宽度。</li>
+<li>
+<span class="m">height</span>：canvas的高度。</li>
+</ul>
+</li>
+</ul>
+<p>输出canvas（图片容器）的位置和尺寸大小。</p>
+</li>
+<li>
+<span class="m">setCanvasData(data)</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">left</span>：canvas的距离左侧新的偏移。</li>
+<li>
+<span class="m">top</span>：canvas的距离上部新的偏移。</li>
+<li>
+<span class="m">width</span>：canvas新的宽度。</li>
+<li>
+<span class="m">height</span>：canvas新的高度。</li>
+</ul>
+</li>
+</ul>
+<p>改变canvas（图片容器）的位置和尺寸大小。</p>
+</li>
+<li>
+<span class="m">getCropBoxData()</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">left</span>：剪裁区域距离左侧的偏移。</li>
+<li>
+<span class="m">top</span>：剪裁区域距离上部的偏移。</li>
+<li>
+<span class="m">width</span>：剪裁区域的宽度。</li>
+<li>
+<span class="m">height</span>：剪裁区域的高度。</li>
+</ul>
+</li>
+</ul>
+<p>输出剪裁区域的位置和尺寸大小。</p>
+</li>
+<li>
+<span class="m">setCropBoxData(data)</span>：
+<p>返回值：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">left</span>：剪裁区域距离左侧新的偏移。</li>
+<li>
+<span class="m">top</span>：剪裁区域距离上部新的偏移。</li>
+<li>
+<span class="m">width</span>：剪裁区域新的宽度。</li>
+<li>
+<span class="m">height</span>：剪裁区域新的高度。</li>
+</ul>
+</li>
+</ul>
+<p>改变剪裁区域的位置和尺寸大小。</p>
+</li>
+<li>
+<span class="m">getCroppedCanvas([options])</span>：
+<p>参数（默认值）：</p>
+<ul>
+<li>类型：<code>Object</code>
+</li>
+<li>属性：
+<ul>
+<li>
+<span class="m">width</span>：输出的canvas目标宽度。</li>
+<li>
+<span class="m">height</span>：输出的canvas目标高度。</li>
+<li>
+<span class="m">fillColor</span>：canvas中填充的颜色。</li>
+</ul>
+</li>
+</ul>
+<p>返回值：</p>
+<ul>
+<li>类型：<code>HTMLCanvasElement</code>
+</li>
+<li>一个画有剪裁图片的canvas。</li>
+</ul>
+<p>浏览器支持：</p>
+<ul>
+<li>基本图像：需要<a href="http://caniuse.com/canvas" target="\_blank">Canvas</a>的支持（IE9+）</li>
+<li>旋转图像：需要<a href="http://www.htmleaf.com/css3/animation/" target="\_blank">CSS3 animations</a> <a href="http://caniuse.com/transforms3d" target="\_blank">Transforms3d</a>的支持（IE10+）</li>
+<li>跨域图像：需要<a href="http://www.htmleaf.com/html5/" target="\_blank">HTML5</a> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS\_settings\_attributes" target="\_blank">CORS settings attributes</a>的支持（IE11+）</li>
+</ul>
+<p>获取canvas绘制的剪裁图像。</p>
+<blockquote>在这之后，你可以直接将canvas作为图片显示，或使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL" target="\_blank">canvas.toDataURL</a>方法获取图像的数据链接，或者使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="\_blank">canvas.toBlob</a>方法获取一个blob，并通过<a href="https://developer.mozilla.org/en/XMLHttpRequest/FormData" target="\_blank">FormData</a>方法将它更新到服务器上（如果浏览器支持这些API）。</blockquote>
+<pre class="brush:js">
+$().cropper('getCroppedCanvas')
+$().cropper('getCroppedCanvas', {
+width: 160,
+height: 90
+});
+</pre>
+</li>
+<li>
+<span class="m">setAspectRatio(aspectRatio)</span>：
+<p><code>aspectRatio</code>：</p>
+<ul>
+<li>类型：<code>Number</code>
+</li>
+<li>需要一个正整数。</li>
+</ul>
+<p>改变剪裁区域的比例。</p>
+</li>
+<li>
+<span class="m">setDragMode([mode])</span>：
+<p><code>mode</code>（可选项）：</p>
+<ul>
+<li>类型：<code>String</code>
+</li>
+<li>默认值：<code>''</code>
+</li>
+<li>选项：<code>'crop'</code>或<code>'move'</code>
+</li>
+</ul>
+<p>改变拖拽模式。提示：你可以通过双击来改变"crop" 和 "move"模式。</p>
+</li>
+</ul>
+<h3>
+<span class="glyphicon glyphicon-flash"></span> 事件</h3>
+<li>
+<span class="m">build.cropper</span>：当cropper对象开始加载图片的时候触发该事件。</li>
+<li>
+<span class="m">built.cropper</span>：当cropper对象构建完成时触发该事件。</li>
+<li>
+<span class="m">dragstart.cropper</span>：
+<p><code>event.dragType</code>：</p>
+<ul>
+<li>
+<span class="m">"crop"</span>：创建一个新的剪裁区域。</li>
+<li>
+<span class="m">"move"</span>：移动canvas。</li>
+<li>
+<span class="m">"zoom"</span>：通过触摸移动来缩放canvas。</li>
+<li>
+<span class="m">"e"</span>：调整剪裁区域东边的尺寸大小。</li>
+<li>
+<span class="m">"w"</span>：调整剪裁区域西边的尺寸大小。</li>
+<li>
+<span class="m">"s"</span>：调整剪裁区域南边的尺寸大小。</li>
+<li>
+<span class="m">"n"</span>：调整剪裁区域北边的尺寸大小。</li>
+<li>
+<span class="m">"se"</span>：调整剪裁区域东南边的尺寸大小。</li>
+<li>
+<span class="m">"sw"</span>：调整剪裁区域西南边的尺寸大小。</li>
+<li>
+<span class="m">"ne"</span>：调整剪裁区域东北边的尺寸大小。</li>
+<li>
+<span class="m">"nw"</span>：调整剪裁区域西北边的尺寸大小。</li>
+<li>
+<span class="m">"all"</span>：移动剪裁区域。</li>
+</ul>
+<p>该事件在剪裁区域发生改变时触发。</p>
+<p>相关的原始事件：<code>mousedown</code>、<code>touchstart</code>。</p>
+<pre class="brush:js">
+$('img').on('dragstart.cropper', function (e) {
+console.log(e.type); // dragstart
+console.log(e.namespace); // cropper
+console.log(e.dragType); // ...
+});
+</pre>
+</li>
+<li>
+<span class="m">dragmove.cropper</span>：
+<p><code>event.dragType</code>：和<code>dragstart.cropper</code>相同。</p>
+<p>当剪裁区域发生改变时触发。</p>
+<p>相关的原始事件：<code>mousemove</code>、<code>touchmove</code>。</p>
+</li>
+<li>
+<span class="m">dragend.cropper</span>：
+<p><code>event.dragType</code>：和<code>dragstart.cropper</code>相同。</p>
+<p>当剪裁区域改变结束时触发。</p>
+<p>相关的原始事件：<code>mouseup</code>、<code>mouseleave</code>、<code>touchend</code>、<code>touchleave</code>和<code>touchcancel</code>。</p>
+</li>
+<li>
+<span class="m">zoomin.cropper</span>：当cropper对象开始放大canvas时触发。</li>
+<li>
+<span class="m">zoomout.cropper</span>：当cropper对象开始缩小canvas时触发。</li>
+<li>
+<span class="m">No conflict</span>：如果你使用了相同名称空间的其它插件，可以通过<code>$.fn.cropper.noConflict</code>方法来修改名称空间。
+<pre class="brush:js">
+&lt;script src="other-plugin.js"&gt;&lt;/script&gt;
+&lt;script src="cropper.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$.fn.cropper.noConflict();
+// Code that uses other plugin's "$().cropper" can follow here.
+&lt;/script&gt;
+</pre>
+</li>
+<h3>
+<span class="glyphicon glyphicon-check"></span> 浏览器兼容</h3>
+<ul>
+<li>Chrome 38+</li>
+<li>Firefox 33+</li>
+<li>Internet Explorer 8+</li>
+<li>Opera 25+</li>
+<li>Safari 5.1+</li>
+</ul>
+<p>作为<a href="http://www.htmleaf.com/jQuery/" target="\_blank">jQuery插件</a>，你还需要了解<a href="http://jquery.com/browser-support/" target="\_blank">浏览器对jQuery的支持</a>。</p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1504/201504212053.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201504211717.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1274">
+                                <h3 class="post-title">
+                                    Material Design风格定时器|秒表|闹钟jQuery插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

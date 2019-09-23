@@ -1,0 +1,331 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    jQuery和CSS3超酷3D拉窗帘式滚动导航特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            jQuery和CSS3超酷3D拉窗帘式滚动导航特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+                            #css3
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1501/201501111547.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501111547.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501111156.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款效果炫酷的jQuery和css3 3d拉窗帘式滚动导航特效插件。该3d导航插件可以使用鼠标滚动或点击导航按钮像拉开窗帘和关闭窗帘一样打开或关闭整个屏幕，以达到导航的效果。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款效果炫酷的jQuery和CSS3 3D拉窗帘式导航特效。该特效使用CSS transformations 和 jQuery使两块“窗帘”沿Z轴方向模拟被拉开的效果。</p>
+<h3>HTML结构</h3>
+<p>HTML结构十分简单：使用两个<code>section</code>来作为wrapper。每个<code>section</code>中包含一个<span class="m"> div.cd-block </span>和一个<span class="m"> div.cd-half-block </span>。第一个<span class="m"> .cd-half-block </span>都是空的，它用来设置背景图像。第二个则用来设置文本。</p>
+<pre class="brush:html">
+&lt;section class="cd-section"&gt;
+&lt;div class="cd-block"&gt;
+&lt;h1&gt;3D Curtain Template&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/section&gt; &lt;!-- .cd-section --&gt;
+<p>&lt;section class=&quot;cd-section&quot;&gt;<br>
+&lt;div class=&quot;cd-block&quot;&gt;<br>
+&lt;div class=&quot;cd-half-block&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;div class=&quot;cd-half-block&quot;&gt;<br>
+&lt;p&gt; &lt;!-- Text here --&gt; &lt;/p&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/section&gt; &lt;!-- .cd-section --&gt;</p>
+<p>&lt;section class=&quot;cd-section&quot;&gt;<br>
+&lt;!-- ... --&gt;<br>
+&lt;/section&gt; &lt;!-- .cd-section --&gt;<br>
+</pre></p>
+<h3>CSS样式</h3>
+<p>在小屏幕上不会有拉窗帘的效果，它只是简单的排列每个<code>section</code>的内容。</p>
+<p>在桌面浏览器上（分辨率大于1170像素），我们为<span class="m">.cd-block</span>元素设置<span class="m">position: fixed</span>和<span class="m">top: 0</span>来将这些元素放到屏幕的顶部（这个方法可以将一个元素放到另一个元素的上面）。由于<span class="m">.cd-section</span>元素设置了<span class="m">height: 100vh</span>(和<span class="m">height: position: static</span>)，所以它们仍然保留着它们的位置。</p>
+<p>另外，我们为每一个<span class="m"> .cd-half-block </span>元素设置了一个translateX（还分别为<span class="m">:first-of-type</span>和<span class="m">:nth-of-type(2)</span>设置了<span class="m">translateX(-100\%)</span>和<span class="m">translateX(100\%)</span>），这使得它们可以移动到屏幕外边。</p>
+<pre class="brush:css">
+@media only screen and (min-width: 1170px) {
+.cd-section {
+height: 100vh;
+}
+.cd-block {
+position: fixed;
+top: 0;
+left: 0;
+}
+.cd-half-block {
+height: 100vh;
+width: 50\%;
+position: absolute;
+top: 0;
+}
+.cd-section:nth-of-type(even) .cd-half-block:first-of-type, 
+.cd-section:nth-of-type(odd) .cd-half-block:nth-of-type(2) {
+left: 0;
+transform: translateX(-100\%);
+}
+.cd-section:nth-of-type(odd) .cd-half-block:first-of-type, 
+.cd-section:nth-of-type(even) .cd-half-block:nth-of-type(2) {
+right: 0;
+transform: translateX(100\%);
+}
+}
+</pre>
+<h3>JAVASCRIPT</h3>
+<p>每一个<code>section</code>拉窗帘动画都有两个阶段，第一个阶段是两个<span class="m">.cd-half-block</span>元素被一会屏幕中（translateX的值从100\%/-100\%到0）；第二个阶段是<span class="m">.cd-block</span>元素缩小并且透明度减少（模拟3d动画效果）。</p>
+<p>为了制作以上效果，我们为窗口的scroll事件添加<span class="m">triggerAnimation()</span>函数。当用户滚动窗口，每一个<span class="m"> .cd-section</span>元素都根据窗口的<span class="m">scrollTop</span>和section的<span class="m">offset().top</span>的值来改变translateX和scale的值。</p>
+<pre class="brush:js">
+$(window).on('scroll', function(){
+triggerAnimation();
+});
+<p>function triggerAnimation(){<br>
+if(MQ == 'desktop') {<br>
+//if on desktop screen - animate sections<br>
+window.requestAnimationFrame(animateSection);<br>
+} // .....<br>
+}</p>
+<p>function animateSection () {<br>
+$('.cd-section').each(function(){<br>
+var actualBlock = $(this),<br>
+scale,<br>
+translate,<br>
+opacity;</p>
+<p>//evaluate scale/translate values<br>
+//...</p>
+<p>scaleBlock(actualBlock.find('.cd-block'), scale, opacity);<br>
+translateBlock(actualBlock.find('.cd-half-block').eq(0), '-'+translate);<br>
+translateBlock(actualBlock.find('.cd-half-block').eq(1), translate);<br>
+});<br>
+}</p>
+<p>function translateBlock(elem, value) {<br>
+elem.css({<br>
+//...<br>
+'transform': 'translateX(' + value + ')',<br>
+});<br>
+}</p>
+<p>function scaleBlock(elem, value, opac) {<br>
+elem.css({<br>
+//...<br>
+'transform': 'scale(' + value + ')',<br>
+'opacity': opac<br>
+});<br>
+}<br>
+</pre></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1501/201501111547.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201501111156.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_1358">
+                                <h3 class="post-title">
+                                    jQuery适合移动设备触摸屏的响应式幻灯片插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

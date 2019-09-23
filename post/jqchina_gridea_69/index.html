@@ -1,0 +1,384 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    支持移动端的jQuery滑块式验证码插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            支持移动端的jQuery滑块式验证码插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1905/201905074293.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1905/201905074293.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201905075637.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款支持移动端的jQuery滑块式验证码插件。用户通过拖动滑块行为来完成校验，支持PC端及移动端。可以将用户拖动行为的时间、精度，滑动轨迹等信息到服务器，然后进行后台算法验证。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款支持移动端的jQuery滑块式验证码插件。用户通过拖动滑块行为来完成校验，支持PC端及移动端。可以将用户拖动行为的时间、精度，滑动轨迹等信息到服务器，然后进行后台算法验证。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入下面的文件。</p>
+<pre class="brush:js">
+&lt;link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css"&gt;
+&lt;link href="https://cdn.bootcss.com/font-awesome/5.7.2/css/all.min.css"&gt;
+&lt;link href="./src/slidercaptcha.css"&gt;
+&lt;script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="./src/longbow.slidercaptcha.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<pre class="brush:html">
+&lt;div id="captcha"&gt;&lt;/div&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<pre class="brush:js">
+&lt;script&gt;
+$('#captcha').sliderCaptcha({
+width: 280,
+height: 150,
+sliderL: 42,
+sliderR: 9,
+offset: 5,
+loadingText: '正在加载中...',
+failedText: '再试一次',
+barText: '向右滑动填充拼图',
+repeatIcon: 'fa fa-redo'
+setSrc: function () {
+<p>},<br>
+onSuccess: function () {</p>
+<p>},<br>
+onFail: function () {</p>
+<p>},<br>
+onRefresh: function () {</p>
+<p>}<br>
+});<br>
+&lt;/script&gt;<br>
+</pre></p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 配置参数</h3>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>integer</td>
+<td>280</td>
+<td>背景图片宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>integer</td>
+<td>150</td>
+<td>背景图标高度</td>
+</tr>
+<tr>
+<td>sliderL</td>
+<td>integer</td>
+<td>42</td>
+<td>拼图宽度</td>
+</tr>
+<tr>
+<td>sliderR</td>
+<td>integer</td>
+<td>9</td>
+<td>拼图突出半径</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>integer</td>
+<td>5</td>
+<td>验证容错偏差值 默认5个像素偏差即认为验证通过</td>
+</tr>
+<tr>
+<td>loadingText</td>
+<td>string</td>
+<td>"正在加载中..."</td>
+<td>图片加载时显示的文本信息</td>
+</tr>
+<tr>
+<td>failedText</td>
+<td>string</td>
+<td>"再试一次"</td>
+<td>验证失败时显示的文本信息</td>
+</tr>
+<tr>
+<td>barText</td>
+<td>integer</td>
+<td>"向右滑动填充拼图"</td>
+<td>拖动滑块准备拖动时显示的文本信息</td>
+</tr>
+<tr>
+<td>repeatIcon</td>
+<td>string</td>
+<td>"fa fa-redo"</td>
+<td>重新加载图标 需引用 font-awesome</td>
+</tr>
+<tr>
+<td>setSrc</td>
+<td>function</td>
+<td>"<a href="https://picsum.photos/?image=random" rel="nofollow" target="\_blank">https://picsum.photos/?image=random</a>"</td>
+<td>设置图片加载路径</td>
+</tr>
+<tr>
+<td>onSuccess</td>
+<td>function</td>
+<td><em>null</em></td>
+<td>验证通过时回调此函数</td>
+</tr>
+<tr>
+<td>onFail</td>
+<td>function</td>
+<td><em>null</em></td>
+<td>验证失败时回调此函数</td>
+</tr>
+<tr>
+<td>onRefresh</td>
+<td>function</td>
+<td><em>null</em></td>
+<td>点击重新加载图标时回调此函数</td>
+</tr>
+<tr>
+<td>localImages</td>
+<td>function</td>
+<td>function () { return 'images/Pic' + Math.round(Math.random() * 4) + '.jpg'; }</td>
+<td>图床图片加载失败时调用此方法返回本地图片路径</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 方法</h3>
+<pre class="brush:js">
+&lt;div id="captcha"&gt;&lt;/div&gt;
+&lt;script&gt;
+$('#captcha').sliderCaptcha();
+$('#captcha').sliderCaptcha('reset');
+&lt;/script&gt; 
+</pre>
+<p><i class="fa fa-github"></i> 该支持移动端的jQuery滑块式验证码插件的github网址为：<a href="https://github.com/ArgoZhang/SliderCaptcha" target="\_blank">https://github.com/ArgoZhang/SliderCaptcha</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1905/201905074293.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201905075637.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_690">
+                                <h3 class="post-title">
+                                    轻量级纯Javascript复选框checkbox动画插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

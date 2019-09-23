@@ -1,0 +1,435 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    实现多选和搜索过滤功能的jQuery下拉列表框插件 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            实现多选和搜索过滤功能的jQuery下拉列表框插件
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1604/201604071622.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604071622.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604073311.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>Selectator是一款实现多选和搜索过滤功能的jQuery下拉列表框插件。通过该下拉列表框插件可以多选项进行分组，设置选项的图标，对选项进行搜索过滤，以及进行多选选择。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>Selectator是一款实现多选和搜索过滤功能的<a href="http://www.htmleaf.com/jQuery/">jQuery</a>下拉列表框插件。通过该下拉列表框插件可以多选项进行分组，设置选项的图标，对选项进行搜索过滤，以及进行多选选择。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该下拉类别框插件需要在页面中引入fm.selectator.jquery.css、jQuery和fm.selectator.jquery.js文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="fm.selectator.jquery.css"/&gt;
+&lt;script src="jquery-1.11.0.min.js"&gt;&lt;/script&gt;
+&lt;script src="fm.selectator.jquery.js"&gt;&lt;/script&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>一个选项带图标级带分组选项的下拉列表的HTML结构如下：</p>
+<pre class="brush:html">
+&lt;label for="select"&gt;
+Multi select with custom content:
+&lt;/label&gt;
+&lt;select id="select" name="select" multiple&gt;
+&lt;optgroup label="Group one" class="group\_one"&gt;
+&lt;option value="1" class="option\_one" data-subtitle="Et" data-left="&lt;img src='images/ingi.png'&gt;" data-right="1"&gt;One&lt;/option&gt;
+&lt;option value="2" class="option\_two" data-subtitle="To" data-left="&lt;img src='images/runa.png'&gt;" data-right="2"&gt;Two&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Group two" class="group\_two"&gt;
+&lt;option value="3" class="option\_three" data-subtitle="Tre" data-left="&lt;img src='images/jogvan.png'&gt;" data-right="3"&gt;Three&lt;/option&gt;
+&lt;option value="4" class="option\_four" selected data-left="&lt;img src='images/noimage.png'&gt;" data-right="4"&gt;Four&lt;/option&gt;
+&lt;option value="5" class="option\_five" selected data-left="&lt;img src='images/noimage.png'&gt;" data-right="5"&gt;Five&lt;/option&gt;
+&lt;option value="6" class="option\_six"&gt;Six&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Group three" class="group\_three"&gt;
+&lt;option value="7" class="option\_seven"&gt;Seven&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;option value="8" class="option\_eight" data-subtitle="Otte"&gt;Eight&lt;/option&gt;
+&lt;option value="9" class="option\_nine"&gt;Nine&lt;/option&gt;
+&lt;option value="10" class="option\_ten" selected&gt;Ten&lt;/option&gt;
+&lt;option value="11" class="option\_eleven" selected&gt;Eleven&lt;/option&gt;
+&lt;option value="12" class="option\_twelve"&gt;Twelve&lt;/option&gt;
+&lt;option value="13" class="option\_thirteen"&gt;Thirteen&lt;/option&gt;
+&lt;option value="14" class="option\_fourteen"&gt;Fourteen&lt;/option&gt;
+&lt;/select&gt;
+&lt;input value="activate selectator" id="activate\_selectator4" type="button"&gt;
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，可以通过<code>selectator()</code>方法来初始化该下拉列表插件。</p>
+<pre class="brush:js">
+$('#selectBox').selectator();
+</pre>
+<p>你也可以直接使用标签来初始化它：</p>
+<pre class="brush:html">
+&lt;select multiple class="selectator" data-selectator-keep-open="true"&gt;
+</pre>
+<h3>
+<span class="glyphicon glyphicon-cog"></span> 配置参数</h3>
+<pre class="brush:js">
+$('#selectBox').selectator({
+prefix: 'selectator\_', // CSS class prefix
+height: 'auto',// auto or element
+useDimmer: false,// dims the screen when option list is visible
+useSearch: true, // if false, the search boxes are removed and 
+ // `showAllOptionsOnFocus` is forced to true
+keepOpen: false, // if true, then the dropdown will not close when 
+ // selecting options, but stay open until losing focus
+showAllOptionsOnFocus: false,// shows all options if input box is empty
+selectFirstOptionOnSearch: true, // selects the topmost option on every search
+searchCallback: function(value){}, // Callback function when enter is pressed and 
+ // no option is active in multi select box
+labels: {
+search: 'Search...'// Placeholder text in search box in single select box
+}
+});
+</pre>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> 其它可用的属性标签</h5>
+<p>通过使用<code>data-left</code>、<code>data-right</code>和<code>data-subtitle</code>标签你可以扩展下拉列表的显示信息。它们可以通过CSS来设置样式，CSS的前缀为：<code>prefix\_title</code>、<code>prefix\_left</code>、<code>prefix\_right</code>和<code>prefix\_subtitle</code>。这些数据都是纯HTML代码，所以你也可以使用图片代码。</p>
+<pre class="brush:html">
+&lt;select id="selectBox"&gt;
+&lt;!-- Normal option tag --&gt;
+&lt;option value="1"&gt;This is the title&lt;/option&gt;
+&lt;!-- Extended option tag --&gt;
+&lt;option value="2" data-left="This is the left section" 
+ data-right="This is the right section" 
+ data-subtitle="This is the section under the title"&gt;This is the title&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+<p>上的代码会显示为类似下面的结构：</p>
+<p><img src="http://img.htmleaf.com/1604/selector\_layout.jpg" alt="selector插件的选项布局" width="219" height="93"></p>
+<h5 style="text-transform: none;">
+<span class="glyphicon glyphicon-paperclip"></span> CSS类</h5>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>class</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix\_element</td>
+<td>这是一个新的下拉列表框。它带有相同的额外class类：<code>single</code>和<code>multiple</code>，它们用于设置是单选还是多选。另外<code>options-visible</code>和<code>options-hidden</code>用于设置选项是否可见</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_items</td>
+<td>被选择的选项的容器</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item</td>
+<td>当前被选择的选项的容器</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item\_title</td>
+<td>当前被选择的选项的标题</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item\_left</td>
+<td>当前被选择的选项的左侧的内容</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item\_right</td>
+<td>当前被选择的选项的右侧的内容</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item\_subtitle</td>
+<td>当前被选择的选项的子标题</td>
+</tr>
+<tr>
+<td>prefix\_chosen\_item\_remove</td>
+<td>当前被选择的选项的移除按钮</td>
+</tr>
+<tr>
+<td>prefix\_input</td>
+<td>This is the input box for the selectator. This is used together with options-visible or options-hidden to show and style it differently if it is a multiple selection box or a single selection box.</td>
+</tr>
+<tr>
+<td>prefix\_textlength</td>
+<td>用于计算多项选择框中input的尺寸</td>
+</tr>
+<tr>
+<td>prefix\_options</td>
+<td>选项列表容器</td>
+</tr>
+<tr>
+<td>prefix\_group\_header</td>
+<td>分组标题</td>
+</tr>
+<tr>
+<td>prefix\_group</td>
+<td>分组容器</td>
+</tr>
+<tr>
+<td>prefix\_option</td>
+<td>结果选项。它使用class <code>active</code>来表明当前激活的选项</td>
+</tr>
+<tr>
+<td>prefix\_option\_title</td>
+<td>结果选项的标题</td>
+</tr>
+<tr>
+<td>prefix\_option\_left</td>
+<td>结果选项左侧的内容</td>
+</tr>
+<tr>
+<td>prefix\_option\_right</td>
+<td>结果选项右侧的内容</td>
+</tr>
+<tr>
+<td>prefix\_option\_subtitle</td>
+<td>结果选项右侧的子标题</td>
+</tr>
+<tr>
+<td>prefix\_dimmer</td>
+<td>dimmer</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>
+<span class="glyphicon glyphicon-plus"></span> 方法</h3>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<td>方法</td>
+<td>描述</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>refresh</td>
+<td>该方法用于刷新插件</td>
+</tr>
+<tr>
+<td>destroy</td>
+<td>该方法用于销毁插件</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre class="brush:js">
+$('#selectBox').selectator('refresh');
+$('#selectBox').selectator('destroy');
+</pre>
+<p>jquery.selectator-custom下拉列表插件的github地址为：<a href="https://github.com/Lepshey/jquery.selectator-custom" target="\_blank">https://github.com/Lepshey/jquery.selectator-custom</a></p>
+</div>
+</article> 
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1604/201604071622.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201604073311.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_763">
+                                <h3 class="post-title">
+                                    基于Bootstrap的mansory网格瀑布流布局插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

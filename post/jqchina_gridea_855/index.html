@@ -1,0 +1,391 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    基于原生Bootstrap carousel扩展的实用jQuery旋转木马 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            基于原生Bootstrap carousel扩展的实用jQuery旋转木马
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+                            #jquery
+                        </a>
+                                
+                                <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+                            #bootstrap
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1601/201601261712.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601261712.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601263073.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款在原生Bootstrap carousel之上进行扩展而制作的实用jQuery旋转木马插件。该旋转木马插件在不改变原有的HTML标签的情况下，通过JS来重构旋转木马的结构，并结合CSS样式来完成旋转木马的显示。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款在原生Bootstrap carousel之上进行扩展而制作的实用<a href="http://www.htmleaf.com/jQuery/">jQuery</a>旋转木马插件。该旋转木马插件在不改变原有的HTML标签的情况下，通过JS来重构旋转木马的结构，并结合CSS样式来完成旋转木马的显示。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>使用该旋转木马插件需要在页面中引入jquery和Bootstrap的相关文件。</p>
+<pre class="brush:html">
+&lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>该旋转木马插件使用原生的<a href="http://v3.bootcss.com/javascript/#carousel" target="\_blank">Bootstrap Carousel插件</a>的HTML结构。</p>
+<pre class="brush:html">
+&lt;div id="example" class="carousel slide" data-ride="carousel"&gt;
+&lt;div class="carousel-inner"&gt;
+&lt;ul class="row item active"&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="1.jpg" srcset="1.jpg,1@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="2.jpg" srcset="2.jpg,2@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="3.jpg" srcset="3.jpg,3@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="row item"&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="4.jpg" srcset="4.jpg,4@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="5.jpg" srcset="5.jpg,5@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4"&gt;
+&lt;img src="6.jpg" srcset="6.jpg,6@2x.jpg" class="img-responsive"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+<p>&lt;a class=&quot;carousel-control left&quot; href=&quot;#example&quot; data-slide=&quot;prev&quot;&gt;Previous&lt;/a&gt;<br>
+&lt;a class=&quot;carousel-control right&quot; href=&quot;#example&quot; data-slide=&quot;next&quot;&gt;Next&lt;/a&gt;</p>
+<p>&lt;/div&gt;<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>为旋转木马添加以下一些必要的CSS样式。</p>
+<pre class="brush:css">
+.carousel[data-shift="1"] .carousel-inner &gt; .item {
+-webkit-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+<p>.carousel .carousel-inner &gt; .item.row { margin: 0; }</p>
+<p>.carousel .carousel-control {<br>
+background: none;<br>
+color: transparent;<br>
+overflow: hidden;<br>
+text-shadow: none;<br>
+-webkit-transition: all .3s ease-in-out;<br>
+transition: all .3s ease-in-out;<br>
+width: 30px;<br>
+}</p>
+<p>.carousel .carousel-control:before {<br>
+color: #444;<br>
+font-family: 'Glyphicons Halflings';<br>
+position: absolute;<br>
+top: 50%;<br>
+-webkit-transform: translateY(-50%);<br>
+transform: translateY(-50%);<br>
+width: 30px;<br>
+}</p>
+<p>.carousel .carousel-control:after {<br>
+border-radius: 50%;<br>
+box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);<br>
+content: '';<br>
+height: 60%;<br>
+position: absolute;<br>
+top: 50%;<br>
+-webkit-transform: translateY(-50%);<br>
+transform: translateY(-50%);<br>
+-webkit-transition: all .3s ease-in-out;<br>
+transition: all .3s ease-in-out;<br>
+width: 100%;<br>
+}</p>
+<p>.carousel .carousel-control:hover:after {<br>
+box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.7);<br>
+}</p>
+<p>.carousel .carousel-control.left { left: -30px; }</p>
+<p>.carousel .carousel-control.left:before { content: '\e079'; }</p>
+<p>.carousel .carousel-control.left:after { right: -100%; }</p>
+<p>.carousel .carousel-control.right { right: -30px; }</p>
+<p>.carousel .carousel-control.right:before { content: '\e080'; }</p>
+<p>.carousel .carousel-control.right:after { left: -100%; }<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>最后可以通过下面的JavaScript（jQuery）代码来对旋转木马进行重构。</p>
+<pre class="brush:js">
+var carousels = $('.carousel');
+carousels.each(function() {
+var $obj = $(this);
+var $inner = $obj.find('.carousel-inner');
+<p>var id = 'uuid' + new Date().getTime();<br>
+$obj.addClass(id);</p>
+<p>if ($obj.data('shift') === 1) {<br>
+var items = $obj.find('.item &gt; [class*=&quot;col-&quot;]'),<br>
+visibleCnt = $obj.find('.item:first [class*=&quot;col-&quot;]').length,<br>
+wrapper = &quot;&quot;;</p>
+<p>// 内置CSS样式<br>
+var rule_base = '.carousel.' + id + ' .carousel-inner &gt; .item',<br>
+styles = <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 3: (&#039;&amp;̲lt;style&amp;gt;&amp;lt…'>(&#039;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&#039;),
+rules = [];
+rules[0] = rule\_base + &#039;.next {left: &#039; + (100 / visibleCnt) + &#039;\%; transform: none;}&#039;;
+rules[1] = rule\_base + &#039;.active {left: 0;}&#039;;
+rules[2] = rule\_base + &#039;.active.left {left: -&#039; + (100 / visibleCnt) + &#039;\%; transform: none;}&#039;;
+rules[3] = rule\_base + &#039;.next.left {left: 0;}&#039;;
+rules[4] = rule\_base + &#039;.active.right {left: &#039; + (100 / visibleCnt) + &#039;\%; transform: none;}&#039;;
+rules[5] = rule\_base + &#039;.prev.right {left: 0;}&#039;;
+rules[6] = rule\_base + &#039;.prev {left: -&#039; + (100 / visibleCnt) + &#039;\%; transform: none;}&#039;;
+for (var i = 0; i &amp;lt; rules.length; i++) {
+styles.append(rules[i]);
+}
+</span>obj.prepend(styles);</p>
+<p>// 重构旋转木马的HTML结构<br>
+for (var i = 0; i &lt; $(items).length; i++) {<br>
+var $item = $(items[i]);<br>
+var parent = <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …&#039;).html(&#039;&#039;);
+}
+'>item.parent();
+if (parent.hasClass(&#039;item&#039;)) {
+if (!wrapper.length) {
+wrapper = parent.clone().removeClass(&#039;active&#039;).html(&#039;&#039;);
+}
+</span>item.unwrap();<br>
+}</p>
+<p>var itemGroup = [$item];<br>
+for (var x = 1; x &lt; visibleCnt; x++) {<br>
+var a = i + x;<br>
+var next = $(items[a]);<br>
+if (!next.length) {<br>
+next = $(items[(a - <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 20: …ms).length)]);
+}̲
+itemGroup[x] =…'>(items).length)]);
+}
+itemGroup[x] = next.clone();
+}
+var newSet = wrapper.clone().html(itemGroup);
+if (i == 0) {
+newSet.addClass(&#039;active&#039;);
+}
+newSet.appendTo(</span>inner);<br>
+}<br>
+}<br>
+});<br>
+</pre></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1601/201601261712.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201601263073.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_856">
+                                <h3 class="post-title">
+                                    简单实用的Bootstrap3表单验证插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>

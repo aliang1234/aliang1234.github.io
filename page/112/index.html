@@ -1,0 +1,1895 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_559">
+                        可拖拽和带二维码的登录窗口设计效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_559" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1612/201612221558.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的登录窗口设计效果。该登录窗口通过点击按钮或超链接弹出，它可以自由的进行拖拽。在登陆框中带有二维码，可以进行扫描登录，即实用又时尚。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的登录窗口设计效果。该登录窗口通过点击按钮或超链接弹出，它可以自由的进行拖拽。在登陆框中带有二维码，可以进行扫描登录，即实用又时尚。
+
+ 使用方法
+在页面中引入jquery和样式文件style.css。
+
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;link href=&#34;path/to/style.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+
+
+ HTML结构
+该登录窗口的基本HTML结构如下：
+
+&amp;lt;div id=&#34;gray&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;popup&#34; id=&#34;popup&#34;&amp;gt;
+&amp;lt;div class=&#34;top\_nav&#34; id=&#39;top\_nav&#39;&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;
+&amp;lt;span&amp;gt;登录账号&amp;lt;/span&amp;gt;
+&amp;lt;a class=&#34;guanbi&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;min&#34;&amp;gt;
+&amp;lt;div class=&#34;tc\_login&#34;&amp;gt;
+&amp;lt;div class=&#34;left&#34;&amp;gt;
+&amp;lt;h4 align=&#34;center&#34;&amp;gt;手机扫描&amp;lt;/h4&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;&amp;lt;img src=&#34;images/erweima.jpg&#34; width=&#34;150&#34; height=&#34;150&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;dd&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;扫描二维码登录&amp;lt;/div&amp;gt;
+&amp;lt;/dd&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;right&#34;&amp;gt;
+&amp;lt;form method=&#34;POST&#34; name=&#34;form\_login&#34; target=&#34;\_top&#34;&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;
+&amp;lt;a href=&#34;&#34;&amp;gt;短信快捷登录&amp;lt;/a&amp;gt;
+&amp;lt;i class=&#34;icon-mobile-phone&#34;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;input type=&#34;text&#34; name=&#34;name&#34; id=&#34;name&#34; required=&#34;required&#34; placeholder=&#34;用户名&#34; autocomplete=&#34;off&#34; class=&#34;input\_yh&#34;&amp;gt;
+&amp;lt;input type=&#34;password&#34; name=&#34;pass&#34; id=&#34;pass&#34; required=&#34;required&#34; placeholder=&#34;密码&#34; autocomplete=&#34;off&#34; class=&#34;input\_mm&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;dd&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;遇到登录问题&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/dd&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;
+&amp;lt;input type=&#34;submit&#34; class=&#34;button&#34; title=&#34;Sign In&#34; value=&#34;登录&#34;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt; 
+&amp;lt;dd&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;&amp;lt;a href=&#34;#&#34; target=&#34;\_blank&#34;&amp;gt;立即注册&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/dd&amp;gt;
+&amp;lt;hr align=&#34;center&#34; /&amp;gt;
+&amp;lt;div align=&#34;center&#34;&amp;gt;期待更多功能 &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+可以通过一个按钮或超链接来打开登录窗口。
+
+&amp;lt;button class=&#34;tc&#34;&amp;gt;点击登录&amp;lt;/button&amp;gt;
+
+
+ JavaScript
+在页面DOM元素加载完毕之后，通过下面的jquery代码来完成登录窗口的显示、隐藏和拖拽功能。
+
+//点击登录class为tc 显示
+$(&#34;.tc&#34;).click(function(){
+$(&#34;#gray&#34;).show();
+$(&#34;#popup&#34;).show();//查找ID为popup的DIV show()显示#gray
+tc\_center();
+});
+//点击关闭按钮
+$(&#34;a.guanbi&#34;).click(function(){
+$(&#34;#gray&#34;).hide();
+$(&#34;#popup&#34;).hide();//查找ID为popup的DIV hide()隐藏
+})
+//窗口水平居中
+$(window).resize(function(){
+tc_center();
+});
+function tc_center(){
+var _top=((window).height()−(window).height()-(window).height()−(&amp;quot;.popup&amp;quot;).height())/2;
+var _left=((window).width()−(window).width()-(window).width()−(&amp;quot;.popup&amp;quot;).width())/2;
+$(&amp;quot;.popup&amp;quot;).css({top:_top,left:_left});
+}
+$(document).ready(function(){
+(&amp;quot;.top\_nav&amp;quot;).mousedown(function(e){ 
+(this).css(&amp;quot;cursor&amp;quot;,&amp;quot;move&amp;quot;);//改变鼠标指针的形状
+var offset = (this).offset();//DIV在页面的位置varx=e.pageX−offset.left;//获得鼠标指针离DIV元素左边界的距离vary=e.pageY−offset.top;//获得鼠标指针离DIV元素上边界的距离//绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件(this).offset();//DIV在页面的位置 
+var x = e.pageX - offset.left;//获得鼠标指针离DIV元素左边界的距离 
+var y = e.pageY - offset.top;//获得鼠标指针离DIV元素上边界的距离 
+ //绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
+(this).offset();//DIV在页面的位置varx=e.pageX−offset.left;//获得鼠标指针离DIV元素左边界的距离vary=e.pageY−offset.top;//获得鼠标指针离DIV元素上边界的距离//绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件(document).bind(&amp;quot;mousemove&amp;quot;,function(ev){
+$(&amp;quot;.popup&amp;quot;).stop();//加上这个之后
+var _x = ev.pageX - x;//获得X轴方向移动的值
+var _y = ev.pageY - y;//获得Y轴方向移动的值
+$(&amp;quot;.popup&amp;quot;).animate({left:_x+&amp;quot;px&amp;quot;,top:_y+&amp;quot;px&amp;quot;},10);
+});
+});
+(document).mouseup(function() { 
+(&amp;quot;.popup&amp;quot;).css(&amp;quot;cursor&amp;quot;,&amp;quot;default&amp;quot;);
+$(this).unbind(&amp;quot;mousemove&amp;quot;);
+});
+})
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_559">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_56">
+                        基于滚动的超酷js图片动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_4">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_56" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1907/201907096935.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于滚动的超酷js图片动画特效。该特效在使用鼠标滚动屏幕时，根据屏幕的当前位置，屏幕上的图片做出相应的动画效果，非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款基于滚动的超酷js图片动画特效。该特效在使用鼠标滚动屏幕时，根据屏幕的当前位置，屏幕上的图片做出相应的动画效果，非常炫酷。
+
+ 使用方法
+
+ HTML结构
+
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+
+// The container for all images
+.container {
+// 2 columns grid
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 0 10\%;
+justify-items: end; // This will align all items (images) to the right
+// Fixed positioned, so it won&#39;t be affected by default scroll
+// It will be moved using transform, to achieve a custom scroll behavior
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+}
+// Styles for image elements
+// Mainly positioning and background styles
+.image {
+position: relative;
+width: 300px;
+height: 100vh;
+background-repeat: no-repeat;
+background-position: center;
+// This will align all even images to the left
+// For getting centered positioned images, respect to the viewport
+&amp;amp;:nth-child(2n) {
+justify-self: start;
+}
+// Set each background-image using a SCSS for loop
+@for i from 1 through 10 {
+&amp;amp;amp;:nth-child(#{i}) {
+background-image: url(&#39;../img/image#{$i}.jpg&#39;);
+}
+}
+}
+// Adjusting layout for small screens
+@media screen and (max-width: 760px) {
+.container {
+// 1 column grid
+grid-template-columns: 1fr;
+// Fix image centering
+justify-items: center;
+}
+// Fix image centering
+.image:nth-child(2n) {
+justify-self: center;
+}
+}
+
+
+ javascript
+
+// Easing function used for `translateX` animation
+// From: https://gist.github.com/gre/1650294
+function easeOutQuad (t) {
+return t *\_ (2 - t)
+}
+// Returns a random number (integer) between __min__ and __max__
+function random (min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min_
+}
+// Returns a random number as well, but it could be negative also
+function randomPositiveOrNegative (min, max) {
+return random(min, max) * (Math.random() &amp;gt; 0.5 ? 1 : -1)
+}
+// Set CSS tranform property for an element
+function setTransform (el, transform) {
+el.style.transform = transform
+el.style.WebkitTransform = transform
+}
+// Current scroll position
+var current = 0
+// Target scroll position
+var target = 0
+// Ease or speed for moving from current to target
+var ease = 0.075
+// Utility variables for requestAnimationFrame
+var rafId = undefined
+var rafActive = false
+// Container element
+var container = document.querySelector(&#39;.container&#39;)
+// Array with .image elements
+var images = Array.prototype.slice.call(document.querySelectorAll(&#39;.image&#39;))
+// Variables for storing dimmensions
+var windowWidth, containerHeight, imageHeight
+// Variables for specifying transform parameters (max limits)
+var rotateXMaxList = []
+var rotateYMaxList = []
+var translateXMax = -200
+// Popullating the rotateXMaxList and rotateYMaxList with random values
+images.forEach(function () {
+rotateXMaxList.push(randomPositiveOrNegative(20, 40))
+rotateYMaxList.push(randomPositiveOrNegative(20, 60))
+})
+// The fakeScroll is an element to make the page scrollable
+// Here we are creating it and appending it to the body
+var fakeScroll = document.createElement(&#39;div&#39;)
+fakeScroll.className = &#39;fake-scroll&#39;
+document.body.appendChild(fakeScroll)
+// In the setupAnimation function (below) we will set the height properly
+// The styles for a div element (inserted with Javascript)
+// Used to make the page scrollable
+// Will be setted a proper height value using Javascript
+.fake-scroll {
+position: absolute;
+top: 0;
+width: 1px;
+}
+// Geeting dimmensions and setting up all for animation
+function setupAnimation () {
+// Updating dimmensions
+windowWidth = window.innerWidth
+containerHeight = container.getBoundingClientRect().height
+imageHeight = containerHeight / (windowWidth &amp;gt; 760 ? images.length / 2 : images.length)
+// Set height for the fake scroll element
+fakeScroll.style.height = containerHeight + &#39;px&#39;
+// Start the animation, if it is not running already
+startAnimation()
+}
+// Update scroll target, and start the animation if it is not running already
+function updateScroll () {
+target = window.scrollY || window.pageYOffset
+startAnimation()
+}
+// Listen for scroll event to update target scroll position
+window.addEventListener(&#39;scroll&#39;, updateScroll)
+// Start the animation, if it is not running already
+function startAnimation () {
+if (!rafActive) {
+rafActive = true
+rafId = requestAnimationFrame(updateAnimation)
+}
+}
+// Do calculations and apply CSS transforms accordingly
+function updateAnimation () {
+// Difference between target and current scroll position
+var diff = target - current
+// delta is the value for adding to the current scroll position
+// If diff &amp;amp;lt; 0.1, make delta = 0, so the animation would not be endless
+var delta = Math.abs(diff) &amp;lt; 0.1 ? 0 : diff * ease
+if (delta) { // If delta !== 0
+// Update current scroll position
+current += delta
+// Round value for better performance
+current = parseFloat(current.toFixed(2))
+// Call update again, using requestAnimationFrame
+rafId = requestAnimationFrame(updateAnimation)
+} else { // If delta === 0
+// Update current, and finish the animation loop
+current = target
+rafActive = false
+cancelAnimationFrame(rafId)
+}
+// Update images (explained below)
+updateAnimationImages()
+// Set the CSS transform corresponding to the custom scroll effect
+setTransform(container, &#39;translateY(&#39;+ -current +&#39;px)&#39;)
+}
+// Calculate the CSS transform values for each image, given the current scroll position
+function updateAnimationImages () {
+// This value is the ratio between current scroll position and images height
+var ratio = current / imageHeight
+// Some variables for using in the loop
+var intersectionRatioIndex, intersectionRatioValue, intersectionRatio
+var rotateX, rotateXMax, rotateY, rotateYMax, translateX
+// For each image element, make calculations and set CSS transform accordingly
+images.forEach(function (image, index) {
+// Calculating the intersectionRatio, similar to the value provided by
+// the IntersectionObserver API
+intersectionRatioIndex = windowWidth &amp;gt; 760 ? parseInt(index / 2) : index
+intersectionRatioValue = ratio - intersectionRatioIndex
+intersectionRatio = Math.max(0, 1 - Math.abs(intersectionRatioValue))
+// Calculate the rotateX value for the current image
+rotateXMax = rotateXMaxList[index]
+rotateX = rotateXMax - (rotateXMax _ intersectionRatio)
+rotateX = rotateX.toFixed(2)
+// Calculate the _rotateY_ value for the current _image_
+rotateYMax = rotateYMaxList_[_index]
+rotateY = rotateYMax - (rotateYMax _ intersectionRatio)
+rotateY = rotateY.toFixed(2)
+// Calculate the translateX value for the current image
+if (windowWidth &amp;gt; 760) {
+translateX = translateXMax - (translateXMax * easeOutQuad(intersectionRatio))
+translateX = translateX.toFixed(2)
+} else {
+translateX = 0
+}
+// Invert rotateX and rotateY values in case the image is below the center of the viewport
+// Also update translateX value, to achieve an alternating effect
+if (intersectionRatioValue &amp;lt; 0) {
+rotateX = -rotateX
+rotateY = -rotateY
+translateX = index % 2 ? -translateX : 0
+} else {
+translateX = index % 2 ? 0 : translateX
+}
+// Set the CSS transform, using calculated values
+setTransform(image, &#39;perspective(500px) translateX(&#39;+ translateX +&#39;px) rotateX(&#39;+ rotateX +&#39;deg) rotateY(&#39;+ rotateY +&#39;deg)&#39;)
+})
+}
+// Listen for resize event to recalculate dimmensions
+window.addEventListener(&#39;resize&#39;, setupAnimation)
+// Initial setup
+setupAnimation()
+
+ 该基于滚动的超酷js图片动画特效的github网址为：https://github.com/lmgonzalves/scroll-based-animation
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_56">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_560">
+                        纯js跨浏览器响应式消息通知插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_560" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611201431.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+iziToast.js是一款纯js跨浏览器响应式消息通知插件。该消息通知插件体积小，使用简单。消息显示时带CSS3动画效果，时尚大方。
+内容：
+
+
+简要教程
+
+
+iziToast.js是一款纯js跨浏览器响应式消息通知插件。该消息通知插件体积小，使用简单。消息显示时带CSS3动画效果，时尚大方。它的特点还有：
+
+自带4种主题效果： info, warning, error 和 success。
+可以自定义主题。
+可以自定义图标。
+可以自定义图片。
+可以自定义消息通知显示的位置。
+消息通知可以设置为自动关闭。
+可以自定义消息通知框显示时的CSS3动画。
+
+
+ 安装
+可以通过npm或bower来安装iziToast.js消息通知插件。
+
+npm install izitoast --save
+bower install izitoast
+
+
+ 使用方法
+在页面中引入iziToast.min.css和iziToast.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;iziToast.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;iziToast.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ 初始化插件
+可以通过iziToast.show()方法来实例化一个消息通知框。
+
+iziToast.show({
+title: &#39;Hello World!&#39;,
+message: &#39;I am a basic toast message!&#39;
+});
+
+
+ 配置参数
+iziToast.js消息通知插件的默认配置参数如下：
+
+iziToast.show({
+class: &#39;&#39;,
+title: &#39;&#39;,
+message: &#39;&#39;,
+color: &#39;&#39;, // blue, red, green, yellow
+icon: &#39;&#39;,
+iconText: &#39;&#39;,
+iconColor: &#39;&#39;,
+image: &#39;&#39;,
+imageWidth: 50,
+layout: 1,
+balloon: false,
+close: true,
+rtl: false,
+position: &#39;bottomRight&#39;, // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+target: &#39;&#39;,
+timeout: 5000,
+pauseOnHover: true,
+resetOnHover: false,
+progressBar: true,
+progressBarColor: &#39;&#39;,
+animateInside: true,
+buttons: {},
+transitionIn: &#39;fadeInUp&#39;,
+transitionOut: &#39;fadeOut&#39;,
+transitionInMobile: &#39;fadeInUp&#39;,
+transitionOutMobile: &#39;fadeOutDown&#39;,
+onOpen: function () {},
+onClose: function () {}
+});
+
+
+
+
+
+参数
+默认值
+描述
+
+
+
+
+class
+&#39;&#39;
+消息通知框的class类。
+
+
+title
+&#39;&#39;
+消息通知框的标题。
+
+
+message
+&#39;&#39;
+提示的消息。
+
+
+color
+&#39;&#39;
+颜色。可以是十六进制颜色，颜色关键字等。
+
+
+icon
+&#39;&#39;
+图标。可以是Icomoon, Fontawesome等。
+
+
+iconText
+&#39;&#39;
+图标文字。
+
+
+iconColor
+&#39;&#39;
+图标颜色。
+
+
+image
+&#39;&#39;
+显示的图像。
+
+
+imageWidth
+50
+图像的宽度。
+
+
+layout
+1
+布局，可以是1或者2。也可以使用其它布局，例如“.iziToast-layout3”。
+
+
+balloon
+false
+是否使用气泡效果。
+
+
+close
+true
+是否显示关闭按钮。
+
+
+rtl
+false
+RTL
+
+
+position
+&#39;bottomRight&#39;
+在哪里显示消息通知框。bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter 或 center。
+
+
+target
+&#39;&#39;
+显示消息通知框的固定位置。
+
+
+timeout
+5000
+关闭消息通知框的时间，单位毫秒。
+
+
+pauseOnHover
+true
+是否在鼠标滑过时暂停。
+
+
+resetOnHover
+false
+是否在鼠标滑过时重置。
+
+
+progressbar
+true
+是否显示进度条。
+
+
+progressbarColor
+&#39;&#39;
+进度条的颜色。
+
+
+animateInside
+true
+是否允许动画。
+
+
+buttons
+{}
+指定一组按钮。
+
+
+transitionIn
+&#39;fadeInUp&#39;
+过渡动画的类型。可以是：bounceInLeft, bounceInRight, bounceInUp, bounceInDown, fadeIn, fadeInDown, fadeInUp, fadeInLeft, fadeInRight 或 flipInX。
+
+
+transitionOut
+&#39;fadeOut&#39;
+默认的关闭动画。可以是：fadeOut, fadeOutUp, fadeOutDown, fadeOutLeft, fadeOutRight, flipOutX。
+
+
+transitionInMobile
+&#39;fadeInUp&#39;
+在移动端打开消息框的动画。
+
+
+transitionOutMobile
+&#39;fadeOutDown&#39;
+在移动端关闭消息框的动画。
+
+
+onOpen
+function () {}
+打开消息框时的回调函数。
+
+
+onClose
+function () {}
+关闭消息框时的回调函数。
+
+
+
+
+
+ 方法
+settings()方法用于设置默认值。
+
+iziToast.settings({
+timeout: 10000,
+resetOnHover: true,
+icon: &#39;material-icons&#39;,
+transitionIn: &#39;flipInX&#39;,
+transitionOut: &#39;flipOutX&#39;,
+onOpen: function(){
+console.log(&#39;callback abriu!&#39;);
+},
+onClose: function(){
+console.log(&#34;callback fechou!&#34;);
+}
+});
+
+show()方法用于打开一个消息通知框。
+
+iziToast.show({
+color: &#39;dark&#39;,
+icon: &#39;icon-person&#39;,
+title: &#39;Hey&#39;,
+message: &#39;Welcome!&#39;,
+position: &#39;center&#39;, 
+progressBarColor: &#39;rgb(0, 255, 184)&#39;,
+buttons: [
+[&#39;&amp;lt;button&amp;gt;Ok&amp;lt;/button&amp;gt;&#39;, function (instance, toast) {
+alert(&#34;Hello world!&#34;);
+}],
+[&#39;&amp;lt;button&amp;gt;Close&amp;lt;/button&amp;gt;&#39;, function (instance, toast) {
+instance.hide({ transitionOut: &#39;fadeOutUp&#39; }, toast);
+}]
+]
+});
+
+hide()方法用于关闭一个消息通知框。
+
+var toast = document.querySelector(&#39;.toast&#39;);
+iziToast.hide({
+transitionOut: &#39;fadeOutUp&#39;
+}, toast);
+
+destroy()方法用于销毁消息通知框。
+
+iziToast.destroy();
+
+info()方法。
+
+iziToast.info({
+title: &#39;Hello&#39;,
+message: &#39;Welcome!&#39;,
+}); 
+
+success()方法。
+
+iziToast.success({
+title: &#39;OK&#39;,
+message: &#39;Successfully inserted record!&#39;,
+});
+
+warning()方法。
+iziToast.warning({
+title: &#39;Caution&#39;,
+message: &#39;You forgot important data&#39;,
+});
+error()方法。
+
+iziToast.error({
+title: &#39;Error&#39;,
+message: &#39;Illegal operation&#39;,
+});
+
+
+ 事件
+Open - 在消息通知框打开时触发。
+
+document.addEventListener(&#39;iziToast-open&#39;, function(data){
+if(data.detail.class == &#39;test&#39;){
+console.log(&#39;test open&#39;);
+}
+});
+
+Close- 在消息通知框关闭时触发。
+
+document.addEventListener(&#39;iziToast-close&#39;, function(data){
+if(data.detail.class == &#39;test&#39;){
+console.log(&#39;test close&#39;);
+}
+}); 
+
+ziToast.js消息通知插件的github地址是：https://github.com/dolce/iziToast
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_560">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_561">
+                        jquery中国省份地图插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_561" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1612/201612111517.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jquery和png图片来制作的中国省份地图特效插件。该中国省份地图插件使用多张png图片来组成中国省份地图，并在鼠标滑过各个省份时将其高亮。
+内容：
+
+
+简要教程
+
+
+这是一款使用jquery和png图片来制作的中国省份地图特效插件。该中国省份地图插件使用多张png图片来组成中国省份地图，并在鼠标滑过各个省份时将其高亮。
+
+ 使用方法
+在页面中引入jquery和样式文件style.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/style.css&#34; /&amp;gt;
+&amp;lt;script type=&#34;text/jscript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该中国省份地图使用&amp;lt;div&amp;gt;配合png图片来制作，完整的代码如下：
+
+&amp;lt;div class=&#34;map&#34;&amp;gt;
+&amp;lt;img src=&#34;images/map.jpg&#34; width=&#34;716&#34; height=&#34;595&#34; usemap=&#34;#Map&#34; border=&#34;0&#34;/&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34;background:url(images/anhui.png) no-repeat 0 0; top:314px; left:523px; width:75px; height:90px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34; position:absolute; top:355px; left:545px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;安徽&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34;background:url(images/neimeng.png) no-repeat 0 0;top:9px; left:296px; width:318px; height:272px; display:block;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute; top:211px; left:424px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;内蒙&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/heilongjiang.png) no-repeat 0 0; top:1px; left:550px; width:165px; height:151px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:81px; left:624px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;黑龙江&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/xinjiang.png) no-repeat 0 0; top:73px; left:0px; width:292px; height:223px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:211px; left:124px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;新疆&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/xizang.png) no-repeat 0 0; top:275px; left:31px; width:281px; height:175px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:361px; left:145px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;西藏&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/qinghai.png) no-repeat 0 0; top:240px; left:182px; width:185px; height:135px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:300px; left:254px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;青海&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/gansu.png) no-repeat 0 0; top:187px; left:236px; width:207px; height:177px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:310px; left:364px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;甘肃&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/ningxia.png) no-repeat 0 0; top:245px; left:379px; width:49px; height:75px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:272px; left:390px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;宁夏&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/shanghai.png) no-repeat 0 0; top:354px; left:610px; width:23px; height:22px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:352px; left:615px;; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;上海&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/liaoning.png) no-repeat 0 0; top:161px; left:557px; width:91px; height:87px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:180px; left:600px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;辽宁&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/guangdong.png) no-repeat 0 0; top:470px; left:464px; width:111px; height:88px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:490px; left:500px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;广东&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/guangxi.png) no-repeat 0 0; top:454px; left:382px; width:118px; height:92px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:488px; left:432px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;广西&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/henan.png) no-repeat 0 0; top:288px; left:461px; width:118px; height:92px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:320px; left:490px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;河南&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/shanxi.png) no-repeat 0 0; top:242px; left:396px; width:79px; height:134px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:321px; left:430px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;陕西&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/shanxi2.png) no-repeat 0 0; top:219px; left:458px; width:56px; height:112px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:271px; left:470px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;山西&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/hebei.png) no-repeat 0 0; top:184px; left:497px; width:85px; height:118px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:247px; left:508px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;河北&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/jilin.png) no-repeat 0 0; top:113px; left:575px; width:125px; height:88px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:150px; left:642px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;吉林&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/beijing.png) no-repeat 0 0; top:210px; left:512px; width:50px; height:38px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:215px; left:515px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;北京&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/tianjin.png) no-repeat 0 0; top:224px; left:535px; width:26px; height:34px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:229px; left:535px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;天津&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/shandong.png) no-repeat 0 0; top:256px; left:521px; width:103px; height:68px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:281px; left:540px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;山东&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/jiangsu.png) no-repeat 0 0; top:305px; left:539px; width:93px; height:72px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:321px; left:570px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;江苏&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/hainan.png) no-repeat 0 0; top:556px; left:442px; width:89px; height:88px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:565px; left:450px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;海南&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/hubei.png) no-repeat 0 0; top:345px; left:438px; width:115px; height:75px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:365px; left:480px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;湖北&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/yunnan.png) no-repeat 0 0; top:412px; left:280px; width:132px; height:138px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:485px; left:320px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;云南&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/sichuan.png) no-repeat 0 0; top:328px; left:284px; width:161px; height:143px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:385px; left:345px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;四川&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/guizhou.png) no-repeat 0 0; top:409px; left:367px; width:93px; height:81px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:445px; left:405px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;贵州&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/taiwan.png) no-repeat 0 0; top:456px; left:613px; width:32px; height:65px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:475px; left:620px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;台湾&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/fujian.png) no-repeat 0 0; top:415px; left:548px; width:70px; height:84px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:445px; left:565px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;福建&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/hunan.png) no-repeat 0 0; top:394px; left:445px; width:83px; height:96px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:425px; left:475px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;湖南&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/zhejiang.png) no-repeat 0 0; top:367px; left:574px; width:62px; height:70px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:395px; left:588px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;浙江&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/jiangxi.png) no-repeat 0 0; top:390px; left:513px; width:76px; height:98px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:425px; left:525px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;江西&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;city&#34;&amp;gt;&amp;lt;div class=&#34;citybg&#34; style=&#34; background:url(images/chongqing.png) no-repeat 0 0; top:363px; left:397px; width:70px; height:80px;&#34;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;a style=&#34;position:absolute;top:390px; left:420px; z-index:10;&#34; href=&#34;index.html&#34;&amp;gt;重庆&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的方法来使鼠标滑过相应的省份时将其高亮。
+
+$(document).ready(function(){
+maphover();
+});
+function maphover(){
+var self = &amp;quot;&amp;quot;;
+$(&amp;quot;.city&amp;quot;).hover(
+function(){
+self = $(this);
+self.addClass(&amp;quot;hover&amp;quot;).children(&amp;quot;div&amp;quot;).show();
+},
+function(){
+self = (this);
+self.children(&amp;quot;div&amp;quot;).hide();
+self.removeClass(&amp;quot;hover&amp;quot;);
+}
+);
+(&amp;quot;.city&amp;quot;).click(
+function(){
+self = $(this);
+self.addClass(&amp;quot;hover&amp;quot;).children(&amp;quot;div&amp;quot;).show();
+},
+function(){
+self = $(this);
+self.children(&amp;quot;div&amp;quot;).hide();
+self.removeClass(&amp;quot;hover&amp;quot;);
+}
+);
+};
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_561">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_562">
+                        jquery和CSS3带弹性动画效果的工具栏菜单
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_4">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_562" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1701/201701161535.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jquery和CSS3制作的带弹性动画效果的工具栏菜单特效。该工具栏菜单默认只显示一个圆形按钮，单点击按钮时，子菜单项会以弹性动画展开，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款使用jquery和CSS3制作的带弹性动画效果的工具栏菜单特效。该工具栏菜单默认只显示一个圆形按钮，单点击按钮时，子菜单项会以弹性动画展开，效果非常炫酷。
+
+ 使用方法
+在页面中引入jquery和字体图标文件font-awesome.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该工具栏菜单的HTML结构如下：
+
+&amp;lt;div id=&#34;wrapper&#34;&amp;gt;
+&amp;lt;div id=&#34;toolbar&#34;&amp;gt;
+&amp;lt;div class=&#34;button&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;ul class=&#34;icons&#34;&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;fa fa-home fa-2x&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;fa fa-user fa-2x&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;fa fa-star fa-2x&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;fa fa-file-text-o fa-2x&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;i class=&#34;fa fa-paper-plane-o fa-2x&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为该工具栏菜单添加如下的CSS样式：
+
+#wrapper {
+text-align:center;
+font-family: &#39;Lato&#39;, sans-serif;
+text-transform:uppercase;
+}
+#toolbar {
+width:100\%;
+max-width:670px;
+min-width:550px;
+margin: 70px auto;
+}
+.button {
+width:70px;
+height:70px;
+border-radius:50\%;
+background-color:#3AB09E;
+color:#ffffff;
+text-align:center;
+font-size:3.5em;
+position:relative;
+left:50\%;
+margin-left:-35px;
+z-index:1;
+}
+.button,.icons{
+-webkit-transition: -webkit-all 1s cubic-bezier(.87,-.41,.19,1.44);
+transition:all 1s cubic-bezier(.87,-.41,.19,1.44);
+}
+.button:after {
+content:&#34;+&#34;;
+}
+.button.active {
+-webkit-transform: rotate(45deg);
+ transform: rotate(45deg);
+left:60px;
+}
+.icons {
+width:0\%;
+overflow:hidden;
+height:36px;
+list-style:none;
+padding:16px 10px 10px 50px;
+background-color:#ffffff;
+box-shadow: 1px 1px 1px 1px #DCDCDC;
+margin:-68px 0 0 45\%;
+border-radius: 2em;
+}
+.icons.open {
+width:80%;
+margin:-68px 0 0 5%;
+overflow:hidden;
+}
+.icons li {
+display: none;
+width:10%;
+color:#3AB09E;
+}
+.icons.open li {
+width:16%;
+display: inline-block;
+}
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，通过下面的jquery代码来打开和关闭工具栏菜单。
+
+$( &#34;.button&#34; ).click(function() {
+$(this).toggleClass( &#34;active&#34; );
+$(&#34;.icons&#34;).toggleClass( &#34;open&#34; );
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_562">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_563">
+                        中国各大城市和县区快速选择js插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-warning">
+            #js
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_563" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1701/201701041501.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款非常实用的中国各大城市和县区快速选择js插件。通过该插件，用户可以在输入框中通过点击生成包含中国各个城市的下拉列表，进行快速选择、用户还可以在输入框中键入城市的首字，进行快速定位。
+内容：
+
+
+简要教程
+
+
+这是一款非常实用的中国各大城市和县区快速选择js插件。通过该插件，用户可以在输入框中通过点击生成包含中国各个城市的下拉列表，进行快速选择、用户还可以在输入框中键入城市的首字，进行快速定位。
+
+ 使用方法
+在页面中引入cityselect.js和样式文件cityselect.css。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/cityselect.css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/cityselect.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+使用一个&amp;lt;input&amp;gt;输入框，为它添加ID。
+
+&amp;lt;input type=&#34;text&#34; class=&#34;cityinput&#34; id=&#34;citySelect&#34; placeholder=&#34;请输入目的地&#34;&amp;gt;
+
+
+ 初始化插件
+在页面加载完毕之后，通过下面的方法来初始化该插件。
+
+var test=new Vcity.CitySelector({input:&#39;citySelect&#39;}); 
+
+得到的效果如下图所示：
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_563">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_564">
+                        jquery根据鼠标位置移动背景图片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-primary">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_564" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1702/201702171453.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.backgroundMove.js是一款根据鼠标位置移动背景图片jquery插件。该jquery插件么一根据鼠标的当前位置来移动元素的背景图片，兼容ie8浏览器。
+内容：
+
+
+简要教程
+
+
+jquery.backgroundMove.js是一款根据鼠标位置移动背景图片jquery插件。该jquery插件么一根据鼠标的当前位置来移动元素的背景图片，兼容ie8浏览器。
+
+ 使用方法
+在页面中引入jquery和jquery.backgroundMove.js文件。
+
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;path/to/js/jquery.backgroundMove.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML结构
+可以使用一个&amp;lt;div&amp;gt;元素作为容器。
+
+&amp;lt;div class=&#34;box&#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+
+ CSS样式
+为&amp;lt;div&amp;gt;元素设置宽度和高度，以及背景图片。
+
+.box {
+height: 400px;
+max-width: 600px;
+text-align: center;
+line-height: 400px;
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+} 
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过下面的方法来初始化该jquery插件。
+
+$(&#39;.box&#39;).backgroundMove();
+
+或者在插件初始化时传入配置参数。
+
+$(&#39;.box&#39;).backgroundMove({
+movementStrength:&#39;50&#39;
+});
+
+jquery.backgroundMove.js插件的github地址为：https://github.com/supunsameera/jquery.backgroundMove.js
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_564">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_565">
+                        高级jQuery自动补全插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_565" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1703/201703091519.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+jquery.typeahead.js是一款高级的自动补全jQuery插件。该自动补全插件提供超过50个配置选项和回调方法，用于完成自动补全功能，能够完成绝大部分表单自动补全的需求。
+内容：
+
+
+简要教程
+
+
+jquery.typeahead.js是一款高级的自动补全jQuery插件。该jquery自动补全插件提供超过50个配置选项和回调方法，用于完成自动补全功能，能够完成绝大部分表单自动补全的需求。
+
+ 安装
+可以通过npm或bower来安装jquery.typeahead.js插件。
+
+bower install jquery-typeahead
+npm install jquery-typeahead
+
+
+ 使用方法
+在页面中引入jquery、jquery.typeahead.min.js和jquery.typeahead.min.css文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/jquery.typeahead.min.css&#34; /&amp;gt;
+&amp;lt;script src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;js/jquery.typeahead.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该jquery自动补全插件可以和bootstrap集成使用，基本的HTML结构如下：
+
+&amp;lt;form&amp;gt;
+&amp;lt;div class=&#34;typeahead\_\_container&#34;&amp;gt;
+&amp;lt;div class=&#34;typeahead\_\_field&#34;&amp;gt;
+&amp;lt;span class=&amp;quot;typeahead__query&amp;quot;&amp;gt;
+&amp;lt;input class=&amp;quot;js-typeahead&amp;quot;
+name=&amp;quot;q&amp;quot;
+type=&amp;quot;search&amp;quot;
+autocomplete=&amp;quot;off&amp;quot;&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;typeahead__button&amp;quot;&amp;gt;
+&amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;typeahead__search-icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/form&amp;gt;
+
+
+ 初始化插件
+初始化该jquery自动补全插件有两种方法：
+方法一：通过$.typeahead()来初始化。（建议使用该方法）
+
+$.typeahead({
+input: &#34;.js-typeahead&#34;,
+order: &#34;asc&#34;,
+source: {
+groupName: {
+// Ajax Request
+ajax: {
+url: &#34;...&#34;
+}
+}
+},
+callback: {
+onClickBefore: function () { ... }
+}
+}); 
+
+方法二：通过唯一的input选择器来创建一个jQuery对象，然后在该对象上使用.typeahead()方法。
+
+$(&#39;.js-typeahead&#39;).typeahead({
+order: &#34;asc&#34;,
+source: {
+groupName: {
+// Array of Objects / Strings
+data: [ {...}, {...} ]
+}
+},
+callback: {
+onInit: function () { ... }
+}
+});
+
+
+ 配置参数
+该jquery自动补全插件的可用配置参数如下：
+
+/**
+ * @private
+ * Default options
+ */
+var \_options = {
+input: null,// *RECOMMENDED*, jQuery selector to reach Typeahead&#39;s input for initialization
+minLength: 2, // Accepts 0 to search on focus, minimum character length to perform a search
+maxLength: false, // False as &#34;Infinity&#34; will not put character length restriction for searching results
+maxItem: 8, // Accepts 0 / false as &#34;Infinity&#34; meaning all the results will be displayed
+dynamic: false, // When true, Typeahead will get a new dataset from the source option on every key press
+delay: 300, // delay in ms when dynamic option is set to true
+order: null,// &#34;asc&#34; or &#34;desc&#34; to sort results
+offset: false,// Set to true to match items starting from their first character
+hint: false,// Added support for excessive &#34;space&#34; characters
+accent: false,// Will allow to type accent and give letter equivalent results, also can define a custom replacement object
+highlight: true,// Added &#34;any&#34; to highlight any word in the template, by default true will only highlight display keys
+group: false, // Improved feature, Boolean,string,object(key, template (string, function))
+groupOrder: null, // New feature, order groups &#34;asc&#34;, &#34;desc&#34;, Array, Function
+maxItemPerGroup: null,// Maximum number of result per Group
+dropdownFilter: false,// Take group options string and create a dropdown filter
+dynamicFilter: null,// Filter the typeahead results based on dynamic value, Ex: Players based on TeamID
+backdrop: false,// Add a backdrop behind Typeahead results
+backdropOnFocus: false, // Display the backdrop option as the Typeahead input is :focused
+cache: false, // Improved option, true OR &#39;localStorage&#39; OR &#39;sessionStorage&#39;
+ttl: 3600000, // Cache time to live in ms
+compression: false, // Requires LZString library
+searchOnFocus: false, // Display search results on input focus
+blurOnTab: true,// Blur Typeahead when Tab key is pressed, if false Tab will go though search results
+resultContainer: null,// List the results inside any container string or jQuery object
+generateOnLoad: null, // Forces the source to be generated on page load even if the input is not focused!
+mustSelectItem: false,// The submit function only gets called if an item is selected
+href: null, // String or Function to format the url for right-click &amp;amp; open in new tab on link results
+display: [&#34;display&#34;], // Allows search in multiple item keys [&#34;display1&#34;, &#34;display2&#34;]
+template: null, // Display template of each of the result list
+templateValue: null,// Set the input value template when an item is clicked
+groupTemplate: null,// Set a custom template for the groups
+correlativeTemplate: false, // Compile display keys, enables multiple key search from the template string
+emptyTemplate: false, // Display an empty template if no result
+cancelButton: true, // If text is detected in the input, a cancel button will be available to reset the input (pressing ESC also cancels)
+loadingAnimation: true, // Display a loading animation when typeahead is doing request / searching for results
+filter: true, // Set to false or function to bypass Typeahead filtering. WARNING: accent, correlativeTemplate, offset &amp;amp; matcher will not be interpreted
+matcher: null,// Add an extra filtering function after the typeahead functions
+source: null, // Source of data for Typeahead to filter
+callback: {
+onInit: null, // When Typeahead is first initialized (happens only once)
+onReady: null,// When the Typeahead initial preparation is completed
+onShowLayout: null, // Called when the layout is shown
+onHideLayout: null, // Called when the layout is hidden
+onSearch: null, // When data is being fetched &amp;amp; analyzed to give search results
+onResult: null, // When the result container is displayed
+onLayoutBuiltBefore: null,// When the result HTML is build, modify it before it get showed
+onLayoutBuiltAfter: null, // Modify the dom right after the results gets inserted in the result container
+onNavigateBefore: null, // When a key is pressed to navigate the results, before the navigation happens
+onNavigateAfter: null,// When a key is pressed to navigate the results
+onMouseEnter: null, // When the mouse enter an item in the result list
+onMouseLeave: null, // When the mouse leaves an item in the result list
+onClickBefore: null,// Possibility to e.preventDefault() to prevent the Typeahead behaviors
+onClickAfter: null, // Happens after the default clicked behaviors has been executed
+onDropdownFilter: null, // When the dropdownFilter is changed, trigger this callback
+onSendRequest: null,// Gets called when the Ajax request(s) are sent
+onReceiveRequest: null, // Gets called when the Ajax request(s) are all received
+onPopulateSource: null, // Perform operation on the source data before it gets in Typeahead data
+onCacheSave: null,// Perform operation on the source data before it gets in Typeahead cache
+onSubmit: null, // When Typeahead form is submitted
+onCancel: null// Triggered if the typeahead had text inside and is cleared
+},
+selector: {
+container: &#34;typeahead\_\_container&#34;,
+result: &#34;typeahead\_\_result&#34;,
+list: &#34;typeahead\_\_list&#34;,
+group: &#34;typeahead\_\_group&#34;,
+item: &#34;typeahead\_\_item&#34;,
+empty: &#34;typeahead\_\_empty&#34;,
+display: &#34;typeahead\_\_display&#34;,
+query: &#34;typeahead\_\_query&#34;,
+filter: &#34;typeahead\_\_filter&#34;,
+filterButton: &#34;typeahead\_\_filter-button&#34;,
+dropdown: &#34;typeahead\_\_dropdown&#34;,
+dropdownItem: &#34;typeahead\_\_dropdown-item&#34;,
+button: &#34;typeahead\_\_button&#34;,
+backdrop: &#34;typeahead\_\_backdrop&#34;,
+hint: &#34;typeahead\_\_hint&#34;,
+cancelButton: &#34;typeahead\_\_cancel-button&#34;
+},
+debug: false// Display debug information (RECOMMENDED for dev environment)
+};
+
+更多关于jquery.typeahead.js自动补全插件的信息，可以参考官方网站：http://www.runningcoder.org/jquerytypeahead/documentation/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_565">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_566">
+                        基于Bootstrap的垂直滚动新闻特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/7t5jPa_I4" class="post-tag i-tag
+                            i-tag-error">
+            #bootstrap
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_566" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1610/201610111450.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款基于Bootstrap的垂直滚动新闻特效。原生的Bootstrap只有水平的轮播图插件。该特效通过修改HTML结构和CSS样式来达到垂直滚动轮播的效果。
+内容：
+
+
+简要教程
+
+
+这是一款基于Bootstrap的垂直滚动新闻特效。原生的Bootstrap只有水平的轮播图插件。该特效通过修改HTML结构和CSS样式来达到垂直滚动轮播的效果。
+
+ 使用方法
+在页面中引入jquery和bootstrap的相关文件。
+
+&amp;lt;link rel=&#39;stylesheet&#39; href=&#39;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&#39;&amp;gt;
+&amp;lt;script src=&#34;http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#39;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+该垂直滚动新闻特效的基本HTML结构如下：
+ 
+&amp;lt;div class=&#34;bg-demo&#34;&amp;gt;
+&amp;lt;div class=&#34;container&#34;&amp;gt;
+&amp;lt;div id=&#34;carousel-example-vertical&#34; class=&#34;carousel vertical slide&#34;&amp;gt;
+&amp;lt;div class=&#34;carousel-inner&#34; role=&#34;listbox&#34;&amp;gt;
+&amp;lt;div class=&#34;item active&#34;&amp;gt;
+&amp;lt;p class=&#34;ticker-headline&#34;&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;
+滚动新闻内容。。。
+&amp;lt;/a&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+......
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 上下箭头按钮 --&amp;gt;
+&amp;lt;a class=&#34;up carousel-control&#34; href=&#34;#carousel-example-vertical&#34; role=&#34;button&#34; data-slide=&#34;prev&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-up&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Previous&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;a class=&#34;down carousel-control&#34; href=&#34;#carousel-example-vertical&#34; role=&#34;button&#34; data-slide=&#34;next&#34;&amp;gt;
+&amp;lt;span class=&#34;glyphicon glyphicon-chevron-down&#34; aria-hidden=&#34;true&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;sr-only&#34;&amp;gt;Next&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+ 
+ 
+ CSS样式
+为该垂直滚动新闻特效添加下面的CSS样式：
+
+body {
+margin: 50px 0;
+}
+.bg-demo{
+background: #66677c;
+}
+.ticker-headline {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+padding: 25px 0;
+margin: 0;
+font-size: 18px;
+}
+.carousel.vertical .carousel-inner {
+height: 100%;
+width: auto;
+}
+.carousel.vertical .carousel-inner &amp;gt; .item {
+width: auto;
+padding-right: 50px;
+-webkit-transition: 0.6s ease-in-out top;
+transition: 0.6s ease-in-out top;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+.carousel.vertical .carousel-inner &amp;gt; .item {
+-webkit-transition: 0.6s ease-in-out;
+transition: 0.6s ease-in-out;
+}
+.carousel.vertical .carousel-inner &amp;gt; .item.next,
+.carousel.vertical .carousel-inner &amp;gt; .item.active.right {
+-webkit-transform: translate3d(0, 100%, 0);
+transform: translate3d(0, 100%, 0);
+top: 0;
+}
+.carousel.vertical .carousel-inner &amp;gt; .item.prev,
+.carousel.vertical .carousel-inner &amp;gt; .item.active.left {
+-webkit-transform: translate3d(0, -100%, 0);
+transform: translate3d(0, -100%, 0);
+top: 0;
+}
+.carousel.vertical .carousel-inner &amp;gt; .item.next.left,
+.carousel.vertical .carousel-inner &amp;gt; .item.prev.right,
+.carousel.vertical .carousel-inner &amp;gt; .item.active {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+top: 0;
+}
+}
+.carousel.vertical .carousel-inner &amp;gt; .active,
+.carousel.vertical .carousel-inner &amp;gt; .next,
+.carousel.vertical .carousel-inner &amp;gt; .prev {
+display: block;
+}
+.carousel.vertical .carousel-inner &amp;gt; .active {
+top: 0;
+}
+.carousel.vertical .carousel-inner &amp;gt; .next,
+.carousel.vertical .carousel-inner &amp;gt; .prev {
+position: absolute;
+top: 0;
+width: 100%;
+}
+.carousel.vertical .carousel-inner &amp;gt; .next {
+top: 100%;
+}
+.carousel.vertical .carousel-inner &amp;gt; .prev {
+top: -100%;
+}
+.carousel.vertical .carousel-inner &amp;gt; .next.left,
+.carousel.vertical .carousel-inner &amp;gt; .prev.right {
+top: 0;
+}
+.carousel.vertical .carousel-inner &amp;gt; .active.left {
+top: -100%;
+}
+.carousel.vertical .carousel-inner &amp;gt; .active.right {
+top: 100%;
+}
+.carousel.vertical .carousel-control {
+left: auto;
+width: 50px;
+}
+.carousel.vertical .carousel-control.up {
+top: 0;
+right: 0;
+bottom: 50%;
+}
+.carousel.vertical .carousel-control.down {
+top: 50%;
+right: 0;
+bottom: 0;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-up,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+position: absolute;
+top: 50%;
+z-index: 5;
+display: inline-block;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .glyphicon-chevron-up {
+left: 50%;
+margin-left: -10px;
+top: 50%;
+margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+left: 50%;
+margin-left: -10px;
+top: 50%;
+margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-up,
+.carousel.vertical .carousel-control .icon-down {
+width: 20px;
+height: 20px;
+line-height: 1;
+font-family: serif;
+}
+.carousel.vertical .carousel-control .icon-prev:before {
+content: &#39;\2039&#39;;
+}
+.carousel.vertical .carousel-control .icon-next:before {
+content: &#39;\203a&#39;;
+}
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_566">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_567">
+                        fallingsnow.js-jquery下雪动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_2">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-warning">
+            #jquery
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_567" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1611/201611071446.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+fallingsnow.js是一款小巧的jquery下雪动画特效插件。该jquery下雪动画特效兼容ie8浏览器，它会控制雪花的飘落速度，雪花的尺寸越小，下落的速度越慢，可以制作出雪花飞舞的视觉差效果。
+内容：
+
+
+简要教程
+
+
+fallingsnow.js是一款小巧的jquery下雪动画特效插件。该jquery下雪动画特效兼容ie8浏览器，它会控制雪花的飘落速度，雪花的尺寸越小，下落的速度越慢，可以制作出雪花飞舞的视觉差效果。
+
+ 使用方法
+在页面中引入jquery.fallingsnow.css和jquery、jquery.fallingsnow.min.js文件。
+
+&amp;lt;link rel=&#34;stylesheet&#34; href=&#34;dist/jquery.fallingsnow.css&#34; type=&#34;text/css&#34;&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;path/to/jquery.fallingsnow.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML结构
+可以使用一个&amp;lt;div&amp;gt;元素作为包裹容器，里面放置另外一个&amp;lt;div&amp;gt;元素作为下雪的场景。例如：
+
+&amp;lt;style&amp;gt;
+#snow-wrapper {
+width: 500px;
+height: 500px;
+...
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;div id=&#34;snow-wrapper&#34;&amp;gt;
+&amp;lt;div id=&#34;snow&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+
+ 初始化插件
+在页面DOM元素加载完毕之后，可以通过fallingSnow()方法来初始化该下雪特效插件。
+
+$( &#34;#snow&#34; ).fallingSnow();
+
+
+ 配置参数
+fallingsnow.js下雪特效插件的可用配置参数有：
+
+
+flakeSizeAdjust：控制雪花的尺寸。0.1为最小值，默认为1，建议不要设置为0。
+
+flakeSpeedAdjust：控制雪花的速度。0.1为最快速度，默认值为2，建议不要设置为0。
+
+stopOnClick：是否在点击时停止下雪。
+
+stopElement：指定一个点击之后停止下雪的元素，默认为#snow。
+
+drift：设置雪花飘动效果。默认为100。
+
+fallingsnow.js下雪动画特效的github地址为：https://github.com/RayHyde/fallingsnow
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_567">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/page/111/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/page/113/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

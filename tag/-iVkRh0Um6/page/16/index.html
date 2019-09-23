@@ -1,0 +1,1381 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    css3 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        css3</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1514">
+                        jQuery和css3鼠标滑过网格相邻图片浮动效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-error">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1514" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411301537.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和css3制作的鼠标滑过图片效果。该鼠标滑过效果中所有图片被放到网格中，鼠标hover其中一张图片时，相邻的图片也会浮动起来，效果十分炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款效果十分炫酷的jQuery和css3鼠标滑过网格相邻图片浮动效果。插件中使用了 jQuery Proximity plugin。
+有很多种方法使用纯css来制作手风琴效果，其中使用最多的是使用:target伪类来实现。使用:target伪类的问题是我们不能够再次关闭内容区域或同时显示多个内容区域。但是通过使用checkbox，我们可以控制内容区域的打开和关闭。如果只想在某一时刻只显示一个内容，可以使用radio按钮来实现。
+HTML
+下面的例子demo2的html结构：
+
+&amp;lt;ul id=&#34;pe-thumbs&#34; class=&#34;pe-thumbs&#34;&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&#34;#&#34;&amp;gt;
+&amp;lt;img src=&#34;images/thumbs/1.jpg&#34; /&amp;gt;
+&amp;lt;div class=&#34;pe-description&#34;&amp;gt;
+&amp;lt;h3&amp;gt;Time&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;Since time, and his predestinated end&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;!-- ... --&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+JAVASCRIPT
+该插件要做的事情是当鼠标滑过缩略图时计算出相邻区域的大小和位置。
+
+// list of thumbs
+var $list = $(&#39;#pe-thumbs&#39;),
+// list&#39;s width and offset left.
+// this will be used to know the position of the description container
+listW = $list.width(),
+listL = $list.offset().left,
+// the images
+$elems= $list.find(&#39;img&#39;),
+// the description containers
+$descrp = $list.find(&#39;div.pe-description&#39;),
+// maxScale : maximum scale value the image will have
+// minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image&#39;s opacity
+settings= {
+maxScale: 1.3,
+maxOpacity: 0.9,
+minOpacity: Number( $elems.css(&#39;opacity&#39;) )
+},
+init= function() {
+// minScale will be set in the CSS
+settings.minScale = \_getScaleVal() || 1;
+// preload the images (thumbs)
+\_loadImages( function() { 
+\_calcDescrp();
+\_initEvents();
+});
+},
+// Get Value of CSS Scale through JavaScript:
+// http://css-tricks.com/get-value-of-css-rotation-through-javascript/
+\_getScaleVal= function() {
+var st = window.getComputedStyle($elems.get(0), null),
+tr = st.getPropertyValue(&#34;-webkit-transform&#34;) ||
+ st.getPropertyValue(&#34;-moz-transform&#34;) ||
+ st.getPropertyValue(&#34;-ms-transform&#34;) ||
+ st.getPropertyValue(&#34;-o-transform&#34;) ||
+ st.getPropertyValue(&#34;transform&#34;) ||
+ &#34;fail...&#34;;
+if( tr !== &#39;none&#39; ) {
+var values = tr.split(&#39;(&#39;)[1].split(&#39;)&#39;)[0].split(&#39;,&#39;),
+a = values[0],
+b = values[1],
+c = values[2],
+d = values[3];
+return Math.sqrt( a * a + b * b ); 
+}
+},
+// calculates the style values for the description containers,
+// based on the settings variable
+\_calcDescrp = function() { 
+$descrp.each( function(i) {
+var $el = $(this),
+$img= $el.prev(),
+img\_w = $img.width(),
+img\_h = $img.height(),
+img\_n\_w = settings.maxScale * img\_w,
+img\_n\_h = settings.maxScale * img\_h,
+space\_t = ( img\_n\_h - img\_h ) / 2,
+space\_l = ( img\_n\_w - img\_w ) / 2; 
+$el.data( &#39;space\_l&#39;, space\_l ).css({
+height: settings.maxScale * $el.height(),
+top : -space\_t,
+left: img\_n\_w - space\_l
+});
+});
+},
+\_initEvents = function() {
+$elems.on(&#39;proximity.Photo&#39;, { max: 80, throttle: 10, fireOutOfBounds : true }, function(event, proximity, distance) { 
+var $el = $(this),
+$li = $el.closest(&#39;li&#39;),
+$desc = $el.next(),
+scaleVal= proximity * ( settings.maxScale - settings.minScale ) + settings.minScale,
+scaleExp= &#39;scale(&#39; + scaleVal + &#39;)&#39;;
+// change the z-index of the element once 
+// it reaches the maximum scale value
+// also, show the description container
+if( scaleVal === settings.maxScale ) {
+$li.css( &#39;z-index&#39;, 1000 );
+if( $desc.offset().left + $desc.width() &amp;gt; listL + listW ) {
+$desc.css( &#39;left&#39;, -$desc.width() - $desc.data( &#39;space\_l&#39; ) ); 
+}
+$desc.fadeIn( 800 ); 
+} 
+else {
+$li.css( &#39;z-index&#39;, 1 );
+$desc.stop(true,true).hide(); 
+} 
+$el.css({
+&#39;-webkit-transform&#39; : scaleExp,
+&#39;-moz-transform&#39;: scaleExp,
+&#39;-o-transform&#39;: scaleExp,
+&#39;-ms-transform&#39; : scaleExp,
+&#39;transform&#39; : scaleExp,
+&#39;opacity&#39; : ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
+});
+});
+},
+\_loadImages = function( callback ) {
+var loaded= 0,
+total = $elems.length;
+$elems.each( function(i) { 
+var $el = $(this);
+$(&#39;&#39;).load( function() { 
+++loaded;
+if( loaded === total )
+callback.call();
+}).attr( &#39;src&#39;, $el.attr(&#39;src&#39;) );
+});
+};
+return {
+init: init
+};
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1514">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1517">
+                        jQuery+css3 3d画廊房间效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-success">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1517" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411041552.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这款jquery 3d画廊房间效果模拟了现实生活中的画廊展厅。用户通过jquery 3d画廊的前后移动按钮观看墙上的美术作品，一面墙的作品看完后看下一面墙，每面墙的切换都有相当真实的3d旋转效果。
+内容：
+
+
+简要教程
+
+
+本教程将想你展示一种非常炫酷的jQuery 3d画廊房间效果。这个3d 画廊房间的效果是所有艺术展品都挂在墙上，然后模拟一个参观者环绕4面墙观看每一幅展品的效果。
+建议您使用Google Chrome来观看效果。
+HTML
+
+&amp;lt;div id=&#34;gr-gallery&#34; class=&#34;gr-gallery&#34;&amp;gt;
+	&amp;lt;div class=&#34;gr-main&#34;&amp;gt;
+		&amp;lt;figure&amp;gt;
+			&amp;lt;div&amp;gt;&amp;lt;img src=&#34;images/11.jpg&#34; alt=&#34;img01&#34; /&amp;gt;&amp;lt;/div&amp;gt;
+			&amp;lt;figcaption&amp;gt;
+				&amp;lt;h2&amp;gt;&amp;lt;span&amp;gt;Penn. Station, Madison Square Garden and Empire State Building&amp;lt;/span&amp;gt;&amp;lt;/h2&amp;gt;
+				&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;New York City, 2009, by &amp;lt;a href=&#34;http://www.htmleaf.com/&#34;&amp;gt;Thomas Claveirole&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;
+			&amp;lt;/figcaption&amp;gt;
+		&amp;lt;/figure&amp;gt;
+		&amp;lt;figure&amp;gt;
+			&amp;lt;!-- --&amp;gt;
+		&amp;lt;/figure&amp;gt;
+		&amp;lt;!-- --&amp;gt;
+	&amp;lt;/div&amp;gt;	
+&amp;lt;/div&amp;gt;
+
+更详细的教程请参看《使用jQuery制作3d画廊房间》
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1517">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1519">
+                        jQuery和css3视觉差幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_1">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1519" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411101625.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款仿kendo UI网站使用jQuery和css3 animations制作的视觉差幻灯片插件。这款视觉差幻灯片插件通过CSS animations和jQuery控制幻灯片中的每个动画元素，并使幻灯片背景产生视觉差效果。
+内容：
+
+
+简要教程
+
+
+这款插件使用CSS animations来控制幻灯片中的各个动画元素，并使幻灯片的背景产生视觉差效果。
+这个效果的灵感来自于Kendo UI主页上的幻灯片效果。
+HTML
+这个视觉差幻灯片插件的html结构是使用一个容器div包含许多动画元素div da-slide。每一个动画元素div包含一个h2标题、一个用于描述的p元素、一个链接和一个包含图片的div。
+
+&amp;lt;div id=&#34;da-slider&#34; class=&#34;da-slider&#34;&amp;gt;
+&amp;lt;div class=&#34;da-slide&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Some headline&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Some description&amp;lt;/p&amp;gt;
+&amp;lt;a href=&#34;http://www.htmleaf.com/&#34; class=&#34;da-link&#34;&amp;gt;Read more&amp;lt;/a&amp;gt;
+&amp;lt;div class=&#34;da-img&#34;&amp;gt;
+&amp;lt;img src=&#34;images/1.png&#34; alt=&#34;image01&#34; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;da-slide&#34;&amp;gt;
+&amp;lt;!-- ... --&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- ... --&amp;gt; 
+&amp;lt;nav class=&#34;da-arrows&#34;&amp;gt;
+&amp;lt;span class=&#34;da-arrows-prev&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&#34;da-arrows-next&#34;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/nav&amp;gt;
+&amp;lt;/div&amp;gt;
+
+这个插件的核心是要使每一个元素都有动画效果。我们通过给每个元素一个“direction class”来控制它们的行为。例如：如果想控制当前元素向右运动，那么给它一个class da-slide-toright”，下面列出了4个方向的class：
+
+.da-slide-fromright
+.da-slide-fromleft
+.da-slide-toright
+.da-slide-toleft
+
+上面给定的class通过css来控制它们的运动。
+
+/* Slide in from the right*/
+.da-slide-fromright h2{
+animation: fromRightAnim1 0.6s ease-in 0.8s both;
+}
+.da-slide-fromright p{
+animation: fromRightAnim2 0.6s ease-in 0.8s both;
+}
+.da-slide-fromright .da-link{
+animation: fromRightAnim3 0.4s ease-in 1.2s both;
+}
+.da-slide-fromright .da-img{
+animation: fromRightAnim4 0.6s ease-in 0.8s both;
+}
+/* Adjust animations for different behavior of each element: */
+@keyframes fromRightAnim1{
+0%{ left: 110%; opacity: 0; }
+100%{ left: 10%; opacity: 1; }
+}
+@keyframes fromRightAnim2{
+0%{ left: 110%; opacity: 0; }
+100%{ left: 10%; opacity: 1; }
+}
+@keyframes fromRightAnim3{
+0%{ left: 110%; opacity: 0; }
+1%{ left: 10%; opacity: 0; }
+100%{ left: 10%; opacity: 1; }
+}
+@keyframes fromRightAnim4{
+0%{ left: 110%; opacity: 0; }
+100%{ left: 60%; opacity: 1; }
+}
+
+可用参数
+下面是可用的参数选项：
+
+$(&#39;#da-slider&#39;).cslider({
+current : 0,
+// index of current slide
+bgincrement : 50, 
+// increment the background position 
+// (parallax effect) when sliding
+autoplay: false,
+// slideshow on / off
+interval: 4000
+// time between transitions
+});
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1519">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_152">
+                        jQuery和CSS3图片展示动画特效
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_152" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810311445.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3图片展示动画特效。该特效使用GSAP和ScrollMagic来制作页面向下或向上滚动时的动画效果。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3图片展示动画特效。该特效使用GSAP和ScrollMagic来制作页面向下或向上滚动时的动画效果。
+
+ 使用方法
+在页面中引入base.css、demo.css和jquery、TweenMax.min.js和ScrollMagic.min.js文件。
+
+&amp;lt;link href=&#34;css/base.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;link href=&#34;css/demo.css&#34; rel=&#34;stylesheet&#34;&amp;gt;
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/TweenMax.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+&amp;lt;script type=&#34;text/javascript&#34; src=&#34;js/ScrollMagi.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt; 
+
+
+ HTML
+基本HTML结构如下：
+
+&amp;lt;section class=&#34;page-wrapper effect-1st&#34; id=&#34;coidea&#34;&amp;gt;
+&amp;lt;div class=&#34;grid&#34;&amp;gt;
+&amp;lt;div class=&#34;grid-item effect-first&#34;&amp;gt;
+&amp;lt;div class=&#34;image&#34;&amp;gt;
+&amp;lt;img src=&#34;assets/img/grid-item-1.jpg&#34; /&amp;gt;
+&amp;lt;div class=&#34;overlay&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;content&#34;&amp;gt;
+&amp;lt;h2&amp;gt;Fo check out&amp;lt;br&amp;gt;this magna&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+
+
+
+ 该jQuery和CSS3图片展示动画特效的官方网址为：https://coidea.website/categories/challenges/inspiration-for-image-reveal-effects/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_152">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1522">
+                        js和css3局部3d幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/bNF36zwcF" class="post-tag i-tag
+                            i-tag-other_3">
+            #js
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_4">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1522" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411241445.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款神奇的3d幻灯片插件。该幻灯片插件通过js和css3将图片3d倾斜后嵌入到局部div中，然后制作成自动播放的幻灯片效果。
+内容：
+
+
+简要教程
+
+
+这款s和css3局部3d幻灯片插件的灵感来自于Franklin Ta写的一篇文章，文章中他描述了如何使用脚本将嵌入在框架中的图形进行3d转换。
+下面是第一个demo中如何在嵌入屏幕的手机界面中添加动画的css代码：
+
+.mobile {
+overflow: hidden;
+position: absolute;
+z-index: 100;
+background: #333;
+width: 320px;
+height: 480px;
+top: 200px;
+left: 500px;
+outline: 1px solid transparent; /* For Firefox (jagged edges bug) */
+transform-origin: 0 0 0;
+transform: matrix3d(0.846234173238242, 0.251585817964749, 0, 0.000085171934399447, -0.115203182108559, 0.800700357116676, 0, -0.000214263459947427, 0, 0, 1, 0, 23, 14, 0, 1);
+}
+
+例子demo中是简单的幻灯片，使用CSS animations来显示和隐藏图片，你可以自定义一些幻灯片过渡效果，例如使用Daniel Eden的animate.css。
+下面是例子1中幻灯片自定义动画的代码：
+
+.slideshow {
+padding: 0;
+margin: 0;
+width: 100\%;
+height: 100\%;
+list-style-type: none;
+}
+.slideshow__item {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+pointer-events: none;
+z-index: 1;
+transform: translate3d(-100%, 0, 0);
+}
+.slideshow__item.current{
+pointer-events: auto;
+z-index: 100;
+transform: translate3d(0, 0, 0);
+}
+.slideshow img {
+width: 100%;
+}
+
+demo2中使用了animation ，它的代码如下：
+
+.slideshow\_\_item.in--next {
+animation: inNext 0.5s forwards;
+}
+.slideshow__item.out--next {
+animation: outNext 0.5s forwards;
+}
+.slideshow__item.in--prev {
+animation: inPrev 0.5s forwards;
+}
+.slideshow__item.out--prev {
+animation: outPrev 0.5s forwards;
+}
+@keyframes inPrev {
+0% {
+transform: translate3d(0, 100%, 0);
+}
+100% {
+transform: none;
+}
+}
+@keyframes inNext {
+0% {
+transform: scale3d(0.5, 0.5, 1);
+}
+100% {
+transform: none;
+}
+}
+@keyframes outPrev {
+100% {
+transform: scale3d(0.5, 0.5, 1);
+}
+}
+@keyframes outNext {
+100% {
+transform: translate3d(0, 100%, 0);
+}
+}
+
+下面是所有4个效果的截图：
+
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1522">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1523">
+                        jQuery和css3音量调节旋钮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-error">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1523" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411211553.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款实用jQuery和css3制作的音量调节旋钮插件。该jQuery旋钮的UI使用css3来渲染，旋钮的旋转控制则使用jquery来实现。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常逼真的jQuery和css3音量调节旋钮插件。代码页十分简洁。
+HTML
+
+&amp;lt;figure class=&#34;dial&#34;&amp;gt;
+&amp;lt;div class=&#34;center&#34;&amp;gt;&amp;lt;span&amp;gt;0&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;wrapper&#34;&amp;gt;
+&amp;lt;div class=&#34;knob&#34;&amp;gt;
+&amp;lt;div class=&#34;handle&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#34;indicator&#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;canvas class=&#34;progress&#34;&amp;gt;&amp;lt;/canvas&amp;gt;
+&amp;lt;/figure&amp;gt;
+
+JAVASCRIPT
+
+(function() {
+var Dial, dial,
+\_\_bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+Dial = (function() {
+Dial.prototype.raf = null;
+Dial.prototype.mdown = false;
+Dial.prototype.mPos = {
+x: 0,
+y: 0
+};
+Dial.prototype.elementPosition = {
+x: 0,
+y: 0
+};
+Dial.prototype.target = 0;
+Dial.prototype.steps = 60;
+Dial.prototype.radius = 150;
+Dial.prototype.maxDiff = 150;
+Dial.prototype.constraint = 360;
+Dial.prototype.currentVal = 0;
+function Dial(context) {
+var knobOffset;
+this.context = context;this.onMouseMove=__bind(this.onMouseMove,this);this.onMouseUp=__bind(this.onMouseUp,this);this.onMouseDown=__bind(this.onMouseDown,this);this.context;
+this.onMouseMove = \_\_bind(this.onMouseMove, this);
+this.onMouseUp = \_\_bind(this.onMouseUp, this);
+this.onMouseDown = \_\_bind(this.onMouseDown, this);
+this.context;this.onMouseMove=__bind(this.onMouseMove,this);this.onMouseUp=__bind(this.onMouseUp,this);this.onMouseDown=__bind(this.onMouseDown,this);this.knob = this.context.find(&amp;quot;.knob&amp;quot;);this.context.find(&amp;quot;.knob&amp;quot;);
+this.context.find(&amp;quot;.knob&amp;quot;);this.handle = this.context.find(&amp;quot;.handle&amp;quot;);this.context.find(&amp;quot;.handle&amp;quot;);
+this.context.find(&amp;quot;.handle&amp;quot;);this.progress = this.context.find(&amp;quot;.progress&amp;quot;);this.context.find(&amp;quot;.progress&amp;quot;);
+this.context.find(&amp;quot;.progress&amp;quot;);this.center = this.context.find(&amp;quot;.center&amp;quot;);this.context.find(&amp;quot;.center&amp;quot;);
+this.context.find(&amp;quot;.center&amp;quot;);this.textOutput = this.center.find(&amp;quot;span&amp;quot;);this.ctx=this.center.find(&amp;quot;span&amp;quot;);
+this.ctx = this.center.find(&amp;quot;span&amp;quot;);this.ctx=this.progress.get(0).getContext(&amp;quot;2d&amp;quot;);
+knobOffset = this.knob.offset();this.elementPosition=x:knobOffset.left,y:knobOffset.top;this.centerX=this.knob.offset();
+this.elementPosition = {
+x: knobOffset.left,
+y: knobOffset.top
+};
+this.centerX = this.knob.offset();this.elementPosition=x:knobOffset.left,y:knobOffset.top;this.centerX=this.progress.width() / 2;
+this.centerY = this.progress.height()/2;this.canvasSize=this.progress.height() / 2;
+this.canvasSize = this.progress.height()/2;this.canvasSize=this.progress.width();
+this.addEventListeners();
+this.draw();
+return;
+}
+Dial.prototype.addEventListeners = function() {
+this.context.on(&amp;quot;mousedown&amp;quot;,this.onMouseDown);this.context.on(&amp;quot;mousedown&amp;quot;, this.onMouseDown);
+this.context.on(&amp;quot;mousedown&amp;quot;,this.onMouseDown);this.context.on(&amp;quot;mousemove&amp;quot;, this.onMouseMove);
+(&amp;quot;body&amp;quot;).on(&amp;quot;mouseup&amp;quot;, this.onMouseUp);
+};
+Dial.prototype.setDialPosition = function() {
+this.knob.css({
+transform: &amp;quot;rotate(&amp;quot; + this.target + &amp;quot;deg)&amp;quot;
+});
+this.handle.css({
+transform: &amp;quot;rotate(-&amp;quot; + this.target + &amp;quot;deg)&amp;quot;
+});
+this.draw();
+};
+Dial.prototype.draw = function() {
+var i, \_i, \_ref;
+this.progress.get(0).height = this.canvasSize;
+this.progress.get(0).width = this.canvasSize;
+this.ctx.save();
+this.ctx.translate(this.centerX, this.centerY);
+this.ctx.rotate((-90 * (Math.PI / 180)) - (Math.PI * 2 / this.steps));
+for (i = \_i = 0, \_ref = this.steps - 1; \_i &amp;amp;lt;= \_ref; i = \_i += 1) {
+this.ctx.beginPath();
+this.ctx.rotate(Math.PI * 2 / this.steps);
+this.ctx.lineWidth = 2;
+this.ctx.lineTo(160, 0);
+this.ctx.lineTo(170, 0);
+if (i &amp;amp;lt;= Math.floor(this.currentVal)) {
+this.ctx.shadowBlur = 10;
+this.ctx.strokeStyle = &amp;quot;#fff&amp;quot;;
+this.ctx.shadowColor = &amp;quot;#fff&amp;quot;;
+if (i &amp;amp;gt; (this.steps * 0.75) &amp;amp;amp;&amp;amp;amp; this.currentVal &amp;amp;gt; (this.steps * 0.75)) {
+this.ctx.strokeStyle = &amp;quot;#ff9306&amp;quot;;
+this.ctx.shadowColor = &amp;quot;#ff9306&amp;quot;;
+}
+if (i &amp;amp;gt; (this.steps * 0.88) &amp;amp;amp;&amp;amp;amp; this.currentVal &amp;amp;gt; (this.steps * 0.88)) {
+this.ctx.strokeStyle = &amp;quot;#ff0606&amp;quot;;
+this.ctx.shadowColor = &amp;quot;#ff0606&amp;quot;;
+}
+} else {
+this.ctx.strokeStyle = &amp;quot;#444&amp;quot;;
+this.ctx.shadowBlur = 0;
+this.ctx.shadowColor = &amp;quot;#fff&amp;quot;;
+}
+this.ctx.stroke();
+}
+this.ctx.restore();
+};
+Dial.prototype.setMousePosition = function(event) {
+var atan, diff, target;
+this.mPos = {
+x: event.pageX - this.elementPosition.x,
+y: event.pageY - this.elementPosition.y
+};
+atan = Math.atan2(this.mPos.x - this.radius, this.mPos.y - this.radius);
+target = -atan / (Math.PI / 180) + 180;
+diff = Math.abs(target - this.target);
+if (diff &amp;amp;lt; this.maxDiff &amp;amp;amp;&amp;amp;amp; target &amp;amp;lt; this.constraint) {
+this.target = target;
+this.currentVal = this.map(this.target, 0, 360, 0, this.steps);
+this.setDialPosition();
+this.updateOutput();
+}
+};
+Dial.prototype.updateOutput = function() {
+this.textOutput.text(Math.round(this.currentVal));
+};
+Dial.prototype.onMouseDown = function(event) {
+this.mdown = true;
+};
+Dial.prototype.onMouseUp = function(event) {
+this.mdown = false;
+};
+Dial.prototype.onMouseMove = function(event) {
+if (this.mdown) {
+this.setMousePosition(event);
+}
+};
+Dial.prototype.map = function(value, low1, high1, low2, high2) {
+return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+};
+return Dial;
+})();
+this.$dial = (&amp;quot;.dial&amp;quot;);dial=newDial(this.(&amp;quot;.dial&amp;quot;);
+dial = new Dial(this.(&amp;quot;.dial&amp;quot;);dial=newDial(this.dial);
+}).call(this);
+
+更多详细信息请参看：http://codepen.io/jon-walstedt/pen/qbjEu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1523">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1527">
+                        jQuery和css3全屏幻灯片插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_2">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_3">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1527" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411071704.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款简单的jQuery和css3全屏幻灯片插件。这款幻灯片插件可以通过点击导航按钮进行幻灯片切换或设置为自动播放模式。
+内容：
+
+
+简要教程
+
+
+使用这款插件首先要引入jQuery, simpleSlider.js, touchSwipe.js(如果你需要触摸设备的支持)。
+如果设置useTransitionEnd首先为true，幻灯片将自动播放。
+引入需要的文件
+
+&amp;lt;script src=&#34;http://code.jquery.com/jquery-1.10.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&#34;http://code.jquery.com/jquery-migrate-1.2.1.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;transit.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;touchswipe.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;jquery.simpleslider.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+HTML
+默认的包裹div的class为slider和slide，你可以通过插件的选项来改变它们。
+
+&amp;lt;div class=&#39;slider&#39;&amp;gt;
+&amp;lt;div class=&#39;slide&#39;&amp;gt;
+&amp;lt;div class=&#39;slidecontent&#39;&amp;gt;
+&amp;lt;h1&amp;gt;Solar Dolar Wolar Woot&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere cursus euismod.Aenean ut tortor leoing elit. Etiam posuere cursus euismod.Aenean ut tortor leo.&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#39;slide&#39; &amp;gt;
+&amp;lt;div class=&#39;slidecontent&#39;&amp;gt;
+&amp;lt;h1&amp;gt;Solar Dolar Wolar Woot&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere cursus euismod.Aenean ut tortor leo.&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+更多详细信息请参考：https://github.com/dirkgroenen/simple-jQuery-slider
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1527">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1529">
+                        jQuery和css3文字排版动画效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-info">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1529" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411131709.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款使用jQuery和css3制作的文字排版动画效果插件。该文字排版插件中共包含了7种效果：文字淡入淡出、文字烟雾效果、文字渐变效果、文字运动效果等等。
+内容：
+
+
+简要教程
+
+
+这是一款效果非常酷炫的jQuery和css3文字排版插件。大部分动画效果使用CSS3 animations和transitions完成。
+插件中为了渲染单个字母的动画使用了Lettering.js。
+HTML结构
+
+&amp;lt;div id=&#34;letter-container&#34; class=&#34;letter-container&#34;&amp;gt;
+	&amp;lt;h2&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;Sun&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+&amp;lt;/div&amp;gt;
+
+以下是插件中的7种不同效果：
+
+
+
+
+
+
+
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1529">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_153">
+                        jQuery和CSS3滑动展开菜单按钮插件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-other_3">
+            #jquery
+        </a>
+                        
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-other_2">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_153" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1810/201810131435.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款jQuery和CSS3滑动展开菜单按钮插件。该滑动展开菜单按钮在用户点击主菜单按钮之后，子菜单以滑动的方式依次展开，效果非常炫酷。
+内容：
+
+
+简要教程
+
+
+这是一款jQuery和CSS3滑动展开菜单按钮插件。该滑动展开菜单按钮在用户点击主菜单按钮之后，子菜单以滑动的方式依次展开，效果非常炫酷。
+
+ 使用方法
+在页面中引入jquery文件。
+
+&amp;lt;script src=&#34;js/jquery.min.js&#34; type=&#34;text/javascript&#34;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+ HTML
+使用下面的HTML结构来创建滑动展开菜单。
+
+&amp;lt;ul class=&#34;menu&#34;&amp;gt;
+&amp;lt;li id=&#34;push&#34;&amp;gt;
+&amp;lt;span&amp;gt;
+Trigger Button
+&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li id=&#34;pushed-left-1&#34;&amp;gt;
+&amp;lt;span&amp;gt;
+jQuery
+&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li id=&#34;pushed-center&#34;&amp;gt;
+&amp;lt;span&amp;gt;
+Script
+&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li id=&#34;pushed-right-1&#34;&amp;gt;
+&amp;lt;span&amp;gt;
+Net
+&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li id=&#34;pushed-right-2&#34;&amp;gt;
+&amp;lt;span&amp;gt;
+Menu
+&amp;lt;/span&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+
+ CSS样式
+然后添加下面的CSS样式。
+
+ul.menu li, ul.menu li .sub-menu {
+border-radius: 100\%;
+height: 100px;
+width: 100px;
+}
+ul.menu {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+ul.menu li {
+margin: 0;
+padding: 0;
+position: absolute;
+background-color: #5408FF;
+cursor: pointer;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+transition: all 0.5s;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+ul.menu li span {
+color: #11111C;
+font-weight: 700;
+font-size: 1.5rem;
+letter-spacing: 0.1px;
+}
+ul.menu li .sub-menu {
+height: 100px;
+width: 100px;
+position: absolute;
+top: 100px;
+background-color: white;
+}
+ul.menu li:hover {
+background-color: #FF08FF;
+}
+ul.menu li#push {
+z-index: 50;
+background-color: #FF08FF;
+}
+ul.menu li#push span {
+font-size: 2rem;
+}
+ul.menu li#push.move {
+left: -200px;
+}
+ul.menu li#push.rotate {
+transform: rotate(-315deg);
+}
+ul.menu li#pushed-center {
+z-index: 10;
+}
+ul.menu li#pushed-left-1 {
+z-index: 20;
+}
+ul.menu li#pushed-left-1.move {
+left: -100px;
+}
+ul.menu li#pushed-right-1 {
+z-index: 30;
+}
+ul.menu li#pushed-right-1.move {
+left: 100px;
+}
+ul.menu li#pushed-right-2 {
+z-index: 40;
+}
+ul.menu li#pushed-right-2.move {
+left: 200px;
+}
+
+
+ Javascript
+最后通过下面的js代码来触发按钮的点击展开动画。
+
+$(document).ready(function() {
+$(&#39;#push&#39;).on(&#39;click&#39;,function(){
+$(&#39;#push, #pushed-center, #pushed-left-1, #pushed-right-1, #pushed-right-2&#39;).toggleClass(&#39;move&#39;);
+$(&#39;#push&#39;).toggleClass(&#39;rotate&#39;);
+});
+});
+
+ 该jQuery和CSS3滑动展开菜单按钮插件的github地址为：https://github.com/mdharo/CSS-jQuery-Slide-Menu
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_153">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://hao12306.github.io/post/jqchina_gridea_1532">
+                        纯css3视觉差滚动幻灯片效果
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-09-20</time>
+                    
+                        <a href="https://hao12306.github.io/tag/-iVkRh0Um6" class="post-tag i-tag
+                            i-tag-">
+            #css3
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://hao12306.github.io/post/jqchina_gridea_1532" class="post-feature-image" style="background-image:url(http://img.htmleaf.com/1411/201411161541.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            下载预览
+文件下载 | 在线预览
+简介：
+这是一款效果很炫的纯css3视觉差幻灯片效果。在这个css3视觉差效果中，利用图片和曲线的位移来形成视觉差效果。
+内容：
+
+
+简要教程
+
+
+这是利用光学原理制作的纯css3视觉差幻灯片效果。它利用几个不同的层在运动时交替变化不同的曲线、背景颜色和图片来形成视觉差效果。在这里，仅仅使用了css3，没有任何的javascript。
+HTML
+html结构有4个radio、4个labels和4个用于滚动的页面组成。每个页面都有自己的图片和描述文本。你可以自己添加更多的元素到每个页面中。这个视觉差效果的主要原理是：隐藏radio按钮，然后使用它们的label来为radio按钮设置“checked”状态。最后为当前选中的radio元素应用不同的css样式。
+
+&amp;lt;div class=&#34;pss\_main&#34;&amp;gt; &amp;lt;!-- main parallax scrolling slider object --&amp;gt;
+&amp;lt;input id=&#34;r\_1&#34; type=&#34;radio&#34; name=&#34;p&#34; class=&#34;sel\_page\_1&#34; checked=&#34;checked&#34; /&amp;gt; &amp;lt;!-- hidden radios --&amp;gt;
+&amp;lt;input id=&#34;r\_2&#34; type=&#34;radio&#34; name=&#34;p&#34; class=&#34;sel\_page\_2&#34; /&amp;gt;
+&amp;lt;input id=&#34;r\_3&#34; type=&#34;radio&#34; name=&#34;p&#34; class=&#34;sel\_page\_3&#34; /&amp;gt;
+&amp;lt;input id=&#34;r\_4&#34; type=&#34;radio&#34; name=&#34;p&#34; class=&#34;sel\_page\_4&#34; /&amp;gt;
+&amp;lt;label for=&amp;quot;r_1&amp;quot; class=&amp;quot;pss_contr c1&amp;quot;&amp;gt;&amp;lt;/label&amp;gt; &amp;lt;!-- controls --&amp;gt;
+&amp;lt;label for=&amp;quot;r_2&amp;quot; class=&amp;quot;pss_contr c2&amp;quot;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;label for=&amp;quot;r_3&amp;quot; class=&amp;quot;pss_contr c3&amp;quot;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;label for=&amp;quot;r_4&amp;quot; class=&amp;quot;pss_contr c4&amp;quot;&amp;gt;&amp;lt;/label&amp;gt;
+&amp;lt;div class=&amp;quot;pss_slides&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;pss_background&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;ul&amp;gt; &amp;lt;!-- slides --&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;images/image1.png&amp;quot; alt=&amp;quot;image01&amp;quot; /&amp;gt;
+&amp;lt;div&amp;gt;Model DT 770&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;images/image2.png&amp;quot; alt=&amp;quot;image02&amp;quot; /&amp;gt;
+&amp;lt;div&amp;gt;Model DT 990&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;images/image3.png&amp;quot; alt=&amp;quot;image03&amp;quot; /&amp;gt;
+&amp;lt;div&amp;gt;Model DT 234&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;images/image4.png&amp;quot; alt=&amp;quot;image04&amp;quot; /&amp;gt;
+&amp;lt;div&amp;gt;Model DT 880&amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+更多详细信息请参看：http://www.script-tutorials.com/css3-parallax-scrolling-slider/
+
+
+下载预览
+文件下载 | 在线预览
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://hao12306.github.io/post/jqchina_gridea_1532">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+    <div class="pagination-container">
+        
+            <a href="https://hao12306.github.io/tag/-iVkRh0Um6//page/15/" class="page-btn btn">上一页</a>
+            
+                
+                    <a href="https://hao12306.github.io/tag/-iVkRh0Um6//page/17/" class="page-btn btn">下一页</a>
+                    
+    </div>
+    
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://hao12306.github.io/images/avatar.png?v=1569206027820)">
+        </div>
+        <h1 class="id_card-title">
+            JQ下载中国
+        </h1>
+        <h2 class="id_card-description">
+            免费Jq插件下载,适合初学者学习的网站
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
+</html>

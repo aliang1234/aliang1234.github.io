@@ -1,0 +1,376 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    带混合模式的jquery滚动背景视觉差特效 | JQ下载中国
+</title>
+<link rel="shortcut icon" href="https://hao12306.github.io/favicon.ico?v=1569206027820">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://hao12306.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://hao12306.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://hao12306.github.io">
+                <img class="avatar" src="https://hao12306.github.io/images/avatar.png?v=1569206027820" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    JQ下载中国
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            带混合模式的jquery滚动背景视觉差特效
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-09-20</time>
+                            
+                                <a href="https://hao12306.github.io/tag/IOKlJUjoy" class="post-tag i-tag
+                            i-tag-banana">
+                            #jquery
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('http://img.htmleaf.com/1901/201901241546.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <h4 id="下载预览">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1901/201901241546.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201901245509.html">在线预览</a></p>
+<h4 id="简介">简介：</h4>
+<p>这是一款带混合模式的jquery滚动背景视觉差特效。该特效利用css mix-blend-mode来混合背景和文字，并使用jquery来制作滚动时的视觉差效果，效果非常炫酷。</p>
+<h4 id="内容">内容：</h4>
+<article class="leaf-jian-yao">
+<header>
+<h5>简要教程</h5>
+</header>
+<div class="ct-post-content">
+<p>这是一款带混合模式的jquery滚动背景视觉差特效。该特效利用css mix-blend-mode来混合背景和文字，并使用jquery来制作滚动时的视觉差效果，效果非常炫酷。</p>
+<h3>
+<span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
+<p>在页面中引入jquery文件。</p>
+<pre class="brush:html">
+&lt;script src=".js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
+<p>视觉差效果的HTML结果如下。</p>
+<pre class="brush:html">
+&lt;header&gt;
+&lt;div class="overlay"&gt;
+&lt;div class="parallax"&gt;
+&lt;h1&gt;Awesome&lt;span&gt;Parallax Scrolling&lt;/span&gt;&lt;/h1&gt;
+&lt;div class="one"&gt;&lt;/div&gt;
+&lt;div class="two"&gt;&lt;/div&gt;
+&lt;div class="three"&gt;&lt;/div&gt;
+&lt;div class="four"&gt;&lt;/div&gt;
+&lt;div class="five"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+</pre>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> CSS样式</h5>
+<p>然后添加下面的CSS样式。</p>
+<pre class="brush:css">
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+<p>body {<br>
+margin: 0;<br>
+font-family: &quot;Poppins&quot;, sans-serif;<br>
+font-size: 62.5%;<br>
+}</p>
+<p>::-webkit-scrollbar {<br>
+width: 0;<br>
+}</p>
+<p>header {<br>
+position: relative;<br>
+height: 100vh;<br>
+overflow: hidden;<br>
+display: flex;<br>
+justify-content: center;<br>
+align-items: center;<br>
+background-color: #c6d9d3;<br>
+}<br>
+header .overlay {<br>
+position: absolute;<br>
+top: 0;<br>
+left: 0;<br>
+width: 100%;<br>
+height: 100%;<br>
+}<br>
+header .overlay h1 {<br>
+position: absolute;<br>
+top: 50%;<br>
+left: 50%;<br>
+transform: translate(-50%, -50%);<br>
+z-index: 3;<br>
+margin: 0;<br>
+text-transform: uppercase;<br>
+text-align: center;<br>
+font-size: 9rem;<br>
+text-shadow: 25px -15px rgba(25, 42, 46, 0.04);<br>
+color: #142124;<br>
+mix-blend-mode: overlay;<br>
+}<br>
+header .overlay h1 span {<br>
+margin-top: -2em;<br>
+padding-top: 0.5em;<br>
+display: block;<br>
+letter-spacing: 5px;<br>
+font-size: 1.25rem;<br>
+}<br>
+header .parallax {<br>
+position: relative;<br>
+width: 100%;<br>
+height: 100%;<br>
+}<br>
+header .parallax div {<br>
+position: absolute;<br>
+bottom: 0;<br>
+left: 0;<br>
+width: 100%;<br>
+height: 100%;<br>
+background-position: 0 50%;<br>
+background-repeat: no-repeat;<br>
+background-size: 100%;<br>
+}<br>
+header .parallax .one {<br>
+background-image: url(&quot;svg/mountains-1.svg&quot;);<br>
+z-index: 4;<br>
+}<br>
+header .parallax .two {<br>
+background-image: url(&quot;svg/mountains-2.svg&quot;);<br>
+z-index: 3;<br>
+}<br>
+header .parallax .three {<br>
+background-image: url(&quot;svg/mountains-3.svg&quot;);<br>
+z-index: 2;<br>
+}<br>
+header .parallax .four {<br>
+background-image: url(&quot;svg/mountains-4.svg&quot;);<br>
+z-index: 1;<br>
+}<br>
+header .parallax .five {<br>
+background-image: url(&quot;svg/mountains-5.svg&quot;);<br>
+z-index: 0;<br>
+}<br>
+</pre></p>
+<h5>
+<span class="glyphicon glyphicon-paperclip"></span> 初始化插件</h5>
+<p>在页面DOM元素加载完毕之后，通过下面的方法来初始化该滚动视觉差效果。</p>
+<pre class="brush:js">
+$(window).scroll(function () {
+var a = $(this).scrollTop();
+var b = 800;
+$("h1").css({
+backgroundPosition: "center " + a / 2 + "px" });
+<p>$(&quot;.parallax&quot;).css({<br>
+top: a / 1.6 + &quot;px&quot;,<br>
+opacity: 1 - a / b });</p>
+<p>});</p>
+<p>// parallax scrolling</p>
+<p>document.addEventListener(&quot;scroll&quot;, () =&gt; {<br>
+var top = window.pageYOffset,<br>
+var one = document.querySelector(&quot;.one&quot;),<br>
+var two = document.querySelector(&quot;.two&quot;),<br>
+var three = document.querySelector(&quot;.three&quot;),<br>
+var four = document.querySelector(&quot;.four&quot;),<br>
+var five = document.querySelector(&quot;.five&quot;);</p>
+<p>one.style.bottom = -(top * 0.1) + &quot;px&quot;;<br>
+two.style.bottom = -(top * 0.2) + &quot;px&quot;;<br>
+three.style.bottom = -(top * 0.3) + &quot;px&quot;;<br>
+four.style.bottom = -(top * 0.4) + &quot;px&quot;;<br>
+five.style.bottom = -(top * 0.5) + &quot;px&quot;;<br>
+});<br>
+</pre></p>
+<p><i class="fa fa-codepen"></i> 该带混合模式的jquery滚动背景视觉差特效的codepen网址为：<a href="https://codepen.io/andrejsharapov/pen/aPrNxP" target="\_blank">https://codepen.io/andrejsharapov/pen/aPrNxP</a></p>
+</div>
+</article>
+<h4 id="下载预览-2">下载预览</h4>
+<p><a href="http://down.htmleaf.com/1901/201901241546.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201901245509.html">在线预览</a></p>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://hao12306.github.io/post/jqchina_gridea_600">
+                                <h3 class="post-title">
+                                    纯js超酷3D旋转木马特效插件
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88">下载预览</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介：</a></li>
+<li><a href="#%E5%86%85%E5%AE%B9">内容：</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E9%A2%84%E8%A7%88-2">下载预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="http://www.sjzlx.top/" target="_blank">PHP编程中国</a> | 
+  <a class="rss" href="https://hao12306.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+</body>
+
+</html>
