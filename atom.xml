@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hao12306.github.io</id>
     <title>JQ下载中国</title>
-    <updated>2019-09-23T02:14:34.505Z</updated>
+    <updated>2019-09-23T02:23:32.160Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hao12306.github.io"/>
     <link rel="self" href="https://hao12306.github.io/atom.xml"/>
@@ -11,143 +11,80 @@
     <icon>https://hao12306.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, JQ下载中国</rights>
     <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://hao12306.github.io/post/about</id>
-        <link href="https://hao12306.github.io/post/about">
+        <title type="html"><![CDATA[基于Bootstrap4的material design风格表单插件]]></title>
+        <id>https://hao12306.github.io/post/jqchina_gridea_32</id>
+        <link href="https://hao12306.github.io/post/jqchina_gridea_32">
         </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>hi aliang hello world！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[测试md]]></title>
-        <id>https://hao12306.github.io/post/test</id>
-        <link href="https://hao12306.github.io/post/test">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
+        <updated>2019-09-20T08:22:21.000Z</updated>
         <content type="html"><![CDATA[<h4 id="下载预览">下载预览</h4>
-<p><a href="http://down.htmleaf.com/1909/201909099432.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909095787.html">在线预览</a>{:target=&quot;_blank&quot;}</p>
+<p><a href="http://down.htmleaf.com/1909/201909062931.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909065785.html">在线预览</a></p>
 <h4 id="简介">简介：</h4>
-<p>2222</p>
+<p>这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。</p>
 <h4 id="内容">内容：</h4>
 <article class="leaf-jian-yao">
 <header>
 <h5>简要教程</h5>
 </header>
 <div class="ct-post-content">
-<p>combo-tree是一款jQuery带多选和过滤功能的树状结构下拉框插件。通过该插件，可以在下拉框中生成指定数据结构的目录树，提供单选和多选，以及过滤功能。它的特点有：</p>
-<ul>
-<li>在下拉框中显示树状结构。</li>
-<li>支持单选和多选。</li>
-<li>返回选择数据的 title 或 id 数组。</li>
-<li>带过滤功能。</li>
-<li>数据源使用json格式数据。</li>
-<li>可以通过键盘控制。</li>
-</ul>
+<p>这是一款基于Bootstrap4的material design风格表单插件。该插件能够将bootstrap4的输入框和文本框转换为material design风格的浮动标签效果。</p>
 <h3>
 <span class="glyphicon glyphicon-edit"></span> 使用方法</h3>
-<p>在HTML文件中引入下面的文件。</p>
+<p>在HTML文件中引入。</p>
 <pre class="brush:html">
-&lt;link rel="stylesheet" href="css/style.css"&gt;
-&lt;script src="js/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script src="js/icontains.js"type="text/javascript"&gt;&lt;/script&gt;
-&lt;script src="js/comboTreePlugin.js"type="text/javascript"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="../src/input-material.css"&gt;
+&lt;script type="text/javascript" src="../src/jquery.min.js"&gt;&lt;/script&gt; 
+&lt;script type="text/javascript" src="../src/boostrap.min.js"&gt;&lt;/script&gt; 
+&lt;script type="text/javascript" src="../src/input-material.js"&gt;&lt;/script&gt; 
 </pre>
 <h5>
 <span class="glyphicon glyphicon-paperclip"></span> HTML结构</h5>
 <pre class="brush:html">
-&lt;input type="text" id="example" placeholder="Select"&gt;
+&lt;form id="contact-form"&gt;
+&lt;div class="form-group input-material"&gt;
+&lt;input type="text" class="form-control" id="name-field" required&gt;
+&lt;label for="name-field"&gt;Name&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group input-material"&gt;
+&lt;input type="email" class="form-control" id="email-field" required&gt;
+&lt;label for="email-field"&gt;Email&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group input-material"&gt;
+&lt;textarea class="form-control" id="textarea-field" rows="3" required&gt;&lt;/textarea&gt;
+&lt;label for="textarea-field"&gt;Your Message&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="text-center"&gt;
+&lt;button type="submit" class="btn btn-primary"&gt;Send&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;
 </pre>
 <h5>
 <span class="glyphicon glyphicon-paperclip"></span> javascript</h5>
-<p>定义数据结构。</p>
 <pre class="brush:js">
-var SampleJSONData = [
-{
-id: 0,
-title: 'choice 1'
-}, {
-id: 1,
-title: 'choice 2',
-subs: [
-{
-id: 10,
-title: 'choice 2 1'
-}, {
-id: 11,
-title: 'choice 2 2'
-}, {
-id: 12,
-title: 'choice 2 3'
-}
-]
-}, {
-id: 2,
-title: 'choice 3'
-}, {
-id: 3,
-title: 'choice 4'
-}, {
-id: 4,
-title: 'choice 5'
-}, {
-id: 5,
-title: 'choice 6',
-subs: [
-{
-id: 50,
-title: 'choice 6 1'
-}, {
-id: 51,
-title: 'choice 6 2',
-subs: [
-{
-id: 510,
-title: 'choice 6 2 1'
-}, {
-id: 511,
-title: 'choice 6 2 2'
-}, {
-id: 512,
-title: 'choice 6 2 3'
-}
-]
-}
-]
-}, {
-id: 6,
-title: 'choice 7'
-}
-];
-</pre> 
-<p>然后通过下面的方法来进行初始化插件。</p>
-<pre class="brush:js">
-// 单选
-comboTree1 = $('#example').comboTree({
-source : SampleJSONData
-});
-<p>// 多选<br>
-comboTree1 = $('#example').comboTree({<br>
-source : SampleJSONData,<br>
-isMultiple: true<br>
-});<br>
+$('document').ready(function(){
+<p>// enable material-style inputs in entire body<br>
+$('body').materializeInputs();</p>
+<p>});<br>
 </pre></p>
-<p>获取数据。</p>
+<p>或者你也可以为某个表单元素设置浮动标签效果。</p>
 <pre class="brush:js">
-// Array, One title/id, or False value return
-var selectedTitles = comboTree1.getSelectedItemsTitle();
-var selectedIds = comboTree1.getSelectedItemsId();
-</pre>
-<p>销毁插件。</p>
-<pre class="brush:js">
-// To remove plugin
-comboTree1.destroy();
-</pre>
-<p><i class="fa fa-github"></i> combo-tree插件的github网址为：<a href="https://github.com/kirlisakal/combo-tree" target="\_blank">https://github.com/kirlisakal/combo-tree</a></p>
+$('document').ready(function(){
+<p>$('form').materializeInputs(&quot;.input-material input-1, .input-material input-2&quot;);</p>
+<p>});<br>
+</pre></p>
+<p><i class="fa fa-github"></i> 该基于Bootstrap4的material design风格表单插件的github网址为：<a href="https://github.com/RalphvK/bootstrap-material-input" target="\_blank">https://github.com/RalphvK/bootstrap-material-input</a></p>
 </div>
 </article>
 <h4 id="下载预览-2">下载预览</h4>
-<p><a href="http://down.htmleaf.com/1909/201909099432.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909095787.html">在线预览</a></p>
+<p><a href="http://down.htmleaf.com/1909/201909062931.zip">文件下载</a> | <a href="http://www.htmleaf.com/Demo/201909065785.html">在线预览</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://hao12306.github.io/post/about</id>
+        <link href="https://hao12306.github.io/post/about">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<p>hi aliang hello world！</p>
 ]]></content>
     </entry>
 </feed>
